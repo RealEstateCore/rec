@@ -15,6 +15,74 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/Device/BelokEquivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Device/BelokEquivalent"/>
+    
+
+
+    <!-- http://w3id.org/rec/Device/CoClassEquivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Device/CoClassEquivalent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/Device/hasCommunicationType -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Device/hasCommunicationType">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Device/Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Device/hasObservation -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Device/hasObservation">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Device/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Device/hasPlacementType -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Device/hasPlacementType">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Device/Actuator"/>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Device/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Device/hasQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Device/hasQuantityKind">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Device/Actuator"/>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Device/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -31,10 +99,41 @@
     
 
 
+    <!-- http://w3id.org/rec/Device/CommunicationType -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Device/CommunicationType">
+        <rdfs:comment xml:lang="se">Typ av kommunikation.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/Device/Device -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/Device">
         <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device has one or more Sensor(s) and/or Actuator(s).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Device/Observation -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Device/Observation"/>
+    
+
+
+    <!-- http://w3id.org/rec/Device/PlacementType -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Device/PlacementType">
+        <rdfs:comment xml:lang="se">Placeringen och/eller typ av media som sensorn mäter eller aktorn agerar på.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Device/QuantityKind -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Device/QuantityKind">
+        <rdfs:comment xml:lang="se">Beskriver värdet som mätes eller sättes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes the value observed by a Sensor or teh value set by an Actuator.</rdfs:comment>
     </owl:Class>
     
 
@@ -44,6 +143,53 @@
     <owl:Class rdf:about="http://w3id.org/rec/Device/Sensor">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/Device"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/Device/ModbusTCP -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/ModbusTCP">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/CommunicationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Device/Pressure -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/Pressure">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/QuantityKind"/>
+        <BelokEquivalent xml:lang="en">02</BelokEquivalent>
+        <CoClassEquivalent xml:lang="en">BT</CoClassEquivalent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Device/SupplyAir -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/SupplyAir">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/PlacementType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Device/Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/Temperature">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/QuantityKind"/>
+        <BelokEquivalent xml:lang="en">01</BelokEquivalent>
+        <CoClassEquivalent xml:lang="en">BT</CoClassEquivalent>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
