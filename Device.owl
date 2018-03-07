@@ -9,6 +9,41 @@
     <owl:Ontology rdf:about="http://w3id.org/rec/Device/">
         <owl:versionIRI rdf:resource="http://w3id.org/rec/Device/2.1"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/Device/Actuator -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Device/Actuator">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Device/Device -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Device/Device">
+        <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device has one or more Sensor(s) and/or Actuator(s).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Device/Sensor -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Device/Sensor">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/Device"/>
+    </owl:Class>
 </rdf:RDF>
 
 
