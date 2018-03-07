@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/rec/Building/"
+     xml:base="http://w3id.org/rec/Building/"
+     xmlns:Building="http://w3id.org/rec/Building/"
+     xmlns:core="http://w3id.org/rec/Core/0.1/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://w3id.org/rec/Building/">
+        <owl:versionIRI rdf:resource="http://w3id.org/rec/Building/2.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/Building/fi2Equivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Building/fi2Equivalent"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/0.1/CoClassEquivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Core/0.1/CoClassEquivalent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/Building/hasBuildingStructure -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Building/hasBuildingStructure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Building/RealEstate"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Building/BuildingStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Building/hasRealEstateType -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Building/hasRealEstateType">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Building/RealEstate"/>
+        <rdfs:comment>To be aligned with local autorities classification. SE: Lantmäteriverket...</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/Building/BuildingStructure -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/BuildingStructure">
+        <rdfs:comment xml:lang="en">Confined building structure</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Building/BuildingStructureComponent -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/BuildingStructureComponent">
+        <rdfs:comment xml:lang="se">Delarna som bygger upp en byggnadsstruktur (BuildingStructure). Se subClasses Room, Facade och Roof etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Building/Facade -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/Facade">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Building/BuildingStructureComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Building/Land -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/Land"/>
+    
+
+
+    <!-- http://w3id.org/rec/Building/RealEstate -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/RealEstate">
+        <rdfs:comment xml:lang="se">Juridisk enhet. Mark + byggnader</rdfs:comment>
+        <rdfs:comment xml:lang="en">Legal entity. Land + buildings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Building/Roof -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/Roof">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Building/BuildingStructureComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Building/Room -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/Room">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Building/BuildingStructureComponent"/>
+        <rdfs:comment xml:lang="se">Avgränsad yta av väggar eller annan skiljelinje</rdfs:comment>
+        <rdfs:comment xml:lang="en">Confined space by walls or other line of separation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Building/RoomType -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/RoomType"/>
+    
+
+
+    <!-- http://w3id.org/rec/Building/Storey -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/Storey">
+        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Building/VirtualComponent -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Building/VirtualComponent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Building/BuildingStructureComponent"/>
+        <rdfs:comment xml:lang="en">A non-physical component. Belongs to a BuildingStructure. One BuildingStructure may have zero, one, or many VirtualComponents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/Building/Atrium -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Building/Atrium">
+        <rdf:type rdf:resource="http://w3id.org/rec/Building/RoomType"/>
+        <rdfs:comment xml:lang="se">Servicerum, postrum, vaktmästeri</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Building/Auditorium -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Building/Auditorium">
+        <rdf:type rdf:resource="http://w3id.org/rec/Building/RoomType"/>
+        <fi2Equivalent xml:lang="se">20.20-12</fi2Equivalent>
+        <fi2Equivalent xml:lang="se">22.22-04</fi2Equivalent>
+        <core:CoClassEquivalent xml:lang="se">BEB</core:CoClassEquivalent>
+        <rdfs:comment xml:lang="se">Ljusgård, atrium</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Building/BackOffice -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Building/BackOffice">
+        <rdf:type rdf:resource="http://w3id.org/rec/Building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Building/Bathroom -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Building/Bathroom">
+        <rdf:type rdf:resource="http://w3id.org/rec/Building/RoomType"/>
+        <fi2Equivalent xml:lang="se">25.25-03</fi2Equivalent>
+        <fi2Equivalent xml:lang="se">25.25-05</fi2Equivalent>
+        <core:CoClassEquivalent xml:lang="se">ABA</core:CoClassEquivalent>
+        <rdfs:comment xml:lang="se">Badrum</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Building/BicycleGarage -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Building/BicycleGarage">
+        <rdf:type rdf:resource="http://w3id.org/rec/Building/RoomType"/>
+        <rdfs:comment xml:lang="se">Cykelrum</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
