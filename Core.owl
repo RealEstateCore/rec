@@ -53,9 +53,30 @@
     
 
 
+    <!-- http://w3id.org/rec/Core/hasBearing -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasBearing">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Core/GeoReferenceOrigo"/>
+        <rdfs:comment xml:lang="en">The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
+
+Bearings are never greater than 90°.
+Bearings are based on true north.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasGeoReferenceOrigo -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasGeoReferenceOrigo">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Core/Location"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://w3id.org/rec/Core/isLocatedAt -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/isLocatedAt">
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/Location"/>
         <rdfs:comment xml:lang="se">Ett objekt som är av en klass som har en Location uttrycker detta med [myObject] locatedAt [myLocation].
 
 Jämför: Ett objekt kan beskriva sin plats genom [myObject] locatedIn [myOtherObject], där annatObject är ett rum, en byggnad eller annan klass som har en plats (Location).</rdfs:comment>
@@ -90,23 +111,123 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
     
 
 
+    <!-- http://w3id.org/rec/Core/GeoReferenceOrigo -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/GeoReferenceOrigo">
+        <rdfs:comment xml:lang="en">A fixed point for e.g. a building structure. Commonly refered to as &quot;insertion point&quot; in CAD-programs. Used as origo for LocalLocation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/Id -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/Id">
+        <rdfs:comment xml:lang="en">An universally unique identifier (UUID) is a 128-bit number used to identify information in computer systems. Version 4 is prefered (random generated).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/Core/Location -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Core/Location">
         <Example xml:lang="en">59.33755390;18.05568540;32.500</Example>
-        <IPSOEquivalent xml:lang="se">Altitude: 3321
+        <IPSOEquivalent xml:lang="en">Altitude: 3321
 Location: 3336
 Latitude: 5513
 Longitude: 5514 
 Altitude: 5515</IPSOEquivalent>
         <rdfs:comment xml:lang="se">Placeringen av ett objekt (exempelvis sensor eller objekt) eller position för objekt i ett geografiskt kartsystem eller inom omslutningen av ett annat objekt. Vi använder WGS84. Formatet är i decimalgrader (DD).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The absolute location of a point (expressed in WGS84).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/Name -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/Name">
+        <rdfs:comment xml:lang="en">Human-friendly name.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/ObservationDuration -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/ObservationDuration">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Time"/>
+        <rdfs:comment xml:lang="en">Length of observation in ms.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/ObservationTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/ObservationTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Time"/>
+        <rdfs:comment xml:lang="en">Time for made observation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/ProcessedTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/ProcessedTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Time"/>
+        <rdfs:comment xml:lang="en">Time when an object or result was processed in a system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/SourceData -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/SourceData"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/StartTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/StartTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Time"/>
+        <rdfs:comment xml:lang="en">Start time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/StopTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/StopTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Time"/>
+        <rdfs:comment xml:lang="en">Stop time.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://w3id.org/rec/Core/Time -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/Core/Time"/>
+    <owl:Class rdf:about="http://w3id.org/rec/Core/Time">
+        <rdfs:comment xml:lang="se">Tidsdomänen innehåller klasser som beskriver start- och stopptid, duration mm.
+
+Tidsformat:
+
+ISO8601
+
+Komplett datum plus timmar, mintuer, sekunder och decimal del av sekund.
+
+      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)
+
+Där:
+
+     YYYY = 4 siffror för år.
+     MM   = 2 siffror månad (01=januari, etc.)
+     DD   = 2 siffror för dag i månad (01 till 31)
+     hh   = 2 siffror för timme (00 till 23) (am/pm INTE tillåtet)
+     mm   = 2 siffror för minuter (00 till 59)
+     ss   = 2 siffror för sekund (00 till 59)
+     s    =  1 eller flera siffror representerar en decimal fraktion av en sekund
+
+     TZD  = time zone designator (Z eller +hh:mm eller -hh:mm)
+
+Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (&quot;Z&quot;) för GMT.</rdfs:comment>
+    </owl:Class>
     
 
 
