@@ -58,6 +58,7 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/Building/belongsTo">
         <rdfs:domain rdf:resource="http://w3id.org/rec/Building/BuildingStructure"/>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Building/Land"/>
         <rdfs:range rdf:resource="http://w3id.org/rec/Building/RealEstate"/>
     </owl:ObjectProperty>
     
@@ -73,11 +74,38 @@
     
 
 
+    <!-- http://w3id.org/rec/Building/hasBuildingStructureComponent -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Building/hasBuildingStructureComponent">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Building/BuildingStructure"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Building/BuildingStructureComponent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://w3id.org/rec/Building/hasRealEstateType -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/Building/hasRealEstateType">
         <rdfs:domain rdf:resource="http://w3id.org/rec/Building/RealEstate"/>
         <rdfs:comment>To be aligned with local autorities classification. SE: Lantmäteriverket...</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Building/hasRoomType -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Building/hasRoomType">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Building/Room"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Building/RoomType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Building/hasStorey -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Building/hasStorey">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Building/BuildingStructure"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Building/Storey"/>
     </owl:ObjectProperty>
     
 
