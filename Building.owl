@@ -25,15 +25,21 @@
     
 
 
-    <!-- http://w3id.org/rec/Building/fi2Equivalent -->
+    <!-- http://w3id.org/rec/Building/BIPComparable -->
 
-    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Building/fi2Equivalent"/>
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Building/BIPComparable"/>
     
 
 
-    <!-- http://w3id.org/rec/Core/0.1/CoClassEquivalent -->
+    <!-- http://w3id.org/rec/Building/IFCComparable -->
 
-    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Core/0.1/CoClassEquivalent"/>
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Building/IFCComparable"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/0.1/CoClassComparable -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/Core/0.1/CoClassComparable"/>
     
 
 
@@ -153,6 +159,7 @@
     <!-- http://w3id.org/rec/Building/Storey -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Building/Storey">
+        <IFCComparable></IFCComparable>
         <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
     </owl:Class>
     
@@ -191,9 +198,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/Building/Auditorium">
         <rdf:type rdf:resource="http://w3id.org/rec/Building/RoomType"/>
-        <fi2Equivalent xml:lang="se">20.20-12</fi2Equivalent>
-        <fi2Equivalent xml:lang="se">22.22-04</fi2Equivalent>
-        <core:CoClassEquivalent xml:lang="se">BEB</core:CoClassEquivalent>
+        <core:CoClassComparable xml:lang="se">BEB</core:CoClassComparable>
         <rdfs:comment xml:lang="se">Ljusgård, atrium</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -211,9 +216,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/Building/Bathroom">
         <rdf:type rdf:resource="http://w3id.org/rec/Building/RoomType"/>
-        <fi2Equivalent xml:lang="se">25.25-03</fi2Equivalent>
-        <fi2Equivalent xml:lang="se">25.25-05</fi2Equivalent>
-        <core:CoClassEquivalent xml:lang="se">ABA</core:CoClassEquivalent>
+        <core:CoClassComparable xml:lang="se">ABA</core:CoClassComparable>
         <rdfs:comment xml:lang="se">Badrum</rdfs:comment>
     </owl:NamedIndividual>
     
