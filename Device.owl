@@ -185,7 +185,7 @@
     <!-- http://w3id.org/rec/Device/BACnet -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/BACnet">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationType"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationAttribute"/>
     </owl:Class>
     
 
@@ -229,26 +229,10 @@
     
 
 
-    <!-- http://w3id.org/rec/Device/FunctionCode -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Device/FunctionCode">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/Device/IPGateway -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Device/IPGateway">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/rec/Device/KNX -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/KNX">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationType"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationAttribute"/>
     </owl:Class>
     
 
@@ -256,7 +240,7 @@
     <!-- http://w3id.org/rec/Device/LoRa -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/LoRa">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationType"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationAttribute"/>
     </owl:Class>
     
 
@@ -264,7 +248,7 @@
     <!-- http://w3id.org/rec/Device/M-Bus -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/M-Bus">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationType"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationAttribute"/>
     </owl:Class>
     
 
@@ -272,7 +256,7 @@
     <!-- http://w3id.org/rec/Device/ModbusRTU -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/ModbusRTU">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationType"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationAttribute"/>
     </owl:Class>
     
 
@@ -280,7 +264,15 @@
     <!-- http://w3id.org/rec/Device/ModbusTCP -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/ModbusTCP">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationType"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/CommunicationAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Device/ModbusTCPRegister -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Device/ModbusTCPRegister">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
     </owl:Class>
     
 
@@ -289,14 +281,6 @@
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/Observation">
         <rdfs:comment xml:lang="en">Observation of a phenomena. Made by a Sensor. Has a Value.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/Device/OffsetFactor -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Device/OffsetFactor">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
     </owl:Class>
     
 
@@ -319,35 +303,11 @@
     
 
 
-    <!-- http://w3id.org/rec/Device/Register -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Device/Register">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/Device/ScaleFactor -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Device/ScaleFactor">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/rec/Device/Sensor -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Device/Sensor">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/Device"/>
         <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/Device/SlaveID -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Device/SlaveID">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
     </owl:Class>
     
 
@@ -427,6 +387,22 @@
     
 
 
+    <!-- http://w3id.org/rec/Device/FunctionCode -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/FunctionCode">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Device/IPGateway -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/IPGateway">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/Device/KNX -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/KNX">
@@ -476,6 +452,14 @@
     
 
 
+    <!-- http://w3id.org/rec/Device/OffsetFactor -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/OffsetFactor">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/Device/Pressure -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/Pressure">
@@ -489,6 +473,22 @@
     <!-- http://w3id.org/rec/Device/Register -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/Register">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Device/ScaleFactor -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/ScaleFactor">
+        <rdf:type rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/Device/SlaveID -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/Device/SlaveID">
         <rdf:type rdf:resource="http://w3id.org/rec/Device/ModbusTCP"/>
     </owl:NamedIndividual>
     
