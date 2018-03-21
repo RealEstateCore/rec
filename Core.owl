@@ -51,6 +51,7 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasBearing">
         <rdfs:domain rdf:resource="http://w3id.org/rec/Core/GeoReferenceOrigo"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/Bearing"/>
         <rdfs:comment xml:lang="en">The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
 
 Bearings are never greater than 90°.
@@ -63,6 +64,7 @@ Bearings are based on true north.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasGeoReferenceOrigo">
         <rdfs:domain rdf:resource="http://w3id.org/rec/Core/Location"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/GeoReferenceOrigo"/>
     </owl:ObjectProperty>
     
 
@@ -102,6 +104,12 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
     <!-- http://w3id.org/rec/Core/Agent -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Core/Agent"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/Bearing -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/Bearing"/>
     
 
 
