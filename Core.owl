@@ -47,11 +47,44 @@
     
 
 
-    <!-- http://w3id.org/rec/Core/hasBearing -->
+    <!-- http://w3id.org/rec/Core/hasAliasId -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasBearing">
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasAliasId">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/Core/Id"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/AliasId"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasDescription -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasDescription"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasDescriptionComment -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasDescriptionComment"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasDescriptionLittera -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasDescriptionLittera"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasDescriptionPopularName -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasDescriptionPopularName"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasGeoReferenceBearing -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasGeoReferenceBearing">
         <rdfs:domain rdf:resource="http://w3id.org/rec/Core/GeoReferenceOrigo"/>
-        <rdfs:range rdf:resource="http://w3id.org/rec/Core/Bearing"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/GeoReferenceBearing"/>
         <rdfs:comment xml:lang="en">The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
 
 Bearings are never greater than 90°.
@@ -63,9 +96,66 @@ Bearings are based on true north.</rdfs:comment>
     <!-- http://w3id.org/rec/Core/hasGeoReferenceOrigo -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasGeoReferenceOrigo">
-        <rdfs:domain rdf:resource="http://w3id.org/rec/Core/Location"/>
-        <rdfs:range rdf:resource="http://w3id.org/rec/Core/GeoReferenceOrigo"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/GeoReferenceBearing"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasId -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasId">
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/Id"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasMeasurmentUnit -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasMeasurmentUnit">
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/MeasurementUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasObservationTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasObservationTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasObservationTimeDuration -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasObservationTimeDuration"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasPopularName -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasPopularName">
+        <rdfs:range rdf:resource="http://w3id.org/rec/Core/DescriptionPopularName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasProcessedTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasProcessedTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasStartTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasStartTime"/>
+    
+
+
+    <!-- http://w3id.org/rec/Core/hasStopTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/hasStopTime"/>
     
 
 
@@ -73,6 +163,9 @@ Bearings are based on true north.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/isLocatedAt">
         <rdfs:range rdf:resource="http://w3id.org/rec/Core/Location"/>
+        <rdfs:comment xml:lang="en">An object that has an exact point (expressed in WGS84).
+
+E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
         <rdfs:comment xml:lang="se">Ett objekt som är av en klass som har en Location uttrycker detta med [myObject] locatedAt [myLocation].
 
 Jämför: Ett objekt kan beskriva sin plats genom [myObject] locatedIn [myOtherObject], där annatObject är ett rum, en byggnad eller annan klass som har en plats (Location).</rdfs:comment>
@@ -80,9 +173,19 @@ Jämför: Ett objekt kan beskriva sin plats genom [myObject] locatedIn [myOtherO
     
 
 
+    <!-- http://w3id.org/rec/Core/isLocatedAtLocalCoordinateSystem -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/isLocatedAtLocalCoordinateSystem">
+        <rdfs:comment xml:lang="en">Literal value (x,y,z) in a local coordinate system that referes to GeoReferenceOrigo.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://w3id.org/rec/Core/isLocatedIn -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/Core/isLocatedIn">
+        <rdfs:comment xml:lang="en">An object that can describe its place by using [object-UUID] locatedIn 
+[myOtherObject-UUID], where [myOtherObject-UUID] could be a Room, BuildingStructure, etc.</rdfs:comment>
         <rdfs:comment xml:lang="se">Ett objekt kan beskriva sin plats genom [myObject] locatedIn [myOtherObject], där annatObject är ett rum, en byggnad eller annan klass som har en plats (Location).
 
 Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med [myObject] locatedAt [myLocation].</rdfs:comment>
@@ -103,13 +206,63 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
 
     <!-- http://w3id.org/rec/Core/Agent -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/Core/Agent"/>
+    <owl:Class rdf:about="http://w3id.org/rec/Core/Agent">
+        <rdfs:comment xml:lang="en">The human or machine that consumes or acts upon an object or data.</rdfs:comment>
+    </owl:Class>
     
 
 
-    <!-- http://w3id.org/rec/Core/Bearing -->
+    <!-- http://w3id.org/rec/Core/AliasId -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/Core/Bearing"/>
+    <owl:Class rdf:about="http://w3id.org/rec/Core/AliasId">
+        <rdfs:comment xml:lang="en">AliasId is used to reference to a object&apos;s Id in another system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/Description -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/Description">
+        <rdfs:comment xml:lang="en">Extra information regarding the origin of data. Used to facilitate understanding of data for humans.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/DescriptionComment -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/DescriptionComment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Description"/>
+        <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character (compared to Description). E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/DescriptionLittera -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/DescriptionLittera">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Description"/>
+        <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. a Device or a Room.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/DescriptionPopularName -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/DescriptionPopularName">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Description"/>
+        <rdfs:comment xml:lang="en">Human-friendly name.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/Core/GeoReferenceBearing -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/GeoReferenceBearing">
+        <rdfs:comment xml:lang="en">The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
+
+Bearings are never greater than 90°.
+Bearings are based on true north.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -139,7 +292,12 @@ Latitude: 5513
 Longitude: 5514 
 Altitude: 5515</IPSOComparable>
         <rdfs:comment xml:lang="se">Placeringen av ett objekt (exempelvis sensor eller objekt) eller position för objekt i ett geografiskt kartsystem eller inom omslutningen av ett annat objekt. Vi använder WGS84. Formatet är i decimalgrader (DD).</rdfs:comment>
-        <rdfs:comment xml:lang="en">The absolute location of a point (expressed in WGS84).</rdfs:comment>
+        <rdfs:comment xml:lang="se">Sätt att använda Location
+
+Ett objekt kan beskriva sin plats genom [myObject] locatedIn [myOtherObject], där annatObject är ett rum, en byggnad eller annan klass som har en plats (Location).
+
+Ett objekt som är av en klass som har en Location uttrycker detta med [myObject] locatedAt [myLocation].</rdfs:comment>
+        <rdfs:comment xml:lang="en">The absolute location of a point (expressed in decimal degrees in WGS84).</rdfs:comment>
     </owl:Class>
     
 
@@ -147,23 +305,6 @@ Altitude: 5515</IPSOComparable>
     <!-- http://w3id.org/rec/Core/MeasurementUnit -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Core/MeasurementUnit"/>
-    
-
-
-    <!-- http://w3id.org/rec/Core/Name -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Core/Name">
-        <rdfs:comment xml:lang="en">Human-friendly name.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/Core/ObservationDuration -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Core/ObservationDuration">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Time"/>
-        <rdfs:comment xml:lang="en">Length of observation in ms.</rdfs:comment>
-    </owl:Class>
     
 
 
@@ -176,18 +317,21 @@ Altitude: 5515</IPSOComparable>
     
 
 
+    <!-- http://w3id.org/rec/Core/ObservationTimeDuration -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/Core/ObservationTimeDuration">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Time"/>
+        <rdfs:comment xml:lang="en">Length of observation in ms.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/Core/ProcessedTime -->
 
     <owl:Class rdf:about="http://w3id.org/rec/Core/ProcessedTime">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/Core/Time"/>
         <rdfs:comment xml:lang="en">Time when an object or result was processed in a system.</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/Core/SourceData -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/Core/SourceData"/>
     
 
 
