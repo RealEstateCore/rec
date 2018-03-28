@@ -119,9 +119,6 @@
         <ObjectProperty IRI="Building/belongsTo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Building/RoomType"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Device/SupplyAir"/>
     </Declaration>
     <Declaration>
@@ -189,9 +186,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="RH"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="Building/hasRoomType"/>
     </Declaration>
     <Declaration>
         <Class IRI="Building/RoomGarage"/>
@@ -465,19 +459,19 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/RoomFoodHandling"/>
-        <Class IRI="Building/RoomType"/>
+        <Class IRI="Building/Room"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/RoomGarage"/>
-        <Class IRI="Building/RoomType"/>
+        <Class IRI="Building/Room"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/RoomMeeting"/>
-        <Class IRI="Building/RoomType"/>
+        <Class IRI="Building/Room"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/RoomOffice"/>
-        <Class IRI="Building/RoomType"/>
+        <Class IRI="Building/Room"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/RoomOfficeConferenceSmall"/>
@@ -485,7 +479,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/RoomUtilities"/>
-        <Class IRI="Building/RoomType"/>
+        <Class IRI="Building/Room"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/VirtualComponent"/>
@@ -636,30 +630,6 @@
         <NamedIndividual IRI="s"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="Building/RoomType"/>
-        <NamedIndividual IRI="Building/Atrium"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Building/RoomType"/>
-        <NamedIndividual IRI="Building/Auditorium"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Building/RoomType"/>
-        <NamedIndividual IRI="Building/BackOffice"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Building/RoomType"/>
-        <NamedIndividual IRI="Building/Bathroom"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Building/RoomType"/>
-        <NamedIndividual IRI="Building/BicycleGarage"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Building/RoomType"/>
-        <NamedIndividual IRI="Building/Cinema"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="Device/ActuatableProperty"/>
         <NamedIndividual IRI="Device/Binary"/>
     </ClassAssertion>
@@ -736,7 +706,15 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasSourceData"/>
+        <Class IRI="Device/Actuator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSourceData"/>
         <Class IRI="Device/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSourceData"/>
+        <Class IRI="Device/Sensor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasStartTime"/>
@@ -785,10 +763,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Building/hasRealEstateType"/>
         <Class IRI="Building/RealEstate"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="Building/hasRoomType"/>
-        <Class IRI="Building/Room"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Building/hasStoreyLevel"/>
@@ -931,10 +905,6 @@
         <Class IRI="Building/BuildingStructureComponent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="Building/hasRoomType"/>
-        <Class IRI="Building/RoomType"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="Building/hasStoreyLevel"/>
         <Class IRI="Building/StoreyLevel"/>
     </ObjectPropertyRange>
@@ -1024,6 +994,11 @@ Bearings are based on true north.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>K</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Temperature in Kelvin degrees</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LocalCoordinates</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Literal value (x,y,z) in a local coordinate system that referes to GeoReferenceOrigo.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="Example"/>
