@@ -20,10 +20,13 @@
         <NamedIndividual IRI="Building/Auditorium"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Device/BACnetConfiguration"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="isLocatedAtLocalCoordinates"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Device/ModbusRTUCommunicationConfiguration"/>
+        <Class IRI="Device/ModbusRTUConfiguration"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="V"/>
@@ -83,19 +86,10 @@
         <Class IRI="Time"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Device/ModbusTCPCommunicationConfiguration"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="Device/makesObservation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Device/MBusCommunicationConfiguration"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Building/BicycleGarage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Device/CommunicationConfiguration"/>
     </Declaration>
     <Declaration>
         <Class IRI="SourceDataAliasId"/>
@@ -140,6 +134,9 @@
         <Class IRI="Device/ModbusTCPOffsetFactor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="Device/hasDeviceConfiguration"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasSourceData"/>
     </Declaration>
     <Declaration>
@@ -155,9 +152,6 @@
         <Class IRI="Device/Value"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Device/BACnetCommunicationConfiguration"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Device/Actuator"/>
     </Declaration>
     <Declaration>
@@ -171,9 +165,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="W"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Device/KNXCommunicationConfiguration"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="Device/serves"/>
@@ -197,7 +188,7 @@
         <Class IRI="Device/ModbusTCPFunctionCode"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Device/LoRaCommunicationConfiguration"/>
+        <Class IRI="Device/LoRaConfiguration"/>
     </Declaration>
     <Declaration>
         <Class IRI="Building/RoomMeeting"/>
@@ -236,6 +227,9 @@
         <AnnotationProperty IRI="Building/BIPComparable"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Device/ModbusTCPConfiguration"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="Device/sample_config_attribute"/>
     </Declaration>
     <Declaration>
@@ -248,7 +242,13 @@
         <AnnotationProperty IRI="0.1/CoClassComparable"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Device/MBusConfiguration"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Device/ActuatableProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Device/KNXConfiguration"/>
     </Declaration>
     <Declaration>
         <Class IRI="Device/ModbusTCPIPGateway"/>
@@ -266,10 +266,10 @@
         <Class IRI="Device/KNXDeviceId"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="Building/hasBuildingStructure"/>
+        <Class IRI="Device/DeviceInformation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Device/CommunicationConfigurationInformation"/>
+        <ObjectProperty IRI="Building/hasBuildingStructure"/>
     </Declaration>
     <Declaration>
         <Class IRI="Device/Actuation"/>
@@ -341,6 +341,9 @@
         <NamedIndividual IRI="m2"/>
     </Declaration>
     <Declaration>
+        <Class IRI="SourceDataProductName"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="ProcessedTime"/>
     </Declaration>
     <Declaration>
@@ -351,9 +354,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Pa"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="Device/hasCommunicationConfiguration"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Device/Numbering"/>
@@ -398,6 +398,9 @@
         <NamedIndividual IRI="kg"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Device/DeviceCommunication"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Device/ModbusTCPSlaveID"/>
     </Declaration>
     <Declaration>
@@ -422,6 +425,10 @@
         <Class IRI="Time"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="SourceData"/>
+        <Class IRI="Device/DeviceCommunication"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="SourceDataAliasId"/>
         <Class IRI="SourceData"/>
     </SubClassOf>
@@ -435,6 +442,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SourceDataPopularName"/>
+        <Class IRI="SourceData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SourceDataProductName"/>
         <Class IRI="SourceData"/>
     </SubClassOf>
     <SubClassOf>
@@ -490,76 +501,76 @@
         <Class IRI="Device/Device"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Device/BACnetCommunicationConfiguration"/>
-        <Class IRI="Device/CommunicationConfiguration"/>
+        <Class IRI="Device/BACnetConfiguration"/>
+        <Class IRI="Device/DeviceCommunication"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Device/CommunicationConfigurationInformation"/>
-        <Class IRI="Device/CommunicationConfiguration"/>
+        <Class IRI="Device/DeviceInformation"/>
+        <Class IRI="Device/DeviceCommunication"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Device/KNXCommunicationConfiguration"/>
-        <Class IRI="Device/CommunicationConfiguration"/>
+        <Class IRI="Device/KNXConfiguration"/>
+        <Class IRI="Device/DeviceCommunication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/KNXDataPointType"/>
-        <Class IRI="Device/KNXCommunicationConfiguration"/>
+        <Class IRI="Device/KNXConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/KNXDeviceId"/>
-        <Class IRI="Device/KNXCommunicationConfiguration"/>
+        <Class IRI="Device/KNXConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/KNXDevicePort"/>
-        <Class IRI="Device/KNXCommunicationConfiguration"/>
+        <Class IRI="Device/KNXConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/KNXGroupAddress"/>
-        <Class IRI="Device/KNXCommunicationConfiguration"/>
+        <Class IRI="Device/KNXConfiguration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Device/LoRaCommunicationConfiguration"/>
-        <Class IRI="Device/CommunicationConfiguration"/>
+        <Class IRI="Device/LoRaConfiguration"/>
+        <Class IRI="Device/DeviceCommunication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/LoRaDEVEUI"/>
-        <Class IRI="Device/LoRaCommunicationConfiguration"/>
+        <Class IRI="Device/LoRaConfiguration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Device/MBusCommunicationConfiguration"/>
-        <Class IRI="Device/CommunicationConfiguration"/>
+        <Class IRI="Device/MBusConfiguration"/>
+        <Class IRI="Device/DeviceCommunication"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Device/ModbusRTUCommunicationConfiguration"/>
-        <Class IRI="Device/CommunicationConfiguration"/>
+        <Class IRI="Device/ModbusRTUConfiguration"/>
+        <Class IRI="Device/DeviceCommunication"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Device/ModbusTCPCommunicationConfiguration"/>
-        <Class IRI="Device/CommunicationConfiguration"/>
+        <Class IRI="Device/ModbusTCPConfiguration"/>
+        <Class IRI="Device/DeviceCommunication"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/ModbusTCPFunctionCode"/>
-        <Class IRI="Device/ModbusTCPCommunicationConfiguration"/>
+        <Class IRI="Device/ModbusTCPConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/ModbusTCPIPGateway"/>
-        <Class IRI="Device/ModbusTCPCommunicationConfiguration"/>
+        <Class IRI="Device/ModbusTCPConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/ModbusTCPOffsetFactor"/>
-        <Class IRI="Device/ModbusTCPCommunicationConfiguration"/>
+        <Class IRI="Device/ModbusTCPConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/ModbusTCPRegister"/>
-        <Class IRI="Device/ModbusTCPCommunicationConfiguration"/>
+        <Class IRI="Device/ModbusTCPConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/ModbusTCPScaleFactor"/>
-        <Class IRI="Device/ModbusTCPCommunicationConfiguration"/>
+        <Class IRI="Device/ModbusTCPConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/ModbusTCPSlaveID"/>
-        <Class IRI="Device/ModbusTCPCommunicationConfiguration"/>
+        <Class IRI="Device/ModbusTCPConfiguration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/Sensor"/>
@@ -773,15 +784,15 @@
         <Class IRI="Device/Actuator"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="Device/hasCommunicationConfiguration"/>
+        <ObjectProperty IRI="Device/hasDeviceConfiguration"/>
         <Class IRI="Device/Actuator"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="Device/hasCommunicationConfiguration"/>
+        <ObjectProperty IRI="Device/hasDeviceConfiguration"/>
         <Class IRI="Device/Device"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="Device/hasCommunicationConfiguration"/>
+        <ObjectProperty IRI="Device/hasDeviceConfiguration"/>
         <Class IRI="Device/Sensor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -913,8 +924,8 @@
         <Class IRI="Device/ActuatableProperty"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="Device/hasCommunicationConfiguration"/>
-        <Class IRI="Device/CommunicationConfiguration"/>
+        <ObjectProperty IRI="Device/hasDeviceConfiguration"/>
+        <Class IRI="Device/DeviceCommunication"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="Device/hasDeviceFunction"/>
@@ -1357,11 +1368,6 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Device/CommunicationConfigurationInformation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Notes and information are kept here. Could be e.g.  information from blue prints (a.k.a. littera).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Device/Control</IRI>
         <Literal xml:lang="se" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Apparat som kontrollerar aktorer. (Kan även samla in data.</Literal>
     </AnnotationAssertion>
@@ -1379,6 +1385,11 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Device/DeviceFunction</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Description of what the main function is of a Device.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Device/DeviceInformation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Notes and information are kept here. Could be e.g.  information from blue prints (a.k.a. littera).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="Device/BIPTypeIdComparable"/>
