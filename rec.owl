@@ -125,9 +125,6 @@
         <AnnotationProperty IRI="IPSOComparable"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="Building/hasRealEstateType"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="m3"/>
     </Declaration>
     <Declaration>
@@ -722,6 +719,18 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="isLocatedAt"/>
+        <Class IRI="Building/BuildingStructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isLocatedAt"/>
+        <Class IRI="Building/BuildingStructureComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isLocatedAt"/>
+        <Class IRI="Building/Land"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isLocatedAt"/>
         <Class IRI="Device/Device"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -755,10 +764,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Building/hasBuildingStructureComponent"/>
         <Class IRI="Building/BuildingStructure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="Building/hasRealEstateType"/>
-        <Class IRI="Building/RealEstate"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Building/hasStoreyLevel"/>
@@ -1326,11 +1331,6 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Building/VirtualComponent</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A non-physical component. Belongs to a BuildingStructure. One BuildingStructure may have zero, one, or many VirtualComponents. E.g a temperature value from an external service for the area of a building.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Building/hasRealEstateType</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">To be aligned with local autorities classification. SE: Lantmäteriverket...</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
