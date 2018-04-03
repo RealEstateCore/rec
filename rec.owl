@@ -134,6 +134,9 @@
         <ObjectProperty IRI="Device/hasDeviceConfiguration"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="Unit"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="Pf"/>
     </Declaration>
     <Declaration>
@@ -272,9 +275,6 @@
         <Class IRI="SourceDataPopularName"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="A"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="Device/servedBy"/>
     </Declaration>
     <Declaration>
@@ -384,6 +384,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="Building/Roof"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Ampere"/>
     </Declaration>
     <Declaration>
         <Class IRI="Device/KNXDataPointType"/>
@@ -572,7 +575,7 @@
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="MeasurementUnit"/>
-        <NamedIndividual IRI="A"/>
+        <NamedIndividual IRI="Ampere"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="MeasurementUnit"/>
@@ -803,15 +806,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Device/hasQuantityKind"/>
-        <Class IRI="Device/Actuator"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="Device/hasQuantityKind"/>
-        <Class IRI="Device/Observation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="Device/hasQuantityKind"/>
-        <Class IRI="Device/Sensor"/>
+        <ObjectUnionOf>
+            <Class IRI="Device/Actuator"/>
+            <Class IRI="Device/Sensor"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Device/hasValue"/>
@@ -951,13 +949,23 @@
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>A</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ampere. Current in a circuit.</Literal>
+        <IRI>Agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The human or machine that consumes or acts upon an object or data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="Unit"/>
+        <IRI>Ampere</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Agent</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The human or machine that consumes or acts upon an object or data.</Literal>
+        <IRI>Ampere</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ampere. Current in a circuit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>Ampere</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.qudt.org/</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1406,6 +1414,11 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>Device/Humidity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Device/KNXConfiguration</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">KNXConfiguration</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
