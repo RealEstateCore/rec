@@ -167,7 +167,13 @@
         <Class IRI="DiningRoom"/>
     </Declaration>
     <Declaration>
+        <Class IRI="BuildingStructureComponent"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Building/VirtualComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BuildingStructure"/>
     </Declaration>
     <Declaration>
         <Class IRI="ExerciseRoom"/>
@@ -282,9 +288,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="Device/hasActuatableProperty"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Building/BuildingStructureComponent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Lenght"/>
@@ -411,9 +414,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="Location"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Building/BuildingStructure"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Pascal"/>
@@ -986,7 +986,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/Facade"/>
-        <Class IRI="Building/BuildingStructureComponent"/>
+        <Class IRI="BuildingStructureComponent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/FoodHandling"/>
@@ -1002,11 +1002,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/Roof"/>
-        <Class IRI="Building/BuildingStructureComponent"/>
+        <Class IRI="BuildingStructureComponent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/Room"/>
-        <Class IRI="Building/BuildingStructureComponent"/>
+        <Class IRI="BuildingStructureComponent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/UtilitiesRoom"/>
@@ -1014,7 +1014,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Building/VirtualComponent"/>
-        <Class IRI="Building/BuildingStructureComponent"/>
+        <Class IRI="BuildingStructureComponent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Device/Actuator"/>
@@ -1521,7 +1521,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasGeoReferenceOrigo"/>
-        <Class IRI="Building/BuildingStructure"/>
+        <Class IRI="BuildingStructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasMeasurmentUnit"/>
@@ -1550,8 +1550,8 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="isLocatedAt"/>
         <ObjectUnionOf>
-            <Class IRI="Building/BuildingStructure"/>
-            <Class IRI="Building/BuildingStructureComponent"/>
+            <Class IRI="BuildingStructure"/>
+            <Class IRI="BuildingStructureComponent"/>
             <Class IRI="Building/Land"/>
             <Class IRI="Device/Device"/>
         </ObjectUnionOf>
@@ -1571,7 +1571,7 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Building/belongsTo"/>
         <ObjectUnionOf>
-            <Class IRI="Building/BuildingStructure"/>
+            <Class IRI="BuildingStructure"/>
             <Class IRI="Building/Land"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -1581,11 +1581,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Building/hasBuildingStructureComponent"/>
-        <Class IRI="Building/BuildingStructure"/>
+        <Class IRI="BuildingStructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Building/hasStoreyLevel"/>
-        <Class IRI="Building/BuildingStructure"/>
+        <Class IRI="BuildingStructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="Device/hasActuatableProperty"/>
@@ -1698,11 +1698,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="Building/hasBuildingStructure"/>
-        <Class IRI="Building/BuildingStructure"/>
+        <Class IRI="BuildingStructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="Building/hasBuildingStructureComponent"/>
-        <Class IRI="Building/BuildingStructureComponent"/>
+        <Class IRI="BuildingStructureComponent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="Building/hasStoreyLevel"/>
@@ -2037,6 +2037,41 @@ H1B2xx, H1B9xx</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>BicycleGarage</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BicycleGarage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="Building/IFCComparable"/>
+        <IRI>BuildingStructure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ifcBuilding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BuildingStructure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Confined building structure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BuildingStructure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BuildingStructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="Building/IFCComparable"/>
+        <IRI>BuildingStructureComponent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ifcSpace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BuildingStructureComponent</IRI>
+        <Literal xml:lang="se" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Delarna som bygger upp en byggnadsstruktur (BuildingStructure). Se subClasses Room, Facade och Roof etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BuildingStructureComponent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parts that makes up a building structure (BuildingStructure). E.g. Room, Facade, Roof, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BuildingStructureComponent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BuildingStructureComponent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2977,7 +3012,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>PersonalHygiene</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PerspnaHygiene</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PersonaHygiene</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3967,41 +4002,6 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BIPComparable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Building/IFCComparable"/>
-        <IRI>Building/BuildingStructure</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ifcBuilding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Building/BuildingStructure</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Confined building structure.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Building/BuildingStructure</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BuildingStructure</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="Building/IFCComparable"/>
-        <IRI>Building/BuildingStructureComponent</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ifcSpace</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Building/BuildingStructureComponent</IRI>
-        <Literal xml:lang="se" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Delarna som bygger upp en byggnadsstruktur (BuildingStructure). Se subClasses Room, Facade och Roof etc.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Building/BuildingStructureComponent</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parts that makes up a building structure (BuildingStructure). E.g. Room, Facade, Roof, etc.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Building/BuildingStructureComponent</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BuildingStructureComponent</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Building/Facade</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Facade</Literal>
@@ -4574,7 +4574,7 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Device/hasActuatableProperty</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasActuantableProperty</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasActuatableProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
