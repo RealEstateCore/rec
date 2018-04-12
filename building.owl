@@ -1,0 +1,876 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://w3id.org/rec/building/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://w3id.org/rec/building/"
+     versionIRI="http://w3id.org/rec/building/2.2/">
+    <Prefix name="" IRI="http://w3id.org/rec/building/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://w3id.org/rec/core/2.2/</Import>
+    <Declaration>
+        <Class IRI="CloakRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ConversationRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CopyingRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BackOffice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ServiceShaft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CleaningRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MainEntrance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TelecommunicationRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LaundryRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OfficeLandscape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Toilet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OfficeRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ServiceEntrance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Entrance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ElectricityRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Bathroom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ElevatorShaft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CookingRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Garage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Theater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FoodHandlingRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WasteManagementRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DressingRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ElevatorRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PhoneBooth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ShowerRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Workshop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PersonalHygiene"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ConferenceRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BicycleGarage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Office"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ParkingSlotCold"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RestingPlace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Hallway"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UtilitiesRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ParkingSlotWarm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EducationalRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Stairwell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Storage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Pentry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Reception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ExerciseRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Auditorium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DisabledToilet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Atrium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DiningRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ShelterRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Sauna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Laboratory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Library"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cinema"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Classroom"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Atrium"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Auditorium"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BackOffice"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Bathroom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BicycleGarage"/>
+        <Class IRI="Garage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cinema"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Classroom"/>
+        <Class IRI="EducationalRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CleaningRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CloakRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ConferenceRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ConversationRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CookingRoom"/>
+        <Class IRI="FoodHandlingRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CopyingRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DiningRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DisabledToilet"/>
+        <Class IRI="PersonalHygiene"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DressingRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EducationalRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ElectricityRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ElevatorRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ElevatorShaft"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Entrance"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ExerciseRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FoodHandlingRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Garage"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Hallway"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Laboratory"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LaundryRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Library"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MainEntrance"/>
+        <Class IRI="Entrance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Office"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OfficeLandscape"/>
+        <Class IRI="Office"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OfficeRoom"/>
+        <Class IRI="Office"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ParkingSlotCold"/>
+        <Class IRI="Garage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ParkingSlotWarm"/>
+        <Class IRI="Garage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Pentry"/>
+        <Class IRI="FoodHandlingRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PersonalHygiene"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PhoneBooth"/>
+        <Class IRI="Office"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Reception"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RestingPlace"/>
+        <Class IRI="Office"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sauna"/>
+        <Class IRI="PersonalHygiene"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ServiceEntrance"/>
+        <Class IRI="Entrance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ServiceShaft"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ShelterRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ShowerRoom"/>
+        <Class IRI="PersonalHygiene"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Stairwell"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Storage"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TelecommunicationRoom"/>
+        <Class IRI="UtilitiesRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Theater"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Toilet"/>
+        <Class IRI="PersonalHygiene"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UtilitiesRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WasteManagementRoom"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Workshop"/>
+        <Class IRI="http://w3id.org/rec/core/Room"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Atrium</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Atrium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Auditorium</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BEB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Auditorium</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Auditorium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BackOffice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BackOffice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Bathroom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Bathroom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bathroom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BicycleGarage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BicycleGarage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Cinema</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BEB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Cinema</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cinema</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Classroom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Classroom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Classroom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CleaningRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CleaningRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>CloakRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CloakRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CloakRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ConferenceRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConferenceRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConferenceRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ConversationRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAH</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConversationRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ConversationRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>CookingRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BBA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CookingRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CookingRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>CopyingRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BBG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>CopyingRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CopyingRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>DiningRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BEA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DiningRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DiningRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>DisabledToilet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DisabledToilet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DisabledToilet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>DisabledToilet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HWC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>DisabledToilet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RWC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DressingRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DressingRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DressingRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>EducationalRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>EducationalRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EducationalRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ElectricityRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ElectricityRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ElectricityRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ElevatorRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ElevatorRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ElevatorShaft</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EAE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ElevatorShaft</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ElevatorShaft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Entrance</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Entrance</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Entrance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ExerciseRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BDB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ExerciseRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ExerciseRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>FoodHandlingRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BBA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FoodHandlingRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FoodHandlingRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Garage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CBD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Garage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Garage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Hallway</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EAC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Hallway</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hallway</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Laboratory</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Laboratory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>LaundryRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LaundryRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LaundryRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Library</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CAD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Library</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Library</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>MainEntrance</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MainEntrance</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MainEntrance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Office</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Office</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Office</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>OfficeLandscape</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OfficeLandscape</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OfficeLandscape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>OfficeRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OfficeRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OfficeRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ParkingSlotCold</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CBD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ParkingSlotCold</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ParkingSlotCold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ParkingSlotWarm</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CBD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ParkingSlotWarm</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ParkingSlotWarm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Pentry</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BBA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Pentry</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pentry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PersonalHygiene</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PersonalHygiene</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PhoneBooth</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PhoneBooth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Reception</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BAC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Reception</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>RestingPlace</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RestingPlace</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RestingPlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Sauna</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sauna</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sauna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ServiceEntrance</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ServiceEntrance</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ServiceEntrance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ServiceShaft</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ServiceShaft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ShelterRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ACA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ShelterRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ShelterRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>ShowerRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ShowerRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ShowerRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Stairwell</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EAD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Stairwell</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Stairwell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Storage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Storage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>TelecommunicationRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DAB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TelecommunicationRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TelecommunicationRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Theater</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BDD,BEB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Theater</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Theater</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Toilet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Toilet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Toilet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>UtilitiesRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UtilitiesRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">UtilitiesRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>WasteManagementRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CAA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WasteManagementRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WasteManagementRoom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>WasteManagementRoom</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recycling room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://w3id.org/rec/core/CoClassComparable"/>
+        <IRI>Workshop</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BBC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Workshop</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Workshop</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
