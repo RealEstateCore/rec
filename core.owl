@@ -29,6 +29,9 @@
         <NamedIndividual IRI="Meter"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="comparableIFC"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="StopTime"/>
     </Declaration>
     <Declaration>
@@ -50,9 +53,6 @@
         <Class IRI="LocalCoordinates"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="IPSOComparable"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Angle"/>
     </Declaration>
     <Declaration>
@@ -72,6 +72,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Illuminance"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="comparableHaystack"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="VoltageL3"/>
@@ -98,9 +101,6 @@
         <NamedIndividual IRI="Level"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="Unit"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Land"/>
     </Declaration>
     <Declaration>
@@ -119,6 +119,9 @@
         <ObjectProperty IRI="servedBy"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="comparableIPSOObject"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="CurrentL1"/>
     </Declaration>
     <Declaration>
@@ -132,9 +135,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Number"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="AlarmMajor"/>
@@ -161,10 +161,19 @@
         <NamedIndividual IRI="Radiation"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="unitSign"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Observation"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="comparableBIP"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="observationMadeBy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="exampleOfUse"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="PrimaryHeatingFlow"/>
@@ -174,9 +183,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Lux"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="IFCComparable"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="PrimaryHeatingReturn"/>
@@ -251,9 +257,6 @@
         <NamedIndividual IRI="Cos_phi"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="Volume"/>
     </Declaration>
     <Declaration>
@@ -269,7 +272,7 @@
         <NamedIndividual IRI="Sound"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="IPSOObjectComparable"/>
+        <AnnotationProperty IRI="comparableIPSO"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="PowerActiveTotal"/>
@@ -293,6 +296,9 @@
         <NamedIndividual IRI="DistrictCoolingFlow"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="comparableBelok"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="StoreyLevel"/>
     </Declaration>
     <Declaration>
@@ -311,9 +317,6 @@
         <NamedIndividual IRI="ExhaustAir"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="HaystackComparable"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="PlacementType"/>
     </Declaration>
     <Declaration>
@@ -330,6 +333,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="HotWaterFlow"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="comparableCoClass"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="PowerFactorL1"/>
@@ -359,6 +365,9 @@
         <NamedIndividual IRI="OutdoorAir"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="AlarmMinor"/>
     </Declaration>
     <Declaration>
@@ -380,9 +389,6 @@
         <NamedIndividual IRI="Second"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="Example"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="ReactivePowerL2"/>
     </Declaration>
     <Declaration>
@@ -402,9 +408,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="RecyclingEnergyFlow"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="BIPComparable"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="isLocatedIn"/>
@@ -440,6 +443,9 @@
         <NamedIndividual IRI="Hwrc"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="ActivePowerL1"/>
     </Declaration>
     <Declaration>
@@ -447,9 +453,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="VirtualComponent"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="CoClassComparable"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="VoltageL1"/>
@@ -480,9 +483,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="ColdWaterFlow"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="BelokComparable"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasGeoReferenceBearing"/>
@@ -1224,22 +1224,22 @@
         <Class IRI="Device"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>ActiveEnergyL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MQxx, VMM8xx, VMM1xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ActiveEnergyL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">11</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActiveEnergyL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BHC, BHB</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ActiveEnergyL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5805, 3331</Literal>
     </AnnotationAssertion>
@@ -1249,22 +1249,22 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActiveEnergyL1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>ActiveEnergyL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MQxx, VMM8xx, VMM1xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ActiveEnergyL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">11</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActiveEnergyL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BHC, BHB</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ActiveEnergyL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5805, 3331</Literal>
     </AnnotationAssertion>
@@ -1274,22 +1274,22 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActiveEnergyL2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>ActiveEnergyL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MQxx, VMM8xx, VMM1xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ActiveEnergyL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">11</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActiveEnergyL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BHC, BHB</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ActiveEnergyL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5805, 3331</Literal>
     </AnnotationAssertion>
@@ -1299,17 +1299,17 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActiveEnergyL3</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ActiveEnergyTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">11</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActiveEnergyTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BHC, BHB</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ActiveEnergyTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5805, 3331</Literal>
     </AnnotationAssertion>
@@ -1319,17 +1319,17 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActiveEnergyTotal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ActivePowerL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActivePowerL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ActivePowerL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 3328</Literal>
     </AnnotationAssertion>
@@ -1339,17 +1339,17 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActivePowerL1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ActivePowerL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActivePowerL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 3328</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActivePowerL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
@@ -1359,17 +1359,17 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActivePowerL1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ActivePowerL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActivePowerL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ActivePowerL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 3328</Literal>
     </AnnotationAssertion>
@@ -1379,17 +1379,17 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActivePowerL3</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ActivePowerTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ActivePowerTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ActivePowerTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 3328</Literal>
     </AnnotationAssertion>
@@ -1459,7 +1459,7 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AlarmMinor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPComparable"/>
+        <AnnotationProperty IRI="comparableBIP"/>
         <IRI>AlarmSevere</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">H1B1xx, H1B4xx, H1B5xx, H1B9xx, H1B6xx, H1B3xx, H1B7xx
 H1B2xx, H1B9xx</Literal>
@@ -1475,7 +1475,7 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AlarmSevere</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Ampere</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A</Literal>
     </AnnotationAssertion>
@@ -1490,7 +1490,7 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ampere</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Angle</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3332</Literal>
     </AnnotationAssertion>
@@ -1506,26 +1506,11 @@ H1B2xx, H1B9xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BIPComparable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BIPComparable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BIPTypeIdComparable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BIPTypeIdComparable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BelokComparable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BelokComparable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Binary</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Binary</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IFCComparable"/>
+        <AnnotationProperty IRI="comparableIFC"/>
         <IRI>BuildingStructure</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ifcBuilding</Literal>
     </AnnotationAssertion>
@@ -1540,7 +1525,7 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BuildingStructure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IFCComparable"/>
+        <AnnotationProperty IRI="comparableIFC"/>
         <IRI>BuildingStructureComponent</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ifcSpace</Literal>
     </AnnotationAssertion>
@@ -1570,7 +1555,7 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CO2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Celcius</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">C</Literal>
     </AnnotationAssertion>
@@ -1590,17 +1575,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CirculationAir</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>CoClassComparable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CoClassComparable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>ColdWaterFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MT2xx, PPA2xx, SHG2xx, RT2xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ColdWaterFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">53</Literal>
     </AnnotationAssertion>
@@ -1610,12 +1590,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ColdWaterFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>ColdWaterReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MT2xx, PPA2xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ColdWaterReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">54</Literal>
     </AnnotationAssertion>
@@ -1625,22 +1605,22 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ColdWaterReturn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Concentration</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GQ0-9xx/y/z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Concentration</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">09</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>Concentration</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BQ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Concentration</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3325</Literal>
     </AnnotationAssertion>
@@ -1660,7 +1640,7 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Control</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Cos_phi</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cos-phi</Literal>
     </AnnotationAssertion>
@@ -1675,7 +1655,7 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cos_phi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Cubic_meter</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">m3</Literal>
     </AnnotationAssertion>
@@ -1690,12 +1670,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Volume</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>Current</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Current</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3317</Literal>
     </AnnotationAssertion>
@@ -1705,12 +1685,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Current</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>CurrentL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>CurrentL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3317</Literal>
     </AnnotationAssertion>
@@ -1720,12 +1700,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CurrentL1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>CurrentL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>CurrentL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3317</Literal>
     </AnnotationAssertion>
@@ -1735,12 +1715,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CurrentL2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>CurrentL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>CurrentL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3317</Literal>
     </AnnotationAssertion>
@@ -1760,7 +1740,7 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DataAqusition</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Decibel</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">db</Literal>
     </AnnotationAssertion>
@@ -1800,12 +1780,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeviceFunction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>DistrictCoolingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN5xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>DistrictCoolingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">31</Literal>
     </AnnotationAssertion>
@@ -1815,12 +1795,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DistrictCoolingFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>DistrictCoolingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN5xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>DistrictCoolingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">32</Literal>
     </AnnotationAssertion>
@@ -1830,17 +1810,17 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DistrictCoolingReturn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>DistrictHeatingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN6xx, PV6xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>DistrictHeatingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">21</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>DistrictHeatingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">33</Literal>
     </AnnotationAssertion>
@@ -1850,12 +1830,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DistrictHeatingFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>DistrictHeatingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN6xx, PV6xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>DistrictHeatingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">22</Literal>
     </AnnotationAssertion>
@@ -1865,17 +1845,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DistrictHeatingReturn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Example</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Example</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>ExhaustAir</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FF</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ExhaustAir</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">03</Literal>
     </AnnotationAssertion>
@@ -1885,12 +1860,12 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ExhaustAir</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>ExtractAir</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OF</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ExtractAir</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">05</Literal>
     </AnnotationAssertion>
@@ -1905,7 +1880,7 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Facade</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Fahrenheit</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">F</Literal>
     </AnnotationAssertion>
@@ -1920,17 +1895,17 @@ H1B2xx, H1B9xx</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fahrenheit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPComparable"/>
+        <AnnotationProperty IRI="comparableBIP"/>
         <IRI>Flow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MF1xx, GF1-9xx/y</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Flow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">04</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>Flow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BF</Literal>
     </AnnotationAssertion>
@@ -1963,7 +1938,7 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GeoReferenceOrigo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Hertz</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hz</Literal>
     </AnnotationAssertion>
@@ -1978,7 +1953,7 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hertz</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>HotWaterFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">51</Literal>
     </AnnotationAssertion>
@@ -1988,7 +1963,7 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HotWaterFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>HotWaterReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">52</Literal>
     </AnnotationAssertion>
@@ -1998,17 +1973,17 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HotWaterReturn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Humidity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GM1-9xx/y</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Humidity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">03</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Humidity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3304</Literal>
     </AnnotationAssertion>
@@ -2028,12 +2003,12 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humidity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Hwrc</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PCV6xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Hwrc</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">55</Literal>
     </AnnotationAssertion>
@@ -2043,32 +2018,12 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hwrc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IFCComparable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IFCComparable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IPSOComparable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IPSOComparable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IPSOObjectComparable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IPSOObjectComparable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IPSOObjectIdComparable</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IPSOObjectIdComparable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Illuminance</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GRN1-9xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Illuminance</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3301</Literal>
     </AnnotationAssertion>
@@ -2078,7 +2033,7 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Illuminance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Kelvin</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">K</Literal>
     </AnnotationAssertion>
@@ -2093,7 +2048,7 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Kelvin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Kilogram</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">kg</Literal>
     </AnnotationAssertion>
@@ -2123,22 +2078,22 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lenght</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Level</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GL1-9xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Level</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">05</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>Level</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BG, BL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Level</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3319, 3330</Literal>
     </AnnotationAssertion>
@@ -2148,7 +2103,7 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Level</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Liter_per_second</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">l/s</Literal>
     </AnnotationAssertion>
@@ -2173,18 +2128,18 @@ Bearings are based on true north.</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LocalCoordinates</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Example"/>
-        <IRI>Location</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">59.33755390;18.05568540;32.500</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOComparable"/>
+        <AnnotationProperty IRI="comparableIPSO"/>
         <IRI>Location</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Altitude: 3321
 Location: 3336
 Latitude: 5513
 Longitude: 5514 
 Altitude: 5515</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="exampleOfUse"/>
+        <IRI>Location</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">59.33755390;18.05568540;32.500</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2211,12 +2166,12 @@ Ett objekt som är av en klass som har en Location uttrycker detta med [myObject
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Location</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Lumen</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Emitted light</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Lumen</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lm</Literal>
     </AnnotationAssertion>
@@ -2226,7 +2181,7 @@ Ett objekt som är av en klass som har en Location uttrycker detta med [myObject
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lumen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Lux</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lx</Literal>
     </AnnotationAssertion>
@@ -2261,7 +2216,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.qudt.org/</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Meter</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">m</Literal>
     </AnnotationAssertion>
@@ -2311,12 +2266,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ObservationTimeDuration</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>OutdoorAir</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AF</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>OutdoorAir</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">04</Literal>
     </AnnotationAssertion>
@@ -2326,7 +2281,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OutdoorAir</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Parts_per_million</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ppm</Literal>
     </AnnotationAssertion>
@@ -2341,7 +2296,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Parts_per_million</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Pascal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pa</Literal>
     </AnnotationAssertion>
@@ -2371,17 +2326,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PlacementType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>PowerActiveTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>PowerActiveTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>PowerActiveTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 5328</Literal>
     </AnnotationAssertion>
@@ -2391,7 +2346,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ActivePowerPlus</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>PowerFactorL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5820</Literal>
     </AnnotationAssertion>
@@ -2401,7 +2356,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PowerFactorL1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>PowerFactorL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5820</Literal>
     </AnnotationAssertion>
@@ -2411,7 +2366,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PowerFactorL2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>PowerFactorL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5820</Literal>
     </AnnotationAssertion>
@@ -2426,7 +2381,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PowerFrequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Power_factor</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pf</Literal>
     </AnnotationAssertion>
@@ -2441,17 +2396,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Power_factor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Presence</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GN1-9xx, GRN1-9xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Presence</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">14</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Presence</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3302</Literal>
     </AnnotationAssertion>
@@ -2461,17 +2416,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Presence</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Pressure</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GP0-9xx/y, MAN5-6xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Pressure</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">02</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Pressure</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3323</Literal>
     </AnnotationAssertion>
@@ -2491,12 +2446,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="se" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tryck</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>PrimaryCoolingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN5xx, RDV5xx, SHG5xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>PrimaryCoolingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">33</Literal>
     </AnnotationAssertion>
@@ -2506,12 +2461,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PrimaryCoolingFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>PrimaryCoolingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN5xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>PrimaryCoolingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">34</Literal>
     </AnnotationAssertion>
@@ -2521,12 +2476,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PrimaryCoolingReturn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>PrimaryHeatingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN6xx, PV6xx, SHG6xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>PrimaryHeatingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">23</Literal>
     </AnnotationAssertion>
@@ -2536,12 +2491,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PrimaryHeatingFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>PrimaryHeatingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN6xx, PV6xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>PrimaryHeatingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">24</Literal>
     </AnnotationAssertion>
@@ -2576,17 +2531,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">QuantityKind</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Radiation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GR0-9xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Radiation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>Radiation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BR</Literal>
     </AnnotationAssertion>
@@ -2596,17 +2551,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Radiation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ReactivePowerL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ReactivePowerL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ReactivePowerL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 3328</Literal>
     </AnnotationAssertion>
@@ -2616,17 +2571,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReactivePowerL1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ReactivePowerL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ReactivePowerL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ReactivePowerL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 3328</Literal>
     </AnnotationAssertion>
@@ -2636,17 +2591,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReactivePowerL2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ReactivePowerL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ReactivePowerL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ReactivePowerL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 3328</Literal>
     </AnnotationAssertion>
@@ -2656,17 +2611,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReactivePowerL3</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>ReactivePowerTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">12</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>ReactivePowerTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BJ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>ReactivePowerTotal</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5800, 3328</Literal>
     </AnnotationAssertion>
@@ -2691,12 +2646,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RealEstate</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>RecyclingEnergyFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PVA5xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>RecyclingEnergyFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">41</Literal>
     </AnnotationAssertion>
@@ -2706,12 +2661,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RecyclingEnergyFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>RecyclingEnergyReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PVA5xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>RecyclingEnergyReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">42</Literal>
     </AnnotationAssertion>
@@ -2721,7 +2676,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RecyclingEnergyReturn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Relative_humidity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RH</Literal>
     </AnnotationAssertion>
@@ -2736,7 +2691,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Realative_humidity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Revolutions_per_minute</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rpm</Literal>
     </AnnotationAssertion>
@@ -2751,22 +2706,22 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Roof</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPComparable"/>
+        <AnnotationProperty IRI="comparableBIP"/>
         <IRI>Room</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SpaceName</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPComparable"/>
+        <AnnotationProperty IRI="comparableBIP"/>
         <IRI>Room</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SpaceNumber</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPComparable"/>
+        <AnnotationProperty IRI="comparableBIP"/>
         <IRI>Room</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SpaceType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IFCComparable"/>
+        <AnnotationProperty IRI="comparableIFC"/>
         <IRI>Room</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ifcSpaceType</Literal>
     </AnnotationAssertion>
@@ -2786,17 +2741,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Room</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>RotationSpeed</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">08</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>RotationSpeed</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BSE, BSF</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>RotationSpeed</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3346</Literal>
     </AnnotationAssertion>
@@ -2806,7 +2761,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RotationSpeed</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Second</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">s</Literal>
     </AnnotationAssertion>
@@ -2821,12 +2776,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Second</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>SecondaryCoolingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN5xx, SHG5xx, RDV7xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>SecondaryCoolingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">36</Literal>
     </AnnotationAssertion>
@@ -2836,7 +2791,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SecondaryCoolingFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>SecondaryCoolingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN5xx</Literal>
     </AnnotationAssertion>
@@ -2846,12 +2801,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SecondaryCoolingReturn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>SecondaryHeatingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN6xx, PV6xx, RDV6xx, SHG6xx, RDV8xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>SecondaryHeatingFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">25</Literal>
     </AnnotationAssertion>
@@ -2861,12 +2816,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SecondaryHeatingFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>SecondaryHeatingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MAN6xx, PV6xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>SecondaryHeatingReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">26</Literal>
     </AnnotationAssertion>
@@ -2886,12 +2841,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sensor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Sound</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">13</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Sound</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3324</Literal>
     </AnnotationAssertion>
@@ -2901,7 +2856,7 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sound</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Square_meter</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">m2</Literal>
     </AnnotationAssertion>
@@ -2926,12 +2881,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">StartTime</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>SteamFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MT2xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>SteamFlow</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">71</Literal>
     </AnnotationAssertion>
@@ -2941,12 +2896,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SteamFlow</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>SteamReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MT2xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>SteamReturn</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">72</Literal>
     </AnnotationAssertion>
@@ -2966,12 +2921,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">StopTime</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPComparable"/>
+        <AnnotationProperty IRI="comparableBIP"/>
         <IRI>StoreyLevel</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">StoreyName</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IFCComparable"/>
+        <AnnotationProperty IRI="comparableIFC"/>
         <IRI>StoreyLevel</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ifcBuildingStorey</Literal>
     </AnnotationAssertion>
@@ -2986,12 +2941,12 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">StoreyLevel</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>SupplyAir</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TF</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>SupplyAir</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">02</Literal>
     </AnnotationAssertion>
@@ -3006,17 +2961,17 @@ Angle i degrees (360 degress = 1 revolution)</Literal>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TVOC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>Temperature</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GT0-9xx/yy, MT2-6xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Temperature</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">01</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Temperature</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3303</Literal>
     </AnnotationAssertion>
@@ -3069,31 +3024,26 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Unit</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Value</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Value</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>Velocity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">07</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>Velocity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BSD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>Velocity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GS0-9xx/y</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Velocity</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">5517</Literal>
     </AnnotationAssertion>
@@ -3113,12 +3063,12 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RoomFoodHandling</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Volt</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3316</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Volt</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">V</Literal>
     </AnnotationAssertion>
@@ -3133,12 +3083,12 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Volt</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>Voltage</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BA</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>Voltage</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3316</Literal>
     </AnnotationAssertion>
@@ -3148,12 +3098,12 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Voltage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>VoltageL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BA</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>VoltageL1</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3316</Literal>
     </AnnotationAssertion>
@@ -3163,12 +3113,12 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VoltageL1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>VoltageL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BA</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>VoltageL2</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3316</Literal>
     </AnnotationAssertion>
@@ -3178,12 +3128,12 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VoltageL2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="CoClassComparable"/>
+        <AnnotationProperty IRI="comparableCoClass"/>
         <IRI>VoltageL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BA</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="IPSOObjectIdComparable"/>
+        <AnnotationProperty IRI="comparableIPSOObjectId"/>
         <IRI>VoltageL3</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3316</Literal>
     </AnnotationAssertion>
@@ -3198,12 +3148,12 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Volume</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BIPTypeIdComparable"/>
+        <AnnotationProperty IRI="comparableBIPTypeId"/>
         <IRI>WasteWater</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MT3xx</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="BelokComparable"/>
+        <AnnotationProperty IRI="comparableBelok"/>
         <IRI>WasteWater</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">81</Literal>
     </AnnotationAssertion>
@@ -3213,7 +3163,7 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WasteWater</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Watt</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">W</Literal>
     </AnnotationAssertion>
@@ -3228,7 +3178,7 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Watt</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="Unit"/>
+        <AnnotationProperty IRI="unitSign"/>
         <IRI>Watt_hour</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wh</Literal>
     </AnnotationAssertion>
@@ -3246,6 +3196,56 @@ Tid är uttryckt i UTC (Coordinated Universal Time), med speciell UTC anvisare (
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>belongsTo</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">belongsTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableBIP</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BIPComparable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableBIPTypeId</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">comparableBIPTypeId</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableBelok</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">comparableBelok</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableCoClass</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">comparableCoClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableHaystack</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">comparableHaystack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableIFC</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">comparableIFC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableIPSO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">comparableIPSO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableIPSOObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">comparableIPSOObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comparableIPSOObjectId</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">comparableIPSOObjectId</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>exampleOfUse</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">exampleOfUse</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3411,6 +3411,11 @@ Jämför:Ett objekt som är av en klass som har en Location uttrycker detta med 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>serves</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">serves</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>unitSign</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unitSign</Literal>
     </AnnotationAssertion>
 </Ontology>
 
