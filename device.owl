@@ -7,6 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://w3id.org/rec/device/"
      versionIRI="http://w3id.org/rec/device/2.2/">
+    <Prefix name="" IRI="http://w3id.org/rec/device/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -17,31 +18,19 @@
         <Class IRI="DeviceSourceData"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DeviceSourceDataAliasId"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DeviceSourceDataPopularName"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="KNXDevicePort"/>
     </Declaration>
     <Declaration>
         <Class IRI="ModbusTCPOffsetFactor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DeviceSourceDataComment"/>
+        <Class IRI="ModbusTCPSlaveId"/>
     </Declaration>
     <Declaration>
         <Class IRI="DeviceSourceDataProductName"/>
     </Declaration>
     <Declaration>
         <Class IRI="LoRaConfiguration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ModbusTCPSlaveId"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ModbusTCPGatewayIP"/>
     </Declaration>
     <Declaration>
         <Class IRI="DeviceSourceDataLittera"/>
@@ -56,19 +45,7 @@
         <Class IRI="ModbusTCPConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ModbusTCPScaleFactor"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="ModbusTCPRegister"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="LoRaDevEUI"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="KNXDataPointType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DeviceInformation"/>
     </Declaration>
     <Declaration>
         <Class IRI="BACnetConfiguration"/>
@@ -80,10 +57,37 @@
         <Class IRI="ModbusRTUConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="KNXConfiguration"/>
+        <NamedIndividual IRI="ElectricalGridLocalProduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DeviceSourceDataAliasId"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DeviceSourceDataPopularName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DeviceSourceDataComment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ModbusTCPGatewayIP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ModbusTCPScaleFactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LoRaDevEUI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="KNXDataPointType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DeviceInformation"/>
     </Declaration>
     <Declaration>
         <Class IRI="ModbusTCPFunctionCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="KNXConfiguration"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="BACnetConfiguration"/>
@@ -181,6 +185,10 @@
         <Class IRI="ModbusTCPSlaveId"/>
         <Class IRI="ModbusTCPConfiguration"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://w3id.org/rec/core/PlacementType"/>
+        <NamedIndividual IRI="ElectricalGridLocalProduction"/>
+    </ClassAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>BACnetConfiguration</IRI>
