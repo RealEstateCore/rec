@@ -1,0 +1,2251 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/rec/core/"
+     xml:base="http://w3id.org/rec/core/"
+     xmlns:core="http://w3id.org/rec/core/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://w3id.org/rec/core/">
+        <owl:versionIRI rdf:resource="http://w3id.org/rec/core/2.2/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableBIP -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableBIP">
+        <rdfs:label xml:lang="en">comparableBIP</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableBIPTypeId -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableBIPTypeId">
+        <rdfs:label xml:lang="en">comparableBIPTypeId</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableBelok -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableBelok">
+        <rdfs:label xml:lang="en">comparableBelok</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableCoClass -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableCoClass">
+        <rdfs:label xml:lang="en">comparableCoClass</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableHaystack -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableHaystack">
+        <rdfs:label xml:lang="en">comparableHaystack</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableIFC -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableIFC">
+        <rdfs:label xml:lang="en">comparableIFC</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableIPSO -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableIPSO">
+        <rdfs:label xml:lang="en">comparableIPSO</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableIPSOObject -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableIPSOObject">
+        <rdfs:label xml:lang="en">comparableIPSOObject</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/comparableIPSOObjectId -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableIPSOObjectId">
+        <rdfs:label xml:lang="en">comparableIPSOObjectId</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/exampleOfUse -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/exampleOfUse">
+        <rdfs:label xml:lang="en">exampleOfUse</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/unitSign -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/unitSign">
+        <rdfs:label xml:lang="en">unitSign</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/core/belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/belongsTo">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructure"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Land"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/RealEstate"/>
+        <rdfs:label xml:lang="en">belongsTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasActuatableProperty -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasActuatableProperty">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Actuator"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/ActuatableProperty"/>
+        <rdfs:label xml:lang="en">hasActuatableProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasBuildingStructure -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasBuildingStructure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/RealEstate"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/BuildingStructure"/>
+        <rdfs:label xml:lang="en">hasBuildingStructure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasBuildingStructureComponent -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasBuildingStructureComponent">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/BuildingStructure"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <rdfs:label xml:lang="en">hasBuildingStructureComponent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasDeviceConfiguration -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasDeviceConfiguration">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
+        <rdfs:label xml:lang="en">hasDeviceConfiguration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasDeviceFunction -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasDeviceFunction">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:label xml:lang="en">hasDeviceFunction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasGeoReferenceBearing -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasGeoReferenceBearing">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/GeoReferenceOrigo"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/GeoReferenceBearing"/>
+        <rdfs:comment xml:lang="en">The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
+
+Bearings are never greater than 90°.
+Bearings are based on true north.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasGeoReferenceBearing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasGeoReferenceOrigo -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasGeoReferenceOrigo">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/BuildingStructure"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/GeoReferenceBearing"/>
+        <rdfs:label xml:lang="en">hasGeoReferenceOrigo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasMeasurmentUnit -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasMeasurmentUnit">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Value"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <rdfs:label xml:lang="en">hasMeasurementUnit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasObservationTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasObservationTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/ObservationTime"/>
+        <rdfs:label xml:lang="en">hasObservationTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasObservationTimeDuration -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasObservationTimeDuration">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/ObservationTimeDuration"/>
+        <rdfs:label xml:lang="en">hasObservationTimeDuration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasPlacementContext -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasPlacementContext">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <rdfs:label xml:lang="en">hasPlacementContext</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasProcessedTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasProcessedTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/ProcessedTime"/>
+        <rdfs:label xml:lang="en">hasProcessedTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasQuantityKind">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:label xml:lang="en">hasQuantityKind</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasStartTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasStartTime">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/StartTime"/>
+        <rdfs:label xml:lang="en">hasStartTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasStopTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasStopTime">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/StopTime"/>
+        <rdfs:label xml:lang="en">hasStopTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasStoreyLevel -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasStoreyLevel">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/BuildingStructure"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/StoreyLevel"/>
+        <rdfs:label xml:lang="en">hasStoreyLevel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasValue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Value"/>
+        <rdfs:label xml:lang="en">hasValue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/isA -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isA"/>
+    
+
+
+    <!-- http://w3id.org/rec/core/isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isLocatedAt">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructure"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructureComponent"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Land"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Location"/>
+        <rdfs:comment xml:lang="en">An object that has an exact point (expressed in WGS84).
+
+E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
+        <rdfs:label xml:lang="en">isLocatedAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/isLocatedAtLocalCoordinates -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isLocatedAtLocalCoordinates">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/LocalCoordinates"/>
+        <rdfs:comment xml:lang="en">Literal value (x,y,z) in a local coordinate system that referes to GeoReferenceOrigo.</rdfs:comment>
+        <rdfs:label xml:lang="en">isLocatedAtLocalCoordinates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isLocatedIn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructure"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructureComponent"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">An object that can describe its place by using [object-UUID] locatedIn 
+[myOtherObject-UUID], where [myOtherObject-UUID] could be a Room, BuildingStructure, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">isLocatedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/isPartOfDevice -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isPartOfDevice">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:label xml:lang="en">isPartOfDevice</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/makesActuation -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/makesActuation">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Actuator"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Actuation"/>
+        <rdfs:label xml:lang="en">makesActuation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/makesObservation -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/makesObservation">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Sensor"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:label xml:lang="en">makesObservation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/partOfPremises -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/partOfPremises">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructure"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructureComponent"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Premises"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/servedBy -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/servedBy">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:label xml:lang="en">servedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/serves -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/serves">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:label xml:lang="en">serves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/core/ActuatableProperty -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/ActuatableProperty">
+        <rdfs:comment xml:lang="en">A description of what kind of input the Actuator accepts.</rdfs:comment>
+        <rdfs:label xml:lang="en">ActuatableProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Actuation -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Actuation">
+        <rdfs:comment xml:lang="en">The act of putting or changing the state of something.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Actuator -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Actuator">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">An actuator is a component that is responsible for moving and controlling a mechanism or system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Agent -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Agent">
+        <rdfs:comment xml:lang="en">The human or machine that consumes or acts upon an object or data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/BuildingStructure -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/BuildingStructure">
+        <comparableHaystack xml:lang="en">site</comparableHaystack>
+        <comparableIFC xml:lang="en">ifcBuilding</comparableIFC>
+        <rdfs:comment xml:lang="en">Confined building structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">BuildingStructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/BuildingStructureComponent -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/BuildingStructureComponent">
+        <comparableIFC xml:lang="en">ifcSpace</comparableIFC>
+        <rdfs:comment xml:lang="en">The parts that makes up a building structure (BuildingStructure). E.g. Room, Facade, Roof, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">BuildingStructureComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/CreatedTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/CreatedTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:label xml:lang="en">CreatedTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/DeletedTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/DeletedTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:label xml:lang="en">DeletedTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Device -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Device">
+        <comparableHaystack xml:lang="en">device,equip</comparableHaystack>
+        <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device has one or more Sensor(s) and/or Actuator(s).</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/DeviceCommunication -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceCommunication">
+        <rdfs:label xml:lang="en">DeviceCommunication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/DeviceFunction -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceFunction">
+        <rdfs:comment xml:lang="en">Description of what the main function is of a Device.</rdfs:comment>
+        <rdfs:label xml:lang="en">DeviceFunction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Facade -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Facade">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <rdfs:label xml:lang="en">Facade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/GeoReferenceBearing -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/GeoReferenceBearing">
+        <rdfs:comment xml:lang="en">The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
+
+Bearings are never greater than 90°.
+Bearings are based on true north.</rdfs:comment>
+        <rdfs:label xml:lang="en">GeoReferenceBearing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/GeoReferenceOrigo -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/GeoReferenceOrigo">
+        <rdfs:comment xml:lang="en">A fixed point for e.g. a building structure. Commonly refered to as &quot;insertion point&quot; in CAD-programs. Used as origo for LocalCoordinates.</rdfs:comment>
+        <rdfs:label xml:lang="en">GeoReferenceOrigo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Land -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Land">
+        <rdfs:comment xml:lang="en">The land where one or more buildings are situated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Land</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/LocalCoordinates -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/LocalCoordinates">
+        <rdfs:comment xml:lang="en">Literal value (x,y,z) in a local coordinate system that referes to GeoReferenceOrigo.</rdfs:comment>
+        <rdfs:label xml:lang="en">LocalCoordinates</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Location -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Location">
+        <comparableHaystack xml:lang="en">geoCoord</comparableHaystack>
+        <comparableIPSO xml:lang="en">Altitude: 3321
+Location: 3336
+Latitude: 5513
+Longitude: 5514 
+Altitude: 5515</comparableIPSO>
+        <exampleOfUse xml:lang="en">59.33755390;18.05568540;32.500</exampleOfUse>
+        <rdfs:comment xml:lang="se">Placeringen av ett objekt (exempelvis sensor eller objekt) eller position för objekt i ett geografiskt kartsystem eller inom omslutningen av ett annat objekt. Vi använder WGS84. Formatet är i decimalgrader (DD).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The absolute location of a point (expressed in decimal degrees in WGS84).</rdfs:comment>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/MeasurementUnit -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/MeasurementUnit">
+        <comparableHaystack xml:lang="en">unit</comparableHaystack>
+        <rdfs:comment xml:lang="en">The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
+
+Exceptions to SI:
+Express temperature in Celcius
+Energy in Watt hour (Wh)
+Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
+        <rdfs:label xml:lang="en">MeasurementUnit</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Observation -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Observation">
+        <rdfs:comment xml:lang="en">Observation of a phenomena. Made by a Sensor. Has a Value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/ObservationTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/ObservationTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">Time for made observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">ObservationTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/ObservationTimeDuration -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/ObservationTimeDuration">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">Length of observation in ms.</rdfs:comment>
+        <rdfs:label xml:lang="en">ObservationTimeDuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/PlacementContext -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/PlacementContext">
+        <rdfs:comment xml:lang="en">In what context or media that the Sensor or Actuator is operating in.</rdfs:comment>
+        <rdfs:label xml:lang="en">PlacementContext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Premises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Premises">
+        <rdfs:comment xml:lang="en">A collection of Rooms or other spaces or objects that are leased to a tenant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Premises</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/ProcessedTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/ProcessedTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">Time when an object or result was processed in a system.</rdfs:comment>
+        <rdfs:label xml:lang="en">ProcessedTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/QuantityKind -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/QuantityKind">
+        <rdfs:comment xml:lang="en">Describes the value observed by a Sensor or the value set by an Actuator</rdfs:comment>
+        <rdfs:label xml:lang="en">QuantityKind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/ReadTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/ReadTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:label xml:lang="en">ReadTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/RealEstate -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/RealEstate">
+        <rdfs:comment xml:lang="en">Legal entity. Land + buildings</rdfs:comment>
+        <rdfs:label xml:lang="en">RealEstate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/RoofInner -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/RoofInner">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <rdfs:label xml:lang="en">RoofInner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/RoofOuter -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/RoofOuter">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <rdfs:label xml:lang="en">RoofOuter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Room -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Room">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <comparableBIP xml:lang="en">SpaceName, SpaceNumber, SpaceType</comparableBIP>
+        <comparableIFC xml:lang="en">ifcSpaceType</comparableIFC>
+        <rdfs:comment xml:lang="en">Confined space by walls or other line of separation</rdfs:comment>
+        <rdfs:label xml:lang="en">Room</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Sensor -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Sensor">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Device"/>
+        <comparableHaystack xml:lang="en">sensor</comparableHaystack>
+        <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/StartTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/StartTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">Start time.</rdfs:comment>
+        <rdfs:label xml:lang="en">StartTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/StopTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/StopTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">Stop time.</rdfs:comment>
+        <rdfs:label xml:lang="en">StopTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/StoreyLevel -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/StoreyLevel">
+        <comparableBIP xml:lang="en">StoreyName</comparableBIP>
+        <comparableIFC xml:lang="en">ifcBuildingStorey</comparableIFC>
+        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
+        <rdfs:label xml:lang="en">StoreyLevel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Time -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Time">
+        <rdfs:comment xml:lang="en">Time contains classes that describes start, stop, duration etc.
+
+Time format: ISO8601
+
+Complete date, hour, minutes, seconds, and decimal fraction of second
+
+      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)
+
+Where:
+
+     YYYY = 4 numbers for year.
+     MM   = 2 numbers for month (01=January, etc.)
+     DD   = 2 numbers for day of month (01 till 31)
+     hh   = 2 numbers for hour (00 till 23) (am/pm not allowed)
+     mm   = 2 numbers for minutes (00 till 59)
+     ss   = 2 numbers for second (00 till 59)
+     s    =  1 or more numbers represent a decimal fraction of second
+
+     TZD  = time zone designator (Z or +hh:mm or -hh:mm)
+Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&quot;Z&quot;) for GMT.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/UpdatedTime -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/UpdatedTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:label xml:lang="en">UpdatedTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Value -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Value">
+        <rdfs:label xml:lang="en">Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/VirtualComponent -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/VirtualComponent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <rdfs:comment xml:lang="en">A non-physical component. Belongs to a BuildingStructure. One BuildingStructure may have zero, one, or many VirtualComponents. E.g a temperature value from an external service for the area of a building.</rdfs:comment>
+        <rdfs:label xml:lang="en">RoomFoodHandling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/WallInner -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/WallInner">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <rdfs:label xml:lang="en">WallInner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/core/ActiveEnergyL1 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyL1">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">MQxx, VMM8xx, VMM1xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">11</comparableBelok>
+        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ActiveEnergyL1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ActiveEnergyL2 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyL2">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">MQxx, VMM8xx, VMM1xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">11</comparableBelok>
+        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ActiveEnergyL2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ActiveEnergyL3 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyL3">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">MQxx, VMM8xx, VMM1xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">11</comparableBelok>
+        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ActiveEnergyL3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ActiveEnergyTotal -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyTotal">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">11</comparableBelok>
+        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableHaystack xml:lang="en">active,energy</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ActiveEnergyTotal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ActivePowerL1 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActivePowerL1">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">12</comparableBelok>
+        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ActivePowerL1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ActivePowerL2 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActivePowerL2">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">12</comparableBelok>
+        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ActivePowerL1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ActivePowerL3 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActivePowerL3">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">12</comparableBelok>
+        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ActivePowerL3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ActivePowerTotal -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActivePowerTotal">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">12</comparableBelok>
+        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableHaystack xml:lang="en">active,power</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ActivePowerTotal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/AirHandlingUnit -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/AirHandlingUnit">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">ahu,air</comparableHaystack>
+        <rdfs:label xml:lang="en">AirHandlingUnit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/AlarmMajor -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/AlarmMajor">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:comment xml:lang="en">Danger for property</rdfs:comment>
+        <rdfs:label xml:lang="en">AlarmMajor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/AlarmMinor -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/AlarmMinor">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:comment xml:lang="en">Notifications</rdfs:comment>
+        <rdfs:label xml:lang="en">AlarmMinor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/AlarmSevere -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/AlarmSevere">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIP xml:lang="en">H1B1xx, H1B4xx, H1B5xx, H1B9xx, H1B6xx, H1B3xx, H1B7xx
+H1B2xx, H1B9xx</comparableBIP>
+        <rdfs:comment xml:lang="en">Danger for life and property</rdfs:comment>
+        <rdfs:label xml:lang="en">AlarmSevere</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Ampere -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Ampere">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">A</unitSign>
+        <rdfs:comment xml:lang="en">Ampere. Current in a circuit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ampere</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Angle -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Angle">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">angle</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3332</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Angle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Area -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Area">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">area</comparableHaystack>
+        <rdfs:label xml:lang="en">Area</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Binary -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Binary">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/ActuatableProperty"/>
+        <rdfs:label xml:lang="en">Binary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Boiler -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Boiler">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:label xml:lang="en">Boiler</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/CO -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CO">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">co</comparableHaystack>
+        <rdfs:label xml:lang="en">CO</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/CO2 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CO2">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">co2</comparableHaystack>
+        <rdfs:label xml:lang="en">CO2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Celcius -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Celcius">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">C</unitSign>
+        <rdfs:comment xml:lang="en">Temperature in Celsius degress. Note that correct SI Unit is Kelvin.</rdfs:comment>
+        <rdfs:label xml:lang="en">Celcius</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Chiller -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Chiller">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">chiller</comparableHaystack>
+        <rdfs:label xml:lang="en">Chiller</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/CirculationAir -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CirculationAir">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <rdfs:label xml:lang="en">CirculationAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Coil -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Coil">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:label xml:lang="en">Coil</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ColdWaterFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ColdWaterFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MT2xx, PPA2xx, SHG2xx, RT2xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">53</comparableBelok>
+        <comparableHaystack xml:lang="en">domestic,water</comparableHaystack>
+        <rdfs:label xml:lang="en">ColdWaterFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ColdWaterReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ColdWaterReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MT2xx, PPA2xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">54</comparableBelok>
+        <comparableHaystack xml:lang="en">domestic,water,leaving</comparableHaystack>
+        <comparableHaystack xml:lang="en">leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">ColdWaterReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Compressor -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Compressor">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:label xml:lang="en">Compressor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Concentration -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Concentration">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GQ0-9xx/y/z</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">09</comparableBelok>
+        <comparableCoClass xml:lang="en">BQ</comparableCoClass>
+        <comparableIPSOObjectId xml:lang="en">3325</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Concentration</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Condenser -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Condenser">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">condenser</comparableHaystack>
+        <rdfs:label xml:lang="en">Condenser</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Control -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Control">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:comment xml:lang="en">Device that controls Actuators (can also collect data).</rdfs:comment>
+        <rdfs:label xml:lang="en">Control</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Cos_phi -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Cos_phi">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">cos-phi</unitSign>
+        <rdfs:comment xml:lang="en">The angle between two electrical phases.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cos_phi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Cubic_meter -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Cubic_meter">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">m3</unitSign>
+        <rdfs:comment xml:lang="en">Volume is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains. Volume is often quantified numerically using the cubic metre (m3).</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Current -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Current">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableCoClass xml:lang="en">BC</comparableCoClass>
+        <comparableHaystack xml:lang="en">current</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Current</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/CurrentL1 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CurrentL1">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableCoClass xml:lang="en">BC</comparableCoClass>
+        <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">CurrentL1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/CurrentL2 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CurrentL2">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableCoClass xml:lang="en">BC</comparableCoClass>
+        <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">CurrentL2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/CurrentL3 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CurrentL3">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableCoClass xml:lang="en">BC</comparableCoClass>
+        <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">CurrentL3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Damper -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Damper">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">damper</comparableHaystack>
+        <rdfs:label xml:lang="en">Damper</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/DataAquisition -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DataAquisition">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:comment xml:lang="en">Device that collects data</rdfs:comment>
+        <rdfs:label xml:lang="en">DataAqusition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Decibel -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Decibel">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">db</unitSign>
+        <rdfs:comment xml:lang="en">Sound level</rdfs:comment>
+        <rdfs:label xml:lang="en">Decibel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/DistrictCoolingFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DistrictCoolingFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN5xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">31</comparableBelok>
+        <rdfs:label xml:lang="en">DistrictCoolingFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/DistrictCoolingReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DistrictCoolingReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN5xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">32</comparableBelok>
+        <comparableHaystack xml:lang="en">leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">DistrictCoolingReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/DistrictHeatingFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DistrictHeatingFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">21</comparableBelok>
+        <comparableBelok xml:lang="en">33</comparableBelok>
+        <rdfs:label xml:lang="en">DistrictHeatingFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/DistrictHeatingReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DistrictHeatingReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">22</comparableBelok>
+        <comparableHaystack xml:lang="en">leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">DistrictHeatingReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ElectricalGridIntake -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ElectricalGridIntake">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ElectricalGridTenant -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ElectricalGridTenant">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Elevator -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Elevator">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:label xml:lang="en">Elevator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/EnergyTotal -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/EnergyTotal">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">11</comparableBelok>
+        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
+        <rdfs:comment xml:lang="en">Total energy (not specified as Active or Reactive, used for e.g. district heating).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Escalator -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Escalator">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:label xml:lang="en">Escalator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ExhaustAir -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ExhaustAir">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">FF</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">03</comparableBelok>
+        <rdfs:label xml:lang="en">ExhaustAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ExtractAir -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ExtractAir">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">OF</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">05</comparableBelok>
+        <rdfs:label xml:lang="en">ExtractAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Fahrenheit -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Fahrenheit">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">F</unitSign>
+        <rdfs:comment xml:lang="en">Temperature in Fahrenheit degress.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fahrenheit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Fan -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Fan">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">fan</comparableHaystack>
+        <rdfs:label xml:lang="en">Fan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Filter -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Filter">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">filter</comparableHaystack>
+        <rdfs:label xml:lang="en">Filter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Flow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Flow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIP xml:lang="en">MF1xx, GF1-9xx/y</comparableBIP>
+        <comparableBelok xml:lang="en">04</comparableBelok>
+        <comparableCoClass xml:lang="en">BF</comparableCoClass>
+        <comparableHaystack xml:lang="en">flow</comparableHaystack>
+        <rdfs:label xml:lang="en">Flow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Heater -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Heater">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">heater</comparableHaystack>
+        <rdfs:label xml:lang="en">Heater</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Hertz -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Hertz">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">Hz</unitSign>
+        <rdfs:comment xml:lang="en">One cycle per second.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hertz</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/HotWaterFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/HotWaterFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBelok xml:lang="en">51</comparableBelok>
+        <rdfs:label xml:lang="en">HotWaterFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/HotWaterReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/HotWaterReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBelok xml:lang="en">52</comparableBelok>
+        <comparableHaystack xml:lang="en">leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">HotWaterReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Humidity -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Humidity">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GM1-9xx/y</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">03</comparableBelok>
+        <comparableHaystack xml:lang="en">humidity</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3304</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Humidity</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">Humidity</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Hwrc -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Hwrc">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">PCV6xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">55</comparableBelok>
+        <rdfs:label xml:lang="en">Hwrc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Illuminance -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Illuminance">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GRN1-9xx</comparableBIPTypeId>
+        <comparableHaystack xml:lang="en">irradiance</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3301</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Illuminance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Kelvin -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Kelvin">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">K</unitSign>
+        <rdfs:comment xml:lang="en">Temperature in Kelvin degrees</rdfs:comment>
+        <rdfs:label xml:lang="en">Kelvin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Kilogram -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Kilogram">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">kg</unitSign>
+        <rdfs:comment xml:lang="en">Mass.</rdfs:comment>
+        <rdfs:label xml:lang="en">Kilogram</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Lenght -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Lenght">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:label xml:lang="en">Lenght</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Level -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Level">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GL1-9xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">05</comparableBelok>
+        <comparableCoClass xml:lang="en">BG, BL</comparableCoClass>
+        <comparableHaystack xml:lang="en">level</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3319, 3330</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Level</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Liter_per_second -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Liter_per_second">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">l/s</unitSign>
+        <rdfs:comment xml:lang="en">Flow</rdfs:comment>
+        <rdfs:label xml:lang="en">Liter_per_second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Lumen -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Lumen">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <comparableHaystack xml:lang="en">lightLevel</comparableHaystack>
+        <unitSign xml:lang="en">Emitted light</unitSign>
+        <unitSign xml:lang="en">lm</unitSign>
+        <rdfs:label xml:lang="en">Lumen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Lux -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Lux">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <comparableHaystack xml:lang="en">lightLevel</comparableHaystack>
+        <unitSign xml:lang="en">lx</unitSign>
+        <rdfs:comment xml:lang="en">Light intensity in a specific area.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lux</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Meter -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Meter">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">m</unitSign>
+        <rdfs:comment xml:lang="en">Lenght.</rdfs:comment>
+        <rdfs:label xml:lang="en">Meter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Number -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Number">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/ActuatableProperty"/>
+        <rdfs:label xml:lang="en">Number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/OutdoorAir -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/OutdoorAir">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">AF</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">04</comparableBelok>
+        <comparableHaystack xml:lang="en">outside</comparableHaystack>
+        <rdfs:label xml:lang="en">OutdoorAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Parts_per_million -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Parts_per_million">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">ppm</unitSign>
+        <rdfs:comment xml:lang="en">Measurement for concentration</rdfs:comment>
+        <rdfs:label xml:lang="en">Parts_per_million</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Pascal -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Pascal">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <comparableHaystack xml:lang="en">barometric</comparableHaystack>
+        <unitSign xml:lang="en">Pa</unitSign>
+        <rdfs:comment xml:lang="en">The pascal is the SI derived unit of pressure used to quantify internal pressure, stress. It is defined as one newton per square metre.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pascal</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">In Haystack: barometric is described as &quot;Defines the mean atmospheric pressure at sea level measured in millibar or in Hg.&quot;</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/PowerFactorL1 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PowerFactorL1">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">pf,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5820</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">PowerFactorL1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/PowerFactorL2 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PowerFactorL2">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">pf,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5820</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">PowerFactorL2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/PowerFactorL3 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PowerFactorL3">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">pf,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5820</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">PowerFactorL3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/PowerFrequency -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PowerFrequency">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">freq</comparableHaystack>
+        <rdfs:label xml:lang="en">PowerFrequency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Power_factor -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Power_factor">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <comparableHaystack xml:lang="en">pf</comparableHaystack>
+        <unitSign xml:lang="en">pf</unitSign>
+        <rdfs:comment xml:lang="en">The power factor of an AC electrical power system is defined as the ratio of the real power flowing to the load to the apparent power in the circuit, and is a dimensionless number in the closed interval of −1 to 1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Power_factor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Presence -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Presence">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GN1-9xx, GRN1-9xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">14</comparableBelok>
+        <comparableHaystack xml:lang="en">occupied</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3302</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Presence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Pressure -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Pressure">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GP0-9xx/y, MAN5-6xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">02</comparableBelok>
+        <comparableHaystack xml:lang="en">pressure</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3323</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Pressure</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">Pressure</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="se">Tryck</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/PrimaryCoolingFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PrimaryCoolingFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN5xx, RDV5xx, SHG5xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">33</comparableBelok>
+        <rdfs:label xml:lang="en">PrimaryCoolingFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/PrimaryCoolingReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PrimaryCoolingReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN5xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">34</comparableBelok>
+        <comparableHaystack xml:lang="en">leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">PrimaryCoolingReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/PrimaryHeatingFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PrimaryHeatingFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx, SHG6xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">23</comparableBelok>
+        <rdfs:label xml:lang="en">PrimaryHeatingFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/PrimaryHeatingReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PrimaryHeatingReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">24</comparableBelok>
+        <comparableHaystack xml:lang="en">leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">PrimaryHeatingReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Pump -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Pump">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">pump</comparableHaystack>
+        <rdfs:label xml:lang="en">Pump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Radiation -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Radiation">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GR0-9xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">10</comparableBelok>
+        <comparableCoClass xml:lang="en">BR</comparableCoClass>
+        <rdfs:label xml:lang="en">Radiation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ReactivePowerL1 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ReactivePowerL1">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">12</comparableBelok>
+        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ReactivePowerL1</rdfs:label>
+        <rdfs:label xml:lang="en">reactive,power</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ReactivePowerL2 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ReactivePowerL2">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">12</comparableBelok>
+        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ReactivePowerL2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ReactivePowerL3 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ReactivePowerL3">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">12</comparableBelok>
+        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ReactivePowerL3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/ReactivePowerTotal -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ReactivePowerTotal">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">12</comparableBelok>
+        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableHaystack xml:lang="en">reactive,power</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">ReactivePowerTotal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/RecyclingEnergyFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/RecyclingEnergyFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">PVA5xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">41</comparableBelok>
+        <comparableHaystack xml:lang="en">circ</comparableHaystack>
+        <rdfs:label xml:lang="en">RecyclingEnergyFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/RecyclingEnergyReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/RecyclingEnergyReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">PVA5xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">42</comparableBelok>
+        <comparableHaystack xml:lang="en">circ,leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">RecyclingEnergyReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Relative_humidity -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Relative_humidity">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">RH</unitSign>
+        <rdfs:comment xml:lang="en">Relative Humidity. The amount of water vapour present in air expressed as a percentage of the amount needed for saturation at the same temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Realative_humidity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Revolutions_per_minute -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Revolutions_per_minute">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">rpm</unitSign>
+        <rdfs:label xml:lang="en">Revoultions_per_minute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/RotationSpeed -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/RotationSpeed">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">08</comparableBelok>
+        <comparableCoClass xml:lang="en">BSE, BSF</comparableCoClass>
+        <comparableIPSOObjectId xml:lang="en">3346</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">RotationSpeed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Second -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Second">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">s</unitSign>
+        <rdfs:comment xml:lang="en">The second is the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom.</rdfs:comment>
+        <rdfs:label xml:lang="en">Second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/SecondaryCoolingFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SecondaryCoolingFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN5xx, SHG5xx, RDV7xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">36</comparableBelok>
+        <rdfs:label xml:lang="en">SecondaryCoolingFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/SecondaryCoolingReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SecondaryCoolingReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN5xx</comparableBIPTypeId>
+        <comparableHaystack xml:lang="en">leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">SecondaryCoolingReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/SecondaryHeatingFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SecondaryHeatingFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx, RDV6xx, SHG6xx, RDV8xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">25</comparableBelok>
+        <rdfs:label xml:lang="en">SecondaryHeatingFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/SecondaryHeatingReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SecondaryHeatingReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">26</comparableBelok>
+        <comparableHaystack xml:lang="en">leaving</comparableHaystack>
+        <rdfs:label xml:lang="en">SecondaryHeatingReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Sound -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Sound">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">13</comparableBelok>
+        <comparableIPSOObjectId xml:lang="en">3324</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Sound</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Square_meter -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Square_meter">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">m2</unitSign>
+        <rdfs:comment xml:lang="en">Area unit. It is the area of a square whose sides measure exactly one metre.</rdfs:comment>
+        <rdfs:label xml:lang="en">Area</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/SteamFlow -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SteamFlow">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MT2xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">71</comparableBelok>
+        <rdfs:label xml:lang="en">SteamFlow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/SteamReturn -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SteamReturn">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MT2xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">72</comparableBelok>
+        <rdfs:label xml:lang="en">SteamReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/SupplyAir -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SupplyAir">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">TF</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">02</comparableBelok>
+        <rdfs:label xml:lang="en">SupplyAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/TVOC -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/TVOC">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:label xml:lang="en">TVOC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Temperature">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GT0-9xx/yy, MT2-6xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">01</comparableBelok>
+        <comparableHaystack xml:lang="en">temp</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3303</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Temperature</rdfs:label>
+        <rdfs:seeAlso xml:lang="se">Temperatur</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Temperature</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Thermostat -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Thermostat">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:label xml:lang="en">Thermostat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Valve -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Valve">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <comparableHaystack xml:lang="en">valve</comparableHaystack>
+        <rdfs:label xml:lang="en">Valve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Velocity -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Velocity">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBelok xml:lang="en">07</comparableBelok>
+        <comparableCoClass xml:lang="en">BSD</comparableCoClass>
+        <comparableCoClass xml:lang="en">GS0-9xx/y</comparableCoClass>
+        <comparableIPSOObjectId xml:lang="en">5517</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Velocity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Volt -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Volt">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
+        <unitSign xml:lang="en">V</unitSign>
+        <rdfs:comment xml:lang="en">Voltage, electric potential difference, is the difference in electric potential between two points.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Voltage -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Voltage">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableCoClass xml:lang="en">BA</comparableCoClass>
+        <comparableHaystack xml:lang="en">volt</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">Voltage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/VoltageL1 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/VoltageL1">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableCoClass xml:lang="en">BA</comparableCoClass>
+        <comparableHaystack xml:lang="en">volt</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">VoltageL1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/VoltageL2 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/VoltageL2">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableCoClass xml:lang="en">BA</comparableCoClass>
+        <comparableHaystack xml:lang="en">volt</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">VoltageL2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/VoltageL3 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/VoltageL3">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableCoClass xml:lang="en">BA</comparableCoClass>
+        <comparableHaystack xml:lang="en">volt</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
+        <rdfs:label xml:lang="en">VoltageL3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Volume -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Volume">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableHaystack xml:lang="en">volume</comparableHaystack>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/WasteWater -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/WasteWater">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <comparableBIPTypeId xml:lang="en">MT3xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">81</comparableBelok>
+        <rdfs:label xml:lang="en">WasteWater</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Watt -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Watt">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">W</unitSign>
+        <rdfs:comment xml:lang="en">This unit is typically used to express the momentaneous output power of engines and the power of electric motors, tools, machines, and heaters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Watt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Watt_hour -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Watt_hour">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <unitSign xml:lang="en">Wh</unitSign>
+        <rdfs:comment xml:lang="en">Enery. Watthour.</rdfs:comment>
+        <rdfs:label xml:lang="en">Watt_hour</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
