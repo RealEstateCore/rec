@@ -28,10 +28,10 @@
         <Class IRI="ModbusTCPOffsetFactor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ModbusTCPSlaveId"/>
+        <Class IRI="LoRaConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="LoRaConfiguration"/>
+        <Class IRI="ModbusTCPSlaveId"/>
     </Declaration>
     <Declaration>
         <Class IRI="ModbusTCPGatewayIP"/>
@@ -61,22 +61,19 @@
         <Class IRI="DeviceInformation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BACnetConfiguration"/>
+        <Class IRI="KNXDeviceID"/>
     </Declaration>
     <Declaration>
-        <Class IRI="KNXDeviceID"/>
+        <Class IRI="BACnetConfiguration"/>
     </Declaration>
     <Declaration>
         <Class IRI="ModbusRTUConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ModbusTCPFunctionCode"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="KNXConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://w3id.org/rec/core/PlacementType"/>
+        <Class IRI="ModbusTCPFunctionCode"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="BACnetConfiguration"/>
@@ -150,10 +147,6 @@
         <Class IRI="ModbusTCPSlaveId"/>
         <Class IRI="ModbusTCPConfiguration"/>
     </SubClassOf>
-    <ClassAssertion>
-        <Class IRI="http://w3id.org/rec/core/PlacementType"/>
-        <NamedIndividual IRI="ElectricalGridLocalProduction"/>
-    </ClassAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>BACnetConfiguration</IRI>
