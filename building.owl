@@ -14,6 +14,10 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://w3id.org/rec/core/2.2/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">See also the RealEstateCore’s homepage at http://realestatecore.io/ for latest version and more information.</Literal>
+    </Annotation>
     <Declaration>
         <Class IRI="CloakRoom"/>
     </Declaration>
@@ -126,6 +130,12 @@
         <Class IRI="EducationalRoom"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Room"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="CoClassComparable"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Stairwell"/>
     </Declaration>
     <Declaration>
@@ -169,12 +179,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="Cinema"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="CoClassComparable"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Room"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="Atrium"/>
