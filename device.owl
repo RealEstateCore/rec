@@ -15,7 +15,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://w3id.org/rec/core/2.2/</Import>
     <Declaration>
-        <Class IRI="DeviceSourceData"/>
+        <NamedIndividual IRI="ElectricalGridLocalProduction"/>
     </Declaration>
     <Declaration>
         <Class IRI="KNXDevicePort"/>
@@ -27,13 +27,10 @@
         <Class IRI="ModbusTCPSlaveId"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DeviceSourceDataProductName"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="LoRaConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DeviceSourceDataLittera"/>
+        <Class IRI="ModbusTCPGatewayIP"/>
     </Declaration>
     <Declaration>
         <Class IRI="MBusConfiguration"/>
@@ -45,34 +42,10 @@
         <Class IRI="ModbusTCPConfiguration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ModbusTCPRegister"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="BACnetConfiguration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="KNXDeviceID"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ModbusRTUConfiguration"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="ElectricalGridLocalProduction"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DeviceSourceDataAliasId"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DeviceSourceDataPopularName"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DeviceSourceDataComment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ModbusTCPGatewayIP"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="ModbusTCPScaleFactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ModbusTCPRegister"/>
     </Declaration>
     <Declaration>
         <Class IRI="LoRaDevEUI"/>
@@ -84,10 +57,22 @@
         <Class IRI="DeviceInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="BACnetConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="KNXDeviceID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ModbusRTUConfiguration"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="ModbusTCPFunctionCode"/>
     </Declaration>
     <Declaration>
         <Class IRI="KNXConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://w3id.org/rec/core/PlacementType"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="BACnetConfiguration"/>
@@ -96,30 +81,6 @@
     <SubClassOf>
         <Class IRI="DeviceInformation"/>
         <Class IRI="http://w3id.org/rec/core/DeviceCommunication"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DeviceSourceData"/>
-        <Class IRI="http://w3id.org/rec/core/DeviceCommunication"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DeviceSourceDataAliasId"/>
-        <Class IRI="DeviceSourceData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DeviceSourceDataComment"/>
-        <Class IRI="DeviceSourceData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DeviceSourceDataLittera"/>
-        <Class IRI="DeviceSourceData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DeviceSourceDataPopularName"/>
-        <Class IRI="DeviceSourceData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DeviceSourceDataProductName"/>
-        <Class IRI="DeviceSourceData"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="KNXConfiguration"/>
@@ -203,66 +164,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>DeviceInformation</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeviceInformation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DeviceSourceData</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Extra information regarding the origin of data. Used to facilitate understanding of data for humans.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DeviceSourceData</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeviceSourceData</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DeviceSourceDataAliasId</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Used to map an Id in an external system.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DeviceSourceDataAliasId</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeviceSourceDataAliasId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DeviceSourceDataComment</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Extra information about an object that is of a more exceptional character (compared to Description). E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DeviceSourceDataComment</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeviceSourceDataComment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DeviceSourceDataLittera</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Designation or enumeration commenly found on blueprints for an object. E.g. a Device or a Room.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DeviceSourceDataLittera</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeviceSourceDataLittera</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DeviceSourceDataPopularName</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Human-friendly name.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DeviceSourceDataPopularName</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeviceSourceDataPopularName</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>DeviceSourceDataProductName</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Product name and version used by manufacturer.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DeviceSourceDataProductName</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeviceSourceDataProductName</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
