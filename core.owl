@@ -172,6 +172,40 @@
     
 
 
+    <!-- http://w3id.org/rec/core/hasCreatedTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasCreatedTime">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/CreatedTime"/>
+        <rdfs:label xml:lang="en">hasCreatedTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasDeletedTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasDeletedTime">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/DeletedTime"/>
+        <rdfs:label xml:lang="en">hasDeletedTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://w3id.org/rec/core/hasDeviceConfiguration -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasDeviceConfiguration">
@@ -238,7 +272,14 @@ Bearings are based on true north.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasObservationTime">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/ObservationTime"/>
         <rdfs:label xml:lang="en">hasObservationTime</rdfs:label>
     </owl:ObjectProperty>
@@ -248,7 +289,14 @@ Bearings are based on true north.</rdfs:comment>
     <!-- http://w3id.org/rec/core/hasObservationTimeDuration -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasObservationTimeDuration">
-        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/ObservationTimeDuration"/>
         <rdfs:label xml:lang="en">hasObservationTimeDuration</rdfs:label>
     </owl:ObjectProperty>
@@ -276,7 +324,14 @@ Bearings are based on true north.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasProcessedTime">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/ProcessedTime"/>
         <rdfs:label xml:lang="en">hasProcessedTime</rdfs:label>
     </owl:ObjectProperty>
@@ -296,6 +351,23 @@ Bearings are based on true north.</rdfs:comment>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">hasQuantityKind</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasReadTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasReadTime">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/ReadTime"/>
+        <rdfs:label xml:lang="en">hasReadTime</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -387,7 +459,14 @@ Bearings are based on true north.</rdfs:comment>
     <!-- http://w3id.org/rec/core/hasStartTime -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasStartTime">
-        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/StartTime"/>
         <rdfs:label xml:lang="en">hasStartTime</rdfs:label>
     </owl:ObjectProperty>
@@ -397,7 +476,14 @@ Bearings are based on true north.</rdfs:comment>
     <!-- http://w3id.org/rec/core/hasStopTime -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasStopTime">
-        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Observation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/StopTime"/>
         <rdfs:label xml:lang="en">hasStopTime</rdfs:label>
     </owl:ObjectProperty>
@@ -410,6 +496,23 @@ Bearings are based on true north.</rdfs:comment>
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/BuildingStructure"/>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/StoreyLevel"/>
         <rdfs:label xml:lang="en">hasStoreyLevel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasUpdatedTime -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasUpdatedTime">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/UpdatedTime"/>
+        <rdfs:label xml:lang="en">hasUpdatedTime</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -597,7 +700,7 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
     <!-- http://w3id.org/rec/core/Actuation -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Actuation">
-        <rdfs:comment xml:lang="en">The act of putting or changing the state of something.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The act of changing the state of something.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation</rdfs:label>
     </owl:Class>
     
@@ -647,6 +750,7 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/CreatedTime">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">The time when an object, notation, etc. was created.</rdfs:comment>
         <rdfs:label xml:lang="en">CreatedTime</rdfs:label>
     </owl:Class>
     
@@ -656,6 +760,7 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/DeletedTime">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">The time when an object, notation, etc. was deleted.</rdfs:comment>
         <rdfs:label xml:lang="en">DeletedTime</rdfs:label>
     </owl:Class>
     
@@ -705,7 +810,7 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
 Bearings are never greater than 90°.
 Bearings are based on true north.
 
-GoeReferenceBearing can be expressed in three dimension when needed, i.e. the angle in the x-plane (horizontal or abscissa), y-plane (vertical orordinate), and z-plane (applicate).</rdfs:comment>
+GoeReferenceBearing can be expressed in three dimension when needed, i.e. the angle in the x-plane (horizontal or abscissa), y-plane (vertical or orordinate), and z-plane (applicate).</rdfs:comment>
         <rdfs:label xml:lang="en">GeoReferenceBearing</rdfs:label>
     </owl:Class>
     
@@ -748,8 +853,7 @@ Latitude: 5513
 Longitude: 5514 
 Altitude: 5515</comparableIPSO>
         <exampleOfUse xml:lang="en">59.33755390;18.05568540;32.500</exampleOfUse>
-        <rdfs:comment xml:lang="se">Placeringen av ett objekt (exempelvis sensor eller objekt) eller position för objekt i ett geografiskt kartsystem eller inom omslutningen av ett annat objekt. Vi använder WGS84. Formatet är i decimalgrader (DD).</rdfs:comment>
-        <rdfs:comment xml:lang="en">The absolute location of a point (expressed in decimal degrees in WGS84).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The absolute location of an object (a point). Expressed in decimal degrees in WGS84.</rdfs:comment>
         <rdfs:label xml:lang="en">Location</rdfs:label>
     </owl:Class>
     
@@ -930,7 +1034,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/SourceDataLittera">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/SourceData"/>
-        <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. a Device or a Room.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room.</rdfs:comment>
         <rdfs:label xml:lang="en">SourceDataLittera</rdfs:label>
     </owl:Class>
     
@@ -940,7 +1044,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/SourceDataPopularName">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/SourceData"/>
-        <rdfs:comment xml:lang="en">Human-friendly name.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Human-readable-friendly name.</rdfs:comment>
         <rdfs:label xml:lang="en">SourceDataPopularName</rdfs:label>
     </owl:Class>
     
@@ -1009,6 +1113,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
 
     <owl:Class rdf:about="http://w3id.org/rec/core/UpdatedTime">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">The time when an object, notation, etc. was updated.</rdfs:comment>
         <rdfs:label xml:lang="en">UpdatedTime</rdfs:label>
     </owl:Class>
     
