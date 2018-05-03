@@ -187,7 +187,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://w3id.org/rec/core/DataComment"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Comment"/>
         <rdfs:label xml:lang="en">hasAuxiliaryDataComment</rdfs:label>
     </owl:ObjectProperty>
     
@@ -208,7 +208,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://w3id.org/rec/core/DataLittera"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/Littera"/>
         <rdfs:comment xml:lang="en">hasAuxiliaryDataLittera</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -738,6 +738,7 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
     <!-- http://w3id.org/rec/core/Actuator -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Actuator">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceComponent"/>
         <rdfs:comment xml:lang="en">An actuator is a component that is responsible for moving and controlling a mechanism or system.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuator</rdfs:label>
     </owl:Class>
@@ -793,19 +794,9 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
     
 
 
-    <!-- http://w3id.org/rec/core/CreatedTime -->
+    <!-- http://w3id.org/rec/core/Comment -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/core/CreatedTime">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
-        <rdfs:comment xml:lang="en">The time when an object, notation, etc. was created.</rdfs:comment>
-        <rdfs:label xml:lang="en">CreatedTime</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/core/DataComment -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/DataComment">
+    <owl:Class rdf:about="http://w3id.org/rec/core/Comment">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/AuxiliaryData"/>
         <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character (compared to Description). E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">Comment</rdfs:label>
@@ -813,12 +804,12 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
     
 
 
-    <!-- http://w3id.org/rec/core/DataLittera -->
+    <!-- http://w3id.org/rec/core/CreatedTime -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/core/DataLittera">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/AuxiliaryData"/>
-        <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room.</rdfs:comment>
-        <rdfs:label xml:lang="en">Littera</rdfs:label>
+    <owl:Class rdf:about="http://w3id.org/rec/core/CreatedTime">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Time"/>
+        <rdfs:comment xml:lang="en">The time when an object, notation, etc. was created.</rdfs:comment>
+        <rdfs:label xml:lang="en">CreatedTime</rdfs:label>
     </owl:Class>
     
 
@@ -848,6 +839,12 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
     <owl:Class rdf:about="http://w3id.org/rec/core/DeviceCommunication">
         <rdfs:label xml:lang="en">DeviceCommunication</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/DeviceComponent -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceComponent"/>
     
 
 
@@ -897,6 +894,16 @@ GoeReferenceBearing can be expressed in three dimension when needed, i.e. the an
     <owl:Class rdf:about="http://w3id.org/rec/core/Land">
         <rdfs:comment xml:lang="en">The land where one or more buildings are situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Littera -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Littera">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/AuxiliaryData"/>
+        <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room.</rdfs:comment>
+        <rdfs:label xml:lang="en">Littera</rdfs:label>
     </owl:Class>
     
 
@@ -990,6 +997,14 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/rec/core/PowerSource -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/PowerSource">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceComponent"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/core/Premises -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Premises">
@@ -1070,6 +1085,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     <!-- http://w3id.org/rec/core/Sensor -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Sensor">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceComponent"/>
         <comparableHaystack xml:lang="en">sensor</comparableHaystack>
         <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
@@ -1375,6 +1391,14 @@ H1B2xx, H1B9xx</comparableBIP>
     
 
 
+    <!-- http://w3id.org/rec/core/Battery -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Battery">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PowerSource"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/core/Binary -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Binary">
@@ -1474,6 +1498,14 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">domestic,water,leaving</comparableHaystack>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">ColdWaterReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/CommunicationBus -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CommunicationBus">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PowerSource"/>
     </owl:NamedIndividual>
     
 
