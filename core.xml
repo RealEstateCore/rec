@@ -788,7 +788,7 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/BuildingStructureComponent">
         <comparableIFC xml:lang="en">ifcSpace</comparableIFC>
-        <rdfs:comment xml:lang="en">The parts that makes up a building structure (BuildingStructure). E.g. Room, Facade, Roof, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The parts that makes up a building structure (BuildingStructure). E.g. Room, Facade, RoofInner, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">BuildingStructureComponent</rdfs:label>
     </owl:Class>
     
@@ -943,8 +943,8 @@ Altitude: 5515</comparableIPSO>
         <rdfs:comment xml:lang="en">The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
 
 Exceptions to SI:
-Express temperature in Celcius
-Energy in Watt hour (Wh)
+Express temperature in Celcius,
+Energy in Watt hour (Wh),
 Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
         <rdfs:label xml:lang="en">MeasurementUnit</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
@@ -1642,6 +1642,16 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:comment xml:lang="en">Device that collects data</rdfs:comment>
         <rdfs:label xml:lang="en">DataAqusition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/DataCommunicationGateway -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DataCommunicationGateway">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdfs:comment xml:lang="en">Device that acts as a broker (could be a switch or gateway)</rdfs:comment>
+        <rdfs:label xml:lang="en">DataCommunicationGateway</rdfs:label>
     </owl:NamedIndividual>
     
 
