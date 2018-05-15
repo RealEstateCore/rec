@@ -289,7 +289,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
         <rdfs:label xml:lang="en">hasDeviceConfiguration</rdfs:label>
     </owl:ObjectProperty>
     
@@ -642,15 +641,6 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
     <!-- http://w3id.org/rec/core/isPartOfDevice -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isPartOfDevice">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/Device"/>
         <rdfs:label xml:lang="en">isPartOfDevice</rdfs:label>
     </owl:ObjectProperty>
@@ -838,15 +828,6 @@ E.g. [myObject-UUID] locatedAt [myLocation-UUID].</rdfs:comment>
         <comparableHaystack xml:lang="en">device,equip</comparableHaystack>
         <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device has one or more Sensor(s) and/or Actuator(s).</rdfs:comment>
         <rdfs:label xml:lang="en">Device</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/core/DeviceCommunication -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceCommunication">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceComponent"/>
-        <rdfs:label xml:lang="en">DeviceCommunication</rdfs:label>
     </owl:Class>
     
 

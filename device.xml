@@ -29,18 +29,47 @@
     <!-- http://w3id.org/rec/device/BACnetConfiguration -->
 
     <owl:Class rdf:about="http://w3id.org/rec/device/BACnetConfiguration">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
         <rdfs:label>BACnetConfiguration</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://w3id.org/rec/device/DeviceInformation -->
+    <!-- http://w3id.org/rec/device/CommunicationConfiguration -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/device/DeviceInformation">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
-        <rdfs:comment xml:lang="en">Notes and information are kept here. Could be e.g.  information from blue prints (a.k.a. littera).</rdfs:comment>
-        <rdfs:label xml:lang="en">DeviceInformation</rdfs:label>
+    <owl:Class rdf:about="http://w3id.org/rec/device/CommunicationConfiguration"/>
+    
+
+
+    <!-- http://w3id.org/rec/device/DeviceCommunication -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/DeviceCommunication">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/GeneralCommunicationConfiguration -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/GeneralCommunicationConfiguration">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/IPAddress -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/IPAddress">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/GeneralCommunicationConfiguration"/>
+        <rdfs:label xml:lang="en">ModbusTCPGatewayIP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/IPAddressPort -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/IPAddressPort">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/GeneralCommunicationConfiguration"/>
     </owl:Class>
     
 
@@ -48,7 +77,7 @@
     <!-- http://w3id.org/rec/device/KNXConfiguration -->
 
     <owl:Class rdf:about="http://w3id.org/rec/device/KNXConfiguration">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
         <rdfs:label xml:lang="en">KNXConfiguration</rdfs:label>
     </owl:Class>
     
@@ -93,7 +122,7 @@
     <!-- http://w3id.org/rec/device/LoRaConfiguration -->
 
     <owl:Class rdf:about="http://w3id.org/rec/device/LoRaConfiguration">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
         <rdfs:label xml:lang="en">LoRaConfiguration</rdfs:label>
     </owl:Class>
     
@@ -111,8 +140,41 @@
     <!-- http://w3id.org/rec/device/MBusConfiguration -->
 
     <owl:Class rdf:about="http://w3id.org/rec/device/MBusConfiguration">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
         <rdfs:label xml:lang="en">MBusConfiguration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/ModbusConfiguration -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusConfiguration">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/ModbusDataPointType -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusDataPointType">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusConfiguration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/ModbusFunctionCode -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusFunctionCode">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusConfiguration"/>
+        <rdfs:label xml:lang="en">ModbusTCPFunctionCode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/ModbusNodeId -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusNodeId">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusConfiguration"/>
     </owl:Class>
     
 
@@ -120,8 +182,24 @@
     <!-- http://w3id.org/rec/device/ModbusRTUConfiguration -->
 
     <owl:Class rdf:about="http://w3id.org/rec/device/ModbusRTUConfiguration">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
         <rdfs:label xml:lang="en">ModbusRTUConfiguration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/ModbusRegister -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusRegister">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusConfiguration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/device/ModbusRegisterLength -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusRegisterLength">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusConfiguration"/>
     </owl:Class>
     
 
@@ -129,62 +207,26 @@
     <!-- http://w3id.org/rec/device/ModbusTCPConfiguration -->
 
     <owl:Class rdf:about="http://w3id.org/rec/device/ModbusTCPConfiguration">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceCommunication"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
         <rdfs:label xml:lang="en">ModbusTCPConfiguration</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://w3id.org/rec/device/ModbusTCPFunctionCode -->
+    <!-- http://w3id.org/rec/device/Offset -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusTCPFunctionCode">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusTCPConfiguration"/>
-        <rdfs:label xml:lang="en">ModbusTCPFunctionCode</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/device/ModbusTCPGatewayIP -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusTCPGatewayIP">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusTCPConfiguration"/>
-        <rdfs:label xml:lang="en">ModbusTCPGatewayIP</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/device/ModbusTCPOffsetFactor -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusTCPOffsetFactor">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusTCPConfiguration"/>
+    <owl:Class rdf:about="http://w3id.org/rec/device/Offset">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/GeneralCommunicationConfiguration"/>
         <rdfs:label xml:lang="en">ModbusTCPOffsetFactor</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://w3id.org/rec/device/ModbusTCPRegister -->
+    <!-- http://w3id.org/rec/device/ScaleFactor -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusTCPRegister">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusTCPConfiguration"/>
-        <rdfs:label xml:lang="en">ModbusTCPRegister</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/device/ModbusTCPScaleFactor -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusTCPScaleFactor">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusTCPConfiguration"/>
+    <owl:Class rdf:about="http://w3id.org/rec/device/ScaleFactor">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/GeneralCommunicationConfiguration"/>
         <rdfs:label xml:lang="en">ModbusTCPScaleFactor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/device/ModbusTCPSlaveId -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusTCPSlaveId">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusTCPConfiguration"/>
-        <rdfs:label xml:lang="en">ModbusTCPSlaveId</rdfs:label>
     </owl:Class>
     
 
