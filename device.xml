@@ -18,6 +18,26 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/device/hasDeviceCommunication -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/device/hasDeviceCommunication">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/device/DeviceCommunication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -255,6 +275,24 @@
     <!-- http://w3id.org/rec/device/ElectricalGridLocalProduction -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/ElectricalGridLocalProduction"/>
+    
+
+
+    <!-- http://w3id.org/rec/device/ModbusRTU -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/ModbusRTU">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceCommunication"/>
+        <rdfs:label xml:lang="en">ModbusRTU</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/ModbusTCP -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/ModbusTCP">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceCommunication"/>
+        <rdfs:label xml:lang="en">ModbusTCP</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
