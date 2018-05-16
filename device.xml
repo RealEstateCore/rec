@@ -31,6 +31,7 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/device/hasCommunicationConfiguration">
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
+        <rdfs:label xml:lang="en">hasCommunicationConfiguration</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -70,6 +71,91 @@
         <rdfs:range rdf:resource="http://w3id.org/rec/device/ModbusFunctionCode"/>
         <rdfs:label xml:lang="en">hasModbusFunctionCode</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/device/hasModbusRegisterLength -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/device/hasModbusRegisterLength">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasCommunicationConfiguration"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/rec/device/ModbusRegisterLength"/>
+        <rdfs:label xml:lang="en">hasModbusRegisterLength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/rec/device/hasModbusConfiguration -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusConfiguration">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">hasModbusConfiguration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/device/hasModbusNodeId -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusNodeId">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">hasModbusNodeId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/device/hasModbusRegister -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusRegister">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">hasModbusRegister</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -236,11 +322,11 @@
     
 
 
-    <!-- http://w3id.org/rec/device/ModbusDataPointType -->
+    <!-- http://w3id.org/rec/device/ModbusDataType -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusDataPointType">
+    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusDataType">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusConfiguration"/>
-        <rdfs:label xml:lang="en">ModbusDataPointType</rdfs:label>
+        <rdfs:label xml:lang="en">ModbusDataType</rdfs:label>
     </owl:Class>
     
 
@@ -343,6 +429,15 @@
     
 
 
+    <!-- http://w3id.org/rec/device/Fixed_length_string -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/Fixed_length_string">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">Fixed length string</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/device/IP -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/IP">
@@ -397,6 +492,15 @@
     
 
 
+    <!-- http://w3id.org/rec/device/Variable_length_string -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/Variable_length_string">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">Variable length string</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/device/1 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/1">
@@ -437,6 +541,51 @@
     
 
 
+    <!-- http://w3id.org/rec/device/2_byte_BCD -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/2_byte_BCD">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">2 byte BCD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/2_byte_signed_integer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/2_byte_signed_integer">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">2 byte signed integer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/2_byte_signed_integer_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/2_byte_signed_integer_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">2 byte signed integer swapped</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/2_byte_unsigned_integer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/2_byte_unsigned_integer">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">2 byte unsigned integer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/2_byte_unsigned_integer_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/2_byte_unsigned_integer_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">2 byte unsigned integer swapped</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/device/3 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/3">
@@ -457,6 +606,105 @@
     
 
 
+    <!-- http://w3id.org/rec/device/4_byte_BCD -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_BCD">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte BCD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_BCD_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_BCD_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte BCD swapped</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_float -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_float">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte float</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_float_BCD -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_float_BCD">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte float BCD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_float_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_float_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte float swapped</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_signed_integer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_signed_integer">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte signed integer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_signed_integer_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_signed_integer_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte signed integer swapped</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte signed integer swapped bytes and words</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_unsigned_integer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_unsigned_integer">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte unsigned integer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_unsigned_integer_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_unsigned_integer_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte unsigned integer swapped</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">4 byte unsigned integer swapped bytes and words</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/device/5 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/5">
@@ -473,6 +721,60 @@
         <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusFunctionCode"/>
         <rdfs:comment xml:lang="en">Write Single Holding Register</rdfs:comment>
         <rdfs:label xml:lang="en">6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/8_byte_float -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/8_byte_float">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">8 byte float</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/8_byte_float_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/8_byte_float_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">8 byte float swapped</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/8_byte_signed_integer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/8_byte_signed_integer">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">8 byte signed integer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/8_byte_signed_integer_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/8_byte_signed_integer_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">8 byte signed integer swapped</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/8_byte_unsigned_integer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/8_byte_unsigned_integer">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">8 byte unsigned integer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/device/8_byte_unsigned_integer_swapped -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/8_byte_unsigned_integer_swapped">
+        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusDataType"/>
+        <rdfs:label xml:lang="en">8 byte unsigned integer swapped</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
