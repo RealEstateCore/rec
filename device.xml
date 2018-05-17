@@ -171,8 +171,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://w3id.org/rec/device/ModbusRegisterLength"/>
-        <rdfs:label xml:lang="en">hasModbusRegisterLength</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -373,6 +371,23 @@
     
 
 
+    <!-- http://w3id.org/rec/device/hasModbusRegisterLength -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusRegisterLength">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Device"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://w3id.org/rec/device/hasOffset -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasOffset">
@@ -386,7 +401,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">hasOffset</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -526,15 +541,6 @@
     <owl:Class rdf:about="http://w3id.org/rec/device/ModbusRTUConfiguration">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/CommunicationConfiguration"/>
         <rdfs:label xml:lang="en">ModbusRTUConfiguration</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/device/ModbusRegisterLength -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/device/ModbusRegisterLength">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/device/ModbusConfiguration"/>
-        <rdfs:label xml:lang="en">ModbusRegisterLength</rdfs:label>
     </owl:Class>
     
 
@@ -695,7 +701,6 @@
     <!-- http://w3id.org/rec/device/1_byte -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/1_byte">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusRegisterLength"/>
         <rdfs:label xml:lang="en">1 byte</rdfs:label>
     </owl:NamedIndividual>
     
@@ -744,7 +749,6 @@
     <!-- http://w3id.org/rec/device/2_byte -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/device/2_byte">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/ModbusRegisterLength"/>
         <rdfs:label xml:lang="en">2 byte</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1007,6 +1011,9 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://w3id.org/rec/device/hasModbusRegister">
         <rdfs:label xml:lang="en">hasModbusRegister</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://w3id.org/rec/device/hasModbusRegisterLength">
+        <rdfs:label xml:lang="en">hasModbusRegisterLength</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
