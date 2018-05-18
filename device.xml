@@ -290,6 +290,7 @@
     <!-- http://w3id.org/rec/device/hasKNXDeviceId -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasKNXDeviceId">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasKNXConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -298,6 +299,7 @@
     <!-- http://w3id.org/rec/device/hasKNXDevicePort -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasKNXDevicePort">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasKNXConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -305,7 +307,9 @@
 
     <!-- http://w3id.org/rec/device/hasKNXGroupAddress -->
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasKNXGroupAddress"/>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasKNXGroupAddress">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasKNXConfiguration"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -355,6 +359,7 @@
     <!-- http://w3id.org/rec/device/hasModbusNodeId -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusNodeId">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -363,6 +368,7 @@
     <!-- http://w3id.org/rec/device/hasModbusRegister -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusRegister">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -370,7 +376,9 @@
 
     <!-- http://w3id.org/rec/device/hasModbusRegisterLength -->
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusRegisterLength"/>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusRegisterLength">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -453,7 +461,7 @@
     <!-- http://w3id.org/rec/device/DeviceFunction -->
 
     <owl:Class rdf:about="http://w3id.org/rec/device/DeviceFunction">
-        <rdfs:comment xml:lang="en">Description of what the main function is of a Device.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of what the main function or purpose is of a Device.</rdfs:comment>
         <rdfs:label xml:lang="en">DeviceFunction</rdfs:label>
     </owl:Class>
     
