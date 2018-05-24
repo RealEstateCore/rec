@@ -310,6 +310,15 @@
     
 
 
+    <!-- http://w3id.org/rec/core/makesException -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/makesException">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://w3id.org/rec/core/makesObservation -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/makesObservation">
@@ -420,14 +429,7 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasDuration">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">Measured in ms (milli seconds)</rdfs:comment>
         <rdfs:label xml:lang="en">hasDuration</rdfs:label>
@@ -463,14 +465,7 @@ Bearings are based on true north.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasObservationTime">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasObservationTime</rdfs:label>
     </owl:DatatypeProperty>
@@ -503,14 +498,7 @@ Bearings are based on true north.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasReadTime">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasReadTime</rdfs:label>
     </owl:DatatypeProperty>
@@ -531,15 +519,7 @@ Bearings are based on true north.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasStartTime">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Duration"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasStartTime</rdfs:label>
     </owl:DatatypeProperty>
@@ -550,15 +530,7 @@ Bearings are based on true north.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasStopTime">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Duration"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasStopTime</rdfs:label>
     </owl:DatatypeProperty>
@@ -665,6 +637,7 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- http://w3id.org/rec/core/Actuation -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Actuation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:comment xml:lang="en">The act of changing the state of something.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation</rdfs:label>
     </owl:Class>
@@ -733,6 +706,25 @@ Altitude: 5515</comparableIPSOObjectId>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Duration">
         <rdfs:label xml:lang="en">Duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Event -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Event">
+        <rdfs:comment xml:lang="en">Cognitive annontation</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Exception -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Exception">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Event"/>
+        <rdfs:comment xml:lang="en">Failed attempt or unexpected result when tried to do something (e.g. read a Sensor).</rdfs:comment>
+        <rdfs:label xml:lang="en">Exception</rdfs:label>
     </owl:Class>
     
 
@@ -806,6 +798,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     <!-- http://w3id.org/rec/core/Observation -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Observation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:comment xml:lang="en">Observation of a phenomena. Made by a Sensor. Has a Value.</rdfs:comment>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
     </owl:Class>
@@ -1266,6 +1259,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CommunicationBus">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PowerSource"/>
+        <rdfs:label xml:lang="en">CommunicationBus</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1474,6 +1468,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ElectricalGridIntake">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <rdfs:label xml:lang="en">ElectricalGridIntake</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1500,6 +1495,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ElectricalGridTenant">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <rdfs:label xml:lang="en">ElectricalGridTenant</rdfs:label>
     </owl:NamedIndividual>
     
 
