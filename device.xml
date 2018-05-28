@@ -240,6 +240,7 @@
     <!-- http://w3id.org/rec/device/hasGeneralCommunicationConfiguration -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasGeneralCommunicationConfiguration">
+        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">hasGeneralCommunicationConfiguration</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -290,7 +291,6 @@
     <!-- http://w3id.org/rec/device/hasKNXDeviceId -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasKNXDeviceId">
-        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasKNXConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -299,7 +299,6 @@
     <!-- http://w3id.org/rec/device/hasKNXDevicePort -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasKNXDevicePort">
-        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasKNXConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -307,9 +306,7 @@
 
     <!-- http://w3id.org/rec/device/hasKNXGroupAddress -->
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasKNXGroupAddress">
-        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasKNXConfiguration"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasKNXGroupAddress"/>
     
 
 
@@ -334,6 +331,7 @@
     <!-- http://w3id.org/rec/device/hasLoraConfiguration -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasLoraConfiguration">
+        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">hasLoraConfiguration</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -359,7 +357,6 @@
     <!-- http://w3id.org/rec/device/hasModbusNodeId -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusNodeId">
-        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -368,7 +365,6 @@
     <!-- http://w3id.org/rec/device/hasModbusRegister -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusRegister">
-        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -376,9 +372,7 @@
 
     <!-- http://w3id.org/rec/device/hasModbusRegisterLength -->
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusRegisterLength">
-        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/device/hasModbusConfiguration"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/device/hasModbusRegisterLength"/>
     
 
 
@@ -1003,6 +997,7 @@
      -->
 
     <rdf:Description rdf:about="http://w3id.org/rec/device/hasKNXConfiguration">
+        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">hasKNXConfiguration</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://w3id.org/rec/device/hasKNXDeviceId">
@@ -1016,6 +1011,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://w3id.org/rec/device/hasModbusConfiguration">
         <rdfs:label xml:lang="en">hasModbusConfiguration</rdfs:label>
+        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://w3id.org/rec/device/hasModbusNodeId">
         <rdfs:label xml:lang="en">hasModbusNodeId</rdfs:label>

@@ -390,7 +390,8 @@
     <!-- http://w3id.org/rec/core/hasAuxiliaryData -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasAuxiliaryData">
-        <rdfs:label xml:lang="en">hasAuxiliaryData</rdfs:label>
+        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
+        <rdfs:comment xml:lang="en">hasAuxiliaryData</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -472,6 +473,16 @@ Bearings are based on true north.</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/rec/core/hasPointInTime -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasPointInTime">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">hasPointInTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://w3id.org/rec/core/hasPopularName -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasPopularName">
@@ -540,6 +551,7 @@ Bearings are based on true north.</rdfs:comment>
     <!-- http://w3id.org/rec/core/hasTime -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasTime">
+        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:comment xml:lang="en">Describes a specific point in time.
 
 Time format SO8601:
@@ -713,7 +725,7 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- http://w3id.org/rec/core/Event -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Event">
-        <rdfs:comment xml:lang="en">Cognitive annontation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
     
@@ -936,12 +948,6 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
         <rdfs:label xml:lang="en">WallInner</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/core/zzPointInTime -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/zzPointInTime"/>
     
 
 
