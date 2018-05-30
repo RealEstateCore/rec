@@ -250,14 +250,7 @@
     <!-- http://w3id.org/rec/core/hasStoreyLevel -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasStoreyLevel">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructure"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructureComponent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/BuildingStructure"/>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/StoreyLevel"/>
         <rdfs:label xml:lang="en">hasStoreyLevel</rdfs:label>
     </owl:ObjectProperty>
