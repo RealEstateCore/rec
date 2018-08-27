@@ -131,7 +131,7 @@
 
     <owl:Class rdf:about="http://w3id.org/rec/building/ConferenceRoom">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
-        <core:comparableCoClass xml:lang="en">BAB</core:comparableCoClass>
+        <core:comparableCoClass xml:lang="en">UTBAB</core:comparableCoClass>
         <core:comparableFi2 xml:lang="en">20.20-03</core:comparableFi2>
         <rdfs:label xml:lang="en">ConferenceRoom</rdfs:label>
     </owl:Class>
@@ -204,10 +204,21 @@
     
 
 
+    <!-- http://w3id.org/rec/building/EducationalPremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/EducationalPremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <core:comparableCoClass xml:lang="en">UTBAE</core:comparableCoClass>
+        <rdfs:label xml:lang="en">EducationalPremises</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/building/EducationalRoom -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/EducationalRoom">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
+        <core:comparableCoClass xml:lang="en">UTBAE</core:comparableCoClass>
         <rdfs:label xml:lang="en">EducationalRoom</rdfs:label>
     </owl:Class>
     
@@ -298,7 +309,40 @@
 
     <owl:Class rdf:about="http://w3id.org/rec/building/Laboratory">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
+        <core:comparableCoClass xml:lang="en">UTBC</core:comparableCoClass>
         <rdfs:label xml:lang="en">Laboratory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/LaboratoryDry -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/LaboratoryDry">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/LaboratoryPremises"/>
+        <core:comparableCoClass xml:lang="en">UTBC</core:comparableCoClass>
+        <rdfs:comment xml:lang="en">A dry lab might have large experimental equipment but minimal chemicals, or instruments for analyzing data produced elsewhere.</rdfs:comment>
+        <rdfs:label xml:lang="en">LaboratoryDry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/LaboratoryPremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/LaboratoryPremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <core:comparableCoClass xml:lang="en">UTBC</core:comparableCoClass>
+        <rdfs:label xml:lang="en">LaboratoryPremises</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/LaboratoryWet -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/LaboratoryWet">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/LaboratoryPremises"/>
+        <core:comparableCoClass xml:lang="en">UTBC</core:comparableCoClass>
+        <rdfs:comment xml:lang="en">A wet lab is a type of laboratory where it is necessary to handle various types of chemicals and potential &quot;wet&quot; hazards, so the room has to be carefully designed, constructed, and controlled to avoid spillage and contamination.</rdfs:comment>
+        <rdfs:label xml:lang="en">LaboratoryWet</rdfs:label>
     </owl:Class>
     
 
@@ -353,6 +397,16 @@
         <core:comparableCoClass xml:lang="en">BAA</core:comparableCoClass>
         <core:comparableFi2 xml:lang="en">20.20-02</core:comparableFi2>
         <rdfs:label xml:lang="en">OfficeLandscape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/OfficePremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/OfficePremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <core:comparableCoClass xml:lang="en">UTBAA</core:comparableCoClass>
+        <rdfs:label xml:lang="en">OfficePremises</rdfs:label>
     </owl:Class>
     
 
@@ -426,6 +480,25 @@
     
 
 
+    <!-- http://w3id.org/rec/building/RecreationalRoom -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/RecreationalRoom">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
+        <core:comparableCoClass xml:lang="en">UTBE</core:comparableCoClass>
+        <rdfs:label xml:lang="en">RecreationalRoom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/ResidentialPremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/ResidentialPremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <rdfs:label xml:lang="en">ResidentialPremises</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/building/RestingPlace -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/RestingPlace">
@@ -493,7 +566,7 @@
 
     <owl:Class rdf:about="http://w3id.org/rec/building/Stairwell">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
-        <core:comparableCoClass xml:lang="en">EAD</core:comparableCoClass>
+        <core:comparableCoClass xml:lang="en">UTEAD</core:comparableCoClass>
         <core:comparableFi2 xml:lang="en">23.23-04</core:comparableFi2>
         <rdfs:label xml:lang="en">Stairwell</rdfs:label>
     </owl:Class>
