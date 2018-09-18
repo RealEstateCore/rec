@@ -60,7 +60,7 @@
     <!-- http://w3id.org/rec/core/comparableFi2 -->
 
     <owl:AnnotationProperty rdf:about="http://w3id.org/rec/core/comparableFi2">
-        <rdfs:comment xml:lang="en">comparableFi2</rdfs:comment>
+        <rdfs:label xml:lang="en">comparableFi2</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -250,14 +250,7 @@
     <!-- http://w3id.org/rec/core/hasStoreyLevel -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasStoreyLevel">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructure"/>
-                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructureComponent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/BuildingStructure"/>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/StoreyLevel"/>
         <rdfs:label xml:lang="en">hasStoreyLevel</rdfs:label>
     </owl:ObjectProperty>
@@ -294,6 +287,16 @@
         <rdfs:comment xml:lang="en">An object that can describe its place by using [object-UUID] locatedIn 
 [myOtherObject-UUID], where [myOtherObject-UUID] could be a Room, BuildingStructure, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">isLocatedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isPartOf">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/StoreyLevel"/>
+        <rdfs:label xml:lang="en">isPartOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -686,6 +689,7 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- http://w3id.org/rec/core/BuildingStructure -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/BuildingStructure">
+        <comparableCoClass xml:lang="en">BV</comparableCoClass>
         <comparableHaystack xml:lang="en">site</comparableHaystack>
         <comparableIFC xml:lang="en">ifcBuilding</comparableIFC>
         <rdfs:comment xml:lang="en">Confined building structure.</rdfs:comment>
@@ -697,6 +701,7 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- http://w3id.org/rec/core/BuildingStructureComponent -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/BuildingStructureComponent">
+        <comparableCoClass xml:lang="en">UT</comparableCoClass>
         <comparableIFC xml:lang="en">ifcSpace</comparableIFC>
         <rdfs:comment xml:lang="en">The parts that makes up a building structure (BuildingStructure). E.g. Room, Facade, RoofInner, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">BuildingStructureComponent</rdfs:label>
@@ -719,6 +724,12 @@ Altitude: 5515</comparableIPSOObjectId>
     <owl:Class rdf:about="http://w3id.org/rec/core/DeviceComponent">
         <rdfs:label xml:lang="en">DeviceComponent</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/DeviceFunction -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceFunction"/>
     
 
 
@@ -753,6 +764,7 @@ Altitude: 5515</comparableIPSOObjectId>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Facade">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <comparableCoClass xml:lang="en">FSB</comparableCoClass>
         <rdfs:label xml:lang="en">Facade</rdfs:label>
     </owl:Class>
     
@@ -854,7 +866,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     <!-- http://w3id.org/rec/core/QuantityKind -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/QuantityKind">
-        <rdfs:comment xml:lang="en">Describes the value observed by a Sensor or the value set by an Actuator</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes the value observed by a Sensor or the value set by an Actuator.</rdfs:comment>
         <rdfs:label xml:lang="en">QuantityKind</rdfs:label>
     </owl:Class>
     
@@ -863,6 +875,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     <!-- http://w3id.org/rec/core/RealEstate -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/RealEstate">
+        <comparableCoClass xml:lang="en">BX</comparableCoClass>
         <comparableIFC xml:lang="en">site</comparableIFC>
         <rdfs:comment xml:lang="en">Legal entity. Land + buildings</rdfs:comment>
         <rdfs:label xml:lang="en">RealEstate</rdfs:label>
@@ -883,6 +896,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/RoofOuter">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <comparableCoClass xml:lang="en">FSD</comparableCoClass>
         <rdfs:label xml:lang="en">RoofOuter</rdfs:label>
     </owl:Class>
     
@@ -915,6 +929,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Slab">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <comparableCoClass xml:lang="en">FSC</comparableCoClass>
         <rdfs:label xml:lang="en">Slab</rdfs:label>
     </owl:Class>
     
@@ -945,6 +960,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Wall">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <comparableCoClass xml:lang="en">FSB</comparableCoClass>
         <rdfs:label xml:lang="en">Wall</rdfs:label>
     </owl:Class>
     
@@ -954,14 +970,9 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/WallInner">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
+        <comparableCoClass xml:lang="en">FSB</comparableCoClass>
         <rdfs:label xml:lang="en">WallInner</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/device/DeviceFunction -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/device/DeviceFunction"/>
     
 
 
@@ -981,8 +992,8 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyL1">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">MQxx, VMM8xx, VMM1xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">11</comparableBelok>
-        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableBelok xml:lang="en">11-------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ActiveEnergyL1</rdfs:label>
@@ -995,8 +1006,8 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyL2">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">MQxx, VMM8xx, VMM1xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">11</comparableBelok>
-        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableBelok xml:lang="en">11-------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ActiveEnergyL2</rdfs:label>
@@ -1009,8 +1020,8 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyL3">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">MQxx, VMM8xx, VMM1xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">11</comparableBelok>
-        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableBelok xml:lang="en">11-------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ActiveEnergyL3</rdfs:label>
@@ -1022,8 +1033,8 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyTotal">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">11</comparableBelok>
-        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableBelok xml:lang="en">11-----10</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableHaystack xml:lang="en">active,energy</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ActiveEnergyTotal</rdfs:label>
@@ -1035,8 +1046,8 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActivePowerL1">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">12</comparableBelok>
-        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableBelok xml:lang="en">12-------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ActivePowerL1</rdfs:label>
@@ -1048,8 +1059,8 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActivePowerL2">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">12</comparableBelok>
-        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableBelok xml:lang="en">12-------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ActivePowerL1</rdfs:label>
@@ -1061,8 +1072,8 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActivePowerL3">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">12</comparableBelok>
-        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableBelok xml:lang="en">12-------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ActivePowerL3</rdfs:label>
@@ -1074,8 +1085,8 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActivePowerTotal">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">12</comparableBelok>
-        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableBelok xml:lang="en">12-----10</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">active,power</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ActivePowerTotal</rdfs:label>
@@ -1086,7 +1097,7 @@ Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
     <!-- http://w3id.org/rec/core/AirHandlingUnit -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/AirHandlingUnit">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">ahu,air</comparableHaystack>
         <rdfs:label xml:lang="en">AirHandlingUnit</rdfs:label>
     </owl:NamedIndividual>
@@ -1169,7 +1180,6 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Binary -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Binary">
-        <comparableBelok xml:lang="en">1</comparableBelok>
         <comparableIPSOObjectId xml:lang="en">5550,5850</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Binary</rdfs:label>
     </owl:NamedIndividual>
@@ -1179,7 +1189,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Boiler -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Boiler">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:label xml:lang="en">Boiler</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1219,7 +1229,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Chiller -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Chiller">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">chiller</comparableHaystack>
         <rdfs:label xml:lang="en">Chiller</rdfs:label>
     </owl:NamedIndividual>
@@ -1238,7 +1248,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Coil -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Coil">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:label xml:lang="en">Coil</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1249,7 +1259,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ColdWaterFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MT2xx, PPA2xx, SHG2xx, RT2xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">53</comparableBelok>
+        <comparableBelok xml:lang="en">--------53</comparableBelok>
         <comparableHaystack xml:lang="en">domestic,water</comparableHaystack>
         <rdfs:label xml:lang="en">ColdWaterFlow</rdfs:label>
     </owl:NamedIndividual>
@@ -1261,7 +1271,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ColdWaterReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MT2xx, PPA2xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">54</comparableBelok>
+        <comparableBelok xml:lang="en">--------54</comparableBelok>
         <comparableHaystack xml:lang="en">domestic,water,leaving</comparableHaystack>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">ColdWaterReturn</rdfs:label>
@@ -1281,7 +1291,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Compressor -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Compressor">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:label xml:lang="en">Compressor</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1292,8 +1302,8 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Concentration">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">GQ0-9xx/y/z</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">09</comparableBelok>
-        <comparableCoClass xml:lang="en">BQ</comparableCoClass>
+        <comparableBelok xml:lang="en">09--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBQ</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">3325</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Concentration</rdfs:label>
     </owl:NamedIndividual>
@@ -1303,7 +1313,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Condenser -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Condenser">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">condenser</comparableHaystack>
         <rdfs:label xml:lang="en">Condenser</rdfs:label>
     </owl:NamedIndividual>
@@ -1313,7 +1323,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Control -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Control">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:comment xml:lang="en">Device that controls Actuators (can also collect data).</rdfs:comment>
         <rdfs:label xml:lang="en">Control</rdfs:label>
     </owl:NamedIndividual>
@@ -1346,7 +1356,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Current">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableCoClass xml:lang="en">BC</comparableCoClass>
+        <comparableCoClass xml:lang="en">KOBC</comparableCoClass>
         <comparableHaystack xml:lang="en">current</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Current</rdfs:label>
@@ -1358,7 +1368,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CurrentL1">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableCoClass xml:lang="en">BC</comparableCoClass>
+        <comparableCoClass xml:lang="en">KOBC</comparableCoClass>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">CurrentL1</rdfs:label>
@@ -1370,7 +1380,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CurrentL2">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableCoClass xml:lang="en">BC</comparableCoClass>
+        <comparableCoClass xml:lang="en">KOBC</comparableCoClass>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">CurrentL2</rdfs:label>
@@ -1382,7 +1392,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/CurrentL3">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableCoClass xml:lang="en">BC</comparableCoClass>
+        <comparableCoClass xml:lang="en">KOBC</comparableCoClass>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">CurrentL3</rdfs:label>
@@ -1393,7 +1403,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Damper -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Damper">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">damper</comparableHaystack>
         <rdfs:label xml:lang="en">Damper</rdfs:label>
     </owl:NamedIndividual>
@@ -1403,7 +1413,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/DataAquisition -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DataAquisition">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:comment xml:lang="en">Device that collects data</rdfs:comment>
         <rdfs:label xml:lang="en">DataAqusition</rdfs:label>
     </owl:NamedIndividual>
@@ -1413,7 +1423,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/DataCommunicationGateway -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DataCommunicationGateway">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:comment xml:lang="en">Device that acts as a broker (could be a switch or gateway)</rdfs:comment>
         <rdfs:label xml:lang="en">DataCommunicationGateway</rdfs:label>
     </owl:NamedIndividual>
@@ -1436,7 +1446,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DistrictCoolingFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN5xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">31</comparableBelok>
+        <comparableBelok xml:lang="en">--------31</comparableBelok>
         <rdfs:label xml:lang="en">DistrictCoolingFlow</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1447,7 +1457,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DistrictCoolingReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN5xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">32</comparableBelok>
+        <comparableBelok xml:lang="en">--------32</comparableBelok>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">DistrictCoolingReturn</rdfs:label>
     </owl:NamedIndividual>
@@ -1459,8 +1469,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DistrictHeatingFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">21</comparableBelok>
-        <comparableBelok xml:lang="en">33</comparableBelok>
+        <comparableBelok xml:lang="en">--------21</comparableBelok>
         <rdfs:label xml:lang="en">DistrictHeatingFlow</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1471,7 +1480,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DistrictHeatingReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">22</comparableBelok>
+        <comparableBelok xml:lang="en">--------22</comparableBelok>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">DistrictHeatingReturn</rdfs:label>
     </owl:NamedIndividual>
@@ -1517,7 +1526,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Elevator -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Elevator">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:label xml:lang="en">Elevator</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1527,8 +1536,8 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/EnergyTotal">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">11</comparableBelok>
-        <comparableCoClass xml:lang="en">BHC, BHB</comparableCoClass>
+        <comparableBelok xml:lang="en">11------10</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
         <rdfs:comment xml:lang="en">Total energy (not specified as Active or Reactive, used for e.g. district heating).</rdfs:comment>
     </owl:NamedIndividual>
@@ -1538,7 +1547,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Escalator -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Escalator">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:label xml:lang="en">Escalator</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1549,7 +1558,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ExhaustAir">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">FF</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">03</comparableBelok>
+        <comparableBelok xml:lang="en">--------03</comparableBelok>
         <rdfs:label xml:lang="en">ExhaustAir</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1560,7 +1569,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ExtractAir">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">OF</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">05</comparableBelok>
+        <comparableBelok xml:lang="en">--------05</comparableBelok>
         <rdfs:label xml:lang="en">ExtractAir</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1580,7 +1589,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Fan -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Fan">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">fan</comparableHaystack>
         <rdfs:label xml:lang="en">Fan</rdfs:label>
     </owl:NamedIndividual>
@@ -1590,7 +1599,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Filter -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Filter">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">filter</comparableHaystack>
         <rdfs:label xml:lang="en">Filter</rdfs:label>
     </owl:NamedIndividual>
@@ -1602,8 +1611,8 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Flow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIP xml:lang="en">MF1xx, GF1-9xx/y</comparableBIP>
-        <comparableBelok xml:lang="en">04</comparableBelok>
-        <comparableCoClass xml:lang="en">BF</comparableCoClass>
+        <comparableBelok xml:lang="en">04--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBF</comparableCoClass>
         <comparableHaystack xml:lang="en">flow</comparableHaystack>
         <rdfs:label xml:lang="en">Flow</rdfs:label>
     </owl:NamedIndividual>
@@ -1613,7 +1622,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Heater -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Heater">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">heater</comparableHaystack>
         <rdfs:label xml:lang="en">Heater</rdfs:label>
     </owl:NamedIndividual>
@@ -1635,7 +1644,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/HotWaterFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
-        <comparableBelok xml:lang="en">51</comparableBelok>
+        <comparableBelok xml:lang="en">--------51</comparableBelok>
         <rdfs:label xml:lang="en">HotWaterFlow</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1645,7 +1654,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/HotWaterReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
-        <comparableBelok xml:lang="en">52</comparableBelok>
+        <comparableBelok xml:lang="en">--------52</comparableBelok>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">HotWaterReturn</rdfs:label>
     </owl:NamedIndividual>
@@ -1657,7 +1666,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Humidity">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">GM1-9xx/y</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">03</comparableBelok>
+        <comparableBelok xml:lang="en">03--------</comparableBelok>
         <comparableHaystack xml:lang="en">humidity</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3304</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Humidity</rdfs:label>
@@ -1671,7 +1680,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Hwrc">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">PCV6xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">55</comparableBelok>
+        <comparableBelok xml:lang="en">--------55</comparableBelok>
         <rdfs:label xml:lang="en">Hwrc</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1725,8 +1734,8 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Level">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">GL1-9xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">05</comparableBelok>
-        <comparableCoClass xml:lang="en">BG, BL</comparableCoClass>
+        <comparableBelok xml:lang="en">05--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBL</comparableCoClass>
         <comparableHaystack xml:lang="en">level</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3319, 3330</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Level</rdfs:label>
@@ -1783,7 +1792,6 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Number -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Number">
-        <comparableBelok xml:lang="en">6</comparableBelok>
         <comparableIPSOObjectId xml:lang="en">5851,5650</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Number</rdfs:label>
     </owl:NamedIndividual>
@@ -1795,7 +1803,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/OutdoorAir">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">AF</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">04</comparableBelok>
+        <comparableBelok xml:lang="en">--------01</comparableBelok>
         <comparableHaystack xml:lang="en">outside</comparableHaystack>
         <rdfs:label xml:lang="en">OutdoorAir</rdfs:label>
     </owl:NamedIndividual>
@@ -1829,7 +1837,6 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Percentage -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Percentage">
-        <comparableBelok xml:lang="en">6</comparableBelok>
         <comparableIPSOObjectId xml:lang="en">5851,5650</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Percentage</rdfs:label>
     </owl:NamedIndividual>
@@ -1896,7 +1903,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Presence">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">GN1-9xx, GRN1-9xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">14</comparableBelok>
+        <comparableBelok xml:lang="en">14--------</comparableBelok>
         <comparableHaystack xml:lang="en">occupied</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3302</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Presence</rdfs:label>
@@ -1909,7 +1916,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Pressure">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">GP0-9xx/y, MAN5-6xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">02</comparableBelok>
+        <comparableBelok xml:lang="en">02--------</comparableBelok>
         <comparableHaystack xml:lang="en">pressure</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3323</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Pressure</rdfs:label>
@@ -1924,7 +1931,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PrimaryCoolingFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN5xx, RDV5xx, SHG5xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">33</comparableBelok>
+        <comparableBelok xml:lang="en">--------33</comparableBelok>
         <rdfs:label xml:lang="en">PrimaryCoolingFlow</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1935,7 +1942,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PrimaryCoolingReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN5xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">34</comparableBelok>
+        <comparableBelok xml:lang="en">--------34</comparableBelok>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">PrimaryCoolingReturn</rdfs:label>
     </owl:NamedIndividual>
@@ -1947,7 +1954,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PrimaryHeatingFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx, SHG6xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">23</comparableBelok>
+        <comparableBelok xml:lang="en">--------23</comparableBelok>
         <rdfs:label xml:lang="en">PrimaryHeatingFlow</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1958,7 +1965,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PrimaryHeatingReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">24</comparableBelok>
+        <comparableBelok xml:lang="en">--------24</comparableBelok>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">PrimaryHeatingReturn</rdfs:label>
     </owl:NamedIndividual>
@@ -1968,7 +1975,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Pump -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Pump">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">pump</comparableHaystack>
         <rdfs:label xml:lang="en">Pump</rdfs:label>
     </owl:NamedIndividual>
@@ -1980,8 +1987,8 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Radiation">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">GR0-9xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">10</comparableBelok>
-        <comparableCoClass xml:lang="en">BR</comparableCoClass>
+        <comparableBelok xml:lang="en">10--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBR</comparableCoClass>
         <rdfs:label xml:lang="en">Radiation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1991,8 +1998,8 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ReactivePowerL1">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">12</comparableBelok>
-        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableBelok xml:lang="en">12--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ReactivePowerL1</rdfs:label>
@@ -2005,8 +2012,8 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ReactivePowerL2">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">12</comparableBelok>
-        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableBelok xml:lang="en">12--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ReactivePowerL2</rdfs:label>
@@ -2018,8 +2025,8 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ReactivePowerL3">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">12</comparableBelok>
-        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableBelok xml:lang="en">12--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ReactivePowerL3</rdfs:label>
@@ -2031,8 +2038,8 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ReactivePowerTotal">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">12</comparableBelok>
-        <comparableCoClass xml:lang="en">BJ</comparableCoClass>
+        <comparableBelok xml:lang="en">12------10</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">reactive,power</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">ReactivePowerTotal</rdfs:label>
@@ -2045,7 +2052,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/RecyclingEnergyFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">PVA5xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">41</comparableBelok>
+        <comparableBelok xml:lang="en">--------41</comparableBelok>
         <comparableHaystack xml:lang="en">circ</comparableHaystack>
         <rdfs:label xml:lang="en">RecyclingEnergyFlow</rdfs:label>
     </owl:NamedIndividual>
@@ -2057,7 +2064,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/RecyclingEnergyReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">PVA5xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">42</comparableBelok>
+        <comparableBelok xml:lang="en">--------42</comparableBelok>
         <comparableHaystack xml:lang="en">circ,leaving</comparableHaystack>
         <rdfs:label xml:lang="en">RecyclingEnergyReturn</rdfs:label>
     </owl:NamedIndividual>
@@ -2089,8 +2096,8 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/RotationSpeed">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">08</comparableBelok>
-        <comparableCoClass xml:lang="en">BSE, BSF</comparableCoClass>
+        <comparableBelok xml:lang="en">08--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBSF</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">3346</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">RotationSpeed</rdfs:label>
     </owl:NamedIndividual>
@@ -2113,7 +2120,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SecondaryCoolingFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN5xx, SHG5xx, RDV7xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">36</comparableBelok>
+        <comparableBelok xml:lang="en">--------35</comparableBelok>
         <rdfs:label xml:lang="en">SecondaryCoolingFlow</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2135,7 +2142,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SecondaryHeatingFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx, RDV6xx, SHG6xx, RDV8xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">25</comparableBelok>
+        <comparableBelok xml:lang="en">--------25</comparableBelok>
         <rdfs:label xml:lang="en">SecondaryHeatingFlow</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2146,7 +2153,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SecondaryHeatingReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MAN6xx, PV6xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">26</comparableBelok>
+        <comparableBelok xml:lang="en">--------26</comparableBelok>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">SecondaryHeatingReturn</rdfs:label>
     </owl:NamedIndividual>
@@ -2157,7 +2164,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Sound">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">13</comparableBelok>
+        <comparableBelok xml:lang="en">13--------</comparableBelok>
         <comparableIPSOObjectId xml:lang="en">3324</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Sound</rdfs:label>
     </owl:NamedIndividual>
@@ -2180,7 +2187,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SteamFlow">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MT2xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">71</comparableBelok>
+        <comparableBelok xml:lang="en">--------71</comparableBelok>
         <rdfs:label xml:lang="en">SteamFlow</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2191,7 +2198,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SteamReturn">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MT2xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">72</comparableBelok>
+        <comparableBelok xml:lang="en">--------72</comparableBelok>
         <rdfs:label xml:lang="en">SteamReturn</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2202,7 +2209,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SupplyAir">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">TF</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">02</comparableBelok>
+        <comparableBelok xml:lang="en">--------02</comparableBelok>
         <rdfs:label xml:lang="en">SupplyAir</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2222,7 +2229,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Temperature">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableBIPTypeId xml:lang="en">GT0-9xx/yy, MT2-6xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">01</comparableBelok>
+        <comparableBelok xml:lang="en">01--------</comparableBelok>
         <comparableHaystack xml:lang="en">temp</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3303</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
@@ -2234,7 +2241,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Thermostat -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Thermostat">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <rdfs:label xml:lang="en">Thermostat</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2243,7 +2250,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Valve -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Valve">
-        <rdf:type rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
         <comparableHaystack xml:lang="en">valve</comparableHaystack>
         <rdfs:label xml:lang="en">Valve</rdfs:label>
     </owl:NamedIndividual>
@@ -2254,9 +2261,9 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Velocity">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBelok xml:lang="en">07</comparableBelok>
-        <comparableCoClass xml:lang="en">BSD</comparableCoClass>
-        <comparableCoClass xml:lang="en">GS0-9xx/y</comparableCoClass>
+        <comparableBIPTypeId xml:lang="en">GS0-9xx/y</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">07--------</comparableBelok>
+        <comparableCoClass xml:lang="en">KOBSD</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">5517</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Velocity</rdfs:label>
     </owl:NamedIndividual>
@@ -2279,7 +2286,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Voltage">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableCoClass xml:lang="en">BA</comparableCoClass>
+        <comparableCoClass xml:lang="en">KOBA</comparableCoClass>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Voltage</rdfs:label>
@@ -2291,7 +2298,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/VoltageL1">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableCoClass xml:lang="en">BA</comparableCoClass>
+        <comparableCoClass xml:lang="en">KOBA</comparableCoClass>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">VoltageL1</rdfs:label>
@@ -2303,7 +2310,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/VoltageL2">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableCoClass xml:lang="en">BA</comparableCoClass>
+        <comparableCoClass xml:lang="en">KOBA</comparableCoClass>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">VoltageL2</rdfs:label>
@@ -2315,7 +2322,7 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/VoltageL3">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableCoClass xml:lang="en">BA</comparableCoClass>
+        <comparableCoClass xml:lang="en">KOBA</comparableCoClass>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">VoltageL3</rdfs:label>
@@ -2338,7 +2345,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/WasteWater">
         <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <comparableBIPTypeId xml:lang="en">MT3xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">81</comparableBelok>
+        <comparableBelok xml:lang="en">--------81</comparableBelok>
         <rdfs:label xml:lang="en">WasteWater</rdfs:label>
     </owl:NamedIndividual>
     
