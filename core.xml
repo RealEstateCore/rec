@@ -828,9 +828,10 @@ LocationUUID isLocatedAt (59.333683,18.068579,0)</rdfs:comment>
         <rdfs:comment xml:lang="en">The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
 
 Exceptions to SI:
-Express temperature in Celcius,
+Express temperature in Celsius,
 Energy in Watt hour (Wh),
-Angle i degrees (360 degress = 1 revolution)</rdfs:comment>
+Angle i degrees (360 degress = 1 revolution)
+MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">MeasurementUnit</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
     </owl:Class>
@@ -1630,6 +1631,16 @@ H1B2xx, H1B9xx</comparableBIP>
     
 
 
+    <!-- http://w3id.org/rec/core/GlobalIrradiance -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/GlobalIrradiance">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:label xml:lang="en">GlobalIrradiance</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Solar_irradiance</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/core/Heater -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Heater">
@@ -1800,6 +1811,16 @@ H1B2xx, H1B9xx</comparableBIP>
     
 
 
+    <!-- http://w3id.org/rec/core/MillimeterPerHour -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/MillimeterPerHour">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/MeasurementUnit"/>
+        <rdfs:comment xml:lang="en">For measuring Precipation</rdfs:comment>
+        <rdfs:label xml:lang="en">MillimeterPerHour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/core/Number -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Number">
@@ -1905,6 +1926,16 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <comparableHaystack xml:lang="en">freq</comparableHaystack>
         <rdfs:label xml:lang="en">PowerFrequency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Precipation -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Precipation">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:comment xml:lang="en">Measured in MillimeterPerHour</rdfs:comment>
+        <rdfs:label xml:lang="en">Precipation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2215,6 +2246,15 @@ H1B2xx, H1B9xx</comparableBIP>
     
 
 
+    <!-- http://w3id.org/rec/core/SunshineTimePerHour -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SunshineTimePerHour">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:label xml:lang="en">SunshineTimePerHour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/core/SupplyAir -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/SupplyAir">
@@ -2380,6 +2420,16 @@ H1B2xx, H1B9xx</comparableBIP>
         <unitSign xml:lang="en">Wh</unitSign>
         <rdfs:comment xml:lang="en">Enery. Watthour.</rdfs:comment>
         <rdfs:label xml:lang="en">WattHour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/WattPerSquareMeter -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/WattPerSquareMeter">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:label xml:lang="en">WattPerSquareMeter</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.rapidtables.com/calc/light/how-watt-to-lux.html</rdfs:seeAlso>
     </owl:NamedIndividual>
 </rdf:RDF>
 
