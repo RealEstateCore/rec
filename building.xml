@@ -58,6 +58,15 @@
     
 
 
+    <!-- http://w3id.org/rec/building/BarRoom -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/BarRoom">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
+        <rdfs:label xml:lang="en">BarRoom</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/building/Bathroom -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/Bathroom">
@@ -86,6 +95,15 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/Garage"/>
         <core:comparableCoClass xml:lang="en">UTCBD</core:comparableCoClass>
         <rdfs:label xml:lang="en">BicycleGarage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/Cabinet -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/Cabinet">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/UtilitiesRoom"/>
+        <rdfs:label xml:lang="en">Cabinet</rdfs:label>
     </owl:Class>
     
 
@@ -419,6 +437,15 @@
     
 
 
+    <!-- http://w3id.org/rec/building/LightIndustryPremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/LightIndustryPremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <rdfs:label xml:lang="en">LightIndustryPremises</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/building/LivingRoom -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/LivingRoom">
@@ -436,26 +463,6 @@
         <core:comparableCoClass xml:lang="en">UTEAA</core:comparableCoClass>
         <core:comparableFi2 xml:lang="en">23.23-01</core:comparableFi2>
         <rdfs:label xml:lang="en">MainEntrance</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/building/MedicalTreatmentRoom -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/building/MedicalTreatmentRoom">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
-        <core:comparableCoClass xml:lang="en">UTBAH</core:comparableCoClass>
-        <rdfs:label xml:lang="en">MedicalTreatmentRoom</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/building/MedicalTreatmentWaitingRoom -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/building/MedicalTreatmentWaitingRoom">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/MedicalTreatmentRoom"/>
-        <core:comparableCoClass xml:lang="en">UTAAC</core:comparableCoClass>
-        <rdfs:label xml:lang="en">MedicalTreatmentWaitingRoom</rdfs:label>
     </owl:Class>
     
 
@@ -595,6 +602,15 @@
     
 
 
+    <!-- http://w3id.org/rec/building/RestaurantPremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/RestaurantPremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <rdfs:label xml:lang="en">RestaurantPremises</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/building/RestingPlace -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/RestingPlace">
@@ -612,6 +628,15 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
         <core:comparableCoClass xml:lang="en">UTAAA</core:comparableCoClass>
         <rdfs:label xml:lang="en">RestingRoom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/RetailPremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/RetailPremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <rdfs:label xml:lang="en">RetailPremises</rdfs:label>
     </owl:Class>
     
 
@@ -733,6 +758,15 @@
     
 
 
+    <!-- http://w3id.org/rec/building/StoragePremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/StoragePremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <rdfs:label xml:lang="en">StoragePremises</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/building/TelecommunicationRoom -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/TelecommunicationRoom">
@@ -763,6 +797,27 @@
         <core:comparableCoClass xml:lang="en">UTABB</core:comparableCoClass>
         <core:comparableFi2 xml:lang="en">25.25-01</core:comparableFi2>
         <rdfs:label xml:lang="en">Toilet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/TreatmentRoom -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/TreatmentRoom">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
+        <core:comparableCoClass xml:lang="en">UTBAH</core:comparableCoClass>
+        <rdfs:comment xml:lang="en">For e.g. medical or other treatment or consultation.</rdfs:comment>
+        <rdfs:label xml:lang="en">TreatmentRoom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/TreatmentWaitingRoom -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/TreatmentWaitingRoom">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/TreatmentRoom"/>
+        <core:comparableCoClass xml:lang="en">UTAAC</core:comparableCoClass>
+        <rdfs:label xml:lang="en">TreatmentWaitingRoom</rdfs:label>
     </owl:Class>
     
 

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://w3id.org/rec/core/"
      xml:base="http://w3id.org/rec/core/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:core="http://w3id.org/rec/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -200,15 +201,16 @@
     
 
 
-    <!-- http://w3id.org/rec/core/hasMeasurmentUnit -->
+    <!-- http://w3id.org/rec/core/hasMeasurementUnit -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasMeasurmentUnit">
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasMeasurementUnit">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://w3id.org/rec/core/Actuation"/>
                     <rdf:Description rdf:about="http://w3id.org/rec/core/Actuator"/>
                     <rdf:Description rdf:about="http://w3id.org/rec/core/Observation"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/QuantityKind"/>
                     <rdf:Description rdf:about="http://w3id.org/rec/core/Sensor"/>
                 </owl:unionOf>
             </owl:Class>
@@ -234,6 +236,23 @@
         </rdfs:domain>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
         <rdfs:label xml:lang="en">hasPlacementContext</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasPremises -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasPremises">
+        <rdfs:domain rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructure"/>
+                    <rdf:Description rdf:about="http://w3id.org/rec/core/BuildingStructureComponent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">hasPremises</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -270,6 +289,7 @@
     <!-- http://w3id.org/rec/core/isLocatedIn -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isLocatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -398,6 +418,16 @@
     
 
 
+    <!-- http://w3id.org/rec/core/hasActuationTime -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasActuationTime">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">hasActuationTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://w3id.org/rec/core/hasAliasID -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasAliasID">
@@ -412,7 +442,16 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasAuxiliaryData">
         <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
-        <rdfs:comment xml:lang="en">hasAuxiliaryData</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAuxiliaryData</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasCity -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasCity">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasLocationRelatedData"/>
+        <rdfs:label xml:lang="en">hasCity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -423,6 +462,15 @@
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasAuxiliaryData"/>
         <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character (compared to Description). E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">hasComment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasCountry">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasLocationRelatedData"/>
+        <rdfs:label xml:lang="en">hasCountry</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -453,7 +501,8 @@
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment xml:lang="en">Measured in ms (milli seconds)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Measured in ms (milli seconds).
+Duration is defined as the length of time that something lasts.</rdfs:comment>
         <rdfs:label xml:lang="en">hasDuration</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -473,12 +522,34 @@ Bearings are based on true north.</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/rec/core/hasGeonames -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasGeonames">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasLocationRelatedData"/>
+        <rdfs:comment xml:lang="en">Linking to https://www.geonames.org
+
+E.g. for Stockholm (Sweden):
+LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs:comment>
+        <rdfs:label xml:lang="en">hasGeonames</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://w3id.org/rec/core/hasLittera -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasLittera">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasAuxiliaryData"/>
         <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room.</rdfs:comment>
         <rdfs:label xml:lang="en">hasLittera</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasLocationRelatedData -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasLocationRelatedData">
+        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasLocationRelatedData</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -514,6 +585,16 @@ Bearings are based on true north.</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/rec/core/hasPostalAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasPostalAddress">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasLocationRelatedData"/>
+        <rdfs:comment xml:lang="en">Address used for postal delivery.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasPostalAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://w3id.org/rec/core/hasProcessedTime -->
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasProcessedTime">
@@ -533,6 +614,16 @@ Bearings are based on true north.</rdfs:comment>
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasReadTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasRegion -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasRegion">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasLocationRelatedData"/>
+        <rdfs:comment xml:lang="en">Use this property to add [proprietary] regions.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasRegion</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -565,6 +656,15 @@ Bearings are based on true north.</rdfs:comment>
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasStopTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasSustainabilityCertification -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasSustainabilityCertification">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasAuxiliaryData"/>
+        <rdfs:label xml:lang="en">hasSustainabilityCertification</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -618,7 +718,25 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasVistingAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasVistingAddress">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasLocationRelatedData"/>
+        <rdfs:comment xml:lang="en">If a Location has multiple visiting addresses, then just add as many hasVistingAddress as needed.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasVistingAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasZipCode -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasZipCode">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasLocationRelatedData"/>
+        <rdfs:label xml:lang="en">hasZipCode</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -737,17 +855,9 @@ Altitude: 5515</comparableIPSOObjectId>
     
 
 
-    <!-- http://w3id.org/rec/core/DeviceFunction -->
+    <!-- http://w3id.org/rec/core/DeviceFunctionType -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceFunction"/>
-    
-
-
-    <!-- http://w3id.org/rec/core/Duration -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/Duration">
-        <rdfs:label xml:lang="en">Duration</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceFunctionType"/>
     
 
 
@@ -798,6 +908,23 @@ Altitude: 5515</comparableIPSOObjectId>
     
 
 
+    <!-- http://w3id.org/rec/core/GroupOfCountries -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/GroupOfCountries">
+        <rdfs:label xml:lang="en">GroupOfCountries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Human -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Human">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">Human</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/core/Land -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Land">
@@ -807,15 +934,34 @@ Altitude: 5515</comparableIPSOObjectId>
     
 
 
+    <!-- http://w3id.org/rec/core/LeaseContract -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/LeaseContract">
+        <rdfs:comment xml:lang="en">Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">LeaseContract</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/core/Location -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Location">
-        <rdfs:comment xml:lang="en">An instance of Location has a PopularName and isLocatedAt a geographical point.
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/rec/core/isLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/rec/core/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Location must have either a spatial relation to another location (e.g. &quot;contained in&quot;), a geographical coordinate representing its centre, or a pair of geographical coordintes representing it&apos;s outer boundaries (northwest/southeast)
+
+
+An instance of Location can have a PopularName and isLocatedAt a geographical point.
 
 E.g. Defining Stockholm as a Location:
-LocationUUID isA Location
-LocationUUID hasPopularName &quot;Stockholm&quot;
-LocationUUID isLocatedAt (59.333683,18.068579,0)</rdfs:comment>
+LocationUUID#1 isA Location
+LocationUUID#1 hasPopularName &quot;Stockholm&quot;
+LocationUUID#1 isLocatedAt (59.333683,18.068579,0)
+LocationUUID#1 isLocatedIn LocationUUID#2</rdfs:comment>
         <rdfs:label xml:lang="en">Location</rdfs:label>
     </owl:Class>
     
@@ -861,6 +1007,16 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/rec/core/PowerSource">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/Prediction -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Prediction">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Event"/>
+        <rdfs:comment xml:lang="en">Some time or duration in the future.</rdfs:comment>
+        <rdfs:label xml:lang="en">Prediction</rdfs:label>
     </owl:Class>
     
 
@@ -946,6 +1102,15 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/rec/core/SomeSystem -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/SomeSystem">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">SomeSystem</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/core/StoreyLevel -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/StoreyLevel">
@@ -957,12 +1122,30 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
-    <!-- http://w3id.org/rec/core/VirtualComponent -->
+    <!-- http://w3id.org/rec/core/Tenant -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/core/VirtualComponent">
+    <owl:Class rdf:about="http://w3id.org/rec/core/Tenant">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">Tenant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/VirtualBuildingStructure -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/VirtualBuildingStructure">
+        <rdfs:comment xml:lang="en">A non-physical BuildingStructure. Belongs to a RealEstate.</rdfs:comment>
+        <rdfs:label xml:lang="en">VirtualBuildingStructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/VirtualBuildingStructureComponent -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/VirtualBuildingStructureComponent">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/BuildingStructureComponent"/>
         <rdfs:comment xml:lang="en">A non-physical component. Belongs to a BuildingStructure. One BuildingStructure may have zero, one, or many VirtualComponents. E.g a temperature value from an external service for the area of a building.</rdfs:comment>
-        <rdfs:label xml:lang="en">RoomFoodHandling</rdfs:label>
+        <rdfs:label xml:lang="en">VirtualBuildingStructureComponent</rdfs:label>
     </owl:Class>
     
 
@@ -1105,10 +1288,20 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/rec/core/AgentInteraction -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/AgentInteraction">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:comment xml:lang="en">When a human interacts with a system. E.g. pushes a button to turn on/off a light, force ventilation.</rdfs:comment>
+        <rdfs:label xml:lang="en">AgentInteraction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/core/AirHandlingUnit -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/AirHandlingUnit">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">ahu,air</comparableHaystack>
         <rdfs:label xml:lang="en">AirHandlingUnit</rdfs:label>
     </owl:NamedIndividual>
@@ -1200,7 +1393,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Boiler -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Boiler">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Boiler</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1240,7 +1433,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Chiller -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Chiller">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">chiller</comparableHaystack>
         <rdfs:label xml:lang="en">Chiller</rdfs:label>
     </owl:NamedIndividual>
@@ -1259,7 +1452,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Coil -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Coil">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Coil</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1302,7 +1495,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Compressor -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Compressor">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Compressor</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1324,7 +1517,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Condenser -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Condenser">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">condenser</comparableHaystack>
         <rdfs:label xml:lang="en">Condenser</rdfs:label>
     </owl:NamedIndividual>
@@ -1334,7 +1527,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Control -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Control">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:comment xml:lang="en">Device that controls Actuators (can also collect data).</rdfs:comment>
         <rdfs:label xml:lang="en">Control</rdfs:label>
     </owl:NamedIndividual>
@@ -1414,7 +1607,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Damper -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Damper">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">damper</comparableHaystack>
         <rdfs:label xml:lang="en">Damper</rdfs:label>
     </owl:NamedIndividual>
@@ -1424,7 +1617,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/DataAquisition -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DataAquisition">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:comment xml:lang="en">Device that collects data</rdfs:comment>
         <rdfs:label xml:lang="en">DataAqusition</rdfs:label>
     </owl:NamedIndividual>
@@ -1434,7 +1627,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/DataCommunicationGateway -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DataCommunicationGateway">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:comment xml:lang="en">Device that acts as a broker (could be a switch or gateway)</rdfs:comment>
         <rdfs:label xml:lang="en">DataCommunicationGateway</rdfs:label>
     </owl:NamedIndividual>
@@ -1547,7 +1740,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Elevator -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Elevator">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Elevator</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1569,7 +1762,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Escalator -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Escalator">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Escalator</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1611,7 +1804,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Fan -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Fan">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">fan</comparableHaystack>
         <rdfs:label xml:lang="en">Fan</rdfs:label>
     </owl:NamedIndividual>
@@ -1621,7 +1814,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Filter -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Filter">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">filter</comparableHaystack>
         <rdfs:label xml:lang="en">Filter</rdfs:label>
     </owl:NamedIndividual>
@@ -1654,7 +1847,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Heater -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Heater">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">heater</comparableHaystack>
         <rdfs:label xml:lang="en">Heater</rdfs:label>
     </owl:NamedIndividual>
@@ -1726,6 +1919,15 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">irradiance</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3301</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Illuminance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/IndoorAir -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/IndoorAir">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/PlacementContext"/>
+        <rdfs:label xml:lang="en">IndoorAir</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2036,7 +2238,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Pump -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Pump">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">pump</comparableHaystack>
         <rdfs:label xml:lang="en">Pump</rdfs:label>
     </owl:NamedIndividual>
@@ -2309,6 +2511,8 @@ H1B2xx, H1B9xx</comparableBIP>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Temperature">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <hasMeasurementUnit rdf:resource="http://w3id.org/rec/core/Celsius"/>
+        <hasMeasurementUnit rdf:resource="http://w3id.org/rec/core/Kelvin"/>
         <comparableBIPTypeId xml:lang="en">GT0-9xx/yy, MT2-6xx</comparableBIPTypeId>
         <comparableBelok xml:lang="en">01--------</comparableBelok>
         <comparableHaystack xml:lang="en">temp</comparableHaystack>
@@ -2322,7 +2526,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Thermostat -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Thermostat">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Thermostat</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2331,7 +2535,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Valve -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Valve">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunction"/>
+        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <comparableHaystack xml:lang="en">valve</comparableHaystack>
         <rdfs:label xml:lang="en">Valve</rdfs:label>
     </owl:NamedIndividual>
