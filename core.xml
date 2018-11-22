@@ -994,6 +994,15 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/rec/core/Organisation -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/Organisation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">Organisation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/core/PlacementContext -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/PlacementContext">
@@ -1384,6 +1393,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Binary -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Binary">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/ActuatableProperty"/>
         <comparableIPSOObjectId xml:lang="en">5550,5850</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Binary</rdfs:label>
     </owl:NamedIndividual>
