@@ -1,0 +1,37 @@
+{
+  "format": "rec2.3.1",
+  "deviceId": "<< UUID of device  >>",
+  "observations": [
+    {
+      "observationTime": "2018-01-01T01:01:01.000Z",
+      "value": 16.1,
+      "quantityKind": "<< quantityKind name e.g. Temperature",
+      "sensorId": "<< UUID of sensor >>"
+    }
+  ],
+  "actuationCommand":[
+    {
+      "actuationTime": "2018-01-01T01:01:01.000Z",
+      "actuatorId": "<< UUID of actuator >>",
+      "actuationInterfaceId": "<< UUID of actuatableProperty  >>",
+      "value": "<< This will be the correct format for the defined actuatable property, and translated to the correct format for EBO >>"
+    }
+  ],
+  "actuationResponses":[
+    {
+      "actuatorId": "<< String / UUID >>",
+      "actuationId": "<< String / UUID >>",
+      "responseCode": "success / rejected / none",
+      "actuationTime": "2018-01-01T01:01:01.000Z"
+    }
+  ],
+  "exceptions":[
+    {
+      "exceptionTime": "2018-01-01T01:01:01.000Z",
+      "origin": "actuator / sensor",
+      "id": "<< UUID of sensorId >>",
+      "exception": "<< exceptionMessage >>",
+      "retry": "<< number of retries as json int - no quotes >>"
+    }
+  ]
+}
