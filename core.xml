@@ -160,12 +160,12 @@
     
 
 
-    <!-- http://w3id.org/rec/core/hasActuatableProperty -->
+    <!-- http://w3id.org/rec/core/hasActuationInterface -->
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasActuatableProperty">
+    <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/hasActuationInterface">
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/Actuator"/>
-        <rdfs:range rdf:resource="http://w3id.org/rec/core/ActuatableProperty"/>
-        <rdfs:label xml:lang="en">hasActuatableProperty</rdfs:label>
+        <rdfs:range rdf:resource="http://w3id.org/rec/core/ActuationInterface"/>
+        <rdfs:label xml:lang="en">hasActuationInterface</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -418,12 +418,59 @@
     
 
 
-    <!-- http://w3id.org/rec/core/hasActuationTime -->
+    <!-- http://w3id.org/rec/core/actuationCommand -->
 
-    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasActuationTime">
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/actuationCommand">
+        <rdfs:comment xml:lang="en">actuationCommand is the event of the system [e.g. a digital twin] responsible for sending the actuation to the actuator</rdfs:comment>
+        <rdfs:label xml:lang="en">actuationCommand</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/actuationRequest -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/actuationRequest">
+        <rdfs:comment xml:lang="en">actuationRequest is the incoming request to perform an actuation [to the digital twin]</rdfs:comment>
+        <rdfs:label xml:lang="en">actuationRequest</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/actuationResponse -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/actuationResponse">
+        <rdfs:comment xml:lang="en">actuationResponse is the value returned from an actuation as a reponse</rdfs:comment>
+        <rdfs:label xml:lang="en">actuationResponse</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasActuationCommandTime -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasActuationCommandTime">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasActuationTime</rdfs:label>
+        <rdfs:comment xml:lang="en">hasActuationCommandTime is the time stamp for the event of doing the actuation</rdfs:comment>
+        <rdfs:label xml:lang="en">hasActuationRequestTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasActuationRequestTime -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasActuationRequestTime">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
+        <rdfs:comment xml:lang="en">hasActuationRequestTime</rdfs:comment>
+        <rdfs:comment xml:lang="en">hasActuationRequestTime is the time stamp for when a request for an actuation arrived</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rec/core/hasActuationResponseTime -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rec/core/hasActuationResponseTime">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/rec/core/hasTime"/>
+        <rdfs:label xml:lang="en">hasActuationResponseTime</rdfs:label>
+        <rdfs:label xml:lang="en">hasActuationResponseTime is the time stamp for a possible response from actuation process</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -776,21 +823,21 @@ Altitude: 5515</comparableIPSOObjectId>
     
 
 
-    <!-- http://w3id.org/rec/core/ActuatableProperty -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/ActuatableProperty">
-        <rdfs:comment xml:lang="en">A description of what kind of input the Actuator accepts.</rdfs:comment>
-        <rdfs:label xml:lang="en">ActuatableProperty</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/rec/core/Actuation -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Actuation">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:comment xml:lang="en">The act of changing the state of something.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/core/ActuationInterface -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/core/ActuationInterface">
+        <rdfs:comment xml:lang="en">A description of what kind of input the Actuator accepts.</rdfs:comment>
+        <rdfs:label xml:lang="en">ActuationInterface</rdfs:label>
     </owl:Class>
     
 
@@ -908,23 +955,6 @@ Altitude: 5515</comparableIPSOObjectId>
     
 
 
-    <!-- http://w3id.org/rec/core/GroupOfCountries -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/GroupOfCountries">
-        <rdfs:label xml:lang="en">GroupOfCountries</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/core/Human -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/Human">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Agent"/>
-        <rdfs:label xml:lang="en">Human</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/rec/core/Land -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/Land">
@@ -990,15 +1020,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Event"/>
         <rdfs:comment xml:lang="en">Observation of a phenomena. Made by a Sensor. Used with hasValue.</rdfs:comment>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/core/Organisation -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/Organisation">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Agent"/>
-        <rdfs:label xml:lang="en">Organisation</rdfs:label>
     </owl:Class>
     
 
@@ -1111,15 +1132,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
-    <!-- http://w3id.org/rec/core/SomeSystem -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/SomeSystem">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Agent"/>
-        <rdfs:label xml:lang="en">SomeSystem</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/rec/core/StoreyLevel -->
 
     <owl:Class rdf:about="http://w3id.org/rec/core/StoreyLevel">
@@ -1127,15 +1139,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableIFC xml:lang="en">ifcBuildingStorey</comparableIFC>
         <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
         <rdfs:label xml:lang="en">StoreyLevel</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/core/Tenant -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/core/Tenant">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Agent"/>
-        <rdfs:label xml:lang="en">Tenant</rdfs:label>
     </owl:Class>
     
 
@@ -1194,6 +1197,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/ActiveEnergyL1">
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <hasMeasurementUnit rdf:resource="http://w3id.org/rec/core/Watt"/>
         <comparableBIPTypeId xml:lang="en">MQxx, VMM8xx, VMM1xx</comparableBIPTypeId>
         <comparableBelok xml:lang="en">11-------</comparableBelok>
         <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
@@ -1393,7 +1397,6 @@ H1B2xx, H1B9xx</comparableBIP>
     <!-- http://w3id.org/rec/core/Binary -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Binary">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/ActuatableProperty"/>
         <comparableIPSOObjectId xml:lang="en">5550,5850</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Binary</rdfs:label>
     </owl:NamedIndividual>
@@ -1624,12 +1627,12 @@ H1B2xx, H1B9xx</comparableBIP>
     
 
 
-    <!-- http://w3id.org/rec/core/DataAquisition -->
+    <!-- http://w3id.org/rec/core/DataAcquisition -->
 
-    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DataAquisition">
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/DataAcquisition">
         <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
         <rdfs:comment xml:lang="en">Device that collects data</rdfs:comment>
-        <rdfs:label xml:lang="en">DataAqusition</rdfs:label>
+        <rdfs:label xml:lang="en">DataAcquisition</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1707,6 +1710,15 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableBelok xml:lang="en">--------22</comparableBelok>
         <comparableHaystack xml:lang="en">leaving</comparableHaystack>
         <rdfs:label xml:lang="en">DistrictHeatingReturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/rec/core/Efficiency -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Efficiency">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:label xml:lang="en">Efficiency</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1942,6 +1954,14 @@ H1B2xx, H1B9xx</comparableBIP>
     
 
 
+    <!-- http://w3id.org/rec/core/Integer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Integer">
+        <rdfs:label xml:lang="en">Integer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/core/Kelvin -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Kelvin">
@@ -2097,6 +2117,20 @@ H1B2xx, H1B9xx</comparableBIP>
     
 
 
+    <!-- http://w3id.org/rec/core/PassageCounting -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/PassageCounting">
+        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
+        <comparableBIPTypeId xml:lang="en">GN1-9xx, GRN1-9xx</comparableBIPTypeId>
+        <comparableBelok xml:lang="en">14--------</comparableBelok>
+        <comparableHaystack xml:lang="en">occupied</comparableHaystack>
+        <comparableIPSOObjectId xml:lang="en">3302</comparableIPSOObjectId>
+        <rdfs:comment xml:lang="en">Presence equivivalent</rdfs:comment>
+        <rdfs:label xml:lang="en">Presence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/rec/core/Percentage -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Percentage">
@@ -2167,19 +2201,6 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">Measured in MillimeterPerHour</rdfs:comment>
         <rdfs:label xml:lang="en">Precipation</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/rec/core/Presence -->
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/Presence">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
-        <comparableBIPTypeId xml:lang="en">GN1-9xx, GRN1-9xx</comparableBIPTypeId>
-        <comparableBelok xml:lang="en">14--------</comparableBelok>
-        <comparableHaystack xml:lang="en">occupied</comparableHaystack>
-        <comparableIPSOObjectId xml:lang="en">3302</comparableIPSOObjectId>
-        <rdfs:label xml:lang="en">Presence</rdfs:label>
     </owl:NamedIndividual>
     
 
