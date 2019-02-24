@@ -336,7 +336,6 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/isPartOfDevice">
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/DeviceComponent"/>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">A Sensor or Actuator or Device that is a part of another Device.</rdfs:comment>
         <rdfs:label xml:lang="en">isPartOfDevice</rdfs:label>
     </owl:ObjectProperty>
     
@@ -393,7 +392,6 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/core/servedBy">
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="http://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">A Device serving another Device. E.g. an HVAC-unit serving an air diffuser.</rdfs:comment>
         <rdfs:label xml:lang="en">servedBy</rdfs:label>
     </owl:ObjectProperty>
     
@@ -916,10 +914,7 @@ Altitude: 5515</comparableIPSOObjectId>
 
     <!-- http://w3id.org/rec/core/DeviceFunctionType -->
 
-    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceFunctionType">
-        <rdfs:comment xml:lang="en">The main Description of what the main function or purpose is of a Device.</rdfs:comment>
-        <rdfs:label xml:lang="en">DeviceFunctionType</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://w3id.org/rec/core/DeviceFunctionType"/>
     
 
 
@@ -1322,15 +1317,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="http://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">When a human interacts with a system. E.g. pushes a button to turn on/off a light, force ventilation.</rdfs:comment>
         <rdfs:label xml:lang="en">AgentInteraction</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/rec/core/AirDiffuser -->
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/rec/core/AirDiffuser">
-        <rdf:type rdf:resource="http://w3id.org/rec/core/DeviceFunctionType"/>
-        <rdfs:label xml:lang="en">AirDiffuser</rdfs:label>
     </owl:NamedIndividual>
     
 
