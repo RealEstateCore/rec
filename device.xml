@@ -40,7 +40,6 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/rec/device/hasDeviceFunction">
         <rdfs:domain rdf:resource="http://w3id.org/rec/core/Device"/>
-        <rdfs:range rdf:resource="http://w3id.org/rec/device/DeviceFunction"/>
         <rdfs:label xml:lang="en">hasDeviceFunction</rdfs:label>
     </owl:ObjectProperty>
     
@@ -449,16 +448,8 @@
 
     <owl:Class rdf:about="http://w3id.org/rec/device/DeviceCommunication">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/DeviceComponent"/>
+        <rdfs:comment xml:lang="en">Type of communiaction bus for the Device.</rdfs:comment>
         <rdfs:label xml:lang="en">DeviceCommunication</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rec/device/DeviceFunction -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/device/DeviceFunction">
-        <rdfs:comment xml:lang="en">Description of what the main function or purpose is of a Device.</rdfs:comment>
-        <rdfs:label xml:lang="en">DeviceFunction</rdfs:label>
     </owl:Class>
     
 
@@ -998,6 +989,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://w3id.org/rec/core/PowerSource">
+        <rdfs:label xml:lang="en">PowerSource</rdfs:label>
+        <rdfs:comment xml:lang="en">The power source for the device.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="http://w3id.org/rec/device/hasKNXConfiguration">
         <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">hasKNXConfiguration</rdfs:label>
