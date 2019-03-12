@@ -61,7 +61,7 @@
     <!-- http://w3id.org/rec/building/BarRoom -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/BarRoom">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/FoodHandlingRoom"/>
         <rdfs:label xml:lang="en">BarRoom</rdfs:label>
     </owl:Class>
     
@@ -160,6 +160,24 @@
     
 
 
+    <!-- http://w3id.org/rec/building/CoffeePremises -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/CoffeePremises">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
+        <rdfs:label xml:lang="en">CoffeePremises</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/CoffeeRoom -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/CoffeeRoom">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/FoodHandlingRoom"/>
+        <rdfs:label xml:lang="en">CoffeeRoom</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/rec/building/ConferenceRoom -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/ConferenceRoom">
@@ -217,7 +235,7 @@
     <!-- http://w3id.org/rec/building/DiningRoom -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/DiningRoom">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/FoodHandlingRoom"/>
         <core:comparableCoClass xml:lang="en">UTBEA</core:comparableCoClass>
         <core:comparableFi2 xml:lang="en">20.20-08</core:comparableFi2>
         <rdfs:label xml:lang="en">DiningRoom</rdfs:label>
@@ -233,6 +251,15 @@
         <rdfs:label xml:lang="en">DisabledToilet</rdfs:label>
         <rdfs:seeAlso xml:lang="en">HWC</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">RWC</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/DishingRoom -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/DishingRoom">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/FoodHandlingRoom"/>
+        <rdfs:label xml:lang="en">DishingRoom</rdfs:label>
     </owl:Class>
     
 
@@ -327,6 +354,15 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
         <core:comparableCoClass xml:lang="en">UTBEC</core:comparableCoClass>
         <rdfs:label xml:lang="en">ExhibitionRoom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/FittingRoom -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/FittingRoom">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/RetailRoom"/>
+        <rdfs:label xml:lang="en">FittingRoom</rdfs:label>
     </owl:Class>
     
 
@@ -629,22 +665,12 @@
     
 
 
-    <!-- http://w3id.org/rec/building/RestingPlace -->
-
-    <owl:Class rdf:about="http://w3id.org/rec/building/RestingPlace">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/building/Office"/>
-        <core:comparableCoClass xml:lang="en">UTAAA</core:comparableCoClass>
-        <core:comparableFi2 xml:lang="en">20.20-09</core:comparableFi2>
-        <rdfs:label xml:lang="en">RestingPlace</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/rec/building/RestingRoom -->
 
     <owl:Class rdf:about="http://w3id.org/rec/building/RestingRoom">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
         <core:comparableCoClass xml:lang="en">UTAAA</core:comparableCoClass>
+        <core:comparableFi2 xml:lang="en">20.20-09</core:comparableFi2>
         <rdfs:label xml:lang="en">RestingRoom</rdfs:label>
     </owl:Class>
     
@@ -655,6 +681,15 @@
     <owl:Class rdf:about="http://w3id.org/rec/building/RetailPremises">
         <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Premises"/>
         <rdfs:label xml:lang="en">RetailPremises</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rec/building/RetailRoom -->
+
+    <owl:Class rdf:about="http://w3id.org/rec/building/RetailRoom">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rec/core/Room"/>
+        <rdfs:label xml:lang="en">RetailRoom</rdfs:label>
     </owl:Class>
     
 
