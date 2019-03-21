@@ -135,12 +135,7 @@
 
 
 
-    <!-- https://w3id.org/rec/core/coversLeasable -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/coversLeasable">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/LeaseContract"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Leasable"/>
-    </owl:ObjectProperty>
 
 
 
@@ -333,13 +328,7 @@
 
 
 
-    <!-- https://w3id.org/rec/core/isPartOfPremises -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isPartOfPremises">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Leasable"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Premises"/>
-    </owl:ObjectProperty>
 
 
 
@@ -354,14 +343,6 @@
 
 
 
-    <!-- https://w3id.org/rec/core/leasedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/leasedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/LeaseContract"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
-        <rdfs:comment xml:lang="en">The agent leasing some leasable object.</rdfs:comment>
-        <rdfs:label xml:lang="en">Leased by</rdfs:label>
-    </owl:ObjectProperty>
 
 
 
@@ -778,14 +759,9 @@ Altitude: 5515</comparableIPSOObjectId>
 
 
 
-
-
-
-
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Leasable"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
         <rdfs:comment xml:lang="en">Confined building structure.</rdfs:comment>
         <rdfs:label xml:lang="en">Building</rdfs:label>
@@ -826,10 +802,6 @@ Altitude: 5515</comparableIPSOObjectId>
 
 
 
-
-
-
-
     <!-- https://w3id.org/rec/core/GeoReferenceOrigo -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/GeoReferenceOrigo">
@@ -849,21 +821,7 @@ Altitude: 5515</comparableIPSOObjectId>
 
 
 
-    <!-- https://w3id.org/rec/core/Leasable -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/core/Leasable">
-        <rdfs:comment xml:lang="en">Things that can be leased (e.g., buildings, rooms, equipment, etc.).</rdfs:comment>
-        <rdfs:label xml:lang="en">Leasable</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/rec/core/LeaseContract -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/LeaseContract">
-        <rdfs:comment xml:lang="en">Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement.</rdfs:comment>
-        <rdfs:label xml:lang="en">Lease contract</rdfs:label>
-    </owl:Class>
 
 
 
@@ -908,12 +866,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
 
 
-    <!-- https://w3id.org/rec/core/Premises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/core/Premises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Leasable"/>
-        <rdfs:label xml:lang="en">Premises</rdfs:label>
-    </owl:Class>
 
 
 
@@ -947,20 +900,11 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
 
 
+    <!-- https://w3id.org/rec/core/Room -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <owl:Class rdf:about="https://w3id.org/rec/core/Room">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+    </owl:Class>
 
 
 
