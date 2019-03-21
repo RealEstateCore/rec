@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/rec/device/"
      xml:base="https://w3id.org/rec/device/"
-     xmlns:core="https://w3id.org/rec/core/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="https://w3id.org/rec/core/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/rec/device/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/device/2.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/2.3/"/>
         <rdfs:seeAlso xml:lang="en">See also the RealEstateCore’s homepage at http://realestatecore.io/ for latest version and more information.</rdfs:seeAlso>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -23,7 +23,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasDeviceCommunication -->
@@ -33,7 +33,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:comment>hasDeviceCommunication</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasDeviceFunction -->
@@ -42,13 +42,13 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:label xml:lang="en">hasDeviceFunction</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXConfiguration -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasKNXConfiguration"/>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXDataPointType -->
@@ -67,7 +67,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/device/KNXDataPointType"/>
         <rdfs:label xml:lang="en">hsKNXDataPointType</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXDeviceId -->
@@ -84,7 +84,7 @@
             </owl:Class>
         </rdfs:domain>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXDevicePort -->
@@ -101,7 +101,7 @@
             </owl:Class>
         </rdfs:domain>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXGroupAddress -->
@@ -118,7 +118,7 @@
             </owl:Class>
         </rdfs:domain>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusConfiguration -->
@@ -134,7 +134,7 @@
             </owl:Class>
         </rdfs:domain>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusDataType -->
@@ -153,7 +153,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">hasModbusDataType</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusFunctionCode -->
@@ -172,7 +172,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/device/ModbusFunctionCode"/>
         <rdfs:label xml:lang="en">hasModbusFunctionCode</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusNodeId -->
@@ -189,7 +189,7 @@
             </owl:Class>
         </rdfs:domain>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusRegister -->
@@ -206,7 +206,7 @@
             </owl:Class>
         </rdfs:domain>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusRegisterLength -->
@@ -223,10 +223,10 @@
             </owl:Class>
         </rdfs:domain>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -234,7 +234,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasGeneralCommunicationConfiguration -->
@@ -243,7 +243,7 @@
         <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">hasGeneralCommunicationConfiguration</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasIPAddress -->
@@ -261,7 +261,7 @@
         </rdfs:domain>
         <rdfs:label xml:lang="en">hasIPAddress</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasIPAddressPort -->
@@ -280,13 +280,13 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label xml:lang="en">hasIPAddressPort</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXConfiguration -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasKNXConfiguration"/>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXDeviceId -->
@@ -294,7 +294,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasKNXDeviceId">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXDevicePort -->
@@ -302,13 +302,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasKNXDevicePort">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasKNXGroupAddress -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasKNXGroupAddress"/>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasLocalEndpointId -->
@@ -326,7 +326,7 @@
         </rdfs:domain>
         <rdfs:label xml:lang="en">hasLocalEndpointId</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasLoraConfiguration -->
@@ -335,7 +335,7 @@
         <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">hasLoraConfiguration</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasLoraDevEUI -->
@@ -346,13 +346,13 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label xml:lang="en">hasLoraDevEUI</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusConfiguration -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasModbusConfiguration"/>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusNodeId -->
@@ -360,7 +360,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasModbusNodeId">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusRegister -->
@@ -368,13 +368,13 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasModbusRegister">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasModbusRegisterLength -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasModbusRegisterLength"/>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasOffset -->
@@ -393,7 +393,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">hasOffset</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/device/hasScaleFactor -->
@@ -412,10 +412,10 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">hasScaleFactor</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -423,7 +423,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/device/BACnetConfiguration -->
@@ -433,7 +433,7 @@
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label>BACnetConfiguration</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/CommunicationConfiguration -->
@@ -441,17 +441,16 @@
     <owl:Class rdf:about="https://w3id.org/rec/device/CommunicationConfiguration">
         <rdfs:label xml:lang="en">CommunicationConfiguration</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/DeviceCommunication -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DeviceCommunication">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/DeviceComponent"/>
         <rdfs:comment xml:lang="en">Type of communiaction bus for the Device.</rdfs:comment>
         <rdfs:label xml:lang="en">DeviceCommunication</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/KNXConfiguration -->
@@ -461,7 +460,7 @@
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label xml:lang="en">KNXConfiguration</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/KNXDataPointType -->
@@ -470,7 +469,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/KNXConfiguration"/>
         <rdfs:label xml:lang="en">KNXDataPointType</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/LoRaConfiguration -->
@@ -480,7 +479,7 @@
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label xml:lang="en">LoRaConfiguration</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/MBusConfiguration -->
@@ -490,7 +489,7 @@
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label xml:lang="en">MBusConfiguration</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/ModbusConfiguration -->
@@ -500,7 +499,7 @@
         <rdfs:label xml:lang="en">ModbusConfiguration</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Modbus</rdfs:seeAlso>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/ModbusDataType -->
@@ -509,7 +508,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/ModbusConfiguration"/>
         <rdfs:label xml:lang="en">ModbusDataType</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/ModbusFunctionCode -->
@@ -518,7 +517,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/ModbusConfiguration"/>
         <rdfs:label xml:lang="en">ModbusTCPFunctionCode</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/ModbusRTUConfiguration -->
@@ -528,7 +527,7 @@
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label xml:lang="en">ModbusRTUConfiguration</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/ModbusTCPConfiguration -->
@@ -538,7 +537,7 @@
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label xml:lang="en">ModbusTCPConfiguration</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/OPC-DAConfiguration -->
@@ -548,7 +547,7 @@
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label xml:lang="en">OPC-DAConfiguration</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/device/OPC-UAConfiguration -->
@@ -558,10 +557,10 @@
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label xml:lang="en">OPC-UAConfiguration</rdfs:label>
     </owl:Class>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -569,7 +568,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/device/BACnet -->
@@ -578,13 +577,13 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">BACnet</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/ElectricalGridLocalProduction -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/ElectricalGridLocalProduction"/>
-
+    
 
 
     <!-- https://w3id.org/rec/device/Fixed_length_string -->
@@ -593,7 +592,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">Fixed length string</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/IP -->
@@ -602,7 +601,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">IP</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/KNX -->
@@ -611,7 +610,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">KNX</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/LoRa -->
@@ -620,7 +619,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">LoRa</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/MBus -->
@@ -629,7 +628,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">MBus</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/ModbusRTU -->
@@ -638,7 +637,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">ModbusRTU</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/ModbusTCP -->
@@ -647,7 +646,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">ModbusTCP</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/OPC-DA -->
@@ -656,7 +655,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">OPC-DA</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/OPC-UA -->
@@ -665,7 +664,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceCommunication"/>
         <rdfs:label xml:lang="en">OPC-UA</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/Variable_length_string -->
@@ -674,7 +673,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">Variable length string</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/1 -->
@@ -684,7 +683,7 @@
         <rdfs:comment xml:lang="en">Read coil</rdfs:comment>
         <rdfs:label xml:lang="en">1</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/1_byte -->
@@ -692,7 +691,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/1_byte">
         <rdfs:label xml:lang="en">1 byte</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/1.yyy -->
@@ -702,7 +701,7 @@
         <rdfs:comment xml:lang="en">Boolean, like switching, move up/down, step</rdfs:comment>
         <rdfs:label xml:lang="en">1.yyy</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/15 -->
@@ -712,7 +711,7 @@
         <rdfs:comment xml:lang="en">Write Multiple Coils</rdfs:comment>
         <rdfs:label xml:lang="en">15</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/16 -->
@@ -722,7 +721,7 @@
         <rdfs:comment xml:lang="en">Write Multiple Holding Registers</rdfs:comment>
         <rdfs:label xml:lang="en">16</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/2 -->
@@ -732,7 +731,7 @@
         <rdfs:comment xml:lang="en">Read Discrete Input</rdfs:comment>
         <rdfs:label xml:lang="en">2</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/2_byte -->
@@ -740,7 +739,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/2_byte">
         <rdfs:label xml:lang="en">2 byte</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/2_byte_BCD -->
@@ -749,7 +748,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">2 byte BCD</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/2_byte_signed_integer -->
@@ -758,7 +757,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">2 byte signed integer</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/2_byte_signed_integer_swapped -->
@@ -767,7 +766,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">2 byte signed integer swapped</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/2_byte_unsigned_integer -->
@@ -776,7 +775,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">2 byte unsigned integer</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/2_byte_unsigned_integer_swapped -->
@@ -785,7 +784,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">2 byte unsigned integer swapped</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/3 -->
@@ -795,7 +794,7 @@
         <rdfs:comment xml:lang="en">Read Holding Registers</rdfs:comment>
         <rdfs:label xml:lang="en">3</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4 -->
@@ -805,7 +804,7 @@
         <rdfs:comment xml:lang="en">Read Input Registers</rdfs:comment>
         <rdfs:label xml:lang="en">4</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_BCD -->
@@ -814,7 +813,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte BCD</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_BCD_swapped -->
@@ -823,7 +822,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte BCD swapped</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_float -->
@@ -832,7 +831,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte float</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_float_BCD -->
@@ -841,7 +840,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte float BCD</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_float_swapped -->
@@ -850,7 +849,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte float swapped</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_signed_integer -->
@@ -859,7 +858,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte signed integer</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_signed_integer_swapped -->
@@ -868,7 +867,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte signed integer swapped</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words -->
@@ -877,7 +876,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte signed integer swapped bytes and words</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_unsigned_integer -->
@@ -886,7 +885,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte unsigned integer</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_unsigned_integer_swapped -->
@@ -895,7 +894,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte unsigned integer swapped</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words -->
@@ -904,7 +903,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">4 byte unsigned integer swapped bytes and words</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/5 -->
@@ -914,7 +913,7 @@
         <rdfs:comment xml:lang="en">Write Single Coil</rdfs:comment>
         <rdfs:label xml:lang="en">5</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/6 -->
@@ -924,7 +923,7 @@
         <rdfs:comment xml:lang="en">Write Single Holding Register</rdfs:comment>
         <rdfs:label xml:lang="en">6</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/8_byte_float -->
@@ -933,7 +932,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">8 byte float</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/8_byte_float_swapped -->
@@ -942,7 +941,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">8 byte float swapped</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/8_byte_signed_integer -->
@@ -951,7 +950,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">8 byte signed integer</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/8_byte_signed_integer_swapped -->
@@ -960,7 +959,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">8 byte signed integer swapped</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/8_byte_unsigned_integer -->
@@ -969,7 +968,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">8 byte unsigned integer</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/device/8_byte_unsigned_integer_swapped -->
@@ -978,10 +977,10 @@
         <rdf:type rdf:resource="https://w3id.org/rec/device/ModbusDataType"/>
         <rdfs:label xml:lang="en">8 byte unsigned integer swapped</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotations
@@ -1023,4 +1022,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
