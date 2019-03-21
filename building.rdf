@@ -10,99 +10,12 @@
     <owl:Ontology rdf:about="https://w3id.org/rec/building/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/building/2.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/2.3/"/>
-        <rdfs:seeAlso xml:lang="en">See also the RealEstateCore’s homepage at http://realestatecore.io/ for latest version and more information.</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">This REC module covers different types of building components and rooms.</rdfs:comment>
+        <rdfs:label xml:lang="en">RealEstateCore Building Module</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
     </owl:Ontology>
 
-    <!-- https://w3id.org/rec/building/Balcony -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/Balcony">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Balcony</rdfs:label>
-    </owl:Class>
-
-    <!-- https://w3id.org/rec/building/Facade -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Facade">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Facade</rdfs:label>
-        <comparableCoClass xml:lang="en">FSB</comparableCoClass>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/rec/building/Floor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Floor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Floor</rdfs:label>
-    </owl:Class>
-
-
-    <!-- https://w3id.org/rec/building/RoofInner -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RoofInner">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Roof, inner</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/rec/building/RoofOuter -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RoofOuter">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Roof, outer</rdfs:label>
-        <comparableCoClass xml:lang="en">FSD</comparableCoClass>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/rec/building/Slab -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Slab">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Slab</rdfs:label>
-        <comparableCoClass xml:lang="en">FSC</comparableCoClass>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/rec/building/StoreyLevel -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/StoreyLevel">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
-        <rdfs:label xml:lang="en">Storey level</rdfs:label>
-        <comparableBIP xml:lang="en">StoreyName</comparableBIP>
-        <comparableIFC xml:lang="en">ifcBuildingStorey</comparableIFC>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/rec/building/Terrace -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Terrace">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Terrace</rdfs:label>
-    </owl:Class>
-
-    <!-- https://w3id.org/rec/building/VirtualBuildingComponent -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/VirtualBuildingComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">A non-physical component. Belongs to a Building . One Building may have zero, one, or many Virtual components. E.g a temperature value from an external service for the area of a building.</rdfs:comment>
-        <rdfs:label xml:lang="en">Virtual building component</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/rec/building/Wall -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Wall">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Wall</rdfs:label>
-        <comparableCoClass xml:lang="en">FSB</comparableCoClass>
-    </owl:Class>
 
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -112,6 +25,24 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
+
+
+    <!-- https://w3id.org/rec/building/comparableBIP -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/building/comparableBIP"/>
+
+
+
+    <!-- https://w3id.org/rec/building/comparableCoClass -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/building/comparableCoClass"/>
+
+
+
+    <!-- https://w3id.org/rec/building/comparableIFC -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/building/comparableIFC"/>
 
 
 
@@ -141,21 +72,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-     <!-- https://w3id.org/rec/building/VirtualBuilding -->
 
-     <owl:Class rdf:about="https://w3id.org/rec/building/VirtualBuilding">
-         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Building"/>
-         <rdfs:comment xml:lang="en">A non-physical Building. Belongs to a RealEstate.</rdfs:comment>
-         <rdfs:label xml:lang="en">Virtual building</rdfs:label>
-     </owl:Class>
-
-     <!-- https://w3id.org/rec/building/WallInner -->
-
-     <owl:Class rdf:about="https://w3id.org/rec/building/WallInner">
-         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Wall"/>
-         <rdfs:label xml:lang="en">Inner wall</rdfs:label>
-         <comparableCoClass xml:lang="en">FSB</comparableCoClass>
-     </owl:Class>
 
 
     <!-- https://w3id.org/rec/building/Atrium -->
@@ -186,6 +103,15 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
         <rdfs:label xml:lang="en">BackOffice</rdfs:label>
         <core:comparableCoClass xml:lang="en">UTBBE</core:comparableCoClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/rec/building/Balcony -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/Balcony">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:label xml:lang="en">Balcony</rdfs:label>
     </owl:Class>
 
 
@@ -292,12 +218,7 @@
 
 
 
-    <!-- https://w3id.org/rec/building/CoffeePremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/CoffeePremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">CoffeePremises</rdfs:label>
-    </owl:Class>
 
 
 
@@ -407,13 +328,7 @@
 
 
 
-    <!-- https://w3id.org/rec/building/EducationalPremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/EducationalPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">EducationalPremises</rdfs:label>
-        <core:comparableCoClass xml:lang="en">BVAH</core:comparableCoClass>
-    </owl:Class>
 
 
 
@@ -490,11 +405,30 @@
 
 
 
+    <!-- https://w3id.org/rec/building/Facade -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/Facade">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:label xml:lang="en">Facade</rdfs:label>
+        <comparableCoClass xml:lang="en">FSB</comparableCoClass>
+    </owl:Class>
+
+
+
     <!-- https://w3id.org/rec/building/FittingRoom -->
 
     <owl:Class rdf:about="https://w3id.org/rec/building/FittingRoom">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/RetailRoom"/>
         <rdfs:label xml:lang="en">FittingRoom</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/rec/building/Floor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/Floor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:label xml:lang="en">Floor</rdfs:label>
     </owl:Class>
 
 
@@ -520,12 +454,7 @@
 
 
 
-    <!-- https://w3id.org/rec/building/GaragePremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/GaragePremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">GaragePremises</rdfs:label>
-    </owl:Class>
 
 
 
@@ -550,12 +479,7 @@
 
 
 
-    <!-- https://w3id.org/rec/building/HotelPremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/HotelPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">HotelPremises</rdfs:label>
-    </owl:Class>
 
 
 
@@ -580,13 +504,7 @@
 
 
 
-    <!-- https://w3id.org/rec/building/LaboratoryPremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/LaboratoryPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">LaboratoryPremises</rdfs:label>
-        <core:comparableCoClass xml:lang="en">BVAEC</core:comparableCoClass>
-    </owl:Class>
 
 
 
@@ -623,12 +541,6 @@
 
 
 
-    <!-- https://w3id.org/rec/building/LightIndustryPremises -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/LightIndustryPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">LightIndustryPremises</rdfs:label>
-    </owl:Class>
 
 
 
@@ -674,13 +586,7 @@
 
 
 
-    <!-- https://w3id.org/rec/building/OfficePremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/OfficePremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">OfficePremises</rdfs:label>
-        <core:comparableCoClass xml:lang="en">BVAEA</core:comparableCoClass>
-    </owl:Class>
 
 
 
@@ -778,22 +684,10 @@
 
 
 
-    <!-- https://w3id.org/rec/building/ResidentialPremises -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ResidentialPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">ResidentialPremises</rdfs:label>
-        <core:comparableCoClass xml:lang="en">BVAA</core:comparableCoClass>
-    </owl:Class>
 
 
 
-    <!-- https://w3id.org/rec/building/RestaurantPremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/RestaurantPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">RestaurantPremises</rdfs:label>
-    </owl:Class>
 
 
 
@@ -808,12 +702,7 @@
 
 
 
-    <!-- https://w3id.org/rec/building/RetailPremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/RetailPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">RetailPremises</rdfs:label>
-    </owl:Class>
 
 
 
@@ -822,6 +711,25 @@
     <owl:Class rdf:about="https://w3id.org/rec/building/RetailRoom">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
         <rdfs:label xml:lang="en">RetailRoom</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/rec/building/RoofInner -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/RoofInner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:label xml:lang="en">Roof, inner</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/rec/building/RoofOuter -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/RoofOuter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:label xml:lang="en">Roof, outer</rdfs:label>
+        <comparableCoClass xml:lang="en">FSD</comparableCoClass>
     </owl:Class>
 
 
@@ -900,6 +808,16 @@
 
 
 
+    <!-- https://w3id.org/rec/building/Slab -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/Slab">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:label xml:lang="en">Slab</rdfs:label>
+        <comparableCoClass xml:lang="en">FSC</comparableCoClass>
+    </owl:Class>
+
+
+
     <!-- https://w3id.org/rec/building/SmallStudyRoom -->
 
     <owl:Class rdf:about="https://w3id.org/rec/building/SmallStudyRoom">
@@ -943,11 +861,18 @@
 
 
 
-    <!-- https://w3id.org/rec/building/StoragePremises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/building/StoragePremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:label xml:lang="en">StoragePremises</rdfs:label>
+
+
+
+    <!-- https://w3id.org/rec/building/StoreyLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/StoreyLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
+        <rdfs:label xml:lang="en">Storey level</rdfs:label>
+        <comparableBIP xml:lang="en">StoreyName</comparableBIP>
+        <comparableIFC xml:lang="en">ifcBuildingStorey</comparableIFC>
     </owl:Class>
 
 
@@ -960,6 +885,15 @@
         <core:comparableCoClass xml:lang="en">UTDAB</core:comparableCoClass>
         <core:comparableFi2 xml:lang="en">26.26-06
 26.26-07</core:comparableFi2>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/rec/building/Terrace -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/Terrace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:label xml:lang="en">Terrace</rdfs:label>
     </owl:Class>
 
 
@@ -1018,6 +952,46 @@
 
 
 
+    <!-- https://w3id.org/rec/building/VirtualBuilding -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/VirtualBuilding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Building"/>
+        <rdfs:comment xml:lang="en">A non-physical Building. Belongs to a RealEstate.</rdfs:comment>
+        <rdfs:label xml:lang="en">Virtual building</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/rec/building/VirtualBuildingComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/VirtualBuildingComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:comment xml:lang="en">A non-physical component. Belongs to a Building . One Building may have zero, one, or many Virtual components. E.g a temperature value from an external service for the area of a building.</rdfs:comment>
+        <rdfs:label xml:lang="en">Virtual building component</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/rec/building/Wall -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/Wall">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:label xml:lang="en">Wall</rdfs:label>
+        <comparableCoClass xml:lang="en">FSB</comparableCoClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/rec/building/WallInner -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/WallInner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Wall"/>
+        <rdfs:label xml:lang="en">Inner wall</rdfs:label>
+        <comparableCoClass xml:lang="en">FSB</comparableCoClass>
+    </owl:Class>
+
+
+
     <!-- https://w3id.org/rec/building/WasteManagementRoom -->
 
     <owl:Class rdf:about="https://w3id.org/rec/building/WasteManagementRoom">
@@ -1038,6 +1012,10 @@
         <core:comparableCoClass xml:lang="en">UTBB</core:comparableCoClass>
         <core:comparableFi2 xml:lang="en">27.27-11</core:comparableFi2>
     </owl:Class>
+
+
+
+
 
 
 
