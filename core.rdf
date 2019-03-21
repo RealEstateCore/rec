@@ -135,15 +135,6 @@
     
 
 
-    <!-- https://w3id.org/rec/core/causesEvent -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/causesEvent">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Event"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/coversLeasable -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/coversLeasable">
@@ -209,6 +200,15 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/generatesEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/generatesEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Event"/>
     </owl:ObjectProperty>
     
 
@@ -407,7 +407,7 @@
     <!-- https://w3id.org/rec/core/makesActuation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/makesActuation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/causesEvent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/generatesEvent"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Actuator"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Actuation"/>
         <rdfs:label xml:lang="en">makesActuation</rdfs:label>
@@ -418,7 +418,7 @@
     <!-- https://w3id.org/rec/core/makesException -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/makesException">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/causesEvent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/generatesEvent"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Exception"/>
     </owl:ObjectProperty>
@@ -428,7 +428,7 @@
     <!-- https://w3id.org/rec/core/makesObservation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/makesObservation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/causesEvent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/generatesEvent"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Observation"/>
         <rdfs:label xml:lang="en">makesObservation</rdfs:label>
