@@ -9,6 +9,7 @@
      xmlns:core="https://w3id.org/rec/core/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:lease="https://w3id.org/rec/lease/"
      xmlns:device="https://w3id.org/rec/device/"
      xmlns:building="https://w3id.org/rec/building/">
@@ -18,10 +19,12 @@
         <owl:imports rdf:resource="https://w3id.org/rec/building/2.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/device/2.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/lease/2.3/"/>
-        <dc:creator xml:lang="en">Erik Wallin &lt;erik@klipsk.io&gt;</dc:creator>
-        <dc:creator xml:lang="en">Karl Hammar &lt;karl@karlhammar.com&gt;</dc:creator>
-        <dc:publisher xml:lang="en">RealEstateCore Consortium, https://www.realestatecore.io/</dc:publisher>
-        <rdfs:comment>This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</rdfs:comment>
+        <dc:creator>Erik Wallin &lt;erik@klipsk.io&gt;</dc:creator>
+        <dc:creator>Karl Hammar &lt;karl@karlhammar.com&gt;</dc:creator>
+        <dc:publisher>RealEstateCore Consortium, https://www.realestatecore.io/</dc:publisher>
+        <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/full/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</rdfs:comment>
         <rdfs:label>RealEstateCore Full</rdfs:label>
     </owl:Ontology>
 </rdf:RDF>

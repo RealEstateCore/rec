@@ -9,19 +9,23 @@
      xmlns:dcam="http://purl.org/dc/dcam/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:dcmitype="http://purl.org/dc/dcmitype/">
-    <owl:Ontology rdf:about="https://w3id.org/rec/dc/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/dc/1.1/"/>
+     xmlns:dcmitype="http://purl.org/dc/dcmitype/"
+     xmlns:metadata="https://w3id.org/rec/metadata/">
+    <owl:Ontology rdf:about="https://w3id.org/rec/metadata/">
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/metadata/2.3/"/>
         <dc:source rdf:resource="http://bloody-byte.net/rdf/dc_owl2dl/"/>
-        <rdfs:comment xml:lang="en">This is a translation of the Dublin Core Metadata Element Set into OWL annotation properties.</rdfs:comment>
+        <dc:source rdf:resource="http://purl.org/vocab/vann/vann-vocab-20050401.rdf"/>
+        <rdfs:comment xml:lang="en">This is a translation of various metadata schemas into OWL annotation properties.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:label xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+        <rdfs:label xml:lang="en">RealEstateCore Metadata Module</rdfs:label>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -29,7 +33,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/contributor -->
@@ -37,9 +41,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
         <rdfs:comment xml:lang="en-us">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Contributor</rdfs:label>
-        <skos:definition xml:lang="en-us">An entity responsible for making contributions to the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/coverage -->
@@ -48,9 +51,8 @@
         <rdfs:comment xml:lang="en-us">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Coverage</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
-        <skos:definition xml:lang="en-us">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
@@ -58,9 +60,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:comment xml:lang="en-us">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Creator</rdfs:label>
-        <skos:definition xml:lang="en-us">An entity primarily responsible for making the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/date -->
@@ -69,9 +70,8 @@
         <rdfs:comment xml:lang="en-us">Date may be used to express temporal information at any level of granularity. Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Date</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/NOTE-datetime"/>
-        <skos:definition xml:lang="en-us">A point or period of time associated with an event in the lifecycle of the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
@@ -79,9 +79,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
         <rdfs:comment xml:lang="en-us">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Description</rdfs:label>
-        <skos:definition xml:lang="en-us">An account of the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/format -->
@@ -90,9 +89,8 @@
         <rdfs:comment xml:lang="en-us">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Format</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/"/>
-        <skos:definition xml:lang="en-us">The file format, physical medium, or dimensions of the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/identifier -->
@@ -100,9 +98,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
         <rdfs:comment xml:lang="en-us">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Identifier</rdfs:label>
-        <skos:definition xml:lang="en-us">An unambiguous reference to the resource within a given context.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/language -->
@@ -111,9 +108,8 @@
         <rdfs:comment xml:lang="en-us">Recommended best practice is to use a controlled vocabulary such as RFC 4646.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Language</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
-        <skos:definition xml:lang="en-us">A language of the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/publisher -->
@@ -121,9 +117,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher">
         <rdfs:comment xml:lang="en-us">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Publisher</rdfs:label>
-        <skos:definition xml:lang="en-us">An entity responsible for making the resource available.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/relation -->
@@ -131,9 +126,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/relation">
         <rdfs:comment xml:lang="en-us">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Relation</rdfs:label>
-        <skos:definition xml:lang="en-us">A related resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
@@ -141,9 +135,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights">
         <rdfs:comment xml:lang="en-us">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Rights</rdfs:label>
-        <skos:definition xml:lang="en-us">Information about rights held in and over the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/source -->
@@ -151,9 +144,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source">
         <rdfs:comment xml:lang="en-us">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Source</rdfs:label>
-        <skos:definition xml:lang="en-us">A related resource from which the described resource is derived.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/subject -->
@@ -161,9 +153,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject">
         <rdfs:comment xml:lang="en-us">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary. To describe the spatial or temporal topic of the resource, use the Coverage element.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Subject</rdfs:label>
-        <skos:definition xml:lang="en-us">The topic of the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
@@ -171,9 +162,8 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
         <rdfs:comment xml:lang="en-us">Typically, a Title will be a name by which the resource is formally known.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Title</rdfs:label>
-        <skos:definition xml:lang="en-us">A name given to the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/type -->
@@ -182,17 +172,27 @@
         <rdfs:comment xml:lang="en-us">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Type</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-type-vocabulary/"/>
-        <skos:definition xml:lang="en-us">The nature or genre of the resource.</skos:definition>
     </owl:AnnotationProperty>
-    
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+        <rdfs:comment xml:lang="en">The preferred namespace prefix to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+        <rdfs:label xml:lang="en">Preferred Namespace Prefix</rdfs:label>
+    </owl:AnnotationProperty>
+
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+        <rdfs:comment xml:lang="en">The preferred namespace URI to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+        <rdfs:label xml:lang="en">Preferred Namespace Uri</rdfs:label>
+    </owl:AnnotationProperty>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
