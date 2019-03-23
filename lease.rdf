@@ -12,8 +12,8 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://w3id.org/rec/lease/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/lease/2.3/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/core/2.3/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/lease/3.0/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.0/"/>
         <dc:contributor>Erik Wallin (erik@klipsk.io)</dc:contributor>
         <dc:creator>Karl Hammar (karl@karlhammar.com)</dc:creator>
         <dc:description xml:lang="en">This REC module covers lease objects, lease contracts, premise types, etc.</dc:description>
@@ -22,10 +22,10 @@
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
         <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -33,7 +33,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/rec/lease/coversLeasable -->
@@ -42,7 +42,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/LeaseContract"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Leasable"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/isPartOfPremises -->
@@ -52,7 +52,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Leasable"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/leasedBy -->
@@ -63,10 +63,10 @@
         <rdfs:comment xml:lang="en">The agent leasing some leasable object.</rdfs:comment>
         <rdfs:label xml:lang="en">Leased by</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -74,7 +74,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/rec/core/Building -->
@@ -82,7 +82,7 @@
     <rdf:Description rdf:about="https://w3id.org/rec/core/Building">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Leasable"/>
     </rdf:Description>
-    
+
 
 
     <!-- https://w3id.org/rec/core/Room -->
@@ -90,7 +90,7 @@
     <rdf:Description rdf:about="https://w3id.org/rec/core/Room">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Leasable"/>
     </rdf:Description>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/CoffeePremises -->
@@ -99,7 +99,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">CoffeePremises</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/EducationalPremises -->
@@ -109,7 +109,7 @@
         <rdfs:label xml:lang="en">EducationalPremises</rdfs:label>
         <core:comparableCoClass xml:lang="en">BVAH</core:comparableCoClass>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/GaragePremises -->
@@ -118,7 +118,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">GaragePremises</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/HotelPremises -->
@@ -127,7 +127,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">HotelPremises</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/LaboratoryPremises -->
@@ -137,7 +137,7 @@
         <rdfs:label xml:lang="en">LaboratoryPremises</rdfs:label>
         <core:comparableCoClass xml:lang="en">BVAEC</core:comparableCoClass>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/Leasable -->
@@ -146,7 +146,7 @@
         <rdfs:comment xml:lang="en">Things that can be leased (e.g., buildings, rooms, equipment, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">Leasable</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/LeaseContract -->
@@ -155,7 +155,7 @@
         <rdfs:comment xml:lang="en">Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement.</rdfs:comment>
         <rdfs:label xml:lang="en">Lease contract</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/LightIndustryPremises -->
@@ -164,7 +164,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">LightIndustryPremises</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/OfficePremises -->
@@ -174,7 +174,7 @@
         <rdfs:label xml:lang="en">OfficePremises</rdfs:label>
         <core:comparableCoClass xml:lang="en">BVAEA</core:comparableCoClass>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/Premises -->
@@ -183,7 +183,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Leasable"/>
         <rdfs:label xml:lang="en">Premises</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/ResidentialPremises -->
@@ -193,7 +193,7 @@
         <rdfs:label xml:lang="en">ResidentialPremises</rdfs:label>
         <core:comparableCoClass xml:lang="en">BVAA</core:comparableCoClass>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/RestaurantPremises -->
@@ -202,7 +202,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">RestaurantPremises</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/RetailPremises -->
@@ -211,7 +211,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">RetailPremises</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/rec/lease/StoragePremises -->
@@ -225,4 +225,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
