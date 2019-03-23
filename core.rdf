@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/rec/core/"
      xml:base="https://w3id.org/rec/core/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="https://creativecommons.org/ns#"
      xmlns:geo="http://www.opengis.net/ont/geosparql#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -10,15 +11,18 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/rec/core/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://w3id.org/rec/core/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/core/2.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/metadata/2.3/"/>
-        <dc:creator xml:lang="en">Erik Wallin &lt;erik@klipsk.io&gt;</dc:creator>
-        <dc:creator xml:lang="en">Karl Hammar &lt;karl@karlhammar.com&gt;</dc:creator>
-        <dc:publisher xml:lang="en">RealEstateCore Consortium, https://www.realestatecore.io/</dc:publisher>
-        <rdfs:label xml:lang="en">RealEstateCore Core Module</rdfs:label>
+        <dc:creator>Erik Wallin (erik@klipsk.io)</dc:creator>
+        <dc:creator>Karl Hammar (karl@karlhammar.com)</dc:creator>
+        <dc:description xml:lang="en">The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.</dc:description>
+        <dc:publisher>RealEstateCore Consortium (https://www.realestatecore.io/)</dc:publisher>
+        <dc:title>RealEstateCore Core Module</dc:title>
         <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
+        <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
     </owl:Ontology>
     
 

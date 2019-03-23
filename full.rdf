@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/rec/full/"
      xml:base="https://w3id.org/rec/full/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="https://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -19,13 +20,23 @@
         <owl:imports rdf:resource="https://w3id.org/rec/building/2.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/device/2.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/lease/2.3/"/>
-        <dc:creator>Erik Wallin &lt;erik@klipsk.io&gt;</dc:creator>
-        <dc:creator>Karl Hammar &lt;karl@karlhammar.com&gt;</dc:creator>
-        <dc:publisher>RealEstateCore Consortium, https://www.realestatecore.io/</dc:publisher>
+        <dc:creator>Erik Wallin (erik@klipsk.io)</dc:creator>
+        <dc:creator>Karl Hammar (karl@karlhammar.com)</dc:creator>
+        <dc:description xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</dc:description>
+        <dc:publisher>RealEstateCore Consortium (https://www.realestatecore.io/)</dc:publisher>
+        <dc:rights>Copyright © 2019 RealEstateCore Consortium</dc:rights>
+        <dc:title>RealEstateCore Full</dc:title>
         <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/full/</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</rdfs:comment>
-        <rdfs:label>RealEstateCore Full</rdfs:label>
+        <rdfs:comment xml:lang="en">Version 3.0 is a major refactoring of REC:
+
+* Properties have been defined as being single-domain and single-range
+* Meronomy properties have been refactored to allow transitive traversal of the parthood hierarchy from RealEstate all the way down to individual devices using the isPartOf and hasPart superproperties
+** This has required refactoring of the relations Building &lt;-&gt; BuildingComponent and Device &lt;-&gt; DeviceComponent (the latter is removed)
+* Class naming has been simplified
+* Module boundaries have been clarified and three modules (lease, metadata, agents) have been added</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</owl:versionInfo>
+        <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
     </owl:Ontology>
 </rdf:RDF>
 
