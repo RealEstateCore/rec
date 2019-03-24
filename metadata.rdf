@@ -3,6 +3,7 @@
      xml:base="http://purl.org/dc/elements/"
      xmlns:cc="https://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -16,18 +17,22 @@
      xmlns:metadata="https://w3id.org/rec/metadata/">
     <owl:Ontology rdf:about="https://w3id.org/rec/metadata/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/metadata/3.0/"/>
-        <dc:contributor>Karl Hammar</dc:contributor>
-        <dc:description xml:lang="en">This is a translation of various metadata schemas into OWL annotation properties. The metadata schemas themselves have not been developed by the RealEstateCore Consortium; rather, we simply collate them into one OWL file for stand-alone reuse within the REC ontology suite.</dc:description>
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:contributor>
+        <dc:description xml:lang="en">This is a translation of various metadata schemas into OWL annotation properties. The metadata schemas themselves have not been developed by the RealEstateCore Consortium; rather, we simply collate them into one OWL file for stand-alone reuse within the REC ontology suite.
+
+The copyright on the constituent parts (classes, properties, named individuals) of the REC Metadata Module are held by their original authors (see their respective namespaces and the several rdfs:isDefinedBy and dc:source declarations on the Metadata Module ontology as a whole). These parts may have different licenses. The composition of these constituent parts into a joint ontology module are copyright RealEstateCore consortium, under CC-BY license.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
-        <dc:rights xml:lang="en">The copyright on the constituent parts (classes, properties, named individuals) of the REC Metadata Module are held by their original authors (see their respective namespaces and the several rdfs:isDefinedBy and dc:source declarations on the Metadata Module ontology as a whole). These parts may have different licenses. The composition of these constituent parts into a joint ontology module are copyright RealEstateCore consortium, under CC-BY license.</dc:rights>
         <dc:source rdf:resource="http://bloody-byte.net/rdf/dc_owl2dl/"/>
         <dc:source rdf:resource="http://purl.org/vocab/vann/vann-vocab-20050401.rdf"/>
         <dc:title>RealEstateCore Metadata Module</dc:title>
+        <dcterms:modified>2019-03-24</dcterms:modified>
         <vann:preferredNamespacePrefix>metadata</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/metadata/3.0/</vann:preferredNamespaceUri>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
-        <cc:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -40,6 +45,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license">
+        <rdfs:label xml:lang="en">has license</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -183,6 +196,29 @@
     
 
 
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:comment xml:lang="en-us">Date may be used to express temporal information at any level of granularity. Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Date</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/NOTE-datetime"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:label xml:lang="en-us">Date Modified</rdfs:label>
+        <skos:definition xml:lang="en-us">Date on which the resource was changed.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
@@ -201,11 +237,9 @@
     
 
 
-    <!-- https://creativecommons.org/ns#license -->
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
-    <owl:AnnotationProperty rdf:about="https://creativecommons.org/ns#license">
-        <rdfs:label xml:lang="en">has license</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
 </rdf:RDF>
 
 
