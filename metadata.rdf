@@ -16,17 +16,23 @@
      xmlns:metadata="https://w3id.org/rec/metadata/">
     <owl:Ontology rdf:about="https://w3id.org/rec/metadata/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/metadata/3.0/"/>
-        <dc:description xml:lang="en">This is a translation of various metadata schemas into OWL annotation properties.</dc:description>
+        <dc:contributor>Karl Hammar</dc:contributor>
+        <dc:description xml:lang="en">This is a translation of various metadata schemas into OWL annotation properties. The metadata schemas themselves have not been developed by the RealEstateCore Consortium; rather, we simply collate them into one OWL file for stand-alone reuse within the REC ontology suite.</dc:description>
+        <dc:publisher>RealEstateCore Consortium</dc:publisher>
+        <dc:rights xml:lang="en">The copyright on the constituent parts (classes, properties, named individuals) of the REC Metadata Module are held by their original authors (see their respective namespaces and the several rdfs:isDefinedBy and dc:source declarations on the Metadata Module ontology as a whole). These parts may have different licenses. The composition of these constituent parts into a joint ontology module are copyright RealEstateCore consortium, under CC-BY license.</dc:rights>
         <dc:source rdf:resource="http://bloody-byte.net/rdf/dc_owl2dl/"/>
         <dc:source rdf:resource="http://purl.org/vocab/vann/vann-vocab-20050401.rdf"/>
         <dc:title>RealEstateCore Metadata Module</dc:title>
+        <vann:preferredNamespacePrefix>metadata</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/metadata/3.0/</vann:preferredNamespaceUri>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+        <cc:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -34,7 +40,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/contributor -->
@@ -43,7 +49,7 @@
         <rdfs:comment xml:lang="en-us">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Contributor</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/coverage -->
@@ -53,7 +59,7 @@
         <rdfs:label xml:lang="en-us">Coverage</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
@@ -62,7 +68,7 @@
         <rdfs:comment xml:lang="en-us">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Creator</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/date -->
@@ -72,7 +78,7 @@
         <rdfs:label xml:lang="en-us">Date</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/NOTE-datetime"/>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
@@ -81,7 +87,7 @@
         <rdfs:comment xml:lang="en-us">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Description</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/format -->
@@ -91,7 +97,7 @@
         <rdfs:label xml:lang="en-us">Format</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/"/>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/identifier -->
@@ -100,7 +106,7 @@
         <rdfs:comment xml:lang="en-us">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Identifier</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/language -->
@@ -110,7 +116,7 @@
         <rdfs:label xml:lang="en-us">Language</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/publisher -->
@@ -119,7 +125,7 @@
         <rdfs:comment xml:lang="en-us">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Publisher</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/relation -->
@@ -128,7 +134,7 @@
         <rdfs:comment xml:lang="en-us">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Relation</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
@@ -137,7 +143,7 @@
         <rdfs:comment xml:lang="en-us">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Rights</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/source -->
@@ -146,7 +152,7 @@
         <rdfs:comment xml:lang="en-us">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Source</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/subject -->
@@ -155,7 +161,7 @@
         <rdfs:comment xml:lang="en-us">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary. To describe the spatial or temporal topic of the resource, use the Coverage element.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Subject</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
@@ -164,7 +170,7 @@
         <rdfs:comment xml:lang="en-us">Typically, a Title will be a name by which the resource is formally known.</rdfs:comment>
         <rdfs:label xml:lang="en-us">Title</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/type -->
@@ -174,7 +180,7 @@
         <rdfs:label xml:lang="en-us">Type</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-type-vocabulary/"/>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
@@ -183,7 +189,7 @@
         <rdfs:comment xml:lang="en">The preferred namespace prefix to use when using terms from this vocabulary in an XML document.</rdfs:comment>
         <rdfs:label xml:lang="en">Preferred Namespace Prefix</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
@@ -192,7 +198,7 @@
         <rdfs:comment xml:lang="en">The preferred namespace URI to use when using terms from this vocabulary in an XML document.</rdfs:comment>
         <rdfs:label xml:lang="en">Preferred Namespace Uri</rdfs:label>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://creativecommons.org/ns#license -->
@@ -205,3 +211,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
