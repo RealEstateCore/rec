@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/rec/lease/"
      xml:base="https://w3id.org/rec/lease/"
+     xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="https://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,17 +10,18 @@
      xmlns:core="https://w3id.org/rec/core/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/rec/lease/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/lease/3.0/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.0/"/>
-        <dc:contributor>Erik Wallin (erik@klipsk.io)</dc:contributor>
-        <dc:creator>Karl Hammar (karl@karlhammar.com)</dc:creator>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:contributor>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
         <dc:description xml:lang="en">This REC module covers lease objects, lease contracts, premise types, etc.</dc:description>
         <dc:publisher>RealEstateCore Consortium (https://www.realestatecore.io)</dc:publisher>
         <dc:title>RealEstateCore Lease Module</dc:title>
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
-        <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
     </owl:Ontology>
 
 
@@ -33,6 +34,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
+
+
+    <!-- https://w3id.org/rec/lease/buildingIsPartOfPremises -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/buildingIsPartOfPremises">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lease/isPartOfPremises"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
+    </owl:ObjectProperty>
 
 
 
@@ -49,7 +60,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/isPartOfPremises">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Leasable"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:ObjectProperty>
 
@@ -66,6 +76,45 @@
 
 
 
+    <!-- https://w3id.org/rec/lease/premisesIncludes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/premisesIncludes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/rec/lease/premisesIncludesBuilding -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/premisesIncludesBuilding">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lease/premisesIncludes"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/rec/lease/premisesIncludesRoom -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/premisesIncludesRoom">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lease/premisesIncludes"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Room"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/rec/lease/roomIsPartOfPremises -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/roomIsPartOfPremises">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lease/isPartOfPremises"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
+    </owl:ObjectProperty>
+
+
+
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -74,22 +123,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
-
-
-    <!-- https://w3id.org/rec/core/Building -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/Building">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Leasable"/>
-    </rdf:Description>
-
-
-
-    <!-- https://w3id.org/rec/core/Room -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/Room">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Leasable"/>
-    </rdf:Description>
 
 
 
