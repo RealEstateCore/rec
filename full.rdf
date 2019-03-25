@@ -17,11 +17,11 @@
      xmlns:device="https://w3id.org/rec/device/"
      xmlns:building="https://w3id.org/rec/building/">
     <owl:Ontology rdf:about="https://w3id.org/rec/full/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/full/3.0/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/agents/3.0/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/building/3.0/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/device/3.0/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/lease/3.0/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/full/3.0-beta1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/agents/3.0-beta1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/building/3.0-beta1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/device/3.0-beta1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/lease/3.0-beta1/"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
         <dc:description xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</dc:description>
@@ -29,15 +29,15 @@
         <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:title>RealEstateCore Full</dc:title>
         <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.0/</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">Version 3.0 is a major refactoring of REC:
+        <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.0-beta1/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Version 3.0-beta1 is a major refactoring of REC:
 
 * Properties have been defined as being single-domain and single-range
 * Meronomy properties have been refactored to allow transitive traversal of the parthood hierarchy from RealEstate all the way down to individual devices using the isPartOf and hasPart superproperties
 ** This has required refactoring of the relations Building &lt;-&gt; BuildingComponent and Device &lt;-&gt; DeviceComponent (the latter is removed)
 * Class naming has been simplified
 * Module boundaries have been clarified and three modules (lease, metadata, agents) have been added</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0-beta1</owl:versionInfo>
         <dcterms:modified>2019-03-25</dcterms:modified>
     </owl:Ontology>
 </rdf:RDF>
