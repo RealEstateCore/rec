@@ -12,17 +12,22 @@
      xmlns:core="https://w3id.org/rec/core/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://w3id.org/rec/core/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.0/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.0/"/>
-        <dc:creator>Erik Wallin (erik@klipsk.io)</dc:creator>
-        <dc:creator>Karl Hammar (karl@karlhammar.com)</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
         <dc:description xml:lang="en">The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.</dc:description>
         <dc:publisher>RealEstateCore Consortium (https://www.realestatecore.io/)</dc:publisher>
         <dc:title>RealEstateCore Core Module</dc:title>
+        <dcterms:modified>2019-03-25</dcterms:modified>
         <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
         <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <vann:preferredNamespacePrefix>core</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/core/3.0/</vann:preferredNamespaceUri>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</owl:versionInfo>
     </owl:Ontology>
 
 

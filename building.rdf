@@ -10,17 +10,22 @@
      xmlns:core="https://w3id.org/rec/core/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://w3id.org/rec/building/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/building/3.0/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.0/"/>
-        <dc:contributor>Karl Hammar (karl@karlhammar.com)</dc:contributor>
-        <dc:creator>Erik Wallin (erik@klipsk.io)</dc:creator>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:contributor>
+        <dcterms:modified>2019-03-25</dcterms:modified>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:description xml:lang="en">This REC module covers different types of building components and rooms.</dc:description>
-        <dc:publisher>RealEstateCore Consortium (https://www.realestatecore.io)</dc:publisher>
+        <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Building Module</dc:title>
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
         <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <vann:preferredNamespacePrefix>building</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/building/3.0/</vann:preferredNamespaceUri>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</owl:versionInfo>
     </owl:Ontology>
 
 
