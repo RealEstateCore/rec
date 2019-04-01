@@ -54,15 +54,6 @@ Note that this module reuses certain classes, properties, and named individuals 
     
 
 
-    <!-- https://w3id.org/rec/core/comparableCoClass -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/comparableCoClass">
-        <rdfs:label xml:lang="en">comparableCoClass</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">For detailed instructions on how to use see: https://coclass.byggtjanst.se/sv</rdfs:seeAlso>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/comparableFi2 -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/comparableFi2">
@@ -909,7 +900,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
         <rdfs:comment xml:lang="en">A confined building structure.</rdfs:comment>
         <rdfs:label xml:lang="en">Building</rdfs:label>
-        <comparableCoClass xml:lang="en">BV</comparableCoClass>
         <comparableHaystack xml:lang="en">site</comparableHaystack>
         <comparableIFC xml:lang="en">ifcBuilding</comparableIFC>
     </owl:Class>
@@ -921,7 +911,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/BuildingComponent">
         <rdfs:comment xml:lang="en">The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Building component</rdfs:label>
-        <comparableCoClass xml:lang="en">UT</comparableCoClass>
         <comparableIFC xml:lang="en">ifcSpace</comparableIFC>
     </owl:Class>
     
@@ -998,7 +987,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstate">
         <rdfs:comment xml:lang="en">The legal/administrative representation of some lands and/or buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate</rdfs:label>
-        <comparableCoClass xml:lang="en">BX</comparableCoClass>
         <comparableIFC xml:lang="en">site</comparableIFC>
     </owl:Class>
     
@@ -1041,7 +1029,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Watt"/>
         <rdfs:label xml:lang="en">ActiveEnergyL1</rdfs:label>
         <comparableBelok xml:lang="en">11-------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1054,7 +1041,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActiveEnergyL2</rdfs:label>
         <comparableBelok xml:lang="en">11-------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1067,7 +1053,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActiveEnergyL3</rdfs:label>
         <comparableBelok xml:lang="en">11-------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1080,7 +1065,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActiveEnergyTotal</rdfs:label>
         <comparableBelok xml:lang="en">11-----10</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableHaystack xml:lang="en">active,energy</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1093,7 +1077,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActivePowerL1</rdfs:label>
         <comparableBelok xml:lang="en">12-------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1106,7 +1089,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActivePowerL1</rdfs:label>
         <comparableBelok xml:lang="en">12-------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1119,7 +1101,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActivePowerL3</rdfs:label>
         <comparableBelok xml:lang="en">12-------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1132,7 +1113,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActivePowerTotal</rdfs:label>
         <comparableBelok xml:lang="en">12-----10</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">active,power</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1257,7 +1237,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Concentration</rdfs:label>
         <comparableBelok xml:lang="en">09--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBQ</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">3325</comparableIPSOObjectId>
     </owl:NamedIndividual>
     
@@ -1290,7 +1269,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Current">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Current</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBC</comparableCoClass>
         <comparableHaystack xml:lang="en">current</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1302,7 +1280,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/CurrentL1">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">CurrentL1</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBC</comparableCoClass>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1314,7 +1291,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/CurrentL2">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">CurrentL2</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBC</comparableCoClass>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1326,7 +1302,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/CurrentL3">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">CurrentL3</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBC</comparableCoClass>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1349,7 +1324,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Degrees">
         <rdf:type rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:label xml:lang="en">Degrees</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBGE</comparableCoClass>
     </owl:NamedIndividual>
     
 
@@ -1370,7 +1344,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Total energy (not specified as Active or Reactive, used for e.g. district heating).</rdfs:comment>
         <rdfs:label xml:lang="en">EnergyTotal</rdfs:label>
         <comparableBelok xml:lang="en">11------10</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
     
@@ -1393,7 +1366,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Flow</rdfs:label>
         <comparableBelok xml:lang="en">04--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBF</comparableCoClass>
         <comparableHaystack xml:lang="en">flow</comparableHaystack>
     </owl:NamedIndividual>
     
@@ -1489,7 +1461,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Level</rdfs:label>
         <comparableBelok xml:lang="en">05--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBL</comparableCoClass>
         <comparableHaystack xml:lang="en">level</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3319, 3330</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1701,7 +1672,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Radiation</rdfs:label>
         <comparableBelok xml:lang="en">10--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBR</comparableCoClass>
     </owl:NamedIndividual>
     
 
@@ -1713,7 +1683,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">ReactivePowerL1</rdfs:label>
         <rdfs:label xml:lang="en">reactive,power</rdfs:label>
         <comparableBelok xml:lang="en">12--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1726,7 +1695,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ReactivePowerL2</rdfs:label>
         <comparableBelok xml:lang="en">12--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1739,7 +1707,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ReactivePowerL3</rdfs:label>
         <comparableBelok xml:lang="en">12--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1752,7 +1719,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ReactivePowerTotal</rdfs:label>
         <comparableBelok xml:lang="en">12------10</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBJ</comparableCoClass>
         <comparableHaystack xml:lang="en">reactive,power</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1786,7 +1752,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">RotationSpeed</rdfs:label>
         <comparableBelok xml:lang="en">08--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBSF</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">3346</comparableIPSOObjectId>
     </owl:NamedIndividual>
     
@@ -1820,7 +1785,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Speed</rdfs:label>
         <comparableBelok xml:lang="en">07--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBSF</comparableCoClass>
     </owl:NamedIndividual>
     
 
@@ -1875,7 +1839,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Velocity</rdfs:label>
         <comparableBelok xml:lang="en">07--------</comparableBelok>
-        <comparableCoClass xml:lang="en">KOBSD</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">5517</comparableIPSOObjectId>
     </owl:NamedIndividual>
     
@@ -1898,7 +1861,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Voltage">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Voltage</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBA</comparableCoClass>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1910,7 +1872,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/VoltageL1">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">VoltageL1</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBA</comparableCoClass>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1922,7 +1883,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/VoltageL2">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">VoltageL2</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBA</comparableCoClass>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
@@ -1934,7 +1894,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/VoltageL3">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">VoltageL3</rdfs:label>
-        <comparableCoClass xml:lang="en">KOBA</comparableCoClass>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
