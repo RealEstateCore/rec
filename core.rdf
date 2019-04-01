@@ -584,8 +584,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasCity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasCity">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
-        <rdfs:label xml:lang="en">hasCity</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationAttribute"/>
+        <rdfs:comment xml:lang="en">Indicates a city that a certain Geometry is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">has city</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -603,8 +604,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasCountry -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasCountry">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
-        <rdfs:label xml:lang="en">hasCountry</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationAttribute"/>
+        <rdfs:comment xml:lang="en">Indicates a country that a certain Geometry is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">has country</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -658,15 +660,15 @@ Bearings are based on true north.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/core/hasGeonames -->
+    <!-- https://w3id.org/rec/core/hasGeonamesId -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasGeonames">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasGeonamesId">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationAttribute"/>
         <rdfs:comment xml:lang="en">Linking to https://www.geonames.org
 
 E.g. for Stockholm (Sweden):
 LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs:comment>
-        <rdfs:label xml:lang="en">hasGeonames</rdfs:label>
+        <rdfs:label xml:lang="en">has geonames ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -681,11 +683,12 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
     
 
 
-    <!-- https://w3id.org/rec/core/hasLocationRelatedData -->
+    <!-- https://w3id.org/rec/core/hasLocationAttribute -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasLocationRelatedData">
-        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasLocationRelatedData</rdfs:label>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasLocationAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasSerialization"/>
+        <rdfs:comment xml:lang="en">This property is a cognitive clustering for human consumption, grouping sub-properties that assign labels (e.g., place names, addresses, etc.) to Geometry entities. This branch of the property hierarchy may need some further development and cleaning up in future versions.</rdfs:comment>
+        <rdfs:label xml:lang="en">has location attribute</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -725,9 +728,9 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
     <!-- https://w3id.org/rec/core/hasPostalAddress -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasPostalAddress">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationAttribute"/>
         <rdfs:comment xml:lang="en">Address used for postal delivery.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasPostalAddress</rdfs:label>
+        <rdfs:label xml:lang="en">has postal address</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -746,9 +749,9 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
     <!-- https://w3id.org/rec/core/hasRegion -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasRegion">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
-        <rdfs:comment xml:lang="en">Use this property to add [proprietary] regions.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasRegion</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationAttribute"/>
+        <rdfs:comment xml:lang="en">Indicates a region that a certain Geometry is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">has region</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -849,9 +852,9 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     <!-- https://w3id.org/rec/core/hasVistingAddress -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasVistingAddress">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
-        <rdfs:comment xml:lang="en">If a Location has multiple visiting addresses, then just add as many hasVistingAddress as needed.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasVistingAddress</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationAttribute"/>
+        <rdfs:comment xml:lang="en">An address for visiting the Geometry. If a Geometry has multiple visiting addresses, then just add as many hasVistingAddress as needed.</rdfs:comment>
+        <rdfs:label xml:lang="en">has visting address</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -859,8 +862,9 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     <!-- https://w3id.org/rec/core/hasZipCode -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasZipCode">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
-        <rdfs:label xml:lang="en">hasZipCode</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationAttribute"/>
+        <rdfs:comment xml:lang="en">Indicates a certain Geometry&apos;s zip code.</rdfs:comment>
+        <rdfs:label xml:lang="en">has zip code</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -976,30 +980,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
         <rdfs:comment xml:lang="en">A piece of land upon which one or more buildings may be situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/Location -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Location">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isLocatedInBuildingComponent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A Location must have either a spatial relation to another location (e.g. &quot;contained in&quot;), a geographical coordinate representing its centre, or a pair of geographical coordintes representing it&apos;s outer boundaries (northwest/southeast)
-
-
-An instance of Location can have a PopularName and isLocatedAt a geographical point.
-
-E.g. Defining Stockholm as a Location:
-LocationUUID#1 isA Location
-LocationUUID#1 hasPopularName &quot;Stockholm&quot;
-LocationUUID#1 isLocatedAt (59.333683,18.068579,0)
-LocationUUID#1 isLocatedIn LocationUUID#2</rdfs:comment>
-        <rdfs:label xml:lang="en">Location</rdfs:label>
     </owl:Class>
     
 
