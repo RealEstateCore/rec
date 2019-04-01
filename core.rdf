@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/rec/core/"
      xml:base="https://w3id.org/rec/core/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:geo="http://www.opengis.net/ont/geosparql#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -12,27 +12,27 @@
      xmlns:core="https://w3id.org/rec/core/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:vann="http://purl.org/vocab/vann/">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/rec/core/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.0/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.0/"/>
+        <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
         <dc:description xml:lang="en">The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.</dc:description>
-        <dc:publisher>RealEstateCore Consortium (https://www.realestatecore.io/)</dc:publisher>
+        <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Core Module</dc:title>
-        <dcterms:modified>2019-03-25</dcterms:modified>
-        <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
-        <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <dcterms:modified>2019-04-01</dcterms:modified>
         <vann:preferredNamespacePrefix>core</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/core/3.0/</vann:preferredNamespaceUri>
+        <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</owl:versionInfo>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -40,7 +40,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableBIP -->
@@ -49,7 +49,7 @@
         <rdfs:label xml:lang="en">comparableBIP</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For detailed instructions see: http://www.bipkoder.se/#/</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableBIPTypeId -->
@@ -58,7 +58,7 @@
         <rdfs:label xml:lang="en">comparableBIPTypeId</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For detailed instructions see: http://www.bipkoder.se/#/</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableBelok -->
@@ -67,7 +67,7 @@
         <rdfs:label xml:lang="en">comparableBelok</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For detail of how to use Belok: http://belok.se/download/kravspecifikationer/Krav%20S%C3%96%20Bilaga%202%20-%20Objektsdefinitioner%20BELOK%20S%C3%96.pdf</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableCoClass -->
@@ -76,7 +76,7 @@
         <rdfs:label xml:lang="en">comparableCoClass</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For detailed instructions on how to use see: https://coclass.byggtjanst.se/sv</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableFi2 -->
@@ -85,7 +85,7 @@
         <rdfs:label xml:lang="en">comparableFi2</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For detailed instructions see: http://www.bimalliance.se/verktyg-och-stoed/standarder/datamodell/fi2xml/</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableHaystack -->
@@ -94,7 +94,7 @@
         <rdfs:label xml:lang="en">comparableHaystack</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For detaild descriptions of Haystack tags see: https://project-haystack.org/tag</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableIFC -->
@@ -103,7 +103,7 @@
         <rdfs:label xml:lang="en">comparableIFC</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For instructions of use see: https://en.wikipedia.org/wiki/Industry_Foundation_Classes</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableIPSO -->
@@ -112,7 +112,7 @@
         <rdfs:label xml:lang="en">comparableIPSO</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For instructions see: https://ipso-alliance.github.io/pub/</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableIPSOObject -->
@@ -121,7 +121,7 @@
         <rdfs:label xml:lang="en">comparableIPSOObject</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For instructions see: https://ipso-alliance.github.io/pub/</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/comparableIPSOObjectId -->
@@ -130,7 +130,7 @@
         <rdfs:label xml:lang="en">comparableIPSOObjectId</rdfs:label>
         <rdfs:seeAlso xml:lang="en">For instructions see: https://ipso-alliance.github.io/pub/</rdfs:seeAlso>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/exampleOfUse -->
@@ -138,10 +138,10 @@
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/exampleOfUse">
         <rdfs:label xml:lang="en">exampleOfUse</rdfs:label>
     </owl:AnnotationProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -149,7 +149,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#gmlLiteral -->
@@ -157,7 +157,7 @@
     <rdfs:Datatype rdf:about="http://www.opengis.net/ont/geosparql#gmlLiteral">
         <rdfs:label xml:lang="en">GML Literal</rdfs:label>
     </rdfs:Datatype>
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
@@ -165,10 +165,10 @@
     <rdfs:Datatype rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral">
         <rdfs:label xml:lang="en">Well-known Text Literal</rdfs:label>
     </rdfs:Datatype>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -176,7 +176,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#defaultGeometry -->
@@ -186,7 +186,7 @@
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:label xml:lang="en">defaultGeometry</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
@@ -195,7 +195,7 @@
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/deviceMeasurementUnit -->
@@ -205,7 +205,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/deviceQuantityKind -->
@@ -215,7 +215,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/eventMeasurementUnit -->
@@ -225,7 +225,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/eventQuantityKind -->
@@ -235,7 +235,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/generatesEvent -->
@@ -244,7 +244,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Event"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasBuildingComponent -->
@@ -255,7 +255,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasBuildingSubComponent -->
@@ -266,7 +266,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasBuildingSuperComponent -->
@@ -277,7 +277,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasGeoReferenceOrigo -->
@@ -287,7 +287,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/core/GeoReferenceOrigo"/>
         <rdfs:label xml:lang="en">hasGeoReferenceOrigo</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasMeasurementUnit -->
@@ -296,7 +296,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:label xml:lang="en">hasMeasurementUnit</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasMountedDevice -->
@@ -307,7 +307,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasPart -->
@@ -318,7 +318,7 @@
         <rdfs:comment xml:lang="en">Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy.</rdfs:comment>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasQuantityKind -->
@@ -327,7 +327,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">hasQuantityKind</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasRealEstateComponent -->
@@ -338,7 +338,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/RealEstate"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSubDevice -->
@@ -349,7 +349,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSuperDevice -->
@@ -361,7 +361,7 @@
         <rdfs:comment xml:lang="en">A property that allows for nesting of devices within devices.</rdfs:comment>
         <rdfs:label xml:lang="en">isPartOfDevice</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isLocatedInBuildingComponent -->
@@ -374,7 +374,7 @@
 [myOtherObject-UUID], where [myOtherObject-UUID] could be a Room, BuildingStructure, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">isLocatedIn</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isPartOf -->
@@ -384,7 +384,7 @@
         <rdfs:comment xml:lang="en">A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property.</rdfs:comment>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isPartOfBuilding -->
@@ -395,7 +395,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:comment xml:lang="en">Indicates which building a given building component is part of. Note that the parthood hierarchy is transitive, so every building component does not necessarily need to be invidiually connected to a building or a real estate; this can be inferred through the more generic isPartOf property.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isPartOfRealEstate -->
@@ -406,7 +406,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/core/RealEstate"/>
         <rdfs:comment xml:lang="en">Indicates that a building structure or a piece of land belongs to / is part of a given real estate.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/quantityKindMeasurementUnit -->
@@ -416,7 +416,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/serves -->
@@ -426,7 +426,7 @@
         <rdfs:comment xml:lang="en">For example an airtreatment device (Device) that serves several rooms (BuildingStructureComponent) or a full building (BuildingStructure). Can also be a Device (e.g. airtreatment device) serving another Device (e.g. air diffuser).</rdfs:comment>
         <rdfs:label xml:lang="en">serves</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/servesBuilding -->
@@ -436,7 +436,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/servesBuildingComponent -->
@@ -446,7 +446,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/servesDevice -->
@@ -456,10 +456,10 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -467,7 +467,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#asGML -->
@@ -478,7 +478,7 @@
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#gmlLiteral"/>
         <rdfs:label>asGML</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#asWKT -->
@@ -489,7 +489,7 @@
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
         <rdfs:label>asWKT</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#hasSerialization -->
@@ -499,7 +499,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">has serialization</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasAliasID -->
@@ -509,7 +509,7 @@
         <rdfs:comment xml:lang="en">Used to map an Id in an external system to an instance (e.g. an UUID).</rdfs:comment>
         <rdfs:label xml:lang="en">hasAliasID</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasAuxiliaryData -->
@@ -518,7 +518,7 @@
         <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">hasAuxiliaryData</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasCity -->
@@ -527,7 +527,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
         <rdfs:label xml:lang="en">hasCity</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasComment -->
@@ -537,7 +537,7 @@
         <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character (compared to Description). E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">hasComment</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasCountry -->
@@ -546,7 +546,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
         <rdfs:label xml:lang="en">hasCountry</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasCreatedTime -->
@@ -557,7 +557,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasCreatedTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasDeletedTime -->
@@ -568,7 +568,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasDeletedTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasDuration -->
@@ -581,7 +581,7 @@
 Duration is defined as the length of time that something lasts.</rdfs:comment>
         <rdfs:label xml:lang="en">hasDuration</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasGeoReferenceBearing -->
@@ -595,7 +595,7 @@ Bearings are never greater than 90°.
 Bearings are based on true north.</rdfs:comment>
         <rdfs:label xml:lang="en">hasGeoReferenceBearing</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasGeonames -->
@@ -608,7 +608,7 @@ E.g. for Stockholm (Sweden):
 LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs:comment>
         <rdfs:label xml:lang="en">hasGeonames</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasLittera -->
@@ -618,7 +618,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room.</rdfs:comment>
         <rdfs:label xml:lang="en">hasLittera</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasLocationRelatedData -->
@@ -627,7 +627,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">hasLocationRelatedData</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasObservationTime -->
@@ -638,7 +638,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasObservationTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasPointInTime -->
@@ -649,7 +649,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasPointInTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasPopularName -->
@@ -659,7 +659,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Human-readable-friendly name.</rdfs:comment>
         <rdfs:label xml:lang="en">hasPopularName</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasPostalAddress -->
@@ -669,7 +669,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Address used for postal delivery.</rdfs:comment>
         <rdfs:label xml:lang="en">hasPostalAddress</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasReadTime -->
@@ -680,7 +680,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasReadTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasRegion -->
@@ -690,7 +690,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Use this property to add [proprietary] regions.</rdfs:comment>
         <rdfs:label xml:lang="en">hasRegion</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSource -->
@@ -700,7 +700,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Used for information about a source system or data.</rdfs:comment>
         <rdfs:label xml:lang="en">hasSource</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasStartTime -->
@@ -711,7 +711,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasStartTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasStopTime -->
@@ -722,7 +722,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasStopTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSustainabilityCertification -->
@@ -731,7 +731,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
         <rdfs:label xml:lang="en">hasSustainabilityCertification</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasTime -->
@@ -761,7 +761,7 @@ TZD  = time zone designator (Z or +hh:mm or -hh:mm)
 Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&quot;Z&quot;) for GMT.</rdfs:comment>
         <rdfs:label xml:lang="en">hasTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasUpdatedTime -->
@@ -772,7 +772,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">hasUpdatedTime</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasValue -->
@@ -780,7 +780,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasValue">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasVistingAddress -->
@@ -790,7 +790,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:comment xml:lang="en">If a Location has multiple visiting addresses, then just add as many hasVistingAddress as needed.</rdfs:comment>
         <rdfs:label xml:lang="en">hasVistingAddress</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasZipCode -->
@@ -799,7 +799,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasLocationRelatedData"/>
         <rdfs:label xml:lang="en">hasZipCode</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isLocatedAt -->
@@ -814,7 +814,7 @@ Latitude: 5513
 Longitude: 5514
 Altitude: 5515</comparableIPSOObjectId>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isLocatedAtLocalCoordinates -->
@@ -823,7 +823,7 @@ Altitude: 5515</comparableIPSOObjectId>
         <rdfs:comment xml:lang="en">Literal value in meter (x,y,z) in a local coordinate system that referes to GeoReferenceOrigo.</rdfs:comment>
         <rdfs:label xml:lang="en">isLocatedAtLocalCoordinates</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/unitSign -->
@@ -831,10 +831,10 @@ Altitude: 5515</comparableIPSOObjectId>
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/unitSign">
         <rdfs:label xml:lang="en">unitSign</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -842,7 +842,7 @@ Altitude: 5515</comparableIPSOObjectId>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#Geometry -->
@@ -850,7 +850,7 @@ Altitude: 5515</comparableIPSOObjectId>
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
         <rdfs:label>Geometry</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Agent -->
@@ -859,7 +859,7 @@ Altitude: 5515</comparableIPSOObjectId>
         <rdfs:comment xml:lang="en">The human or machine that consumes or acts upon an object or data.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Building -->
@@ -872,7 +872,7 @@ Altitude: 5515</comparableIPSOObjectId>
         <comparableHaystack xml:lang="en">site</comparableHaystack>
         <comparableIFC xml:lang="en">ifcBuilding</comparableIFC>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/BuildingComponent -->
@@ -883,7 +883,7 @@ Altitude: 5515</comparableIPSOObjectId>
         <comparableCoClass xml:lang="en">UT</comparableCoClass>
         <comparableIFC xml:lang="en">ifcSpace</comparableIFC>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Device -->
@@ -893,7 +893,7 @@ Altitude: 5515</comparableIPSOObjectId>
         <rdfs:label xml:lang="en">Device</rdfs:label>
         <comparableHaystack xml:lang="en">device,equip</comparableHaystack>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Event -->
@@ -902,7 +902,7 @@ Altitude: 5515</comparableIPSOObjectId>
         <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/GeoReferenceOrigo -->
@@ -911,7 +911,7 @@ Altitude: 5515</comparableIPSOObjectId>
         <rdfs:comment xml:lang="en">A fixed point for e.g. a building structure. Commonly refered to as &quot;insertion point&quot; in CAD-programs. Used as origo for LocalCoordinates.</rdfs:comment>
         <rdfs:label xml:lang="en">GeoReferenceOrigo</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Land -->
@@ -921,7 +921,7 @@ Altitude: 5515</comparableIPSOObjectId>
         <rdfs:comment xml:lang="en">The land where one or more buildings are situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Location -->
@@ -945,7 +945,7 @@ LocationUUID#1 isLocatedAt (59.333683,18.068579,0)
 LocationUUID#1 isLocatedIn LocationUUID#2</rdfs:comment>
         <rdfs:label xml:lang="en">Location</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/MeasurementUnit -->
@@ -962,7 +962,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
         <comparableHaystack xml:lang="en">unit</comparableHaystack>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/QuantityKind -->
@@ -972,7 +972,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Quantity kind</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RealEstate -->
@@ -983,7 +983,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableCoClass xml:lang="en">BX</comparableCoClass>
         <comparableIFC xml:lang="en">site</comparableIFC>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RealEstateComponent -->
@@ -992,7 +992,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Types of objects that can make up a piece of real estate, e.g., land and buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate component</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Room -->
@@ -1000,10 +1000,10 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/Room">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
     </owl:Class>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -1011,7 +1011,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActiveEnergyL1 -->
@@ -1026,7 +1026,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActiveEnergyL2 -->
@@ -1040,7 +1040,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActiveEnergyL3 -->
@@ -1054,7 +1054,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableHaystack xml:lang="en">active,energy,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActiveEnergyTotal -->
@@ -1067,7 +1067,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableHaystack xml:lang="en">active,energy</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActivePowerL1 -->
@@ -1080,7 +1080,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActivePowerL2 -->
@@ -1093,7 +1093,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActivePowerL3 -->
@@ -1106,7 +1106,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableHaystack xml:lang="en">active,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActivePowerTotal -->
@@ -1119,7 +1119,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableHaystack xml:lang="en">active,power</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/AgentInteraction -->
@@ -1129,7 +1129,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">When a human interacts with a system. E.g. pushes a button to turn on/off a light, force ventilation.</rdfs:comment>
         <rdfs:label xml:lang="en">AgentInteraction</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/AlarmMajor -->
@@ -1139,7 +1139,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Danger for property</rdfs:comment>
         <rdfs:label xml:lang="en">AlarmMajor</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/AlarmMinor -->
@@ -1149,7 +1149,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Notifications</rdfs:comment>
         <rdfs:label xml:lang="en">AlarmMinor</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/AlarmSevere -->
@@ -1161,7 +1161,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <comparableBIP xml:lang="en">H1B1xx, H1B4xx, H1B5xx, H1B9xx, H1B6xx, H1B3xx, H1B7xx
 H1B2xx, H1B9xx</comparableBIP>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Ampere -->
@@ -1172,7 +1172,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Ampere. Current in a circuit.</rdfs:comment>
         <rdfs:label xml:lang="en">Ampere</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Angle -->
@@ -1183,7 +1183,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">angle</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3332</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Area -->
@@ -1193,7 +1193,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Area</rdfs:label>
         <comparableHaystack xml:lang="en">area</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Binary -->
@@ -1202,7 +1202,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Binary</rdfs:label>
         <comparableIPSOObjectId xml:lang="en">5550,5850</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CO -->
@@ -1212,7 +1212,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">CO</rdfs:label>
         <comparableHaystack xml:lang="en">co</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CO2 -->
@@ -1222,7 +1222,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">CO2</rdfs:label>
         <comparableHaystack xml:lang="en">co2</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Celsius -->
@@ -1233,7 +1233,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Temperature in Celsius degress. Note that correct SI Unit is Kelvin.</rdfs:comment>
         <rdfs:label xml:lang="en">Celsius</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Concentration -->
@@ -1246,7 +1246,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableCoClass xml:lang="en">KOBQ</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">3325</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CosPhi -->
@@ -1257,7 +1257,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">The angle between two electrical phases.</rdfs:comment>
         <rdfs:label xml:lang="en">CosPhi</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CubicMeter -->
@@ -1268,7 +1268,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Volume is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains. Volume is often quantified numerically using the cubic metre (m3).</rdfs:comment>
         <rdfs:label xml:lang="en">CubicMeter</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Current -->
@@ -1280,7 +1280,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">current</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CurrentL1 -->
@@ -1292,7 +1292,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CurrentL2 -->
@@ -1304,7 +1304,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CurrentL3 -->
@@ -1316,7 +1316,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">current,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3317</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Decibel -->
@@ -1327,7 +1327,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Sound level</rdfs:comment>
         <rdfs:label xml:lang="en">Decibel</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Degrees -->
@@ -1337,7 +1337,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Degrees</rdfs:label>
         <comparableCoClass xml:lang="en">KOBGE</comparableCoClass>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Efficiency -->
@@ -1346,7 +1346,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Efficiency</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/EnergyTotal -->
@@ -1359,7 +1359,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableCoClass xml:lang="en">KOBH</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">5805, 3331</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Fahrenheit -->
@@ -1370,7 +1370,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Temperature in Fahrenheit degress.</rdfs:comment>
         <rdfs:label xml:lang="en">Fahrenheit</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Flow -->
@@ -1383,7 +1383,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableCoClass xml:lang="en">KOBF</comparableCoClass>
         <comparableHaystack xml:lang="en">flow</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/GlobalIrradiance -->
@@ -1393,7 +1393,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">GlobalIrradiance</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Solar_irradiance</rdfs:seeAlso>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Hertz -->
@@ -1404,7 +1404,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">One cycle per second.</rdfs:comment>
         <rdfs:label xml:lang="en">Hertz</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Humidity -->
@@ -1418,7 +1418,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">humidity</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3304</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Illuminance -->
@@ -1430,7 +1430,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">irradiance</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3301</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Integer -->
@@ -1438,7 +1438,7 @@ H1B2xx, H1B9xx</comparableBIP>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Integer">
         <rdfs:label xml:lang="en">Integer</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Kelvin -->
@@ -1449,7 +1449,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Temperature in Kelvin degrees</rdfs:comment>
         <rdfs:label xml:lang="en">Kelvin</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Kilogram -->
@@ -1460,7 +1460,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Mass.</rdfs:comment>
         <rdfs:label xml:lang="en">Kilogram</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Lenght -->
@@ -1469,7 +1469,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Lenght</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Level -->
@@ -1483,7 +1483,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">level</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3319, 3330</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/LiterPerSecond -->
@@ -1494,7 +1494,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Flow</rdfs:comment>
         <rdfs:label xml:lang="en">LiterPerSecond</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Lumen -->
@@ -1506,7 +1506,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Lumen</rdfs:label>
         <comparableHaystack xml:lang="en">lightLevel</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Lux -->
@@ -1518,7 +1518,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Lux</rdfs:label>
         <comparableHaystack xml:lang="en">lightLevel</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Meter -->
@@ -1529,7 +1529,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Lenght.</rdfs:comment>
         <rdfs:label xml:lang="en">Meter</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/MeterPerSecond -->
@@ -1538,7 +1538,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdf:type rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:label xml:lang="en">MeterPerSecond</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/MillimeterPerHour -->
@@ -1548,7 +1548,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">For measuring Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">MillimeterPerHour</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Number -->
@@ -1557,7 +1557,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Number</rdfs:label>
         <comparableIPSOObjectId xml:lang="en">5851,5650</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PartsPerMillion -->
@@ -1568,7 +1568,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Measurement for concentration</rdfs:comment>
         <rdfs:label xml:lang="en">PartsPerMillion</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Pascal -->
@@ -1581,7 +1581,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:seeAlso xml:lang="en">In Haystack: barometric is described as &quot;Defines the mean atmospheric pressure at sea level measured in millibar or in Hg.&quot;</rdfs:seeAlso>
         <comparableHaystack xml:lang="en">barometric</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Percentage -->
@@ -1590,7 +1590,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Percentage</rdfs:label>
         <comparableIPSOObjectId xml:lang="en">5851,5650</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFactor -->
@@ -1602,7 +1602,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">PowerFactor</rdfs:label>
         <comparableHaystack xml:lang="en">pf</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFactorL1 -->
@@ -1613,7 +1613,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">pf,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5820</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFactorL2 -->
@@ -1624,7 +1624,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">pf,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5820</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFactorL3 -->
@@ -1635,7 +1635,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">pf,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5820</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFrequency -->
@@ -1645,7 +1645,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">PowerFrequency</rdfs:label>
         <comparableHaystack xml:lang="en">freq</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Precipation -->
@@ -1655,7 +1655,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Measured in MillimeterPerHour</rdfs:comment>
         <rdfs:label xml:lang="en">Precipation</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Presence -->
@@ -1669,7 +1669,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">occupied</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3302</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Pressure -->
@@ -1684,7 +1684,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">pressure</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3323</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Radiation -->
@@ -1696,7 +1696,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableBelok xml:lang="en">10--------</comparableBelok>
         <comparableCoClass xml:lang="en">KOBR</comparableCoClass>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ReactivePowerL1 -->
@@ -1710,7 +1710,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ReactivePowerL2 -->
@@ -1723,7 +1723,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ReactivePowerL3 -->
@@ -1736,7 +1736,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">reactive,power,phase</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ReactivePowerTotal -->
@@ -1749,7 +1749,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">reactive,power</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">5800, 3328</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RelativeHumidity -->
@@ -1760,7 +1760,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Relative Humidity. The amount of water vapour present in air expressed as a percentage of the amount needed for saturation at the same temperature.</rdfs:comment>
         <rdfs:label xml:lang="en">RelativeHumidity</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RevolutionsPerMinute -->
@@ -1770,7 +1770,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <unitSign xml:lang="en">rpm</unitSign>
         <rdfs:label xml:lang="en">RevoultionsPerMinute</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RotationSpeed -->
@@ -1782,7 +1782,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableCoClass xml:lang="en">KOBSF</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">3346</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Second -->
@@ -1793,7 +1793,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">The second is the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom.</rdfs:comment>
         <rdfs:label xml:lang="en">Second</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Sound -->
@@ -1804,7 +1804,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableBelok xml:lang="en">13--------</comparableBelok>
         <comparableIPSOObjectId xml:lang="en">3324</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Speed -->
@@ -1815,7 +1815,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableBelok xml:lang="en">07--------</comparableBelok>
         <comparableCoClass xml:lang="en">KOBSF</comparableCoClass>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/SquareMeter -->
@@ -1826,7 +1826,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Area unit. It is the area of a square whose sides measure exactly one metre.</rdfs:comment>
         <rdfs:label xml:lang="en">SquareMeter</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/SunshineTimePerHour -->
@@ -1835,7 +1835,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">SunshineTimePerHour</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/TVOC -->
@@ -1844,7 +1844,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">TVOC</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Temperature -->
@@ -1860,7 +1860,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">temp</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3303</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Velocity -->
@@ -1873,7 +1873,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableCoClass xml:lang="en">KOBSD</comparableCoClass>
         <comparableIPSOObjectId xml:lang="en">5517</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Volt -->
@@ -1885,7 +1885,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Volt</rdfs:label>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Voltage -->
@@ -1897,7 +1897,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/VoltageL1 -->
@@ -1909,7 +1909,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/VoltageL2 -->
@@ -1921,7 +1921,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/VoltageL3 -->
@@ -1933,7 +1933,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <comparableHaystack xml:lang="en">volt</comparableHaystack>
         <comparableIPSOObjectId xml:lang="en">3316</comparableIPSOObjectId>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Volume -->
@@ -1943,7 +1943,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
         <comparableHaystack xml:lang="en">volume</comparableHaystack>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Watt -->
@@ -1954,7 +1954,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">This unit is typically used to express the momentaneous output power of engines and the power of electric motors, tools, machines, and heaters.</rdfs:comment>
         <rdfs:label xml:lang="en">Watt</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/WattHour -->
@@ -1965,7 +1965,7 @@ H1B2xx, H1B9xx</comparableBIP>
         <rdfs:comment xml:lang="en">Enery. Watthour.</rdfs:comment>
         <rdfs:label xml:lang="en">WattHour</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/WattPerSquareMeter -->
@@ -1980,3 +1980,4 @@ H1B2xx, H1B9xx</comparableBIP>
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
