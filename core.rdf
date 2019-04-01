@@ -20,7 +20,9 @@
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
-        <dc:description xml:lang="en">The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.</dc:description>
+        <dc:description xml:lang="en">The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.
+
+Note that this module reuses certain classes, properties, and named individuals from other vocabularies, e.g., GeoSPARQL; the copyright conditions on those reused entities are stated in their respective rdfs:comments annotations.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Core Module</dc:title>
         <dcterms:modified>2019-04-01</dcterms:modified>
@@ -155,6 +157,9 @@
     <!-- http://www.opengis.net/ont/geosparql#gmlLiteral -->
 
     <rdfs:Datatype rdf:about="http://www.opengis.net/ont/geosparql#gmlLiteral">
+        <rdfs:comment xml:lang="en">A GML serialization of a geometry object.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
         <rdfs:label xml:lang="en">GML Literal</rdfs:label>
     </rdfs:Datatype>
     
@@ -163,6 +168,9 @@
     <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
 
     <rdfs:Datatype rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral">
+        <rdfs:comment xml:lang="en">A Well-known Text serialization of a geometry object.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
         <rdfs:label xml:lang="en">Well-known Text Literal</rdfs:label>
     </rdfs:Datatype>
     
@@ -184,6 +192,10 @@
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#defaultGeometry">
         <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:comment xml:lang="en">The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">defaultGeometry</rdfs:label>
     </owl:ObjectProperty>
     
@@ -193,7 +205,24 @@
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:comment xml:lang="en">A spatial representation for a given feature.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/containsMountedDevice -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/containsMountedDevice">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isLocatedInBuildingComponent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to Devices mounted within them.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains mounted device</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -204,6 +233,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+        <rdfs:comment xml:lang="en">The measurement unit used by some Device.</rdfs:comment>
+        <rdfs:label xml:lang="en">device measurement unit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -214,6 +245,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.</rdfs:comment>
+        <rdfs:label xml:lang="en">device quantity kind</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -224,6 +257,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+        <rdfs:comment xml:lang="en">A unit used to measure some aspect of some Event.</rdfs:comment>
+        <rdfs:label xml:lang="en">event measurement unit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -234,15 +269,19 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:comment xml:lang="en">The Quantity Kind that an event measures or affects.</rdfs:comment>
+        <rdfs:label xml:lang="en">event quantity kind</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/rec/core/generatesEvent -->
+    <!-- https://w3id.org/rec/core/generatedEvent -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/generatesEvent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/generatedEvent">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Event"/>
+        <rdfs:comment xml:lang="en">Links a Device of some sort to an Event generated by or detected through that Device.</rdfs:comment>
+        <rdfs:label xml:lang="en">generated event</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -254,6 +293,8 @@
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isPartOfBuilding"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking Buildings to the Building Components that they are made up of.</rdfs:comment>
+        <rdfs:label xml:lang="en">has building component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -265,6 +306,8 @@
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasBuildingSuperComponent"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to their constituent sub-components.</rdfs:comment>
+        <rdfs:label xml:lang="en">has building sub-component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -283,9 +326,11 @@
     <!-- https://w3id.org/rec/core/hasGeoReferenceOrigo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasGeoReferenceOrigo">
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/GeoReferenceOrigo"/>
-        <rdfs:label xml:lang="en">hasGeoReferenceOrigo</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates a building with a point in some coordinate reference system which can be used to resolve local (building-specific) coordinates against this outer coordinate reference system.</rdfs:comment>
+        <rdfs:label xml:lang="en">has geo-reference origo</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -294,18 +339,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit">
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:label xml:lang="en">hasMeasurementUnit</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/core/hasMountedDevice -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMountedDevice">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isLocatedInBuildingComponent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
+        <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -325,7 +360,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind">
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:label xml:lang="en">hasQuantityKind</rdfs:label>
+        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">has quantity kind</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -337,6 +373,8 @@
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isPartOfRealEstate"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/RealEstate"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking a piece of RealEstate to its constituent components (i.e., Buildings and Land).</rdfs:comment>
+        <rdfs:label xml:lang="en">has real estate component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -348,6 +386,8 @@
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasSuperDevice"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking a Device to any sub-Devices that it contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sub-device</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -415,6 +455,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+        <rdfs:comment xml:lang="en">A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">quantity kind measurement unit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -423,7 +465,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/serves">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">For example an airtreatment device (Device) that serves several rooms (BuildingStructureComponent) or a full building (BuildingStructure). Can also be a Device (e.g. airtreatment device) serving another Device (e.g. air diffuser).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The coverage or impact area of a given device or sensor. For example: an air-treatment Device might serve several Rooms or a full Building. Note that devices can also service one another, e.g., an air-treatment Device might serve an air diffuser Device.</rdfs:comment>
         <rdfs:label xml:lang="en">serves</rdfs:label>
     </owl:ObjectProperty>
     
@@ -435,6 +477,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves an entire Building.</rdfs:comment>
+        <rdfs:label xml:lang="en">serves building</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -445,6 +489,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves a particular Building Component (e.g., a Room).</rdfs:comment>
+        <rdfs:label xml:lang="en">serves building component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -455,6 +501,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves another Device.</rdfs:comment>
+        <rdfs:label xml:lang="en">serves device</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -476,6 +524,10 @@
         <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasSerialization"/>
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#gmlLiteral"/>
+        <rdfs:comment xml:lang="en">The GML serialization of a geometry.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label>asGML</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -487,6 +539,10 @@
         <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasSerialization"/>
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+        <rdfs:comment xml:lang="en">The WKT serialization of a geometry.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label>asWKT</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -497,6 +553,10 @@
     <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#hasSerialization">
         <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Connects a geometry object with its text-based serialization.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">has serialization</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -507,7 +567,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasAliasID">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
         <rdfs:comment xml:lang="en">Used to map an Id in an external system to an instance (e.g. an UUID).</rdfs:comment>
-        <rdfs:label xml:lang="en">hasAliasID</rdfs:label>
+        <rdfs:label xml:lang="en">has alias ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -515,8 +575,8 @@
     <!-- https://w3id.org/rec/core/hasAuxiliaryData -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasAuxiliaryData">
-        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasAuxiliaryData</rdfs:label>
+        <rdfs:comment xml:lang="en">This parent property groups a number of sub-properties that provide additional richness to building or device model and that are often used in practice in various systems, but which have not yet (REC 3.0) been fully modelled their respecive REC modules.</rdfs:comment>
+        <rdfs:label xml:lang="en">has auxiliary data</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -534,8 +594,8 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasComment">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
-        <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character (compared to Description). E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
-        <rdfs:label xml:lang="en">hasComment</rdfs:label>
+        <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character. E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">has comment</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -555,7 +615,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasCreatedTime</rdfs:label>
+        <rdfs:label xml:lang="en">has created time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -566,7 +626,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasDeletedTime</rdfs:label>
+        <rdfs:label xml:lang="en">has deleted time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -577,9 +637,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment xml:lang="en">Measured in ms (milli seconds).
-Duration is defined as the length of time that something lasts.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasDuration</rdfs:label>
+        <rdfs:comment xml:lang="en">Measured in ms (milliseconds). Duration is defined as the length of time that something lasts.</rdfs:comment>
+        <rdfs:label xml:lang="en">has duration</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -587,13 +646,14 @@ Duration is defined as the length of time that something lasts.</rdfs:comment>
     <!-- https://w3id.org/rec/core/hasGeoReferenceBearing -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasGeoReferenceBearing">
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasSerialization"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/GeoReferenceOrigo"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
 
 Bearings are never greater than 90°.
 Bearings are based on true north.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasGeoReferenceBearing</rdfs:label>
+        <rdfs:label xml:lang="en">has geo reference bearing</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -616,7 +676,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasLittera">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
         <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasLittera</rdfs:label>
+        <rdfs:label xml:lang="en">has littera</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -636,7 +696,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasObservationTime</rdfs:label>
+        <rdfs:label xml:lang="en">has observation time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -647,7 +707,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasPointInTime</rdfs:label>
+        <rdfs:label xml:lang="en">has point in time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -657,7 +717,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasPopularName">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
         <rdfs:comment xml:lang="en">Human-readable-friendly name.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasPopularName</rdfs:label>
+        <rdfs:label xml:lang="en">has popular name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -678,7 +738,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasReadTime</rdfs:label>
+        <rdfs:label xml:lang="en">has read time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -698,7 +758,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasSource">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
         <rdfs:comment xml:lang="en">Used for information about a source system or data.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasSource</rdfs:label>
+        <rdfs:label xml:lang="en">has source</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -709,7 +769,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasStartTime</rdfs:label>
+        <rdfs:label xml:lang="en">has start time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -720,7 +780,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasStopTime</rdfs:label>
+        <rdfs:label xml:lang="en">has stop time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -729,7 +789,8 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasSustainabilityCertification">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
-        <rdfs:label xml:lang="en">hasSustainabilityCertification</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates any sustainability certifications that a Building or piece of Real Estate has achieved. This is a stub for now and will likely be more expressively modelled as classes and properties in future REC releases.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sustainability certification</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -759,7 +820,7 @@ Where:
 
 TZD  = time zone designator (Z or +hh:mm or -hh:mm)
 Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&quot;Z&quot;) for GMT.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasTime</rdfs:label>
+        <rdfs:label xml:lang="en">has time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -770,7 +831,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">hasUpdatedTime</rdfs:label>
+        <rdfs:label xml:lang="en">has updated time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -779,6 +840,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasValue">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
+        <rdfs:comment xml:lang="en">An event may be associated with a value. This is a rather generic property which can be reused or extended by sub-classes to indicate, e.g., measurement values, actuation values, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -802,26 +865,12 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
-    <!-- https://w3id.org/rec/core/isLocatedAt -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/isLocatedAt">
-        <rdfs:comment xml:lang="en">An object that has an exact point (expressed in WGS84 in decimal degrees as (latitude,longitude,altitude).</rdfs:comment>
-        <rdfs:label xml:lang="en">isLocatedAt</rdfs:label>
-        <comparableHaystack xml:lang="en">geoCoord</comparableHaystack>
-        <comparableIPSOObjectId xml:lang="en">Altitude: 3321
-Location: 3336
-Latitude: 5513
-Longitude: 5514
-Altitude: 5515</comparableIPSOObjectId>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/isLocatedAtLocalCoordinates -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/isLocatedAtLocalCoordinates">
-        <rdfs:comment xml:lang="en">Literal value in meter (x,y,z) in a local coordinate system that referes to GeoReferenceOrigo.</rdfs:comment>
-        <rdfs:label xml:lang="en">isLocatedAtLocalCoordinates</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasSerialization"/>
+        <rdfs:comment xml:lang="en">Expressed as a string adhering to the notation &quot;(x,y,z)&quot;, where x, y, and z ar whole or decimal numbers indicating the position in the local building coordinate system, measured in meters. This relates to the outside world coordinate refence system via the values expressed by GeoReferenceOrigo.</rdfs:comment>
+        <rdfs:label xml:lang="en">is located at local coordinates</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -829,7 +878,9 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- https://w3id.org/rec/core/unitSign -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/unitSign">
-        <rdfs:label xml:lang="en">unitSign</rdfs:label>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+        <rdfs:comment xml:lang="en">The syntactical representation of a unit, e.g., m^3 for cubic meter, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">unit sign</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -848,7 +899,11 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- http://www.opengis.net/ont/geosparql#Geometry -->
 
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
-        <rdfs:label>Geometry</rdfs:label>
+        <rdfs:comment xml:lang="en">The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.
+
+GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+        <rdfs:label xml:lang="en">Geometry</rdfs:label>
     </owl:Class>
     
 
@@ -866,7 +921,7 @@ Altitude: 5515</comparableIPSOObjectId>
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
-        <rdfs:comment xml:lang="en">Confined building structure.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A confined building structure.</rdfs:comment>
         <rdfs:label xml:lang="en">Building</rdfs:label>
         <comparableCoClass xml:lang="en">BV</comparableCoClass>
         <comparableHaystack xml:lang="en">site</comparableHaystack>
@@ -889,7 +944,7 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- https://w3id.org/rec/core/Device -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Device">
-        <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device has one or more Sensor(s) and/or Actuator(s).</rdfs:comment>
+        <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device can contain subdevices or be part of superdevices. It is subclassed into more specific device types, e.g., Sensor,  Actuator, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Device</rdfs:label>
         <comparableHaystack xml:lang="en">device,equip</comparableHaystack>
     </owl:Class>
@@ -899,7 +954,7 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- https://w3id.org/rec/core/Event -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
-        <rdfs:comment xml:lang="en">Cognitive clustering for humans.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
     
@@ -908,8 +963,9 @@ Altitude: 5515</comparableIPSOObjectId>
     <!-- https://w3id.org/rec/core/GeoReferenceOrigo -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/GeoReferenceOrigo">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:comment xml:lang="en">A fixed point for e.g. a building structure. Commonly refered to as &quot;insertion point&quot; in CAD-programs. Used as origo for LocalCoordinates.</rdfs:comment>
-        <rdfs:label xml:lang="en">GeoReferenceOrigo</rdfs:label>
+        <rdfs:label xml:lang="en">Geo-reference origo</rdfs:label>
     </owl:Class>
     
 
@@ -918,7 +974,7 @@ Altitude: 5515</comparableIPSOObjectId>
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Land">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
-        <rdfs:comment xml:lang="en">The land where one or more buildings are situated.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A piece of land upon which one or more buildings may be situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
     </owl:Class>
     
@@ -978,7 +1034,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/RealEstate -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstate">
-        <rdfs:comment xml:lang="en">Legal entity. Land + buildings</rdfs:comment>
+        <rdfs:comment xml:lang="en">The legal/administrative representation of some lands and/or buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate</rdfs:label>
         <comparableCoClass xml:lang="en">BX</comparableCoClass>
         <comparableIFC xml:lang="en">site</comparableIFC>
@@ -999,6 +1055,8 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Room">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:comment xml:lang="en">Base class for all more specific room types.</rdfs:comment>
+        <rdfs:label xml:lang="en">Room</rdfs:label>
     </owl:Class>
     
 
