@@ -63,6 +63,39 @@
     
 
 
+    <!-- https://w3id.org/rec/device/executesActuation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/executesActuation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/associatedWithEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/Actuator"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuation"/>
+        <rdfs:label xml:lang="en">executes actuation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/device/generatedException -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/generatedException">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/associatedWithEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/Exception"/>
+        <rdfs:label xml:lang="en">generated exception</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/device/generatedObservation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/generatedObservation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/associatedWithEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/Observation"/>
+        <rdfs:label xml:lang="en">generated observation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/device/hasActuationInterface -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasActuationInterface">
@@ -158,36 +191,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasPlacementContext">
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
         <rdfs:label xml:lang="en">has placement context</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/device/makesActuation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/makesActuation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/generatedEvent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/device/Actuator"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/device/makesException -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/makesException">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/generatedEvent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/device/Sensor"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/device/Exception"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/device/makesObservation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/makesObservation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/generatedEvent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/device/Sensor"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/device/Observation"/>
     </owl:ObjectProperty>
     
 
