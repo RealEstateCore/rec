@@ -109,7 +109,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/containsMountedDevice">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isLocatedInBuildingComponent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedInBuildingComponent"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to Devices mounted within them.</rdfs:comment>
@@ -190,26 +190,15 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/hasBuildingSubComponent -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasBuildingSubComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasBuildingSuperComponent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to their constituent sub-components.</rdfs:comment>
-        <rdfs:label xml:lang="en">has building sub-component</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/hasBuildingSuperComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasBuildingSuperComponent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasSubBuildingComponent"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">has super-BuildingComponent</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -270,6 +259,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/hasSubBuildingComponent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSubBuildingComponent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to their constituent sub-components.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sub-BuildingComponent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/hasSubDevice -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSubDevice">
@@ -295,9 +296,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/isLocatedInBuildingComponent -->
+    <!-- https://w3id.org/rec/core/isMountedInBuildingComponent -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isLocatedInBuildingComponent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMountedInBuildingComponent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
