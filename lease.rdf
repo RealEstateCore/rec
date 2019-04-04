@@ -49,6 +49,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lease/isPartOfPremises"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
+        <rdfs:label xml:lang="en">building is part of premises</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -58,6 +59,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/isPartOfPremises">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
+        <rdfs:comment xml:lang="en">Property that models Premises (leasable parts of real estate) parthood, i.e., that certain buildings and/or rooms are part of a defined Premise (which can in turn by governed by a Lease through a LeaseContract)</rdfs:comment>
+        <rdfs:label xml:lang="en">is part of premises</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -100,6 +103,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/premisesIncludes">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking Premises to their constituent Buildings or Rooms.</rdfs:comment>
+        <rdfs:label xml:lang="en">premises includes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -110,6 +115,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lease/premisesIncludes"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
+        <rdfs:label xml:lang="en">premises includes building</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -120,6 +126,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lease/premisesIncludes"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdfs:label xml:lang="en">premises includes room</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -141,6 +148,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lease/isPartOfPremises"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Room"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
+        <rdfs:label xml:lang="en">room is part of premises</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -284,6 +292,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/Premises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Leasable"/>
+        <rdfs:comment xml:lang="en">Premises are a set of buildings or rooms that are leased out to tenants, typically for a defined purpose.</rdfs:comment>
         <rdfs:label xml:lang="en">Premises</rdfs:label>
     </owl:Class>
     
