@@ -26,9 +26,9 @@
         <owl:imports rdf:resource="https://w3id.org/rec/lease/3.0/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.0/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
-        <dc:contributor xml:lang="en">Håkan Eriksson</dc:contributor>
-        <dc:contributor xml:lang="en">Joakim Eriksson</dc:contributor>
-        <dc:contributor xml:lang="en">Per Karlberg</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Håkan Eriksson</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joakim Eriksson</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per Karlberg</dc:contributor>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
         <dc:description xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</dc:description>
@@ -37,13 +37,18 @@
         <dcterms:modified>2019-04-01</dcterms:modified>
         <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.0/</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">Version 3.0 is a major refactoring of REC:
+        <rdfs:comment xml:lang="en">Version 3.0 is a major and compatibility-breaking refactoring of REC:
 
-* Properties have been defined as being single-domain and single-range
-* Meronomy properties have been refactored to allow transitive traversal of the parthood hierarchy from RealEstate all the way down to individual devices using the isPartOf and hasPart superproperties
-** This has required refactoring of the relations Building &lt;-&gt; BuildingComponent and Device &lt;-&gt; DeviceComponent (the latter is removed)
-* Class naming has been simplified
-* Module boundaries have been clarified and three modules (lease, metadata, agents) have been added</rdfs:comment>
+* Properties have been defined as being (at-most) single-domain and single-range, supporting usability and visualization.
+* Meronomy properties have been refactored to allow transitive traversal of the parthood hierarchy from RealEstate all the way down to individual devices using the isPartOf and hasPart superproperties.
+** This has required refactoring of the relations Building &lt;-&gt; BuildingComponent and Device &lt;-&gt; DeviceComponent (the latter is removed).
+* Class naming has been simplified (BuildingStructure -&gt; Building, BuildingStructureComponent -&gt; BuildingComponent, etc).
+* A (minimal) representation of GeoSPARQL has been integrated, to allow for standardized geospatial representations and querying. REC home-made geospatial/location vocabulary is phased out as a consequence.
+* Alignments against other ontologies or standards (BIP, Belok, IPSO, Haystack, fi2xml, IFC) have been broken out into separate alignment files 
+* Module boundaries have been clarified and three new modules (Lease, Metadata, Agents) have been added, in preparation of anticipated modelling work.
+* All entities have been assigned rdfs:labels and the large majority rdfs:comments.
+* The modules have been documented with metadata using DC, CC, VANN, cpannotationschema, etc.
+* All IRI:s are now HTTPS</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</owl:versionInfo>
     </owl:Ontology>
 </rdf:RDF>
