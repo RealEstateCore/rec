@@ -11,7 +11,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/device/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/device/3.0/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.0/"/>
@@ -24,6 +25,20 @@
         <dcterms:modified>2019-04-01</dcterms:modified>
         <vann:preferredNamespacePrefix>device</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/device/3.0/</vann:preferredNamespaceUri>
+        <cpannotationschema:coversRequirements xml:lang="en">At what time was an actuation received by the building system, and at what time was it executed?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">Does temperature sensor TMP882 measure inside or outside temperature?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">Does water temperature sensor TMP334 measure incoming water temperature, or return water temperature?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">How is device AHU731 connected to the building infrastructure (comms bus, protocol, protocol version, connection parameters, etc)?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">What addressable components (sensors, actuators, etc) make up device AHU731?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">What are all the values reported over the past 24 hours from temperature sensors in rooms 2, 4, and 7?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">What does sensor PID22 measure? Using which units?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">What is observation/datapoint OBS-846294-PID22-88 a measurement of?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">What is the measurement unit of observation/datapoint OBS-846294-PID22-88?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">What is the most recent value reading from sensor TMP223?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">What kind of device is AHU731?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">Which actuator/device does a certain actuation/command target?</cpannotationschema:coversRequirements>
+        <cpannotationschema:coversRequirements xml:lang="en">Which sensor did observation/datapoint OBS-846294-PID22-88 come from?</cpannotationschema:coversRequirements>
+        <rdfs:comment xml:lang="en">The actuation model is deployed and works in practice with the stakeholders, but we need to update the model to reflect current practice in their systems; e.g., extend the semantics a little and formalize standard state messages, response codes, etc.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</owl:versionInfo>
     </owl:Ontology>
