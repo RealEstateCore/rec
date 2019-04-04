@@ -13,7 +13,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/core/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.0/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.0/"/>
@@ -190,19 +191,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/hasBuildingSuperComponent -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasBuildingSuperComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasSubBuildingComponent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">has super-BuildingComponent</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/hasGeoReferenceOrigo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasGeoReferenceOrigo">
@@ -263,6 +251,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSubBuildingComponent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasSuperBuildingComponent"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to their constituent sub-components.</rdfs:comment>
@@ -284,6 +273,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/hasSuperBuildingComponent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSuperBuildingComponent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:comment xml:lang="en">Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">has super-BuildingComponent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/hasSuperDevice -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSuperDevice">
@@ -291,7 +292,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">A property that allows for nesting of devices within devices.</rdfs:comment>
-        <rdfs:label xml:lang="en">isPartOfDevice</rdfs:label>
+        <rdfs:label xml:lang="en">has super-Device</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -302,9 +303,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">An object that can describe its place by using [object-UUID] locatedIn
-[myOtherObject-UUID], where [myOtherObject-UUID] could be a Room, BuildingStructure, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">isLocatedIn</rdfs:label>
+        <rdfs:comment xml:lang="en">Property describing in which Building Component (most typically a Room) that a Device is mounted.</rdfs:comment>
+        <rdfs:label xml:lang="en">is mounted in Building Component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -325,7 +325,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
-        <rdfs:comment xml:lang="en">Indicates which building a given building component is part of. Note that the parthood hierarchy is transitive, so every building component does not necessarily need to be invidiually connected to a building or a real estate; this can be inferred through the more generic isPartOf property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates which Building a certain Building Component is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is part of building</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -336,7 +337,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/RealEstate"/>
-        <rdfs:comment xml:lang="en">Indicates that a building structure or a piece of land belongs to / is part of a given real estate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that a Building or a piece of Land belongs to / is part of a given Real Estate.</rdfs:comment>
     </owl:ObjectProperty>
     
 
