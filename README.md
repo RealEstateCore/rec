@@ -1,4 +1,4 @@
-![alt text](http://git.realestatecore.io/img/RealEstateCore_LOGO_cmyk_black_small.png)
+![RealEstateCore](https://avatars0.githubusercontent.com/u/37044986?s=200&v=4)
 
 # RealEstateCore - for and by property owners
 
@@ -38,3 +38,4 @@ We encourage you to contribute to make RealEstateCore better. Please point out b
 
 * Comment or create a new Issue for bug reporting
 * For improvements, please fork the rec repository, make your changes and send a pull request
+* [Joint our chat](https://gitter.im/RealEstateCore/community)
