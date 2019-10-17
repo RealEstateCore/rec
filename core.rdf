@@ -478,8 +478,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasAliasID">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
-        <rdfs:comment xml:lang="en">Used to map an Id in an external system to an instance (e.g. an UUID).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Was originally intented to map an Id in an external system to an instance (e.g. an UUID).
+
+After discussion in REC technical committee, an approach based on owl:sameAs and/or rdfs:seeAlso (depending on the needed semantics) is recommended instead. This property will therefore be removed in future versions.</rdfs:comment>
         <rdfs:label xml:lang="en">has alias ID</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
