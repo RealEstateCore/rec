@@ -48,5 +48,5 @@ The lookup and retrieval component would then be responsible for, at query or an
 time, to match the portion of the URN that indicates the remote system to some internal
 lookup feature; to send a request out to that system using a system-appropriate method
 (SQL queries, web service calls, message-passing, etc.) for the data bearing that remote
-identifier, to retrieve said data, and to transform it as needed to suit the query or
+identifier; to retrieve said data; and to transform it as needed to suit the query or
 analysis task in question.
