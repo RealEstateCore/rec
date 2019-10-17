@@ -40,6 +40,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/commandInterface">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/associatedWithDevice"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/actuation/ActuationCommand"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
     </owl:ObjectProperty>
@@ -116,7 +117,6 @@
     <!-- https://w3id.org/rec/actuation/payloadKeyValueDefinition -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/payloadKeyValueDefinition">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
         <rdfs:label xml:lang="en">payload Key-Value definition</rdfs:label>
@@ -178,6 +178,7 @@
     <!-- https://w3id.org/rec/actuation/valueRestriction -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/valueRestriction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/actuation/ValueRestriction"/>
     </owl:ObjectProperty>
@@ -338,6 +339,18 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/actuation/ActuationCommand">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/actuation/ActuationEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/commandInterface"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/createdFromRequest"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Message from a REC platform to a specific actuator or system, requesting that an actuation be carried out.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation command</rdfs:label>
     </owl:Class>
@@ -348,6 +361,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/actuation/ActuationCommandResponse">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/actuation/ActuationEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/responseToCommand"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Return message from a specific actuator or system to a a REC platform, indicating whether an actuation has been accepted by that actuator/system. Note that a positive response does not imply that the real-world actuation has been fully carried out -- certain devices have a very long response time, dependent on physical processes, bus saturations, etc. To record the real-world state of such devices, use a sensor device instead.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation command response</rdfs:label>
     </owl:Class>
@@ -368,6 +387,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/actuation/ActuationInterface">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/Software"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/payloadKeyValueDefinition"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An interface describing the expected payload structure for one or more actuators.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation interface</rdfs:label>
     </owl:Class>
@@ -378,6 +403,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/actuation/ActuationRequest">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/actuation/ActuationEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/requestInterface"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An incoming request from a client or other component, for an actuation to be carried out on one or many actuators or systems.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation request</rdfs:label>
     </owl:Class>
@@ -388,6 +419,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/actuation/ActuationResponse">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/actuation/ActuationEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/responseToRequest"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Message returned to a client or component, reporting that actuation commands have been passed to one or more actuators or systems, and reporting the response status of those actuators or systems.
 
 Note that positive responses from actuators/systems do not imply that the real-world actuations have been fully carried out -- certain devices have a very long response time, dependent on physical processes, bus saturations, etc. To record the real-world state of such devices, use a sensor device instead.</rdfs:comment>
@@ -400,6 +437,30 @@ Note that positive responses from actuators/systems do not imply that the real-w
 
     <owl:Class rdf:about="https://w3id.org/rec/actuation/KeyValueDefinition">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/valueRestriction"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/keyMandatory"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/keyString"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/valueDatatype"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Defines allowable or required structures for key-value lists. Used in interface definitions.</rdfs:comment>
         <rdfs:label xml:lang="en">Key-Value definition</rdfs:label>
     </owl:Class>

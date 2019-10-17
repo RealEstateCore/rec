@@ -519,6 +519,19 @@
     
 
 
+    <!-- https://w3id.org/rec/core/Device -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/devicePlacementContext"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/rec/device/Actuation -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Actuation">
@@ -544,6 +557,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Actuator">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceQuantityKind"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An actuator is a component that is responsible for moving and controlling a mechanism or system.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuator</rdfs:label>
     </owl:Class>
@@ -582,6 +601,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DeviceEvents">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/eventPlacementContext"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Events that are relevant in a Device context; initially observations, actuations, and exceptions.</rdfs:comment>
         <rdfs:label xml:lang="en">Device events</rdfs:label>
     </owl:Class>
@@ -718,6 +743,18 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Observation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/DeviceEvents"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventMeasurementUnit"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventQuantityKind"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Observation of a phenomena. Made by a Sensor. Used with hasValue.</rdfs:comment>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
     </owl:Class>
@@ -747,6 +784,18 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Sensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceMeasurementUnit"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceQuantityKind"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
     </owl:Class>
