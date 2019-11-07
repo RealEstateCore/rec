@@ -249,6 +249,38 @@
     
 
 
+    <!-- https://w3id.org/rec/device/observedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/observedBy">
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/Sensor"/>
+        <rdfs:comment xml:lang="en">Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/device/observes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/observes">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/Sensor"/>
+        <rdfs:comment xml:lang="en">Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/device/observesActuator -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/observesActuator">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/device/observes"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuator"/>
+        <rdfs:comment xml:lang="en">The actuator that a sensor is configured or designed to observe.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observes actuator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -559,6 +591,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/observedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/device/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceQuantityKind"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
@@ -784,6 +822,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Sensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/observesActuator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/device/Actuator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceMeasurementUnit"/>
