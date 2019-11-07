@@ -229,6 +229,14 @@
     <!-- https://w3id.org/rec/actuation/actuationPayload -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/actuation/actuationPayload">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/actuation/ActuationCommand"/>
+                    <rdf:Description rdf:about="https://w3id.org/rec/actuation/ActuationRequest"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The payload to be passed on to some actuation interface and finally actuator.</rdfs:comment>
         <rdfs:label xml:lang="en">actuation payload</rdfs:label>
