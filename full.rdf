@@ -37,10 +37,17 @@
         <dc:description xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Full</dc:title>
-        <dcterms:modified>2019-04-04</dcterms:modified>
+        <dcterms:modified>2019-11-07</dcterms:modified>
         <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.1/</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">Version 3.0 is a major and compatibility-breaking refactoring of REC:
+        <rdfs:comment xml:lang="en">Version 3.1 is a feature release of REC that contains:
+
+* The new Actuation module, with north- and southbound message semantics for enacting actuations on systems.
+* Deprecation of the Room (Building module) and Premises (Lease module) type hierarchies, in favour of the RoomType and PremisesType classes, respectively. Named individuals of these classes are punned to the same IRIs as the now-deprecated classes, the latter of which will be removed in an upcoming 4.0 release.
+* Documentation on REC recommendations for alignments with owl:sameAs and owl:equivalentClass (outside of ontology, see GitHub repo).
+* Initial OWL2OAS annotations (work in progress, see https://github.com/hammar/owl2oas) governing how an OAS API will be generated from the REC OWL files. Will be fully functional by release 3.2.
+
+Version 3.0 is a major and compatibility-breaking refactoring of REC:
 
 * Properties have been defined as being (at-most) single-domain and single-range, supporting usability and visualization.
 * Meronomy properties have been refactored to allow transitive traversal of the parthood hierarchy from RealEstate all the way down to individual devices using the isPartOf and hasPart superproperties.
@@ -52,7 +59,7 @@
 * All entities have been assigned rdfs:labels and the large majority rdfs:comments.
 * The modules have been documented with metadata using DC, CC, VANN, cpannotationschema, etc.
 * All IRI:s are now HTTPS</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">3.1</owl:versionInfo>
     </owl:Ontology>
 </rdf:RDF>
 
