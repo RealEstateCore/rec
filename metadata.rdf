@@ -285,6 +285,16 @@ The copyright on the constituent parts (classes, properties, named individuals) 
         <rdfs:label xml:lang="en">Ignored</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- https://karlhammar.com/owl2oas/o2o.owl#readonly -->
+
+    <owl:AnnotationProperty rdf:about="https://karlhammar.com/owl2oas/o2o.owl#readonly">
+        <rdfs:comment xml:lang="en">OWL classes tagged with this annotation will only have accessor methods created by the OWL2OAS code generator; no POST, PUT, or DELETE operations will be created.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://karlhammar.com/owl2oas/o2o.owl#"/>
+        <rdfs:label xml:lang="en">Read-only</rdfs:label>
+    </owl:AnnotationProperty>
 </rdf:RDF>
 
 
