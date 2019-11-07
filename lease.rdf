@@ -3,6 +3,7 @@
      xml:base="https://w3id.org/rec/lease/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -136,6 +137,16 @@
 
 
 
+    <!-- https://w3id.org/rec/lease/premisesType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/premisesType">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+        <rdfs:label xml:lang="en">premises type</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
     <!-- https://w3id.org/rec/lease/regulatedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/regulatedBy">
@@ -208,7 +219,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/CoffeePremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
-        <rdfs:label xml:lang="en">CoffeePremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -218,6 +229,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/EducationalPremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">EducationalPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -227,6 +239,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/GaragePremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">GaragePremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -236,6 +249,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/HotelPremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">HotelPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -245,6 +259,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/LaboratoryPremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">LaboratoryPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -280,6 +295,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/LightIndustryPremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">LightIndustryPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -289,6 +305,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/OfficePremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">OfficePremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -303,11 +320,20 @@
 
 
 
+    <!-- https://w3id.org/rec/lease/PremisesType -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/lease/PremisesType">
+        <rdfs:label xml:lang="en">Premises type</rdfs:label>
+    </owl:Class>
+
+
+
     <!-- https://w3id.org/rec/lease/ResidentialPremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/ResidentialPremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">ResidentialPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -317,6 +343,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/RestaurantPremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">RestaurantPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -326,6 +353,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/RetailPremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">RetailPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
 
 
@@ -335,7 +363,59 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/StoragePremises">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">StoragePremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/rec/lease/CoffeePremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/CoffeePremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/EducationalPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/GaragePremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/HotelPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/LaboratoryPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/LightIndustryPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/OfficePremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/ResidentialPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/RestaurantPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/RetailPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lease/StoragePremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
+    </owl:NamedIndividual>
+
 </rdf:RDF>
 
 
