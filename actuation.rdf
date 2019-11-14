@@ -78,7 +78,7 @@
     <!-- https://w3id.org/rec/actuation/hasActuationInterface -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/hasActuationInterface">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasSubDevice"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/actuation/isActuationInterfaceOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/device/Actuator"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
         <rdfs:label xml:lang="en">has actuation interface</rdfs:label>
@@ -90,6 +90,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/hasDefaultActuationInterface">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/actuation/hasActuationInterface"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/actuation/isDefaultActuationInterfaceOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/device/Actuator"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
@@ -101,7 +102,6 @@
     <!-- https://w3id.org/rec/actuation/isActuationInterfaceOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/isActuationInterfaceOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasSuperDevice"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuator"/>
         <rdfs:label xml:lang="en">is actuation interface of</rdfs:label>
