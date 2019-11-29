@@ -235,6 +235,17 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/hasMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMember">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMemberOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/hasPart -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasPart">
@@ -315,6 +326,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">A property that allows for nesting of devices within devices.</rdfs:comment>
         <rdfs:label xml:lang="en">has super-Device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMemberOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:label xml:lang="en">is member of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -840,6 +861,21 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/Apartment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Apartment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Apartment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
@@ -868,6 +904,14 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Building component</rdfs:label>
         <o2o:readonly rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:readonly>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Collection -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Collection">
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
     </owl:Class>
     
 
@@ -946,6 +990,15 @@ Angle i degrees (360 degress = 1 revolution)
 MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement unit</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Premise -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Premise">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:label xml:lang="en">Premise</rdfs:label>
     </owl:Class>
     
 
