@@ -3,7 +3,6 @@
      xml:base="https://w3id.org/rec/lantmäteriet/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:lfr="https://w3id.org/rec/lantmäteriet/"
      xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -19,10 +18,10 @@
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Hartlev</dc:creator>
-        <dc:description xml:lang="en">This REC module covers the data model used by government agency Lantmäteriet, the Swedish National Land Survey, in its Fastightesregister, Swedish Real Property Register (SRPR)</dc:description>
+        <dc:description xml:lang="en">This REC module covers the data model used by government agency Lantmäteriet, the Swedish National Land Survey, in its Fastighetsregister, Swedish Real Property Register (SRPR)</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Lantmäteriet Module</dc:title>
-        <dcterms:modified>2019-11-20</dcterms:modified>
+        <dcterms:modified>2019-12-12</dcterms:modified>
         <vann:preferredNamespacePrefix>lm</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/lantmäteriet/3.2/</vann:preferredNamespaceUri>
         <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
@@ -48,6 +47,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/Entrance"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lantmäteriet/EntranceType"/>
         <rdfs:comment xml:lang="en">Representation of the type of entrance (entre). The possible entrance types are modelled as named individuals.</rdfs:comment>
+        <rdfs:label xml:lang="en">entrance type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -111,8 +111,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/Apartment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="sv">Lägenhetsnummer</rdfs:label>
         <rdfs:label xml:lang="en">apartment number</rdfs:label>
+        <rdfs:label xml:lang="sv">lägenhetsnummer</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55B field 10 (&quot;LGHNR&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
     
@@ -300,8 +300,8 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
 
     <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/AddressLocation">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-        <rdfs:label xml:lang="en">address location</rdfs:label>
-        <rdfs:label xml:lang="sv">adressplats</rdfs:label>
+        <rdfs:label xml:lang="en">Address location</rdfs:label>
+        <rdfs:label xml:lang="sv">Adressplats</rdfs:label>
     </owl:Class>
     
 
@@ -310,8 +310,8 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
 
     <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/Apartment">
         <rdfs:comment xml:lang="en">An apartment. Only a subset of available properties are modelled.</rdfs:comment>
-        <rdfs:label xml:lang="en">apartment</rdfs:label>
-        <rdfs:label xml:lang="sv">lägenhet</rdfs:label>
+        <rdfs:label xml:lang="en">Apartment</rdfs:label>
+        <rdfs:label xml:lang="sv">Lägenhet</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55B.</rdfs:seeAlso>
     </owl:Class>
     
