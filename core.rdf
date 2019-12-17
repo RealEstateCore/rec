@@ -397,6 +397,17 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/servedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/serves"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">Indicates that an area or entity is served by some device or sensor. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor.</rdfs:comment>
+        <rdfs:label xml:lang="en">served by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/serves -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/serves">
