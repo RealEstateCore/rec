@@ -143,8 +143,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/containsMountedDevice">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedInBuildingComponent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to Devices mounted within them.</rdfs:comment>
         <rdfs:label xml:lang="en">contains mounted device</rdfs:label>
@@ -348,10 +347,21 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/isMountedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMountedIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">Property describing where a Device is mounted.</rdfs:comment>
+        <rdfs:label xml:lang="en">is mounted in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/isMountedInBuildingComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMountedInBuildingComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Property describing in which Building Component (most typically a Room) that a Device is mounted.</rdfs:comment>
