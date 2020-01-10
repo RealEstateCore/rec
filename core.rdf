@@ -143,8 +143,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/containsMountedDevice">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedInBuildingComponent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to Devices mounted within them.</rdfs:comment>
         <rdfs:label xml:lang="en">contains mounted device</rdfs:label>
@@ -160,6 +159,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The measurement unit used by some Device.</rdfs:comment>
         <rdfs:label xml:lang="en">device measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -172,6 +172,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.</rdfs:comment>
         <rdfs:label xml:lang="en">device quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -184,6 +185,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">A unit used to measure some aspect of some Event.</rdfs:comment>
         <rdfs:label xml:lang="en">event measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -196,6 +198,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">The Quantity Kind that an event measures or affects.</rdfs:comment>
         <rdfs:label xml:lang="en">event quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -228,9 +231,22 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasMeasurementUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
         <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMember">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMemberOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -249,9 +265,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasQuantityKind -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">has quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -319,10 +337,31 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMemberOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:label xml:lang="en">is member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/isMountedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMountedIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">Property describing where a Device is mounted.</rdfs:comment>
+        <rdfs:label xml:lang="en">is mounted in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/isMountedInBuildingComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMountedInBuildingComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Property describing in which Building Component (most typically a Room) that a Device is mounted.</rdfs:comment>
@@ -364,6 +403,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/measurementUnit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/measurementUnit">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
+        <rdfs:label xml:lang="en">measurement unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/qkMeasurementUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/qkMeasurementUnit">
@@ -372,6 +421,28 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">quantity kind measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/quantityKind -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/quantityKind">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">quantity kind</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/servedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/serves"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:comment xml:lang="en">Indicates that an area or entity is served by some device or sensor. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor.</rdfs:comment>
+        <rdfs:label xml:lang="en">served by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -840,6 +911,21 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/Apartment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Apartment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Apartment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
@@ -868,6 +954,14 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Building component</rdfs:label>
         <o2o:readonly rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:readonly>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Collection -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Collection">
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
     </owl:Class>
     
 
@@ -950,6 +1044,15 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Premise -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Premise">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:label xml:lang="en">Premise</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/QuantityKind -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/QuantityKind">
@@ -1020,7 +1123,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/ActiveEnergyL1">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Watt"/>
+        <measurementUnit rdf:resource="https://w3id.org/rec/core/Watt"/>
         <rdfs:label xml:lang="en">ActiveEnergyL1</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1726,8 +1829,8 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Temperature">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
-        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Kelvin"/>
+        <measurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
+        <measurementUnit rdf:resource="https://w3id.org/rec/core/Kelvin"/>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
         <rdfs:seeAlso xml:lang="en">Temperature</rdfs:seeAlso>
     </owl:NamedIndividual>
