@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="https://w3id.org/rec/full/"
      xml:base="https://w3id.org/rec/full/"
      xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:analytics="https://w3id.org/rec/analytics/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -20,13 +19,14 @@
      xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#"
      xmlns:building="https://w3id.org/rec/building/"
      xmlns:actuation="https://w3id.org/rec/actuation/"
+     xmlns:analytics="https://w3id.org/rec/analytics/"
      xmlns:collections="https://w3id.org/rec/collections/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/full/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/full/3.2/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/analytics/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/actuation/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/agents/3.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/analytics/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/building/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/collections/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
@@ -66,6 +66,64 @@ Version 3.0 is a major and compatibility-breaking refactoring of REC:
 * All IRI:s are now HTTPS</rdfs:comment>
         <owl:versionInfo xml:lang="en">3.2</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/device/observationGeneratedBy -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/device/observationGeneratedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/analytics/dataSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/analytics/Observation -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/analytics/Observation">
+        <owl:equivalentClass rdf:resource="https://w3id.org/rec/device/Observation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/Sensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/analytics/Sensor">
+        <owl:equivalentClass rdf:resource="https://w3id.org/rec/device/Sensor"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/device/Observation -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/device/Observation"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Sensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/device/Sensor"/>
 </rdf:RDF>
 
 

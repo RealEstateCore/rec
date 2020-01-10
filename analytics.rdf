@@ -8,15 +8,17 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:analytics="https://w3id.org/rec/analytics/"
      xmlns:core="https://w3id.org/rec/core/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#"
+     xmlns:analytics="https://w3id.org/rec/analytics/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/analytics/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/analytics/3.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/collections/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
@@ -30,5 +32,180 @@
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
     </owl:Ontology>
+    
 
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/analytics/analysisConfiguration -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/analysisConfiguration">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/AnalysisProcess"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/analytics/DataAnalysisConfiguration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/dataSchema -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/dataSchema">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/dataSource -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/dataSource">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/analytics/DataSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/generatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/generatedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/analytics/dataSource"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/GeneratedDataPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/analytics/AnalysisProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/analytics/Aggregate -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/Aggregate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/GeneratedDataPoint"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/AnalysisProcess -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/AnalysisProcess">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/DataSource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/DataAnalysisConfiguration -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/DataAnalysisConfiguration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/DataPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/DataPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/DataSeries -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/DataSeries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/collections/hasListMember"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/collections/hasListMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/DataSource -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/DataSource">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/GeneratedDataPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/GeneratedDataPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/Observation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/Observation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/Prediction -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/Prediction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/GeneratedDataPoint"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/Sensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/Sensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/DataSource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/analytics/Service -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/Service">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/DataSource"/>
+    </owl:Class>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
