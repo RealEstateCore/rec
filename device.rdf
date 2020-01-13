@@ -605,6 +605,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/device/observedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/device/Sensor"/>
             </owl:Restriction>
@@ -837,6 +843,18 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Sensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/device/observesActuator"/>

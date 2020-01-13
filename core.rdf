@@ -991,6 +991,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Event -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
         <o2o:ignored rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:ignored>
@@ -1056,6 +1068,12 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/QuantityKind -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/QuantityKind">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT.</rdfs:comment>
         <rdfs:label xml:lang="en">Quantity kind</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
