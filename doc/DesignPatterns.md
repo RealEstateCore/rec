@@ -51,7 +51,8 @@ is influenced by but not a direct clone of the design pattern in question;
 the intermediate Bag class as suggested in the source pattern is not 
 implemented, and `ListItem` from the pattern has been renamed to 
 `ListPosition`, to clarify the intended semantics; the actual item itself is 
-linked via the `positionOf` property. Additionally, this implementation 
+linked via the `positionOf` property (whereas in the pattern, that linkage 
+is via the `itemContent` property). Additionally, this implementation 
 includes a property chain that can be used to infer item membership on a 
 `List` via its `ListPosition`.
 
