@@ -337,6 +337,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasType">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Type"/>
+        <rdfs:comment xml:lang="en">A generic typing relation, holding between individuals and their types (which are also expressed as individuals). This construct allows implementors to add their own types without modifying the ontology and its classes. See the Explicit Typing design pattern in the MODL design library for further discussion.</rdfs:comment>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/isMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMemberOf">
@@ -409,6 +419,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
         <rdfs:label xml:lang="en">measurement unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/premisesType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/premisesType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/PremisesType"/>
     </owl:ObjectProperty>
     
 
@@ -1065,6 +1085,15 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/PremisesType -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/PremisesType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
+        <rdfs:label xml:lang="en">Premises type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/QuantityKind -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/QuantityKind">
@@ -1122,6 +1151,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Any piece of software or similar digital resource (including data schemas, etc) that executes or can be loaded on some or many parts of a RealEstateCore-enabled distributed system.</rdfs:comment>
         <rdfs:label xml:lang="en">Software</rdfs:label>
         <o2o:ignored rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:ignored>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Type">
+        <rdfs:label xml:lang="en">Type</rdfs:label>
     </owl:Class>
     
 

@@ -174,6 +174,7 @@
     <!-- https://w3id.org/rec/device/hasDeviceFunctionType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasDeviceFunctionType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">has device function type</rdfs:label>
@@ -675,6 +676,7 @@
     <!-- https://w3id.org/rec/device/DeviceFunctionType -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DeviceFunctionType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
         <rdfs:comment xml:lang="en">The main function or purpose of a Device.</rdfs:comment>
         <rdfs:label xml:lang="en">Device function type</rdfs:label>
     </owl:Class>
