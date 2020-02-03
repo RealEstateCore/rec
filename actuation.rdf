@@ -513,7 +513,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/DeviceEvents"/>
         <rdfs:comment xml:lang="en">This class is a simple cognitive clustering of various types of events/messages that make up the REC actuation model, to group them in ontology editing tools and visualizations. The class should in most cases not be used as typing for any individuals.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation event</rdfs:label>
-        <o2o:ignored xml:lang="en">true</o2o:ignored>
     </owl:Class>
     
 
@@ -530,6 +529,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An interface describing the expected payload structure for one or more actuators.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation interface</rdfs:label>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
 

@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/rec/collections/"
+     xml:base="https://w3id.org/rec/collections/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="https://w3id.org/rec/core/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#"
+     xmlns:collections="https://w3id.org/rec/collections/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/rec/collections/">
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/collections/3.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
+        <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
+        <dc:description xml:lang="en">This REC module covers detailed collections (sets, lists, etc) that go beyond the core Collection class.</dc:description>
+        <dc:publisher>RealEstateCore Consortium</dc:publisher>
+        <dc:title>RealEstateCore Collctions Module</dc:title>
+        <dcterms:modified>2019-11-07</dcterms:modified>
+        <vann:preferredNamespacePrefix>collections</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/collections/3.2/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Module is new since REC v3.2</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/collections/hasCollectionType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/hasCollectionType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/collections/CollectionType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/collections/hasFirstPosition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/hasFirstPosition">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/collections/includesListPosition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/List"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+        <rdfs:label xml:lang="en">has first position</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/collections/hasLastPosition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/hasLastPosition">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/collections/includesListPosition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/List"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+        <rdfs:label xml:lang="en">has last position</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/collections/hasListMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/hasListMember">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMember"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/List"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/rec/collections/includesListPosition"/>
+            <rdf:Description rdf:about="https://w3id.org/rec/collections/positionOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/collections/includesListPosition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/includesListPosition">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/collections/positionOnList"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/List"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+        <rdfs:label xml:lang="en">includes list position</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/collections/nextPosition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/nextPosition">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/collections/previousPosition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/collections/positionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/positionOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+        <rdfs:label xml:lang="en">position of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/collections/positionOnList -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/positionOnList">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/collections/List"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/collections/previousPosition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/collections/previousPosition">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/collections/numericPosition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/collections/numericPosition">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/collections/ListPosition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/collections/CollectionType -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/collections/CollectionType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
+        <rdfs:label xml:lang="en">Collection type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/collections/List -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/collections/List">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/collections/ListPosition -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/collections/ListPosition">
+        <rdfs:label xml:lang="en">List position</rdfs:label>
+    </owl:Class>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
