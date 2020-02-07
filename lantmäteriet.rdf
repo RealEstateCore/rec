@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/rec/lantmäteriet/"
-     xml:base="https://w3id.org/rec/lantmäteriet/"
+<rdf:RDF xmlns="https://w3id.org/rec/lfr/"
+     xml:base="https://w3id.org/rec/lfr/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
@@ -13,8 +13,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/rec/lantmäteriet/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/lantmäteriet/3.2/"/>
+    <owl:Ontology rdf:about="https://w3id.org/rec/lfr/">
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/lfr/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Hartlev</dc:creator>
@@ -23,14 +23,14 @@
         <dc:title>RealEstateCore Lantmäteriet Module</dc:title>
         <dcterms:modified>2019-12-12</dcterms:modified>
         <vann:preferredNamespacePrefix>lm</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/lantmäteriet/3.2/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/lfr/3.2/</vann:preferredNamespaceUri>
         <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -38,49 +38,49 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/entranceType -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lantmäteriet/entranceType">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/Entrance"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/lantmäteriet/EntranceType"/>
+    <!-- https://w3id.org/rec/lfr/entranceType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lfr/lfrEntranceType">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrEntrance"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/lfr/LfrEntranceType"/>
         <rdfs:comment xml:lang="en">Representation of the type of entrance (entre). The possible entrance types are modelled as named individuals.</rdfs:comment>
         <rdfs:label xml:lang="en">entrance type</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasAddressLocation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasAddressLocation">
+    <!-- https://w3id.org/rec/lfr/hasAddressLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lfr/hasLfrAddressLocation">
         <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/Entrance"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/lantmäteriet/AddressLocation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrEntrance"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/lfr/LfrAddressLocation"/>
         <rdfs:comment xml:lang="en">Association between an entrance (entre) and its address location (adressplats).</rdfs:comment>
         <rdfs:label xml:lang="sv">har adressplats</rdfs:label>
         <rdfs:label xml:lang="en">has address location</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, foreign key in object type 55B field 25 (&quot;UUIDADRPL&quot;) and object type 90A field 68 (&quot;UUID&quot;).</rdfs:seeAlso>
     </owl:ObjectProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasEntrance -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasEntrance">
+    <!-- https://w3id.org/rec/lfr/hasEntrance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/lfr/hasLfrEntrance">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/SrprApartment"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/lantmäteriet/Entrance"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrApartment"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/lfr/LfrEntrance"/>
         <rdfs:comment xml:lang="en">Association between an apartment (lägenhet) and an entrance (entre).</rdfs:comment>
         <rdfs:label xml:lang="sv">har entre</rdfs:label>
         <rdfs:label xml:lang="en">has entrance</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, foreign key in object type 55B field 43 (&quot;UUIDENTRE&quot;) and object type 55A field 21 (&quot;UUID&quot;).</rdfs:seeAlso>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -88,39 +88,39 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/apartmentArea -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/apartmentArea">
+    <!-- https://w3id.org/rec/lfr/apartmentArea -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/lfrApartmentArea">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/SrprApartment"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrApartment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">The area in square meters (m2) of an apartment (lägenhet).</rdfs:comment>
         <rdfs:label xml:lang="en">apartment area</rdfs:label>
         <rdfs:label xml:lang="sv">bostads area</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55B field 18 (&quot;BOAREA&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/apartmentNumber -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/apartmentNumber">
+    <!-- https://w3id.org/rec/lfr/apartmentNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/lfrApartmentNumber">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/SrprApartment"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrApartment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">apartment number</rdfs:label>
         <rdfs:label xml:lang="sv">lägenhetsnummer</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55B field 10 (&quot;LGHNR&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/buildingNumber -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/buildingNumber">
+    <!-- https://w3id.org/rec/lfr/buildingNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/lfrBuildingNumber">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -129,27 +129,27 @@
         <rdfs:label xml:lang="sv">husnummer</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 50A field 7 (&quot;HUSNR&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute">
+    <!-- https://w3id.org/rec/lfr/hasAddressLocationAttribute -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">
         <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasSerialization"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/AddressLocation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrAddressLocation"/>
         <rdfs:comment xml:lang="en">A number of attributes (fields) related to address location. Together they represent a minimum implementation of the standardized address location (adressplats).</rdfs:comment>
         <rdfs:label xml:lang="en">address location attributes</rdfs:label>
         <rdfs:label xml:lang="sv">adressplatsattribut</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A.</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasCityName -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasCityName">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/CityAddressLocation"/>
+    <!-- https://w3id.org/rec/lfr/hasCityName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrCityName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrCityAddressLocation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">City name.
 
@@ -160,25 +160,25 @@ Also note that city name may be different to the postal location.</rdfs:comment>
         <rdfs:label xml:lang="en">city name</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 16 (&quot;ADROMRADE&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasCountyCode -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasCountyCode">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
+    <!-- https://w3id.org/rec/lfr/hasCountyCode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrCountyCode">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">county code</rdfs:label>
         <rdfs:label xml:lang="sv">länskod</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 12 (&quot;LANKOD&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasEastCoordinate -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasEastCoordinate">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
+    <!-- https://w3id.org/rec/lfr/hasEastCoordinate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrEastCoordinate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
         <rdfs:comment xml:lang="en">East-west directional coordinate in meters according to SWEREF 99 TM.
 
 Comprises 7 digits followed by optional decimal point and up to three digits (NNNNNNN[.NNN]).</rdfs:comment>
@@ -186,14 +186,14 @@ Comprises 7 digits followed by optional decimal point and up to three digits (NN
         <rdfs:label xml:lang="sv">öst-koordinat</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 36 (&quot;YKOORD&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasMetricalAddressName -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasMetricalAddressName">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/MetricalAddressLocation"/>
+    <!-- https://w3id.org/rec/lfr/hasMetricalAddressName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrMetricalAddressName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrMetricalAddressLocation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Metrical address name.
 
@@ -202,37 +202,37 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
         <rdfs:label xml:lang="en">metrical address name</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 16 (&quot;ADROMRADE&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasMunicipalityCode -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasMunicipalityCode">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
+    <!-- https://w3id.org/rec/lfr/hasMunicipalityCode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrMunicipalityCode">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="sv">kommunkod</rdfs:label>
         <rdfs:label xml:lang="en">municipality code</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 13 (&quot;KOMKOD&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasMunicipalityPart -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasMunicipalityPart">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
+    <!-- https://w3id.org/rec/lfr/hasMunicipalityPart -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrMunicipalityPart">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="sv">kommundel</rdfs:label>
         <rdfs:label xml:lang="en">municipality part</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 18 (&quot;KOMDELLAGE&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasNorthCoordinate -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasNorthCoordinate">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
+    <!-- https://w3id.org/rec/lfr/hasNorthCoordinate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrNorthCoordinate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
         <rdfs:comment xml:lang="en">North-south directional coordinate in meters according to SWEREF 99 TM.
 
 Comprises 7 digits followed by optional decimal point and up to three digits (NNNNNNN[.NNN]).</rdfs:comment>
@@ -240,38 +240,38 @@ Comprises 7 digits followed by optional decimal point and up to three digits (NN
         <rdfs:label xml:lang="en">north coordinate</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 35 (&quot;XKOORD&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasPostalCode -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasPostalCode">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
+    <!-- https://w3id.org/rec/lfr/hasPostalCode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrPostalCode">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">postal code</rdfs:label>
         <rdfs:label xml:lang="sv">postnummer</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 19 (&quot;POSTNR&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasPostalLocation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasPostalLocation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
+    <!-- https://w3id.org/rec/lfr/hasPostalLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrPostalLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">postal location</rdfs:label>
         <rdfs:label xml:lang="sv">postort</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 24 (&quot;POSTORT&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/hasStreetName -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/hasStreetName">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lantmäteriet/hasAddressLocationAttribute"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/lantmäteriet/StreetAddressLocation"/>
+    <!-- https://w3id.org/rec/lfr/hasStreetName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/hasLfrStreetName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/lfr/LfrStreetAddressLocation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Street name.
 
@@ -280,20 +280,20 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
         <rdfs:label xml:lang="en">street name</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 90A field 16 (&quot;ADROMRADE&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/srprUUID -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/srprUUID">
+    <!-- https://w3id.org/rec/lfr/srprUUID -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/lfrUUID">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/rec/core/Building"/>
                     <rdf:Description rdf:about="https://w3id.org/rec/core/RealEstate"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/lantmäteriet/Entrance"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/lantmäteriet/SrprApartment"/>
+                    <rdf:Description rdf:about="https://w3id.org/rec/lfr/LfrEntrance"/>
+                    <rdf:Description rdf:about="https://w3id.org/rec/lfr/LfrApartment"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -302,12 +302,12 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
         <rdfs:label xml:lang="sv">lantmäteriets fastighets register universal unik identitet</rdfs:label>
         <rdfs:label xml:lang="en">real property register universal unique identity</rdfs:label>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/totalResidenceArea -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lantmäteriet/totalResidenceArea">
+    <!-- https://w3id.org/rec/lfr/totalResidenceArea -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/lfr/lfrTotalResidenceArea">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -316,10 +316,10 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
         <rdfs:label xml:lang="en">total residence area</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 50A field 50 (&quot;TOTBOAREA&quot;).</rdfs:seeAlso>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -327,86 +327,86 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/AddressLocation -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/AddressLocation">
+    <!-- https://w3id.org/rec/lfr/AddressLocation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/lfr/LfrAddressLocation">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:comment xml:lang="en">The address location is an abstract class. Should not be instantiated. Use the sub classes instead.</rdfs:comment>
         <rdfs:label xml:lang="en">Address location</rdfs:label>
         <rdfs:label xml:lang="sv">Adressplats</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/CityAddressLocation -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/CityAddressLocation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lantmäteriet/AddressLocation"/>
+    <!-- https://w3id.org/rec/lfr/CityAddressLocation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/lfr/LfrCityAddressLocation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lfr/LfrAddressLocation"/>
         <rdfs:label xml:lang="sv">Byadressplats</rdfs:label>
         <rdfs:label xml:lang="en">City address location</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/Entrance -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/Entrance">
+    <!-- https://w3id.org/rec/lfr/Entrance -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/lfr/LfrEntrance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">An entrance. Only a subset of available properties are modelled.</rdfs:comment>
         <rdfs:label xml:lang="en">Entrance</rdfs:label>
         <rdfs:label xml:lang="sv">Entre</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55A</rdfs:seeAlso>
     </owl:Class>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/EntranceType -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/EntranceType">
+    <!-- https://w3id.org/rec/lfr/EntranceType -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/lfr/LfrEntranceType">
         <rdfs:comment xml:lang="en">Representation of the type of entrance (entre). The possible types are modelled as named individuals.</rdfs:comment>
         <rdfs:label xml:lang="en">Entrance type</rdfs:label>
         <rdfs:label xml:lang="sv">Entretyp</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55A field 13 (&quot;ENTRETYP&quot;)</rdfs:seeAlso>
     </owl:Class>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/MetricalAddressLocation -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/MetricalAddressLocation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lantmäteriet/AddressLocation"/>
+    <!-- https://w3id.org/rec/lfr/MetricalAddressLocation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/lfr/LfrMetricalAddressLocation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lfr/LfrAddressLocation"/>
         <rdfs:label xml:lang="sv">Metertalsadressplats</rdfs:label>
         <rdfs:label xml:lang="en">Metrical address location</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/SrprApartment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/SrprApartment">
+    <!-- https://w3id.org/rec/lfr/SrprApartment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/lfr/LfrApartment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Apartment"/>
         <rdfs:comment xml:lang="en">An apartment. Only a subset of available properties are modelled.</rdfs:comment>
         <rdfs:label xml:lang="en">Apartment</rdfs:label>
         <rdfs:label xml:lang="sv">Lägenhet</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55B.</rdfs:seeAlso>
     </owl:Class>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/StreetAddressLocation -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/lantmäteriet/StreetAddressLocation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lantmäteriet/AddressLocation"/>
+    <!-- https://w3id.org/rec/lfr/StreetAddressLocation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/lfr/LfrStreetAddressLocation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lfr/LfrAddressLocation"/>
         <rdfs:label xml:lang="sv">Gatuadressplats</rdfs:label>
         <rdfs:label xml:lang="en">Street address location</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -414,73 +414,73 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/DeliveryAddress -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lantmäteriet/DeliveryAddress">
-        <rdf:type rdf:resource="https://w3id.org/rec/lantmäteriet/EntranceType"/>
+    <!-- https://w3id.org/rec/lfr/DeliveryAddress -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lfr/LfrDeliveryAddress">
+        <rdf:type rdf:resource="https://w3id.org/rec/lfr/LfrEntranceType"/>
         <rdfs:comment xml:lang="en">One of the entrance types.</rdfs:comment>
         <rdfs:label xml:lang="en">delivery address</rdfs:label>
         <rdfs:label xml:lang="sv">leveransadress</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55A field 13 (&quot;ENTRETYP&quot;) value 5.</rdfs:seeAlso>
     </owl:NamedIndividual>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/MissingInformation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lantmäteriet/MissingInformation">
-        <rdf:type rdf:resource="https://w3id.org/rec/lantmäteriet/EntranceType"/>
+    <!-- https://w3id.org/rec/lfr/MissingInformation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lfr/LfrMissingInformation">
+        <rdf:type rdf:resource="https://w3id.org/rec/lfr/LfrEntranceType"/>
         <rdfs:comment xml:lang="en">One of the entrance types.</rdfs:comment>
         <rdfs:label xml:lang="en">missing information</rdfs:label>
         <rdfs:label xml:lang="sv">uppgift saknas</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55A field 13 (&quot;ENTRETYP&quot;) value 9.</rdfs:seeAlso>
     </owl:NamedIndividual>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/ResidenceAddress -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lantmäteriet/ResidenceAddress">
-        <rdf:type rdf:resource="https://w3id.org/rec/lantmäteriet/EntranceType"/>
+    <!-- https://w3id.org/rec/lfr/ResidenceAddress -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lfr/LfrResidenceAddress">
+        <rdf:type rdf:resource="https://w3id.org/rec/lfr/LfrEntranceType"/>
         <rdfs:comment xml:lang="en">One of the entrance types.</rdfs:comment>
         <rdfs:label xml:lang="sv">bostadsadress</rdfs:label>
         <rdfs:label xml:lang="en">residence address</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55A field 13 (&quot;ENTRETYP&quot;) value 1.</rdfs:seeAlso>
     </owl:NamedIndividual>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/ResidenceAddressRegisteredApartment -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lantmäteriet/ResidenceAddressRegisteredApartment">
-        <rdf:type rdf:resource="https://w3id.org/rec/lantmäteriet/EntranceType"/>
+    <!-- https://w3id.org/rec/lfr/ResidenceAddressRegisteredApartment -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lfr/LfrResidenceAddressRegisteredApartment">
+        <rdf:type rdf:resource="https://w3id.org/rec/lfr/LfrEntranceType"/>
         <rdfs:comment xml:lang="en">One of the entrance types.</rdfs:comment>
         <rdfs:label xml:lang="sv">bostadsadress med registrerad lägenhet</rdfs:label>
         <rdfs:label xml:lang="en">residence address with registered apartment</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55A field 13 (&quot;ENTRETYP&quot;) value 2.</rdfs:seeAlso>
     </owl:NamedIndividual>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/ShopAddress -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lantmäteriet/ShopAddress">
-        <rdf:type rdf:resource="https://w3id.org/rec/lantmäteriet/EntranceType"/>
+    <!-- https://w3id.org/rec/lfr/ShopAddress -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lfr/LfrShopAddress">
+        <rdf:type rdf:resource="https://w3id.org/rec/lfr/LfrEntranceType"/>
         <rdfs:comment xml:lang="en">One of the entrance types.</rdfs:comment>
         <rdfs:label xml:lang="sv">butiksadress</rdfs:label>
         <rdfs:label xml:lang="en">shop address</rdfs:label>
         <rdfs:seeAlso xml:lang="en">SRPR version 11.40, object type 55A field 13 (&quot;ENTRETYP&quot;) value 3.</rdfs:seeAlso>
     </owl:NamedIndividual>
-    
 
 
-    <!-- https://w3id.org/rec/lantmäteriet/VisitingAddress -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lantmäteriet/VisitingAddress">
-        <rdf:type rdf:resource="https://w3id.org/rec/lantmäteriet/EntranceType"/>
+    <!-- https://w3id.org/rec/lfr/VisitingAddress -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/lfr/LfrVisitingAddress">
+        <rdf:type rdf:resource="https://w3id.org/rec/lfr/LfrEntranceType"/>
         <rdfs:comment xml:lang="en">One of the entrance types.</rdfs:comment>
         <rdfs:label xml:lang="sv">besöksadress</rdfs:label>
         <rdfs:label xml:lang="en">visiting address</rdfs:label>
@@ -491,4 +491,3 @@ Note that object type 90A field 15 (&quot;ADRTYP&quot;) holds the key to interpr
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
