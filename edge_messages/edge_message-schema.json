@@ -1,7 +1,7 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://w3id.org/rec/edge_message/3.1/",
+  "$id": "https://w3id.org/rec/edge_message/3.1.1/",
   "type": "object",
   "title": "RealEstateCore Edge Message Schema",
   "required": [
@@ -10,34 +10,34 @@
   ],
   "properties": {
     "format": {
-      "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/format",
+      "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/format",
       "type": "string",
       "title": "The Format Schema",
       "description": "REC edge message version",
-      "default": "rec3.1",
+      "default": "rec3.1.1",
       "examples": [
         "rec3.1"
       ],
       "pattern": "^(.*)$"
     },
     "deviceId": {
-      "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/deviceId",
+      "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/deviceId",
       "type": "string",
-      "title": "The DeviceId Schema",
+      "title": "The DeviceId Schema,",
+      "description": "Either IRI or ID of Device",
       "default": "",
       "examples": [
-        "https://recref.com/device/ba65fb71-6bba-4907-ab8f-877032ef58b2"
+        "ba65fb71-6bba-4907-ab8f-877032ef58b2"
       ],
-      "pattern": "^(.*)$",
-      "format": "iri"
+      "pattern": "^(.*)$"
     },
     "observations": {
-      "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/observations",
+      "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/observations",
       "type": "array",
       "title": "The Observations Array Schema",
       "default": null,
       "items": {
-        "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/observations/items",
+        "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/observations/items",
         "type": "object",
         "title": "The Observation Schema",
         "default": null,
@@ -46,9 +46,14 @@
           "quantityKind",
           "sensorId"
         ],
+        "oneOf": [
+          {"required": ["value"]},
+          {"required": ["valueString"]},
+          {"required": ["valueBoolean"]}
+        ],
         "properties": {
           "observationTime": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/observations/items/properties/observationTime",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/observations/items/properties/observationTime",
             "type": "string",
             "title": "The ObservationTime Schema",
             "description": "ISO 8601 date-time string, UTC",
@@ -60,7 +65,7 @@
             "format": null
           },
           "value": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/observations/items/properties/value",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/observations/items/properties/value",
             "type": "number",
             "title": "The Value Schema",
             "description": "Observed value (number)",
@@ -70,7 +75,7 @@
             ]
           },
           "valueString": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/observations/items/properties/valueString",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/observations/items/properties/valueString",
             "type": "string",
             "title": "The ValueString Schema",
             "description": "Observed value (string)",
@@ -81,7 +86,7 @@
             "pattern": "^(.*)$"
           },
           "valueBoolean": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/observations/items/properties/valueBoolean",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/observations/items/properties/valueBoolean",
             "type": "boolean",
             "title": "The ValueBoolean Schema",
             "description": "Observed Value (Boolean)",
@@ -91,7 +96,7 @@
             ]
           },
           "quantityKind": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/observations/items/properties/quantityKind",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/observations/items/properties/quantityKind",
             "type": "string",
             "title": "The QuantityKind Schema",
             "description": "quantityKind",
@@ -103,27 +108,26 @@
             "format": "iri"
           },
           "sensorId": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/observations/items/properties/sensorId",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/observations/items/properties/sensorId",
             "type": "string",
             "title": "The SensorId Schema",
-            "description": "IRI of Sensor",
+            "description": "IRI or ID of Sensor",
             "default": "",
             "examples": [
-              "https://recref.com/sensor/e0d5120b-90f1-48d6-a47f-f8ccd7727b04"
+              "e0d5120b-90f1-48d6-a47f-f8ccd7727b04"
             ],
-            "pattern": "^(.*)$",
-            "format": "iri"
+            "pattern": "^(.*)$"
           }
         }
       }
     },
     "actuationCommands": {
-      "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationCommands",
+      "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationCommands",
       "type": "array",
       "title": "The ActuationCommands Array Schema",
       "default": null,
       "items": {
-        "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationCommands/items",
+        "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationCommands/items",
         "type": "object",
         "title": "The ActuationCommand Schema",
         "default": null,
@@ -132,9 +136,14 @@
           "actuationId",
           "actuatorId"
         ],
+        "oneOf": [
+          {"required": ["value"]},
+          {"required": ["valueString"]},
+          {"required": ["valueBoolean"]}
+        ],
         "properties": {
           "actuationCommandTime": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationCommands/items/properties/actuationCommandTime",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationCommands/items/properties/actuationCommandTime",
             "type": "string",
             "title": "The ActuationCommandTime Schema",
             "description": "DateTime of ActuationCommand (ISO 8601 UTC)",
@@ -145,32 +154,30 @@
             "pattern": "^(.*)$",
             "format": null
           },
-          "actuationId": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationCommands/items/properties/actuationId",
+          "actuationCommandId": {
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationCommands/items/properties/actuationId",
             "type": "string",
-            "title": "The ActuationId Schema",
-            "description": "IRI of Actuation",
+            "title": "The ActuationCommandId Schema",
+            "description": "IRI or ID of Actuation",
             "default": "",
             "examples": [
-              "https://recref.com/actuator/a49feda7-2bc3-4793-b87f-8ec0c3909f9b/actuation/267b6a9b-e3fd-4809-b526-2"
+              "267b6a9b-e3fd-4809-b526-2"
             ],
-            "pattern": "^(.*)$",
-            "format": "iri"
+            "pattern": "^(.*)$"
           },
           "actuatorId": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationCommands/items/properties/actuatorId",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationCommands/items/properties/actuatorId",
             "type": "string",
             "title": "The ActuatorId Schema",
-            "description": "IRI of Actuator",
+            "description": "IRI or ID of Actuator",
             "default": "",
             "examples": [
               "https://recref.com/actuator/a49feda7-2bc3-4793-b87f-8ec0c3909f9b/actuation/267b6a9b-e3fd-4809-b526-2"
             ],
-            "pattern": "^(.*)$",
-            "format": "iri"
+            "pattern": "^(.*)$"
           },
           "value": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationCommands/items/properties/value",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationCommands/items/properties/value",
             "type": "number",
             "title": "The Value Schema",
             "description": "Value to be actuated, validated with ActuationInterface",
@@ -180,7 +187,7 @@
             ]
           },
           "valueString": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationCommands/items/properties/valueString",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationCommands/items/properties/valueString",
             "type": "string",
             "title": "The ValueString Schema",
             "description": "Value to be actuated, validated with ActuationInterface",
@@ -191,7 +198,7 @@
             "pattern": "^(.*)$"
           },
           "valueBoolean": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationCommands/items/properties/valueBoolean",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationCommands/items/properties/valueBoolean",
             "type": "boolean",
             "title": "The ValueBoolean Schema",
             "description": "Value to be actuated, validated with ActuationInterface",
@@ -204,48 +211,46 @@
       }
     },
     "actuationResponses": {
-      "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationResponses",
+      "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationResponses",
       "type": "array",
       "title": "The ActuationResponses Array Schema",
       "default": null,
       "items": {
-        "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationResponses/items",
+        "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationResponses/items",
         "type": "object",
         "title": "The ActuationResponse Schema",
         "default": null,
         "required": [
           "actuatorId",
-          "actuationId",
+          "actuationCommanId",
           "responseCode",
           "actuationResponseTime"
         ],
         "properties": {
           "actuatorId": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationResponses/items/properties/actuatorId",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationResponses/items/properties/actuatorId",
             "type": "string",
             "title": "The ActuatorId Schema",
-            "description": "IRI of Actuator",
+            "description": "IRI or ID of Actuator",
             "default": "",
             "examples": [
               "https://recref.com/actuator/a49feda7-2bc3-4793-b87f-8ec0c3909f9b/"
             ],
-            "pattern": "^(.*)$",
-            "format": "iri"
+            "pattern": "^(.*)$"
           },
-          "actuationId": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationResponses/items/properties/actuationId",
+          "actuationCommandId": {
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationResponses/items/properties/actuationId",
             "type": "string",
             "title": "The ActuationId Schema",
-            "description": "IRI of Actuation",
+            "description": "IRI or ID of Actuation",
             "default": "",
             "examples": [
               "https://recref.com/actuator/a49feda7-2bc3-4793-b87f-8ec0c3909f9b/actuation/267b6a9b-e3fd-4809-b526-2"
             ],
-            "pattern": "^(.*)$",
-            "format": "iri"
+            "pattern": "^(.*)$"
           },
           "responseCode": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationResponses/items/properties/responseCode",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationResponses/items/properties/responseCode",
             "type": "string",
             "title": "The ResponseCode Schema",
             "description": "Response code from actuator",
@@ -258,7 +263,7 @@
             "pattern": "^(.*)$"
           },
           "actuationResponseTime": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/actuationResponses/items/properties/actuationResponseTime",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/actuationResponses/items/properties/actuationResponseTime",
             "type": "string",
             "title": "The ActuationResponseTime Schema",
             "description": "Time of ActuationResponse, ISO 8601 UTC",
@@ -273,12 +278,12 @@
       }
     },
     "exceptions": {
-      "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/exceptions",
+      "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/exceptions",
       "type": "array",
       "title": "The Exceptions Array Schema",
       "default": null,
       "items": {
-        "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/exceptions/items",
+        "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/exceptions/items",
         "type": "object",
         "title": "The Exception Schema",
         "default": null,
@@ -290,7 +295,7 @@
         ],
         "properties": {
           "exceptionTime": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/exceptions/items/properties/exceptionTime",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/exceptions/items/properties/exceptionTime",
             "type": "string",
             "title": "The ExceptionTime Schema",
             "description": "Time of Exception, ISO 8601 UTC",
@@ -302,7 +307,7 @@
             "format": null
           },
           "origin": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/exceptions/items/properties/origin",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/exceptions/items/properties/origin",
             "type": "string",
             "title": "The Origin Schema",
             "description": "The type of device from where the exception originates. \"sensor\" if exception when making observation, \"actuator\" if exception while making actuation",
@@ -315,10 +320,10 @@
             "pattern": "^(.*)$"
           },
           "id": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/exceptions/items/properties/id",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/exceptions/items/properties/id",
             "type": "string",
             "title": "The Id Schema",
-            "description": "IRI of device, sensor or actuator from where the exception originates",
+            "description": "IRI or ID of device, sensor or actuator from where the exception originates",
             "default": "",
             "examples": [
               "https://recref.com/actuator/a49feda7-2bc3-4793-b87f-8ec0c3909f9b/"
@@ -326,7 +331,7 @@
             "pattern": "^(.*)$"
           },
           "exception": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/exceptions/items/properties/exception",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/exceptions/items/properties/exception",
             "type": "string",
             "title": "The ExceptionMessage Schema",
             "description": "exceptionMessage, more info about exception",
@@ -337,7 +342,7 @@
             "pattern": "^(.*)$"
           },
           "retry": {
-            "$id": "https://w3id.org/rec/edge_message/3.1/#/properties/exceptions/items/properties/retry",
+            "$id": "https://w3id.org/rec/edge_message/3.1.1/#/properties/exceptions/items/properties/retry",
             "type": "integer",
             "title": "The Retry Count Schema",
             "description": "Number of retries, if it is a repeating exception",
