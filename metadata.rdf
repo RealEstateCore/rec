@@ -275,25 +275,20 @@ The copyright on the constituent parts (classes, properties, named individuals) 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
 
+    <!-- https://karlhammar.com/owl2oas/o2o.owl#endpoint -->
 
-
-    <!-- https://karlhammar.com/owl2oas/o2o.owl#ignored -->
-
-    <owl:AnnotationProperty rdf:about="https://karlhammar.com/owl2oas/o2o.owl#ignored">
-        <rdfs:comment xml:lang="en">OWL entities that are tagged with this annotation will be ignored by the owl2oas code generator.</rdfs:comment>
+    <owl:AnnotationProperty rdf:about="https://karlhammar.com/owl2oas/o2o.owl#endpoint">
+        <rdfs:comment xml:lang="en">This annotation, when applied to an OWL class that is included for processing in OWL2OAS, governs the endpoint name that is generated for the class.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://karlhammar.com/owl2oas/o2o.owl#"/>
-        <rdfs:label xml:lang="en">Ignored</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">endpoint</rdfs:label>
     </owl:AnnotationProperty>
 
+    <!-- https://karlhammar.com/owl2oas/o2o.owl#included -->
 
-
-    <!-- https://karlhammar.com/owl2oas/o2o.owl#readonly -->
-
-    <owl:AnnotationProperty rdf:about="https://karlhammar.com/owl2oas/o2o.owl#readonly">
-        <rdfs:comment xml:lang="en">OWL classes tagged with this annotation will only have accessor methods created by the OWL2OAS code generator; no POST, PUT, or DELETE operations will be created.</rdfs:comment>
+    <owl:AnnotationProperty rdf:about="https://karlhammar.com/owl2oas/o2o.owl#included">
+        <rdfs:comment xml:lang="en">Usage of this annotation, in conjunction with the ClassInclusionPolicy and PropertyInclusionPolicy run time options, coverns whether OWL entities are included or ignored by the owl2oas code generator.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://karlhammar.com/owl2oas/o2o.owl#"/>
-        <rdfs:label xml:lang="en">Read-only</rdfs:label>
+        <rdfs:label xml:lang="en">included</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:AnnotationProperty>
 </rdf:RDF>
