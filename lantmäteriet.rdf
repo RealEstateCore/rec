@@ -84,7 +84,6 @@
     <!-- https://w3id.org/rec/lfr/locationOfLfrEntrance -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/lfr/locationOfLfrEntrance">
-        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
         <rdfs:comment xml:lang="en">Association between an address location (adressplats) and its entrance (entre). Inverse to hasLfrAddressLocation and not part of the formal LFR specification.</rdfs:comment>
         <rdfs:label xml:lang="en">address location of entrance</rdfs:label>
         <rdfs:label xml:lang="sv">adressplats för entre</rdfs:label>
@@ -95,7 +94,6 @@
     <!-- https://w3id.org/rec/lfr/locationOfRealEstate -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/lfr/locationOfRealEstate">
-        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/rec/lfr/locationOfLfrEntrance"/>
             <rdf:Description rdf:about="https://w3id.org/rec/core/isPartOfBuilding"/>
