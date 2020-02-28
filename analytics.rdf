@@ -91,6 +91,14 @@
     
 
 
+    <!-- https://w3id.org/rec/core/observationGeneratedBy -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/observationGeneratedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/analytics/dataSource"/>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -161,14 +169,6 @@
     
 
 
-    <!-- https://w3id.org/rec/analytics/Observation -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/analytics/Observation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/analytics/Prediction -->
 
     <owl:Class rdf:about="https://w3id.org/rec/analytics/Prediction">
@@ -180,6 +180,14 @@
     <!-- https://w3id.org/rec/analytics/Service -->
 
     <owl:Class rdf:about="https://w3id.org/rec/analytics/Service"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/Observation -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/Observation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
