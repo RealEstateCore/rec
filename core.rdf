@@ -1159,6 +1159,42 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Sensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Sensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+        <rdfs:label xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:label>
+        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensors</o2o:endpoint>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Software -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Software">
