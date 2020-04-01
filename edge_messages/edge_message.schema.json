@@ -255,6 +255,11 @@
             "title": "The ResponseCode Schema",
             "description": "Response code from actuator",
             "default": "",
+            "enum": [
+              "success",
+              "rejected",
+              "none"
+            ],
             "examples": [
               "success",
               "rejected",
@@ -312,6 +317,11 @@
             "title": "The Origin Schema",
             "description": "The type of device from where the exception originates. \"sensor\" if exception when making observation, \"actuator\" if exception while making actuation",
             "default": "",
+            "enum": [
+              "sensor",
+              "actuator",
+              "device"
+            ],
             "examples": [
               "sensor",
               "actuator",
