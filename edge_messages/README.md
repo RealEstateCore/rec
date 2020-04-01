@@ -44,4 +44,4 @@ Actuation Command Responses `"actuationCommandResponses" actuation:actuationComm
 
 ### Exceptions
 (edge-to-cloud)  
-Exceptions `device:Exception` are sent from a core:Device, core:Sensor or core:Actuator. It includes ID `"id"` and the type of device or subclass of device that generated the exception `"origin"`. To describe the exceptino  there is a string `"exception"` and a `"retry"` property that is `1` by default, and can increment if applicable.
+Exceptions `device:Exception` are sent from a core:Device, core:Sensor or core:Actuator. It includes ID `"id"` and the type of device or subclass of device that generated the exception `"origin"`. To describe the exception  there is a string `"exception"` and a `"retry"` property that is `1` by default, and can increment if applicable.
