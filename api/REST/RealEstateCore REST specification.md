@@ -26,7 +26,7 @@ Logically an API comprises an information model and a format describing how the 
 **Principle.** The specification will at any given version stipulate the minimum set of requirements an API implementation must support to be deemed “RealEstateCore Compliant” (designated _"must"_).
 Additional functionality may be implemented and a mechanism to understanding such addendums are recommended (preferably through discoverability, see also below) (designated _"should"_).
 
-**COMMENT Here goes a diagram**
+![Requirement Diagram](api/REST/REC_API_Requirement_diagram.png)
 
 **Principle.** In addition to the minimum set of requirements, the specification comprises optional requirements which must be followed _if chosen to be included_ in an API implementation.
 
