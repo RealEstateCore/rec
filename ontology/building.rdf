@@ -1,1725 +1,724 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/rec/building/"
-     xml:base="https://w3id.org/rec/building/"
-     xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:core="https://w3id.org/rec/core/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/rec/building/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/building/3.1.1/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/core/3.1.1/"/>
-        <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
-        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:contributor>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
-        <dc:description xml:lang="en">This REC module covers different types of building components and rooms.</dc:description>
-        <dc:publisher>RealEstateCore Consortium</dc:publisher>
-        <dc:title>RealEstateCore Building Module</dc:title>
-        <dcterms:modified>2019-11-07</dcterms:modified>
-        <vann:preferredNamespacePrefix>building</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/building/3.1.1/</vann:preferredNamespaceUri>
-        <cpannotationschema:coversRequirements xml:lang="en">Are there any labs in Building 7?</cpannotationschema:coversRequirements>
-        <cpannotationschema:coversRequirements xml:lang="en">How many entrances are there to Building 7?</cpannotationschema:coversRequirements>
-        <cpannotationschema:coversRequirements xml:lang="en">How many of each type of room does Building 7 contain?</cpannotationschema:coversRequirements>
-        <cpannotationschema:coversRequirements xml:lang="en">What equipment is mounted in server rooms in Building 7?</cpannotationschema:coversRequirements>
-        <cpannotationschema:coversRequirements xml:lang="en">Which facade- or roof-mounted sensors are installed in Building 7?</cpannotationschema:coversRequirements>
-        <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.1.1</owl:versionInfo>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/rec/building/roomType -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/building/roomType">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Room"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/building/RoomType"/>
-        <rdfs:label xml:lang="en">room type</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/rec/building/Atrium -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Atrium">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Auditorium -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Auditorium">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/BackOffice -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/BackOffice">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Balcony -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Balcony">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Balcony</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/BarRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/BarRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Bathroom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Bathroom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Bedroom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Bedroom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/BicycleGarage -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/BicycleGarage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Garage"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Cabinet -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Cabinet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Cinema -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Cinema">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Classroom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Classroom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/EducationalRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/CleaningRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/CleaningRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ClimateControlRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ClimateControlRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/CloakRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/CloakRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/CoffeeRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/CoffeeRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ConferenceRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ConferenceRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ConversationRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ConversationRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/CookingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/CookingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/CopyingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/CopyingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/DataServerRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/DataServerRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/DiningRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/DiningRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/DisabledToilet -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/DisabledToilet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/PersonalHygiene"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/DishingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/DishingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/DressingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/DressingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/EducationalRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/EducationalRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ElectricityRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ElectricityRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ElevatorRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ElevatorRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ElevatorShaft -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ElevatorShaft">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Entrance -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Entrance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ExerciseRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ExerciseRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ExhibitionRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ExhibitionRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Facade -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Facade">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Facade</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/FittingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/FittingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/RetailRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Floor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Floor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Floor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/FoodHandlingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/FoodHandlingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Garage -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Garage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/GroupRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/GroupRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/EducationalRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Hallway -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Hallway">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Laboratory -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Laboratory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/LaboratoryDry -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/LaboratoryDry">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Laboratory"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/LaboratoryWet -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/LaboratoryWet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Laboratory"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/LaundryRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/LaundryRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Library -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Library">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/LivingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/LivingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/MainEntrance -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/MainEntrance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Entrance"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Office -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Office">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/OfficeLandscape -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/OfficeLandscape">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Office"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/OfficeRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/OfficeRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Office"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ParkingSlotCold -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ParkingSlotCold">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Garage"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ParkingSlotWarm -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ParkingSlotWarm">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Garage"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Pentry -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Pentry">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/PersonalHygiene -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/PersonalHygiene">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/PhoneBooth -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/PhoneBooth">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Office"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Reception -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Reception">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/RecordingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RecordingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/RecreationalRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RecreationalRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/RestingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RestingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/RetailRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RetailRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/RoofInner -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RoofInner">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Roof, inner</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/RoofOuter -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RoofOuter">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Roof, outer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/RoomType -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/RoomType">
-        <rdfs:label xml:lang="en">Room type</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room-types</o2o:endpoint>
-        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Sauna -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Sauna">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/PersonalHygiene"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ServiceEntrance -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ServiceEntrance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Entrance"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ServiceShaft -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ServiceShaft">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Shelter -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Shelter">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ShelterGasLock -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ShelterGasLock">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Shelter"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ShelterRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ShelterRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Shelter"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/ShowerRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/ShowerRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/PersonalHygiene"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Slab -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Slab">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Slab</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/SmallStudyRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/SmallStudyRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/EducationalRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/StaffRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/StaffRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Stairwell -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Stairwell">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Storage -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Storage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Storey -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Storey">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
-        <rdfs:label xml:lang="en">Storey</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">storeys</o2o:endpoint>
-        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/StoreyLevel -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/StoreyLevel">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
-        <rdfs:label xml:lang="en">Storey level</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo xml:lang="en">Deprecated in favour of :Storey</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/TelecommunicationRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/TelecommunicationRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Terrace -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Terrace">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Terrace</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Theater -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Theater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Toilet -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Toilet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/PersonalHygiene"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/TreatmentRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/TreatmentRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/TreatmentWaitingRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/TreatmentWaitingRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/TreatmentRoom"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/UtilitiesRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/UtilitiesRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/VirtualBuilding -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/VirtualBuilding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Building"/>
-        <rdfs:comment xml:lang="en">A non-physical Building. Belongs to a RealEstate.</rdfs:comment>
-        <rdfs:label xml:lang="en">Virtual building</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/VirtualBuildingComponent -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/VirtualBuildingComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">A non-physical component. Belongs to a Building . One Building may have zero, one, or many Virtual components. E.g a temperature value from an external service for the area of a building.</rdfs:comment>
-        <rdfs:label xml:lang="en">Virtual building component</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Wall -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Wall">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:label xml:lang="en">Wall</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/WallInner -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/WallInner">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Wall"/>
-        <rdfs:label xml:lang="en">Inner wall</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/WasteManagementRoom -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/WasteManagementRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/building/Workshop -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/building/Workshop">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/Room -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Room"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/rec/building/Atrium -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Atrium">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Auditorium -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Auditorium">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/BackOffice -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/BackOffice">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/BarRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/BarRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Bathroom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Bathroom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Bedroom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Bedroom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/BicycleGarage -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/BicycleGarage">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Cabinet -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Cabinet">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Cinema -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Cinema">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Classroom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Classroom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/CleaningRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/CleaningRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ClimateControlRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ClimateControlRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/CloakRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/CloakRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/CoffeeRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/CoffeeRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ConferenceRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ConferenceRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ConversationRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ConversationRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/CookingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/CookingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/CopyingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/CopyingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/DataServerRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/DataServerRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/DiningRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/DiningRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/DisabledToilet -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/DisabledToilet">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/DishingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/DishingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/DressingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/DressingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/EducationalRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/EducationalRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ElectricityRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ElectricityRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ElevatorRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ElevatorRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ElevatorShaft -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ElevatorShaft">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Entrance -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Entrance">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ExerciseRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ExerciseRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ExhibitionRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ExhibitionRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/FittingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/FittingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/FoodHandlingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/FoodHandlingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Garage -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Garage">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/GroupRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/GroupRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Hallway -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Hallway">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Laboratory -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Laboratory">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/LaboratoryDry -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/LaboratoryDry">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/LaboratoryWet -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/LaboratoryWet">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/LaundryRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/LaundryRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Library -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Library">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/LivingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/LivingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/MainEntrance -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/MainEntrance">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Office -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Office">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/OfficeLandscape -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/OfficeLandscape">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/OfficeRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/OfficeRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ParkingSlotCold -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ParkingSlotCold">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ParkingSlotWarm -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ParkingSlotWarm">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Pentry -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Pentry">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/PersonalHygiene -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/PersonalHygiene">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/PhoneBooth -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/PhoneBooth">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Reception -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Reception">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/RecordingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/RecordingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/RecreationalRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/RecreationalRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/RestingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/RestingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/RetailRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/RetailRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Sauna -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Sauna">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ServiceEntrance -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ServiceEntrance">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ServiceShaft -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ServiceShaft">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Shelter -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Shelter">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ShelterGasLock -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ShelterGasLock">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ShelterRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ShelterRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/ShowerRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ShowerRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/SmallStudyRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/SmallStudyRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/StaffRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/StaffRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Stairwell -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Stairwell">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Storage -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Storage">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/TelecommunicationRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/TelecommunicationRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Theater -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Theater">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Toilet -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Toilet">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/TreatmentRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/TreatmentRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/TreatmentWaitingRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/TreatmentWaitingRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/UtilitiesRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/UtilitiesRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/WasteManagementRoom -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/WasteManagementRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/building/Workshop -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Workshop">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Atrium">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Atrium</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Auditorium">
-        <rdfs:label xml:lang="en">Auditorium</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/BackOffice">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">BackOffice</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/BarRoom">
-        <rdfs:label xml:lang="en">BarRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Bathroom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Bathroom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Bedroom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Bedroom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/BicycleGarage">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">BicycleGarage</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Cabinet">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Cabinet</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Cinema">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Cinema</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Classroom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Classroom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/CleaningRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">CleaningRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ClimateControlRoom">
-        <rdfs:label xml:lang="en">ClimateControlRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/CloakRoom">
-        <rdfs:label xml:lang="en">CloakRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/CoffeeRoom">
-        <rdfs:label xml:lang="en">CoffeeRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ConferenceRoom">
-        <rdfs:label xml:lang="en">ConferenceRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ConversationRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ConversationRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/CookingRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">CookingRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/CopyingRoom">
-        <rdfs:label xml:lang="en">CopyingRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/DataServerRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">DataServerRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/DiningRoom">
-        <rdfs:label xml:lang="en">DiningRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/DisabledToilet">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:seeAlso xml:lang="en">RWC</rdfs:seeAlso>
-        <rdfs:label xml:lang="en">DisabledToilet</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">HWC</rdfs:seeAlso>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/DishingRoom">
-        <rdfs:label xml:lang="en">DishingRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/DressingRoom">
-        <rdfs:label xml:lang="en">DressingRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/EducationalRoom">
-        <rdfs:label xml:lang="en">EducationalRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ElectricityRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ElectricityRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ElevatorRoom">
-        <rdfs:label xml:lang="en">ElevatorRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ElevatorShaft">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ElevatorShaft</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Entrance">
-        <rdfs:label xml:lang="en">Entrance</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ExerciseRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ExerciseRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ExhibitionRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ExhibitionRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/FittingRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">FittingRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/FoodHandlingRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">FoodHandlingRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Garage">
-        <rdfs:label xml:lang="en">Garage</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/GroupRoom">
-        <rdfs:label xml:lang="en">GroupRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Hallway">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Hallway</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Laboratory">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Laboratory</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/LaboratoryDry">
-        <rdfs:comment xml:lang="en">A LaboratoryDry is a laboratory where computational or applied mathematical analyses are done on a computer-generated model to simulate a phenomenon in the physical realm.</rdfs:comment>
-        <rdfs:label xml:lang="en">LaboratoryDry</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/LaboratoryWet">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:comment xml:lang="en">A LaboratoryWet is a type of laboratory where it is necessary to handle various types of chemicals and potential &quot;wet&quot; hazards, so the room has to be carefully designed, constructed, and controlled to avoid spillage and contamination.</rdfs:comment>
-        <rdfs:label xml:lang="en">LaboratoryWet</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/LaundryRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">LaundryRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Library">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Library</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/LivingRoom">
-        <rdfs:label xml:lang="en">LivingRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/MainEntrance">
-        <rdfs:label xml:lang="en">MainEntrance</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Office">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Office</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/OfficeLandscape">
-        <rdfs:label xml:lang="en">OfficeLandscape</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/OfficeRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">OfficeRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ParkingSlotCold">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ParkingSlotCold</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ParkingSlotWarm">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ParkingSlotWarm</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Pentry">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Pentry</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/PersonalHygiene">
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:core="https://w3id.org/rec/core/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://w3id.org/rec/building/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="https://w3id.org/rec/building/">
+  <owl:Ontology rdf:about="">
+    <dc:creator>Erik Wallin</dc:creator>
+    <cpannotationschema:coversRequirements xml:lang="en">Which facade- or roof-mounted sensors are installed in Building 7?</cpannotationschema:coversRequirements>
+    <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
+    <dcterms:modified>2019-11-07</dcterms:modified>
+    <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
+    <owl:imports rdf:resource="https://w3id.org/rec/core/3.1.1/"/>
+    <dc:contributor>Karl Hammar</dc:contributor>
+    <vann:preferredNamespacePrefix>building</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://w3id.org/rec/building/3.1.1/</vann:preferredNamespaceUri>
+    <dc:description xml:lang="en">This REC module covers different types of building components and rooms.</dc:description>
+    <cpannotationschema:coversRequirements xml:lang="en">What equipment is mounted in server rooms in Building 7?</cpannotationschema:coversRequirements>
+    <owl:versionInfo>3.1.1</owl:versionInfo>
+    <cpannotationschema:coversRequirements xml:lang="en">How many entrances are there to Building 7?</cpannotationschema:coversRequirements>
+    <cpannotationschema:coversRequirements xml:lang="en">How many of each type of room does Building 7 contain?</cpannotationschema:coversRequirements>
+    <dc:title>RealEstateCore Building Module</dc:title>
+    <owl:versionIRI rdf:resource="https://w3id.org/rec/building/3.1.1/"/>
+    <cpannotationschema:coversRequirements xml:lang="en">Are there any labs in Building 7?</cpannotationschema:coversRequirements>
+    <dc:publisher>RealEstateCore Consortium</dc:publisher>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://w3id.org/rec/core/Room"/>
+  <owl:Class rdf:about="https://w3id.org/rec/building/VirtualBuilding">
+    <rdfs:label xml:lang="en">Virtual building</rdfs:label>
+    <rdfs:comment xml:lang="en">A non-physical Building. Belongs to a RealEstate.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Building"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/Balcony">
+    <rdfs:label xml:lang="en">Balcony</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/Facade">
+    <rdfs:label xml:lang="en">Facade</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/Terrace">
+    <rdfs:label xml:lang="en">Terrace</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/RoofInner">
+    <rdfs:label xml:lang="en">Roof, inner</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/RoomType">
+    <o2o:endpoint>roomtype</o2o:endpoint>
+    <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</o2o:included>
+    <rdfs:label xml:lang="en">Room type</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/Wall">
+    <rdfs:label xml:lang="en">Wall</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/StoreyLevel">
+    <owl:versionInfo xml:lang="en">Deprecated in favour of :Storey</owl:versionInfo>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">Storey level</rdfs:label>
+    <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/WallInner">
+    <rdfs:label xml:lang="en">Inner wall</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Wall"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/Floor">
+    <rdfs:label xml:lang="en">Floor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/Slab">
+    <rdfs:label xml:lang="en">Slab</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/RoofOuter">
+    <rdfs:label xml:lang="en">Roof, outer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/VirtualBuildingComponent">
+    <rdfs:label xml:lang="en">Virtual building component</rdfs:label>
+    <rdfs:comment xml:lang="en">A non-physical component. Belongs to a Building . One Building may have zero, one, or many Virtual components. E.g a temperature value from an external service for the area of a building.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/rec/building/Storey">
+    <o2o:endpoint>storey</o2o:endpoint>
+    <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</o2o:included>
+    <rdfs:label xml:lang="en">Storey</rdfs:label>
+    <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://w3id.org/rec/building/roomType">
+    <rdfs:label xml:lang="en">room type</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    <rdfs:domain rdf:resource="https://w3id.org/rec/core/Room"/>
+  </owl:ObjectProperty>
+  <RoomType rdf:about="https://w3id.org/rec/building/Cinema">
+    <rdfs:label xml:lang="en">Cinema</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Reception">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">Reception</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Sauna">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">Sauna</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/PersonalHygiene">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
         <rdfs:label xml:lang="en">PersonalHygiene</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/PhoneBooth">
-        <rdfs:label xml:lang="en">PhoneBooth</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Reception">
-        <rdfs:label xml:lang="en">Reception</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/RecordingRoom">
-        <rdfs:comment xml:lang="en">Room for making audio and/or video recordings. A.ka. studio.</rdfs:comment>
-        <rdfs:label xml:lang="en">RecordingRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/RecreationalRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">RecreationalRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/RestingRoom">
-        <rdfs:label xml:lang="en">RestingRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/RetailRoom">
-        <rdfs:label xml:lang="en">RetailRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Sauna">
-        <rdfs:label xml:lang="en">Sauna</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ServiceEntrance">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ServiceEntrance</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ServiceShaft">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ServiceShaft</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Shelter">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Shelter</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ShelterGasLock">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ShelterGasLock</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ShelterRoom">
-        <rdfs:label xml:lang="en">ShelterRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/ShowerRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">ShowerRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/SmallStudyRoom">
-        <rdfs:label xml:lang="en">SmallStudyRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/StaffRoom">
-        <rdfs:comment xml:lang="en">Room for staff to take breaks.</rdfs:comment>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">StaffRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Stairwell">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Stairwell</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Storage">
-        <rdfs:label xml:lang="en">Storage</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/TelecommunicationRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">TelecommunicationRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Theater">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">Theater</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Toilet">
-        <rdfs:label xml:lang="en">Toilet</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/TreatmentRoom">
-        <rdfs:label xml:lang="en">TreatmentRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:comment xml:lang="en">For e.g. medical or other treatment or consultation.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/TreatmentWaitingRoom">
-        <rdfs:label xml:lang="en">TreatmentWaitingRoom</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/UtilitiesRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/TelecommunicationRoom">
+    <rdfs:label xml:lang="en">TelecommunicationRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/UtilitiesRoom">
         <rdfs:label xml:lang="en">UtilitiesRoom</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/WasteManagementRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <rdfs:label xml:lang="en">WasteManagementRoom</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">Recycling room</rdfs:seeAlso>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/building/Workshop">
-        <rdfs:label xml:lang="en">Workshop</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </rdf:Description>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/BicycleGarage">
+    <rdfs:label xml:lang="en">BicycleGarage</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/Garage">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdfs:label xml:lang="en">Garage</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/DataServerRoom">
+    <rdfs:label xml:lang="en">DataServerRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ExhibitionRoom">
+    <rdfs:label xml:lang="en">ExhibitionRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Classroom">
+    <rdfs:label xml:lang="en">Classroom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/EducationalRoom">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdfs:label xml:lang="en">EducationalRoom</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/StaffRoom">
+    <rdfs:label xml:lang="en">StaffRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:comment xml:lang="en">Room for staff to take breaks.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Stairwell">
+    <rdfs:label xml:lang="en">Stairwell</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ElevatorShaft">
+    <rdfs:label xml:lang="en">ElevatorShaft</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/LaboratoryWet">
+    <rdfs:label xml:lang="en">LaboratoryWet</rdfs:label>
+    <rdfs:comment xml:lang="en">A LaboratoryWet is a type of laboratory where it is necessary to handle various types of chemicals and potential "wet" hazards, so the room has to be carefully designed, constructed, and controlled to avoid spillage and contamination.</rdfs:comment>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/Laboratory">
+        <rdfs:label xml:lang="en">Laboratory</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/SmallStudyRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">SmallStudyRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/EducationalRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Auditorium">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">Auditorium</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ShelterGasLock">
+    <rdfs:label xml:lang="en">ShelterGasLock</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/Shelter">
+        <rdfs:label xml:lang="en">Shelter</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ParkingSlotWarm">
+    <rdfs:label xml:lang="en">ParkingSlotWarm</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Garage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/RecreationalRoom">
+    <rdfs:label xml:lang="en">RecreationalRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/FittingRoom">
+    <rdfs:label xml:lang="en">FittingRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/RetailRoom">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdfs:label xml:lang="en">RetailRoom</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/TreatmentWaitingRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">TreatmentWaitingRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/TreatmentRoom">
+        <rdfs:comment xml:lang="en">For e.g. medical or other treatment or consultation.</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdfs:label xml:lang="en">TreatmentRoom</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ClimateControlRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">ClimateControlRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Toilet">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">Toilet</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/PersonalHygiene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ServiceEntrance">
+    <rdfs:label xml:lang="en">ServiceEntrance</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/Entrance">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdfs:label xml:lang="en">Entrance</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Theater">
+    <rdfs:label xml:lang="en">Theater</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/CloakRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">CloakRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/LivingRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">LivingRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/CopyingRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">CopyingRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/CoffeeRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">CoffeeRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/FoodHandlingRoom">
+        <rdfs:label xml:lang="en">FoodHandlingRoom</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/DressingRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">DressingRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ServiceShaft">
+    <rdfs:label xml:lang="en">ServiceShaft</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/PhoneBooth">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">PhoneBooth</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf>
+      <RoomType rdf:about="https://w3id.org/rec/building/Office">
+        <rdfs:label xml:lang="en">Office</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:deprecated>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </RoomType>
+    </rdfs:subClassOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/MainEntrance">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">MainEntrance</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Entrance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/CleaningRoom">
+    <rdfs:label xml:lang="en">CleaningRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ParkingSlotCold">
+    <rdfs:label xml:lang="en">ParkingSlotCold</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Garage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/GroupRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">GroupRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/EducationalRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/LaboratoryDry">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">LaboratoryDry</rdfs:label>
+    <rdfs:comment xml:lang="en">A LaboratoryDry is a laboratory where computational or applied mathematical analyses are done on a computer-generated model to simulate a phenomenon in the physical realm.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Laboratory"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ElevatorRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">ElevatorRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ShowerRoom">
+    <rdfs:label xml:lang="en">ShowerRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/PersonalHygiene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Bathroom">
+    <rdfs:label xml:lang="en">Bathroom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/BackOffice">
+    <rdfs:label xml:lang="en">BackOffice</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Bedroom">
+    <rdfs:label xml:lang="en">Bedroom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Hallway">
+    <rdfs:label xml:lang="en">Hallway</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/RestingRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">RestingRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ExerciseRoom">
+    <rdfs:label xml:lang="en">ExerciseRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/CookingRoom">
+    <rdfs:label xml:lang="en">CookingRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/BarRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">BarRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Library">
+    <rdfs:label xml:lang="en">Library</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ShelterRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">ShelterRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Shelter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/OfficeRoom">
+    <rdfs:label xml:lang="en">OfficeRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Office"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/OfficeLandscape">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">OfficeLandscape</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Office"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/RecordingRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">RecordingRoom</rdfs:label>
+    <rdfs:comment xml:lang="en">Room for making audio and/or video recordings. A.ka. studio.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/DishingRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">DishingRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Atrium">
+    <rdfs:label xml:lang="en">Atrium</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ElectricityRoom">
+    <rdfs:label xml:lang="en">ElectricityRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/DiningRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">DiningRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Workshop">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">Workshop</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/WasteManagementRoom">
+    <rdfs:seeAlso xml:lang="en">Recycling room</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">WasteManagementRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Storage">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">Storage</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ConferenceRoom">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdfs:label xml:lang="en">ConferenceRoom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/ConversationRoom">
+    <rdfs:label xml:lang="en">ConversationRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/DisabledToilet">
+    <rdfs:seeAlso xml:lang="en">HWC</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">DisabledToilet</rdfs:label>
+    <rdfs:seeAlso xml:lang="en">RWC</rdfs:seeAlso>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/PersonalHygiene"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/LaundryRoom">
+    <rdfs:label xml:lang="en">LaundryRoom</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Cabinet">
+    <rdfs:label xml:lang="en">Cabinet</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
+  <RoomType rdf:about="https://w3id.org/rec/building/Pentry">
+    <rdfs:label xml:lang="en">Pentry</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</owl:deprecated>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </RoomType>
 </rdf:RDF>
 
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
+<!-- Created with TopBraid -->
