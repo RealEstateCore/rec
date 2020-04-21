@@ -24,11 +24,13 @@ Logically an API comprises an information model and a format describing how the 
 **Principle.** REC stems from the semantic web and the format for the API will to the largest possible extent embrace linked data concepts, such as JSON-LD.
 
 **Principle.** The specification will at any given version stipulate the minimum set of requirements an API implementation must support to be deemed “RealEstateCore Compliant” (designated _"must"_).
-Additional functionality may be implemented and a mechanism to understanding such addendums are recommended (preferably through discoverability, see also below) (designated _"should"_).
+Additional functionality may be implemented and a mechanism to understanding such addendums are recommended (preferably through discoverability, see also below).
 
-![Requirement Diagram](https://raw.github.com/realestatecore/rec/blob/master/api/REST/REC_API_Requirement_diagram.png)
+**Principle.** In addition to the minimum set of requirements, the specification comprises optional requirements which must be followed _if chosen to be included_ in an API implementation (designated _"should"_).
 
-**Principle.** In addition to the minimum set of requirements, the specification comprises optional requirements which must be followed _if chosen to be included_ in an API implementation.
+![Requirement Diagram](https://raw.github.com/realestatecore/rec/blob/3.1.1/api/REST/REC_API_Requirement_diagram.png)
+
+Furthermore, recommendations are expressed for areas where the REC Consortium considers to add requirements in the future. 
 
 ## Releases
 
@@ -44,7 +46,7 @@ However it's recommended for API implementations to authenticate via Oauth2 or O
 
 As an API implementation may have additional features and functionality to that which is required in this specification some mechanism for discovery is desirable. The REC Consortium is considering if and when and how to add programmatic discoverability to this specification.
 
-**Principle. (_should_)** Discoverability is not required. It is however recommended to implement discoverability on ontology level. The OAS (Swagger) implementation by the REC Consortium exposes an endpoint for supported REC modules.
+**Principle.** Discoverability is not required. It is however recommended to implement discoverability on ontology level. The OAS (Swagger) implementation by the REC Consortium exposes an endpoint for supported REC modules.
 
 ## Service Endpoints
 
@@ -61,32 +63,30 @@ As an API implementation may have additional features and functionality to that 
 
 ### Resource paths
 
-**Principle.** Collections of individuals may be requested on a path similar to their REC class. The specification mandates only a subset of REC classes.
-For example `/realestate`
+**Principle.** Collections of individuals must be requested on a path similar to their REC class. For example `/realestate`. The specification mandates only a subset of REC classes. 
 
-**Principle.** A specific individual may be requested on a path comprising their REC class and identity (iri),
-for example `/realestate/<iri>`
+**Principle.** A specific individual must be requested on a path comprising their REC class and identity (iri),
+for example `/realestate/<iri>`.
 
-**Principle.** Queries to a root class endpoint (e.g. RealEstateComponent) should return individuals of that class and individuals of its subclasses (e.g. Building).
+**Principle.** Queries to a root class endpoint (e.g. RealEstateComponent) must return individuals of that class and individuals of its subclasses (e.g. Building).
 
-**Principle.** Queries to a leaf class endpoint (e.g. Building) should return only individuals of that class.
+**Principle.** Queries to a leaf class endpoint (e.g. Building) must return only individuals of that class.
 
 ## Requests
 
 ### Simple queries
 
-**Principle. (_should_)** All REC object and data properties shall be searchable with traditional query parameters where `?property=value`
+**Principle.** All REC object and data properties should be searchable with traditional query parameters where `?property=value`
 
-**Principle. (_should_)** Querying with constraints on the value should be implemented with an JSON:API inspired operator based query with the format `property[operator]=value` where operator can take different values such as
+**Principle.** Querying with constraints on the value should be implemented with an JSON:API inspired operator based query with the format `property[operator]=value` where operator can take different values such as
 `eq` (equal), `gt` (greater than), `gte` (greater than or equal), `lt`, `lte` for numbers and
 `contains` and `regex` for substring queries. This format and the list of operators may be specified in the future.
 
 ### Time interval queries
 
-For queries on time intervals (time series data, series of data points) it is important to clarify if the endpoints are inclusive or exclusive. That is, if for instance a day is used as an end time shall data points for that day be returned or not.
+For queries on time intervals (time series data, series of data points) it is important to clarify if the endpoints are inclusive or exclusive. That is, if for instance a day is used as an end time shall data points for that day be returned or not?
 
-**Principle. (_should_)** Using the same operator based query format as above API implementations should use `starting` and `ending` operators to imply inclusion, and `before` and `after` to imply exclusion, and
-furthermore `latest` may be used as well with value true. This applies to all Time data properties (e.g. hasObservationTime). For example `?hasObservationTime[starting]=2019-02-14`
+**Principle.** Using the same operator based query format as above API implementations should use `starting` and `ending` operators to imply inclusion, and `before` and `after` to imply exclusion, and furthermore `latest` may be used as well with value true. This applies to all Time data properties (e.g. hasObservationTime). For example `?hasObservationTime[starting]=2019-02-14`
 
 **Principle.** Time values are serialized according to ISO 8601.
 
@@ -95,7 +95,7 @@ Note, an implementation must decide what absence of a time interval operator is 
 - every data point up to, or
 - from a specific implementation based start date (either relative, e.g. a year back, or absolute, e.g. 2018-01-01)?
 
-**Principle. (_should_)** Absence of time interval operators is an implementation detail and the REC Consortium doesn't intend to specify this.
+**Principle.** Absence of time interval operators is an implementation detail and the REC Consortium doesn't intend to specify this.
 
 ### Pagination
 
@@ -110,16 +110,15 @@ For example `?page=3&size=10` or `?page=0&size=10` for the first page.
 
 ### Sorting
 
-**Principle. (_should_)** Sorting follows JSON:API
+**Principle.** Sorting follows JSON:API
 
-Sorting is using a sort query parameter and should allow sorting on all REC properties that are potentially returned plus type and identity (iri).
-For example `?sort=type`
+Sorting is using a sort query parameter and should allow sorting on all REC properties that are potentially returned plus type and identity (iri). For example `?sort=type`.
 
 ### Advanced queries
 
 Existing API implementations already employs more complex queries where paths in the graph of individuals are queried. For instance queries like “all sensors on a building” or “all buildings near a geo location”, etc. The REC Consortium expects in the future to specify advanced query formats.
 
-**Principle. (_should_)** For now, advanced queries are not required.
+**Principle.** For now, advanced queries are not required.
 
 However, implementations are encouraged to include path queries (and other complex queries) and share with the REC community.
 
@@ -142,20 +141,11 @@ For requests that return a resource collection (expected to return many individu
 
 See the [Hydra Core Vocabulary](https://www.hydra-cg.com/spec/latest/core/) for further information. This [example](https://www.hydra-cg.com/spec/latest/core/#example-15-referencing-related-resources-using-a-hydra-collection) demonstrates use of the hydra:Collection.
 
-### Errors
-
-**Principle. (should)** Error responses follows JSON:API
-
-This implies that errors are returned as `{ errors: [ { error },... ] }`
-
-Note that the REC Consortium is investigating to use the Hydra Status and Error classes which may be specified in a coming release.
-
 ### HTTP status codes
 
 **Principle.** Only a few HTTP status codes shall be required. Others may be used.
 
-The minimum viable set of status codes comprise:  
-(_"must"_)
+The minimum viable set of status codes an implementation must comprise:  
 - 200 OK, used for successful GET, PUT, PATCH and DELETE
 - 201 Created, used for successful POST
 - 400 Bad Request, for malformed (unknown) endpoint or query parameters
@@ -163,10 +153,15 @@ The minimum viable set of status codes comprise:
 - 500 Internal Server Error
 
 Implementations are furthermore recommended to make use of:  
-(_"should"_)
 - 401 Unauthorized, for unauthenticated clients
 - 403 Forbidden, for requests to resources the client is not authorized for
 - 503 Service Unavailable, for temporary service interruptions (maintenance, overload)
+
+### Errors
+
+**Principle.** Several practices for error handling is emerging. The REC Consortium is following these but have made no decision as of today on which, if any, to require.
+
+Specifically, the REC Consortium is investigating to use the Hydra Status and Error classes.
 
 # Requirements
 
@@ -180,11 +175,11 @@ Requirements are formalized in the table below. The use of SHOULD implies an opt
 | --------------------- | ---- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Service Endpoints** |      |           |
 | HTTP Verbs            | E.1  | MUST      | Use `POST` for create, `GET` for retrieve, `DELETE` for delete, `PUT` for update of full individual and `PATCH` for partial update of individual.                                                                                                                                                                            |
-| Resource Paths        | E.2  | MUST      | Use REC class for collections of individuals or creation of an individual. The REC class label is lowercased in the resource path. For example, `/realestate`. **COMMENT Needs update when discussed**                                                                                                                       |
-|                       | E.3  | MUST      | Use REC class plus identity (iri) for individuals. For example, `/realestate/<iri>`.                                                                                                                                                                                                                                         |
+| Resource Paths        | E.2  | MUST      | Use the REC class local identifier for collections of individuals or creation of an individual. The REC class is lowercased in the resource path. For example, `/realestate`.                                                                                                                       |
+|                       | E.3  | MUST      | Use the REC class plus identity (iri) for individuals. For example, `/realestate/<iri>`.                                                                                                                                                                                                                                         |
 |                       | E.4  | MUST      | Implement the following subset of REC classes as a minimum; `ActuationInterface`, `Actuator`, `BuildingComponent`, `Device`, `RealEstate`, `RealEstateComponent`, `Sensor`, and `Storey`.                                                                                                                                    |
 | **Requests**          |
-| Simple Queries        | RQ.1 | MUST      | Implement a basic query parameter format `?<RecProperty>=<value>`for all REC object and data properties.                                                                                                                                                                                                                     |
+| Simple Queries        | RQ.1 | SHOULD      | Implement a basic query parameter format `?<RecProperty>=<value>`for all REC object and data properties.                                                                                                                                                                                                                     |
 |                       | RQ.2 | SHOULD    | Implement operators in queries with an extended query format `?<RecProperty>[<operator>]=<value>` where `<operator>` is one of the following; `eq`,`regex` or `contains`. Note `eq` must return same responses as the basic query format (RQ.1)                                                                              |
 | Time Interval Queries | RQ.3 | SHOULD    | Implement extended query format for all REC time data properties `?<RecTimeProperty>[<operator>]=<value>` where `<operator>` is one of the following `starting`, `ending`, `before`, `after` or `latest` and `<value>` is a valid JSON datetime serialization (unless the operator is `latest` in which case `true` is used) |
 | Pagination            | RQ.4 | SHOULD    | Support `hydra:PartialCollectionView` in `hydra:Collection` responses.                                                                                                                                                                                                                                                       |
@@ -192,5 +187,4 @@ Requirements are formalized in the table below. The use of SHOULD implies an opt
 | **Responses**         |
 | JSON-LD               | RS.1 | MUST      | Respond with JSON-LD formatted documents.                                                                                                                                                                                                                                                                                    |
 | Response Formats      | RS.2 | MUST      | Respond with `hydra:Collection` for resource collections and a plain JSON-LD object for individual resources.                                                                                                                                                                                                                |
-| Errors                | RS.3 | SHOULD    | Respond with error format `{ errors: [ { error }, ... ]}` or according to Hydra Status or Hydra Error.                                                                              |
 | Status Codes          | RS.4 | MUST      | Implement support for `200 OK`, `201 Created`, `400 Bad Request`, `404 Not Found` and `500 Internal Server Error`.                                                                                                                                                                                                           |
