@@ -1,44 +1,49 @@
 <?xml version="1.0"?>
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:lease="https://w3id.org/rec/lease/"
-    xmlns:core="https://w3id.org/rec/core/"
-    xmlns="https://w3id.org/rec/full/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:agents="https://w3id.org/rec/agents/"
-    xmlns:building="https://w3id.org/rec/building/"
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:actuation="https://w3id.org/rec/actuation/"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:vann="http://purl.org/vocab/vann/"
-    xmlns:device="https://w3id.org/rec/device/"
-    xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-  xml:base="https://w3id.org/rec/full/">
-  <owl:Ontology rdf:about="">
-    <dc:title>RealEstateCore Full</dc:title>
-    <dc:description xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</dc:description>
-    <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
-    <dc:creator>Erik Wallin</dc:creator>
-    <dc:publisher>RealEstateCore Consortium</dc:publisher>
-    <dc:contributor>Peter Hartlev</dc:contributor>
-    <owl:imports rdf:resource="https://w3id.org/rec/device/3.1.1/"/>
-    <dcterms:modified>2020-04-21</dcterms:modified>
-    <owl:imports rdf:resource="https://w3id.org/rec/agents/3.1.1/"/>
-    <owl:imports rdf:resource="https://w3id.org/rec/actuation/3.1.1/"/>
-    <owl:imports rdf:resource="https://w3id.org/rec/building/3.1.1/"/>
-    <dc:contributor>Per Karlberg</dc:contributor>
-    <dc:contributor>Joakim Eriksson</dc:contributor>
-    <owl:imports rdf:resource="https://w3id.org/rec/lease/3.1.1/"/>
-    <owl:imports rdf:resource="https://w3id.org/rec/core/3.1.1/"/>
-    <rdfs:comment xml:lang="en">Version 3.1.1 is a minor release of REC that contains:
+<rdf:RDF xmlns="https://w3id.org/rec/full/"
+     xml:base="https://w3id.org/rec/full/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="https://w3id.org/rec/core/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:lease="https://w3id.org/rec/lease/"
+     xmlns:agents="https://w3id.org/rec/agents/"
+     xmlns:device="https://w3id.org/rec/device/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:building="https://w3id.org/rec/building/"
+     xmlns:actuation="https://w3id.org/rec/actuation/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/rec/full/">
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/full/3.1.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/actuation/3.1.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/agents/3.1.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/building/3.1.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.1.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/device/3.1.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/lease/3.1.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.1.1/"/>
+        <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <dc:contributor>Håkan Eriksson</dc:contributor>
+        <dc:contributor>Joakim Eriksson</dc:contributor>
+        <dc:contributor>Per Karlberg</dc:contributor>
+        <dc:contributor>Peter Hartlev</dc:contributor>
+        <dc:creator>Erik Wallin</dc:creator>
+        <dc:creator>Karl Hammar</dc:creator>
+        <dc:description xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</dc:description>
+        <dc:publisher>RealEstateCore Consortium</dc:publisher>
+        <dc:title>RealEstateCore Full</dc:title>
+        <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.1.1/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Version 3.1.1 is a minor release of REC that contains:
 
-* O2O annotations used by the OWL2OAS generator when building the official REC REST API
-* Minor spelling fixes.
+* O2O annotations used by the OWL2OAS generator when building the official REC REST API.
+* Spelling fixes.
 
 Version 3.1 is a feature release of REC that contains:
 
@@ -59,14 +64,11 @@ Version 3.0 is a major and compatibility-breaking refactoring of REC:
 * All entities have been assigned rdfs:labels and the large majority rdfs:comments.
 * The modules have been documented with metadata using DC, CC, VANN, cpannotationschema, etc.
 * All IRI:s are now HTTPS</rdfs:comment>
-    <dc:contributor>Håkan Eriksson</dc:contributor>
-    <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.1.1/"/>
-    <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.1.1/</vann:preferredNamespaceUri>
-    <owl:versionIRI rdf:resource="https://w3id.org/rec/full/3.1.1/"/>
-    <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
-    <owl:versionInfo xml:lang="en">3.1.1</owl:versionInfo>
-    <dc:creator>Karl Hammar</dc:creator>
-  </owl:Ontology>
+        <owl:versionInfo xml:lang="en">3.1.1</owl:versionInfo>
+    </owl:Ontology>
 </rdf:RDF>
 
-<!-- Created with TopBraid -->
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
