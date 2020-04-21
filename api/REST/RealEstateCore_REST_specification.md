@@ -1,12 +1,11 @@
-# REST API Specification
+# RealEstateCore REST API Specification
 
-_This specification defines the first version of the RealEstateCore REST API._
+_This specification defines the first version of the RealEstateCore REST API.  
+It comprises a non-normative section where principles for the REST API is described. And a normative section where requirements for being and API to be "RealEstateCore Compliant" are stated._
 
-_It comprises a non-normative section where principles for the REST API is described. And a normative section where requirements for being "RealEstateCore API Compliant" are stated._
+_Formally, the API is specified via an Open API Specification (formerly Swagger API) generated from the OWL ontology. See [\*\*insert link to OAS .../api/REST/rec-full-v3.1.1.yaml\*\* ]_
 
-**COMMENT We should have a note to Swagger of some kind here**
-
-_Throughout this specification RealEstateCore will be abbreviated to REC_
+_Throughout this specification RealEstateCore may be abbreviated to REC._
 
 _The REC Consortium invites comments and suggestions regarding the specification through GitHub Issues or Gitter._
 
@@ -14,7 +13,7 @@ _The REC Consortium invites comments and suggestions regarding the specification
 
 ## General
 
-**Principle.** The REC Consortium have decided to keep the initial specification quite narrow in its required scope while giving guidance to how the specification may evolve.
+**Principle.** The RealEstateCore Consortium have decided to keep the initial specification quite narrow in its required scope while giving guidance to how the specification may evolve.
 
 **Principle.** The REC Consortium strives to the largest possible extent to adapt to REST API best practices.
 
@@ -24,10 +23,10 @@ Logically an API comprises an information model and a format describing how the 
 
 **Principle.** REC stems from the semantic web and the format for the API will to the largest possible extent embrace linked data concepts, such as JSON-LD.
 
-**Principle.** The specification will at any given version stipulate the minimum set of requirements an API implementation must support to be deemed “RealEstateCore API Compliant”.
-Additional functionality may be implemented and a mechanism to understanding such addendums are recommended (preferably through discoverability, see also below).
+**Principle.** The specification will at any given version stipulate the minimum set of requirements an API implementation must support to be deemed “RealEstateCore Compliant” (designated _"must"_).
+Additional functionality may be implemented and a mechanism to understanding such addendums are recommended (preferably through discoverability, see also below) (designated _"should"_).
 
-**COMMENT Here goes a diagram**
+![Requirement Diagram](https://raw.github.com/realestatecore/rec/blob/master/api/REST/REC_API_Requirement_diagram.png)
 
 **Principle.** In addition to the minimum set of requirements, the specification comprises optional requirements which must be followed _if chosen to be included_ in an API implementation.
 
@@ -45,9 +44,7 @@ However it's recommended for API implementations to authenticate via Oauth2 or O
 
 As an API implementation may have additional features and functionality to that which is required in this specification some mechanism for discovery is desirable. The REC Consortium is considering if and when and how to add programmatic discoverability to this specification.
 
-**Principle.** For now, discoverability is not required.
-
-It is however recommended to implement discoverability on ontology level. The OAS (Swagger) implementation by the REC Consortium exposes an endpoint for supported REC modules.
+**Principle. (_should_)** Discoverability is not required. It is however recommended to implement discoverability on ontology level. The OAS (Swagger) implementation by the REC Consortium exposes an endpoint for supported REC modules.
 
 ## Service Endpoints
 
@@ -67,22 +64,20 @@ It is however recommended to implement discoverability on ontology level. The OA
 **Principle.** Collections of individuals may be requested on a path similar to their REC class. The specification mandates only a subset of REC classes.
 For example `/realestate`
 
-**COMMENT this is not true I gather, we generally support `core:realestate`or in certain cases where annotations have been set `realestates` - BUT also we agreed in one of the API hash-out meetings to have annotations with plural for all REC classes**
-
-**I recommend we require either a non-prefixed form based on REC class, eg `realestate` or the annotated http resources in plural**
-
 **Principle.** A specific individual may be requested on a path comprising their REC class and identity (iri),
 for example `/realestate/<iri>`
 
-**Principle.** <Root classes, subclasses and leaf classes.> **COMMENT cannot seem to find any documentation on this???**
+**Principle.** Queries to a root class endpoint (e.g. RealEstateComponent) should return individuals of that class and individuals of its subclasses (e.g. Building).
+
+**Principle.** Queries to a leaf class endpoint (e.g. Building) should return only individuals of that class.
 
 ## Requests
 
 ### Simple queries
 
-**Principle.** All REC object and data properties shall be searchable with traditional query parameters where `?property=value`
+**Principle. (_should_)** All REC object and data properties shall be searchable with traditional query parameters where `?property=value`
 
-**Principle.** Querying with constraints on the value should be implemented with an JSON:API inspired operator based query with the format `property[operator]=value` where operator can take different values such as
+**Principle. (_should_)** Querying with constraints on the value should be implemented with an JSON:API inspired operator based query with the format `property[operator]=value` where operator can take different values such as
 `eq` (equal), `gt` (greater than), `gte` (greater than or equal), `lt`, `lte` for numbers and
 `contains` and `regex` for substring queries. This format and the list of operators may be specified in the future.
 
@@ -90,7 +85,7 @@ for example `/realestate/<iri>`
 
 For queries on time intervals (time series data, series of data points) it is important to clarify if the endpoints are inclusive or exclusive. That is, if for instance a day is used as an end time shall data points for that day be returned or not.
 
-**Principle.** Using the same operator based query format as above API implementations should use `starting` and `ending` operators to imply inclusion, and `before` and `after` to imply exclusion, and
+**Principle. (_should_)** Using the same operator based query format as above API implementations should use `starting` and `ending` operators to imply inclusion, and `before` and `after` to imply exclusion, and
 furthermore `latest` may be used as well with value true. This applies to all Time data properties (e.g. hasObservationTime). For example `?hasObservationTime[starting]=2019-02-14`
 
 **Principle.** Time values are serialized according to ISO 8601.
@@ -100,7 +95,7 @@ Note, an implementation must decide what absence of a time interval operator is 
 - every data point up to, or
 - from a specific implementation based start date (either relative, e.g. a year back, or absolute, e.g. 2018-01-01)?
 
-**Principle.** Absence of time interval operators is an implementation detail and the REC Consortium doesn't intend to specify this.
+**Principle. (_should_)** Absence of time interval operators is an implementation detail and the REC Consortium doesn't intend to specify this.
 
 ### Pagination
 
@@ -108,13 +103,14 @@ Note, an implementation must decide what absence of a time interval operator is 
 
 See the [Hydra Core Vocabulary](https://www.hydra-cg.com/spec/latest/core/) for further information. This [example](https://www.hydra-cg.com/spec/latest/core/#example-16-a-hydra-partialcollectionview-splits-a-collection-into-multiple-views) demonstrates use of the hydra:PartialCollectionView.
 
-Hydra is agnostic to pagination method. The specification require page based pagination. For example `?page=3`.
+Hydra is agnostic to exact pagination method, however to keep RealEstateCore APIs consitent across implementations, they must use pagination parameters `page` (0 indexed) and `size`.  
 
-**COMMENT unclear to me how the page size is set with hydra??? Perhaps this is an implementation specific detail???**
+For example `?page=3&size=10` or `?page=0&size=10` for the first page.
+
 
 ### Sorting
 
-**Principle.** Sorting follows JSON:API
+**Principle. (_should_)** Sorting follows JSON:API
 
 Sorting is using a sort query parameter and should allow sorting on all REC properties that are potentially returned plus type and identity (iri).
 For example `?sort=type`
@@ -123,7 +119,7 @@ For example `?sort=type`
 
 Existing API implementations already employs more complex queries where paths in the graph of individuals are queried. For instance queries like “all sensors on a building” or “all buildings near a geo location”, etc. The REC Consortium expects in the future to specify advanced query formats.
 
-**Principle.** For now, advanced queries are not required.
+**Principle. (_should_)** For now, advanced queries are not required.
 
 However, implementations are encouraged to include path queries (and other complex queries) and share with the REC community.
 
@@ -148,7 +144,7 @@ See the [Hydra Core Vocabulary](https://www.hydra-cg.com/spec/latest/core/) for 
 
 ### Errors
 
-**Principle.** Error responses follows JSON:API
+**Principle. (should)** Error responses follows JSON:API
 
 This implies that errors are returned as `{ errors: [ { error },... ] }`
 
@@ -158,23 +154,23 @@ Note that the REC Consortium is investigating to use the Hydra Status and Error 
 
 **Principle.** Only a few HTTP status codes shall be required. Others may be used.
 
-The minimum viable set of status codes comprise
-
+The minimum viable set of status codes comprise:  
+(_"must"_)
 - 200 OK, used for successful GET, PUT, PATCH and DELETE
 - 201 Created, used for successful POST
 - 400 Bad Request, for malformed (unknown) endpoint or query parameters
 - 404 Not Found, requested individual(s) does not exist (note queries that returns empty lists responds with 200)
 - 500 Internal Server Error
 
-Implementations are furthermore recommended to make use of
-
+Implementations are furthermore recommended to make use of:  
+(_"should"_)
 - 401 Unauthorized, for unauthenticated clients
 - 403 Forbidden, for requests to resources the client is not authorized for
 - 503 Service Unavailable, for temporary service interruptions (maintenance, overload)
 
 # Requirements
 
-This section summarizes the formal requirements on an API implementation to be considered "RealEstateCore API Compliant".
+This section summarizes the formal requirements on an API implementation to be considered "RealEstateCore Compliant".
 
 In case of discrepancies with the principles section above this section prevails.
 
@@ -196,5 +192,5 @@ Requirements are formalized in the table below. The use of SHOULD implies an opt
 | **Responses**         |
 | JSON-LD               | RS.1 | MUST      | Respond with JSON-LD formatted documents.                                                                                                                                                                                                                                                                                    |
 | Response Formats      | RS.2 | MUST      | Respond with `hydra:Collection` for resource collections and a plain JSON-LD object for individual resources.                                                                                                                                                                                                                |
-| Errors                | RS.3 | SHOULD    | Respond with error format `{ errors: [ { error }, ... ]}` or according to Hydra Status or Hydra Error. **COMMENT we need to decide here, errors will be returned, if we have many different formats we may as well not pose a requirement now**                                                                              |
+| Errors                | RS.3 | SHOULD    | Respond with error format `{ errors: [ { error }, ... ]}` or according to Hydra Status or Hydra Error.                                                                              |
 | Status Codes          | RS.4 | MUST      | Implement support for `200 OK`, `201 Created`, `400 Bad Request`, `404 Not Found` and `500 Internal Server Error`.                                                                                                                                                                                                           |
