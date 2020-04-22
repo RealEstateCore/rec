@@ -3,7 +3,7 @@
 _This specification defines the first version of the RealEstateCore REST API.  
 It comprises a non-normative section where principles for the REST API is described. And a normative section where requirements for being and API to be "RealEstateCore Compliant" are stated._
 
-_Formally, the API is specified via an Open API Specification (formerly Swagger API) generated from the OWL ontology. See [\*\*insert link to OAS .../api/REST/rec-full-v3.1.1.yaml\*\* ]_
+_Formally, the API is specified via an Open API Specification (formerly Swagger API) generated from the OWL ontology. See [OAS Spec](https://github.com/RealEstateCore/rec/blob/3.1.1/api/REST/rec-full-v3.1.1.yaml).
 
 _Throughout this specification RealEstateCore may be abbreviated to REC._
 
@@ -28,7 +28,7 @@ Additional functionality may be implemented and a mechanism to understanding suc
 
 **Principle.** In addition to the minimum set of requirements, the specification comprises optional requirements which must be followed _if chosen to be included_ in an API implementation (designated _"should"_).
 
-![Requirement Diagram](https://raw.github.com/realestatecore/rec/blob/3.1.1/api/REST/REC_API_Requirement_diagram.png)
+![Requirement Diagram](https://github.com/RealEstateCore/rec/blob/3.1.1/api/REST/REC_API_Requirement_diagram.png)
 
 Furthermore, recommendations are expressed for areas where the REC Consortium considers to add requirements in the future. 
 
@@ -112,7 +112,9 @@ For example `?page=3&size=10` or `?page=0&size=10` for the first page.
 
 **Principle.** Sorting follows JSON:API
 
-Sorting is using a sort query parameter and should allow sorting on all REC properties that are potentially returned plus type and identity (iri). For example `?sort=type`.
+Sorting is using a sort query parameter. It is recommended to support sorting on all REC properties that are potentially returned plus type and identity (iri). That is, `?sort=<RecProperty>\|<id>\|<type>`. For example `?sort=hasValue`.
+
+It is also recommeded to support an operator based query schema for ascending `asc` and descending `desc` sorting. For example `?sort[asc]=hasValue`
 
 ### Advanced queries
 
@@ -182,9 +184,8 @@ Requirements are formalized in the table below. The use of SHOULD implies an opt
 | Simple Queries        | RQ.1 | SHOULD      | Implement a basic query parameter format `?<RecProperty>=<value>`for all REC object and data properties.                                                                                                                                                                                                                     |
 |                       | RQ.2 | SHOULD    | Implement operators in queries with an extended query format `?<RecProperty>[<operator>]=<value>` where `<operator>` is one of the following; `eq`,`regex` or `contains`. Note `eq` must return same responses as the basic query format (RQ.1)                                                                              |
 | Time Interval Queries | RQ.3 | SHOULD    | Implement extended query format for all REC time data properties `?<RecTimeProperty>[<operator>]=<value>` where `<operator>` is one of the following `starting`, `ending`, `before`, `after` or `latest` and `<value>` is a valid JSON datetime serialization (unless the operator is `latest` in which case `true` is used) |
-||RQ.4|SHOULD|Serialize time values accroding to ISO 8601|
+||RQ.4|SHOULD|Serialize time values according to ISO 8601|
 | Pagination            | RQ.5 | SHOULD    | Support `hydra:PartialCollectionView` in `hydra:Collection` responses.                                                                                                                                                                                                                                                       |
-| Sorting               | RQ.6 | SHOULD    | Use query parameter `?sort=<RecClass>\|<id>\|<type>`                                                                                                                                                                                                                                                                         |
 | **Responses**         |
 | JSON-LD               | RS.1 | MUST      | Respond with JSON-LD formatted documents.                                                                                                                                                                                                                                                                                    |
 | Response Formats      | RS.2 | MUST      | Respond with `hydra:Collection` for resource collections and a plain JSON-LD object for individual resources.                                                                                                                                                                                                                |
