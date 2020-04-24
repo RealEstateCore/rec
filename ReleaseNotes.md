@@ -1,5 +1,13 @@
 # RealEstateCore Release Notes
 
+## V3.1.1 -- REST API
+
+Version 3.1.1 is a minor release of REC that contains:
+
+* The official REC REST API (see the api/REST subdirectory)
+* O2O annotations used by the OWL2OAS generator when building that API.
+* Spelling fixes.
+
 ## V3.1 -- Actuation Model
 
 Version 3.1 is a feature release of REC that contains:
