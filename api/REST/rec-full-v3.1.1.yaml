@@ -10,12 +10,12 @@ components:
   parameters:
     pageParam:
       name: page
-      description: If the result set is large, pagination across the results can be employed; in that case, this parameter defines the page number that is requested by the client. The number of items included in each page is defined by the 'size' parameter. Default is 1, i.e., the first results page is returned.
+      description: If the result set is large, pagination across the results can be employed; in that case, this parameter defines the page number (zero-indexed) that is requested by the client. The number of items included in each page is defined by the 'size' parameter. Default is 0, i.e., the first results page is returned.
       schema:
         type: integer
         format: int32
-        minimum: 1
-        default: 1
+        minimum: 0
+        default: 0
       in: query
     sizeParam:
       name: size
@@ -23,6 +23,7 @@ components:
       schema:
         type: integer
         format: int32
+        minimum: 0
         maximum: 100
         default: 20
       in: query
