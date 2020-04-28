@@ -1,0 +1,4486 @@
+openapi: 3.0.2
+info:
+  title: RealEstateCore Full
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  description: The documentation below is automatically extracted from a <dc:description> annotation on the ontology https://w3id.org/rec/full/:<br/><br/>*This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.*
+  version: "3.1.1"
+components:
+  parameters:
+    pageParam:
+      name: page
+      description: If the result set is large, pagination across the results can be employed; in that case, this parameter defines the page number (zero-indexed) that is requested by the client. The number of items included in each page is defined by the 'size' parameter. Default is 0, i.e., the first results page is returned.
+      schema:
+        type: integer
+        format: int32
+        minimum: 0
+        default: 0
+      in: query
+    sizeParam:
+      name: size
+      description: The number of items to display on a returned results page (see the page parameter).
+      schema:
+        type: integer
+        format: int32
+        minimum: 0
+        maximum: 100
+        default: 20
+      in: query
+    sortParam:
+      name: sort
+      description: The field and direction to sort results on.
+      schema:
+        $ref: '#/components/schemas/SortingSchema'
+      style: deepObject
+      in: query
+  schemas:
+    HydraCollectionWrapper:
+      type: object
+      required:
+      - '@context'
+      - '@type'
+      - hydra:member
+      properties:
+        '@context':
+          $ref: '#/components/schemas/Context'
+        '@type':
+          type: string
+          default: hydra:Collection
+        hydra:totalItems:
+          type: integer
+        hydra:view:
+          type: object
+          properties:
+            '@id':
+              type: string
+              format: uri
+            '@type':
+              type: string
+              default: hydra:PartialCollectionView
+            hydra:first:
+              type: string
+            hydra:previous:
+              type: string
+            hydra:next:
+              type: string
+            hydra:last:
+              type: string
+    IntegerFilter:
+      type: object
+      properties:
+        eq:
+          type: integer
+        lt:
+          type: integer
+        lte:
+          type: integer
+        gt:
+          type: integer
+        gte:
+          type: integer
+    NumberFilter:
+      type: object
+      properties:
+        eq:
+          type: number
+        lt:
+          type: number
+        lte:
+          type: number
+        gt:
+          type: number
+        gte:
+          type: number
+    StringFilter:
+      type: object
+      properties:
+        eq:
+          type: string
+        contains:
+          type: string
+        regex:
+          type: string
+    DateTimeFilter:
+      type: object
+      properties:
+        eq:
+          type: string
+          format: date-time
+        starting:
+          type: string
+          format: date-time
+        ending:
+          type: string
+          format: date-time
+        before:
+          type: string
+          format: date-time
+        after:
+          type: string
+          format: date-time
+        latest:
+          type: boolean
+    SortingSchema:
+      type: object
+      properties:
+        asc:
+          type: string
+        desc:
+          type: string
+    actuation:ActuationInterface:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: actuation:ActuationInterface
+        label:
+          type: string
+        actuation:payloadKeyValueDefinition:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: actuation:KeyValueDefinition
+          minItems: 1
+        actuation:isActuationInterfaceOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:Actuator
+        actuation:isDefaultActuationInterfaceOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:Actuator
+    device:Actuator:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: device:Actuator
+        label:
+          type: string
+        device:devicePlacementContext:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: device:PlacementContext
+        core:hasSuperDevice:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:Device
+        core:isMountedInBuildingComponent:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:BuildingComponent
+        device:observedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:Sensor
+        core:deviceQuantityKind:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:QuantityKind
+        device:hasCommunicationsBus:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:CommunicationsBus
+        device:hasDeviceFunctionType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:DeviceFunctionType
+        device:hasKNXDataPointType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:KNXDataPointType
+        device:hasModbusDataType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusDataType
+        device:hasModbusFunctionCode:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusFunctionCode
+        device:hasIPAddressPort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasKNXDeviceId:
+          type: array
+          items:
+            type: string
+        device:hasKNXDevicePort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasLoraDevEUI:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusNodeId:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusRegister:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasOffset:
+          type: array
+          items:
+            type: number
+            format: double
+        device:hasScaleFactor:
+          type: array
+          items:
+            type: number
+            format: double
+        core:associatedWithEvent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Event
+        core:deviceMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
+        core:hasSubDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        core:servesBuilding:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Building
+        core:servesBuildingComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:BuildingComponent
+        core:servesDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        actuation:hasActuationInterface:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: actuation:ActuationInterface
+        actuation:hasDefaultActuationInterface:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: actuation:ActuationInterface
+    device:DeviceFunctionType:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: device:DeviceFunctionType
+        label:
+          type: string
+    device:PlacementContext:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: device:PlacementContext
+        label:
+          type: string
+    device:Sensor:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: device:Sensor
+        label:
+          type: string
+        device:devicePlacementContext:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: device:PlacementContext
+        core:hasSuperDevice:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:Device
+        core:isMountedInBuildingComponent:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:BuildingComponent
+        device:observesActuator:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:Actuator
+        core:deviceMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
+          minItems: 1
+        core:deviceQuantityKind:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:QuantityKind
+        device:hasCommunicationsBus:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:CommunicationsBus
+        device:hasDeviceFunctionType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:DeviceFunctionType
+        device:hasKNXDataPointType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:KNXDataPointType
+        device:hasModbusDataType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusDataType
+        device:hasModbusFunctionCode:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusFunctionCode
+        device:hasIPAddressPort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasKNXDeviceId:
+          type: array
+          items:
+            type: string
+        device:hasKNXDevicePort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasLoraDevEUI:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusNodeId:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusRegister:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasOffset:
+          type: array
+          items:
+            type: number
+            format: double
+        device:hasScaleFactor:
+          type: array
+          items:
+            type: number
+            format: double
+        core:associatedWithEvent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Event
+        core:hasSubDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        core:servesBuilding:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Building
+        core:servesBuildingComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:BuildingComponent
+        core:servesDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        device:generatedException:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:Exception
+        device:generatedObservation:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:Observation
+    core:BuildingComponent:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:BuildingComponent
+        label:
+          type: string
+        core:hasSuperBuildingComponent:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:BuildingComponent
+        core:isPartOfBuilding:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:Building
+        core:containsMountedDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        core:hasSubBuildingComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:BuildingComponent
+    core:Device:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:Device
+        label:
+          type: string
+        device:devicePlacementContext:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: device:PlacementContext
+        core:hasSuperDevice:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:Device
+        core:isMountedInBuildingComponent:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:BuildingComponent
+        device:hasCommunicationsBus:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:CommunicationsBus
+        device:hasDeviceFunctionType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:DeviceFunctionType
+        device:hasKNXDataPointType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:KNXDataPointType
+        device:hasModbusDataType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusDataType
+        device:hasModbusFunctionCode:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusFunctionCode
+        device:hasIPAddressPort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasKNXDeviceId:
+          type: array
+          items:
+            type: string
+        device:hasKNXDevicePort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasLoraDevEUI:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusNodeId:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusRegister:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasOffset:
+          type: array
+          items:
+            type: number
+            format: double
+        device:hasScaleFactor:
+          type: array
+          items:
+            type: number
+            format: double
+        core:associatedWithEvent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Event
+        core:deviceMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
+        core:deviceQuantityKind:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:QuantityKind
+        core:hasSubDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        core:servesBuilding:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Building
+        core:servesBuildingComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:BuildingComponent
+        core:servesDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+    core:MeasurementUnit:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:MeasurementUnit
+        label:
+          type: string
+    core:QuantityKind:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:QuantityKind
+        label:
+          type: string
+        core:qkMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
+    core:RealEstate:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:RealEstate
+        label:
+          type: string
+        core:hasRealEstateComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:RealEstateComponent
+    core:RealEstateComponent:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:RealEstateComponent
+        label:
+          type: string
+        core:isPartOfRealEstate:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:RealEstate
+    building:RoomType:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: building:RoomType
+        label:
+          type: string
+    building:Storey:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: building:Storey
+        label:
+          type: string
+        core:hasSuperBuildingComponent:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:BuildingComponent
+        core:isPartOfBuilding:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:Building
+        core:containsMountedDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        core:hasSubBuildingComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:BuildingComponent
+    Context:
+      type: object
+      required:
+      - '@vocab'
+      - '@base'
+      - hydra
+      - actuation
+      - agents
+      - building
+      - core
+      - device
+      - lease
+      - metadata
+      properties:
+        '@vocab':
+          type: string
+          format: uri
+          default: https://w3id.org/rec/full/
+        '@base':
+          type: string
+          format: uri
+        hydra:
+          type: string
+          format: uri
+          default: http://www.w3.org/ns/hydra/core#
+        label:
+          type: string
+          format: uri
+          default: http://www.w3.org/2000/01/rdf-schema#label
+        actuation:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/actuation/
+        agents:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/agents/
+        building:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/building/
+        core:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/core/
+        device:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/device/
+        lease:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/lease/
+        metadata:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/metadata/
+paths:
+  /LoadedOntologies:
+    get:
+      summary: Get the set of ontologies that were imported by the root ontology when the API was generated.
+      parameters: []
+      responses:
+        200:
+          description: A list of ontologies used to generate this API. Note that while the prefix names used here correspond with the ones given in the JSON-LD @context for the supported data types, the prefix mapping in the API is based on the Ontology IRIs given in those @context blocks, which may differ from the values given here (which give priority to version IRIs).
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - ''
+                - actuation
+                - device
+                - core
+                - metadata
+                - agents
+                - building
+                - lease
+                properties:
+                  '':
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/full/3.1.1/
+                  actuation:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/actuation/3.1.1/
+                  device:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/device/3.1.1/
+                  core:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/core/3.1.1/
+                  metadata:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/metadata/3.1.1/
+                  agents:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/agents/3.1.1/
+                  building:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/building/3.1.1/
+                  lease:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/lease/3.1.1/
+      tags: []
+  /actuationinterface:
+    get:
+      summary: Get 'actuation:ActuationInterface' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: actuation:payloadKeyValueDefinition
+        description: Filter value on property 'actuation:payloadKeyValueDefinition'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: actuation:isActuationInterfaceOf
+        description: Filter value on property 'actuation:isActuationInterfaceOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: actuation:isDefaultActuationInterfaceOf
+        description: Filter value on property 'actuation:isDefaultActuationInterfaceOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'actuation:ActuationInterface' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - $ref: '#/components/schemas/actuation%3aActuationInterface'
+                        - type: object
+                          required:
+                          - actuation:payloadKeyValueDefinition
+      tags:
+      - actuationinterface
+    post:
+      summary: Create a new 'actuation:ActuationInterface' object.
+      parameters:
+      - name: entity
+        description: New 'actuation:ActuationInterface' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/actuation%3aActuationInterface'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/actuation%3aActuationInterface'
+                - type: object
+                  required:
+                  - actuation:payloadKeyValueDefinition
+      tags:
+      - actuationinterface
+  /actuationinterface/{id}:
+    get:
+      summary: Get a specific 'actuation:ActuationInterface' object.
+      parameters:
+      - name: id
+        description: Id of 'actuation:ActuationInterface' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'actuation:ActuationInterface' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'actuation:ActuationInterface' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/actuation%3aActuationInterface'
+                - type: object
+                  required:
+                  - actuation:payloadKeyValueDefinition
+      tags:
+      - actuationinterface
+    put:
+      summary: Update an existing 'actuation:ActuationInterface' entity.
+      parameters:
+      - name: id
+        description: Id of 'actuation:ActuationInterface' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'actuation:ActuationInterface' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/actuation%3aActuationInterface'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'actuation:ActuationInterface' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/actuation%3aActuationInterface'
+                - type: object
+                  required:
+                  - actuation:payloadKeyValueDefinition
+      tags:
+      - actuationinterface
+    patch:
+      summary: Update a single property on a specific 'actuation:ActuationInterface' object.
+      parameters:
+      - name: id
+        description: Id of 'actuation:ActuationInterface' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/actuation%3aActuationInterface'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'actuation:ActuationInterface' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/actuation%3aActuationInterface'
+                - type: object
+                  required:
+                  - actuation:payloadKeyValueDefinition
+      tags:
+      - actuationinterface
+    delete:
+      summary: Delete a 'actuation:ActuationInterface' object.
+      parameters:
+      - name: id
+        description: Id of 'actuation:ActuationInterface' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'actuation:ActuationInterface' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'actuation:ActuationInterface' entity was successfully deleted."
+      tags:
+      - actuationinterface
+  /actuator:
+    get:
+      summary: Get 'device:Actuator' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSuperDevice
+        description: Filter value on property 'core:hasSuperDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:isMountedInBuildingComponent
+        description: Filter value on property 'core:isMountedInBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:observedBy
+        description: Filter value on property 'device:observedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceQuantityKind
+        description: Filter value on property 'core:deviceQuantityKind'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasCommunicationsBus
+        description: Filter value on property 'device:hasCommunicationsBus'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasDeviceFunctionType
+        description: Filter value on property 'device:hasDeviceFunctionType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDataPointType
+        description: Filter value on property 'device:hasKNXDataPointType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusDataType
+        description: Filter value on property 'device:hasModbusDataType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusFunctionCode
+        description: Filter value on property 'device:hasModbusFunctionCode'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasIPAddressPort
+        description: Filter value on property 'device:hasIPAddressPort'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDeviceId
+        description: Filter value on property 'device:hasKNXDeviceId'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDevicePort
+        description: Filter value on property 'device:hasKNXDevicePort'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasLoraDevEUI
+        description: Filter value on property 'device:hasLoraDevEUI'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusNodeId
+        description: Filter value on property 'device:hasModbusNodeId'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusRegister
+        description: Filter value on property 'device:hasModbusRegister'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasOffset
+        description: Filter value on property 'device:hasOffset'.
+        schema:
+          $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: device:hasScaleFactor
+        description: Filter value on property 'device:hasScaleFactor'.
+        schema:
+          $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: core:associatedWithEvent
+        description: Filter value on property 'core:associatedWithEvent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceMeasurementUnit
+        description: Filter value on property 'core:deviceMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSubDevice
+        description: Filter value on property 'core:hasSubDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesBuilding
+        description: Filter value on property 'core:servesBuilding'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesBuildingComponent
+        description: Filter value on property 'core:servesBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesDevice
+        description: Filter value on property 'core:servesDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: actuation:hasActuationInterface
+        description: Filter value on property 'actuation:hasActuationInterface'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: actuation:hasDefaultActuationInterface
+        description: Filter value on property 'actuation:hasDefaultActuationInterface'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'device:Actuator' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - $ref: '#/components/schemas/device%3aActuator'
+                        - type: object
+                          required:
+                          - core:deviceQuantityKind
+      tags:
+      - actuator
+    post:
+      summary: Create a new 'device:Actuator' object.
+      parameters:
+      - name: entity
+        description: New 'device:Actuator' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aActuator'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aActuator'
+                - type: object
+                  required:
+                  - core:deviceQuantityKind
+      tags:
+      - actuator
+  /actuator/{id}:
+    get:
+      summary: Get a specific 'device:Actuator' object.
+      parameters:
+      - name: id
+        description: Id of 'device:Actuator' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'device:Actuator' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'device:Actuator' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aActuator'
+                - type: object
+                  required:
+                  - core:deviceQuantityKind
+      tags:
+      - actuator
+    put:
+      summary: Update an existing 'device:Actuator' entity.
+      parameters:
+      - name: id
+        description: Id of 'device:Actuator' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'device:Actuator' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aActuator'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'device:Actuator' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aActuator'
+                - type: object
+                  required:
+                  - core:deviceQuantityKind
+      tags:
+      - actuator
+    patch:
+      summary: Update a single property on a specific 'device:Actuator' object.
+      parameters:
+      - name: id
+        description: Id of 'device:Actuator' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aActuator'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'device:Actuator' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aActuator'
+                - type: object
+                  required:
+                  - core:deviceQuantityKind
+      tags:
+      - actuator
+    delete:
+      summary: Delete a 'device:Actuator' object.
+      parameters:
+      - name: id
+        description: Id of 'device:Actuator' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'device:Actuator' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'device:Actuator' entity was successfully deleted."
+      tags:
+      - actuator
+  /devicefunctiontype:
+    get:
+      summary: Get 'device:DeviceFunctionType' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'device:DeviceFunctionType' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/device%3aDeviceFunctionType'
+      tags:
+      - devicefunctiontype
+    post:
+      summary: Create a new 'device:DeviceFunctionType' object.
+      parameters:
+      - name: entity
+        description: New 'device:DeviceFunctionType' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+      tags:
+      - devicefunctiontype
+  /devicefunctiontype/{id}:
+    get:
+      summary: Get a specific 'device:DeviceFunctionType' object.
+      parameters:
+      - name: id
+        description: Id of 'device:DeviceFunctionType' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'device:DeviceFunctionType' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'device:DeviceFunctionType' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+      tags:
+      - devicefunctiontype
+    put:
+      summary: Update an existing 'device:DeviceFunctionType' entity.
+      parameters:
+      - name: id
+        description: Id of 'device:DeviceFunctionType' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'device:DeviceFunctionType' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'device:DeviceFunctionType' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+      tags:
+      - devicefunctiontype
+    patch:
+      summary: Update a single property on a specific 'device:DeviceFunctionType' object.
+      parameters:
+      - name: id
+        description: Id of 'device:DeviceFunctionType' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'device:DeviceFunctionType' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+      tags:
+      - devicefunctiontype
+    delete:
+      summary: Delete a 'device:DeviceFunctionType' object.
+      parameters:
+      - name: id
+        description: Id of 'device:DeviceFunctionType' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'device:DeviceFunctionType' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'device:DeviceFunctionType' entity was successfully deleted."
+      tags:
+      - devicefunctiontype
+  /placementcontext:
+    get:
+      summary: Get 'device:PlacementContext' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'device:PlacementContext' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/device%3aPlacementContext'
+      tags:
+      - placementcontext
+    post:
+      summary: Create a new 'device:PlacementContext' object.
+      parameters:
+      - name: entity
+        description: New 'device:PlacementContext' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aPlacementContext'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aPlacementContext'
+      tags:
+      - placementcontext
+  /placementcontext/{id}:
+    get:
+      summary: Get a specific 'device:PlacementContext' object.
+      parameters:
+      - name: id
+        description: Id of 'device:PlacementContext' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'device:PlacementContext' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'device:PlacementContext' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aPlacementContext'
+      tags:
+      - placementcontext
+    put:
+      summary: Update an existing 'device:PlacementContext' entity.
+      parameters:
+      - name: id
+        description: Id of 'device:PlacementContext' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'device:PlacementContext' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aPlacementContext'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'device:PlacementContext' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aPlacementContext'
+      tags:
+      - placementcontext
+    patch:
+      summary: Update a single property on a specific 'device:PlacementContext' object.
+      parameters:
+      - name: id
+        description: Id of 'device:PlacementContext' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aPlacementContext'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'device:PlacementContext' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aPlacementContext'
+      tags:
+      - placementcontext
+    delete:
+      summary: Delete a 'device:PlacementContext' object.
+      parameters:
+      - name: id
+        description: Id of 'device:PlacementContext' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'device:PlacementContext' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'device:PlacementContext' entity was successfully deleted."
+      tags:
+      - placementcontext
+  /sensor:
+    get:
+      summary: Get 'device:Sensor' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSuperDevice
+        description: Filter value on property 'core:hasSuperDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:isMountedInBuildingComponent
+        description: Filter value on property 'core:isMountedInBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:observesActuator
+        description: Filter value on property 'device:observesActuator'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceMeasurementUnit
+        description: Filter value on property 'core:deviceMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceQuantityKind
+        description: Filter value on property 'core:deviceQuantityKind'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasCommunicationsBus
+        description: Filter value on property 'device:hasCommunicationsBus'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasDeviceFunctionType
+        description: Filter value on property 'device:hasDeviceFunctionType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDataPointType
+        description: Filter value on property 'device:hasKNXDataPointType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusDataType
+        description: Filter value on property 'device:hasModbusDataType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusFunctionCode
+        description: Filter value on property 'device:hasModbusFunctionCode'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasIPAddressPort
+        description: Filter value on property 'device:hasIPAddressPort'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDeviceId
+        description: Filter value on property 'device:hasKNXDeviceId'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDevicePort
+        description: Filter value on property 'device:hasKNXDevicePort'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasLoraDevEUI
+        description: Filter value on property 'device:hasLoraDevEUI'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusNodeId
+        description: Filter value on property 'device:hasModbusNodeId'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusRegister
+        description: Filter value on property 'device:hasModbusRegister'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasOffset
+        description: Filter value on property 'device:hasOffset'.
+        schema:
+          $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: device:hasScaleFactor
+        description: Filter value on property 'device:hasScaleFactor'.
+        schema:
+          $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: core:associatedWithEvent
+        description: Filter value on property 'core:associatedWithEvent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSubDevice
+        description: Filter value on property 'core:hasSubDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesBuilding
+        description: Filter value on property 'core:servesBuilding'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesBuildingComponent
+        description: Filter value on property 'core:servesBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesDevice
+        description: Filter value on property 'core:servesDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:generatedException
+        description: Filter value on property 'device:generatedException'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:generatedObservation
+        description: Filter value on property 'device:generatedObservation'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'device:Sensor' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - $ref: '#/components/schemas/device%3aSensor'
+                        - type: object
+                          required:
+                          - core:deviceMeasurementUnit
+                          - core:deviceQuantityKind
+      tags:
+      - sensor
+    post:
+      summary: Create a new 'device:Sensor' object.
+      parameters:
+      - name: entity
+        description: New 'device:Sensor' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aSensor'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aSensor'
+                - type: object
+                  required:
+                  - core:deviceMeasurementUnit
+                  - core:deviceQuantityKind
+      tags:
+      - sensor
+  /sensor/{id}:
+    get:
+      summary: Get a specific 'device:Sensor' object.
+      parameters:
+      - name: id
+        description: Id of 'device:Sensor' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'device:Sensor' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'device:Sensor' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aSensor'
+                - type: object
+                  required:
+                  - core:deviceMeasurementUnit
+                  - core:deviceQuantityKind
+      tags:
+      - sensor
+    put:
+      summary: Update an existing 'device:Sensor' entity.
+      parameters:
+      - name: id
+        description: Id of 'device:Sensor' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'device:Sensor' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aSensor'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'device:Sensor' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aSensor'
+                - type: object
+                  required:
+                  - core:deviceMeasurementUnit
+                  - core:deviceQuantityKind
+      tags:
+      - sensor
+    patch:
+      summary: Update a single property on a specific 'device:Sensor' object.
+      parameters:
+      - name: id
+        description: Id of 'device:Sensor' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/device%3aSensor'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'device:Sensor' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/device%3aSensor'
+                - type: object
+                  required:
+                  - core:deviceMeasurementUnit
+                  - core:deviceQuantityKind
+      tags:
+      - sensor
+    delete:
+      summary: Delete a 'device:Sensor' object.
+      parameters:
+      - name: id
+        description: Id of 'device:Sensor' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'device:Sensor' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'device:Sensor' entity was successfully deleted."
+      tags:
+      - sensor
+  /buildingcomponent:
+    get:
+      summary: Get 'core:BuildingComponent' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: core:hasSuperBuildingComponent
+        description: Filter value on property 'core:hasSuperBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:isPartOfBuilding
+        description: Filter value on property 'core:isPartOfBuilding'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:containsMountedDevice
+        description: Filter value on property 'core:containsMountedDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSubBuildingComponent
+        description: Filter value on property 'core:hasSubBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'core:BuildingComponent' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/core%3aBuildingComponent'
+      tags:
+      - buildingcomponent
+    post:
+      summary: Create a new 'core:BuildingComponent' object.
+      parameters:
+      - name: entity
+        description: New 'core:BuildingComponent' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aBuildingComponent'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aBuildingComponent'
+      tags:
+      - buildingcomponent
+  /buildingcomponent/{id}:
+    get:
+      summary: Get a specific 'core:BuildingComponent' object.
+      parameters:
+      - name: id
+        description: Id of 'core:BuildingComponent' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:BuildingComponent' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'core:BuildingComponent' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aBuildingComponent'
+      tags:
+      - buildingcomponent
+    put:
+      summary: Update an existing 'core:BuildingComponent' entity.
+      parameters:
+      - name: id
+        description: Id of 'core:BuildingComponent' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'core:BuildingComponent' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aBuildingComponent'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:BuildingComponent' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aBuildingComponent'
+      tags:
+      - buildingcomponent
+    patch:
+      summary: Update a single property on a specific 'core:BuildingComponent' object.
+      parameters:
+      - name: id
+        description: Id of 'core:BuildingComponent' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aBuildingComponent'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:BuildingComponent' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aBuildingComponent'
+      tags:
+      - buildingcomponent
+    delete:
+      summary: Delete a 'core:BuildingComponent' object.
+      parameters:
+      - name: id
+        description: Id of 'core:BuildingComponent' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:BuildingComponent' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'core:BuildingComponent' entity was successfully deleted."
+      tags:
+      - buildingcomponent
+  /device:
+    get:
+      summary: Get 'core:Device' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSuperDevice
+        description: Filter value on property 'core:hasSuperDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:isMountedInBuildingComponent
+        description: Filter value on property 'core:isMountedInBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasCommunicationsBus
+        description: Filter value on property 'device:hasCommunicationsBus'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasDeviceFunctionType
+        description: Filter value on property 'device:hasDeviceFunctionType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDataPointType
+        description: Filter value on property 'device:hasKNXDataPointType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusDataType
+        description: Filter value on property 'device:hasModbusDataType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusFunctionCode
+        description: Filter value on property 'device:hasModbusFunctionCode'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasIPAddressPort
+        description: Filter value on property 'device:hasIPAddressPort'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDeviceId
+        description: Filter value on property 'device:hasKNXDeviceId'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDevicePort
+        description: Filter value on property 'device:hasKNXDevicePort'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasLoraDevEUI
+        description: Filter value on property 'device:hasLoraDevEUI'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusNodeId
+        description: Filter value on property 'device:hasModbusNodeId'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusRegister
+        description: Filter value on property 'device:hasModbusRegister'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasOffset
+        description: Filter value on property 'device:hasOffset'.
+        schema:
+          $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: device:hasScaleFactor
+        description: Filter value on property 'device:hasScaleFactor'.
+        schema:
+          $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: core:associatedWithEvent
+        description: Filter value on property 'core:associatedWithEvent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceMeasurementUnit
+        description: Filter value on property 'core:deviceMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceQuantityKind
+        description: Filter value on property 'core:deviceQuantityKind'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSubDevice
+        description: Filter value on property 'core:hasSubDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesBuilding
+        description: Filter value on property 'core:servesBuilding'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesBuildingComponent
+        description: Filter value on property 'core:servesBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesDevice
+        description: Filter value on property 'core:servesDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'core:Device' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/core%3aDevice'
+      tags:
+      - device
+    post:
+      summary: Create a new 'core:Device' object.
+      parameters:
+      - name: entity
+        description: New 'core:Device' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aDevice'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aDevice'
+      tags:
+      - device
+  /device/{id}:
+    get:
+      summary: Get a specific 'core:Device' object.
+      parameters:
+      - name: id
+        description: Id of 'core:Device' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:Device' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'core:Device' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aDevice'
+      tags:
+      - device
+    put:
+      summary: Update an existing 'core:Device' entity.
+      parameters:
+      - name: id
+        description: Id of 'core:Device' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'core:Device' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aDevice'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:Device' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aDevice'
+      tags:
+      - device
+    patch:
+      summary: Update a single property on a specific 'core:Device' object.
+      parameters:
+      - name: id
+        description: Id of 'core:Device' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aDevice'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:Device' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aDevice'
+      tags:
+      - device
+    delete:
+      summary: Delete a 'core:Device' object.
+      parameters:
+      - name: id
+        description: Id of 'core:Device' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:Device' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'core:Device' entity was successfully deleted."
+      tags:
+      - device
+  /measurementunit:
+    get:
+      summary: Get 'core:MeasurementUnit' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'core:MeasurementUnit' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/core%3aMeasurementUnit'
+      tags:
+      - measurementunit
+    post:
+      summary: Create a new 'core:MeasurementUnit' object.
+      parameters:
+      - name: entity
+        description: New 'core:MeasurementUnit' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aMeasurementUnit'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aMeasurementUnit'
+      tags:
+      - measurementunit
+  /measurementunit/{id}:
+    get:
+      summary: Get a specific 'core:MeasurementUnit' object.
+      parameters:
+      - name: id
+        description: Id of 'core:MeasurementUnit' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:MeasurementUnit' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'core:MeasurementUnit' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aMeasurementUnit'
+      tags:
+      - measurementunit
+    put:
+      summary: Update an existing 'core:MeasurementUnit' entity.
+      parameters:
+      - name: id
+        description: Id of 'core:MeasurementUnit' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'core:MeasurementUnit' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aMeasurementUnit'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:MeasurementUnit' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aMeasurementUnit'
+      tags:
+      - measurementunit
+    patch:
+      summary: Update a single property on a specific 'core:MeasurementUnit' object.
+      parameters:
+      - name: id
+        description: Id of 'core:MeasurementUnit' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aMeasurementUnit'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:MeasurementUnit' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aMeasurementUnit'
+      tags:
+      - measurementunit
+    delete:
+      summary: Delete a 'core:MeasurementUnit' object.
+      parameters:
+      - name: id
+        description: Id of 'core:MeasurementUnit' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:MeasurementUnit' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'core:MeasurementUnit' entity was successfully deleted."
+      tags:
+      - measurementunit
+  /quantitykind:
+    get:
+      summary: Get 'core:QuantityKind' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: core:qkMeasurementUnit
+        description: Filter value on property 'core:qkMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'core:QuantityKind' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/core%3aQuantityKind'
+      tags:
+      - quantitykind
+    post:
+      summary: Create a new 'core:QuantityKind' object.
+      parameters:
+      - name: entity
+        description: New 'core:QuantityKind' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aQuantityKind'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aQuantityKind'
+      tags:
+      - quantitykind
+  /quantitykind/{id}:
+    get:
+      summary: Get a specific 'core:QuantityKind' object.
+      parameters:
+      - name: id
+        description: Id of 'core:QuantityKind' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:QuantityKind' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'core:QuantityKind' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aQuantityKind'
+      tags:
+      - quantitykind
+    put:
+      summary: Update an existing 'core:QuantityKind' entity.
+      parameters:
+      - name: id
+        description: Id of 'core:QuantityKind' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'core:QuantityKind' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aQuantityKind'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:QuantityKind' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aQuantityKind'
+      tags:
+      - quantitykind
+    patch:
+      summary: Update a single property on a specific 'core:QuantityKind' object.
+      parameters:
+      - name: id
+        description: Id of 'core:QuantityKind' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aQuantityKind'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:QuantityKind' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aQuantityKind'
+      tags:
+      - quantitykind
+    delete:
+      summary: Delete a 'core:QuantityKind' object.
+      parameters:
+      - name: id
+        description: Id of 'core:QuantityKind' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:QuantityKind' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'core:QuantityKind' entity was successfully deleted."
+      tags:
+      - quantitykind
+  /realestate:
+    get:
+      summary: Get 'core:RealEstate' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: core:hasRealEstateComponent
+        description: Filter value on property 'core:hasRealEstateComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'core:RealEstate' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/core%3aRealEstate'
+      tags:
+      - realestate
+    post:
+      summary: Create a new 'core:RealEstate' object.
+      parameters:
+      - name: entity
+        description: New 'core:RealEstate' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aRealEstate'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aRealEstate'
+      tags:
+      - realestate
+  /realestate/{id}:
+    get:
+      summary: Get a specific 'core:RealEstate' object.
+      parameters:
+      - name: id
+        description: Id of 'core:RealEstate' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:RealEstate' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'core:RealEstate' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aRealEstate'
+      tags:
+      - realestate
+    put:
+      summary: Update an existing 'core:RealEstate' entity.
+      parameters:
+      - name: id
+        description: Id of 'core:RealEstate' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'core:RealEstate' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aRealEstate'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:RealEstate' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aRealEstate'
+      tags:
+      - realestate
+    patch:
+      summary: Update a single property on a specific 'core:RealEstate' object.
+      parameters:
+      - name: id
+        description: Id of 'core:RealEstate' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aRealEstate'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:RealEstate' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aRealEstate'
+      tags:
+      - realestate
+    delete:
+      summary: Delete a 'core:RealEstate' object.
+      parameters:
+      - name: id
+        description: Id of 'core:RealEstate' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:RealEstate' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'core:RealEstate' entity was successfully deleted."
+      tags:
+      - realestate
+  /realestatecomponent:
+    get:
+      summary: Get 'core:RealEstateComponent' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: core:isPartOfRealEstate
+        description: Filter value on property 'core:isPartOfRealEstate'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'core:RealEstateComponent' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/core%3aRealEstateComponent'
+      tags:
+      - realestatecomponent
+    post:
+      summary: Create a new 'core:RealEstateComponent' object.
+      parameters:
+      - name: entity
+        description: New 'core:RealEstateComponent' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aRealEstateComponent'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aRealEstateComponent'
+      tags:
+      - realestatecomponent
+  /realestatecomponent/{id}:
+    get:
+      summary: Get a specific 'core:RealEstateComponent' object.
+      parameters:
+      - name: id
+        description: Id of 'core:RealEstateComponent' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:RealEstateComponent' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'core:RealEstateComponent' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aRealEstateComponent'
+      tags:
+      - realestatecomponent
+    put:
+      summary: Update an existing 'core:RealEstateComponent' entity.
+      parameters:
+      - name: id
+        description: Id of 'core:RealEstateComponent' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'core:RealEstateComponent' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aRealEstateComponent'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:RealEstateComponent' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aRealEstateComponent'
+      tags:
+      - realestatecomponent
+    patch:
+      summary: Update a single property on a specific 'core:RealEstateComponent' object.
+      parameters:
+      - name: id
+        description: Id of 'core:RealEstateComponent' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/core%3aRealEstateComponent'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:RealEstateComponent' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core%3aRealEstateComponent'
+      tags:
+      - realestatecomponent
+    delete:
+      summary: Delete a 'core:RealEstateComponent' object.
+      parameters:
+      - name: id
+        description: Id of 'core:RealEstateComponent' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:RealEstateComponent' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'core:RealEstateComponent' entity was successfully deleted."
+      tags:
+      - realestatecomponent
+  /roomtype:
+    get:
+      summary: Get 'building:RoomType' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'building:RoomType' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/building%3aRoomType'
+      tags:
+      - roomtype
+    post:
+      summary: Create a new 'building:RoomType' object.
+      parameters:
+      - name: entity
+        description: New 'building:RoomType' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/building%3aRoomType'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/building%3aRoomType'
+      tags:
+      - roomtype
+  /roomtype/{id}:
+    get:
+      summary: Get a specific 'building:RoomType' object.
+      parameters:
+      - name: id
+        description: Id of 'building:RoomType' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'building:RoomType' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'building:RoomType' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/building%3aRoomType'
+      tags:
+      - roomtype
+    put:
+      summary: Update an existing 'building:RoomType' entity.
+      parameters:
+      - name: id
+        description: Id of 'building:RoomType' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'building:RoomType' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/building%3aRoomType'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'building:RoomType' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/building%3aRoomType'
+      tags:
+      - roomtype
+    patch:
+      summary: Update a single property on a specific 'building:RoomType' object.
+      parameters:
+      - name: id
+        description: Id of 'building:RoomType' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/building%3aRoomType'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'building:RoomType' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/building%3aRoomType'
+      tags:
+      - roomtype
+    delete:
+      summary: Delete a 'building:RoomType' object.
+      parameters:
+      - name: id
+        description: Id of 'building:RoomType' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'building:RoomType' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'building:RoomType' entity was successfully deleted."
+      tags:
+      - roomtype
+  /storey:
+    get:
+      summary: Get 'building:Storey' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: core:hasSuperBuildingComponent
+        description: Filter value on property 'core:hasSuperBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:isPartOfBuilding
+        description: Filter value on property 'core:isPartOfBuilding'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:containsMountedDevice
+        description: Filter value on property 'core:containsMountedDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSubBuildingComponent
+        description: Filter value on property 'core:hasSubBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'building:Storey' objects.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/building%3aStorey'
+      tags:
+      - storey
+    post:
+      summary: Create a new 'building:Storey' object.
+      parameters:
+      - name: entity
+        description: New 'building:Storey' entity that is to be added.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/building%3aStorey'
+        in: header
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/building%3aStorey'
+      tags:
+      - storey
+  /storey/{id}:
+    get:
+      summary: Get a specific 'building:Storey' object.
+      parameters:
+      - name: id
+        description: Id of 'building:Storey' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'building:Storey' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'building:Storey' object.
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/building%3aStorey'
+      tags:
+      - storey
+    put:
+      summary: Update an existing 'building:Storey' entity.
+      parameters:
+      - name: id
+        description: Id of 'building:Storey' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: entity
+        description: Updated data for 'building:Storey' entity.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/building%3aStorey'
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'building:Storey' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/building%3aStorey'
+      tags:
+      - storey
+    patch:
+      summary: Update a single property on a specific 'building:Storey' object.
+      parameters:
+      - name: id
+        description: Id of 'building:Storey' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      - name: patch
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        schema:
+          allOf:
+          - type: object
+            required:
+            - '@context'
+            properties:
+              '@context':
+                $ref: '#/components/schemas/Context'
+          - $ref: '#/components/schemas/building%3aStorey'
+          - type: object
+            maxProperties: 2
+            minProperties: 2
+        in: header
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'building:Storey' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/jsonld:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/building%3aStorey'
+      tags:
+      - storey
+    delete:
+      summary: Delete a 'building:Storey' object.
+      parameters:
+      - name: id
+        description: Id of 'building:Storey' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'building:Storey' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'building:Storey' entity was successfully deleted."
+      tags:
+      - storey
+servers:
+- url: http://localhost:8080/
