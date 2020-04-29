@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/rec/alignments/BrickSchema#"
+     xml:base="https://w3id.org/rec/alignments/BrickSchema"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:brick="https://brickschema.org/schema/1.1/Brick#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:rec-core="https://w3id.org/rec/core/"
+     xmlns:rec-device="https://w3id.org/rec/device/"
+     xmlns:rec-building="https://w3id.org/rec/building/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/rec/alignments/BrickSchema">
+        <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.2/"/>
+        <ns:license rdf:resource="https://opensource.org/licenses/BSD-3-Clause"/>
+        <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <dc:contributor xml:lang="en">Erik Wallin</dc:contributor>
+        <dc:contributor xml:lang="en">Gabe Fierro</dc:contributor>
+        <dc:contributor xml:lang="en">Karl Hammar</dc:contributor>
+        <dc:description xml:lang="en">This is an initial alignment between RealEstateCore (https://realestatecore.io) and Brick Schema (https://brickschema.org), developed in partnership between the two projects.</dc:description>
+        <dc:publisher xml:lang="en">RealEstateCore Consortium</dc:publisher>
+        <dc:publisher xml:lang="en">The Brick Schema Project</dc:publisher>
+        <dc:title xml:lang="en">RealEstateCore Brick Schema Alignment</dc:title>
+        <terms:modified>2020-02-11</terms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://brickschema.org/schema/1.1/Brick#"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/rec/full/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/device/hasDeviceFunctionType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Air_Handler_Unit -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Air_Handler_Unit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/AirHandlingUnit"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Boiler -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Boiler">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Boiler"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Building -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Building">
+        <owl:equivalentClass rdf:resource="https://w3id.org/rec/core/Building"/>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Chiller -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Chiller">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Chiller"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Coil -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Coil">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Coil"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Condenser -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Condenser">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Condenser"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Damper -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Damper">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Damper"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Fan -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Fan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Fan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Floor -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Floor">
+        <owl:equivalentClass rdf:resource="https://w3id.org/rec/building/StoreyLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Pump -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Pump">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Pump"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Room -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Room">
+        <owl:equivalentClass rdf:resource="https://w3id.org/rec/core/Room"/>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Sensor -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Sensor">
+        <owl:equivalentClass rdf:resource="https://w3id.org/rec/device/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Status -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Status">
+        <owl:equivalentClass rdf:resource="https://w3id.org/rec/device/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Thermostat -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Thermostat">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Thermostat"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://brickschema.org/schema/1.1/Brick#Valve -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/1.1/Brick#Valve">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Device"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasDeviceFunctionType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/rec/device/Valve"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/building/StoreyLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/StoreyLevel"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/Building -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Building"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/Device -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Device"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/Room -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Room"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/DeviceFunctionType -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/DeviceFunctionType"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Observation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/Observation"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Sensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/Sensor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/device/AirHandlingUnit -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/AirHandlingUnit"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Boiler -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Boiler"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Chiller -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Chiller"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Coil -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Coil"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Condenser -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Condenser"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Damper -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Damper"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Fan -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Fan"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Pump -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Pump"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Thermostat -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Thermostat"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/Valve -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Valve"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
