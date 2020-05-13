@@ -1,5 +1,11 @@
 # RealEstateCore Release Notes
 
+## V3.1.2 -- REST API Hotfix
+
+Version 3.1.2 is a bug fix release that addresses an issue in the REST API specification.
+
+* The REC REST API specification (api/REST/rec-full-v3.1.2.yaml) now specifies that the payload for POST, PUT, and PATCH operations should be carried in the HTTP request body.
+
 ## V3.1.1 -- REST API
 
 Version 3.1.1 is a minor release of REC that contains:
