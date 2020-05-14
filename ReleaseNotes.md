@@ -2,9 +2,13 @@
 
 ## V3.1.2 -- REST API Hotfix
 
-Version 3.1.2 is a bug fix release that addresses an issue in the REST API specification.
+Version 3.1.2 is a bug fix release that addresses two issues in the REST API specification, and one in the edge message format:
 
-* The REC REST API specification (api/REST/rec-full-v3.1.2.yaml) now specifies that the payload for POST, PUT, and PATCH operations should be carried in the HTTP request body.
+* The REC REST API specification now specifies that the payload for POST, PUT, and PATCH operations should be carried in the HTTP request body.
+* The REC REST API specification now uses the updated MIME type for JSON-LD: application/ld+json
+* The Edge message examples mistakenly carried REC 2 semantics due to previous Git mishap; that is now addressed and the examples are up-to-date
+
+Note that this hotfix does not affect the ontology semantics; aside from version and release node annotations, REC 3.1.2 is identical to REC 3.1.2.
 
 ## V3.1.1 -- REST API
 
