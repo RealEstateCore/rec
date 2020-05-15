@@ -20,14 +20,14 @@
      xmlns:actuation="https://w3id.org/rec/actuation/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/full/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/full/3.1/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/actuation/3.1/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/agents/3.1/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/building/3.1/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/core/3.1/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/device/3.1/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/lease/3.1/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.1/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/full/3.1.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/actuation/3.1.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/agents/3.1.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/building/3.1.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.1.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/device/3.1.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/lease/3.1.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.1.3/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Håkan Eriksson</dc:contributor>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joakim Eriksson</dc:contributor>
@@ -39,8 +39,22 @@
         <dc:title>RealEstateCore Full</dc:title>
         <dcterms:modified>2019-11-07</dcterms:modified>
         <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.1/</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">Version 3.1 is a feature release of REC that contains:
+        <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.1.3/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Version 3.1.2 is a bug fix release that addresses two issues in the REST API specification, and one in the edge message format:
+
+* The REC REST API specification (api/REST/rec-full-v3.1.2.yaml) now specifies that the payload for POST, PUT, and PATCH operations should be carried in the HTTP request body.        
+* The REC REST API specification now uses the updated MIME type for JSON-LD: application/ld+json
+* The Edge message examples mistakenly carried REC 2 semantics due to previous Git mishap; that is now addressed and the examples are up-to-date
+
+Note that this hotfix does not affect the ontology semantics; aside from version and release node annotations, REC 3.1.2 is identical to REC 3.1.2.
+
+Version 3.1.1 is a minor release of REC that contains:
+
+* The official REC REST API (see the api/REST subdirectory)
+* O2O annotations used by the OWL2OAS generator when building that API.
+* Spelling fixes.        
+        
+Version 3.1 is a feature release of REC that contains:
 
 * The new Actuation module, with north- and southbound message semantics for enacting actuations on systems.
 * Deprecation of the Room (Building module) and Premises (Lease module) type hierarchies, in favour of the RoomType and PremisesType classes, respectively. Named individuals of these classes are punned to the same IRIs as the now-deprecated classes, the latter of which will be removed in an upcoming 4.0 release.
@@ -59,7 +73,7 @@ Version 3.0 is a major and compatibility-breaking refactoring of REC:
 * All entities have been assigned rdfs:labels and the large majority rdfs:comments.
 * The modules have been documented with metadata using DC, CC, VANN, cpannotationschema, etc.
 * All IRI:s are now HTTPS</rdfs:comment>
-        <owl:versionInfo xml:lang="en">3.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">3.1.3</owl:versionInfo>
     </owl:Ontology>
 </rdf:RDF>
 
