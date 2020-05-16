@@ -5,7 +5,7 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
   description: The documentation below is automatically extracted from a <dc:description> annotation on the ontology https://w3id.org/rec/full/:<br/><br/>*This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.*
-  version: "3.1.2"
+  version: "3.1.3"
 components:
   parameters:
     pageParam:
@@ -189,6 +189,16 @@ components:
           default: device:Actuator
         label:
           type: string
+        device:devicePlacementContext:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: device:PlacementContext
         core:hasSuperDevice:
           type: object
           required:
@@ -209,16 +219,6 @@ components:
             '@type':
               type: string
               default: core:BuildingComponent
-        core:quantityKind:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:QuantityKind
         device:observedBy:
           type: array
           items:
@@ -230,7 +230,17 @@ components:
                 type: string
               '@type':
                 type: string
-                default: core:Sensor
+                default: device:Sensor
+        core:deviceQuantityKind:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:QuantityKind
         device:hasCommunicationsBus:
           type: array
           items:
@@ -342,6 +352,18 @@ components:
               '@type':
                 type: string
                 default: core:Event
+        core:deviceMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
         core:hasSubDevice:
           type: array
           items:
@@ -448,7 +470,7 @@ components:
           default: device:Sensor
         label:
           type: string
-        core:hasSuperDevice:
+        device:devicePlacementContext:
           type: object
           required:
           - '@id'
@@ -457,540 +479,7 @@ components:
               type: string
             '@type':
               type: string
-              default: core:Device
-        core:isMountedInBuildingComponent:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:BuildingComponent
-        core:measurementUnit:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:MeasurementUnit
-          minItems: 1
-        core:quantityKind:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:QuantityKind
-        device:observesActuator:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:Actuator
-        device:hasCommunicationsBus:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:CommunicationsBus
-        device:hasDeviceFunctionType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:DeviceFunctionType
-        device:hasKNXDataPointType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:KNXDataPointType
-        device:hasModbusDataType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:ModbusDataType
-        device:hasModbusFunctionCode:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:ModbusFunctionCode
-        device:hasIPAddressPort:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasKNXDeviceId:
-          type: array
-          items:
-            type: string
-        device:hasKNXDevicePort:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasLoraDevEUI:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasModbusNodeId:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasModbusRegister:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasOffset:
-          type: array
-          items:
-            type: number
-            format: double
-        device:hasScaleFactor:
-          type: array
-          items:
-            type: number
-            format: double
-        core:associatedWithEvent:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Event
-        core:hasSubDevice:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Device
-        core:servesBuilding:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Building
-        core:servesBuildingComponent:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:BuildingComponent
-        core:servesDevice:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Device
-    core:BuildingComponent:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:BuildingComponent
-        label:
-          type: string
-        core:hasSuperBuildingComponent:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:BuildingComponent
-        core:isPartOfBuilding:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:Building
-        core:hasSubBuildingComponent:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:BuildingComponent
-    core:Device:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:Device
-        label:
-          type: string
-        core:hasSuperDevice:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:Device
-        core:isMountedInBuildingComponent:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:BuildingComponent
-        device:hasCommunicationsBus:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:CommunicationsBus
-        device:hasDeviceFunctionType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:DeviceFunctionType
-        device:hasKNXDataPointType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:KNXDataPointType
-        device:hasModbusDataType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:ModbusDataType
-        device:hasModbusFunctionCode:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:ModbusFunctionCode
-        device:hasIPAddressPort:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasKNXDeviceId:
-          type: array
-          items:
-            type: string
-        device:hasKNXDevicePort:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasLoraDevEUI:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasModbusNodeId:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasModbusRegister:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasOffset:
-          type: array
-          items:
-            type: number
-            format: double
-        device:hasScaleFactor:
-          type: array
-          items:
-            type: number
-            format: double
-        core:associatedWithEvent:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Event
-        core:hasSubDevice:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Device
-        core:servesBuilding:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Building
-        core:servesBuildingComponent:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:BuildingComponent
-        core:servesDevice:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Device
-    core:MeasurementUnit:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:MeasurementUnit
-        label:
-          type: string
-    core:QuantityKind:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:QuantityKind
-        label:
-          type: string
-        core:measurementUnit:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:MeasurementUnit
-    core:RealEstate:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:RealEstate
-        label:
-          type: string
-        core:hasRealEstateComponent:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:RealEstateComponent
-    core:RealEstateComponent:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:RealEstateComponent
-        label:
-          type: string
-        core:isPartOfRealEstate:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:RealEstate
-    core:Sensor:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:Sensor
-        label:
-          type: string
+              default: device:PlacementContext
         core:hasSuperDevice:
           type: object
           required:
@@ -1023,7 +512,7 @@ components:
               '@type':
                 type: string
                 default: device:Actuator
-        core:measurementUnit:
+        core:deviceMeasurementUnit:
           type: array
           items:
             type: object
@@ -1036,7 +525,7 @@ components:
                 type: string
                 default: core:MeasurementUnit
           minItems: 1
-        core:quantityKind:
+        core:deviceQuantityKind:
           type: object
           required:
           - '@id'
@@ -1217,7 +706,7 @@ components:
               '@type':
                 type: string
                 default: device:Exception
-        core:generatedObservation:
+        device:generatedObservation:
           type: array
           items:
             type: object
@@ -1228,7 +717,370 @@ components:
                 type: string
               '@type':
                 type: string
-                default: core:Observation
+                default: device:Observation
+    core:BuildingComponent:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:BuildingComponent
+        label:
+          type: string
+        core:hasSuperBuildingComponent:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:BuildingComponent
+        core:isPartOfBuilding:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:Building
+        core:containsMountedDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        core:hasSubBuildingComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:BuildingComponent
+    core:Device:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:Device
+        label:
+          type: string
+        device:devicePlacementContext:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: device:PlacementContext
+        core:hasSuperDevice:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:Device
+        core:isMountedInBuildingComponent:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:BuildingComponent
+        device:hasCommunicationsBus:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:CommunicationsBus
+        device:hasDeviceFunctionType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:DeviceFunctionType
+        device:hasKNXDataPointType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:KNXDataPointType
+        device:hasModbusDataType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusDataType
+        device:hasModbusFunctionCode:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusFunctionCode
+        device:hasIPAddressPort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasKNXDeviceId:
+          type: array
+          items:
+            type: string
+        device:hasKNXDevicePort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasLoraDevEUI:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusNodeId:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusRegister:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasOffset:
+          type: array
+          items:
+            type: number
+            format: double
+        device:hasScaleFactor:
+          type: array
+          items:
+            type: number
+            format: double
+        core:associatedWithEvent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Event
+        core:deviceMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
+        core:deviceQuantityKind:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:QuantityKind
+        core:hasSubDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        core:servesBuilding:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Building
+        core:servesBuildingComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:BuildingComponent
+        core:servesDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+    core:MeasurementUnit:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:MeasurementUnit
+        label:
+          type: string
+    core:QuantityKind:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:QuantityKind
+        label:
+          type: string
+        core:qkMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
+    core:RealEstate:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:RealEstate
+        label:
+          type: string
+        core:hasRealEstateComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:RealEstateComponent
+    core:RealEstateComponent:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:RealEstateComponent
+        label:
+          type: string
+        core:isPartOfRealEstate:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:RealEstate
     building:RoomType:
       type: object
       required:
@@ -1273,6 +1125,18 @@ components:
             '@type':
               type: string
               default: core:Building
+        core:containsMountedDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
         core:hasSubBuildingComponent:
           type: array
           items:
@@ -1368,42 +1232,42 @@ paths:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/full/3.1.2/
+                    - https://w3id.org/rec/full/3.1.3/
                   actuation:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/actuation/3.1.2/
+                    - https://w3id.org/rec/actuation/3.1.3/
                   device:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/device/3.1.2/
+                    - https://w3id.org/rec/device/3.1.3/
                   core:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/core/3.1.2/
+                    - https://w3id.org/rec/core/3.1.3/
                   metadata:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/metadata/3.1.2/
+                    - https://w3id.org/rec/metadata/3.1.3/
                   agents:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/agents/3.1.2/
+                    - https://w3id.org/rec/agents/3.1.3/
                   building:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/building/3.1.2/
+                    - https://w3id.org/rec/building/3.1.3.3/
                   lease:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/lease/3.1.2/
+                    - https://w3id.org/rec/lease/3.1.3/
       tags: []
   /actuationinterface:
     get:
@@ -1651,6 +1515,12 @@ paths:
       - $ref: '#/components/parameters/pageParam'
       - $ref: '#/components/parameters/sizeParam'
       - $ref: '#/components/parameters/sortParam'
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: core:hasSuperDevice
         description: Filter value on property 'core:hasSuperDevice'.
         schema:
@@ -1663,14 +1533,14 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: core:quantityKind
-        description: Filter value on property 'core:quantityKind'.
+      - name: device:observedBy
+        description: Filter value on property 'device:observedBy'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: device:observedBy
-        description: Filter value on property 'device:observedBy'.
+      - name: core:deviceQuantityKind
+        description: Filter value on property 'core:deviceQuantityKind'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -1759,6 +1629,12 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
+      - name: core:deviceMeasurementUnit
+        description: Filter value on property 'core:deviceMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: core:hasSubDevice
         description: Filter value on property 'core:hasSubDevice'.
         schema:
@@ -1816,7 +1692,7 @@ paths:
                         - $ref: '#/components/schemas/device%3aActuator'
                         - type: object
                           required:
-                          - core:quantityKind
+                          - core:deviceQuantityKind
       tags:
       - actuator
     post:
@@ -1856,7 +1732,7 @@ paths:
                 - $ref: '#/components/schemas/device%3aActuator'
                 - type: object
                   required:
-                  - core:quantityKind
+                  - core:deviceQuantityKind
       tags:
       - actuator
   /actuator/{id}:
@@ -1889,7 +1765,7 @@ paths:
                 - $ref: '#/components/schemas/device%3aActuator'
                 - type: object
                   required:
-                  - core:quantityKind
+                  - core:deviceQuantityKind
       tags:
       - actuator
     put:
@@ -1937,7 +1813,7 @@ paths:
                 - $ref: '#/components/schemas/device%3aActuator'
                 - type: object
                   required:
-                  - core:quantityKind
+                  - core:deviceQuantityKind
       tags:
       - actuator
     patch:
@@ -1988,7 +1864,7 @@ paths:
                 - $ref: '#/components/schemas/device%3aActuator'
                 - type: object
                   required:
-                  - core:quantityKind
+                  - core:deviceQuantityKind
       tags:
       - actuator
     delete:
@@ -2426,6 +2302,12 @@ paths:
       - $ref: '#/components/parameters/pageParam'
       - $ref: '#/components/parameters/sizeParam'
       - $ref: '#/components/parameters/sortParam'
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: core:hasSuperDevice
         description: Filter value on property 'core:hasSuperDevice'.
         schema:
@@ -2438,20 +2320,20 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: core:measurementUnit
-        description: Filter value on property 'core:measurementUnit'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:quantityKind
-        description: Filter value on property 'core:quantityKind'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
       - name: device:observesActuator
         description: Filter value on property 'device:observesActuator'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceMeasurementUnit
+        description: Filter value on property 'core:deviceMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceQuantityKind
+        description: Filter value on property 'core:deviceQuantityKind'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -2564,6 +2446,18 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
+      - name: device:generatedException
+        description: Filter value on property 'device:generatedException'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:generatedObservation
+        description: Filter value on property 'device:generatedObservation'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       responses:
         400:
           description: Bad Request
@@ -2585,8 +2479,8 @@ paths:
                         - $ref: '#/components/schemas/device%3aSensor'
                         - type: object
                           required:
-                          - core:measurementUnit
-                          - core:quantityKind
+                          - core:deviceMeasurementUnit
+                          - core:deviceQuantityKind
       tags:
       - sensor
     post:
@@ -2626,8 +2520,8 @@ paths:
                 - $ref: '#/components/schemas/device%3aSensor'
                 - type: object
                   required:
-                  - core:measurementUnit
-                  - core:quantityKind
+                  - core:deviceMeasurementUnit
+                  - core:deviceQuantityKind
       tags:
       - sensor
   /sensor/{id}:
@@ -2660,8 +2554,8 @@ paths:
                 - $ref: '#/components/schemas/device%3aSensor'
                 - type: object
                   required:
-                  - core:measurementUnit
-                  - core:quantityKind
+                  - core:deviceMeasurementUnit
+                  - core:deviceQuantityKind
       tags:
       - sensor
     put:
@@ -2709,8 +2603,8 @@ paths:
                 - $ref: '#/components/schemas/device%3aSensor'
                 - type: object
                   required:
-                  - core:measurementUnit
-                  - core:quantityKind
+                  - core:deviceMeasurementUnit
+                  - core:deviceQuantityKind
       tags:
       - sensor
     patch:
@@ -2761,8 +2655,8 @@ paths:
                 - $ref: '#/components/schemas/device%3aSensor'
                 - type: object
                   required:
-                  - core:measurementUnit
-                  - core:quantityKind
+                  - core:deviceMeasurementUnit
+                  - core:deviceQuantityKind
       tags:
       - sensor
     delete:
@@ -2798,6 +2692,12 @@ paths:
         in: query
       - name: core:isPartOfBuilding
         description: Filter value on property 'core:isPartOfBuilding'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:containsMountedDevice
+        description: Filter value on property 'core:containsMountedDevice'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -3013,6 +2913,12 @@ paths:
       - $ref: '#/components/parameters/pageParam'
       - $ref: '#/components/parameters/sizeParam'
       - $ref: '#/components/parameters/sortParam'
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: core:hasSuperDevice
         description: Filter value on property 'core:hasSuperDevice'.
         schema:
@@ -3105,6 +3011,18 @@ paths:
         in: query
       - name: core:associatedWithEvent
         description: Filter value on property 'core:associatedWithEvent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceMeasurementUnit
+        description: Filter value on property 'core:deviceMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceQuantityKind
+        description: Filter value on property 'core:deviceQuantityKind'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -3543,8 +3461,8 @@ paths:
       - $ref: '#/components/parameters/pageParam'
       - $ref: '#/components/parameters/sizeParam'
       - $ref: '#/components/parameters/sortParam'
-      - name: core:measurementUnit
-        description: Filter value on property 'core:measurementUnit'.
+      - name: core:qkMeasurementUnit
+        description: Filter value on property 'core:qkMeasurementUnit'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -4169,382 +4087,6 @@ paths:
           description: "'core:RealEstateComponent' entity was successfully deleted."
       tags:
       - realestatecomponent
-  /sensors:
-    get:
-      summary: Get 'core:Sensor' entities.
-      parameters:
-      - $ref: '#/components/parameters/pageParam'
-      - $ref: '#/components/parameters/sizeParam'
-      - $ref: '#/components/parameters/sortParam'
-      - name: core:hasSuperDevice
-        description: Filter value on property 'core:hasSuperDevice'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:isMountedInBuildingComponent
-        description: Filter value on property 'core:isMountedInBuildingComponent'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:observesActuator
-        description: Filter value on property 'device:observesActuator'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:measurementUnit
-        description: Filter value on property 'core:measurementUnit'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:quantityKind
-        description: Filter value on property 'core:quantityKind'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasCommunicationsBus
-        description: Filter value on property 'device:hasCommunicationsBus'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasDeviceFunctionType
-        description: Filter value on property 'device:hasDeviceFunctionType'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasKNXDataPointType
-        description: Filter value on property 'device:hasKNXDataPointType'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasModbusDataType
-        description: Filter value on property 'device:hasModbusDataType'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasModbusFunctionCode
-        description: Filter value on property 'device:hasModbusFunctionCode'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasIPAddressPort
-        description: Filter value on property 'device:hasIPAddressPort'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasKNXDeviceId
-        description: Filter value on property 'device:hasKNXDeviceId'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasKNXDevicePort
-        description: Filter value on property 'device:hasKNXDevicePort'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasLoraDevEUI
-        description: Filter value on property 'device:hasLoraDevEUI'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasModbusNodeId
-        description: Filter value on property 'device:hasModbusNodeId'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasModbusRegister
-        description: Filter value on property 'device:hasModbusRegister'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasOffset
-        description: Filter value on property 'device:hasOffset'.
-        schema:
-          $ref: '#/components/schemas/NumberFilter'
-        style: deepObject
-        in: query
-      - name: device:hasScaleFactor
-        description: Filter value on property 'device:hasScaleFactor'.
-        schema:
-          $ref: '#/components/schemas/NumberFilter'
-        style: deepObject
-        in: query
-      - name: core:associatedWithEvent
-        description: Filter value on property 'core:associatedWithEvent'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:hasSubDevice
-        description: Filter value on property 'core:hasSubDevice'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:servesBuilding
-        description: Filter value on property 'core:servesBuilding'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:servesBuildingComponent
-        description: Filter value on property 'core:servesBuildingComponent'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:servesDevice
-        description: Filter value on property 'core:servesDevice'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:generatedException
-        description: Filter value on property 'device:generatedException'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:generatedObservation
-        description: Filter value on property 'core:generatedObservation'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      responses:
-        400:
-          description: Bad Request
-        500:
-          description: Internal Server Error
-        200:
-          description: An array of 'core:Sensor' objects.
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - $ref: '#/components/schemas/HydraCollectionWrapper'
-                - type: object
-                  properties:
-                    hydra:member:
-                      type: array
-                      items:
-                        allOf:
-                        - $ref: '#/components/schemas/core%3aSensor'
-                        - type: object
-                          required:
-                          - core:measurementUnit
-                          - core:quantityKind
-      tags:
-      - sensors
-    post:
-      summary: Create a new 'core:Sensor' object.
-      parameters: []
-      requestBody:
-        description: New 'core:Sensor' entity that is to be added.
-        required: true
-        content:
-          application/ld+json:
-            schema:
-              allOf:
-              - type: object
-                required:
-                - '@context'
-                properties:
-                  '@context':
-                    $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aSensor'
-      responses:
-        500:
-          description: Internal Server Error
-        400:
-          description: Bad Request
-        201:
-          description: Entity was successfully created (new representation returned).
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - type: object
-                  required:
-                  - '@context'
-                  properties:
-                    '@context':
-                      $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aSensor'
-                - type: object
-                  required:
-                  - core:measurementUnit
-                  - core:quantityKind
-      tags:
-      - sensors
-  /sensors/{id}:
-    get:
-      summary: Get a specific 'core:Sensor' object.
-      parameters:
-      - name: id
-        description: Id of 'core:Sensor' to return.
-        required: true
-        schema:
-          type: string
-        in: path
-      responses:
-        404:
-          description: An object of type 'core:Sensor' with the specified ID was not found.
-        500:
-          description: Internal Server Error
-        200:
-          description: A 'core:Sensor' object.
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - type: object
-                  required:
-                  - '@context'
-                  properties:
-                    '@context':
-                      $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aSensor'
-                - type: object
-                  required:
-                  - core:measurementUnit
-                  - core:quantityKind
-      tags:
-      - sensors
-    put:
-      summary: Update an existing 'core:Sensor' entity.
-      parameters:
-      - name: id
-        description: Id of 'core:Sensor' to update.
-        required: true
-        schema:
-          type: string
-        in: path
-      requestBody:
-        description: Updated data for 'core:Sensor' entity.
-        required: true
-        content:
-          application/ld+json:
-            schema:
-              allOf:
-              - type: object
-                required:
-                - '@context'
-                properties:
-                  '@context':
-                    $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aSensor'
-      responses:
-        400:
-          description: Bad Request
-        404:
-          description: An object of type 'core:Sensor' with the specified ID was not found.
-        500:
-          description: Internal Server Error
-        200:
-          description: Entity was updated successfully (new representation returned).
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - type: object
-                  required:
-                  - '@context'
-                  properties:
-                    '@context':
-                      $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aSensor'
-                - type: object
-                  required:
-                  - core:measurementUnit
-                  - core:quantityKind
-      tags:
-      - sensors
-    patch:
-      summary: Update a single property on a specific 'core:Sensor' object.
-      parameters:
-      - name: id
-        description: Id of 'core:Sensor' to update.
-        required: true
-        schema:
-          type: string
-        in: path
-      requestBody:
-        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
-        required: true
-        content:
-          application/ld+json:
-            schema:
-              allOf:
-              - type: object
-                required:
-                - '@context'
-                properties:
-                  '@context':
-                    $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aSensor'
-              - type: object
-                maxProperties: 2
-                minProperties: 2
-      responses:
-        400:
-          description: Bad Request
-        404:
-          description: An object of type 'core:Sensor' with the specified ID was not found.
-        500:
-          description: Internal Server Error
-        200:
-          description: Entity was updated successfully (new representation returned).
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - type: object
-                  required:
-                  - '@context'
-                  properties:
-                    '@context':
-                      $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aSensor'
-                - type: object
-                  required:
-                  - core:measurementUnit
-                  - core:quantityKind
-      tags:
-      - sensors
-    delete:
-      summary: Delete a 'core:Sensor' object.
-      parameters:
-      - name: id
-        description: Id of 'core:Sensor' to delete.
-        required: true
-        schema:
-          type: string
-        in: path
-      responses:
-        404:
-          description: An object of type 'core:Sensor' with the specified ID was not found.
-        500:
-          description: Internal Server Error
-        200:
-          description: "'core:Sensor' entity was successfully deleted."
-      tags:
-      - sensors
   /roomtype:
     get:
       summary: Get 'building:RoomType' entities.
@@ -4765,6 +4307,12 @@ paths:
         in: query
       - name: core:isPartOfBuilding
         description: Filter value on property 'core:isPartOfBuilding'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:containsMountedDevice
+        description: Filter value on property 'core:containsMountedDevice'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject

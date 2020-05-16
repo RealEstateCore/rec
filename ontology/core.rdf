@@ -17,8 +17,8 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/core/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.1.2/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.1.2/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.1.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.1.3/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
@@ -27,9 +27,9 @@
 Note that this module reuses certain classes, properties, and named individuals from other vocabularies, e.g., GeoSPARQL; the copyright conditions on those reused entities are stated in their respective rdfs:comments annotations.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Core Module</dc:title>
-        <dcterms:modified>2020-04-21</dcterms:modified>
+        <dcterms:modified>2020-05-15</dcterms:modified>
         <vann:preferredNamespacePrefix>core</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/core/3.1.2/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/core/3.1.3/</vann:preferredNamespaceUri>
         <cpannotationschema:coversRequirements xml:lang="en">How many rooms are there in Building 1?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">What does electricity meter 3 measure? In what units?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">Where in Building 1 (i.e., in which rooms) are there devices mounted?</cpannotationschema:coversRequirements>
@@ -38,12 +38,12 @@ Note that this module reuses certain classes, properties, and named individuals 
         <cpannotationschema:coversRequirements xml:lang="en">Which buildings and land make up the real estate Ulvsnaes 1:7?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?</cpannotationschema:coversRequirements>
         <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.1.2</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.1.3</owl:versionInfo>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -51,7 +51,7 @@ Note that this module reuses certain classes, properties, and named individuals 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#gmlLiteral -->
@@ -62,7 +62,7 @@ Note that this module reuses certain classes, properties, and named individuals 
 GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
         <rdfs:label xml:lang="en">GML Literal</rdfs:label>
     </rdfs:Datatype>
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
@@ -73,10 +73,10 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
         <rdfs:label xml:lang="en">Well-known Text Literal</rdfs:label>
     </rdfs:Datatype>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -84,7 +84,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#defaultGeometry -->
@@ -98,7 +98,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">defaultGeometry</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
@@ -111,7 +111,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/associatedWithDevice -->
@@ -123,7 +123,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Links an Event of some sort to a Device that generated, detected, or executes that Event.</rdfs:comment>
         <rdfs:label xml:lang="en">associated with device</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/associatedWithEvent -->
@@ -134,19 +134,20 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Links a Device of some sort to an Event generated by, detected through, or targetting that Device.</rdfs:comment>
         <rdfs:label xml:lang="en">associated with event</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/containsMountedDevice -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/containsMountedDevice">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedInBuildingComponent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to Devices mounted within them.</rdfs:comment>
         <rdfs:label xml:lang="en">contains mounted device</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/deviceMeasurementUnit -->
@@ -157,9 +158,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The measurement unit used by some Device.</rdfs:comment>
         <rdfs:label xml:lang="en">device measurement unit</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/deviceQuantityKind -->
@@ -170,9 +170,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.</rdfs:comment>
         <rdfs:label xml:lang="en">device quantity kind</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/eventMeasurementUnit -->
@@ -183,9 +182,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">A unit used to measure some aspect of some Event.</rdfs:comment>
         <rdfs:label xml:lang="en">event measurement unit</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/eventQuantityKind -->
@@ -196,20 +194,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">The Quantity Kind that an event measures or affects.</rdfs:comment>
         <rdfs:label xml:lang="en">event quantity kind</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
-
-
-    <!-- https://w3id.org/rec/core/generatedObservation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/generatedObservation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/associatedWithEvent"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/observationGeneratedBy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Observation"/>
-        <rdfs:label xml:lang="en">generated observation</rdfs:label>
-    </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasBuildingComponent -->
@@ -222,7 +208,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Parthood traversal property linking Buildings to the Building Components that they are made up of.</rdfs:comment>
         <rdfs:label xml:lang="en">has building component</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasGeoReferenceOrigo -->
@@ -234,19 +220,17 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Associates a building with a point in some coordinate reference system which can be used to resolve local (building-specific) coordinates against this outer coordinate reference system.</rdfs:comment>
         <rdfs:label xml:lang="en">has geo-reference origo</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasMeasurementUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
         <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasPart -->
@@ -257,19 +241,17 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy.</rdfs:comment>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasQuantityKind -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">has quantity kind</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasRealEstateComponent -->
@@ -282,7 +264,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Parthood traversal property linking a piece of RealEstate to its constituent components (i.e., Buildings and Land).</rdfs:comment>
         <rdfs:label xml:lang="en">has real estate component</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSubBuildingComponent -->
@@ -295,7 +277,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to their constituent sub-components.</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-BuildingComponent</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSubDevice -->
@@ -308,7 +290,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Parthood traversal property linking a Device to any sub-Devices that it contains.</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-device</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSuperBuildingComponent -->
@@ -320,7 +302,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">has super-BuildingComponent</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSuperDevice -->
@@ -332,50 +314,19 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">A property that allows for nesting of devices within devices.</rdfs:comment>
         <rdfs:label xml:lang="en">has super-Device</rdfs:label>
     </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/rec/core/hasType -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasType">
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Type"/>
-        <rdfs:comment xml:lang="en">A generic typing relation, holding between individuals and their types (which are also expressed as individuals). This construct allows implementors to add their own types without modifying the ontology and its classes. See the Explicit Typing design pattern in the MODL design library for further discussion.</rdfs:comment>
-        <rdfs:label xml:lang="en">has type</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/rec/core/isMemberOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMemberOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
-        <rdfs:label xml:lang="en">is member of</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/rec/core/isMountedIn -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMountedIn">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">Property describing where a Device is mounted.</rdfs:comment>
-        <rdfs:label xml:lang="en">is mounted in</rdfs:label>
-    </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isMountedInBuildingComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMountedInBuildingComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Property describing in which Building Component (most typically a Room) that a Device is mounted.</rdfs:comment>
         <rdfs:label xml:lang="en">is mounted in Building Component</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isPartOf -->
@@ -385,7 +336,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property.</rdfs:comment>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isPartOfBuilding -->
@@ -397,7 +348,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Indicates which Building a certain Building Component is part of.</rdfs:comment>
         <rdfs:label xml:lang="en">is part of building</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isPartOfRealEstate -->
@@ -408,37 +359,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/RealEstate"/>
         <rdfs:comment xml:lang="en">Indicates that a Building or a piece of Land belongs to / is part of a given Real Estate.</rdfs:comment>
     </owl:ObjectProperty>
-
-
-    <!-- https://w3id.org/rec/core/measurementUnit -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/measurementUnit">
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
-        <rdfs:label xml:lang="en">measurement unit</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/rec/core/observationGeneratedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/observationGeneratedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/associatedWithDevice"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Observation"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:label xml:lang="en">observation generated by</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/rec/core/premisesType -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/premisesType">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasType"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Premises"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/PremisesType"/>
-    </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/qkMeasurementUnit -->
@@ -449,30 +370,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">quantity kind measurement unit</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/rec/core/quantityKind -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/quantityKind">
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">quantity kind</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/rec/core/servedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servedBy">
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/serves"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">Indicates that an area or entity is served by some device or sensor. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor.</rdfs:comment>
-        <rdfs:label xml:lang="en">served by</rdfs:label>
-    </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/serves -->
@@ -482,7 +381,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">The coverage or impact area of a given device or sensor. For example: an air-treatment Device might serve several Rooms or a full Building. Note that devices can also service one another, e.g., an air-treatment Device might serve an air diffuser Device.</rdfs:comment>
         <rdfs:label xml:lang="en">serves</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/servesBuilding -->
@@ -494,7 +393,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Indicates how a Device serves an entire Building.</rdfs:comment>
         <rdfs:label xml:lang="en">serves building</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/servesBuildingComponent -->
@@ -506,7 +405,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Indicates how a Device serves a particular Building Component (e.g., a Room).</rdfs:comment>
         <rdfs:label xml:lang="en">serves building component</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/servesDevice -->
@@ -518,10 +417,10 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">Indicates how a Device serves another Device.</rdfs:comment>
         <rdfs:label xml:lang="en">serves device</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -529,7 +428,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#asGML -->
@@ -544,7 +443,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label>asGML</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#asWKT -->
@@ -559,7 +458,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label>asWKT</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#hasSerialization -->
@@ -573,7 +472,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">has serialization</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasAliasID -->
@@ -586,7 +485,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
         <rdfs:label xml:lang="en">has alias ID</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasAuxiliaryData -->
@@ -595,7 +494,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
         <rdfs:comment xml:lang="en">This parent property groups a number of sub-properties that provide additional richness to building or device model and that are often used in practice in various systems, but which have not yet (REC 3.0) been fully modelled their respecive REC modules.</rdfs:comment>
         <rdfs:label xml:lang="en">has auxiliary data</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasCity -->
@@ -605,7 +504,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
         <rdfs:comment xml:lang="en">Indicates a city that a certain Geometry is part of.</rdfs:comment>
         <rdfs:label xml:lang="en">has city</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasComment -->
@@ -615,7 +514,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
         <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character. E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">has comment</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasCountry -->
@@ -625,7 +524,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
         <rdfs:comment xml:lang="en">Indicates a country that a certain Geometry is part of.</rdfs:comment>
         <rdfs:label xml:lang="en">has country</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasCreatedTime -->
@@ -636,7 +535,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">has created time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasDeletedTime -->
@@ -647,7 +546,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">has deleted time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasDuration -->
@@ -659,7 +558,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
         <rdfs:comment xml:lang="en">Measured in ms (milliseconds). Duration is defined as the length of time that something lasts.</rdfs:comment>
         <rdfs:label xml:lang="en">has duration</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasGeoReferenceBearing -->
@@ -674,7 +573,7 @@ Bearings are never greater than 90°.
 Bearings are based on true north.</rdfs:comment>
         <rdfs:label xml:lang="en">has geo reference bearing</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasGeonamesId -->
@@ -687,7 +586,7 @@ E.g. for Stockholm (Sweden):
 LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs:comment>
         <rdfs:label xml:lang="en">has geonames ID</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasLittera -->
@@ -697,7 +596,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room.</rdfs:comment>
         <rdfs:label xml:lang="en">has littera</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasLocationAttribute -->
@@ -707,7 +606,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">This property is a cognitive clustering for human consumption, grouping sub-properties that assign labels (e.g., place names, addresses, etc.) to Geometry entities. This branch of the property hierarchy may need some further development and cleaning up in future versions.</rdfs:comment>
         <rdfs:label xml:lang="en">has location attribute</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasObservationTime -->
@@ -718,7 +617,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">has observation time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasPointInTime -->
@@ -729,7 +628,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">has point in time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasPopularName -->
@@ -739,7 +638,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Human-readable-friendly name.</rdfs:comment>
         <rdfs:label xml:lang="en">has popular name</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasPostalAddress -->
@@ -749,18 +648,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Address used for postal delivery.</rdfs:comment>
         <rdfs:label xml:lang="en">has postal address</rdfs:label>
     </owl:DatatypeProperty>
-
-
-    <!-- https://w3id.org/rec/core/hasProcessedTime -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasProcessedTime">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Observation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">Time when an object or result was processed in a system.</rdfs:comment>
-        <rdfs:label xml:lang="en">has processed time</rdfs:label>
-    </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasReadTime -->
@@ -771,7 +659,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">has read time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasRegion -->
@@ -781,7 +669,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Indicates a region that a certain Geometry is part of.</rdfs:comment>
         <rdfs:label xml:lang="en">has region</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSource -->
@@ -791,7 +679,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Used for information about a source system or data.</rdfs:comment>
         <rdfs:label xml:lang="en">has source</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasStartTime -->
@@ -802,7 +690,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">has start time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasStopTime -->
@@ -813,7 +701,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">has stop time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasSustainabilityCertification -->
@@ -823,7 +711,7 @@ LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html</rdfs
         <rdfs:comment xml:lang="en">Indicates any sustainability certifications that a Building or piece of Real Estate has achieved. This is a stub for now and will likely be more expressively modelled as classes and properties in future REC releases.</rdfs:comment>
         <rdfs:label xml:lang="en">has sustainability certification</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasTime -->
@@ -853,7 +741,7 @@ TZD  = time zone designator (Z or +hh:mm or -hh:mm)
 Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&quot;Z&quot;) for GMT.</rdfs:comment>
         <rdfs:label xml:lang="en">has time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasUpdatedTime -->
@@ -864,7 +752,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">has updated time</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasValue -->
@@ -874,7 +762,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:comment xml:lang="en">An event may be associated with a value. This is a rather generic property which can be reused or extended by sub-classes to indicate, e.g., measurement values, actuation values, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">has value</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasVistingAddress -->
@@ -884,7 +772,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:comment xml:lang="en">An address for visiting the Geometry. If a Geometry has multiple visiting addresses, then just add as many hasVistingAddress as needed.</rdfs:comment>
         <rdfs:label xml:lang="en">has visting address</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/hasZipCode -->
@@ -894,7 +782,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:comment xml:lang="en">Indicates a certain Geometry&apos;s zip code.</rdfs:comment>
         <rdfs:label xml:lang="en">has zip code</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/isLocatedAtLocalCoordinates -->
@@ -904,7 +792,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:comment xml:lang="en">Expressed as a string adhering to the notation &quot;(x,y,z)&quot;, where x, y, and z ar whole or decimal numbers indicating the position in the local building coordinate system, measured in meters. This relates to the outside world coordinate refence system via the values expressed by GeoReferenceOrigo.</rdfs:comment>
         <rdfs:label xml:lang="en">is located at local coordinates</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/core/unitSign -->
@@ -914,10 +802,10 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:comment xml:lang="en">The syntactical representation of a unit, e.g., m^3 for cubic meter, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">unit sign</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -925,7 +813,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#Geometry -->
@@ -937,7 +825,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">Geometry</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Agent -->
@@ -946,21 +834,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">The human or machine that consumes or acts upon an object or data.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
-
-
-    <!-- https://w3id.org/rec/core/Apartment -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Apartment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Room"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Apartment</rdfs:label>
-    </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Building -->
@@ -970,7 +844,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">A confined building structure.</rdfs:comment>
         <rdfs:label xml:lang="en">Building</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/BuildingComponent -->
@@ -993,24 +867,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <o2o:endpoint>buildingcomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
-
-
-    <!-- https://w3id.org/rec/core/Collection -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Collection">
-        <rdfs:label xml:lang="en">Collection</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/rec/core/DataSchema -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/DataSchema">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
-        <rdfs:comment xml:lang="en">Abstract class holding different types of data validation / payload schemas.</rdfs:comment>
-        <rdfs:label xml:lang="en">Data schema</rdfs:label>
-    </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Device -->
@@ -1033,28 +890,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <o2o:endpoint>device</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Event -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/GeoReferenceOrigo -->
@@ -1064,7 +909,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">A fixed point for e.g. a building structure. Commonly refered to as &quot;insertion point&quot; in CAD-programs. Used as origo for LocalCoordinates.</rdfs:comment>
         <rdfs:label xml:lang="en">Geo-reference origo</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Information -->
@@ -1073,7 +918,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">A generic catch-all superclass for all kinds of intangible data types used in a broad variety of contexts, e.g., measurement scales or units, response codes, currency identifiers, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Information</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Land -->
@@ -1083,7 +928,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">A piece of land upon which one or more buildings may be situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/MeasurementUnit -->
@@ -1101,33 +946,19 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <o2o:endpoint>measurementunit</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
-
-
-    <!-- https://w3id.org/rec/core/PremisesType -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/PremisesType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
-        <rdfs:label xml:lang="en">Premises type</rdfs:label>
-    </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/QuantityKind -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/QuantityKind">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT.</rdfs:comment>
         <rdfs:label xml:lang="en">Quantity kind</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
         <o2o:endpoint>quantitykind</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RealEstate -->
@@ -1138,7 +969,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <o2o:endpoint>realestate</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RealEstateComponent -->
@@ -1155,7 +986,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <o2o:endpoint>realestatecomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Room -->
@@ -1165,42 +996,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Base class for all more specific room types.</rdfs:comment>
         <rdfs:label xml:lang="en">Room</rdfs:label>
     </owl:Class>
-
-
-    <!-- https://w3id.org/rec/core/Sensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Sensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
-        <rdfs:label xml:lang="en">Sensor</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensors</o2o:endpoint>
-        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
-    </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Software -->
@@ -1209,14 +1005,10 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Any piece of software or similar digital resource (including data schemas, etc) that executes or can be loaded on some or many parts of a RealEstateCore-enabled distributed system.</rdfs:comment>
         <rdfs:label xml:lang="en">Software</rdfs:label>
     </owl:Class>
+    
 
 
-    <owl:Class rdf:about="https://w3id.org/rec/core/Type">
-        <rdfs:label xml:lang="en">Type</rdfs:label>
-    </owl:Class>
-
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -1224,17 +1016,17 @@ MillimeterPerHour for Precipation</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActiveEnergyL1 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/ActiveEnergyL1">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <measurementUnit rdf:resource="https://w3id.org/rec/core/Watt"/>
+        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Watt"/>
         <rdfs:label xml:lang="en">ActiveEnergyL1</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActiveEnergyL2 -->
@@ -1243,7 +1035,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActiveEnergyL2</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActiveEnergyL3 -->
@@ -1252,7 +1044,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActiveEnergyL3</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActiveEnergyTotal -->
@@ -1261,7 +1053,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActiveEnergyTotal</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActivePowerL1 -->
@@ -1270,7 +1062,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActivePowerL1</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActivePowerL2 -->
@@ -1279,7 +1071,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActivePowerL2</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActivePowerL3 -->
@@ -1288,7 +1080,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActivePowerL3</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ActivePowerTotal -->
@@ -1297,7 +1089,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ActivePowerTotal</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/AgentInteraction -->
@@ -1307,7 +1099,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">When a human interacts with a system. E.g. pushes a button to turn on/off a light, force ventilation.</rdfs:comment>
         <rdfs:label xml:lang="en">AgentInteraction</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/AlarmMajor -->
@@ -1317,7 +1109,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Danger for property</rdfs:comment>
         <rdfs:label xml:lang="en">AlarmMajor</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/AlarmMinor -->
@@ -1327,7 +1119,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Notifications</rdfs:comment>
         <rdfs:label xml:lang="en">AlarmMinor</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/AlarmSevere -->
@@ -1337,7 +1129,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Danger for life and property</rdfs:comment>
         <rdfs:label xml:lang="en">AlarmSevere</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Ampere -->
@@ -1348,7 +1140,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Ampere. Current in a circuit.</rdfs:comment>
         <rdfs:label xml:lang="en">Ampere</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Angle -->
@@ -1357,7 +1149,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Angle</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Area -->
@@ -1366,7 +1158,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Area</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Binary -->
@@ -1374,7 +1166,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Binary">
         <rdfs:label xml:lang="en">Binary</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CO -->
@@ -1383,7 +1175,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">CO</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CO2 -->
@@ -1392,7 +1184,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">CO2</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Celsius -->
@@ -1403,7 +1195,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Temperature in Celsius degress. Note that correct SI Unit is Kelvin.</rdfs:comment>
         <rdfs:label xml:lang="en">Celsius</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Concentration -->
@@ -1412,7 +1204,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Concentration</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CosPhi -->
@@ -1423,7 +1215,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">The angle between two electrical phases.</rdfs:comment>
         <rdfs:label xml:lang="en">CosPhi</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CubicMeter -->
@@ -1434,7 +1226,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Volume is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains. Volume is often quantified numerically using the cubic metre (m3).</rdfs:comment>
         <rdfs:label xml:lang="en">CubicMeter</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Current -->
@@ -1443,7 +1235,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Current</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CurrentL1 -->
@@ -1452,7 +1244,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">CurrentL1</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CurrentL2 -->
@@ -1461,7 +1253,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">CurrentL2</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/CurrentL3 -->
@@ -1470,7 +1262,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">CurrentL3</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Decibel -->
@@ -1481,7 +1273,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Sound level</rdfs:comment>
         <rdfs:label xml:lang="en">Decibel</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Degrees -->
@@ -1490,7 +1282,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:label xml:lang="en">Degrees</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Efficiency -->
@@ -1499,7 +1291,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Efficiency</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/EnergyTotal -->
@@ -1509,7 +1301,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Total energy (not specified as Active or Reactive, used for e.g. district heating).</rdfs:comment>
         <rdfs:label xml:lang="en">EnergyTotal</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Fahrenheit -->
@@ -1520,7 +1312,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Temperature in Fahrenheit degress.</rdfs:comment>
         <rdfs:label xml:lang="en">Fahrenheit</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Flow -->
@@ -1529,7 +1321,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Flow</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/GlobalIrradiance -->
@@ -1539,7 +1331,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">GlobalIrradiance</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Solar_irradiance</rdfs:seeAlso>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Hertz -->
@@ -1550,7 +1342,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">One cycle per second.</rdfs:comment>
         <rdfs:label xml:lang="en">Hertz</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Humidity -->
@@ -1560,7 +1352,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Humidity</rdfs:label>
         <rdfs:seeAlso xml:lang="en">Humidity</rdfs:seeAlso>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Illuminance -->
@@ -1569,7 +1361,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Illuminance</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Integer -->
@@ -1577,7 +1369,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Integer">
         <rdfs:label xml:lang="en">Integer</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Kelvin -->
@@ -1588,7 +1380,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Temperature in Kelvin degrees</rdfs:comment>
         <rdfs:label xml:lang="en">Kelvin</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Kilogram -->
@@ -1599,7 +1391,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Mass.</rdfs:comment>
         <rdfs:label xml:lang="en">Kilogram</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Lenght -->
@@ -1608,25 +1400,17 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Lenght</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+     </owl:NamedIndividual>
+
+
+
+     <!-- https://w3id.org/rec/core/Length -->
+
+     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Length">
+         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+         <rdfs:label xml:lang="en">Length</rdfs:label>
     </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/rec/core/Length -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Length">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:label xml:lang="en">Length</rdfs:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/rec/core/Length -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Length">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:label xml:lang="en">Length</rdfs:label>
-    </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Level -->
@@ -1635,7 +1419,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Level</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/LiterPerSecond -->
@@ -1646,7 +1430,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Flow</rdfs:comment>
         <rdfs:label xml:lang="en">LiterPerSecond</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Lumen -->
@@ -1657,7 +1441,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <unitSign xml:lang="en">lm</unitSign>
         <rdfs:label xml:lang="en">Lumen</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Lux -->
@@ -1668,7 +1452,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Light intensity in a specific area.</rdfs:comment>
         <rdfs:label xml:lang="en">Lux</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Meter -->
@@ -1679,7 +1463,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Lenght.</rdfs:comment>
         <rdfs:label xml:lang="en">Meter</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/MeterPerSecond -->
@@ -1688,7 +1472,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:label xml:lang="en">MeterPerSecond</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/MillimeterPerHour -->
@@ -1698,7 +1482,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">For measuring Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">MillimeterPerHour</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Number -->
@@ -1706,7 +1490,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Number">
         <rdfs:label xml:lang="en">Number</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PartsPerMillion -->
@@ -1717,7 +1501,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Measurement for concentration</rdfs:comment>
         <rdfs:label xml:lang="en">PartsPerMillion</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Pascal -->
@@ -1729,7 +1513,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Pascal</rdfs:label>
         <rdfs:seeAlso xml:lang="en">In Haystack: barometric is described as &quot;Defines the mean atmospheric pressure at sea level measured in millibar or in Hg.&quot;</rdfs:seeAlso>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Percentage -->
@@ -1737,7 +1521,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Percentage">
         <rdfs:label xml:lang="en">Percentage</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFactor -->
@@ -1748,7 +1532,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">The power factor of an AC electrical power system is defined as the ratio of the real power flowing to the load to the apparent power in the circuit, and is a dimensionless number in the closed interval of −1 to 1.</rdfs:comment>
         <rdfs:label xml:lang="en">PowerFactor</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFactorL1 -->
@@ -1757,7 +1541,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">PowerFactorL1</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFactorL2 -->
@@ -1766,7 +1550,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">PowerFactorL2</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFactorL3 -->
@@ -1775,7 +1559,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">PowerFactorL3</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/PowerFrequency -->
@@ -1784,7 +1568,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">PowerFrequency</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Precipation -->
@@ -1793,28 +1577,19 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">Measured in MillimeterPerHour</rdfs:comment>
         <rdfs:label xml:lang="en">Precipation</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+     </owl:NamedIndividual>
+
+
+
+     <!-- https://w3id.org/rec/core/Precipitation -->
+
+     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Precipitation">
+         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+         <rdfs:comment xml:lang="en">Measured in MillimeterPerHour</rdfs:comment>
+         <rdfs:label xml:lang="en">Precipitation</rdfs:label>
     </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/rec/core/Precipitation -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Precipitation">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Measured in MillimeterPerHour</rdfs:comment>
-        <rdfs:label xml:lang="en">Precipitation</rdfs:label>
-    </owl:NamedIndividual>
-
-
-    <!-- https://w3id.org/rec/core/Precipitation -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Precipitation">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Measured in MillimeterPerHour</rdfs:comment>
-        <rdfs:label xml:lang="en">Precipitation</rdfs:label>
-    </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Presence -->
@@ -1824,7 +1599,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Presence equivivalent</rdfs:comment>
         <rdfs:label xml:lang="en">Presence</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Pressure -->
@@ -1835,7 +1610,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">Pressure</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="se">Tryck</rdfs:seeAlso>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Radiation -->
@@ -1844,7 +1619,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Radiation</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ReactivePowerL1 -->
@@ -1852,8 +1627,9 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/ReactivePowerL1">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ReactivePowerL1</rdfs:label>
+        <rdfs:label xml:lang="en">reactive,power</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ReactivePowerL2 -->
@@ -1862,7 +1638,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ReactivePowerL2</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ReactivePowerL3 -->
@@ -1871,7 +1647,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ReactivePowerL3</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/ReactivePowerTotal -->
@@ -1880,7 +1656,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">ReactivePowerTotal</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RelativeHumidity -->
@@ -1891,7 +1667,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Relative Humidity. The amount of water vapour present in air expressed as a percentage of the amount needed for saturation at the same temperature.</rdfs:comment>
         <rdfs:label xml:lang="en">RelativeHumidity</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RevolutionsPerMinute -->
@@ -1901,7 +1677,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <unitSign xml:lang="en">rpm</unitSign>
         <rdfs:label xml:lang="en">RevoultionsPerMinute</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/RotationSpeed -->
@@ -1910,7 +1686,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">RotationSpeed</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Second -->
@@ -1921,7 +1697,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">The second is the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom.</rdfs:comment>
         <rdfs:label xml:lang="en">Second</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Sound -->
@@ -1930,7 +1706,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Sound</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Speed -->
@@ -1939,7 +1715,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Speed</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/SquareMeter -->
@@ -1950,7 +1726,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Area unit. It is the area of a square whose sides measure exactly one metre.</rdfs:comment>
         <rdfs:label xml:lang="en">SquareMeter</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/SunshineTimePerHour -->
@@ -1959,7 +1735,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">SunshineTimePerHour</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/TVOC -->
@@ -1968,19 +1744,19 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">TVOC</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Temperature -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Temperature">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <measurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
-        <measurementUnit rdf:resource="https://w3id.org/rec/core/Kelvin"/>
+        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
+        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Kelvin"/>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
         <rdfs:seeAlso xml:lang="en">Temperature</rdfs:seeAlso>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Velocity -->
@@ -1989,7 +1765,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Velocity</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Volt -->
@@ -2000,7 +1776,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Voltage, electric potential difference, is the difference in electric potential between two points.</rdfs:comment>
         <rdfs:label xml:lang="en">Volt</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Voltage -->
@@ -2009,7 +1785,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Voltage</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/VoltageL1 -->
@@ -2018,7 +1794,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">VoltageL1</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/VoltageL2 -->
@@ -2027,7 +1803,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">VoltageL2</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/VoltageL3 -->
@@ -2036,7 +1812,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">VoltageL3</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Volume -->
@@ -2045,7 +1821,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Volume</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/Watt -->
@@ -2056,7 +1832,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">This unit is typically used to express the momentaneous output power of engines and the power of electric motors, tools, machines, and heaters.</rdfs:comment>
         <rdfs:label xml:lang="en">Watt</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/WattHour -->
@@ -2067,7 +1843,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Enery. Watthour.</rdfs:comment>
         <rdfs:label xml:lang="en">WattHour</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/rec/core/WattPerSquareMeter -->
@@ -2082,3 +1858,4 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
