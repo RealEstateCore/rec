@@ -1,6 +1,12 @@
 # RealEstateCore Release Notes
 
-## V3.1.2 -- REST API Hotfix
+## V3.1.3 -- Emergency inconcistency hotfix
+
+Version 3.1.3 is a hotfix release that addresses bugs arising from version management in release 3.1.1 and 3.1.2. Several classes and properties from the 3.2 development branch were mistakenly implemented prematurely in 3.1.1 and 3.1.2, causing subtle inconsistencies in the model. Version 3.1.3 reverts all ontology entities to those from version 3.1, while maintaining the REST API specification and edge message examples that were updated since then.
+
+We apologize for providing an inconsistent ontology, and are implementing testing and version management procedures to ensure this does not occur again.
+
+## V3.1.2 -- REST API hotfix
 
 Version 3.1.2 is a bug fix release that addresses two issues in the REST API specification, and one in the edge message format:
 
