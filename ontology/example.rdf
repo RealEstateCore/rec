@@ -13,7 +13,9 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:device="https://w3id.org/rec/device/"
      xmlns:building="https://w3id.org/rec/building/"
+     xmlns:actuation="https://w3id.org/rec/actuation/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/example/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/example/3.2/"/>
@@ -34,6 +36,152 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://w3id.org/rec/example/BrightnessPercentage -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/BrightnessPercentage">
+        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
+        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
+        <actuation:keyString>brightness</actuation:keyString>
+        <actuation:valueDatatype>Integer</actuation:valueDatatype>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueAmbientBulbInterface -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueAmbientBulbInterface">
+        <rdf:type rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
+        <actuation:payloadKeyValueDefinition rdf:resource="https://w3id.org/rec/example/BrightnessPercentage"/>
+        <actuation:payloadKeyValueDefinition rdf:resource="https://w3id.org/rec/example/LightColorKelvin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueKitchenLight -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueKitchenLight">
+        <rdf:type rdf:resource="https://w3id.org/rec/device/Actuator"/>
+        <actuation:hasActuationInterface rdf:resource="https://w3id.org/rec/example/HueAmbientBulbInterface"/>
+        <core:isMountedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueMotionSensor1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/Device"/>
+        <core:hasSubDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_LightMeter"/>
+        <core:hasSubDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_MotionDetector"/>
+        <core:hasSubDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_Thermometer"/>
+        <core:isMountedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueMotionSensor1_LightMeter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_LightMeter">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <core:measurementUnit rdf:resource="https://w3id.org/rec/core/Lux"/>
+        <core:quantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
+        <device:sensorDataInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueMotionSensor1_MotionDetector -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_MotionDetector">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <core:quantityKind rdf:resource="https://w3id.org/rec/core/Presence"/>
+        <device:sensorDataInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueMotionSensor1_Thermometer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_Thermometer">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <core:measurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
+        <core:quantityKind rdf:resource="https://w3id.org/rec/core/Temperature"/>
+        <device:sensorDataInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueMotionSensorLightMeterInterface -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface">
+        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorDataInterface"/>
+        <device:dataSchema rdf:resource="https://w3id.org/rec/example/LuxAsInteger"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface">
+        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorDataInterface"/>
+        <device:dataSchema rdf:resource="https://w3id.org/rec/example/MotionAsBoolean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueMotionSensorThermometerInterface -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorThermometerInterface">
+        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorDataInterface"/>
+        <device:dataSchema rdf:resource="https://w3id.org/rec/example/TemperatureAsFloat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/LightColorKelvin -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/LightColorKelvin">
+        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
+        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
+        <actuation:keyString>color</actuation:keyString>
+        <actuation:valueDatatype>Integer</actuation:valueDatatype>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/LuxAsInteger -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/LuxAsInteger">
+        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
+        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
+        <actuation:keyString>luxValue</actuation:keyString>
+        <actuation:valueDatatype>Integer</actuation:valueDatatype>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/MotionAsBoolean -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/MotionAsBoolean">
+        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
+        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
+        <actuation:keyString>motionDetected</actuation:keyString>
+        <actuation:valueDatatype>Boolean</actuation:valueDatatype>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/TemperatureAsFloat -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/TemperatureAsFloat">
+        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
+        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
+        <actuation:keyString>temperature</actuation:keyString>
+        <actuation:valueDatatype>Float</actuation:valueDatatype>
+    </owl:NamedIndividual>
     
 
 
