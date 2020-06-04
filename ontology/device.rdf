@@ -173,6 +173,15 @@
     
 
 
+    <!-- https://w3id.org/rec/device/hasDataInterface -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasDataInterface">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/DeviceDataInterface"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/device/hasDeviceFunctionType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasDeviceFunctionType">
@@ -689,6 +698,14 @@
     <owl:Class rdf:about="https://w3id.org/rec/device/CommunicationsBus">
         <rdfs:comment xml:lang="en">Type of communications bus for the Device.</rdfs:comment>
         <rdfs:label xml:lang="en">Communications bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/DeviceDataInterface -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/DeviceDataInterface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Software"/>
     </owl:Class>
     
 
