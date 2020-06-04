@@ -70,19 +70,10 @@
     
 
 
-    <!-- https://w3id.org/rec/device/dataInterface -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/dataInterface">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/device/DataInterface"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/device/dataSchema -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/dataSchema">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/device/DataInterface"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/SensorDataInterface"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/DataSchema"/>
     </owl:ObjectProperty>
     
@@ -314,6 +305,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/placementContext">
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
         <rdfs:label xml:lang="en">placement context</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/device/sensorDataInterface -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/sensorDataInterface">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/SensorDataInterface"/>
     </owl:ObjectProperty>
     
 
@@ -711,14 +711,6 @@
     
 
 
-    <!-- https://w3id.org/rec/device/DataInterface -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/DataInterface">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Software"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/DeviceEvents -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DeviceEvents">
@@ -949,6 +941,14 @@ Deprecated in favour of core:Observation.</rdfs:comment>
 Deprecated in favour of core:Sensor.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/SensorDataInterface -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/SensorDataInterface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Software"/>
     </owl:Class>
     
 
