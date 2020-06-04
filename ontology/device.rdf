@@ -70,6 +70,24 @@
     
 
 
+    <!-- https://w3id.org/rec/device/dataInterface -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/dataInterface">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/DataInterface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/device/dataSchema -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/dataSchema">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/DataInterface"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/device/devicePlacementContext -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/devicePlacementContext">
@@ -169,15 +187,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/CommunicationsBus"/>
         <rdfs:comment xml:lang="en">has communications bus</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/device/hasDataInterface -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasDataInterface">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/device/DeviceDataInterface"/>
     </owl:ObjectProperty>
     
 
@@ -702,9 +711,9 @@
     
 
 
-    <!-- https://w3id.org/rec/device/DeviceDataInterface -->
+    <!-- https://w3id.org/rec/device/DataInterface -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/DeviceDataInterface">
+    <owl:Class rdf:about="https://w3id.org/rec/device/DataInterface">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Software"/>
     </owl:Class>
     
