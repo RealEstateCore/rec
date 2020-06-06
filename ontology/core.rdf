@@ -149,6 +149,15 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/dataSchema -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/dataSchema">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+        <rdfs:label xml:lang="en">data schema</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/deviceMeasurementUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/deviceMeasurementUnit">
@@ -171,6 +180,15 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.</rdfs:comment>
         <rdfs:label xml:lang="en">device quantity kind</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/elementSchema -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/elementSchema">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/ArraySchema"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/DataSchema"/>
     </owl:ObjectProperty>
     
 
@@ -429,6 +447,15 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
         <rdfs:label xml:lang="en">measurement unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/objectFields -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/objectFields">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/ObjectSchema"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/DataSchema"/>
     </owl:ObjectProperty>
     
 
@@ -921,6 +948,15 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
+    <!-- https://w3id.org/rec/core/schemaName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/schemaName">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/unitSign -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/unitSign">
@@ -978,6 +1014,22 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/ArraySchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/ArraySchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/BooleanSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/BooleanSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PrimitiveSchema"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
@@ -1029,6 +1081,14 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/DateTimeSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/DateTimeSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PrimitiveSchema"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Device -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Device">
@@ -1055,20 +1115,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Event -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/FloatSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/FloatSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PrimitiveSchema"/>
     </owl:Class>
     
 
@@ -1088,6 +1144,14 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/Information">
         <rdfs:comment xml:lang="en">A generic catch-all superclass for all kinds of intangible data types used in a broad variety of contexts, e.g., measurement scales or units, response codes, currency identifiers, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/IntegerSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/IntegerSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PrimitiveSchema"/>
     </owl:Class>
     
 
@@ -1120,9 +1184,31 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/ObjectSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/ObjectSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Observation -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/core/Observation"/>
+    <owl:Class rdf:about="https://w3id.org/rec/core/Observation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1137,6 +1223,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/PremisesType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
         <rdfs:label xml:lang="en">Premises type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/PrimitiveSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/PrimitiveSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/DataSchema"/>
     </owl:Class>
     
 
@@ -1233,11 +1327,34 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Service -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/dataSchema"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Software -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Software">
         <rdfs:comment xml:lang="en">Any piece of software or similar digital resource (including data schemas, etc) that executes or can be loaded on some or many parts of a RealEstateCore-enabled distributed system.</rdfs:comment>
         <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/StringSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/StringSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PrimitiveSchema"/>
     </owl:Class>
     
 

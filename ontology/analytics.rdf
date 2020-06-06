@@ -55,15 +55,6 @@
     
 
 
-    <!-- https://w3id.org/rec/analytics/dataSchema -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/dataSchema">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/DataSchema"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/analytics/dataSource -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/dataSource">
@@ -72,8 +63,8 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/rec/analytics/AnalysisProcess"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/analytics/Service"/>
                     <rdf:Description rdf:about="https://w3id.org/rec/core/Sensor"/>
+                    <rdf:Description rdf:about="https://w3id.org/rec/core/Service"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -88,14 +79,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/GeneratedDataPoint"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/analytics/AnalysisProcess"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/core/observationGeneratedBy -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/observationGeneratedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/analytics/dataSource"/>
-    </rdf:Description>
     
 
 
@@ -136,6 +119,13 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/analytics/DataPoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/dataSchema"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -174,20 +164,6 @@
     <owl:Class rdf:about="https://w3id.org/rec/analytics/Prediction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/GeneratedDataPoint"/>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/analytics/Service -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/analytics/Service"/>
-    
-
-
-    <!-- https://w3id.org/rec/core/Observation -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/Observation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
-    </rdf:Description>
 </rdf:RDF>
 
 
