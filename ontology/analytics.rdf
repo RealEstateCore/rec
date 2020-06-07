@@ -18,7 +18,6 @@
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/analytics/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/analytics/3.2/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/collections/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
@@ -50,7 +49,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/analysisConfiguration">
         <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/AnalysisProcess"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/analytics/DataAnalysisConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/analytics/AnalysisConfiguration"/>
     </owl:ObjectProperty>
     
 
@@ -82,6 +81,18 @@
     
 
 
+    <!-- https://w3id.org/rec/analytics/seriesMembers -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/seriesMembers">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/DataSeries"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+        <rdfs:comment xml:lang="en">Members of the data series. Will in API:s be translated into an RDF ordered list.</rdfs:comment>
+        <rdfs:label xml:lang="en">series members</rdfs:label>
+        <o2o:listProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:listProperty>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -101,17 +112,17 @@
     
 
 
-    <!-- https://w3id.org/rec/analytics/AnalysisProcess -->
+    <!-- https://w3id.org/rec/analytics/AnalysisConfiguration -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/analytics/AnalysisProcess"/>
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/AnalysisConfiguration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+    </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/analytics/DataAnalysisConfiguration -->
+    <!-- https://w3id.org/rec/analytics/AnalysisProcess -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/analytics/DataAnalysisConfiguration">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/rec/analytics/AnalysisProcess"/>
     
 
 
@@ -119,6 +130,26 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/analytics/DataPoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/analytics/dataSource"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/analytics/AnalysisProcess"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/core/Sensor"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/core/Service"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/analytics/dataSource"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/dataSchema"/>
@@ -136,15 +167,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/collections/hasListMember"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/collections/hasListMember"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/rec/analytics/DataPoint"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/analytics/seriesMembers"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
