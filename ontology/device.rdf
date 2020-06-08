@@ -247,8 +247,8 @@
     <!-- https://w3id.org/rec/device/hasPlacementContext -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasPlacementContext">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/device/placementContext"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
+        <rdfs:comment xml:lang="en">Deprecated in favour of device:placementContext.</rdfs:comment>
         <rdfs:label xml:lang="en">has placement context</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -319,14 +319,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://w3id.org/rec/core/hasProcessedTime -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/hasProcessedTime">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/device/hasProcessedTime"/>
-    </rdf:Description>
     
 
 
@@ -561,7 +553,9 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/device/Observation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">Time when an object or result was processed in a system.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Time when an object or result was processed in a system.
+
+Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
         <rdfs:label xml:lang="en">has processed time</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>

@@ -250,9 +250,10 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasMeasurementUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.
+
+Deprecated in favour of measurementUnit.</rdfs:comment>
         <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -284,9 +285,10 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasQuantityKind -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.
+
+Deprecated in favour of quantityKind.</rdfs:comment>
         <rdfs:label xml:lang="en">has quantity kind</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
