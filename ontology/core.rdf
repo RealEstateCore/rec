@@ -890,16 +890,6 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
-    <!-- https://w3id.org/rec/core/hasValue -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasValue">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
-        <rdfs:comment xml:lang="en">An event may be associated with a value. This is a rather generic property which can be reused or extended by sub-classes to indicate, e.g., measurement values, actuation values, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">has value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/hasVistingAddress -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasVistingAddress">
@@ -939,12 +929,31 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
+    <!-- https://w3id.org/rec/core/timeInterval -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/timeInterval">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Indicates a time interval during which something occured, or that something refers to. Intervals are expressed as combinations of some time point and a duration, or as two time points, per ISO 8601; see https://en.wikipedia.org/wiki/ISO_8601.</rdfs:comment>
+        <rdfs:label xml:lang="en">time interval</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/unitSign -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/unitSign">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The syntactical representation of a unit, e.g., m^3 for cubic meter, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">unit sign</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/value -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/value">
+        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., observations, actuations, data points, etc).</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1142,6 +1151,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sensor observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
     </owl:Class>
     
 
