@@ -88,7 +88,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <core:measurementUnit rdf:resource="https://w3id.org/rec/core/Lux"/>
         <core:quantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
-        <device:dataInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
+        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
     </owl:NamedIndividual>
     
 
@@ -98,7 +98,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_MotionDetector">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <core:quantityKind rdf:resource="https://w3id.org/rec/core/Presence"/>
-        <device:dataInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface"/>
+        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface"/>
     </owl:NamedIndividual>
     
 
@@ -109,7 +109,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <core:measurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
         <core:quantityKind rdf:resource="https://w3id.org/rec/core/Temperature"/>
-        <device:dataInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
+        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
     </owl:NamedIndividual>
     
 
@@ -117,7 +117,7 @@
     <!-- https://w3id.org/rec/example/HueMotionSensorLightMeterInterface -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface">
-        <rdf:type rdf:resource="https://w3id.org/rec/device/DataInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorInterface"/>
         <core:dataSchema rdf:resource="https://w3id.org/rec/example/LuxAsInteger"/>
     </owl:NamedIndividual>
     
@@ -126,7 +126,7 @@
     <!-- https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface">
-        <rdf:type rdf:resource="https://w3id.org/rec/device/DataInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorInterface"/>
         <core:dataSchema rdf:resource="https://w3id.org/rec/example/MotionAsBoolean"/>
     </owl:NamedIndividual>
     
@@ -135,7 +135,7 @@
     <!-- https://w3id.org/rec/example/HueMotionSensorThermometerInterface -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorThermometerInterface">
-        <rdf:type rdf:resource="https://w3id.org/rec/device/DataInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorInterface"/>
         <core:dataSchema rdf:resource="https://w3id.org/rec/example/TemperatureAsFloat"/>
     </owl:NamedIndividual>
     
