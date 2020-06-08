@@ -70,6 +70,15 @@
     
 
 
+    <!-- https://w3id.org/rec/device/dataInterface -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/dataInterface">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/DataInterface"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/device/devicePlacementContext -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/devicePlacementContext">
@@ -238,8 +247,8 @@
     <!-- https://w3id.org/rec/device/hasPlacementContext -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasPlacementContext">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/device/placementContext"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
+        <rdfs:comment xml:lang="en">Deprecated in favour of device:placementContext.</rdfs:comment>
         <rdfs:label xml:lang="en">has placement context</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -294,6 +303,8 @@
     <!-- https://w3id.org/rec/device/placementContext -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/placementContext">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
         <rdfs:label xml:lang="en">placement context</rdfs:label>
     </owl:ObjectProperty>
@@ -308,14 +319,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://w3id.org/rec/core/hasProcessedTime -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/hasProcessedTime">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/device/hasProcessedTime"/>
-    </rdf:Description>
     
 
 
@@ -550,7 +553,9 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/device/Observation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">Time when an object or result was processed in a system.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Time when an object or result was processed in a system.
+
+Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
         <rdfs:label xml:lang="en">has processed time</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
@@ -576,41 +581,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://w3id.org/rec/core/Device -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/Device">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/device/placementContext"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- https://w3id.org/rec/core/Observation -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/Observation">
-        <owl:equivalentClass rdf:resource="https://w3id.org/rec/device/Observation"/>
-    </rdf:Description>
-    
-
-
-    <!-- https://w3id.org/rec/core/Sensor -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/core/Sensor">
-        <owl:equivalentClass rdf:resource="https://w3id.org/rec/device/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/device/observesActuator"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/device/Actuator"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
     
 
 
@@ -641,12 +611,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/device/observedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Sensor"/>
             </owl:Restriction>
@@ -654,7 +618,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An actuator is a component that is responsible for moving and controlling a mechanism or system.</rdfs:comment>
@@ -689,6 +654,21 @@
     <owl:Class rdf:about="https://w3id.org/rec/device/CommunicationsBus">
         <rdfs:comment xml:lang="en">Type of communications bus for the Device.</rdfs:comment>
         <rdfs:label xml:lang="en">Communications bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/DataInterface -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/DataInterface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Software"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/dataSchema"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

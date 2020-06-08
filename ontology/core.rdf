@@ -149,6 +149,15 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/dataSchema -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/dataSchema">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+        <rdfs:label xml:lang="en">data schema</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/deviceMeasurementUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/deviceMeasurementUnit">
@@ -241,9 +250,10 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasMeasurementUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.
+
+Deprecated in favour of measurementUnit.</rdfs:comment>
         <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -275,9 +285,10 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasQuantityKind -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.
+
+Deprecated in favour of quantityKind.</rdfs:comment>
         <rdfs:label xml:lang="en">has quantity kind</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -881,16 +892,6 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
-    <!-- https://w3id.org/rec/core/hasValue -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasValue">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
-        <rdfs:comment xml:lang="en">An event may be associated with a value. This is a rather generic property which can be reused or extended by sub-classes to indicate, e.g., measurement values, actuation values, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">has value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/hasVistingAddress -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasVistingAddress">
@@ -921,12 +922,40 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
+    <!-- https://w3id.org/rec/core/schemaName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/schemaName">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/timeInterval -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/timeInterval">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Indicates a time interval during which something occured, or that something refers to. Intervals are expressed as combinations of some time point and a duration, or as two time points, per ISO 8601; see https://en.wikipedia.org/wiki/ISO_8601.</rdfs:comment>
+        <rdfs:label xml:lang="en">time interval</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/unitSign -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/unitSign">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The syntactical representation of a unit, e.g., m^3 for cubic meter, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">unit sign</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/value -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/value">
+        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., observations, actuations, data points, etc).</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1023,7 +1052,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:Class rdf:about="https://w3id.org/rec/core/DataSchema">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
-        <rdfs:comment xml:lang="en">Abstract class holding different types of data validation / payload schemas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A data schema for a service, a sensor, an actuator, etc. See the REC dataschemas module for concrete schema semantics.</rdfs:comment>
         <rdfs:label xml:lang="en">Data schema</rdfs:label>
     </owl:Class>
     
@@ -1055,18 +1084,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Event -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
@@ -1122,7 +1139,29 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <!-- https://w3id.org/rec/core/Observation -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/core/Observation"/>
+    <owl:Class rdf:about="https://w3id.org/rec/core/Observation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sensor observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1204,31 +1243,36 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Service -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/dataSchema"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
     </owl:Class>
     
 
