@@ -461,6 +461,7 @@ Deprecated in favour of quantityKind.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1179,7 +1180,9 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <!-- https://w3id.org/rec/core/Premises -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/core/Premises"/>
+    <owl:Class rdf:about="https://w3id.org/rec/core/Premises">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
     
 
 
@@ -1188,6 +1191,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/PremisesType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
         <rdfs:label xml:lang="en">Premises type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
