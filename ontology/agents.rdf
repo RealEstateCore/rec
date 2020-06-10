@@ -32,10 +32,10 @@
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -43,7 +43,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/agents/account -->
@@ -54,7 +54,7 @@
         <rdfs:label xml:lang="en">account</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/account"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/hasMember -->
@@ -66,7 +66,7 @@
         <rdfs:label xml:lang="en">has member</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/member"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/image -->
@@ -77,21 +77,21 @@
         <rdfs:label xml:lang="en">image</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/img"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/logo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/agents/logo">
         <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Organization"/>
-        <rdfs:comment xml:lang="en">Links an Organization to an image/logo that represents them. This is stricter than FOAF, in which logo has domain &quot;Thing&quot;; but it works for our domain.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links an Organization to an image/logo that represents them.</rdfs:comment>
         <rdfs:label xml:lang="en">logo</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/logo"/>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -99,7 +99,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/agents/familyName -->
@@ -111,7 +111,7 @@
         <rdfs:label xml:lang="en">family name</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/familyName"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/firstName -->
@@ -123,7 +123,7 @@
         <rdfs:label xml:lang="en">first name</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/firstName"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/gender -->
@@ -135,7 +135,7 @@
         <rdfs:label xml:lang="en">gender</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/gender"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/givenName -->
@@ -147,7 +147,7 @@
         <rdfs:label xml:lang="en">given name</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/givenName"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/lastName -->
@@ -159,7 +159,7 @@
         <rdfs:comment xml:lang="en">A person&apos;s last name (if they have one; this varies across cultural contexts).</rdfs:comment>
         <rdfs:label xml:lang="en">last name</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/name -->
@@ -170,10 +170,10 @@
         <rdfs:comment xml:lang="en">A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents).</rdfs:comment>
         <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -181,18 +181,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://w3id.org/rec/agents/Group -->
 
     <owl:Class rdf:about="https://w3id.org/rec/agents/Group">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Agent"/>
-        <rdfs:comment xml:lang="en">A collection of individual Agents (included in the Group via the object property hasMember).</rdfs:comment>
+        <rdfs:comment xml:lang="en">A collection of individual Agents (included in the Group via the object property hasMember). These agents can be organizations or persons.</rdfs:comment>
         <rdfs:label xml:lang="en">Group</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/Organization -->
@@ -203,7 +203,7 @@
         <rdfs:label xml:lang="en">Organization</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
     </owl:Class>
-
+    
 
 
     <!-- https://w3id.org/rec/agents/Person -->
@@ -219,3 +219,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

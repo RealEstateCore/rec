@@ -50,7 +50,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/analytics/analysisConfiguration">
         <rdfs:domain rdf:resource="https://w3id.org/rec/analytics/AnalysisProcess"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/analytics/AnalysisConfiguration"/>
-        <rdfs:comment xml:lang="en">The configuration for a given analysis process.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The configuration for a given analysis process. E.g., which model was used for a machine learning classifier, which dataset was that model trained on, which algorithm was used for some prediction or aggregation, etc. The modelling of specific analysis processes and their semantics remains to be done.</rdfs:comment>
         <rdfs:label xml:lang="en">analysis configuration</rdfs:label>
     </owl:ObjectProperty>
     
@@ -109,7 +109,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/analytics/AnalysisConfiguration">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
-        <rdfs:comment xml:lang="en">The configuration of a given analysis process.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The configuration for a given analysis process. E.g., which model was used for a machine learning classifier, which dataset was that model trained on, which algorithm was used for some prediction or aggregation, etc. The modelling of specific analysis processes and their semantics remains to be done.</rdfs:comment>
         <rdfs:label xml:lang="en">Analysis configuration</rdfs:label>
     </owl:Class>
     
@@ -118,7 +118,7 @@
     <!-- https://w3id.org/rec/analytics/AnalysisProcess -->
 
     <owl:Class rdf:about="https://w3id.org/rec/analytics/AnalysisProcess">
-        <rdfs:comment xml:lang="en">Some process that generates analysis results, e.g., predictions, aggregates, series, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Some process that generates analysis results, e.g., predictions, aggregates, series, etc. This could be anything from the execution of a machine learning classifier to a simple mathematical averaging operation. The modelling of specific analysis processes and their semantics remains to be done.</rdfs:comment>
         <rdfs:label xml:lang="en">Analysis process</rdfs:label>
     </owl:Class>
     
