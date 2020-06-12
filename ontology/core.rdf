@@ -461,7 +461,6 @@ Deprecated in favour of quantityKind.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/PremisesType"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1181,7 +1180,9 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/Premises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Premises">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:comment xml:lang="en">A premises is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Premises</rdfs:label>
     </owl:Class>
     
 
@@ -1191,7 +1192,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/PremisesType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
         <rdfs:label xml:lang="en">Premises type</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1511,6 +1511,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/CoffeePremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/CoffeePremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/rec/core/Concentration -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Concentration">
@@ -1598,6 +1606,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/EducationalPremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/EducationalPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/rec/core/Efficiency -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Efficiency">
@@ -1647,6 +1663,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/GaragePremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/GaragePremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/rec/core/GlobalIrradiance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/GlobalIrradiance">
@@ -1664,6 +1688,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <unitSign xml:lang="en">Hz</unitSign>
         <rdfs:comment xml:lang="en">One cycle per second.</rdfs:comment>
         <rdfs:label xml:lang="en">Hertz</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/core/HotelPremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/HotelPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
     </owl:NamedIndividual>
     
 
@@ -1717,6 +1749,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/LaboratoryPremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/LaboratoryPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/rec/core/Lenght -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Lenght">
@@ -1741,6 +1781,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Level">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Level</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/core/LightIndustryPremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/LightIndustryPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
     </owl:NamedIndividual>
     
 
@@ -1822,6 +1870,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Number">
         <rdfs:label xml:lang="en">Number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/core/OfficePremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/OfficePremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
     </owl:NamedIndividual>
     
 
@@ -2013,6 +2069,30 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/ResidentialPremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/ResidentialPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/core/RestaurantPremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/RestaurantPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/core/RetailPremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/RetailPremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/rec/core/RevolutionsPerMinute -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/RevolutionsPerMinute">
@@ -2068,6 +2148,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <unitSign xml:lang="en">m2</unitSign>
         <rdfs:comment xml:lang="en">Area unit. It is the area of a square whose sides measure exactly one metre.</rdfs:comment>
         <rdfs:label xml:lang="en">SquareMeter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/core/StoragePremises -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/StoragePremises">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/PremisesType"/>
     </owl:NamedIndividual>
     
 
