@@ -16,11 +16,8 @@
      xmlns:agents="https://w3id.org/rec/agents/"
      xmlns:device="https://w3id.org/rec/device/"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#"
      xmlns:building="https://w3id.org/rec/building/"
      xmlns:actuation="https://w3id.org/rec/actuation/"
-     xmlns:analytics="https://w3id.org/rec/analytics/"
-     xmlns:collections="https://w3id.org/rec/collections/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/full/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/full/3.2/"/>
@@ -29,6 +26,7 @@
         <owl:imports rdf:resource="https://w3id.org/rec/analytics/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/building/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/dataschemas/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/device/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/lease/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.2/"/>
@@ -42,14 +40,27 @@
         <dc:description xml:lang="en">This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Full</dc:title>
+        <dcterms:modified>2020-05-15</dcterms:modified>
         <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.2/</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">Version 3.1.1 is a minor release of REC that contains:
+        <rdfs:comment xml:lang="en">Version 3.1.3 is a hotfix release that addresses bugs arising from version management in release 3.1.1 and 3.1.2. Several classes and properties from the 3.2 development branch were mistakenly implemented prematurely in 3.1.1 and 3.1.2, causing subtle inconsistencies in the model. Version 3.1.3 reverts all ontology entities to those from version 3.1, while maintaining the REST API specification and edge message examples that were updated since then.
+
+We apologize for providing an inconsistent ontology, and are implementing testing and version management procedures to ensure this does not occur again.
+        
+Version 3.1.2 is a bug fix release that addresses two issues in the REST API specification, and one in the edge message format:
+
+* The REC REST API specification (api/REST/rec-full-v3.1.2.yaml) now specifies that the payload for POST, PUT, and PATCH operations should be carried in the HTTP request body.        
+* The REC REST API specification now uses the updated MIME type for JSON-LD: application/ld+json
+* The Edge message examples mistakenly carried REC 2 semantics due to previous Git mishap; that is now addressed and the examples are up-to-date
+
+Note that this hotfix does not affect the ontology semantics; aside from version and release node annotations, REC 3.1.2 is identical to REC 3.1.2.
+
+Version 3.1.1 is a minor release of REC that contains:
 
 * The official REC REST API (see the api/REST subdirectory)
 * O2O annotations used by the OWL2OAS generator when building that API.
-* Spelling fixes.
-
+* Spelling fixes.        
+        
 Version 3.1 is a feature release of REC that contains:
 
 * The new Actuation module, with north- and southbound message semantics for enacting actuations on systems.
@@ -71,25 +82,6 @@ Version 3.0 is a major and compatibility-breaking refactoring of REC:
 * All IRI:s are now HTTPS</rdfs:comment>
         <owl:versionInfo xml:lang="en">3.2</owl:versionInfo>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/rec/device/observationGeneratedBy -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/device/observationGeneratedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/analytics/dataSource"/>
-    </rdf:Description>
 </rdf:RDF>
 
 

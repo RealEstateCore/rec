@@ -5,7 +5,7 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
   description: The documentation below is automatically extracted from a <dc:description> annotation on the ontology https://w3id.org/rec/full/:<br/><br/>*This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.*
-  version: "3.1.1"
+  version: "3.1.3"
 components:
   parameters:
     pageParam:
@@ -1232,42 +1232,42 @@ paths:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/full/3.1.1/
+                    - https://w3id.org/rec/full/3.1.3/
                   actuation:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/actuation/3.1.1/
+                    - https://w3id.org/rec/actuation/3.1.3/
                   device:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/device/3.1.1/
+                    - https://w3id.org/rec/device/3.1.3/
                   core:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/core/3.1.1/
+                    - https://w3id.org/rec/core/3.1.3/
                   metadata:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/metadata/3.1.1/
+                    - https://w3id.org/rec/metadata/3.1.3/
                   agents:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/agents/3.1.1/
+                    - https://w3id.org/rec/agents/3.1.3/
                   building:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/building/3.1.1/
+                    - https://w3id.org/rec/building/3.1.3/
                   lease:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/lease/3.1.1/
+                    - https://w3id.org/rec/lease/3.1.3/
       tags: []
   /actuationinterface:
     get:
@@ -1302,7 +1302,7 @@ paths:
         200:
           description: An array of 'actuation:ActuationInterface' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -1320,20 +1320,21 @@ paths:
       - actuationinterface
     post:
       summary: Create a new 'actuation:ActuationInterface' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'actuation:ActuationInterface' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/actuation%3aActuationInterface'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/actuation%3aActuationInterface'
       responses:
         500:
           description: Internal Server Error
@@ -1342,7 +1343,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1375,7 +1376,7 @@ paths:
         200:
           description: A 'actuation:ActuationInterface' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1399,19 +1400,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'actuation:ActuationInterface' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/actuation%3aActuationInterface'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/actuation%3aActuationInterface'
       responses:
         400:
           description: Bad Request
@@ -1422,7 +1424,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1446,22 +1448,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/actuation%3aActuationInterface'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/actuation%3aActuationInterface'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -1472,7 +1475,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1676,7 +1679,7 @@ paths:
         200:
           description: An array of 'device:Actuator' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -1694,20 +1697,21 @@ paths:
       - actuator
     post:
       summary: Create a new 'device:Actuator' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'device:Actuator' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aActuator'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aActuator'
       responses:
         500:
           description: Internal Server Error
@@ -1716,7 +1720,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1749,7 +1753,7 @@ paths:
         200:
           description: A 'device:Actuator' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1773,19 +1777,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'device:Actuator' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aActuator'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aActuator'
       responses:
         400:
           description: Bad Request
@@ -1796,7 +1801,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1820,22 +1825,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aActuator'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aActuator'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -1846,7 +1852,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1894,7 +1900,7 @@ paths:
         200:
           description: An array of 'device:DeviceFunctionType' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -1908,20 +1914,21 @@ paths:
       - devicefunctiontype
     post:
       summary: Create a new 'device:DeviceFunctionType' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'device:DeviceFunctionType' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aDeviceFunctionType'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aDeviceFunctionType'
       responses:
         500:
           description: Internal Server Error
@@ -1930,7 +1937,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1960,7 +1967,7 @@ paths:
         200:
           description: A 'device:DeviceFunctionType' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -1981,19 +1988,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'device:DeviceFunctionType' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aDeviceFunctionType'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aDeviceFunctionType'
       responses:
         400:
           description: Bad Request
@@ -2004,7 +2012,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2025,22 +2033,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aDeviceFunctionType'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -2051,7 +2060,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2096,7 +2105,7 @@ paths:
         200:
           description: An array of 'device:PlacementContext' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -2110,20 +2119,21 @@ paths:
       - placementcontext
     post:
       summary: Create a new 'device:PlacementContext' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'device:PlacementContext' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aPlacementContext'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aPlacementContext'
       responses:
         500:
           description: Internal Server Error
@@ -2132,7 +2142,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2162,7 +2172,7 @@ paths:
         200:
           description: A 'device:PlacementContext' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2183,19 +2193,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'device:PlacementContext' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aPlacementContext'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aPlacementContext'
       responses:
         400:
           description: Bad Request
@@ -2206,7 +2217,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2227,22 +2238,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aPlacementContext'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aPlacementContext'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -2253,7 +2265,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2454,7 +2466,7 @@ paths:
         200:
           description: An array of 'device:Sensor' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -2473,20 +2485,21 @@ paths:
       - sensor
     post:
       summary: Create a new 'device:Sensor' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'device:Sensor' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aSensor'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aSensor'
       responses:
         500:
           description: Internal Server Error
@@ -2495,7 +2508,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2529,7 +2542,7 @@ paths:
         200:
           description: A 'device:Sensor' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2554,19 +2567,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'device:Sensor' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aSensor'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aSensor'
       responses:
         400:
           description: Bad Request
@@ -2577,7 +2591,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2602,22 +2616,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/device%3aSensor'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/device%3aSensor'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -2628,7 +2643,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2701,7 +2716,7 @@ paths:
         200:
           description: An array of 'core:BuildingComponent' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -2715,20 +2730,21 @@ paths:
       - buildingcomponent
     post:
       summary: Create a new 'core:BuildingComponent' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'core:BuildingComponent' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aBuildingComponent'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aBuildingComponent'
       responses:
         500:
           description: Internal Server Error
@@ -2737,7 +2753,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2767,7 +2783,7 @@ paths:
         200:
           description: A 'core:BuildingComponent' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2788,19 +2804,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'core:BuildingComponent' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aBuildingComponent'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aBuildingComponent'
       responses:
         400:
           description: Bad Request
@@ -2811,7 +2828,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -2832,22 +2849,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aBuildingComponent'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aBuildingComponent'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -2858,7 +2876,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3041,7 +3059,7 @@ paths:
         200:
           description: An array of 'core:Device' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -3055,20 +3073,21 @@ paths:
       - device
     post:
       summary: Create a new 'core:Device' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'core:Device' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aDevice'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aDevice'
       responses:
         500:
           description: Internal Server Error
@@ -3077,7 +3096,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3107,7 +3126,7 @@ paths:
         200:
           description: A 'core:Device' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3128,19 +3147,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'core:Device' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aDevice'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aDevice'
       responses:
         400:
           description: Bad Request
@@ -3151,7 +3171,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3172,22 +3192,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aDevice'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aDevice'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -3198,7 +3219,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3243,7 +3264,7 @@ paths:
         200:
           description: An array of 'core:MeasurementUnit' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -3257,20 +3278,21 @@ paths:
       - measurementunit
     post:
       summary: Create a new 'core:MeasurementUnit' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'core:MeasurementUnit' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aMeasurementUnit'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aMeasurementUnit'
       responses:
         500:
           description: Internal Server Error
@@ -3279,7 +3301,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3309,7 +3331,7 @@ paths:
         200:
           description: A 'core:MeasurementUnit' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3330,19 +3352,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'core:MeasurementUnit' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aMeasurementUnit'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aMeasurementUnit'
       responses:
         400:
           description: Bad Request
@@ -3353,7 +3376,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3374,22 +3397,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aMeasurementUnit'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aMeasurementUnit'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -3400,7 +3424,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3451,7 +3475,7 @@ paths:
         200:
           description: An array of 'core:QuantityKind' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -3465,20 +3489,21 @@ paths:
       - quantitykind
     post:
       summary: Create a new 'core:QuantityKind' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'core:QuantityKind' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aQuantityKind'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aQuantityKind'
       responses:
         500:
           description: Internal Server Error
@@ -3487,7 +3512,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3517,7 +3542,7 @@ paths:
         200:
           description: A 'core:QuantityKind' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3538,19 +3563,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'core:QuantityKind' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aQuantityKind'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aQuantityKind'
       responses:
         400:
           description: Bad Request
@@ -3561,7 +3587,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3582,22 +3608,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aQuantityKind'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aQuantityKind'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -3608,7 +3635,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3659,7 +3686,7 @@ paths:
         200:
           description: An array of 'core:RealEstate' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -3673,20 +3700,21 @@ paths:
       - realestate
     post:
       summary: Create a new 'core:RealEstate' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'core:RealEstate' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aRealEstate'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aRealEstate'
       responses:
         500:
           description: Internal Server Error
@@ -3695,7 +3723,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3725,7 +3753,7 @@ paths:
         200:
           description: A 'core:RealEstate' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3746,19 +3774,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'core:RealEstate' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aRealEstate'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aRealEstate'
       responses:
         400:
           description: Bad Request
@@ -3769,7 +3798,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3790,22 +3819,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aRealEstate'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aRealEstate'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -3816,7 +3846,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3867,7 +3897,7 @@ paths:
         200:
           description: An array of 'core:RealEstateComponent' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -3881,20 +3911,21 @@ paths:
       - realestatecomponent
     post:
       summary: Create a new 'core:RealEstateComponent' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'core:RealEstateComponent' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aRealEstateComponent'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aRealEstateComponent'
       responses:
         500:
           description: Internal Server Error
@@ -3903,7 +3934,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3933,7 +3964,7 @@ paths:
         200:
           description: A 'core:RealEstateComponent' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3954,19 +3985,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'core:RealEstateComponent' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aRealEstateComponent'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aRealEstateComponent'
       responses:
         400:
           description: Bad Request
@@ -3977,7 +4009,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -3998,22 +4030,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/core%3aRealEstateComponent'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core%3aRealEstateComponent'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -4024,7 +4057,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -4069,7 +4102,7 @@ paths:
         200:
           description: An array of 'building:RoomType' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -4083,20 +4116,21 @@ paths:
       - roomtype
     post:
       summary: Create a new 'building:RoomType' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'building:RoomType' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/building%3aRoomType'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/building%3aRoomType'
       responses:
         500:
           description: Internal Server Error
@@ -4105,7 +4139,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -4135,7 +4169,7 @@ paths:
         200:
           description: A 'building:RoomType' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -4156,19 +4190,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'building:RoomType' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/building%3aRoomType'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/building%3aRoomType'
       responses:
         400:
           description: Bad Request
@@ -4179,7 +4214,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -4200,22 +4235,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/building%3aRoomType'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/building%3aRoomType'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -4226,7 +4262,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -4295,7 +4331,7 @@ paths:
         200:
           description: An array of 'building:Storey' objects.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - $ref: '#/components/schemas/HydraCollectionWrapper'
@@ -4309,20 +4345,21 @@ paths:
       - storey
     post:
       summary: Create a new 'building:Storey' object.
-      parameters:
-      - name: entity
+      parameters: []
+      requestBody:
         description: New 'building:Storey' entity that is to be added.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/building%3aStorey'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/building%3aStorey'
       responses:
         500:
           description: Internal Server Error
@@ -4331,7 +4368,7 @@ paths:
         201:
           description: Entity was successfully created (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -4361,7 +4398,7 @@ paths:
         200:
           description: A 'building:Storey' object.
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -4382,19 +4419,20 @@ paths:
         schema:
           type: string
         in: path
-      - name: entity
+      requestBody:
         description: Updated data for 'building:Storey' entity.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/building%3aStorey'
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/building%3aStorey'
       responses:
         400:
           description: Bad Request
@@ -4405,7 +4443,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object
@@ -4426,22 +4464,23 @@ paths:
         schema:
           type: string
         in: path
-      - name: patch
+      requestBody:
         description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
         required: true
-        schema:
-          allOf:
-          - type: object
-            required:
-            - '@context'
-            properties:
-              '@context':
-                $ref: '#/components/schemas/Context'
-          - $ref: '#/components/schemas/building%3aStorey'
-          - type: object
-            maxProperties: 2
-            minProperties: 2
-        in: header
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/building%3aStorey'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
       responses:
         400:
           description: Bad Request
@@ -4452,7 +4491,7 @@ paths:
         200:
           description: Entity was updated successfully (new representation returned).
           content:
-            application/jsonld:
+            application/ld+json:
               schema:
                 allOf:
                 - type: object

@@ -1,5 +1,21 @@
 # RealEstateCore Release Notes
 
+## V3.1.3 -- Emergency inconcistency hotfix
+
+Version 3.1.3 is a hotfix release that addresses bugs arising from version management in release 3.1.1 and 3.1.2. Several classes and properties from the 3.2 development branch were mistakenly implemented prematurely in 3.1.1 and 3.1.2, causing subtle inconsistencies in the model. Version 3.1.3 reverts all ontology entities to those from version 3.1, while maintaining the REST API specification and edge message examples that were updated since then.
+
+We apologize for providing an inconsistent ontology, and are implementing testing and version management procedures to ensure this does not occur again.
+
+## V3.1.2 -- REST API hotfix
+
+Version 3.1.2 is a bug fix release that addresses two issues in the REST API specification, and one in the edge message format:
+
+* The REC REST API specification now specifies that the payload for POST, PUT, and PATCH operations should be carried in the HTTP request body.
+* The REC REST API specification now uses the updated MIME type for JSON-LD: application/ld+json
+* The Edge message examples mistakenly carried REC 2 semantics due to previous Git mishap; that is now addressed and the examples are up-to-date
+
+Note that this hotfix does not affect the ontology semantics; aside from version and release node annotations, REC 3.1.2 is identical to REC 3.1.2.
+
 ## V3.1.1 -- REST API
 
 Version 3.1.1 is a minor release of REC that contains:
