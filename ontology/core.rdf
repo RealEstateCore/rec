@@ -895,11 +895,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     <!-- https://w3id.org/rec/core/hasValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasValue">
-        <rdfs:comment xml:lang="en">An event may be associated with a value. This is a rather generic property which can be reused or extended by sub-classes to indicate, e.g., measurement values, actuation values, etc.
-
-Deprecated in favour of core:value.</rdfs:comment>
+        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., observations, actuations, data points, etc).</rdfs:comment>
         <rdfs:label xml:lang="en">has value</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -959,15 +956,6 @@ Deprecated in favour of core:value.</rdfs:comment>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The syntactical representation of a unit, e.g., m^3 for cubic meter, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">unit sign</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/core/value -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/value">
-        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., observations, actuations, data points, etc).</rdfs:comment>
-        <rdfs:label xml:lang="en">value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1167,7 +1155,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
