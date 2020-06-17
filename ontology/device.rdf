@@ -77,7 +77,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
         <rdfs:label xml:lang="en">device placement context</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -89,7 +88,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
         <rdfs:label xml:lang="en">event placement context</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -239,9 +237,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasPlacementContext">
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
-        <rdfs:comment xml:lang="en">Deprecated in favour of device:placementContext.</rdfs:comment>
         <rdfs:label xml:lang="en">has placement context</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -287,17 +283,6 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuator"/>
         <rdfs:comment xml:lang="en">The actuator that a sensor is configured or designed to observe.</rdfs:comment>
         <rdfs:label xml:lang="en">observes actuator</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/device/placementContext -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/placementContext">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
-        <rdfs:label xml:lang="en">placement context</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -686,7 +671,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/device/placementContext"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/eventPlacementContext"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
