@@ -166,7 +166,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The measurement unit used by some Device.</rdfs:comment>
         <rdfs:label xml:lang="en">device measurement unit</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -179,7 +178,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.</rdfs:comment>
         <rdfs:label xml:lang="en">device quantity kind</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -192,7 +190,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">A unit used to measure some aspect of some Event.</rdfs:comment>
         <rdfs:label xml:lang="en">event measurement unit</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -205,7 +202,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:comment xml:lang="en">The Quantity Kind that an event measures or affects.</rdfs:comment>
         <rdfs:label xml:lang="en">event quantity kind</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -251,11 +247,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit">
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.
-
-Deprecated in favour of measurementUnit.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
         <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -286,11 +279,8 @@ Deprecated in favour of measurementUnit.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind">
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.
-
-Deprecated in favour of quantityKind.</rdfs:comment>
-        <rdfs:label xml:lang="en">has quantity kind</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">quantity kind</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -434,16 +424,6 @@ Deprecated in favour of quantityKind.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/core/measurementUnit -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/measurementUnit">
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
-        <rdfs:label xml:lang="en">measurement unit</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/observationGeneratedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/observationGeneratedBy">
@@ -473,17 +453,6 @@ Deprecated in favour of quantityKind.</rdfs:comment>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">quantity kind measurement unit</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/core/quantityKind -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/quantityKind">
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">quantity kind</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -895,11 +864,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     <!-- https://w3id.org/rec/core/hasValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasValue">
-        <rdfs:comment xml:lang="en">An event may be associated with a value. This is a rather generic property which can be reused or extended by sub-classes to indicate, e.g., measurement values, actuation values, etc.
-
-Deprecated in favour of core:value.</rdfs:comment>
+        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., observations, actuations, data points, etc).</rdfs:comment>
         <rdfs:label xml:lang="en">has value</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -959,15 +925,6 @@ Deprecated in favour of core:value.</rdfs:comment>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The syntactical representation of a unit, e.g., m^3 for cubic meter, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">unit sign</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/core/value -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/value">
-        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., observations, actuations, data points, etc).</rdfs:comment>
-        <rdfs:label xml:lang="en">value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1155,19 +1112,19 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventMeasurementUnit"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventQuantityKind"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1201,7 +1158,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/QuantityKind">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1258,14 +1215,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceQuantityKind"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
             </owl:Restriction>
@@ -1325,7 +1282,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/ActiveEnergyL1">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <measurementUnit rdf:resource="https://w3id.org/rec/core/Watt"/>
+        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Watt"/>
         <rdfs:label xml:lang="en">ActiveEnergyL1</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2182,8 +2139,8 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Temperature">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <measurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
-        <measurementUnit rdf:resource="https://w3id.org/rec/core/Kelvin"/>
+        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
+        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Kelvin"/>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
         <rdfs:seeAlso xml:lang="en">Temperature</rdfs:seeAlso>
     </owl:NamedIndividual>

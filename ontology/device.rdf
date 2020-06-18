@@ -77,7 +77,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
         <rdfs:label xml:lang="en">device placement context</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -89,7 +88,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
         <rdfs:label xml:lang="en">event placement context</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -239,9 +237,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasPlacementContext">
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
-        <rdfs:comment xml:lang="en">Deprecated in favour of device:placementContext.</rdfs:comment>
         <rdfs:label xml:lang="en">has placement context</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -291,17 +287,6 @@
     
 
 
-    <!-- https://w3id.org/rec/device/placementContext -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/placementContext">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
-        <rdfs:label xml:lang="en">placement context</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/device/sensorInterface -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/sensorInterface">
@@ -318,25 +303,8 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-     <!-- https://w3id.org/rec/device/hasMACAddress -->
 
-     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasMACAddress">
-         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
-         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-         <rdfs:label xml:lang="en">has MAC address</rdfs:label>
-     </owl:DatatypeProperty>
-
-
-
-     <!-- https://w3id.org/rec/device/hasSerialNumber -->
-
-     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasSerialNumber">
-         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
-         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-         <rdfs:label xml:lang="en">has serial number</rdfs:label>
-     </owl:DatatypeProperty>
+    
 
 
     <!-- https://w3id.org/rec/device/actuationCommand -->
@@ -511,6 +479,17 @@
     
 
 
+    <!-- https://w3id.org/rec/device/hasMACAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasMACAddress">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has MAC address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/device/hasModbusAttribute -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasModbusAttribute">
@@ -590,6 +569,17 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/hasSerialNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasSerialNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has serial number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -634,7 +624,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceQuantityKind"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
             </owl:Restriction>
@@ -681,7 +671,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/device/placementContext"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/eventPlacementContext"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -872,13 +862,13 @@ Deprecated in favour of core:Observation.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -890,13 +880,13 @@ Deprecated in favour of core:Observation.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/measurementUnit"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/quantityKind"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
