@@ -5,7 +5,7 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
   description: The documentation below is automatically extracted from a <dc:description> annotation on the ontology https://w3id.org/rec/full/:<br/><br/>*This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules.*
-  version: "3.1.3"
+  version: "3.2"
 components:
   parameters:
     pageParam:
@@ -128,7 +128,7 @@ components:
           type: string
         desc:
           type: string
-    actuation:ActuationInterface:
+    actuation_ActuationInterface:
       type: object
       required:
       - '@context'
@@ -140,7 +140,7 @@ components:
           default: actuation:ActuationInterface
         label:
           type: string
-        actuation:payloadKeyValueDefinition:
+        core:dataSchema:
           type: array
           items:
             type: object
@@ -151,8 +151,7 @@ components:
                 type: string
               '@type':
                 type: string
-                default: actuation:KeyValueDefinition
-          minItems: 1
+                default: core:DataSchema
         actuation:isActuationInterfaceOf:
           type: array
           items:
@@ -177,7 +176,7 @@ components:
               '@type':
                 type: string
                 default: device:Actuator
-    device:Actuator:
+    device_Actuator:
       type: object
       required:
       - '@context'
@@ -189,16 +188,6 @@ components:
           default: device:Actuator
         label:
           type: string
-        device:devicePlacementContext:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: device:PlacementContext
         core:hasSuperDevice:
           type: object
           required:
@@ -230,17 +219,31 @@ components:
                 type: string
               '@type':
                 type: string
-                default: device:Sensor
+                default: core:Sensor
         core:deviceQuantityKind:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:QuantityKind
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:QuantityKind
+        device:devicePlacementContext:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:PlacementContext
         device:hasCommunicationsBus:
           type: array
           items:
@@ -320,6 +323,10 @@ components:
           items:
             type: integer
             format: int32
+        device:hasMACAddress:
+          type: array
+          items:
+            type: string
         device:hasModbusNodeId:
           type: array
           items:
@@ -340,6 +347,10 @@ components:
           items:
             type: number
             format: double
+        device:hasSerialNumber:
+          type: array
+          items:
+            type: string
         core:associatedWithEvent:
           type: array
           items:
@@ -434,7 +445,7 @@ components:
             '@type':
               type: string
               default: actuation:ActuationInterface
-    device:DeviceFunctionType:
+    device_DeviceFunctionType:
       type: object
       required:
       - '@context'
@@ -446,7 +457,7 @@ components:
           default: device:DeviceFunctionType
         label:
           type: string
-    device:PlacementContext:
+    device_PlacementContext:
       type: object
       required:
       - '@context'
@@ -458,267 +469,7 @@ components:
           default: device:PlacementContext
         label:
           type: string
-    device:Sensor:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: device:Sensor
-        label:
-          type: string
-        device:devicePlacementContext:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: device:PlacementContext
-        core:hasSuperDevice:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:Device
-        core:isMountedInBuildingComponent:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:BuildingComponent
-        device:observesActuator:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:Actuator
-        core:deviceMeasurementUnit:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:MeasurementUnit
-          minItems: 1
-        core:deviceQuantityKind:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:QuantityKind
-        device:hasCommunicationsBus:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:CommunicationsBus
-        device:hasDeviceFunctionType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:DeviceFunctionType
-        device:hasKNXDataPointType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:KNXDataPointType
-        device:hasModbusDataType:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:ModbusDataType
-        device:hasModbusFunctionCode:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:ModbusFunctionCode
-        device:hasIPAddressPort:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasKNXDeviceId:
-          type: array
-          items:
-            type: string
-        device:hasKNXDevicePort:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasLoraDevEUI:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasModbusNodeId:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasModbusRegister:
-          type: array
-          items:
-            type: integer
-            format: int32
-        device:hasOffset:
-          type: array
-          items:
-            type: number
-            format: double
-        device:hasScaleFactor:
-          type: array
-          items:
-            type: number
-            format: double
-        core:associatedWithEvent:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Event
-        core:hasSubDevice:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Device
-        core:servesBuilding:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Building
-        core:servesBuildingComponent:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:BuildingComponent
-        core:servesDevice:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Device
-        device:generatedException:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:Exception
-        device:generatedObservation:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: device:Observation
-    core:BuildingComponent:
+    core_BuildingComponent:
       type: object
       required:
       - '@context'
@@ -750,18 +501,6 @@ components:
             '@type':
               type: string
               default: core:Building
-        core:containsMountedDevice:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Device
         core:hasSubBuildingComponent:
           type: array
           items:
@@ -774,7 +513,7 @@ components:
               '@type':
                 type: string
                 default: core:BuildingComponent
-    core:Device:
+    core_Device:
       type: object
       required:
       - '@context'
@@ -786,16 +525,6 @@ components:
           default: core:Device
         label:
           type: string
-        device:devicePlacementContext:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: device:PlacementContext
         core:hasSuperDevice:
           type: object
           required:
@@ -816,6 +545,18 @@ components:
             '@type':
               type: string
               default: core:BuildingComponent
+        device:devicePlacementContext:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:PlacementContext
         device:hasCommunicationsBus:
           type: array
           items:
@@ -895,6 +636,10 @@ components:
           items:
             type: integer
             format: int32
+        device:hasMACAddress:
+          type: array
+          items:
+            type: string
         device:hasModbusNodeId:
           type: array
           items:
@@ -915,6 +660,10 @@ components:
           items:
             type: number
             format: double
+        device:hasSerialNumber:
+          type: array
+          items:
+            type: string
         core:associatedWithEvent:
           type: array
           items:
@@ -999,7 +748,7 @@ components:
               '@type':
                 type: string
                 default: core:Device
-    core:MeasurementUnit:
+    core_MeasurementUnit:
       type: object
       required:
       - '@context'
@@ -1011,7 +760,7 @@ components:
           default: core:MeasurementUnit
         label:
           type: string
-    core:QuantityKind:
+    core_QuantityKind:
       type: object
       required:
       - '@context'
@@ -1023,6 +772,18 @@ components:
           default: core:QuantityKind
         label:
           type: string
+        core:hasMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
         core:qkMeasurementUnit:
           type: array
           items:
@@ -1035,7 +796,7 @@ components:
               '@type':
                 type: string
                 default: core:MeasurementUnit
-    core:RealEstate:
+    core_RealEstate:
       type: object
       required:
       - '@context'
@@ -1059,7 +820,7 @@ components:
               '@type':
                 type: string
                 default: core:RealEstateComponent
-    core:RealEstateComponent:
+    core_RealEstateComponent:
       type: object
       required:
       - '@context'
@@ -1081,7 +842,303 @@ components:
             '@type':
               type: string
               default: core:RealEstate
-    building:RoomType:
+    core_Sensor:
+      type: object
+      required:
+      - '@context'
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: core:Sensor
+        label:
+          type: string
+        core:hasSuperDevice:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:Device
+        core:isMountedInBuildingComponent:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: core:BuildingComponent
+        core:hasMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
+          minItems: 1
+        core:deviceQuantityKind:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:QuantityKind
+        device:devicePlacementContext:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:PlacementContext
+        device:hasCommunicationsBus:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:CommunicationsBus
+        device:hasDeviceFunctionType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:DeviceFunctionType
+        device:hasKNXDataPointType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:KNXDataPointType
+        device:hasModbusDataType:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusDataType
+        device:hasModbusFunctionCode:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:ModbusFunctionCode
+        device:hasIPAddressPort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasKNXDeviceId:
+          type: array
+          items:
+            type: string
+        device:hasKNXDevicePort:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasLoraDevEUI:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasMACAddress:
+          type: array
+          items:
+            type: string
+        device:hasModbusNodeId:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasModbusRegister:
+          type: array
+          items:
+            type: integer
+            format: int32
+        device:hasOffset:
+          type: array
+          items:
+            type: number
+            format: double
+        device:hasScaleFactor:
+          type: array
+          items:
+            type: number
+            format: double
+        device:hasSerialNumber:
+          type: array
+          items:
+            type: string
+        core:associatedWithEvent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Event
+        core:deviceMeasurementUnit:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:MeasurementUnit
+        core:hasSubDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        core:servesBuilding:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Building
+        core:servesBuildingComponent:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:BuildingComponent
+        core:servesDevice:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Device
+        device:generatedException:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:Exception
+        device:observesActuator:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:Actuator
+        device:sensorInterface:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: device:SensorInterface
+        core:generatedObservation:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:Observation
+    building_RoomType:
       type: object
       required:
       - '@context'
@@ -1093,7 +1150,7 @@ components:
           default: building:RoomType
         label:
           type: string
-    building:Storey:
+    building_Storey:
       type: object
       required:
       - '@context'
@@ -1125,18 +1182,6 @@ components:
             '@type':
               type: string
               default: core:Building
-        core:containsMountedDevice:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Device
         core:hasSubBuildingComponent:
           type: array
           items:
@@ -1157,8 +1202,10 @@ components:
       - hydra
       - actuation
       - agents
+      - analytics
       - building
       - core
+      - dataschemas
       - device
       - lease
       - metadata
@@ -1186,6 +1233,10 @@ components:
           type: string
           format: uri
           default: https://w3id.org/rec/agents/
+        analytics:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/analytics/
         building:
           type: string
           format: uri
@@ -1194,6 +1245,10 @@ components:
           type: string
           format: uri
           default: https://w3id.org/rec/core/
+        dataschemas:
+          type: string
+          format: uri
+          default: https://w3id.org/rec/dataschemas/
         device:
           type: string
           format: uri
@@ -1225,49 +1280,61 @@ paths:
                 - core
                 - metadata
                 - agents
+                - analytics
                 - building
+                - dataschemas
                 - lease
                 properties:
                   '':
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/full/3.1.3/
+                    - https://w3id.org/rec/full/3.2/
                   actuation:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/actuation/3.1.3/
+                    - https://w3id.org/rec/actuation/3.2/
                   device:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/device/3.1.3/
+                    - https://w3id.org/rec/device/3.2/
                   core:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/core/3.1.3/
+                    - https://w3id.org/rec/core/3.2/
                   metadata:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/metadata/3.1.3/
+                    - https://w3id.org/rec/metadata/3.2/
                   agents:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/agents/3.1.3/
+                    - https://w3id.org/rec/agents/3.2/
+                  analytics:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/analytics/3.2/
                   building:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/building/3.1.3/
+                    - https://w3id.org/rec/building/3.2/
+                  dataschemas:
+                    type: string
+                    format: uri
+                    enum:
+                    - https://w3id.org/rec/dataschemas/3.2/
                   lease:
                     type: string
                     format: uri
                     enum:
-                    - https://w3id.org/rec/lease/3.1.3/
+                    - https://w3id.org/rec/lease/3.2/
       tags: []
   /actuationinterface:
     get:
@@ -1276,8 +1343,8 @@ paths:
       - $ref: '#/components/parameters/pageParam'
       - $ref: '#/components/parameters/sizeParam'
       - $ref: '#/components/parameters/sortParam'
-      - name: actuation:payloadKeyValueDefinition
-        description: Filter value on property 'actuation:payloadKeyValueDefinition'.
+      - name: core:dataSchema
+        description: Filter value on property 'core:dataSchema'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -1311,11 +1378,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        allOf:
-                        - $ref: '#/components/schemas/actuation%3aActuationInterface'
-                        - type: object
-                          required:
-                          - actuation:payloadKeyValueDefinition
+                        $ref: '#/components/schemas/actuation_ActuationInterface'
       tags:
       - actuationinterface
     post:
@@ -1334,7 +1397,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/actuation%3aActuationInterface'
+              - $ref: '#/components/schemas/actuation_ActuationInterface'
       responses:
         500:
           description: Internal Server Error
@@ -1352,10 +1415,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/actuation%3aActuationInterface'
-                - type: object
-                  required:
-                  - actuation:payloadKeyValueDefinition
+                - $ref: '#/components/schemas/actuation_ActuationInterface'
       tags:
       - actuationinterface
   /actuationinterface/{id}:
@@ -1385,10 +1445,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/actuation%3aActuationInterface'
-                - type: object
-                  required:
-                  - actuation:payloadKeyValueDefinition
+                - $ref: '#/components/schemas/actuation_ActuationInterface'
       tags:
       - actuationinterface
     put:
@@ -1413,7 +1470,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/actuation%3aActuationInterface'
+              - $ref: '#/components/schemas/actuation_ActuationInterface'
       responses:
         400:
           description: Bad Request
@@ -1433,10 +1490,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/actuation%3aActuationInterface'
-                - type: object
-                  required:
-                  - actuation:payloadKeyValueDefinition
+                - $ref: '#/components/schemas/actuation_ActuationInterface'
       tags:
       - actuationinterface
     patch:
@@ -1461,7 +1515,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/actuation%3aActuationInterface'
+              - $ref: '#/components/schemas/actuation_ActuationInterface'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -1484,10 +1538,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/actuation%3aActuationInterface'
-                - type: object
-                  required:
-                  - actuation:payloadKeyValueDefinition
+                - $ref: '#/components/schemas/actuation_ActuationInterface'
       tags:
       - actuationinterface
     delete:
@@ -1515,12 +1566,6 @@ paths:
       - $ref: '#/components/parameters/pageParam'
       - $ref: '#/components/parameters/sizeParam'
       - $ref: '#/components/parameters/sortParam'
-      - name: device:devicePlacementContext
-        description: Filter value on property 'device:devicePlacementContext'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
       - name: core:hasSuperDevice
         description: Filter value on property 'core:hasSuperDevice'.
         schema:
@@ -1541,6 +1586,12 @@ paths:
         in: query
       - name: core:deviceQuantityKind
         description: Filter value on property 'core:deviceQuantityKind'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -1599,6 +1650,12 @@ paths:
           $ref: '#/components/schemas/IntegerFilter'
         style: deepObject
         in: query
+      - name: device:hasMACAddress
+        description: Filter value on property 'device:hasMACAddress'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: device:hasModbusNodeId
         description: Filter value on property 'device:hasModbusNodeId'.
         schema:
@@ -1621,6 +1678,12 @@ paths:
         description: Filter value on property 'device:hasScaleFactor'.
         schema:
           $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: device:hasSerialNumber
+        description: Filter value on property 'device:hasSerialNumber'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
       - name: core:associatedWithEvent
@@ -1688,11 +1751,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        allOf:
-                        - $ref: '#/components/schemas/device%3aActuator'
-                        - type: object
-                          required:
-                          - core:deviceQuantityKind
+                        $ref: '#/components/schemas/device_Actuator'
       tags:
       - actuator
     post:
@@ -1711,7 +1770,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aActuator'
+              - $ref: '#/components/schemas/device_Actuator'
       responses:
         500:
           description: Internal Server Error
@@ -1729,10 +1788,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aActuator'
-                - type: object
-                  required:
-                  - core:deviceQuantityKind
+                - $ref: '#/components/schemas/device_Actuator'
       tags:
       - actuator
   /actuator/{id}:
@@ -1762,10 +1818,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aActuator'
-                - type: object
-                  required:
-                  - core:deviceQuantityKind
+                - $ref: '#/components/schemas/device_Actuator'
       tags:
       - actuator
     put:
@@ -1790,7 +1843,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aActuator'
+              - $ref: '#/components/schemas/device_Actuator'
       responses:
         400:
           description: Bad Request
@@ -1810,10 +1863,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aActuator'
-                - type: object
-                  required:
-                  - core:deviceQuantityKind
+                - $ref: '#/components/schemas/device_Actuator'
       tags:
       - actuator
     patch:
@@ -1838,7 +1888,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aActuator'
+              - $ref: '#/components/schemas/device_Actuator'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -1861,10 +1911,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aActuator'
-                - type: object
-                  required:
-                  - core:deviceQuantityKind
+                - $ref: '#/components/schemas/device_Actuator'
       tags:
       - actuator
     delete:
@@ -1909,7 +1956,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/device%3aDeviceFunctionType'
+                        $ref: '#/components/schemas/device_DeviceFunctionType'
       tags:
       - devicefunctiontype
     post:
@@ -1928,7 +1975,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+              - $ref: '#/components/schemas/device_DeviceFunctionType'
       responses:
         500:
           description: Internal Server Error
@@ -1946,7 +1993,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+                - $ref: '#/components/schemas/device_DeviceFunctionType'
       tags:
       - devicefunctiontype
   /devicefunctiontype/{id}:
@@ -1976,7 +2023,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+                - $ref: '#/components/schemas/device_DeviceFunctionType'
       tags:
       - devicefunctiontype
     put:
@@ -2001,7 +2048,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+              - $ref: '#/components/schemas/device_DeviceFunctionType'
       responses:
         400:
           description: Bad Request
@@ -2021,7 +2068,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+                - $ref: '#/components/schemas/device_DeviceFunctionType'
       tags:
       - devicefunctiontype
     patch:
@@ -2046,7 +2093,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+              - $ref: '#/components/schemas/device_DeviceFunctionType'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -2069,7 +2116,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aDeviceFunctionType'
+                - $ref: '#/components/schemas/device_DeviceFunctionType'
       tags:
       - devicefunctiontype
     delete:
@@ -2114,7 +2161,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/device%3aPlacementContext'
+                        $ref: '#/components/schemas/device_PlacementContext'
       tags:
       - placementcontext
     post:
@@ -2133,7 +2180,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aPlacementContext'
+              - $ref: '#/components/schemas/device_PlacementContext'
       responses:
         500:
           description: Internal Server Error
@@ -2151,7 +2198,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aPlacementContext'
+                - $ref: '#/components/schemas/device_PlacementContext'
       tags:
       - placementcontext
   /placementcontext/{id}:
@@ -2181,7 +2228,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aPlacementContext'
+                - $ref: '#/components/schemas/device_PlacementContext'
       tags:
       - placementcontext
     put:
@@ -2206,7 +2253,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aPlacementContext'
+              - $ref: '#/components/schemas/device_PlacementContext'
       responses:
         400:
           description: Bad Request
@@ -2226,7 +2273,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aPlacementContext'
+                - $ref: '#/components/schemas/device_PlacementContext'
       tags:
       - placementcontext
     patch:
@@ -2251,7 +2298,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aPlacementContext'
+              - $ref: '#/components/schemas/device_PlacementContext'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -2274,7 +2321,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aPlacementContext'
+                - $ref: '#/components/schemas/device_PlacementContext'
       tags:
       - placementcontext
     delete:
@@ -2295,388 +2342,6 @@ paths:
           description: "'device:PlacementContext' entity was successfully deleted."
       tags:
       - placementcontext
-  /sensor:
-    get:
-      summary: Get 'device:Sensor' entities.
-      parameters:
-      - $ref: '#/components/parameters/pageParam'
-      - $ref: '#/components/parameters/sizeParam'
-      - $ref: '#/components/parameters/sortParam'
-      - name: device:devicePlacementContext
-        description: Filter value on property 'device:devicePlacementContext'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:hasSuperDevice
-        description: Filter value on property 'core:hasSuperDevice'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:isMountedInBuildingComponent
-        description: Filter value on property 'core:isMountedInBuildingComponent'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:observesActuator
-        description: Filter value on property 'device:observesActuator'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:deviceMeasurementUnit
-        description: Filter value on property 'core:deviceMeasurementUnit'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:deviceQuantityKind
-        description: Filter value on property 'core:deviceQuantityKind'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasCommunicationsBus
-        description: Filter value on property 'device:hasCommunicationsBus'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasDeviceFunctionType
-        description: Filter value on property 'device:hasDeviceFunctionType'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasKNXDataPointType
-        description: Filter value on property 'device:hasKNXDataPointType'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasModbusDataType
-        description: Filter value on property 'device:hasModbusDataType'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasModbusFunctionCode
-        description: Filter value on property 'device:hasModbusFunctionCode'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasIPAddressPort
-        description: Filter value on property 'device:hasIPAddressPort'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasKNXDeviceId
-        description: Filter value on property 'device:hasKNXDeviceId'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:hasKNXDevicePort
-        description: Filter value on property 'device:hasKNXDevicePort'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasLoraDevEUI
-        description: Filter value on property 'device:hasLoraDevEUI'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasModbusNodeId
-        description: Filter value on property 'device:hasModbusNodeId'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasModbusRegister
-        description: Filter value on property 'device:hasModbusRegister'.
-        schema:
-          $ref: '#/components/schemas/IntegerFilter'
-        style: deepObject
-        in: query
-      - name: device:hasOffset
-        description: Filter value on property 'device:hasOffset'.
-        schema:
-          $ref: '#/components/schemas/NumberFilter'
-        style: deepObject
-        in: query
-      - name: device:hasScaleFactor
-        description: Filter value on property 'device:hasScaleFactor'.
-        schema:
-          $ref: '#/components/schemas/NumberFilter'
-        style: deepObject
-        in: query
-      - name: core:associatedWithEvent
-        description: Filter value on property 'core:associatedWithEvent'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:hasSubDevice
-        description: Filter value on property 'core:hasSubDevice'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:servesBuilding
-        description: Filter value on property 'core:servesBuilding'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:servesBuildingComponent
-        description: Filter value on property 'core:servesBuildingComponent'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:servesDevice
-        description: Filter value on property 'core:servesDevice'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:generatedException
-        description: Filter value on property 'device:generatedException'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: device:generatedObservation
-        description: Filter value on property 'device:generatedObservation'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      responses:
-        400:
-          description: Bad Request
-        500:
-          description: Internal Server Error
-        200:
-          description: An array of 'device:Sensor' objects.
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - $ref: '#/components/schemas/HydraCollectionWrapper'
-                - type: object
-                  properties:
-                    hydra:member:
-                      type: array
-                      items:
-                        allOf:
-                        - $ref: '#/components/schemas/device%3aSensor'
-                        - type: object
-                          required:
-                          - core:deviceMeasurementUnit
-                          - core:deviceQuantityKind
-      tags:
-      - sensor
-    post:
-      summary: Create a new 'device:Sensor' object.
-      parameters: []
-      requestBody:
-        description: New 'device:Sensor' entity that is to be added.
-        required: true
-        content:
-          application/ld+json:
-            schema:
-              allOf:
-              - type: object
-                required:
-                - '@context'
-                properties:
-                  '@context':
-                    $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aSensor'
-      responses:
-        500:
-          description: Internal Server Error
-        400:
-          description: Bad Request
-        201:
-          description: Entity was successfully created (new representation returned).
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - type: object
-                  required:
-                  - '@context'
-                  properties:
-                    '@context':
-                      $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aSensor'
-                - type: object
-                  required:
-                  - core:deviceMeasurementUnit
-                  - core:deviceQuantityKind
-      tags:
-      - sensor
-  /sensor/{id}:
-    get:
-      summary: Get a specific 'device:Sensor' object.
-      parameters:
-      - name: id
-        description: Id of 'device:Sensor' to return.
-        required: true
-        schema:
-          type: string
-        in: path
-      responses:
-        404:
-          description: An object of type 'device:Sensor' with the specified ID was not found.
-        500:
-          description: Internal Server Error
-        200:
-          description: A 'device:Sensor' object.
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - type: object
-                  required:
-                  - '@context'
-                  properties:
-                    '@context':
-                      $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aSensor'
-                - type: object
-                  required:
-                  - core:deviceMeasurementUnit
-                  - core:deviceQuantityKind
-      tags:
-      - sensor
-    put:
-      summary: Update an existing 'device:Sensor' entity.
-      parameters:
-      - name: id
-        description: Id of 'device:Sensor' to update.
-        required: true
-        schema:
-          type: string
-        in: path
-      requestBody:
-        description: Updated data for 'device:Sensor' entity.
-        required: true
-        content:
-          application/ld+json:
-            schema:
-              allOf:
-              - type: object
-                required:
-                - '@context'
-                properties:
-                  '@context':
-                    $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aSensor'
-      responses:
-        400:
-          description: Bad Request
-        404:
-          description: An object of type 'device:Sensor' with the specified ID was not found.
-        500:
-          description: Internal Server Error
-        200:
-          description: Entity was updated successfully (new representation returned).
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - type: object
-                  required:
-                  - '@context'
-                  properties:
-                    '@context':
-                      $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aSensor'
-                - type: object
-                  required:
-                  - core:deviceMeasurementUnit
-                  - core:deviceQuantityKind
-      tags:
-      - sensor
-    patch:
-      summary: Update a single property on a specific 'device:Sensor' object.
-      parameters:
-      - name: id
-        description: Id of 'device:Sensor' to update.
-        required: true
-        schema:
-          type: string
-        in: path
-      requestBody:
-        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
-        required: true
-        content:
-          application/ld+json:
-            schema:
-              allOf:
-              - type: object
-                required:
-                - '@context'
-                properties:
-                  '@context':
-                    $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/device%3aSensor'
-              - type: object
-                maxProperties: 2
-                minProperties: 2
-      responses:
-        400:
-          description: Bad Request
-        404:
-          description: An object of type 'device:Sensor' with the specified ID was not found.
-        500:
-          description: Internal Server Error
-        200:
-          description: Entity was updated successfully (new representation returned).
-          content:
-            application/ld+json:
-              schema:
-                allOf:
-                - type: object
-                  required:
-                  - '@context'
-                  properties:
-                    '@context':
-                      $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/device%3aSensor'
-                - type: object
-                  required:
-                  - core:deviceMeasurementUnit
-                  - core:deviceQuantityKind
-      tags:
-      - sensor
-    delete:
-      summary: Delete a 'device:Sensor' object.
-      parameters:
-      - name: id
-        description: Id of 'device:Sensor' to delete.
-        required: true
-        schema:
-          type: string
-        in: path
-      responses:
-        404:
-          description: An object of type 'device:Sensor' with the specified ID was not found.
-        500:
-          description: Internal Server Error
-        200:
-          description: "'device:Sensor' entity was successfully deleted."
-      tags:
-      - sensor
   /buildingcomponent:
     get:
       summary: Get 'core:BuildingComponent' entities.
@@ -2692,12 +2357,6 @@ paths:
         in: query
       - name: core:isPartOfBuilding
         description: Filter value on property 'core:isPartOfBuilding'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: core:containsMountedDevice
-        description: Filter value on property 'core:containsMountedDevice'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -2725,7 +2384,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/core%3aBuildingComponent'
+                        $ref: '#/components/schemas/core_BuildingComponent'
       tags:
       - buildingcomponent
     post:
@@ -2744,7 +2403,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aBuildingComponent'
+              - $ref: '#/components/schemas/core_BuildingComponent'
       responses:
         500:
           description: Internal Server Error
@@ -2762,7 +2421,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aBuildingComponent'
+                - $ref: '#/components/schemas/core_BuildingComponent'
       tags:
       - buildingcomponent
   /buildingcomponent/{id}:
@@ -2792,7 +2451,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aBuildingComponent'
+                - $ref: '#/components/schemas/core_BuildingComponent'
       tags:
       - buildingcomponent
     put:
@@ -2817,7 +2476,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aBuildingComponent'
+              - $ref: '#/components/schemas/core_BuildingComponent'
       responses:
         400:
           description: Bad Request
@@ -2837,7 +2496,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aBuildingComponent'
+                - $ref: '#/components/schemas/core_BuildingComponent'
       tags:
       - buildingcomponent
     patch:
@@ -2862,7 +2521,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aBuildingComponent'
+              - $ref: '#/components/schemas/core_BuildingComponent'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -2885,7 +2544,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aBuildingComponent'
+                - $ref: '#/components/schemas/core_BuildingComponent'
       tags:
       - buildingcomponent
     delete:
@@ -2913,12 +2572,6 @@ paths:
       - $ref: '#/components/parameters/pageParam'
       - $ref: '#/components/parameters/sizeParam'
       - $ref: '#/components/parameters/sortParam'
-      - name: device:devicePlacementContext
-        description: Filter value on property 'device:devicePlacementContext'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
       - name: core:hasSuperDevice
         description: Filter value on property 'core:hasSuperDevice'.
         schema:
@@ -2927,6 +2580,12 @@ paths:
         in: query
       - name: core:isMountedInBuildingComponent
         description: Filter value on property 'core:isMountedInBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -2985,6 +2644,12 @@ paths:
           $ref: '#/components/schemas/IntegerFilter'
         style: deepObject
         in: query
+      - name: device:hasMACAddress
+        description: Filter value on property 'device:hasMACAddress'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: device:hasModbusNodeId
         description: Filter value on property 'device:hasModbusNodeId'.
         schema:
@@ -3007,6 +2672,12 @@ paths:
         description: Filter value on property 'device:hasScaleFactor'.
         schema:
           $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: device:hasSerialNumber
+        description: Filter value on property 'device:hasSerialNumber'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
       - name: core:associatedWithEvent
@@ -3068,7 +2739,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/core%3aDevice'
+                        $ref: '#/components/schemas/core_Device'
       tags:
       - device
     post:
@@ -3087,7 +2758,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aDevice'
+              - $ref: '#/components/schemas/core_Device'
       responses:
         500:
           description: Internal Server Error
@@ -3105,7 +2776,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aDevice'
+                - $ref: '#/components/schemas/core_Device'
       tags:
       - device
   /device/{id}:
@@ -3135,7 +2806,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aDevice'
+                - $ref: '#/components/schemas/core_Device'
       tags:
       - device
     put:
@@ -3160,7 +2831,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aDevice'
+              - $ref: '#/components/schemas/core_Device'
       responses:
         400:
           description: Bad Request
@@ -3180,7 +2851,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aDevice'
+                - $ref: '#/components/schemas/core_Device'
       tags:
       - device
     patch:
@@ -3205,7 +2876,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aDevice'
+              - $ref: '#/components/schemas/core_Device'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -3228,7 +2899,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aDevice'
+                - $ref: '#/components/schemas/core_Device'
       tags:
       - device
     delete:
@@ -3273,7 +2944,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/core%3aMeasurementUnit'
+                        $ref: '#/components/schemas/core_MeasurementUnit'
       tags:
       - measurementunit
     post:
@@ -3292,7 +2963,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aMeasurementUnit'
+              - $ref: '#/components/schemas/core_MeasurementUnit'
       responses:
         500:
           description: Internal Server Error
@@ -3310,7 +2981,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aMeasurementUnit'
+                - $ref: '#/components/schemas/core_MeasurementUnit'
       tags:
       - measurementunit
   /measurementunit/{id}:
@@ -3340,7 +3011,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aMeasurementUnit'
+                - $ref: '#/components/schemas/core_MeasurementUnit'
       tags:
       - measurementunit
     put:
@@ -3365,7 +3036,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aMeasurementUnit'
+              - $ref: '#/components/schemas/core_MeasurementUnit'
       responses:
         400:
           description: Bad Request
@@ -3385,7 +3056,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aMeasurementUnit'
+                - $ref: '#/components/schemas/core_MeasurementUnit'
       tags:
       - measurementunit
     patch:
@@ -3410,7 +3081,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aMeasurementUnit'
+              - $ref: '#/components/schemas/core_MeasurementUnit'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -3433,7 +3104,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aMeasurementUnit'
+                - $ref: '#/components/schemas/core_MeasurementUnit'
       tags:
       - measurementunit
     delete:
@@ -3461,6 +3132,12 @@ paths:
       - $ref: '#/components/parameters/pageParam'
       - $ref: '#/components/parameters/sizeParam'
       - $ref: '#/components/parameters/sortParam'
+      - name: core:hasMeasurementUnit
+        description: Filter value on property 'core:hasMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: core:qkMeasurementUnit
         description: Filter value on property 'core:qkMeasurementUnit'.
         schema:
@@ -3484,7 +3161,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/core%3aQuantityKind'
+                        $ref: '#/components/schemas/core_QuantityKind'
       tags:
       - quantitykind
     post:
@@ -3503,7 +3180,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aQuantityKind'
+              - $ref: '#/components/schemas/core_QuantityKind'
       responses:
         500:
           description: Internal Server Error
@@ -3521,7 +3198,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aQuantityKind'
+                - $ref: '#/components/schemas/core_QuantityKind'
       tags:
       - quantitykind
   /quantitykind/{id}:
@@ -3551,7 +3228,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aQuantityKind'
+                - $ref: '#/components/schemas/core_QuantityKind'
       tags:
       - quantitykind
     put:
@@ -3576,7 +3253,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aQuantityKind'
+              - $ref: '#/components/schemas/core_QuantityKind'
       responses:
         400:
           description: Bad Request
@@ -3596,7 +3273,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aQuantityKind'
+                - $ref: '#/components/schemas/core_QuantityKind'
       tags:
       - quantitykind
     patch:
@@ -3621,7 +3298,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aQuantityKind'
+              - $ref: '#/components/schemas/core_QuantityKind'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -3644,7 +3321,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aQuantityKind'
+                - $ref: '#/components/schemas/core_QuantityKind'
       tags:
       - quantitykind
     delete:
@@ -3695,7 +3372,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/core%3aRealEstate'
+                        $ref: '#/components/schemas/core_RealEstate'
       tags:
       - realestate
     post:
@@ -3714,7 +3391,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aRealEstate'
+              - $ref: '#/components/schemas/core_RealEstate'
       responses:
         500:
           description: Internal Server Error
@@ -3732,7 +3409,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aRealEstate'
+                - $ref: '#/components/schemas/core_RealEstate'
       tags:
       - realestate
   /realestate/{id}:
@@ -3762,7 +3439,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aRealEstate'
+                - $ref: '#/components/schemas/core_RealEstate'
       tags:
       - realestate
     put:
@@ -3787,7 +3464,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aRealEstate'
+              - $ref: '#/components/schemas/core_RealEstate'
       responses:
         400:
           description: Bad Request
@@ -3807,7 +3484,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aRealEstate'
+                - $ref: '#/components/schemas/core_RealEstate'
       tags:
       - realestate
     patch:
@@ -3832,7 +3509,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aRealEstate'
+              - $ref: '#/components/schemas/core_RealEstate'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -3855,7 +3532,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aRealEstate'
+                - $ref: '#/components/schemas/core_RealEstate'
       tags:
       - realestate
     delete:
@@ -3906,7 +3583,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/core%3aRealEstateComponent'
+                        $ref: '#/components/schemas/core_RealEstateComponent'
       tags:
       - realestatecomponent
     post:
@@ -3925,7 +3602,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aRealEstateComponent'
+              - $ref: '#/components/schemas/core_RealEstateComponent'
       responses:
         500:
           description: Internal Server Error
@@ -3943,7 +3620,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aRealEstateComponent'
+                - $ref: '#/components/schemas/core_RealEstateComponent'
       tags:
       - realestatecomponent
   /realestatecomponent/{id}:
@@ -3973,7 +3650,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aRealEstateComponent'
+                - $ref: '#/components/schemas/core_RealEstateComponent'
       tags:
       - realestatecomponent
     put:
@@ -3998,7 +3675,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aRealEstateComponent'
+              - $ref: '#/components/schemas/core_RealEstateComponent'
       responses:
         400:
           description: Bad Request
@@ -4018,7 +3695,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aRealEstateComponent'
+                - $ref: '#/components/schemas/core_RealEstateComponent'
       tags:
       - realestatecomponent
     patch:
@@ -4043,7 +3720,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/core%3aRealEstateComponent'
+              - $ref: '#/components/schemas/core_RealEstateComponent'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -4066,7 +3743,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/core%3aRealEstateComponent'
+                - $ref: '#/components/schemas/core_RealEstateComponent'
       tags:
       - realestatecomponent
     delete:
@@ -4087,6 +3764,407 @@ paths:
           description: "'core:RealEstateComponent' entity was successfully deleted."
       tags:
       - realestatecomponent
+  /sensor:
+    get:
+      summary: Get 'core:Sensor' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: core:hasSuperDevice
+        description: Filter value on property 'core:hasSuperDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:isMountedInBuildingComponent
+        description: Filter value on property 'core:isMountedInBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasMeasurementUnit
+        description: Filter value on property 'core:hasMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceQuantityKind
+        description: Filter value on property 'core:deviceQuantityKind'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:devicePlacementContext
+        description: Filter value on property 'device:devicePlacementContext'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasCommunicationsBus
+        description: Filter value on property 'device:hasCommunicationsBus'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasDeviceFunctionType
+        description: Filter value on property 'device:hasDeviceFunctionType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDataPointType
+        description: Filter value on property 'device:hasKNXDataPointType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusDataType
+        description: Filter value on property 'device:hasModbusDataType'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusFunctionCode
+        description: Filter value on property 'device:hasModbusFunctionCode'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasIPAddressPort
+        description: Filter value on property 'device:hasIPAddressPort'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDeviceId
+        description: Filter value on property 'device:hasKNXDeviceId'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasKNXDevicePort
+        description: Filter value on property 'device:hasKNXDevicePort'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasLoraDevEUI
+        description: Filter value on property 'device:hasLoraDevEUI'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasMACAddress
+        description: Filter value on property 'device:hasMACAddress'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusNodeId
+        description: Filter value on property 'device:hasModbusNodeId'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasModbusRegister
+        description: Filter value on property 'device:hasModbusRegister'.
+        schema:
+          $ref: '#/components/schemas/IntegerFilter'
+        style: deepObject
+        in: query
+      - name: device:hasOffset
+        description: Filter value on property 'device:hasOffset'.
+        schema:
+          $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: device:hasScaleFactor
+        description: Filter value on property 'device:hasScaleFactor'.
+        schema:
+          $ref: '#/components/schemas/NumberFilter'
+        style: deepObject
+        in: query
+      - name: device:hasSerialNumber
+        description: Filter value on property 'device:hasSerialNumber'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:associatedWithEvent
+        description: Filter value on property 'core:associatedWithEvent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:deviceMeasurementUnit
+        description: Filter value on property 'core:deviceMeasurementUnit'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:hasSubDevice
+        description: Filter value on property 'core:hasSubDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesBuilding
+        description: Filter value on property 'core:servesBuilding'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesBuildingComponent
+        description: Filter value on property 'core:servesBuildingComponent'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:servesDevice
+        description: Filter value on property 'core:servesDevice'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:generatedException
+        description: Filter value on property 'device:generatedException'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:observesActuator
+        description: Filter value on property 'device:observesActuator'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: device:sensorInterface
+        description: Filter value on property 'device:sensorInterface'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: core:generatedObservation
+        description: Filter value on property 'core:generatedObservation'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'core:Sensor' objects.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - $ref: '#/components/schemas/core_Sensor'
+                        - type: object
+                          required:
+                          - core:hasMeasurementUnit
+      tags:
+      - sensor
+    post:
+      summary: Create a new 'core:Sensor' object.
+      parameters: []
+      requestBody:
+        description: New 'core:Sensor' entity that is to be added.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core_Sensor'
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core_Sensor'
+                - type: object
+                  required:
+                  - core:hasMeasurementUnit
+      tags:
+      - sensor
+  /sensor/{id}:
+    get:
+      summary: Get a specific 'core:Sensor' object.
+      parameters:
+      - name: id
+        description: Id of 'core:Sensor' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:Sensor' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'core:Sensor' object.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core_Sensor'
+                - type: object
+                  required:
+                  - core:hasMeasurementUnit
+      tags:
+      - sensor
+    put:
+      summary: Update an existing 'core:Sensor' entity.
+      parameters:
+      - name: id
+        description: Id of 'core:Sensor' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: Updated data for 'core:Sensor' entity.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core_Sensor'
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:Sensor' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core_Sensor'
+                - type: object
+                  required:
+                  - core:hasMeasurementUnit
+      tags:
+      - sensor
+    patch:
+      summary: Update a single property on a specific 'core:Sensor' object.
+      parameters:
+      - name: id
+        description: Id of 'core:Sensor' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/core_Sensor'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'core:Sensor' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/core_Sensor'
+                - type: object
+                  required:
+                  - core:hasMeasurementUnit
+      tags:
+      - sensor
+    delete:
+      summary: Delete a 'core:Sensor' object.
+      parameters:
+      - name: id
+        description: Id of 'core:Sensor' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'core:Sensor' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'core:Sensor' entity was successfully deleted."
+      tags:
+      - sensor
   /roomtype:
     get:
       summary: Get 'building:RoomType' entities.
@@ -4111,7 +4189,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/building%3aRoomType'
+                        $ref: '#/components/schemas/building_RoomType'
       tags:
       - roomtype
     post:
@@ -4130,7 +4208,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/building%3aRoomType'
+              - $ref: '#/components/schemas/building_RoomType'
       responses:
         500:
           description: Internal Server Error
@@ -4148,7 +4226,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/building%3aRoomType'
+                - $ref: '#/components/schemas/building_RoomType'
       tags:
       - roomtype
   /roomtype/{id}:
@@ -4178,7 +4256,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/building%3aRoomType'
+                - $ref: '#/components/schemas/building_RoomType'
       tags:
       - roomtype
     put:
@@ -4203,7 +4281,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/building%3aRoomType'
+              - $ref: '#/components/schemas/building_RoomType'
       responses:
         400:
           description: Bad Request
@@ -4223,7 +4301,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/building%3aRoomType'
+                - $ref: '#/components/schemas/building_RoomType'
       tags:
       - roomtype
     patch:
@@ -4248,7 +4326,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/building%3aRoomType'
+              - $ref: '#/components/schemas/building_RoomType'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -4271,7 +4349,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/building%3aRoomType'
+                - $ref: '#/components/schemas/building_RoomType'
       tags:
       - roomtype
     delete:
@@ -4311,12 +4389,6 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: core:containsMountedDevice
-        description: Filter value on property 'core:containsMountedDevice'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
       - name: core:hasSubBuildingComponent
         description: Filter value on property 'core:hasSubBuildingComponent'.
         schema:
@@ -4340,7 +4412,7 @@ paths:
                     hydra:member:
                       type: array
                       items:
-                        $ref: '#/components/schemas/building%3aStorey'
+                        $ref: '#/components/schemas/building_Storey'
       tags:
       - storey
     post:
@@ -4359,7 +4431,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/building%3aStorey'
+              - $ref: '#/components/schemas/building_Storey'
       responses:
         500:
           description: Internal Server Error
@@ -4377,7 +4449,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/building%3aStorey'
+                - $ref: '#/components/schemas/building_Storey'
       tags:
       - storey
   /storey/{id}:
@@ -4407,7 +4479,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/building%3aStorey'
+                - $ref: '#/components/schemas/building_Storey'
       tags:
       - storey
     put:
@@ -4432,7 +4504,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/building%3aStorey'
+              - $ref: '#/components/schemas/building_Storey'
       responses:
         400:
           description: Bad Request
@@ -4452,7 +4524,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/building%3aStorey'
+                - $ref: '#/components/schemas/building_Storey'
       tags:
       - storey
     patch:
@@ -4477,7 +4549,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/building%3aStorey'
+              - $ref: '#/components/schemas/building_Storey'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -4500,7 +4572,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/building%3aStorey'
+                - $ref: '#/components/schemas/building_Storey'
       tags:
       - storey
     delete:
@@ -4523,3 +4595,4 @@ paths:
       - storey
 servers:
 - url: http://localhost:8080/
+
