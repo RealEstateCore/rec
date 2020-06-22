@@ -161,14 +161,6 @@
     <!-- https://w3id.org/rec/actuation/requestingAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/requestingAgent">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/rec/actuation/ActuationCommand"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/actuation/ActuationRequest"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
         <rdfs:comment xml:lang="en">The agent that initiated actuation, i.e., that created an actuation request (and consequently, was the original source also of subsequent generated actuation commands).</rdfs:comment>
         <rdfs:label xml:lang="en">requesting agent</rdfs:label>
@@ -211,14 +203,6 @@
     <!-- https://w3id.org/rec/actuation/targetActuator -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/targetActuator">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/rec/actuation/ActuationCommand"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/actuation/ActuationRequest"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuator"/>
         <rdfs:label xml:lang="en">target actuator</rdfs:label>
     </owl:ObjectProperty>
@@ -274,14 +258,6 @@
     <!-- https://w3id.org/rec/actuation/actuationPayload -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/actuation/actuationPayload">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/rec/actuation/ActuationCommand"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/actuation/ActuationRequest"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The payload to be passed on to some actuation interface and finally actuator.</rdfs:comment>
         <rdfs:label xml:lang="en">actuation payload</rdfs:label>
@@ -468,7 +444,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/requestingAgent"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -492,7 +469,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/actuationPayload"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Message from a REC platform to a specific actuator or system, requesting that an actuation be carried out.</rdfs:comment>
@@ -577,13 +555,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/targetActuator"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/device/Actuator"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/requestingAgent"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -607,7 +587,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/actuationPayload"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An incoming request from a client or other component, for an actuation to be carried out on one or many actuators or systems.</rdfs:comment>
