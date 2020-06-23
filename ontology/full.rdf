@@ -43,7 +43,21 @@
         <dcterms:modified>2020-05-15</dcterms:modified>
         <vann:preferredNamespacePrefix>rec</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/full/3.2/</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">Version 3.1.3 is a hotfix release that addresses bugs arising from version management in release 3.1.1 and 3.1.2. Several classes and properties from the 3.2 development branch were mistakenly implemented prematurely in 3.1.1 and 3.1.2, causing subtle inconsistencies in the model. Version 3.1.3 reverts all ontology entities to those from version 3.1, while maintaining the REST API specification and edge message examples that were updated since then.
+        <rdfs:comment xml:lang="en">Version 3.2 is a feature release that contains:
+
+* The new Analytics module, providing a vocabulary for describing prognoses and aggregates, and the processes used to generate these. This vocabulary is rather generic; we would like to get feedback on it and in particular solicit recommendations on how to model/document anlysis procedures/workflows.
+* The new DataSchema module, allowing for much richer description of data schemas on sensor and actuator interfaces, including primitive schemas, object schemas, and array schemas.
+* A new SensorInterface class, mirroring the design of the ActuatorInterface class from REC 3.1. This allows you to represent shared aspects of a set of identical sensors (e.g., their data schemas) in a single place, reducing duplication across the knowledge graph. It also simplifies translation of REC graphs into, e.g., MS DTDL or WoT TD.
+* The new Lantmäteriet module, representing the Swedish Real Property Register (Fastighetsregister). This module, intended for the Swedish market, is optional and thus not loaded in REC Full by default.
+* A new Collections class, intended to represent generic administrative collections of things.
+* A new o2o:listProperty annotation, intended to indicate that an OWL object or data property shall be treated as an rdf:List in implementing systems.
+* Additional Quantity Kind and Measurement Unit individuals supporting waste management and presence detection use cases.
+* New core:timeInterval data property, indicating an ISO 8601 time interval relevant to some entity or event.
+* New device:hasSerialNumber and device:hasMACAddress data properties.
+* Documentation on our use of OWL punning and ontology design patterns used.
+* An official alignment to BOT (Building Topology Ontology).
+
+Version 3.1.3 is a hotfix release that addresses bugs arising from version management in release 3.1.1 and 3.1.2. Several classes and properties from the 3.2 development branch were mistakenly implemented prematurely in 3.1.1 and 3.1.2, causing subtle inconsistencies in the model. Version 3.1.3 reverts all ontology entities to those from version 3.1, while maintaining the REST API specification and edge message examples that were updated since then.
 
 We apologize for providing an inconsistent ontology, and are implementing testing and version management procedures to ensure this does not occur again.
         
