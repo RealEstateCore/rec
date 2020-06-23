@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/rec/example/"
      xml:base="https://w3id.org/rec/example/"
+     xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -12,8 +12,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:device="https://w3id.org/rec/device/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:example="https://w3id.org/rec/example/"
      xmlns:building="https://w3id.org/rec/building/"
      xmlns:actuation="https://w3id.org/rec/actuation/"
@@ -22,10 +22,14 @@
     <owl:Ontology rdf:about="https://w3id.org/rec/example/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/example/3.2/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/full/3.2/"/>
-        <dc:description xml:lang="en">This is an example REC graph populated with a minimal set of buildings, rooms, and sensors, based on Karl&apos;s home setup.</dc:description>
+        <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
+        <dc:description xml:lang="en">This is an example REC graph populated with a minimal set of buildings, rooms, and sensors.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Example</dc:title>
-        <terms:modified>2020-06-04</terms:modified>
+        <dcterms:modified>2020-06-23</dcterms:modified>
+        <vann:preferredNamespacePrefix>example</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/example/3.2/</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
@@ -41,6 +45,102 @@
     
 
 
+    <!-- https://w3id.org/rec/actuation/hasActuationInterface -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/actuation/hasActuationInterface"/>
+    
+
+
+    <!-- https://w3id.org/rec/actuation/hasDefaultActuationInterface -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/actuation/hasDefaultActuationInterface"/>
+    
+
+
+    <!-- https://w3id.org/rec/building/roomType -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/building/roomType"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/containsMountedDevice -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/containsMountedDevice"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/dataSchema -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/dataSchema"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasBuildingComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/hasBuildingComponent"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasMeasurementUnit -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasQuantityKind -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasRealEstateComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/hasRealEstateComponent"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasSubBuildingComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/hasSubBuildingComponent"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasSubDevice -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/hasSubDevice"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasSuperBuildingComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/hasSuperBuildingComponent"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasSuperDevice -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/hasSuperDevice"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/isMountedIn -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/isMountedIn"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/isPartOfBuilding -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/isPartOfBuilding"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/isPartOfRealEstate -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/isPartOfRealEstate"/>
+    
+
+
     <!-- https://w3id.org/rec/core/measurementUnit -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/measurementUnit"/>
@@ -50,6 +150,24 @@
     <!-- https://w3id.org/rec/core/quantityKind -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/quantityKind"/>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/maximum -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/dataschemas/maximum"/>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/minimum -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/dataschemas/minimum"/>
+    
+
+
+    <!-- https://w3id.org/rec/device/sensorInterface -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/device/sensorInterface"/>
     
 
 
@@ -124,9 +242,9 @@
         <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Lux"/>
         <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
         <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
-        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
         <core:measurementUnit rdf:resource="https://w3id.org/rec/core/Lux"/>
         <core:quantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
+        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
     </owl:NamedIndividual>
     
 
@@ -138,8 +256,8 @@
         <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/BooleanDetection"/>
         <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Presence"/>
         <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
-        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface"/>
         <core:quantityKind rdf:resource="https://w3id.org/rec/core/Presence"/>
+        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface"/>
     </owl:NamedIndividual>
     
 
@@ -151,9 +269,9 @@
         <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
         <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Temperature"/>
         <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
-        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
         <core:measurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
         <core:quantityKind rdf:resource="https://w3id.org/rec/core/Temperature"/>
+        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
     </owl:NamedIndividual>
     
 
