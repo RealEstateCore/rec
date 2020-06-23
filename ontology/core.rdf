@@ -1439,6 +1439,16 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/BooleanDetection -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/BooleanDetection">
+        <rdf:type rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+        <rdfs:comment xml:lang="en">This measurement unit is used to quantify the detection or lack thereof of a phenomenon, e.g., in a simple IR-sensor that can only detect some presence within its detection range, but is not able to quantify anything more specific about that presence.</rdfs:comment>
+        <rdfs:label xml:lang="en">BooleanDetection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/rec/core/CO -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/CO">
@@ -1953,6 +1963,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Presence">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+        <hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/BooleanDetection"/>
         <rdfs:comment xml:lang="en">Presence equivivalent</rdfs:comment>
         <rdfs:label xml:lang="en">Presence</rdfs:label>
     </owl:NamedIndividual>
