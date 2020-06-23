@@ -17,6 +17,7 @@
      xmlns:example="https://w3id.org/rec/example/"
      xmlns:building="https://w3id.org/rec/building/"
      xmlns:actuation="https://w3id.org/rec/actuation/"
+     xmlns:dataschemas="https://w3id.org/rec/dataschemas/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/example/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/example/3.2/"/>
@@ -26,6 +27,29 @@
         <dc:title>RealEstateCore Example</dc:title>
         <terms:modified>2020-06-04</terms:modified>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/core/measurementUnit -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/measurementUnit"/>
+    
+
+
+    <!-- https://w3id.org/rec/core/quantityKind -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/core/quantityKind"/>
     
 
 
@@ -43,20 +67,27 @@
     <!-- https://w3id.org/rec/example/BrightnessPercentage -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/BrightnessPercentage">
-        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
-        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
-        <actuation:keyString>brightness</actuation:keyString>
-        <actuation:valueDatatype>Integer</actuation:valueDatatype>
+        <rdf:type rdf:resource="https://w3id.org/rec/dataschemas/IntSchema"/>
+        <dataschemas:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</dataschemas:maximum>
+        <dataschemas:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</dataschemas:minimum>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/rec/example/HueAmbientBulbInterface -->
+    <!-- https://w3id.org/rec/example/HueBulbBrightnessInterface -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueAmbientBulbInterface">
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueBulbBrightnessInterface">
         <rdf:type rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
-        <actuation:payloadKeyValueDefinition rdf:resource="https://w3id.org/rec/example/BrightnessPercentage"/>
-        <actuation:payloadKeyValueDefinition rdf:resource="https://w3id.org/rec/example/LightColorKelvin"/>
+        <core:dataSchema rdf:resource="https://w3id.org/rec/example/BrightnessPercentage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/example/HueBulbLightColorInterface -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueBulbLightColorInterface">
+        <rdf:type rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
+        <core:dataSchema rdf:resource="https://w3id.org/rec/example/LightColorKelvin"/>
     </owl:NamedIndividual>
     
 
@@ -65,7 +96,10 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueKitchenLight">
         <rdf:type rdf:resource="https://w3id.org/rec/device/Actuator"/>
-        <actuation:hasActuationInterface rdf:resource="https://w3id.org/rec/example/HueAmbientBulbInterface"/>
+        <actuation:hasActuationInterface rdf:resource="https://w3id.org/rec/example/HueBulbBrightnessInterface"/>
+        <actuation:hasActuationInterface rdf:resource="https://w3id.org/rec/example/HueBulbLightColorInterface"/>
+        <actuation:hasDefaultActuationInterface rdf:resource="https://w3id.org/rec/example/HueBulbBrightnessInterface"/>
+        <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
         <core:isMountedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen"/>
     </owl:NamedIndividual>
     
@@ -87,9 +121,12 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_LightMeter">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Lux"/>
+        <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
+        <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
+        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
         <core:measurementUnit rdf:resource="https://w3id.org/rec/core/Lux"/>
         <core:quantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
-        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
     </owl:NamedIndividual>
     
 
@@ -98,8 +135,11 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_MotionDetector">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <core:quantityKind rdf:resource="https://w3id.org/rec/core/Presence"/>
+        <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/BooleanDetection"/>
+        <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Presence"/>
+        <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
         <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface"/>
+        <core:quantityKind rdf:resource="https://w3id.org/rec/core/Presence"/>
     </owl:NamedIndividual>
     
 
@@ -108,9 +148,12 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_Thermometer">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
+        <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Temperature"/>
+        <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
+        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
         <core:measurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
         <core:quantityKind rdf:resource="https://w3id.org/rec/core/Temperature"/>
-        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
     </owl:NamedIndividual>
     
 
@@ -145,10 +188,9 @@
     <!-- https://w3id.org/rec/example/LightColorKelvin -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/LightColorKelvin">
-        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
-        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
-        <actuation:keyString>color</actuation:keyString>
-        <actuation:valueDatatype>Integer</actuation:valueDatatype>
+        <rdf:type rdf:resource="https://w3id.org/rec/dataschemas/IntSchema"/>
+        <dataschemas:maximum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6500</dataschemas:maximum>
+        <dataschemas:minimum rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2200</dataschemas:minimum>
     </owl:NamedIndividual>
     
 
@@ -156,10 +198,7 @@
     <!-- https://w3id.org/rec/example/LuxAsInteger -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/LuxAsInteger">
-        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
-        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
-        <actuation:keyString>luxValue</actuation:keyString>
-        <actuation:valueDatatype>Integer</actuation:valueDatatype>
+        <rdf:type rdf:resource="https://w3id.org/rec/dataschemas/IntSchema"/>
     </owl:NamedIndividual>
     
 
@@ -167,10 +206,7 @@
     <!-- https://w3id.org/rec/example/MotionAsBoolean -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/MotionAsBoolean">
-        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
-        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
-        <actuation:keyString>motionDetected</actuation:keyString>
-        <actuation:valueDatatype>Boolean</actuation:valueDatatype>
+        <rdf:type rdf:resource="https://w3id.org/rec/dataschemas/BooleanSchema"/>
     </owl:NamedIndividual>
     
 
@@ -178,10 +214,7 @@
     <!-- https://w3id.org/rec/example/TemperatureAsFloat -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/TemperatureAsFloat">
-        <rdf:type rdf:resource="https://w3id.org/rec/actuation/KeyValueDefinition"/>
-        <actuation:keyMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</actuation:keyMandatory>
-        <actuation:keyString>temperature</actuation:keyString>
-        <actuation:valueDatatype>Float</actuation:valueDatatype>
+        <rdf:type rdf:resource="https://w3id.org/rec/dataschemas/FloatSchema"/>
     </owl:NamedIndividual>
     
 
@@ -201,6 +234,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_Garage">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Building"/>
+        <core:isPartOfRealEstate rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
     </owl:NamedIndividual>
     
 
@@ -211,6 +245,7 @@
         <rdf:type rdf:resource="https://w3id.org/rec/core/Building"/>
         <core:hasBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
         <core:hasBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor"/>
+        <core:isPartOfRealEstate rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
     </owl:NamedIndividual>
     
 
@@ -220,6 +255,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_BlueBedroom">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
         <building:roomType rdf:resource="https://w3id.org/rec/building/Bedroom"/>
+        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor"/>
     </owl:NamedIndividual>
     
 
@@ -229,6 +265,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
         <building:roomType rdf:resource="https://w3id.org/rec/building/DiningRoom"/>
+        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
     </owl:NamedIndividual>
     
 
@@ -238,6 +275,8 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
         <building:roomType rdf:resource="https://w3id.org/rec/building/Entrance"/>
+        <core:containsMountedDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
+        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
     </owl:NamedIndividual>
     
 
@@ -250,6 +289,7 @@
         <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance"/>
         <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen"/>
         <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Office"/>
+        <core:isPartOfBuilding rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse"/>
     </owl:NamedIndividual>
     
 
@@ -259,6 +299,8 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
         <building:roomType rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+        <core:containsMountedDevice rdf:resource="https://w3id.org/rec/example/HueKitchenLight"/>
+        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
     </owl:NamedIndividual>
     
 
@@ -268,6 +310,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Office">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
         <building:roomType rdf:resource="https://w3id.org/rec/building/OfficeRoom"/>
+        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
     </owl:NamedIndividual>
     
 
@@ -277,6 +320,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor">
         <rdf:type rdf:resource="https://w3id.org/rec/building/Storey"/>
         <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_BlueBedroom"/>
+        <core:isPartOfBuilding rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse"/>
     </owl:NamedIndividual>
     
 
@@ -285,6 +329,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_StorageBuilding">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Building"/>
+        <core:isPartOfRealEstate rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
