@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/rec/dataschemas/"
+     xml:base="https://w3id.org/rec/dataschemas/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:dataschemas="https://w3id.org/rec/dataschemas/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/rec/dataschemas/">
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/dataschemas/3.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
+        <dc:description xml:lang="en">This REC module models primitive and complex (object/array) data schemas for sensors, actuators, services, etc.</dc:description>
+        <dc:publisher>RealEstateCore Consortium</dc:publisher>
+        <dc:title xml:lang="en">RealEstateCore Data Schemas Module</dc:title>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23</dcterms:modified>
+        <vann:preferredNamespacePrefix>dataschemas</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/dataschemas/3.2/</vann:preferredNamespaceUri>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/elementSchema -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/dataschemas/elementSchema">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/dataschemas/ArraySchema"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:comment xml:lang="en">Defines the primitive schema of all members of the array.</rdfs:comment>
+        <rdfs:label xml:lang="en">element schema</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/objectFields -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/dataschemas/objectFields">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/dataschemas/ObjectSchema"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:comment xml:lang="en">Defines the individual object fields on this schema.</rdfs:comment>
+        <rdfs:label xml:lang="en">object fields</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/enumerationValues -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/dataschemas/enumerationValues">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:comment xml:lang="en">Defines allowed values for this primitive schema instance.</rdfs:comment>
+        <rdfs:label xml:lang="en">enumeration values</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/fieldName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/dataschemas/fieldName">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Defines the name by which this primitive schema will be referred to, when defined as a part of an object schema.</rdfs:comment>
+        <rdfs:label xml:lang="en">field name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/maximum -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/dataschemas/maximum">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The maximum allowed value (inclusive).</rdfs:comment>
+        <rdfs:label xml:lang="en">maximum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/minimum -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/dataschemas/minimum">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The minimum allowed value (inclusive).</rdfs:comment>
+        <rdfs:label xml:lang="en">minimum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/regEx -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/dataschemas/regEx">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/dataschemas/StringSchema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A regular expression that defines valid input per this string schema.</rdfs:comment>
+        <rdfs:label xml:lang="en">regular expression</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/resolution -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/dataschemas/resolution">
+        <rdfs:comment xml:lang="en">Defines the valid granularity or &quot;step size&quot; for numeric input (i.e., FloatSchemas and IntSchemas). Used in conjunction with maximum and minimum, as an alternative to enumerations: e.g., minimum = 5, resolution = 10, maximum = 50 gives valid values 5, 15, 25, 35, and 45.</rdfs:comment>
+        <rdfs:label xml:lang="en">resolution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/ArraySchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/dataschemas/ArraySchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/elementSchema"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/BooleanSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/dataschemas/BooleanSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/enumerationValues"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/DateTimeSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/dataschemas/DateTimeSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/enumerationValues"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/maximum"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/minimum"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/maximum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/minimum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/FloatSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/dataschemas/FloatSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/enumerationValues"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/maximum"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/minimum"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/resolution"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/maximum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/minimum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/resolution"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/IntSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/dataschemas/IntSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/enumerationValues"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/maximum"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/minimum"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/resolution"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/maximum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/minimum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/resolution"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/ObjectSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/dataschemas/ObjectSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/objectFields"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/PrimitiveSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/dataschemas/PrimitiveSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/dataschemas/StringSchema -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/dataschemas/StringSchema">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/dataschemas/PrimitiveSchema"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/dataschemas/enumerationValues"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

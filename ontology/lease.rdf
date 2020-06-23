@@ -15,17 +15,17 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/lease/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/lease/3.1.3/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/core/3.1.3/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/lease/3.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
         <dc:description xml:lang="en">This REC module covers leases, leased, lease contracts, premise types, etc.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Lease Module</dc:title>
-        <dcterms:modified>2020-05-15</dcterms:modified>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23</dcterms:modified>
         <vann:preferredNamespacePrefix>lease</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/lease/3.1.3/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/lease/3.2/</vann:preferredNamespaceUri>
         <cpannotationschema:coversRequirements xml:lang="en">What contract governs the lease of building 7?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">What purpose is Building 7 leased for?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">When does the lease on Building 7 run out?</cpannotationschema:coversRequirements>
@@ -33,7 +33,7 @@
         <cpannotationschema:coversRequirements xml:lang="en">Who owns Building 7?</cpannotationschema:coversRequirements>
         <rdfs:comment xml:lang="en">The LeaseContract class is as of yet underdefined -- we need to liaise with legal expertise to define the requirements here. Also, lease remuneration needs to be modelled. The base case, monthly rent, is easy -- but more complex and forward-looking payment models are likely to be relevant in some use cases also.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.1.3</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -56,6 +56,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">building is part of premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -67,6 +68,7 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:comment xml:lang="en">Property that models Premises (leasable parts of real estate) parthood, i.e., that certain buildings and/or rooms are part of a defined Premise (which can in turn by governed by a Lease through a LeaseContract)</rdfs:comment>
         <rdfs:label xml:lang="en">is part of premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -75,8 +77,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/lease/leaseOf">
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Lease"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/lease/Leasable"/>
-        <rdfs:comment xml:lang="en">The Leasable object (e.g., property, equipment, etc) that this a lease of.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object (e.g., property, equipment, etc) that this a lease of.</rdfs:comment>
         <rdfs:label xml:lang="en">lease of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -111,6 +112,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking Premises to their constituent Buildings or Rooms.</rdfs:comment>
         <rdfs:label xml:lang="en">premises includes</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -122,6 +124,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:label xml:lang="en">premises includes building</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -133,6 +136,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Room"/>
         <rdfs:label xml:lang="en">premises includes room</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -143,6 +147,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/PremisesType"/>
         <rdfs:label xml:lang="en">premises type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -165,6 +170,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Room"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/Premises"/>
         <rdfs:label xml:lang="en">room is part of premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -260,6 +266,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/Leasable">
         <rdfs:comment xml:lang="en">Things that can be leased (e.g., buildings, rooms, equipment, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">Leasable</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -303,6 +310,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Leasable"/>
         <rdfs:comment xml:lang="en">Premises are a set of buildings or rooms that are leased out to tenants, typically for a defined purpose.</rdfs:comment>
         <rdfs:label xml:lang="en">Premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -311,6 +319,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/PremisesType">
         <rdfs:label xml:lang="en">Premises type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 

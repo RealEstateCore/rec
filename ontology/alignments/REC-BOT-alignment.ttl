@@ -1,0 +1,152 @@
+@prefix : <https://w3id.org/rec/alignments/BOT#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix recCore: <https://w3id.org/rec/core/> .
+@prefix recBuilding: <https://w3id.org/rec/building/> .
+@base <https://w3id.org/rec/alignments/BOT-REC-alignment> .
+
+<https://w3id.org/rec/alignments/BOT-REC-alignment> rdf:type owl:Ontology ;
+                                                     owl:imports <https://w3id.org/bot> ,
+                                                                 <https://w3id.org/rec/full/3.2/> ;
+                                                     dcterms:creator <https://orcid.org/0000-0001-8767-4136> ,
+                                                                     <https://orcid.org/0000-0002-6519-7057> ;
+                                                     dcterms:description "This ontology defines alignments between RealEstateCore (REC) and the Building Topology Ontology (BOT)."@en ;
+                                                     dcterms:issued "2020-05-25"^^xsd:date ;
+                                                     dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+                                                     dcterms:modified "2020-05-25"^^xsd:date ;
+                                                     dcterms:title "REC to BOT alignment."@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/bot#containsZone
+bot:containsZone rdfs:subPropertyOf recCore:hasSubBuildingComponent .
+
+
+###  https://w3id.org/bot#hasElement
+bot:hasElement rdfs:subPropertyOf recCore:hasSubBuildingComponent .
+
+
+###  https://w3id.org/bot#hasSubElement
+bot:hasSubElement rdfs:subPropertyOf recCore:hasSubBuildingComponent .
+
+
+###  https://w3id.org/rec/core/containsMountedDevice
+recCore:containsMountedDevice rdfs:subPropertyOf bot:containsElement .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/name
+schema:name rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Person
+schema:Person rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+###  https://w3id.org/bot#Element
+bot:Element rdfs:subClassOf recCore:BuildingComponent .
+
+
+###  https://w3id.org/bot#Space
+bot:Space owl:equivalentClass recCore:Room .
+
+
+###  https://w3id.org/bot#Storey
+bot:Storey owl:equivalentClass recBuilding:Storey .
+
+
+###  https://w3id.org/bot#Zone
+bot:Zone rdfs:subClassOf recCore:BuildingComponent .
+
+
+###  https://w3id.org/rec/building/Storey
+
+###  https://w3id.org/rec/core/Room
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://orcid.org/0000-0001-8767-4136
+<https://orcid.org/0000-0001-8767-4136> rdf:type owl:NamedIndividual ,
+                                                 schema:Person ,
+                                                 foaf:Person ;
+                                        schema:name "Karl Hammar" ;
+                                        foaf:name "Karl Hammar" .
+
+
+###  https://orcid.org/0000-0002-6519-7057
+<https://orcid.org/0000-0002-6519-7057> rdf:type owl:NamedIndividual ,
+                                                 schema:Person ,
+                                                 foaf:Person ;
+                                        schema:name "Mads Holten Rasmussen" ;
+                                        foaf:name "Mads Holten Rasmussen" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -41,30 +41,14 @@ addition of a new subType property, which is however rather simple) and b)
 that documentation and visualization don't always display named individuals 
 as prominently or clearly as OWL classes.
 
-## ODP: Collection/List
+## ODP: RDF:List
 
-**Source:**  http://ontologydesignpatterns.org/wiki/Submissions:List
-**Instantiations:**  Collection, List
-**Comment:**  The Collection class is included in REC Core; the List class is 
-implemented in the Collections module (new since REC 3.2). The design in REC 
-is influenced by but not a direct clone of the design pattern in question; 
-the intermediate Bag class as suggested in the source pattern is not 
-implemented, and `ListItem` from the pattern has been renamed to 
-`ListPosition`, to clarify the intended semantics; the actual item itself is 
-linked via the `positionOf` property (whereas in the pattern, that linkage 
-is via the `itemContent` property). Additionally, this implementation 
-includes a property chain that can be used to infer item membership on a 
-`List` via its `ListPosition`.
-
-Note that OWL semantics does not allow us to verify the validity of assertions 
-using these list constructs; e.g., there is no easy way to verify that a 
-`ListPosition` that has `numericPosition` 3 is in fact the third `ListPosition` 
-on a given list; nor to verify that the asserted first or last `ListPosition` 
-is in fact first or last.
+See the [O2OListProperty.md](O2OListProperty.md) document in this folder for specifics regarding how 
+to use RDF lists with REC systems.
 
 ## ODP: Punning
 
-See the *Punning.md* document in this folder for specifics regarding the 
+See the [Punning.md](Punning.md) document in this folder for specifics regarding the 
 use of punning in REC.
 
 ## ODP: Agents

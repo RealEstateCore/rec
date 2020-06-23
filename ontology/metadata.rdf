@@ -17,10 +17,10 @@
      xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/metadata/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/metadata/3.1.3/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/metadata/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
-        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:contributor>
-        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:contributor>
+        <dc:contributor>Erik Wallin</dc:contributor>
+        <dc:contributor>Karl Hammar</dc:contributor>
         <dc:description xml:lang="en">This is a translation of various metadata schemas into OWL annotation properties. The metadata schemas themselves have not been developed by the RealEstateCore Consortium; rather, we simply collate them into one OWL file for stand-alone reuse within the REC ontology suite.
 
 The copyright on the constituent parts (classes, properties, named individuals) of the REC Metadata Module are held by their original authors (see their respective namespaces and the several rdfs:isDefinedBy and dc:source declarations on the Metadata Module ontology as a whole). These parts may have different licenses. The composition of these constituent parts into one file, as published by the RealEstateCore consortium, is provided under MIT license.</dc:description>
@@ -28,16 +28,16 @@ The copyright on the constituent parts (classes, properties, named individuals) 
         <dc:source rdf:resource="http://bloody-byte.net/rdf/dc_owl2dl/"/>
         <dc:source rdf:resource="http://purl.org/vocab/vann/vann-vocab-20050401.rdf"/>
         <dc:title>RealEstateCore Metadata Module</dc:title>
-        <dcterms:modified>2020-05-15</dcterms:modified>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23</dcterms:modified>
         <vann:preferredNamespacePrefix>metadata</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/metadata/3.1.3/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/metadata/3.2/</vann:preferredNamespaceUri>
         <rdfs:isDefinedBy rdf:resource="http://creativecommons.org/ns#"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
         <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"/>
         <rdfs:isDefinedBy rdf:resource="https://karlhammar.com/owl2oas/o2o.owl#"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.1.3</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -269,6 +269,20 @@ The copyright on the constituent parts (classes, properties, named individuals) 
         <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"/>
     </owl:AnnotationProperty>
     
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    
+
+
     <!-- https://karlhammar.com/owl2oas/o2o.owl#endpoint -->
 
     <owl:AnnotationProperty rdf:about="https://karlhammar.com/owl2oas/o2o.owl#endpoint">
@@ -276,6 +290,8 @@ The copyright on the constituent parts (classes, properties, named individuals) 
         <rdfs:isDefinedBy rdf:resource="https://karlhammar.com/owl2oas/o2o.owl#"/>
         <rdfs:label xml:lang="en">endpoint</rdfs:label>
     </owl:AnnotationProperty>
+    
+
 
     <!-- https://karlhammar.com/owl2oas/o2o.owl#included -->
 
@@ -285,10 +301,16 @@ The copyright on the constituent parts (classes, properties, named individuals) 
         <rdfs:label xml:lang="en">included</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:AnnotationProperty>
+    
 
-    <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    <!-- https://karlhammar.com/owl2oas/o2o.owl#listProperty -->
+
+    <owl:AnnotationProperty rdf:about="https://karlhammar.com/owl2oas/o2o.owl#listProperty">
+        <rdfs:comment xml:lang="en">Usage of this annotation on an object or data property indicates that the property shall, when translated into RDF or OAS representations, be an ordered RDF list.</rdfs:comment>
+        <rdfs:label xml:lang="en">list property</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:AnnotationProperty>
 </rdf:RDF>
 
 
