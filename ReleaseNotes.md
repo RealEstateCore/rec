@@ -1,5 +1,9 @@
 # RealEstateCore Release Notes
 
+## V3.2.1 -- LFR Hotfix
+
+Version 3.2.1 is a hotfix release that removes non-ASCII characters from the serialized version of the optional LFR module, which broke the w3id redirect for that module.
+
 ## V3.2 -- Analytics, Data Schemas, and Sensor Interfaces
 
 Version 3.2 is a feature release that contains:
