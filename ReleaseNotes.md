@@ -1,9 +1,5 @@
 # RealEstateCore Release Notes
 
-## V3.2.1 -- LFR Hotfix
-
-Version 3.2.1 is a hotfix release that removes non-ASCII characters from the serialized version of the optional LFR module, which broke the w3id redirect for that module.
-
 ## V3.2 -- Analytics, Data Schemas, and Sensor Interfaces
 
 Version 3.2 is a feature release that contains:
@@ -11,7 +7,7 @@ Version 3.2 is a feature release that contains:
 * The new Analytics module, providing a vocabulary for describing prognoses and aggregates, and the processes used to generate these. This vocabulary is rather generic; we would like to get feedback on it and in particular solicit recommendations on how to model/document anlysis procedures/workflows.
 * The new DataSchema module, allowing for much richer description of data schemas on sensor and actuator interfaces, including primitive schemas, object schemas, and array schemas.
 * A new SensorInterface class, mirroring the design of the ActuatorInterface class from REC 3.1. This allows you to represent shared aspects of a set of identical sensors (e.g., their data schemas) in a single place, reducing duplication across the knowledge graph. It also simplifies translation of REC graphs into, e.g., MS DTDL or WoT TD.
-* The new Lantmäteriet module, representing the Swedish Real Property Register (Fastighetsregister). This module, intended for the Swedish market, is optional and thus not loaded in REC Full by default.
+* The new LFR module, representing the Swedish Real Property Register (Lantmäteriets Fastighetsregister). This module, intended for the Swedish market, is optional and thus not loaded in REC Full by default.
 * A new Collections class, intended to represent generic administrative collections of things.
 * A new o2o:listProperty annotation, intended to indicate that an OWL object or data property shall be treated as an rdf:List in implementing systems.
 * Additional Quantity Kind and Measurement Unit individuals supporting waste management and presence detection use cases.
