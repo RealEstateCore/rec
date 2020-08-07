@@ -435,6 +435,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/ownedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/ownedBy">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:comment xml:lang="en">Property that defines the legal owner(s) of a given REC entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">owned by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/premisesType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/premisesType">
@@ -1174,6 +1184,18 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/RealEstate -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstate">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/ownedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/ownedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The legal/administrative representation of some lands and/or buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate</rdfs:label>
         <o2o:endpoint>realestate</o2o:endpoint>
