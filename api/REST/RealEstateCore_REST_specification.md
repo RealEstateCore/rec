@@ -4,7 +4,7 @@ _This specification defines the first version of the RealEstateCore REST API._
 
 _It comprises a non-normative section where principles for the REST API is described. And a normative section where requirements for being and API to be "RealEstateCore Compliant" are stated._
 
-_Formally, the API is specified via an Open API Specification (formerly Swagger API) generated from the OWL ontology, and from which the normative requirements section below stems. See [OAS Spec](https://github.com/RealEstateCore/rec/blob/3.2/api/REST/rec-full-v3.2.yaml)._
+_Formally, the API is specified via an Open API Specification (formerly Swagger API) generated from the OWL ontology, and from which the normative requirements section below stems. See [OAS Spec](https://github.com/RealEstateCore/rec/blob/3.3/api/REST/rec-full-v3.3.yaml)._
 
 _Throughout this specification RealEstateCore may be abbreviated to REC._
 
@@ -29,7 +29,7 @@ Additional functionality may be implemented and a mechanism to understanding suc
 
 **Principle.** In addition to the minimum set of requirements, the specification comprises optional requirements which must be followed _if chosen to be included_ in an API implementation (designated _"should"_).
 
-![Requirement Diagram](https://github.com/RealEstateCore/rec/blob/3.2/api/REST/REC_API_Requirement_diagram.png)
+![Requirement Diagram](https://github.com/RealEstateCore/rec/blob/3.3/api/REST/REC_API_Requirement_diagram.png)
 
 Furthermore, recommendations are expressed for areas where the REC Consortium considers to add requirements in the future. 
 
