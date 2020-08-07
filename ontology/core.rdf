@@ -1088,6 +1088,27 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/Location -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Location">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A part of the physical world that has a 3D spatial extent and that contains or can contain sub-locations. E.g., a Region can contain many Real Estates, which in turn can contain many Buildings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/MeasurementUnit -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/MeasurementUnit">
@@ -1174,6 +1195,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/RealEstate -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:comment xml:lang="en">The legal/administrative representation of some lands and/or buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate</rdfs:label>
         <o2o:endpoint>realestate</o2o:endpoint>
@@ -1185,6 +1207,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/RealEstateComponent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstateComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOfRealEstate"/>
@@ -1195,6 +1218,16 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate component</rdfs:label>
         <o2o:endpoint>realestatecomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Region -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Region">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:comment xml:lang="en">An administrative geospatial unit larger than the individual real estate. For instance, &quot;Lombary&quot;, &quot;North America&quot;, &quot;The Back Bay&quot;, &quot;Elnätsområde Syd&quot;, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Region</rdfs:label>
     </owl:Class>
     
 
