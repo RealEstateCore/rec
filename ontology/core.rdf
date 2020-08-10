@@ -1019,6 +1019,34 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/Campus -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Campus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/RealEstate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/RealEstate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A campus represents a collection of real estate entities. The constituent real estates may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a corporate campus, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Campus</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Collection -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Collection">
