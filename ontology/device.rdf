@@ -178,6 +178,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">has device function type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -685,10 +686,11 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DeviceFunctionType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
-        <rdfs:comment xml:lang="en">The main function or purpose of a Device.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The main function or purpose of a Device.
+
+Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
         <rdfs:label xml:lang="en">Device function type</rdfs:label>
-        <o2o:endpoint>devicefunctiontype</o2o:endpoint>
-        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -930,6 +932,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/AirDiffuser">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">AirDiffuser</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -939,6 +942,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/AirHandlingUnit">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">AirHandlingUnit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -965,6 +969,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Boiler">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Boiler</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -974,6 +979,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Chiller">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Chiller</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -992,6 +998,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Coil">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Coil</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1027,6 +1034,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Compressor">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Compressor</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1036,6 +1044,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Condenser">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Condenser</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1046,6 +1055,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:comment xml:lang="en">Device that controls Actuators (can also collect data).</rdfs:comment>
         <rdfs:label xml:lang="en">Control</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1055,6 +1065,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Damper">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Damper</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1065,6 +1076,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:comment xml:lang="en">Device that collects data</rdfs:comment>
         <rdfs:label xml:lang="en">DataAcquisition</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1075,6 +1087,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:comment xml:lang="en">Device that acts as a broker (could be a switch or gateway)</rdfs:comment>
         <rdfs:label xml:lang="en">DataCommunicationGateway</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1186,6 +1199,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Elevator">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Elevator</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1195,6 +1209,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Escalator">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Escalator</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1222,6 +1237,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Fan">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Fan</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1231,6 +1247,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Filter">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Filter</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1259,6 +1276,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Heater">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Heater</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1421,6 +1439,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Pump">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Pump</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1511,6 +1530,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Thermostat">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Thermostat</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
@@ -1520,6 +1540,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/device/Valve">
         <rdf:type rdf:resource="https://w3id.org/rec/device/DeviceFunctionType"/>
         <rdfs:label xml:lang="en">Valve</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:NamedIndividual>
     
 
