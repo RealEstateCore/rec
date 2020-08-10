@@ -978,6 +978,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Room"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1026,7 +1032,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/RealEstate"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1038,10 +1044,10 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/RealEstate"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A campus represents a collection of real estate entities. The constituent real estates may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a corporate campus, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A campus represents a collection of real estate entities. The constituent real estates may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Campus</rdfs:label>
     </owl:Class>
     
@@ -1050,6 +1056,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Collection -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Collection">
+        <rdfs:comment xml:lang="en">An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an appartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings).</rdfs:comment>
         <rdfs:label xml:lang="en">Collection</rdfs:label>
     </owl:Class>
     
@@ -1141,7 +1148,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
                 <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A part of the physical world that has a 3D spatial extent and that contains or can contain sub-locations. E.g., a Region can contain many Real Estates, which in turn can contain many Buildings.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-locations. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Location</rdfs:label>
     </owl:Class>
     
@@ -1256,6 +1263,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/RealEstateComponent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstateComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOfRealEstate"/>
