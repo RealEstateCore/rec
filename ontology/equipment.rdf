@@ -41,7 +41,7 @@
     <!-- https://w3id.org/rec/equipment/substance -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/equipment/substance">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/Substance"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/EquipmentFeedSubstance"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/isFedBy"/>
     </owl:AnnotationProperty>
     
@@ -71,6 +71,234 @@
     <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/BtuPerHour">
         <rdfs:comment xml:lang="en">BTU/hr</rdfs:comment>
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/EquipmentFeedSubstance -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/EquipmentFeedSubstance">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ACElec</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Air</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>BlowdownWater</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>ChilledWater</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>ColdDomesticWater</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>Condensate</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>CondenserWater</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>DCElec</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first>Diesel</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first>DriveElec</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first>Ethernet</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first>ExhaustAir</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first>Freight</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first>FuelOil</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first>Gasoline</rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                <rdf:first>GreaseExhaustAir</rdf:first>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                        <rdf:first>HotDomesticWater</rdf:first>
+                                                                                                                                                        <rdf:rest>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                <rdf:first>HotWater</rdf:first>
+                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                        <rdf:first>IrrigationWater</rdf:first>
+                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                <rdf:first>Light</rdf:first>
+                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                        <rdf:first>MakeupWater</rdf:first>
+                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                <rdf:first>NaturalGas</rdf:first>
+                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                        <rdf:first>NonPotableDomesticWater</rdf:first>
+                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                <rdf:first>OutsideAir</rdf:first>
+                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                        <rdf:first>People</rdf:first>
+                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                <rdf:first>Propane</rdf:first>
+                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                        <rdf:first>RecircHotDomesticWater</rdf:first>
+                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                <rdf:first>Refrig</rdf:first>
+                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                        <rdf:first>ReturnAir</rdf:first>
+                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                <rdf:first>SprinklerWater</rdf:first>
+                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                        <rdf:first>Steam</rdf:first>
+                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                <rdf:first>StormDrainage</rdf:first>
+                                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                        <rdf:first>SupplyAir</rdf:first>
+                                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                <rdf:first>TransferAir</rdf:first>
+                                                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                        <rdf:first>WasteVentDrainage</rdf:first>
+                                                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                                <rdf:first>Water</rdf:first>
+                                                                                                                                                                                                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:rest>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
     </rdfs:Datatype>
     
 
