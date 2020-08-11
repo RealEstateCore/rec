@@ -526,6 +526,25 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/subLocations -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/subLocations">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/superLocation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/superLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/superLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1157,6 +1176,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
                 <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/subLocations"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/superLocation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-locations. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
