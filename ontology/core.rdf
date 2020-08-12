@@ -143,7 +143,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to Devices mounted within them.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking to mounted Devices.</rdfs:comment>
         <rdfs:label xml:lang="en">contains mounted device</rdfs:label>
     </owl:ObjectProperty>
     
@@ -431,6 +431,17 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:label xml:lang="en">located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/mountedInEquipment -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/mountedInEquipment">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:label xml:lang="en">mounted in equipment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1109,6 +1120,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Device -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/mountedInEquipment"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Equipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasSuperDevice"/>
