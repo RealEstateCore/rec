@@ -144,6 +144,22 @@
     
 
 
+    <!-- https://w3id.org/rec/building/CableRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/CableRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/building/CafeteriaRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/CafeteriaRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/building/Cinema -->
 
     <owl:Class rdf:about="https://w3id.org/rec/building/Cinema">
@@ -435,10 +451,50 @@
     
 
 
+    <!-- https://w3id.org/rec/building/LoadingReceivingRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/LoadingReceivingRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/building/MailRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/MailRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/BackOffice"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/building/MainEntrance -->
 
     <owl:Class rdf:about="https://w3id.org/rec/building/MainEntrance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Entrance"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/building/MeditationRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/MeditationRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/building/MothersRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/MothersRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/building/MultiPurposeRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/MultiPurposeRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
     </owl:Class>
     
 
@@ -592,6 +648,14 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:label xml:lang="en">School</rdfs:label>
     </owl:Class>
+
+
+    
+    <!-- https://w3id.org/rec/building/SecurityRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/SecurityRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Room"/>
+    </owl:Class>
     
 
 
@@ -676,6 +740,12 @@
         <rdfs:label xml:lang="en">Stadium</rdfs:label>
     </owl:Class>
     
+    <!-- https://w3id.org/rec/building/SprinklerRoom -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/SprinklerRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
+    </owl:Class>
+    
 
 
     <!-- https://w3id.org/rec/building/StaffRoom -->
@@ -729,7 +799,7 @@
     <!-- https://w3id.org/rec/building/TelecommunicationRoom -->
 
     <owl:Class rdf:about="https://w3id.org/rec/building/TelecommunicationRoom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/UtilitiesRoom"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/CableRoom"/>
     </owl:Class>
     
 
@@ -921,6 +991,22 @@
     <!-- https://w3id.org/rec/building/Cabinet -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/Cabinet">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/building/CableRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/CableRoom">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/building/CafeteriaRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/CafeteriaRoom">
         <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
     </owl:NamedIndividual>
     
@@ -1222,9 +1308,49 @@
     
 
 
+    <!-- https://w3id.org/rec/building/LoadingReceivingRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/LoadingReceivingRoom">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/building/MailRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/MailRoom">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/rec/building/MainEntrance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/MainEntrance">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/building/MeditationRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/MeditationRoom">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/building/MothersRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/MothersRoom">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/building/MultiPurposeRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/MultiPurposeRoom">
         <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
     </owl:NamedIndividual>
     
@@ -1342,6 +1468,14 @@
     
 
 
+    <!-- https://w3id.org/rec/building/SecurityRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/SecurityRoom">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/rec/building/ServiceEntrance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/ServiceEntrance">
@@ -1393,6 +1527,14 @@
     <!-- https://w3id.org/rec/building/SmallStudyRoom -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/SmallStudyRoom">
+        <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rec/building/SprinklerRoom -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rec/building/SprinklerRoom">
         <rdf:type rdf:resource="https://w3id.org/rec/building/RoomType"/>
     </owl:NamedIndividual>
     
@@ -1534,6 +1676,14 @@
     <rdf:Description rdf:about="https://w3id.org/rec/building/Cabinet">
         <rdfs:label xml:lang="en">Cabinet</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/CableRoom">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">Cable room</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/CafeteriaRoom">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">CafeteriaRoom</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/Cinema">
         <rdfs:label xml:lang="en">Cinema</rdfs:label>
     </rdf:Description>
@@ -1604,6 +1754,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/FittingRoom">
         <rdfs:label xml:lang="en">FittingRoom</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/FoodHandlingRoom">
         <rdfs:label xml:lang="en">FoodHandlingRoom</rdfs:label>
@@ -1637,8 +1788,28 @@
     <rdf:Description rdf:about="https://w3id.org/rec/building/LivingRoom">
         <rdfs:label xml:lang="en">LivingRoom</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/LoadingReceivingRoom">
+        <rdfs:label xml:lang="en">Loading/receiving room</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/MailRoom">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">Mail room</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/MainEntrance">
         <rdfs:label xml:lang="en">MainEntrance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/MeditationRoom">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">Meditation room</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/MothersRoom">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">Mothers&apos; room</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/MultiPurposeRoom">
+        <rdfs:label xml:lang="en">Multi-purpose room</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/Office">
         <rdfs:label xml:lang="en">Office</rdfs:label>
@@ -1683,6 +1854,10 @@
     <rdf:Description rdf:about="https://w3id.org/rec/building/Sauna">
         <rdfs:label xml:lang="en">Sauna</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/SecurityRoom">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">Security room</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/ServiceEntrance">
         <rdfs:label xml:lang="en">ServiceEntrance</rdfs:label>
     </rdf:Description>
@@ -1703,6 +1878,10 @@
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/SmallStudyRoom">
         <rdfs:label xml:lang="en">SmallStudyRoom</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/building/SprinklerRoom">
+        <rdfs:label xml:lang="en">Sprinkler room</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/StaffRoom">
         <rdfs:comment xml:lang="en">Room for staff to take breaks.</rdfs:comment>
