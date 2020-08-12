@@ -425,6 +425,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/locatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/locatedIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/observationGeneratedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/observationGeneratedBy">
@@ -529,6 +539,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/subLocations -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/subLocations">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/superLocation"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
@@ -539,6 +550,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/superLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/superLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
     </owl:ObjectProperty>
@@ -1026,6 +1038,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/BuildingComponent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/BuildingComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasSuperBuildingComponent"/>
@@ -1108,7 +1121,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device can contain subdevices or be part of superdevices. It is subclassed into more specific device types, e.g., Sensor,  Actuator, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A piece of electronic equipment that can sense (Sensor) or interact (Actuator) with its environment. A Device can contain subdevices or be part of superdevices.</rdfs:comment>
         <rdfs:label xml:lang="en">Device</rdfs:label>
         <o2o:endpoint>device</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
@@ -1119,6 +1132,24 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Equipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Equipment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/containsMountedDevice"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Equipment</rdfs:label>
     </owl:Class>
