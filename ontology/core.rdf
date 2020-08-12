@@ -1192,6 +1192,15 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/HVACZone -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/HVACZone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Zone"/>
+        <rdfs:label xml:lang="en">HVAC zone</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Information -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Information">
@@ -1444,6 +1453,16 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/Type">
         <rdfs:label xml:lang="en">Type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Zone -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Zone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:comment xml:lang="en">A sub-zone within a building, e.g., an HVAC zone, a security zone, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone</rdfs:label>
     </owl:Class>
     
 
