@@ -76,6 +76,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/duration -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/core/duration">
+        <rdfs:comment xml:lang="en">A duration in ISO 8601 format.</rdfs:comment>
+        <rdfs:label xml:lang="en">duration</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -547,6 +557,19 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/subEquipments -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/subEquipments">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/superEquipment"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:comment xml:lang="en">Subordinate equipment entities that are part of this equipment.</rdfs:comment>
+        <rdfs:label xml:lang="en">sub-equipments</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/subLocations -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/subLocations">
@@ -554,6 +577,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/superLocation"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/superEquipment -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/superEquipment">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:comment xml:lang="en">A super-equipment entity that this equipment is a part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">super-equipment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -659,6 +694,7 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasComment">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character. E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">has comment</rdfs:label>
     </owl:DatatypeProperty>
@@ -954,11 +990,38 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
+    <!-- https://w3id.org/rec/core/modelNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/modelNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">model number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/physicalTagNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/physicalTagNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">physical tag number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/schemaName -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/schemaName">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/DataSchema"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/serialNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/serialNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">serial number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1165,6 +1228,30 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasComment"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/modelNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/physicalTagNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/serialNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
