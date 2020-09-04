@@ -66,6 +66,15 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/Ampere -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/Ampere">
+        <rdfs:label xml:lang="en">Ampere</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- https://w3id.org/rec/equipment/EquipmentFeedSubstance -->
 
     <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/EquipmentFeedSubstance">
@@ -470,12 +479,31 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/CBRating -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/CBRating">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/Ampere"/>
+        <rdfs:label xml:lang="en">circuit breaker rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/IPAddress -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/IPAddress">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">IP address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/MCBRating -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/MCBRating">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/Ampere"/>
+        <rdfs:label xml:lang="en">main circuit breaker rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -619,6 +647,15 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/mainsRating -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/mainsRating">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/Ampere"/>
+        <rdfs:label xml:lang="en">mains rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/maintenanceInterval -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maintenanceInterval">
@@ -634,6 +671,16 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxFlowRate">
         <rdfs:range rdf:resource="https://w3id.org/rec/equipment/LitersPerMinute"/>
         <rdfs:label xml:lang="en">maximum flow rate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/maxNumberOfPoles -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxNumberOfPoles">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/ElectricalPanel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">max number of poles</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -664,6 +711,99 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/phase1 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/phase1">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>A</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>B</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>C</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">phase 1</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/phase2 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/phase2">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>A</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>B</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>C</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">phase 2</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/phase3 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/phase3">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>A</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>B</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>C</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">phase 3</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/phases -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/phases">
@@ -687,6 +827,15 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/phasesOutput">
         <rdfs:range rdf:resource="https://w3id.org/rec/equipment/PhaseCount"/>
         <rdfs:label xml:lang="en">output phases</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/poles -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/poles">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">poles</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -775,6 +924,15 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/shortCircuitRating -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/shortCircuitRating">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">short circuit rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/sizeKVA -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/sizeKVA">
@@ -800,6 +958,38 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/Generator"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/equipment/KVA"/>
         <rdfs:label xml:lang="en">standby power rating (KVA)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/switchingMechanism -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/switchingMechanism">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/AutomaticTransferSwitch"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>CircuitBreakerMoldedCase</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>CircuitBreakerPowerCase</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Contactor</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">switching mechanism</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -831,6 +1021,32 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/transitionType -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/transitionType">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/AutomaticTransferSwitch"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Closed</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Open</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">transition type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/turnoverDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/turnoverDate">
@@ -846,6 +1062,15 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/type">
         <rdfs:comment xml:lang="en">Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values.</rdfs:comment>
         <rdfs:label xml:lang="en">type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/voltage -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltage">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/Volt"/>
+        <rdfs:label xml:lang="en">voltage</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -894,6 +1119,26 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/wireSize -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/wireSize">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">wire size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/wireType -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/wireType">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">wire type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -902,6 +1147,65 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://w3id.org/rec/equipment/AutomaticTransferSwitch -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/AutomaticTransferSwitch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/TransferSwitch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/switchingMechanism"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>CircuitBreakerMoldedCase</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>CircuitBreakerPowerCase</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Contactor</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/transitionType"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Closed</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Open</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Automatic transfer switch</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1027,10 +1331,330 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/ElectricalCircuit -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ElectricalCircuit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/CBRating"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Ampere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/poles"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>One</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Three</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Two</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Volt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/wireSize"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/wireType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electrical circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/ElectricalCircuit1Pole -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ElectricalCircuit1Pole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phase1"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>A</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>B</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>C</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electrical circuit 1-pole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/ElectricalCircuit2Pole -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ElectricalCircuit2Pole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phase1"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>A</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>B</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>C</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phase2"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>A</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>B</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>C</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electrical circuit 2-pole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/ElectricalCircuit3Pole -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ElectricalCircuit3Pole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phase1"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>A</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>B</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>C</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phase2"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>A</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>B</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>C</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phase3"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>A</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>B</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>C</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electrical circuit 3-pole</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/equipment/ElectricalEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/equipment/ElectricalEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:label xml:lang="en">Electrical equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/ElectricalPanel -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ElectricalPanel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxNumberOfPoles"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phasesOutput"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/PhaseCount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/shortCircuitRating"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageInput"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Volt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electrical panelboard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/ElectricalPanelMCB -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ElectricalPanelMCB">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalPanel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/MCBRating"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Ampere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electrical panelboard MCB</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/ElectricalPanelMLO -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ElectricalPanelMLO">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalPanel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/mainsRating"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Ampere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electrical panelboard MLO</rdfs:label>
     </owl:Class>
     
 
@@ -1546,6 +2170,43 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Toilet with Tank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/TransferSwitch -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/TransferSwitch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/mainsRating"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Ampere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/poles"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Four</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Three</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Transfer switch</rdfs:label>
     </owl:Class>
     
 
