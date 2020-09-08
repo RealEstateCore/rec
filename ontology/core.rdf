@@ -500,6 +500,14 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/sensorInterface -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/sensorInterface">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/servedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servedBy">
@@ -1232,6 +1240,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/superEquipment"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Equipment"/>
             </owl:Restriction>
@@ -1326,6 +1340,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
                 <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1497,6 +1517,12 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
@@ -1513,6 +1539,21 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/SensorInterface -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/SensorInterface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Software"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/dataSchema"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

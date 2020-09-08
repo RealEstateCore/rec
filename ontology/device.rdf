@@ -291,8 +291,9 @@
     <!-- https://w3id.org/rec/device/sensorInterface -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/sensorInterface">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/SensorInterface"/>
+        <rdfs:comment xml:lang="en">Deprecated in favour of core:sensorInterface</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -914,6 +915,8 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Deprecated in favour of core:SensorInterface</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
