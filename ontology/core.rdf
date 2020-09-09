@@ -15,6 +15,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/core/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.3/"/>
@@ -76,13 +77,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/duration -->
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
 
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/core/duration">
-        <rdfs:comment xml:lang="en">A duration in ISO 8601 format.</rdfs:comment>
-        <rdfs:label xml:lang="en">duration</rdfs:label>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </rdfs:Datatype>
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
     
 
 
