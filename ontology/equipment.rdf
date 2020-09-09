@@ -418,6 +418,26 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/horsepower -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/horsepower">
+        <rdfs:label xml:lang="en">Horsepower</rdfs:label>
+        <metadata:semanticType>Power</metadata:semanticType>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/kilogram -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/kilogram">
+        <rdfs:label xml:lang="en">Kilogram</rdfs:label>
+        <metadata:semanticType>Mass</metadata:semanticType>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- https://w3id.org/rec/equipment/metre -->
 
     <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/metre">
@@ -725,6 +745,15 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/maxLandings -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxLandings">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">Maximum Landings</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/maxLength -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxLength">
@@ -744,11 +773,29 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/maxTravelDistance -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxTravelDistance">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metre"/>
+        <rdfs:label xml:lang="en">Maximum Travel Distance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/maxTravelSpeed -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxTravelSpeed">
         <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
         <rdfs:label xml:lang="en">Maximum Travel Speed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/maxVerticalRise -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxVerticalRise">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metre"/>
+        <rdfs:label xml:lang="en">Maximum Vertical Rise</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -770,11 +817,29 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/motorPower -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/motorPower">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/horsepower"/>
+        <rdfs:label xml:lang="en">Motor Power</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/numberOfHandles -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/numberOfHandles">
         <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/Faucet"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/personCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/personCapacity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">Person Capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1196,6 +1261,15 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/weightCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/weightCapacity">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/kilogram"/>
+        <rdfs:label xml:lang="en">Weight Capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/wireSize -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/wireSize">
@@ -1360,7 +1434,13 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/equipment/ConveyanceEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Equipment"/>
-        <rdfs:label xml:lang="en">Conveyance equipment</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/type"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Conveyance Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -1749,6 +1829,37 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/equipment/Elevator">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ConveyanceEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxLandings"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelDistance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelSpeed"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/personCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/weightCapacity"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/kilogram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Elevator</rdfs:label>
     </owl:Class>
     
 
@@ -1757,6 +1868,19 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/equipment/ElevatorMachine">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ConveyanceEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/motorPower"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/horsepower"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/weightCapacity"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/kilogram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Elevator Machine</rdfs:label>
     </owl:Class>
     
 
@@ -1765,6 +1889,31 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/equipment/Escalator">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ConveyanceEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/inclination"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/degreeOfArc"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelSpeed"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxVerticalRise"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/stepWidth"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/millimetre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Escalator</rdfs:label>
     </owl:Class>
     
 
@@ -2064,13 +2213,7 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/millimetre"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/type"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Moving walkway</rdfs:label>
+        <rdfs:label xml:lang="en">Moving Walkway</rdfs:label>
     </owl:Class>
     
 
