@@ -12,6 +12,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:equipment="https://w3id.org/rec/equipment/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/equipment/">
@@ -407,6 +408,46 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/degreeOfArc -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/degreeOfArc">
+        <rdfs:label xml:lang="en">Degree of Arc</rdfs:label>
+        <metadata:semanticType>Angle</metadata:semanticType>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/metre -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/metre">
+        <rdfs:label xml:lang="en">Metre</rdfs:label>
+        <metadata:semanticType>Distance</metadata:semanticType>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/metrePerSecond -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/metrePerSecond">
+        <rdfs:label xml:lang="en">Metre/second</rdfs:label>
+        <metadata:semanticType>Velocity</metadata:semanticType>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/millimetre -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/millimetre">
+        <rdfs:label xml:lang="en">Millimetre</rdfs:label>
+        <metadata:semanticType>Distance</metadata:semanticType>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -620,6 +661,15 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/inclination -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/inclination">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/degreeOfArc"/>
+        <rdfs:label xml:lang="en">inclination</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/initialCost -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/initialCost">
@@ -675,12 +725,30 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/maxLength -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxLength">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metre"/>
+        <rdfs:label xml:lang="en">maximum length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/maxNumberOfPoles -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxNumberOfPoles">
         <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/ElectricalPanel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">max number of poles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/maxTravelSpeed -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxTravelSpeed">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
+        <rdfs:label xml:lang="en">Maximum Travel Speed</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -958,6 +1026,15 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/Generator"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/equipment/KVA"/>
         <rdfs:label xml:lang="en">standby power rating (KVA)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/stepWidth -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/stepWidth">
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/millimetre"/>
+        <rdfs:label xml:lang="en">step width</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1275,6 +1352,15 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/ConveyanceEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ConveyanceEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:label xml:lang="en">Conveyance equipment</rdfs:label>
     </owl:Class>
     
 
@@ -1659,6 +1745,30 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/Elevator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/Elevator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ConveyanceEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/ElevatorMachine -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/ElevatorMachine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ConveyanceEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/Escalator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/Escalator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ConveyanceEquipment"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/equipment/ExpansionTank -->
 
     <owl:Class rdf:about="https://w3id.org/rec/equipment/ExpansionTank">
@@ -1922,6 +2032,45 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/equipment/IrrigationPump">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/PlumbingPump"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/MovingWalkway -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/equipment/MovingWalkway">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ConveyanceEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/inclination"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/degreeOfArc"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxLength"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelSpeed"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/stepWidth"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/millimetre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/type"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Moving walkway</rdfs:label>
     </owl:Class>
     
 
