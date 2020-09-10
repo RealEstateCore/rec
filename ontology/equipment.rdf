@@ -298,26 +298,6 @@
     
 
 
-    <!-- https://w3id.org/rec/equipment/ampere -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/ampere">
-        <rdfs:label xml:lang="en">Ampere</rdfs:label>
-        <metadata:semanticType>Current</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/degreeOfArc -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/degreeOfArc">
-        <rdfs:label xml:lang="en">Degree of Arc</rdfs:label>
-        <metadata:semanticType>Angle</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
     <!-- https://w3id.org/rec/equipment/horsepower -->
 
     <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/horsepower">
@@ -636,7 +616,7 @@
     <!-- https://w3id.org/rec/equipment/inclination -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/inclination">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/degreeOfArc"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/DEG"/>
         <rdfs:label xml:lang="en">inclination</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1927,7 +1907,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/inclination"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/degreeOfArc"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2412,7 +2392,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/inclination"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/degreeOfArc"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

@@ -188,6 +188,14 @@
     <!-- http://qudt.org/vocab/unit/A -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/A">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/DEG -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/DEG">
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </rdfs:Datatype>
     
@@ -17703,11 +17711,6 @@ The number 2997924580 is 10 times the value of the speed of light expressed in m
         <qudt:iec61360Code>0112/2///62720#UAA024</qudt:iec61360Code>
         <qudt:symbol>\,^{\circ}</qudt:symbol>
         <qudt:uneceCommonCode>DD</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">A degree (in full, a degree of arc, arc degree, or arcdegree), usually denoted by \(^\circ\) (the degree symbol), is a measurement of plane angle, representing 1/360 of a full rotation; one degree is equivalent to  \(2\pi /360 rad\), \(0.017453 rad\). It is not an SI unit, as the SI unit for angles is radian, but is an accepted SI unit.</terms:description>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oxfordreference.com/view/10.1093/acref/9780198605225.001.0001/acref-9780198605225-e-331</qudt:informativeReference>
-        <qudt:ucumCode>deg</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Degree</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -36744,6 +36747,13 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <rdfs:label>Ampere</rdfs:label>
         <skos:altLabel>amp</skos:altLabel>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/DEG">
+        <qudt:ucumCode>deg</qudt:ucumCode>
+        <rdfs:label>Degree</rdfs:label>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oxfordreference.com/view/10.1093/acref/9780198605225.001.0001/acref-9780198605225-e-331</qudt:informativeReference>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">A degree (in full, a degree of arc, arc degree, or arcdegree), usually denoted by \(^\circ\) (the degree symbol), is a measurement of plane angle, representing 1/360 of a full rotation; one degree is equivalent to  \(2\pi /360 rad\), \(0.017453 rad\). It is not an SI unit, as the SI unit for angles is radian, but is an accepted SI unit.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://voag.linkedmodel.org/schema/voag#QUDT-QUANTITY-KINDS-VocabCatalogEntry_v1.2">
