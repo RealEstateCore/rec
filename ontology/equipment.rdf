@@ -8,8 +8,11 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://www.linkedmodel.org/owl/schema/core#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:metadata="https://w3id.org/rec/metadata/"
@@ -490,7 +493,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/CBRating">
         <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/ampere"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
         <rdfs:label xml:lang="en">circuit breaker rating</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -509,7 +512,7 @@
     <!-- https://w3id.org/rec/equipment/MCBRating -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/MCBRating">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/ampere"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
         <rdfs:label xml:lang="en">main circuit breaker rating</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -687,7 +690,7 @@
     <!-- https://w3id.org/rec/equipment/mainsRating -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/mainsRating">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/ampere"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
         <rdfs:label xml:lang="en">mains rating</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1520,7 +1523,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/CBRating"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/ampere"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1834,7 +1837,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/MCBRating"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/ampere"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Electrical panelboard MCB</rdfs:label>
@@ -1849,7 +1852,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/mainsRating"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/ampere"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Electrical panelboard MLO</rdfs:label>
@@ -2699,7 +2702,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/mainsRating"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/ampere"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

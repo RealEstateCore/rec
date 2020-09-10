@@ -17,6 +17,7 @@
      xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:quantitykind="http://qudt.org/vocab/quantitykind/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/units/">
@@ -181,6 +182,14 @@
     <!-- http://qudt.org/schema/qudt/LatexString -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/schema/qudt/LatexString"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/A -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/A">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
     
 
 
@@ -649,6 +658,17 @@ The evolution of a physical system between two states is determined by requiring
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(S = \int Ldt\), where \(L\) is the Lagrange function and \(t\) is time.</qudt:latexDefinition>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Action</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/ActionTime -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ActionTime">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:comment>Action Time (sec)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Action Time</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4127,6 +4147,19 @@ Drag forces always decrease fluid velocity relative to the solid object in the f
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/EnergyExpenditure -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/EnergyExpenditure">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">Energy expenditure is dependent on a person&apos;s sex, metabolic rate, body-mass composition, the thermic effects of food, and activity level.  The approximate energy expenditure of a man lying in bed is \(1.0\,kilo\,calorie\,per\,hour\,per\,kilogram\). For slow walking (just over two miles per hour), \(3.0\,kilo\,calorie\,per\,hour\,per\,kilogram\). For fast steady running (about 10 miles per hour), \(16.3\,kilo\,calorie\,per\,hour\,per\,kilogram\).
+Females expend about 10 per cent less energy than males of the same size doing a comparable activity.  For people weighing the same, individuals with a high percentage of body fat usually expend less energy than lean people, because fat is not as metabolically active as muscle.</terms:description>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oxfordreference.com/view/10.1093/acref/9780198631477.001\).0001/acref-9780198631477-e-594</qudt:informativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Energy Expenditure</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/EnergyFluence -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/EnergyFluence">
@@ -4474,6 +4507,16 @@ Drag forces always decrease fluid velocity relative to the solid object in the f
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/ExhaustGasMeanMolecularWeight -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ExhaustGasMeanMolecularWeight">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Exhaust Gas Mean Molecular Weight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/ExhaustGasesSpecificHeat -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ExhaustGasesSpecificHeat">
@@ -4722,6 +4765,16 @@ Drag forces always decrease fluid velocity relative to the solid object in the f
         <qudt:symbol>R/H</qudt:symbol>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Fission Core Radius To Height Ratio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/FissionFuelUtilizationFactor -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/FissionFuelUtilizationFactor">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Fission Fuel Utilization Factor</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6403,6 +6456,16 @@ where \(N^+\) and \(N^-\) are the number of positive and negative ions, respecti
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Length</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/LengthByForce -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/LengthByForce">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Length Force</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8102,6 +8165,17 @@ entities included in the domain.</qudt:latexDefinition>
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/MaximumExpectedOperatingPressure -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MaximumExpectedOperatingPressure">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Maximum Expected Operating Pressure</rdfs:label>
+        <skos:altLabel>MEOP</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/MaximumOperatingPressure -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MaximumOperatingPressure">
@@ -8211,6 +8285,16 @@ entities included in the domain.</qudt:latexDefinition>
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(E = T + V\), where \(T\) is kinetic energy and \(V\) is potential energy.</qudt:latexDefinition>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Mechanical Energy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/MechanicalImpedance -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MechanicalImpedance">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Mechanical Impedance</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -9562,6 +9646,18 @@ the quotient of rms voltage and rms electric current; it is often denoted by \(Z
         <qudt:normativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/catalogue_detail?csnumber=31897</qudt:normativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Phonon Mean Free Path</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/PhotoThresholdOfAwarenessFunction -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/PhotoThresholdOfAwarenessFunction">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Photo Threshold of Awareness Function&quot; is the ability of the human eye to detect a light that results in a \(1^o\) radial angle at the eye with a given duration (temporal summation).</terms:description>
+        <qudt:isoNormativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/catalogue_detail?csnumber=43012</qudt:isoNormativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Photo Threshold of Awareness Function</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -13786,6 +13882,17 @@ Or:
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/WebTime -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/WebTime">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:comment>Web Time</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Web Time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/WebTimeAveragePressure -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/WebTimeAveragePressure">
@@ -13888,15 +13995,6 @@ Change in potential energy is equal to work. The potential energy equations can 
         <qudt:plainTextDescription>The &apos;ampere&apos; is the SI unit of electric current and is one of the seven SI base units.</qudt:plainTextDescription>
         <qudt:symbol>A</qudt:symbol>
         <qudt:uneceCommonCode>AMP</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The  \(\textit{ampere}\), often shortened to \(\textit{amp}\), is the SI unit of electric current and is one of the seven SI base units.
-\(\text{A}\ \equiv\ \text{amp (or ampere)}\ \equiv\ \frac{\text{C}}{\text{s}}\ \equiv\ \frac{\text{coulomb}}{\text{second}}\ \equiv\ \frac{\text{J}}{\text{Wb}}\ \equiv\ \frac{\text{joule}}{\text{weber}}\)
-Note that SI supports only the use of symbols and deprecates the use of any abbreviations for units.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Ampere</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
-        <qudt:ucumCode>A</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Ampere</rdfs:label>
-        <skos:altLabel>amp</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -36637,58 +36735,16 @@ The abvolt is another option for a unit of voltage in the cgs system.</terms:des
     <rdf:Description rdf:about="http://qudt.org/schema/qudt/hasPrefixUnit">
         <rdfs:comment>Specifies which prefix unit is used.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/ActionTime">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:comment>Action Time (sec)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Action Time</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/EnergyExpenditure">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:label>Energy Expenditure</rdfs:label>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oxfordreference.com/view/10.1093/acref/9780198631477.001\).0001/acref-9780198631477-e-594</qudt:informativeReference>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">Energy expenditure is dependent on a person&apos;s sex, metabolic rate, body-mass composition, the thermic effects of food, and activity level.  The approximate energy expenditure of a man lying in bed is \(1.0\,kilo\,calorie\,per\,hour\,per\,kilogram\). For slow walking (just over two miles per hour), \(3.0\,kilo\,calorie\,per\,hour\,per\,kilogram\). For fast steady running (about 10 miles per hour), \(16.3\,kilo\,calorie\,per\,hour\,per\,kilogram\).
-Females expend about 10 per cent less energy than males of the same size doing a comparable activity.  For people weighing the same, individuals with a high percentage of body fat usually expend less energy than lean people, because fat is not as metabolically active as muscle.</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/ExhaustGasMeanMolecularWeight">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Exhaust Gas Mean Molecular Weight</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/FissionFuelUtilizationFactor">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Fission Fuel Utilization Factor</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/LengthByForce">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Length Force</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/MaximumExpectedOperatingPressure">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <skos:altLabel>MEOP</skos:altLabel>
-        <rdfs:label>Maximum Expected Operating Pressure</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/MechanicalImpedance">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:label>Mechanical Impedance</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/PhotoThresholdOfAwarenessFunction">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:isoNormativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/catalogue_detail?csnumber=43012</qudt:isoNormativeReference>
-        <rdfs:label>Photo Threshold of Awareness Function</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Photo Threshold of Awareness Function&quot; is the ability of the human eye to detect a light that results in a \(1^o\) radial angle at the eye with a given duration (temporal summation).</terms:description>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/WebTime">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:comment>Web Time</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Web Time</rdfs:label>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/A">
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Ampere</qudt:dbpediaMatch>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The  \(\textit{ampere}\), often shortened to \(\textit{amp}\), is the SI unit of electric current and is one of the seven SI base units.
+\(\text{A}\ \equiv\ \text{amp (or ampere)}\ \equiv\ \frac{\text{C}}{\text{s}}\ \equiv\ \frac{\text{coulomb}}{\text{second}}\ \equiv\ \frac{\text{J}}{\text{Wb}}\ \equiv\ \frac{\text{joule}}{\text{weber}}\)
+Note that SI supports only the use of symbols and deprecates the use of any abbreviations for units.</terms:description>
+        <qudt:ucumCode>A</qudt:ucumCode>
+        <rdfs:label>Ampere</rdfs:label>
+        <skos:altLabel>amp</skos:altLabel>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://voag.linkedmodel.org/schema/voag#QUDT-QUANTITY-KINDS-VocabCatalogEntry_v1.2">
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
