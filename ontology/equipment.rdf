@@ -298,105 +298,6 @@
     
 
 
-    <!-- https://w3id.org/rec/equipment/horsepower -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/horsepower">
-        <rdfs:label xml:lang="en">Horsepower</rdfs:label>
-        <metadata:semanticType>Power</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/kilogram -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/kilogram">
-        <rdfs:label xml:lang="en">Kilogram</rdfs:label>
-        <metadata:semanticType>Mass</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/litre -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/litre">
-        <rdfs:comment xml:lang="en">Litre</rdfs:comment>
-        <metadata:semanticType>Volume</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/metre -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/metre">
-        <rdfs:label xml:lang="en">Metre</rdfs:label>
-        <metadata:semanticType>Distance</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/metrePerSecond -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/metrePerSecond">
-        <rdfs:label xml:lang="en">Metres Per Second</rdfs:label>
-        <metadata:semanticType>Velocity</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/millimetre -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/millimetre">
-        <rdfs:label xml:lang="en">Millimetre</rdfs:label>
-        <metadata:semanticType>Distance</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/minute -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/minute">
-        <rdfs:label xml:lang="en">Minute</rdfs:label>
-        <metadata:semanticType>TimeSpan</metadata:semanticType>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/poundPerSquareInch -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/poundPerSquareInch">
-        <rdfs:label xml:lang="en">Pound per Square Inch (PSI)</rdfs:label>
-        <metadata:semanticType>Pressure</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/volt -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/volt">
-        <rdfs:label xml:lang="en">Volt</rdfs:label>
-        <metadata:semanticType>Voltage</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/watt -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/watt">
-        <rdfs:comment xml:lang="en">Watt</rdfs:comment>
-        <metadata:semanticType>Power</metadata:semanticType>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -408,11 +309,52 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/CBRating -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/CBRating">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/MCBRating -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/MCBRating">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/bulkStorageCapacity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/bulkStorageCapacity">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/commissionedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/commissionedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/dayTankCapacity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/dayTankCapacity">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/inclination -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/inclination">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/DEG"/>
     </owl:ObjectProperty>
     
 
@@ -434,11 +376,59 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/mainsRating -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/mainsRating">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/manufacturedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/manufacturedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/maxLength -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/maxLength">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/M"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/maxTravelDistance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/maxTravelDistance">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/M"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/maxTravelSpeed -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/maxTravelSpeed">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/maxVerticalRise -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/maxVerticalRise">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/M"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/motorPower -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/motorPower">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/HP"/>
     </owl:ObjectProperty>
     
 
@@ -449,11 +439,125 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/powerInput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/powerInput">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/powerOutput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/powerOutput">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/pressureCapacity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/pressureCapacity">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/primePower -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/primePower">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/Generator"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/runtime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/runtime">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MIN"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/servicedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/servicedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/standbyPower -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/standbyPower">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/Generator"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/stepWidth -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/stepWidth">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/voltage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/voltage">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/voltageInput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/voltageInput">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/voltageOutput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/voltageOutput">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/voltagePrimary -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/voltagePrimary">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/voltageSecondary -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/voltageSecondary">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/waterPerFlush -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/waterPerFlush">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/weightCapacity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/equipment/weightCapacity">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
     </owl:ObjectProperty>
     
 
@@ -471,11 +575,7 @@
 
     <!-- https://w3id.org/rec/equipment/CBRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/CBRating">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/ElectricalCircuit"/>
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
-        <rdfs:label xml:lang="en">circuit breaker rating</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/CBRating"/>
     
 
 
@@ -491,10 +591,7 @@
 
     <!-- https://w3id.org/rec/equipment/MCBRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/MCBRating">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
-        <rdfs:label xml:lang="en">main circuit breaker rating</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/MCBRating"/>
     
 
 
@@ -509,10 +606,7 @@
 
     <!-- https://w3id.org/rec/equipment/bulkStorageCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/bulkStorageCapacity">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/litre"/>
-        <rdfs:label xml:lang="en">bulk storage capacity</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/bulkStorageCapacity"/>
     
 
 
@@ -528,10 +622,7 @@
 
     <!-- https://w3id.org/rec/equipment/dayTankCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/dayTankCapacity">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/litre"/>
-        <rdfs:label xml:lang="en">day tank capacity</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/dayTankCapacity"/>
     
 
 
@@ -615,10 +706,7 @@
 
     <!-- https://w3id.org/rec/equipment/inclination -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/inclination">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/DEG"/>
-        <rdfs:label xml:lang="en">inclination</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/inclination"/>
     
 
 
@@ -669,10 +757,7 @@
 
     <!-- https://w3id.org/rec/equipment/mainsRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/mainsRating">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
-        <rdfs:label xml:lang="en">mains rating</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/mainsRating"/>
     
 
 
@@ -707,10 +792,7 @@
 
     <!-- https://w3id.org/rec/equipment/maxLength -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxLength">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metre"/>
-        <rdfs:label xml:lang="en">maximum length</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxLength"/>
     
 
 
@@ -726,28 +808,19 @@
 
     <!-- https://w3id.org/rec/equipment/maxTravelDistance -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxTravelDistance">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metre"/>
-        <rdfs:label xml:lang="en">maximum travel distance</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxTravelDistance"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/maxTravelSpeed -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxTravelSpeed">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
-        <rdfs:label xml:lang="en">maximum travel speed</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxTravelSpeed"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/maxVerticalRise -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxVerticalRise">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/metre"/>
-        <rdfs:label xml:lang="en">maximum vertical rise</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxVerticalRise"/>
     
 
 
@@ -770,10 +843,7 @@
 
     <!-- https://w3id.org/rec/equipment/motorPower -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/motorPower">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/horsepower"/>
-        <rdfs:label xml:lang="en">motor power</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/motorPower"/>
     
 
 
@@ -974,19 +1044,13 @@
 
     <!-- https://w3id.org/rec/equipment/powerInput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/powerInput">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/watt"/>
-        <rdfs:label xml:lang="en">power input</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/powerInput"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/powerOutput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/powerOutput">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/watt"/>
-        <rdfs:label xml:lang="en">power output</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/powerOutput"/>
     
 
 
@@ -1001,20 +1065,13 @@
 
     <!-- https://w3id.org/rec/equipment/pressureCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/pressureCapacity">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/poundPerSquareInch"/>
-        <rdfs:label xml:lang="en">pressure capacity</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/pressureCapacity"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/primePower -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/primePower">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/Generator"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/watt"/>
-        <rdfs:label xml:lang="en">prime power rating (Watt)</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/primePower"/>
     
 
 
@@ -1049,10 +1106,7 @@
 
     <!-- https://w3id.org/rec/equipment/runtime -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/runtime">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/minute"/>
-        <rdfs:label xml:lang="en">runtime</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/runtime"/>
     
 
 
@@ -1076,11 +1130,7 @@
 
     <!-- https://w3id.org/rec/equipment/standbyPower -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/standbyPower">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/Generator"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/watt"/>
-        <rdfs:label xml:lang="en">standby power rating (Watt)</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/standbyPower"/>
     
 
 
@@ -1096,10 +1146,7 @@
 
     <!-- https://w3id.org/rec/equipment/stepWidth -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/stepWidth">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/millimetre"/>
-        <rdfs:label xml:lang="en">step width</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/stepWidth"/>
     
 
 
@@ -1209,63 +1256,43 @@
 
     <!-- https://w3id.org/rec/equipment/voltage -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltage">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/volt"/>
-        <rdfs:label xml:lang="en">voltage</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltage"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/voltageInput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltageInput">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/volt"/>
-        <rdfs:label xml:lang="en">input voltage</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltageInput"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/voltageOutput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltageOutput">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/volt"/>
-        <rdfs:label xml:lang="en">output voltage</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltageOutput"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/voltagePrimary -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltagePrimary">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/volt"/>
-        <rdfs:label xml:lang="en">primary voltage</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltagePrimary"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/voltageSecondary -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltageSecondary">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/volt"/>
-        <rdfs:label xml:lang="en">secondary voltage</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/voltageSecondary"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/waterPerFlush -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/waterPerFlush">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/litre"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/waterPerFlush"/>
     
 
 
     <!-- https://w3id.org/rec/equipment/weightCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/weightCapacity">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/kilogram"/>
-        <rdfs:label xml:lang="en">weight capacity</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/weightCapacity"/>
     
 
 
@@ -1297,6 +1324,78 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://qudt.org/vocab/unit/A -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/A"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/DEG -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/DEG"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/HP -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/HP"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/KiloGM -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/KiloGM"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/L -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/L"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/M -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/M"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/M-PER-SEC -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/M-PER-SEC"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/MIN -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/MIN"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/MilliM -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/MilliM"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/PSI -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/PSI"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/V -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/V"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/W -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/W"/>
     
 
 
@@ -1365,6 +1464,18 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/PlumbingEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerOutput"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/medium"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
@@ -1383,18 +1494,6 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerOutput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1475,7 +1574,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1489,7 +1588,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1504,6 +1603,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/CBRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltage"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1532,12 +1637,6 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltage"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/volt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1767,6 +1866,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageInput"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxNumberOfPoles"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
@@ -1797,12 +1902,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/shortCircuitRating"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/volt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Electrical panelboard</rdfs:label>
@@ -1846,32 +1945,32 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ConveyanceEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelDistance"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelSpeed"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/weightCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxLandings"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelDistance"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metre"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelSpeed"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/personCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/weightCapacity"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/kilogram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Elevator</rdfs:label>
@@ -1886,13 +1985,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/motorPower"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/horsepower"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/weightCapacity"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/kilogram"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Elevator Machine</rdfs:label>
@@ -1913,19 +2012,19 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelSpeed"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxVerticalRise"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metre"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/stepWidth"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/millimetre"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Escalator</rdfs:label>
@@ -2050,6 +2149,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/SprinklerEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/pressureCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
@@ -2058,12 +2163,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/headCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/pressureCapacity"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/poundPerSquareInch"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2167,6 +2266,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/waterPerFlush"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/technology"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
@@ -2209,12 +2314,6 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/waterPerFlush"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/litre"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Flushometer-Valve</rdfs:label>
     </owl:Class>
     
@@ -2227,7 +2326,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2241,7 +2340,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2255,13 +2354,31 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/bulkStorageCapacity"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/litre"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/dayTankCapacity"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/litre"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/primePower"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/standbyPower"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageOutput"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2306,32 +2423,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/primePower"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/primePowerKVA"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/standbyPower"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/standbyPowerKVA"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageOutput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/volt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2352,6 +2451,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/SprinklerEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/pressureCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
@@ -2360,12 +2465,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/headCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/pressureCapacity"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/poundPerSquareInch"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2398,19 +2497,19 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxLength"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metre"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxTravelSpeed"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/metrePerSecond"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/stepWidth"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/millimetre"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Moving Walkway</rdfs:label>
@@ -2440,6 +2539,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/PlumbingEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/pressureCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
@@ -2448,12 +2553,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/headCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/pressureCapacity"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/poundPerSquareInch"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2605,6 +2704,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/PlumbingFixture"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/waterPerFlush"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/installationType"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
@@ -2623,12 +2728,6 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/waterPerFlush"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/litre"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2718,6 +2817,18 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltagePrimary"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageSecondary"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phases"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
@@ -2750,18 +2861,6 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltagePrimary"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/volt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageSecondary"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/volt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Transformer</rdfs:label>
     </owl:Class>
     
@@ -2771,6 +2870,30 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/equipment/UPS">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/ElectricalEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerOutput"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/runtime"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MIN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageInput"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageOutput"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/phasesInput"/>
@@ -2817,32 +2940,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerOutput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/watt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerOutputKVA"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/runtime"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/minute"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/volt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/voltageOutput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/volt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">UPS</rdfs:label>
@@ -2865,7 +2964,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/waterPerFlush"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/litre"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Urinal with Flushometer</rdfs:label>
@@ -2924,6 +3023,89 @@
     <owl:Class rdf:about="https://w3id.org/rec/equipment/WaterHeater">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/equipment/PlumbingEquipment"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/CBRating">
+        <rdfs:label xml:lang="en">circuit breaker rating</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/MCBRating">
+        <rdfs:label xml:lang="en">main circuit breaker rating</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/bulkStorageCapacity">
+        <rdfs:label xml:lang="en">bulk storage capacity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/dayTankCapacity">
+        <rdfs:label xml:lang="en">day tank capacity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/inclination">
+        <rdfs:label xml:lang="en">inclination</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/mainsRating">
+        <rdfs:label xml:lang="en">mains rating</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/maxLength">
+        <rdfs:label xml:lang="en">maximum length</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/maxTravelDistance">
+        <rdfs:label xml:lang="en">maximum travel distance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/maxTravelSpeed">
+        <rdfs:label xml:lang="en">maximum travel speed</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/maxVerticalRise">
+        <rdfs:label xml:lang="en">maximum vertical rise</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/motorPower">
+        <rdfs:label xml:lang="en">motor power</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/powerInput">
+        <rdfs:label xml:lang="en">power input</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/powerOutput">
+        <rdfs:label xml:lang="en">power output</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/pressureCapacity">
+        <rdfs:label xml:lang="en">pressure capacity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/primePower">
+        <rdfs:label xml:lang="en">prime power rating (Watt)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/runtime">
+        <rdfs:label xml:lang="en">runtime</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/standbyPower">
+        <rdfs:label xml:lang="en">standby power rating (Watt)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/stepWidth">
+        <rdfs:label xml:lang="en">step width</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/voltage">
+        <rdfs:label xml:lang="en">voltage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/voltageInput">
+        <rdfs:label xml:lang="en">input voltage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/voltageOutput">
+        <rdfs:label xml:lang="en">output voltage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/voltagePrimary">
+        <rdfs:label xml:lang="en">primary voltage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/voltageSecondary">
+        <rdfs:label xml:lang="en">secondary voltage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rec/equipment/weightCapacity">
+        <rdfs:label xml:lang="en">weight capacity</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
