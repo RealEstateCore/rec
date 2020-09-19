@@ -449,8 +449,20 @@
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Airfoil, Vee, Round</rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>Airfoil</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Round</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Vee</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
                     </rdf:Description>
                 </owl:oneOf>
             </rdfs:Datatype>
@@ -2486,8 +2498,20 @@
                         <owl:oneOf>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Airfoil, Vee, Round</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:first>Airfoil</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Round</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Vee</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
                             </rdf:Description>
                         </owl:oneOf>
                     </rdfs:Datatype>
@@ -3764,15 +3788,15 @@
                         <owl:oneOf>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>pendant</rdf:first>
+                                <rdf:first>Pendant</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>recessed</rdf:first>
+                                        <rdf:first>Recessed</rdf:first>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>wall-mount</rdf:first>
+                                                <rdf:first>WallMount</rdf:first>
                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                             </rdf:Description>
                                         </rdf:rest>
