@@ -17,6 +17,7 @@
      xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:quantitykind="http://qudt.org/vocab/quantitykind/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/units/">
@@ -181,6 +182,102 @@
     <!-- http://qudt.org/schema/qudt/LatexString -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/schema/qudt/LatexString"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/A -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/A">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/DEG -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/DEG">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/HP -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/HP">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/KiloGM -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/KiloGM">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/L -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/L">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/M -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/M">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/M-PER-SEC -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/M-PER-SEC">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/MIN -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/MIN">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/MilliM -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/MilliM">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/PSI -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/PSI">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/V -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/V">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/W -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/W">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
     
 
 
@@ -649,6 +746,17 @@ The evolution of a physical system between two states is determined by requiring
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(S = \int Ldt\), where \(L\) is the Lagrange function and \(t\) is time.</qudt:latexDefinition>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Action</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/ActionTime -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ActionTime">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:comment>Action Time (sec)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Action Time</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4127,6 +4235,19 @@ Drag forces always decrease fluid velocity relative to the solid object in the f
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/EnergyExpenditure -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/EnergyExpenditure">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">Energy expenditure is dependent on a person&apos;s sex, metabolic rate, body-mass composition, the thermic effects of food, and activity level.  The approximate energy expenditure of a man lying in bed is \(1.0\,kilo\,calorie\,per\,hour\,per\,kilogram\). For slow walking (just over two miles per hour), \(3.0\,kilo\,calorie\,per\,hour\,per\,kilogram\). For fast steady running (about 10 miles per hour), \(16.3\,kilo\,calorie\,per\,hour\,per\,kilogram\).
+Females expend about 10 per cent less energy than males of the same size doing a comparable activity.  For people weighing the same, individuals with a high percentage of body fat usually expend less energy than lean people, because fat is not as metabolically active as muscle.</terms:description>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oxfordreference.com/view/10.1093/acref/9780198631477.001\).0001/acref-9780198631477-e-594</qudt:informativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Energy Expenditure</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/EnergyFluence -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/EnergyFluence">
@@ -4474,6 +4595,16 @@ Drag forces always decrease fluid velocity relative to the solid object in the f
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/ExhaustGasMeanMolecularWeight -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ExhaustGasMeanMolecularWeight">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Exhaust Gas Mean Molecular Weight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/ExhaustGasesSpecificHeat -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ExhaustGasesSpecificHeat">
@@ -4722,6 +4853,16 @@ Drag forces always decrease fluid velocity relative to the solid object in the f
         <qudt:symbol>R/H</qudt:symbol>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Fission Core Radius To Height Ratio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/FissionFuelUtilizationFactor -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/FissionFuelUtilizationFactor">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Fission Fuel Utilization Factor</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6403,6 +6544,16 @@ where \(N^+\) and \(N^-\) are the number of positive and negative ions, respecti
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Length</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Length</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/LengthByForce -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/LengthByForce">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Length Force</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8102,6 +8253,17 @@ entities included in the domain.</qudt:latexDefinition>
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/MaximumExpectedOperatingPressure -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MaximumExpectedOperatingPressure">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Maximum Expected Operating Pressure</rdfs:label>
+        <skos:altLabel>MEOP</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/MaximumOperatingPressure -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MaximumOperatingPressure">
@@ -8211,6 +8373,16 @@ entities included in the domain.</qudt:latexDefinition>
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(E = T + V\), where \(T\) is kinetic energy and \(V\) is potential energy.</qudt:latexDefinition>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Mechanical Energy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/MechanicalImpedance -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MechanicalImpedance">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Mechanical Impedance</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -9562,6 +9734,18 @@ the quotient of rms voltage and rms electric current; it is often denoted by \(Z
         <qudt:normativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/catalogue_detail?csnumber=31897</qudt:normativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Phonon Mean Free Path</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/PhotoThresholdOfAwarenessFunction -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/PhotoThresholdOfAwarenessFunction">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Photo Threshold of Awareness Function&quot; is the ability of the human eye to detect a light that results in a \(1^o\) radial angle at the eye with a given duration (temporal summation).</terms:description>
+        <qudt:isoNormativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/catalogue_detail?csnumber=43012</qudt:isoNormativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Photo Threshold of Awareness Function</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -13786,6 +13970,17 @@ Or:
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/WebTime -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/WebTime">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <rdfs:comment>Web Time</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <rdfs:label>Web Time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/WebTimeAveragePressure -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/WebTimeAveragePressure">
@@ -13888,15 +14083,6 @@ Change in potential energy is equal to work. The potential energy equations can 
         <qudt:plainTextDescription>The &apos;ampere&apos; is the SI unit of electric current and is one of the seven SI base units.</qudt:plainTextDescription>
         <qudt:symbol>A</qudt:symbol>
         <qudt:uneceCommonCode>AMP</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The  \(\textit{ampere}\), often shortened to \(\textit{amp}\), is the SI unit of electric current and is one of the seven SI base units.
-\(\text{A}\ \equiv\ \text{amp (or ampere)}\ \equiv\ \frac{\text{C}}{\text{s}}\ \equiv\ \frac{\text{coulomb}}{\text{second}}\ \equiv\ \frac{\text{J}}{\text{Wb}}\ \equiv\ \frac{\text{joule}}{\text{weber}}\)
-Note that SI supports only the use of symbols and deprecates the use of any abbreviations for units.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Ampere</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
-        <qudt:ucumCode>A</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Ampere</rdfs:label>
-        <skos:altLabel>amp</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -17605,11 +17791,6 @@ The number 2997924580 is 10 times the value of the speed of light expressed in m
         <qudt:iec61360Code>0112/2///62720#UAA024</qudt:iec61360Code>
         <qudt:symbol>\,^{\circ}</qudt:symbol>
         <qudt:uneceCommonCode>DD</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">A degree (in full, a degree of arc, arc degree, or arcdegree), usually denoted by \(^\circ\) (the degree symbol), is a measurement of plane angle, representing 1/360 of a full rotation; one degree is equivalent to  \(2\pi /360 rad\), \(0.017453 rad\). It is not an SI unit, as the SI unit for angles is radian, but is an accepted SI unit.</terms:description>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oxfordreference.com/view/10.1093/acref/9780198605225.001.0001/acref-9780198605225-e-331</qudt:informativeReference>
-        <qudt:ucumCode>deg</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Degree</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -21490,12 +21671,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">745.6999</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>HP</qudt:symbol>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">550 foot-pound force per second</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Horsepower</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Horsepower?oldid=495510329</qudt:informativeReference>
-        <qudt:ucumCode>[HP]</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Horsepower</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -23526,12 +23701,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:iec61360Code>0112/2///62720#UAD720</qudt:iec61360Code>
         <qudt:symbol>kg</qudt:symbol>
         <qudt:uneceCommonCode>KGM</qudt:uneceCommonCode>
-        <terms:plainTextDescription rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds.</terms:plainTextDescription>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilogram</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Kilogram?oldid=493633626</qudt:informativeReference>
-        <qudt:ucumCode>kg</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Kilogram</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -24893,19 +25062,10 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/L">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:exactMatch rdf:resource="http://qudt.org/vocab/unit/L"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/LiquidVolume"/>
+        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Volume"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>L</qudt:symbol>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(litre\) (American spelling: \(\textit{liter}\); SI symbol \(l\) or \(L\)) is a non-SI metric system unit of volume equal to \(1 \textit{cubic decimetre}\) (\(dm^3\)), 1,000 cubic centimetres (\(cm^3\)) or \(1/1000 \textit{cubic metre}\). If the lower case &quot;L&quot; is used as the symbol, it is sometimes rendered as a cursive &quot;l&quot; to help distinguish it from the capital &quot;I&quot;, although this usage has no official approval by any international bureau.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Litre</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Litre?oldid=494846400</qudt:informativeReference>
-        <qudt:ucumCode>L</qudt:ucumCode>
-        <qudt:ucumCode>l</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Liter</rdfs:label>
-        <skos:altLabel>litre</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -25824,12 +25984,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:plainTextDescription>The metric and SI base unit of distance.   The meter is equal to approximately 1.093 613 3 yards, 3.280 840 feet, or 39.370 079 inches.</qudt:plainTextDescription>
         <qudt:symbol>m</qudt:symbol>
         <qudt:uneceCommonCode>MTR</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The metric and SI base unit of distance.  The 17th General Conference on Weights and Measures in 1983 defined the meter as that distance that makes the speed of light in a vacuum equal to exactly 299 792 458 meters per second. The speed of light in a vacuum, \(c\), is one of the fundamental constants of nature. The meter is equal to approximately 1.093 613 3 yards, 3.280 840 feet, or 39.370 079 inches.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Metre</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Metre?oldid=495145797</qudt:informativeReference>
-        <qudt:ucumCode>m</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Meter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -25961,18 +26115,11 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/M-PER-SEC">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DerivedUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/LinearVelocity"/>
+        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Velocity"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA733</qudt:iec61360Code>
         <qudt:uneceCommonCode>MTS</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Metre per second is an SI derived unit of both speed (scalar) and velocity (vector quantity which specifies both magnitude and a specific direction), defined by distance in metres divided by time in seconds.
-The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.</terms:description>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(m/s\)</qudt:expression>
-        <qudt:ucumCode>m.s-1</qudt:ucumCode>
-        <qudt:ucumCode>m/s</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Meter per Second</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -26694,17 +26841,12 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MIN">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:exactMatch rdf:resource="http://qudt.org/vocab/unit/MIN"/>
         <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Time"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">60.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA842</qudt:iec61360Code>
         <qudt:symbol>min</qudt:symbol>
         <qudt:uneceCommonCode>MIN</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A minute is a unit of measurement of time. The minute is a unit of time equal to 1/60 (the first sexagesimal fraction of an hour or 60 seconds. In the UTC time scale, a minute on rare occasions has 59 or 61 seconds; see leap second. The minute is not an SI unit; however, it is accepted for use with SI units. The SI symbol for minute or minutes is min (for time measurement) or the prime symbol after a number, e.g. 5&apos; (for angle measurement, even if it is informally used for time).</terms:description>
-        <qudt:ucumCode>min</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Minute</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -29437,13 +29579,6 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA862</qudt:iec61360Code>
         <qudt:uneceCommonCode>MMT</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
-        <qudt:ucumCode>mm</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Millimeter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -32869,8 +33004,6 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6894.75789</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:plainTextDescription>Pounds of force per square inch, the unit for pressure as a compounded unit pound-force according to the Anglo-American system of units divided by the power of the unit Inch according to the Anglo-American and Imperial system of units by exponent 2</qudt:plainTextDescription>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>PSI</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -35519,20 +35652,13 @@ Under the International System of Units (via the International Committee for Wei
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/V">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DerivedUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/EnergyPerElectricCharge"/>
+        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Voltage"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA296</qudt:iec61360Code>
         <qudt:siUnitsExpression>W/A</qudt:siUnitsExpression>
         <qudt:symbol>V</qudt:symbol>
         <qudt:uneceCommonCode>VLT</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Volt} is the SI unit of electric potential. Separating electric charges creates potential energy, which can be measured in energy units such as joules. Electric potential is defined as the amount of potential energy present per unit of charge. Electric potential is measured in volts, with one volt representing a potential of one joule per coulomb of charge. The name of the unit honors the Italian scientist Count Alessandro Volta (1745-1827), the inventor of the first battery.  The volt also may be expressed with a variety of other units. For example, a volt is also equal to one watt per ampere (W/A) and one joule per ampere per second (J/A/s).\)</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Volt</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Volt?oldid=494812083</qudt:informativeReference>
-        <qudt:latexDefinition>\(\text{V}\ \equiv\ \text{volt}\ \equiv\ \frac{\text{J}}{\text{C}}\ \equiv\ \frac{\text{joule}}{\text{coulomb}}\ \equiv\ \frac{\text{W.s}}{\text{C}}\ \equiv\ \frac{\text{watt.second}}{\text{coulomb}}\ \equiv\ \frac{\text{W}}{\text{A}}\ \equiv\ \frac{\text{watt}}{\text{amp}}\)</qudt:latexDefinition>
-        <qudt:ucumCode>V</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Volt</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -35886,13 +36012,6 @@ The abvolt is another option for a unit of voltage in the cgs system.</terms:des
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA306</qudt:iec61360Code>
         <qudt:symbol>W</qudt:symbol>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The SI unit of power. Power is the rate at which work is done, or (equivalently) the rate at which energy is expended. One watt is equal to a power rate of one joule of work per second of time. This unit is used both in mechanics and in electricity, so it links the mechanical and electrical units to one another. In mechanical terms, one watt equals about 0.001 341 02 horsepower (hp) or 0.737 562 foot-pound per second (lbf/s). In electrical terms, one watt is the power produced by a current of one ampere flowing through an electric potential of one volt. The name of the unit honors James Watt (1736-1819), the British engineer whose improvements to the steam engine are often credited with igniting the Industrial Revolution.\)</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Watt</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Watt?oldid=494906356</qudt:informativeReference>
-        <qudt:latexDefinition>\(\text{W}\ \equiv\ \text{watt}\ \equiv\ \frac{\text{J}}{\text{s}}\ \equiv\ \frac{\text{joule}}{\text{second}}\ \equiv\ \frac{\text{N.m}}{\text{s}}\ \equiv\ \frac{\text{newton.metre}}{\text{second}}\ \equiv\ \text{V.A}\ \equiv\ \text{volt.amp}\ \equiv\ \Omega\text{.A}^{2}\ \equiv\ \text{ohm.amp}^{2}\)</qudt:latexDefinition>
-        <qudt:ucumCode>W</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Watt</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -36637,58 +36756,103 @@ The abvolt is another option for a unit of voltage in the cgs system.</terms:des
     <rdf:Description rdf:about="http://qudt.org/schema/qudt/hasPrefixUnit">
         <rdfs:comment>Specifies which prefix unit is used.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/ActionTime">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:comment>Action Time (sec)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Action Time</rdfs:label>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/A">
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Ampere</qudt:dbpediaMatch>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The  \(\textit{ampere}\), often shortened to \(\textit{amp}\), is the SI unit of electric current and is one of the seven SI base units.
+\(\text{A}\ \equiv\ \text{amp (or ampere)}\ \equiv\ \frac{\text{C}}{\text{s}}\ \equiv\ \frac{\text{coulomb}}{\text{second}}\ \equiv\ \frac{\text{J}}{\text{Wb}}\ \equiv\ \frac{\text{joule}}{\text{weber}}\)
+Note that SI supports only the use of symbols and deprecates the use of any abbreviations for units.</terms:description>
+        <qudt:ucumCode>A</qudt:ucumCode>
+        <rdfs:label>Ampere</rdfs:label>
+        <skos:altLabel>amp</skos:altLabel>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/EnergyExpenditure">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:label>Energy Expenditure</rdfs:label>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oxfordreference.com/view/10.1093/acref/9780198631477.001\).0001/acref-9780198631477-e-594</qudt:informativeReference>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">Energy expenditure is dependent on a person&apos;s sex, metabolic rate, body-mass composition, the thermic effects of food, and activity level.  The approximate energy expenditure of a man lying in bed is \(1.0\,kilo\,calorie\,per\,hour\,per\,kilogram\). For slow walking (just over two miles per hour), \(3.0\,kilo\,calorie\,per\,hour\,per\,kilogram\). For fast steady running (about 10 miles per hour), \(16.3\,kilo\,calorie\,per\,hour\,per\,kilogram\).
-Females expend about 10 per cent less energy than males of the same size doing a comparable activity.  For people weighing the same, individuals with a high percentage of body fat usually expend less energy than lean people, because fat is not as metabolically active as muscle.</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/DEG">
+        <qudt:ucumCode>deg</qudt:ucumCode>
+        <rdfs:label>Degree</rdfs:label>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oxfordreference.com/view/10.1093/acref/9780198605225.001.0001/acref-9780198605225-e-331</qudt:informativeReference>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">A degree (in full, a degree of arc, arc degree, or arcdegree), usually denoted by \(^\circ\) (the degree symbol), is a measurement of plane angle, representing 1/360 of a full rotation; one degree is equivalent to  \(2\pi /360 rad\), \(0.017453 rad\). It is not an SI unit, as the SI unit for angles is radian, but is an accepted SI unit.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/ExhaustGasMeanMolecularWeight">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Exhaust Gas Mean Molecular Weight</rdfs:label>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/HP">
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Horsepower?oldid=495510329</qudt:informativeReference>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Horsepower</qudt:dbpediaMatch>
+        <rdfs:label>Horsepower</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">550 foot-pound force per second</terms:description>
+        <qudt:ucumCode>[HP]</qudt:ucumCode>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/FissionFuelUtilizationFactor">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Fission Fuel Utilization Factor</rdfs:label>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloGM">
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <rdfs:label>Kilogram</rdfs:label>
+        <terms:plainTextDescription rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds.</terms:plainTextDescription>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Kilogram?oldid=493633626</qudt:informativeReference>
+        <qudt:ucumCode>kg</qudt:ucumCode>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilogram</qudt:dbpediaMatch>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/LengthByForce">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Length Force</rdfs:label>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/L">
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Litre</qudt:dbpediaMatch>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(litre\) (American spelling: \(\textit{liter}\); SI symbol \(l\) or \(L\)) is a non-SI metric system unit of volume equal to \(1 \textit{cubic decimetre}\) (\(dm^3\)), 1,000 cubic centimetres (\(cm^3\)) or \(1/1000 \textit{cubic metre}\). If the lower case &quot;L&quot; is used as the symbol, it is sometimes rendered as a cursive &quot;l&quot; to help distinguish it from the capital &quot;I&quot;, although this usage has no official approval by any international bureau.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <rdfs:label>Liter</rdfs:label>
+        <skos:altLabel>litre</skos:altLabel>
+        <qudt:ucumCode>l</qudt:ucumCode>
+        <qudt:ucumCode>L</qudt:ucumCode>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Litre?oldid=494846400</qudt:informativeReference>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/MaximumExpectedOperatingPressure">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <skos:altLabel>MEOP</skos:altLabel>
-        <rdfs:label>Maximum Expected Operating Pressure</rdfs:label>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/M">
+        <qudt:ucumCode>m</qudt:ucumCode>
+        <rdfs:label>Meter</rdfs:label>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The metric and SI base unit of distance.  The 17th General Conference on Weights and Measures in 1983 defined the meter as that distance that makes the speed of light in a vacuum equal to exactly 299 792 458 meters per second. The speed of light in a vacuum, \(c\), is one of the fundamental constants of nature. The meter is equal to approximately 1.093 613 3 yards, 3.280 840 feet, or 39.370 079 inches.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Metre</qudt:dbpediaMatch>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Metre?oldid=495145797</qudt:informativeReference>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/MechanicalImpedance">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:label>Mechanical Impedance</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/M-PER-SEC">
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(m/s\)</qudt:expression>
+        <qudt:ucumCode>m.s-1</qudt:ucumCode>
+        <rdfs:label>Meter per Second</rdfs:label>
+        <qudt:ucumCode>m/s</qudt:ucumCode>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Metre per second is an SI derived unit of both speed (scalar) and velocity (vector quantity which specifies both magnitude and a specific direction), defined by distance in metres divided by time in seconds.
+The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.</terms:description>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/PhotoThresholdOfAwarenessFunction">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:isoNormativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/catalogue_detail?csnumber=43012</qudt:isoNormativeReference>
-        <rdfs:label>Photo Threshold of Awareness Function</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Photo Threshold of Awareness Function&quot; is the ability of the human eye to detect a light that results in a \(1^o\) radial angle at the eye with a given duration (temporal summation).</terms:description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/MIN">
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A minute is a unit of measurement of time. The minute is a unit of time equal to 1/60 (the first sexagesimal fraction of an hour or 60 seconds. In the UTC time scale, a minute on rare occasions has 59 or 61 seconds; see leap second. The minute is not an SI unit; however, it is accepted for use with SI units. The SI symbol for minute or minutes is min (for time measurement) or the prime symbol after a number, e.g. 5&apos; (for angle measurement, even if it is informally used for time).</terms:description>
+        <qudt:ucumCode>min</qudt:ucumCode>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <rdfs:label>Minute</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://qudt.org/vocab/quantitykind/WebTime">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:comment>Web Time</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Web Time</rdfs:label>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/MilliM">
+        <qudt:ucumCode>mm</qudt:ucumCode>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch.</terms:description>
+        <rdfs:label>Millimeter</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/PSI">
+        <rdfs:label>PSI</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/V">
+        <qudt:latexDefinition>\(\text{V}\ \equiv\ \text{volt}\ \equiv\ \frac{\text{J}}{\text{C}}\ \equiv\ \frac{\text{joule}}{\text{coulomb}}\ \equiv\ \frac{\text{W.s}}{\text{C}}\ \equiv\ \frac{\text{watt.second}}{\text{coulomb}}\ \equiv\ \frac{\text{W}}{\text{A}}\ \equiv\ \frac{\text{watt}}{\text{amp}}\)</qudt:latexDefinition>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Volt?oldid=494812083</qudt:informativeReference>
+        <rdfs:label>Volt</rdfs:label>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Volt} is the SI unit of electric potential. Separating electric charges creates potential energy, which can be measured in energy units such as joules. Electric potential is defined as the amount of potential energy present per unit of charge. Electric potential is measured in volts, with one volt representing a potential of one joule per coulomb of charge. The name of the unit honors the Italian scientist Count Alessandro Volta (1745-1827), the inventor of the first battery.  The volt also may be expressed with a variety of other units. For example, a volt is also equal to one watt per ampere (W/A) and one joule per ampere per second (J/A/s).\)</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Volt</qudt:dbpediaMatch>
+        <qudt:ucumCode>V</qudt:ucumCode>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/W">
+        <qudt:latexDefinition>\(\text{W}\ \equiv\ \text{watt}\ \equiv\ \frac{\text{J}}{\text{s}}\ \equiv\ \frac{\text{joule}}{\text{second}}\ \equiv\ \frac{\text{N.m}}{\text{s}}\ \equiv\ \frac{\text{newton.metre}}{\text{second}}\ \equiv\ \text{V.A}\ \equiv\ \text{volt.amp}\ \equiv\ \Omega\text{.A}^{2}\ \equiv\ \text{ohm.amp}^{2}\)</qudt:latexDefinition>
+        <qudt:ucumCode>W</qudt:ucumCode>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Watt</qudt:dbpediaMatch>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Watt?oldid=494906356</qudt:informativeReference>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The SI unit of power. Power is the rate at which work is done, or (equivalently) the rate at which energy is expended. One watt is equal to a power rate of one joule of work per second of time. This unit is used both in mechanics and in electricity, so it links the mechanical and electrical units to one another. In mechanical terms, one watt equals about 0.001 341 02 horsepower (hp) or 0.737 562 foot-pound per second (lbf/s). In electrical terms, one watt is the power produced by a current of one ampere flowing through an electric potential of one volt. The name of the unit honors James Watt (1736-1819), the British engineer whose improvements to the steam engine are often credited with igniting the Industrial Revolution.\)</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <rdfs:label>Watt</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://voag.linkedmodel.org/schema/voag#QUDT-QUANTITY-KINDS-VocabCatalogEntry_v1.2">
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
