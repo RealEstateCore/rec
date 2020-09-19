@@ -209,6 +209,14 @@
     
 
 
+    <!-- http://qudt.org/vocab/unit/HR -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/HR">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- http://qudt.org/vocab/unit/KiloGM -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/KiloGM">
@@ -21784,12 +21792,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:iec61360Code>0112/2///62720#UAA525</qudt:iec61360Code>
         <qudt:symbol>hr</qudt:symbol>
         <qudt:uneceCommonCode>K42</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The hour (common symbol: h or hr) is a unit of measurement of time. In modern usage, an hour comprises 60 minutes, or 3,600 seconds. It is approximately 1/24 of a mean solar day. An hour in the Universal Coordinated Time (UTC) time standard can include a negative or positive leap second, and may therefore have a duration of 3,599 or 3,601 seconds for adjustment purposes. Although it is not a standard defined by the International System of Units, the hour is a unit accepted for use with SI, represented by the symbol h.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Hour</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Hour?oldid=495040268</qudt:informativeReference>
-        <qudt:ucumCode>h</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Hour</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -36765,8 +36767,8 @@ The abvolt is another option for a unit of voltage in the cgs system.</terms:des
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The  \(\textit{ampere}\), often shortened to \(\textit{amp}\), is the SI unit of electric current and is one of the seven SI base units.
 \(\text{A}\ \equiv\ \text{amp (or ampere)}\ \equiv\ \frac{\text{C}}{\text{s}}\ \equiv\ \frac{\text{coulomb}}{\text{second}}\ \equiv\ \frac{\text{J}}{\text{Wb}}\ \equiv\ \frac{\text{joule}}{\text{weber}}\)
 Note that SI supports only the use of symbols and deprecates the use of any abbreviations for units.</terms:description>
-        <qudt:ucumCode>A</qudt:ucumCode>
         <rdfs:label>Ampere</rdfs:label>
+        <qudt:ucumCode>A</qudt:ucumCode>
         <skos:altLabel>amp</skos:altLabel>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
@@ -36786,6 +36788,14 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">550 foot-pound force per second</terms:description>
         <qudt:ucumCode>[HP]</qudt:ucumCode>
     </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/HR">
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The hour (common symbol: h or hr) is a unit of measurement of time. In modern usage, an hour comprises 60 minutes, or 3,600 seconds. It is approximately 1/24 of a mean solar day. An hour in the Universal Coordinated Time (UTC) time standard can include a negative or positive leap second, and may therefore have a duration of 3,599 or 3,601 seconds for adjustment purposes. Although it is not a standard defined by the International System of Units, the hour is a unit accepted for use with SI, represented by the symbol h.</terms:description>
+        <rdfs:label>Hour</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:ucumCode>h</qudt:ucumCode>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Hour</qudt:dbpediaMatch>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Hour?oldid=495040268</qudt:informativeReference>
+    </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloGM">
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <rdfs:label>Kilogram</rdfs:label>
@@ -36795,13 +36805,13 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilogram</qudt:dbpediaMatch>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/L">
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(litre\) (American spelling: \(\textit{liter}\); SI symbol \(l\) or \(L\)) is a non-SI metric system unit of volume equal to \(1 \textit{cubic decimetre}\) (\(dm^3\)), 1,000 cubic centimetres (\(cm^3\)) or \(1/1000 \textit{cubic metre}\). If the lower case &quot;L&quot; is used as the symbol, it is sometimes rendered as a cursive &quot;l&quot; to help distinguish it from the capital &quot;I&quot;, although this usage has no official approval by any international bureau.</terms:description>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Litre</qudt:dbpediaMatch>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(litre\) (American spelling: \(\textit{liter}\); SI symbol \(l\) or \(L\)) is a non-SI metric system unit of volume equal to \(1 \textit{cubic decimetre}\) (\(dm^3\)), 1,000 cubic centimetres (\(cm^3\)) or \(1/1000 \textit{cubic metre}\). If the lower case &quot;L&quot; is used as the symbol, it is sometimes rendered as a cursive &quot;l&quot; to help distinguish it from the capital &quot;I&quot;, although this usage has no official approval by any international bureau.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <rdfs:label>Liter</rdfs:label>
         <skos:altLabel>litre</skos:altLabel>
-        <qudt:ucumCode>L</qudt:ucumCode>
         <qudt:ucumCode>l</qudt:ucumCode>
+        <qudt:ucumCode>L</qudt:ucumCode>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Litre?oldid=494846400</qudt:informativeReference>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/L-PER-SEC">
@@ -36834,12 +36844,12 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <rdfs:label>Minute</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/MilliM">
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
         <qudt:ucumCode>mm</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch.</terms:description>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
         <rdfs:label>Millimeter</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/PSI">
@@ -36851,8 +36861,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Volt?oldid=494812083</qudt:informativeReference>
         <rdfs:label>Volt</rdfs:label>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Volt} is the SI unit of electric potential. Separating electric charges creates potential energy, which can be measured in energy units such as joules. Electric potential is defined as the amount of potential energy present per unit of charge. Electric potential is measured in volts, with one volt representing a potential of one joule per coulomb of charge. The name of the unit honors the Italian scientist Count Alessandro Volta (1745-1827), the inventor of the first battery.  The volt also may be expressed with a variety of other units. For example, a volt is also equal to one watt per ampere (W/A) and one joule per ampere per second (J/A/s).\)</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Volt</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Volt</qudt:dbpediaMatch>
         <qudt:ucumCode>V</qudt:ucumCode>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/W">
@@ -36860,8 +36870,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <qudt:ucumCode>W</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Watt</qudt:dbpediaMatch>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Watt?oldid=494906356</qudt:informativeReference>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The SI unit of power. Power is the rate at which work is done, or (equivalently) the rate at which energy is expended. One watt is equal to a power rate of one joule of work per second of time. This unit is used both in mechanics and in electricity, so it links the mechanical and electrical units to one another. In mechanical terms, one watt equals about 0.001 341 02 horsepower (hp) or 0.737 562 foot-pound per second (lbf/s). In electrical terms, one watt is the power produced by a current of one ampere flowing through an electric potential of one volt. The name of the unit honors James Watt (1736-1819), the British engineer whose improvements to the steam engine are often credited with igniting the Industrial Revolution.\)</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The SI unit of power. Power is the rate at which work is done, or (equivalently) the rate at which energy is expended. One watt is equal to a power rate of one joule of work per second of time. This unit is used both in mechanics and in electricity, so it links the mechanical and electrical units to one another. In mechanical terms, one watt equals about 0.001 341 02 horsepower (hp) or 0.737 562 foot-pound per second (lbf/s). In electrical terms, one watt is the power produced by a current of one ampere flowing through an electric potential of one volt. The name of the unit honors James Watt (1736-1819), the British engineer whose improvements to the steam engine are often credited with igniting the Industrial Revolution.\)</terms:description>
         <rdfs:label>Watt</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://voag.linkedmodel.org/schema/voag#QUDT-QUANTITY-KINDS-VocabCatalogEntry_v1.2">
