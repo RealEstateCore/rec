@@ -436,6 +436,7 @@
     <!-- https://w3id.org/rec/equipment/bladeDiameter -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/bladeDiameter">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
         <rdfs:label xml:lang="en">blade diameter</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -889,10 +890,11 @@
     
 
 
-    <!-- https://w3id.org/rec/equipment/maxSpeed -->
+    <!-- https://w3id.org/rec/equipment/maxRotationSpeed -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxSpeed">
-        <rdfs:label xml:lang="en">maximum speed</rdfs:label>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxRotationSpeed">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
+        <rdfs:label xml:lang="en">maximum rotation speed</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2430,7 +2432,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxSpeed"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/maxRotationSpeed"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
             </owl:Restriction>
         </rdfs:subClassOf>
