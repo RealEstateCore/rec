@@ -193,6 +193,12 @@
     
 
 
+    <!-- http://qudt.org/vocab/unit/CentiM -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/CentiM"/>
+    
+
+
     <!-- http://qudt.org/vocab/unit/DEG -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/DEG">
@@ -278,6 +284,12 @@
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/PSI">
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/REV-PER-MIN -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/REV-PER-MIN"/>
     
 
 
@@ -17305,12 +17317,6 @@ The number 2997924580 is 10 times the value of the speed of light expressed in m
         <qudt:iec61360Code>0112/2///62720#UAA375</qudt:iec61360Code>
         <qudt:symbol>cm</qudt:symbol>
         <qudt:uneceCommonCode>CMT</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Centimetre</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Centimetre?oldid=494931891</qudt:informativeReference>
-        <qudt:ucumCode>cm</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Centimeter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -34178,10 +34184,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.104719755</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB231</qudt:iec61360Code>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Revolution per Minute&quot; is a unit for  &apos;Angular Velocity&apos; expressed as \(rev/min\).</terms:description>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(rev/min\)</qudt:expression>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Revolution per Minute</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -36773,6 +36775,14 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/CentiM">
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Centimetre</qudt:dbpediaMatch>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units.</terms:description>
+        <qudt:ucumCode>cm</qudt:ucumCode>
+        <rdfs:label>Centimeter</rdfs:label>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Centimetre?oldid=494931891</qudt:informativeReference>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/DEG">
         <qudt:ucumCode>deg</qudt:ucumCode>
         <rdfs:label>Degree</rdfs:label>
@@ -36854,6 +36864,12 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/PSI">
         <rdfs:label>PSI</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/REV-PER-MIN">
+        <rdfs:label>Revolution per Minute</rdfs:label>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Revolution per Minute&quot; is a unit for  &apos;Angular Velocity&apos; expressed as \(rev/min\).</terms:description>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(rev/min\)</qudt:expression>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/V">
