@@ -1279,7 +1279,10 @@
 
     <!-- https://w3id.org/rec/equipment/returnFanNominalAirflow -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/returnFanNominalAirflow"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/returnFanNominalAirflow">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">return fan nominal airflow</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -1381,7 +1384,10 @@
 
     <!-- https://w3id.org/rec/equipment/supplyFanNominalAirflow -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/supplyFanNominalAirflow"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/supplyFanNominalAirflow">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">supply fan nominal airflow</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -1983,6 +1989,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/returnFanNominalAirflow"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/secondaryCoolingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
@@ -2013,6 +2025,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/supplyFanMotorSize"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/supplyFanNominalAirflow"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
