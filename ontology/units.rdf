@@ -225,6 +225,14 @@
     
 
 
+    <!-- http://qudt.org/vocab/unit/L-PER-SEC -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/L-PER-SEC">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- http://qudt.org/vocab/unit/M -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/M">
@@ -25206,10 +25214,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:iec61360Code>0112/2///62720#UAA664</qudt:iec61360Code>
         <qudt:plainTextDescription>unit litre divided by the SI base unit second</qudt:plainTextDescription>
         <qudt:uneceCommonCode>G51</qudt:uneceCommonCode>
-        <qudt:ucumCode>L.s-1</qudt:ucumCode>
-        <qudt:ucumCode>L/s</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Litre Per Second</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -36791,14 +36795,20 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilogram</qudt:dbpediaMatch>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/L">
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Litre</qudt:dbpediaMatch>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(litre\) (American spelling: \(\textit{liter}\); SI symbol \(l\) or \(L\)) is a non-SI metric system unit of volume equal to \(1 \textit{cubic decimetre}\) (\(dm^3\)), 1,000 cubic centimetres (\(cm^3\)) or \(1/1000 \textit{cubic metre}\). If the lower case &quot;L&quot; is used as the symbol, it is sometimes rendered as a cursive &quot;l&quot; to help distinguish it from the capital &quot;I&quot;, although this usage has no official approval by any international bureau.</terms:description>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Litre</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <rdfs:label>Liter</rdfs:label>
         <skos:altLabel>litre</skos:altLabel>
-        <qudt:ucumCode>l</qudt:ucumCode>
         <qudt:ucumCode>L</qudt:ucumCode>
+        <qudt:ucumCode>l</qudt:ucumCode>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Litre?oldid=494846400</qudt:informativeReference>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/L-PER-SEC">
+        <qudt:ucumCode>L.s-1</qudt:ucumCode>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <rdfs:label>Litre Per Second</rdfs:label>
+        <qudt:ucumCode>L/s</qudt:ucumCode>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/M">
         <qudt:ucumCode>m</qudt:ucumCode>
@@ -36824,10 +36834,10 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <rdfs:label>Minute</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/MilliM">
-        <qudt:ucumCode>mm</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
+        <qudt:ucumCode>mm</qudt:ucumCode>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch.</terms:description>
         <rdfs:label>Millimeter</rdfs:label>
@@ -36841,8 +36851,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Volt?oldid=494812083</qudt:informativeReference>
         <rdfs:label>Volt</rdfs:label>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Volt} is the SI unit of electric potential. Separating electric charges creates potential energy, which can be measured in energy units such as joules. Electric potential is defined as the amount of potential energy present per unit of charge. Electric potential is measured in volts, with one volt representing a potential of one joule per coulomb of charge. The name of the unit honors the Italian scientist Count Alessandro Volta (1745-1827), the inventor of the first battery.  The volt also may be expressed with a variety of other units. For example, a volt is also equal to one watt per ampere (W/A) and one joule per ampere per second (J/A/s).\)</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Volt</qudt:dbpediaMatch>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:ucumCode>V</qudt:ucumCode>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/W">
