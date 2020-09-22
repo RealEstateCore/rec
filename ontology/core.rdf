@@ -440,7 +440,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/locatedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:label xml:lang="en">located in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -566,23 +566,23 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/subLocations -->
+    <!-- https://w3id.org/rec/core/subSpaces -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/subLocations">
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/subSpaces">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/superLocation"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Location"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/superSpace"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/rec/core/superLocation -->
+    <!-- https://w3id.org/rec/core/superSpace -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/superLocation">
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/superSpace">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Location"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
     </owl:ObjectProperty>
     
 
@@ -1113,7 +1113,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/BuildingComponent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/BuildingComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasSuperBuildingComponent"/>
@@ -1141,7 +1141,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1153,7 +1153,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc.</rdfs:comment>
@@ -1238,7 +1238,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1250,7 +1250,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1341,45 +1341,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
         <rdfs:comment xml:lang="en">A piece of land upon which one or more buildings may be situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/Location -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Location">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
-                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
-                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/subLocations"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/superLocation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-locations. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
-        <rdfs:label xml:lang="en">Location</rdfs:label>
     </owl:Class>
     
 
@@ -1494,7 +1455,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/RealEstateComponent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstateComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOfRealEstate"/>
@@ -1512,7 +1473,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/Region -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Region">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">An administrative geospatial unit larger than the individual real estate. For instance, &quot;Lombary&quot;, &quot;North America&quot;, &quot;The Back Bay&quot;, &quot;Elnätsområde Syd&quot;, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Region</rdfs:label>
     </owl:Class>
@@ -1600,6 +1561,45 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Space -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Space">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/subSpaces"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/superSpace"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Space</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Type">
@@ -1612,7 +1612,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/Zone -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Zone">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Location"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">A sub-zone within a building, e.g., an HVAC zone, a security zone, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Zone</rdfs:label>
     </owl:Class>
