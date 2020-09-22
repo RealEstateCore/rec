@@ -1104,6 +1104,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">A confined building structure.</rdfs:comment>
         <rdfs:label xml:lang="en">Building</rdfs:label>
     </owl:Class>
@@ -1113,7 +1114,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/BuildingComponent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/BuildingComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasSuperBuildingComponent"/>
@@ -1339,6 +1339,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Land">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">A piece of land upon which one or more buildings may be situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
     </owl:Class>
@@ -1455,7 +1456,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/RealEstateComponent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstateComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOfRealEstate"/>
@@ -1484,6 +1484,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Room">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">Base class for all more specific room types.</rdfs:comment>
         <rdfs:label xml:lang="en">Room</rdfs:label>
     </owl:Class>
@@ -1596,6 +1597,15 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Storey -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Storey">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:label xml:lang="en">Storey</rdfs:label>
     </owl:Class>
     
 
