@@ -1083,6 +1083,23 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/ArchitecturalAsset -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/ArchitecturalAsset">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:label xml:lang="en">Architectural asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Asset -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Asset">
+        <rdfs:label xml:lang="en">Asset</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
@@ -1217,7 +1234,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Equipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Equipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
@@ -1277,6 +1294,15 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
         <rdfs:comment xml:lang="en">A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Furniture -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Furniture">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:label xml:lang="en">Furniture</rdfs:label>
     </owl:Class>
     
 
