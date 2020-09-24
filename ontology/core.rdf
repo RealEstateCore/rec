@@ -451,7 +451,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/mountedInEquipment">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/MountedEquipment"/>
         <rdfs:label xml:lang="en">mounted in equipment</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1208,7 +1208,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/mountedInEquipment"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Equipment"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MountedEquipment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1229,71 +1229,13 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/mountedInEquipment"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/rec/core/Equipment"/>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/MountedEquipment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A piece of electronic equipment that can sense (Sensor) or interact (Actuator) with its environment. A Device can contain subdevices or be part of superdevices.</rdfs:comment>
         <rdfs:label xml:lang="en">Device</rdfs:label>
         <o2o:endpoint>device</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/Equipment -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Equipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/containsMountedDevice"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Device"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasComment"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/modelNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/physicalTagNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/serialNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -1378,6 +1320,64 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
         <o2o:endpoint>measurementunit</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/MountedEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/MountedEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/containsMountedDevice"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasComment"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/modelNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/physicalTagNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/serialNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mounted equipment</rdfs:label>
     </owl:Class>
     
 
