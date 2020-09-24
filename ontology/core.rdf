@@ -1053,11 +1053,29 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/Actuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Actuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Agent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Agent">
         <rdfs:comment xml:lang="en">The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Group) to be anchord in one joint place, on the Agent class. Conceptually this mimics the Agent class from the well-known FOAF vocabulary, see http://xmlns.com/foaf/spec/#term_Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Alarm -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Alarm">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:label xml:lang="en">Alarm</rdfs:label>
     </owl:Class>
     
 
@@ -1158,6 +1176,14 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Campus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Capability -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Capability">
+        <rdfs:label xml:lang="en">Capability</rdfs:label>
     </owl:Class>
     
 
@@ -1410,10 +1436,11 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/core/Point -->
+    <!-- https://w3id.org/rec/core/Parameter -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/core/Point">
-        <rdfs:label xml:lang="en">Point</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/rec/core/Parameter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:label xml:lang="en">Parameter</rdfs:label>
     </owl:Class>
     
 
@@ -1526,7 +1553,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/Sensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Sensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Point"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
@@ -1570,6 +1597,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Server -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Server">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Service -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Service">
@@ -1581,6 +1616,15 @@ MillimeterPerHour for Precipation</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/SetPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/SetPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Parameter"/>
+        <rdfs:label xml:lang="en">SetPoint</rdfs:label>
     </owl:Class>
     
 
@@ -1629,6 +1673,15 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Status -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Status">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
     </owl:Class>
     
 
