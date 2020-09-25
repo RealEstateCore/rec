@@ -1056,7 +1056,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Agent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Agent">
-        <rdfs:comment xml:lang="en">The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Group) to be anchord in one joint place, on the Agent class. Conceptually this mimics the Agent class from the well-known FOAF vocabulary, see http://xmlns.com/foaf/spec/#term_Agent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Group) to be anchored in one joint place, on the Agent class. Conceptually this mimics the Agent class from the well-known FOAF vocabulary, see http://xmlns.com/foaf/spec/#term_Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
     
@@ -1104,6 +1104,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Asset -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Asset">
+        <rdfs:comment xml:lang="en">Something which is placed inside of a building, but is not an integral part of that building&apos;s structure; e.g., furniture, equipment, systems, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Asset</rdfs:label>
     </owl:Class>
     
@@ -1135,7 +1136,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A part that constitutes a piece of a building&apos;s structural makeup. E.g., Facade, Wall, Slab, RoofInner, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Building component</rdfs:label>
         <o2o:endpoint>buildingcomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
@@ -1174,6 +1175,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Capability -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Capability">
+        <rdfs:comment xml:lang="en">A Capability indicates the capacity of a rec entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term &quot;point&quot;. Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.</rdfs:comment>
         <rdfs:label xml:lang="en">Capability</rdfs:label>
     </owl:Class>
     
@@ -1315,9 +1317,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/MountedEquipment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A piece of electronic equipment that can sense (Sensor) or interact (Actuator) with its environment. A Device can contain subdevices or be part of superdevices.</rdfs:comment>
-        <rdfs:label xml:lang="en">Device</rdfs:label>
-        <o2o:endpoint>device</o2o:endpoint>
+        <rdfs:comment xml:lang="en">A piece of electronic equipment or software that communicates and interacts with a digital twin platform. Could, e.g., be an integrated circuit inside of a smart HVAC unit, or a virtual server running on a Kubernetes cluster. Logical devicescan have Capability instances (through hasCapability) that describe their input/output capabilties. If Logical Devices are embedded within Asset entities (through the locatedIn property) such capabilties typically denote the capabilities of the asset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Logical device</rdfs:label>
+        <o2o:endpoint>logicaldevice</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -1681,7 +1683,10 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Storey">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan.</rdfs:comment>
         <rdfs:label xml:lang="en">Storey</rdfs:label>
+        <o2o:endpoint>storey</o2o:endpoint>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
 
