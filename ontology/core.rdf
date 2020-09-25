@@ -1328,7 +1328,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/MeasurementUnit -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/MeasurementUnit">
-        <rdfs:comment xml:lang="en">The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
+        <rdfs:comment xml:lang="en">Deprecated in favour of qudt:Unit
+
+The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
 
 Exceptions to SI:
 Express temperature in Celsius,
@@ -1337,6 +1339,7 @@ Angle i degrees (360 degress = 1 revolution)
 MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement unit</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>measurementunit</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
@@ -1467,9 +1470,12 @@ MillimeterPerHour for Precipation</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Deprecated in favour of qudt:QuantityKind
+
+Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT.</rdfs:comment>
         <rdfs:label xml:lang="en">Quantity kind</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>quantitykind</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
@@ -1510,6 +1516,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Types of objects that can make up a piece of real estate, e.g., land and buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate component</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>realestatecomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
