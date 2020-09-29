@@ -539,7 +539,7 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/mountedInEquipment">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/EquipmentAsset"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/MountedEquipment"/>
         <rdfs:label xml:lang="en">mounted in equipment</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -1441,16 +1441,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/EquipmentAsset -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/EquipmentAsset">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Equipment asset</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Event -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
@@ -1460,11 +1450,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/FurnitureAsset -->
+    <!-- https://w3id.org/rec/core/Furniture -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/core/FurnitureAsset">
+    <owl:Class rdf:about="https://w3id.org/rec/core/Furniture">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:label xml:lang="en">Furniture asset</rdfs:label>
+        <rdfs:label xml:lang="en">Furniture</rdfs:label>
     </owl:Class>
     
 
@@ -1577,6 +1567,16 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>measurementunit</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/MountedEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/MountedEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mounted equipment</rdfs:label>
     </owl:Class>
     
 
