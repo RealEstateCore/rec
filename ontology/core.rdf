@@ -1489,6 +1489,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/Level -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Level">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:comment xml:lang="en">The level of a building, a.k.a. storey, floor, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Level</rdfs:label>
+        <o2o:endpoint>level</o2o:endpoint>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/LogicalDevice -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/LogicalDevice">
@@ -1852,18 +1864,6 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:Class rdf:about="https://w3id.org/rec/core/Status">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:label xml:lang="en">Status</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/Storey -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Storey">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
-        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan.</rdfs:comment>
-        <rdfs:label xml:lang="en">Storey</rdfs:label>
-        <o2o:endpoint>storey</o2o:endpoint>
-        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
 
@@ -2386,15 +2386,6 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Length">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Length</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/core/Level -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Level">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:label xml:lang="en">Level</rdfs:label>
     </owl:NamedIndividual>
     
 
