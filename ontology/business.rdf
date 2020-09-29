@@ -150,16 +150,18 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A region consisting of a set of included spaces, that serves some specific business/organizational purpose. E.g., &quot;EMEA&quot;, &quot;The Back Bay&quot;, &quot;New England&quot;, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Business region</rdfs:label>
     </owl:Class>
     
 
@@ -186,6 +188,28 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/business/Role">
         <rdfs:label xml:lang="en">Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/business/TenantUnit -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/business/TenantUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A grouping of spaces rented as a unit, via the same lease, by a tenant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tenant unit</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
