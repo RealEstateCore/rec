@@ -1422,15 +1422,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/Controller -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Controller">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:label xml:lang="en">Controller</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/DataSchema -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/DataSchema">
@@ -1455,15 +1446,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/Furniture">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:label xml:lang="en">Furniture</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/Gateway -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/Gateway">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:label xml:lang="en">Gateway</rdfs:label>
     </owl:Class>
     
 
@@ -1895,10 +1877,29 @@ Describes the type of values that can be observed by sensors or set by actuators
     
 
 
+    <!-- https://w3id.org/rec/core/VirtualController -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/VirtualController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Virtual controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/VirtualGateway -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/VirtualGateway">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Virtual gateway</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/VirtualServer -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/VirtualServer">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Virtual server</rdfs:label>
     </owl:Class>
     
 
