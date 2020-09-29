@@ -200,8 +200,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.
+
+Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:label xml:lang="en">device quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -224,8 +227,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">The Quantity Kind that an event measures or affects.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Quantity Kind that an event measures or affects.
+
+Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:label xml:lang="en">event quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -250,6 +256,15 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking Buildings to the Building Components that they are made up of.</rdfs:comment>
         <rdfs:label xml:lang="en">has building component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasCapability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasCapability">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:label xml:lang="en">has capability</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -302,8 +317,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind">
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.
+
+Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:label xml:lang="en">quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -530,6 +548,16 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/observes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/observes">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:comment xml:lang="en">Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for. This allows systems to perform graph propagation of sensor values, e.g., letting a temperature sensor that observes a given room set the temperature for that room.</rdfs:comment>
+        <rdfs:label xml:lang="en">observes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/ownedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/ownedBy">
@@ -577,6 +605,7 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
     <!-- https://w3id.org/rec/core/sensorInterface -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/sensorInterface">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
     </owl:ObjectProperty>
     
@@ -599,6 +628,16 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
         <rdfs:comment xml:lang="en">The coverage or impact area of a given device or sensor. For example: an air-treatment Device might serve several Rooms or a full Building. Note that devices can also service one another, e.g., an air-treatment Device might serve an air diffuser Device.</rdfs:comment>
         <rdfs:label xml:lang="en">serves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/servesAsset -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servesAsset">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:comment xml:lang="en">The asset that a given asset, sensor, or actuator works for/services. For example, an air-treatment Asset might serve an air diffuser Asset.</rdfs:comment>
+        <rdfs:label xml:lang="en">serves asset</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -635,6 +674,16 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
         <rdfs:comment xml:lang="en">Indicates how a Device serves another Device.</rdfs:comment>
         <rdfs:label xml:lang="en">serves device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/servesSpace -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servesSpace">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:comment xml:lang="en">The coverage or impact area of a given asset, sensor, or actuator. For example: an air-treatment Asset might serve several Rooms or a full Building.</rdfs:comment>
+        <rdfs:label xml:lang="en">serves space</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1164,6 +1213,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
             </owl:Restriction>
@@ -1183,6 +1238,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servesAsset"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servesSpace"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1301,6 +1368,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Capability -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Capability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servesAsset"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servesSpace"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Capability indicates the capacity of a rec entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term &quot;point&quot;. Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.</rdfs:comment>
         <rdfs:label xml:lang="en">Capability</rdfs:label>
     </owl:Class>
@@ -1406,6 +1485,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/LogicalDevice">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hostedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
             </owl:Restriction>
@@ -1475,14 +1560,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventQuantityKind"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1640,6 +1725,12 @@ Describes the type of values that can be observed by sensors or set by actuators
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/observes"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
@@ -1647,9 +1738,9 @@ Describes the type of values that can be observed by sensors or set by actuators
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceQuantityKind"/>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
@@ -1729,6 +1820,12 @@ Describes the type of values that can be observed by sensors or set by actuators
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
                 <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

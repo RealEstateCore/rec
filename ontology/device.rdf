@@ -274,8 +274,11 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/observes">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:comment xml:lang="en">Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for.
+
+Deprecated in favour of core:observes</rdfs:comment>
         <rdfs:label xml:lang="en">observes</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -286,8 +289,11 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/device/observes"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuator"/>
-        <rdfs:comment xml:lang="en">The actuator that a sensor is configured or designed to observe.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The actuator that a sensor is configured or designed to observe.
+
+Deprecated in favour of core:observes</rdfs:comment>
         <rdfs:label xml:lang="en">observes actuator</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
