@@ -188,8 +188,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The measurement unit used by some Device.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The measurement unit used by some Device.
+
+Deprecated in favour of qudt:unit</rdfs:comment>
         <rdfs:label xml:lang="en">device measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -215,8 +218,11 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">A unit used to measure some aspect of some Event.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A unit used to measure some aspect of some Event.
+
+Deprecated in favour of qudt:unit</rdfs:comment>
         <rdfs:label xml:lang="en">event measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -285,8 +291,11 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit">
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.
+
+Deprecated in favour of qudt:unit</rdfs:comment>
         <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -596,8 +605,11 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.
+
+Deprecated in favour of qudt:unit</rdfs:comment>
         <rdfs:label xml:lang="en">quantity kind measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -616,8 +628,11 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:comment xml:lang="en">Indicates that an area or entity is served by some device or sensor. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that an area or entity is served by some device or sensor. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor.
+
+Deprecated in favour of inverse properties core:servesSpace and core:servesAsset</rdfs:comment>
         <rdfs:label xml:lang="en">served by</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -626,8 +641,11 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/serves">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:comment xml:lang="en">The coverage or impact area of a given device or sensor. For example: an air-treatment Device might serve several Rooms or a full Building. Note that devices can also service one another, e.g., an air-treatment Device might serve an air diffuser Device.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The coverage or impact area of a given device or sensor. For example: an air-treatment Device might serve several Rooms or a full Building. Note that devices can also service one another, e.g., an air-treatment Device might serve an air diffuser Device.
+
+Deprecated in favour of core:servesSpace and core:servesAsset</rdfs:comment>
         <rdfs:label xml:lang="en">serves</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -648,8 +666,11 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
-        <rdfs:comment xml:lang="en">Indicates how a Device serves an entire Building.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves an entire Building.
+
+Deprecated in favour of core:servesSpace</rdfs:comment>
         <rdfs:label xml:lang="en">serves building</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -660,8 +681,11 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">Indicates how a Device serves a particular Building Component (e.g., a Room).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves a particular Building Component (e.g., a Room).
+
+Deprecated in favour of core:servesSpace</rdfs:comment>
         <rdfs:label xml:lang="en">serves building component</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -672,8 +696,11 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:comment xml:lang="en">Indicates how a Device serves another Device.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves another Device.
+
+Deprecated in favour of core:servesAsset</rdfs:comment>
         <rdfs:label xml:lang="en">serves device</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1566,8 +1593,8 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1731,9 +1758,9 @@ Describes the type of values that can be observed by sensors or set by actuators
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
