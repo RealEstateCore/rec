@@ -1321,6 +1321,20 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/BooleanSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/BooleanSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
@@ -1586,6 +1600,20 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/NumericSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/NumericSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Observation -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Observation">
@@ -1773,12 +1801,6 @@ Describes the type of values that can be observed by sensors or set by actuators
                 <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
