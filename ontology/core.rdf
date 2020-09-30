@@ -1102,6 +1102,17 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
+    <!-- https://w3id.org/rec/core/levelNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/levelNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Level"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">A number indicating the ordinal number of this level within the building. Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others.</rdfs:comment>
+        <rdfs:label xml:lang="en">level number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/modelNumber -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/modelNumber">
