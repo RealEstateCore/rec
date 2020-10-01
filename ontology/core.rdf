@@ -1551,6 +1551,15 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     
 
 
+    <!-- https://w3id.org/rec/core/LogicalController -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/LogicalController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Logical controller</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/LogicalDevice -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/LogicalDevice">
@@ -1590,6 +1599,24 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:label xml:lang="en">Logical device</rdfs:label>
         <o2o:endpoint>logicaldevice</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/LogicalGateway -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/LogicalGateway">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Logical gateway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/LogicalServer -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/LogicalServer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Logical server</rdfs:label>
     </owl:Class>
     
 
@@ -1951,33 +1978,6 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:Class rdf:about="https://w3id.org/rec/core/Type">
         <rdfs:label xml:lang="en">Type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/VirtualController -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/VirtualController">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:label xml:lang="en">Virtual controller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/VirtualGateway -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/VirtualGateway">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:label xml:lang="en">Virtual gateway</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/VirtualServer -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/VirtualServer">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
-        <rdfs:label xml:lang="en">Virtual server</rdfs:label>
     </owl:Class>
     
 
