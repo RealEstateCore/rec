@@ -604,7 +604,7 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/premisesType">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasType"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/TenantUnit"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/PremisesType"/>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -1725,6 +1725,29 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Premises -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Premises">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/SpaceCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A premises is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/PremisesType -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/PremisesType">
@@ -2004,28 +2027,6 @@ Describes the type of values that can be observed by sensors or set by actuators
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Temperature sensor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/TenantUnit -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/TenantUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/SpaceCollection"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A tenant unit is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant.</rdfs:comment>
-        <rdfs:label xml:lang="en">Tenant unit</rdfs:label>
     </owl:Class>
     
 
