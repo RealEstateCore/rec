@@ -1354,21 +1354,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/BooleanSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/BooleanSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Boolean sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
@@ -1666,21 +1651,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/core/NumericSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/NumericSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Numeric sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Observation -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Observation">
@@ -1705,6 +1675,21 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A sensor observation.</rdfs:comment>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/OccupancySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/OccupancySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Occupancy sensor</rdfs:label>
     </owl:Class>
     
 
@@ -2004,6 +1989,21 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:Class rdf:about="https://w3id.org/rec/core/Status">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:label xml:lang="en">Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/TemperatureSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Temperature sensor</rdfs:label>
     </owl:Class>
     
 
