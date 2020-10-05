@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/rec/assets/"
-     xml:base="https://w3id.org/rec/assets/"
+<rdf:RDF xmlns="https://w3id.org/rec/asset/"
+     xml:base="https://w3id.org/rec/asset/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://creativecommons.org/ns#"
      xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
@@ -14,12 +14,12 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:asset="https://w3id.org/rec/asset/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:assets="https://w3id.org/rec/assets/"
      xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/rec/assets/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/assets/3.3/"/>
+    <owl:Ontology rdf:about="https://w3id.org/rec/asset/">
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/asset/3.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.3/"/>
         <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
@@ -42,11 +42,11 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/substance -->
+    <!-- https://w3id.org/rec/asset/substance -->
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/assets/substance">
-        <rdfs:range rdf:resource="https://w3id.org/rec/assets/EquipmentFeedSubstance"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/isFedBy"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/asset/substance">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/EquipmentFeedSubstance"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
     </owl:AnnotationProperty>
     
 
@@ -70,9 +70,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/EquipmentFeedSubstance -->
+    <!-- https://w3id.org/rec/asset/EquipmentFeedSubstance -->
 
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/assets/EquipmentFeedSubstance">
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/asset/EquipmentFeedSubstance">
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -309,73 +309,77 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/CBRating -->
+    <!-- https://w3id.org/rec/asset/CBRating -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/assets/CBRating">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/ElectricalCircuit"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/CBRating">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/ElectricalCircuit"/>
     </owl:ObjectProperty>
     
 
-    <!-- https://w3id.org/rec/assets/commissionedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/assets/commissionedBy">
+    <!-- https://w3id.org/rec/asset/commissionedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/commissionedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/installedBy -->
+    <!-- https://w3id.org/rec/asset/installedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/assets/installedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/installedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/isFedBy -->
+    <!-- https://w3id.org/rec/asset/isFedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/assets/isFedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/MountedEquipment"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/isFedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
     </owl:ObjectProperty>
     
 
 
+    <!-- https://w3id.org/rec/asset/manufacturedBy -->
 
-    <!-- https://w3id.org/rec/assets/manufacturedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/assets/manufacturedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/manufacturedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/primePower -->
+    <!-- https://w3id.org/rec/asset/mountedOn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/assets/primePower">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/Generator"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/mountedOn"/>
+    
+
+
+    <!-- https://w3id.org/rec/asset/primePower -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/primePower">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/servicedBy -->
+    <!-- https://w3id.org/rec/asset/servicedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/assets/servicedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/servicedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/standbyPower -->
+    <!-- https://w3id.org/rec/asset/standbyPower -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/assets/standbyPower">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/Generator"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/standbyPower">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
     </owl:ObjectProperty>
-    
-
     
 
 
@@ -390,25 +394,26 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/CBRating -->
+    <!-- https://w3id.org/rec/asset/CBRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/CBRating">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/CBRating">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/MCBRating -->
+    <!-- https://w3id.org/rec/asset/MCBRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/MCBRating">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/MCBRating">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
+        <rdfs:label xml:lang="en">main circuit breaker rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/airflowModulation -->
+    <!-- https://w3id.org/rec/asset/airflowModulation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/airflowModulation">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/airflowModulation">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -431,26 +436,27 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/arrangement -->
+    <!-- https://w3id.org/rec/asset/arrangement -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/arrangement">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/arrangement">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">arrangement</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/bladeDiameter -->
+    <!-- https://w3id.org/rec/asset/bladeDiameter -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/bladeDiameter">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/bladeDiameter">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+        <rdfs:label xml:lang="en">blade diameter</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/bladeType -->
+    <!-- https://w3id.org/rec/asset/bladeType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/bladeType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/bladeType">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -479,17 +485,18 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/bulkStorageCapacity -->
+    <!-- https://w3id.org/rec/asset/bulkStorageCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/bulkStorageCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/bulkStorageCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
+        <rdfs:label xml:lang="en">bulk storage capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/commissionDate -->
+    <!-- https://w3id.org/rec/asset/commissionDate -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/commissionDate">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/commissionDate">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">commission date</rdfs:label>
@@ -497,9 +504,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/compressorType -->
+    <!-- https://w3id.org/rec/asset/compressorType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/compressorType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/compressorType">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -539,23 +546,23 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/condensate -->
+    <!-- https://w3id.org/rec/asset/condensate -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/condensate">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/condensate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/configuration -->
+    <!-- https://w3id.org/rec/asset/configuration -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/configuration"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/configuration"/>
     
 
 
-    <!-- https://w3id.org/rec/assets/coolingMethod -->
+    <!-- https://w3id.org/rec/asset/coolingMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/coolingMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/coolingMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -583,17 +590,18 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/dayTankCapacity -->
+    <!-- https://w3id.org/rec/asset/dayTankCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/dayTankCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/dayTankCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
+        <rdfs:label xml:lang="en">day tank capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/dehumidificationMethod -->
+    <!-- https://w3id.org/rec/asset/dehumidificationMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/dehumidificationMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/dehumidificationMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -640,9 +648,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/dischargeDuctworkConfiguration -->
+    <!-- https://w3id.org/rec/asset/dischargeDuctworkConfiguration -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/dischargeDuctworkConfiguration">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/dischargeDuctworkConfiguration">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -671,17 +679,17 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/driveType -->
+    <!-- https://w3id.org/rec/asset/driveType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/driveType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/driveType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/ductInletConfiguration -->
+    <!-- https://w3id.org/rec/asset/ductInletConfiguration -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/ductInletConfiguration">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/ductInletConfiguration">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -703,9 +711,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ductInletShape -->
+    <!-- https://w3id.org/rec/asset/ductInletShape -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/ductInletShape">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/ductInletShape">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -734,26 +742,27 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ductInletSize -->
+    <!-- https://w3id.org/rec/asset/ductInletSize -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/ductInletSize">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/ductInletSize">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+        <rdfs:label xml:lang="en">duct inlet size</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/eer -->
+    <!-- https://w3id.org/rec/asset/eer -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/eer">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/eer">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label xml:lang="en">energy efficiency ratio</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/expectedEndOfLife -->
+    <!-- https://w3id.org/rec/asset/expectedEndOfLife -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/expectedEndOfLife">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/expectedEndOfLife">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">expected end-of-life</rdfs:label>
@@ -761,9 +770,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/expectedLife -->
+    <!-- https://w3id.org/rec/asset/expectedLife -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/expectedLife">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/expectedLife">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
         <rdfs:label xml:lang="en">expected life</rdfs:label>
@@ -771,9 +780,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/expectedReplacementCost -->
+    <!-- https://w3id.org/rec/asset/expectedReplacementCost -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/expectedReplacementCost">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/expectedReplacementCost">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">expected replacement cost</rdfs:label>
@@ -781,43 +790,44 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/fanMotorPower -->
+    <!-- https://w3id.org/rec/asset/fanMotorPower -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/fanMotorPower">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/fanMotorPower">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/HP"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/filterType -->
+    <!-- https://w3id.org/rec/asset/filterType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/filterType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/filterType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">filter type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/filtrationRating -->
+    <!-- https://w3id.org/rec/asset/filtrationRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/filtrationRating">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/filtrationRating">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">microns</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/fireRating -->
+    <!-- https://w3id.org/rec/asset/fireRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/fireRating">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/fireRating">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/HR"/>
+        <rdfs:label xml:lang="en">fire rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/flowCapacity -->
+    <!-- https://w3id.org/rec/asset/flowCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/flowCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/flowCapacity">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">litres per minute</rdfs:comment>
         <rdfs:label xml:lang="en">flow capacity</rdfs:label>
@@ -825,18 +835,18 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/flushingType -->
+    <!-- https://w3id.org/rec/asset/flushingType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/flushingType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/flushingType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">flushing type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/frequency -->
+    <!-- https://w3id.org/rec/asset/frequency -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/frequency">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/frequency">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">Hz</rdfs:comment>
         <rdfs:label xml:lang="en">frequency</rdfs:label>
@@ -844,17 +854,17 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/fuelType -->
+    <!-- https://w3id.org/rec/asset/fuelType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/fuelType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/fuelType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/headCapacity -->
+    <!-- https://w3id.org/rec/asset/headCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/headCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/headCapacity">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">foot of head</rdfs:comment>
@@ -863,9 +873,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/heatingMethod -->
+    <!-- https://w3id.org/rec/asset/heatingMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/heatingMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/heatingMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -905,9 +915,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/humidificationMethod -->
+    <!-- https://w3id.org/rec/asset/humidificationMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/humidificationMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/humidificationMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -942,26 +952,27 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/inclination -->
+    <!-- https://w3id.org/rec/asset/inclination -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/inclination">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/inclination">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/DEG"/>
+        <rdfs:label xml:lang="en">inclination</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/initialCost -->
+    <!-- https://w3id.org/rec/asset/initialCost -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/initialCost">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/initialCost">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/installationDate -->
+    <!-- https://w3id.org/rec/asset/installationDate -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/installationDate">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/installationDate">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">installation date</rdfs:label>
@@ -969,51 +980,52 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/installationType -->
+    <!-- https://w3id.org/rec/asset/installationType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/installationType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/installationType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/kFactorImperial -->
+    <!-- https://w3id.org/rec/asset/kFactorImperial -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/kFactorImperial">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/kFactorImperial">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">K-factor (imperial)</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/kFactorMetric -->
+    <!-- https://w3id.org/rec/asset/kFactorMetric -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/kFactorMetric">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/kFactorMetric">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">K-factor (metric)</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/leakageClass -->
+    <!-- https://w3id.org/rec/asset/leakageClass -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/leakageClass">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/leakageClass">
         <rdfs:label xml:lang="en">leakage class</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/mainsRating -->
+    <!-- https://w3id.org/rec/asset/mainsRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/mainsRating">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/mainsRating">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
+        <rdfs:label xml:lang="en">mains rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/maintenanceInterval -->
+    <!-- https://w3id.org/rec/asset/maintenanceInterval -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maintenanceInterval">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maintenanceInterval">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
         <rdfs:label xml:lang="en">maintenance interval</rdfs:label>
@@ -1021,17 +1033,18 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/maxAirflowRating -->
+    <!-- https://w3id.org/rec/asset/maxAirflowRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxAirflowRating">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxAirflowRating">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">maximum airflow rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/maxFlowRate -->
+    <!-- https://w3id.org/rec/asset/maxFlowRate -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxFlowRate">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxFlowRate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">litres per minute</rdfs:comment>
         <rdfs:label xml:lang="en">maximum flow rate</rdfs:label>
@@ -1039,159 +1052,168 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/maxLandings -->
+    <!-- https://w3id.org/rec/asset/maxLandings -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxLandings">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxLandings">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">maximum landings</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/maxLength -->
+    <!-- https://w3id.org/rec/asset/maxLength -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxLength">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxLength">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/M"/>
+        <rdfs:label xml:lang="en">maximum length</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/maxNumberOfPoles -->
+    <!-- https://w3id.org/rec/asset/maxNumberOfPoles -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxNumberOfPoles">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/ElectricalPanel"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxNumberOfPoles">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/ElectricalPanel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">max number of poles</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/maxRotationSpeed -->
+    <!-- https://w3id.org/rec/asset/maxRotationSpeed -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxRotationSpeed">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxRotationSpeed">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
+        <rdfs:label xml:lang="en">maximum rotation speed</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/maxTravelDistance -->
+    <!-- https://w3id.org/rec/asset/maxTravelDistance -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxTravelDistance">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxTravelDistance">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/M"/>
+        <rdfs:label xml:lang="en">maximum travel distance</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/maxTravelSpeed -->
+    <!-- https://w3id.org/rec/asset/maxTravelSpeed -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxTravelSpeed">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxTravelSpeed">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
+        <rdfs:label xml:lang="en">maximum travel speed</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/maxVerticalRise -->
+    <!-- https://w3id.org/rec/asset/maxVerticalRise -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/maxVerticalRise">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxVerticalRise">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/M"/>
+        <rdfs:label xml:lang="en">maximum vertical rise</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/medium -->
+    <!-- https://w3id.org/rec/asset/medium -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/medium">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/medium">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">medium</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/minAirflowRating -->
+    <!-- https://w3id.org/rec/asset/minAirflowRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/minAirflowRating">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/minAirflowRating">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">minimum airflow rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/modeOfOperation -->
+    <!-- https://w3id.org/rec/asset/modeOfOperation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/modeOfOperation">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/modeOfOperation">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/motorPower -->
+    <!-- https://w3id.org/rec/asset/motorPower -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/motorPower">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/motorPower">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/HP"/>
+        <rdfs:label xml:lang="en">motor power</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/netSensibleCoolingCapacity -->
+    <!-- https://w3id.org/rec/asset/netSensibleCoolingCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/netSensibleCoolingCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/netSensibleCoolingCapacity">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label xml:lang="en">net sensible cooling capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/netSensibleHeatingCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/netSensibleHeatingCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/netSensibleHeatingCapacity -->
+    <!-- https://w3id.org/rec/asset/nominalAirflow -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/netSensibleHeatingCapacity">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/assets/nominalAirflow -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/nominalAirflow">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalAirflow">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/nominalCoolingCapacity -->
+    <!-- https://w3id.org/rec/asset/nominalCoolingCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/nominalCoolingCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalCoolingCapacity">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label xml:lang="en">nominal cooling capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/nominalHeatingCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalHeatingCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/nominalHeatingCapacity -->
+    <!-- https://w3id.org/rec/asset/numberOfHandles -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/nominalHeatingCapacity">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/assets/numberOfHandles -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/numberOfHandles">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/Faucet"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/numberOfHandles">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Faucet"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/personCapacity -->
+    <!-- https://w3id.org/rec/asset/personCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/personCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/personCapacity">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">person capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/phase1 -->
+    <!-- https://w3id.org/rec/asset/phase1 -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/phase1">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/phase1">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1220,9 +1242,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/phase2 -->
+    <!-- https://w3id.org/rec/asset/phase2 -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/phase2">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/phase2">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1251,9 +1273,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/phase3 -->
+    <!-- https://w3id.org/rec/asset/phase3 -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/phase3">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/phase3">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1282,9 +1304,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/phases -->
+    <!-- https://w3id.org/rec/asset/phases -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/phases">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/phases">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1307,9 +1329,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/phasesInput -->
+    <!-- https://w3id.org/rec/asset/phasesInput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/phasesInput">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/phasesInput">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1332,9 +1354,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/phasesOutput -->
+    <!-- https://w3id.org/rec/asset/phasesOutput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/phasesOutput">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/phasesOutput">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1357,43 +1379,45 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/poles -->
+    <!-- https://w3id.org/rec/asset/poles -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/poles">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/poles">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">poles</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/powerInput -->
+    <!-- https://w3id.org/rec/asset/powerInput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/powerInput">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/powerInput">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label xml:lang="en">power input</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/powerOutput -->
+    <!-- https://w3id.org/rec/asset/powerOutput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/powerOutput">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/powerOutput">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label xml:lang="en">power output</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/powerOutputKVA -->
+    <!-- https://w3id.org/rec/asset/powerOutputKVA -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/powerOutputKVA">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/powerOutputKVA">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">power output (KVA)</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/preHeatingMethod -->
+    <!-- https://w3id.org/rec/asset/preHeatingMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/preHeatingMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/preHeatingMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1428,17 +1452,18 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/pressureCapacity -->
+    <!-- https://w3id.org/rec/asset/pressureCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/pressureCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/pressureCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+        <rdfs:label xml:lang="en">pressure capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/primaryCoolingMethod -->
+    <!-- https://w3id.org/rec/asset/primaryCoolingMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/primaryCoolingMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primaryCoolingMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1467,9 +1492,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/primaryHeatingMethod -->
+    <!-- https://w3id.org/rec/asset/primaryHeatingMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/primaryHeatingMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primaryHeatingMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1504,35 +1529,35 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/primePower -->
+    <!-- https://w3id.org/rec/asset/primePower -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/primePower">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primePower">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/primePowerKVA -->
+    <!-- https://w3id.org/rec/asset/primePowerKVA -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/primePowerKVA">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/Generator"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primePowerKVA">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">prime power rating (KVA)</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/pumpingMedia -->
+    <!-- https://w3id.org/rec/asset/pumpingMedia -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/pumpingMedia">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/pumpingMedia">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/reHeatingMethod -->
+    <!-- https://w3id.org/rec/asset/reHeatingMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/reHeatingMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/reHeatingMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1567,10 +1592,10 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/recovery100FRise -->
+    <!-- https://w3id.org/rec/asset/recovery100FRise -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/recovery100FRise">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/Boiler"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/recovery100FRise">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Boiler"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">Imperial measure for the recovery rate of a boiler (gallons per hour).</rdfs:comment>
         <rdfs:label xml:lang="en">recovery @ 100F rise</rdfs:label>
@@ -1578,42 +1603,45 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/refrigerentType -->
+    <!-- https://w3id.org/rec/asset/refrigerentType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/refrigerentType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/refrigerentType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">refrigerant type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/returnFanMotorSize -->
+    <!-- https://w3id.org/rec/asset/returnFanMotorSize -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/returnFanMotorSize">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/returnFanMotorSize">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/HP"/>
+        <rdfs:label xml:lang="en">return fan motor size</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/returnFanNominalAirflow -->
+    <!-- https://w3id.org/rec/asset/returnFanNominalAirflow -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/returnFanNominalAirflow">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/returnFanNominalAirflow">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">return fan nominal airflow</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/runtime -->
+    <!-- https://w3id.org/rec/asset/runtime -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/runtime">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/runtime">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MIN"/>
+        <rdfs:label xml:lang="en">runtime</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/secondaryCoolingMethod -->
+    <!-- https://w3id.org/rec/asset/secondaryCoolingMethod -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/secondaryCoolingMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/secondaryCoolingMethod">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1642,78 +1670,81 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/service -->
+    <!-- https://w3id.org/rec/asset/service -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/service">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/service">
         <rdfs:label xml:lang="en">service</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/shortCircuitRating -->
+    <!-- https://w3id.org/rec/asset/shortCircuitRating -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/shortCircuitRating">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/shortCircuitRating">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">short circuit rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/sizeKVA -->
+    <!-- https://w3id.org/rec/asset/sizeKVA -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/sizeKVA">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/sizeKVA">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">size (KVA)</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/standbyPower -->
+    <!-- https://w3id.org/rec/asset/standbyPower -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/standbyPower">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/standbyPower">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/standbyPowerKVA -->
+    <!-- https://w3id.org/rec/asset/standbyPowerKVA -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/standbyPowerKVA">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/Generator"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/standbyPowerKVA">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">standby power rating (KVA)</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/stepWidth -->
+    <!-- https://w3id.org/rec/asset/stepWidth -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/stepWidth">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/stepWidth">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+        <rdfs:label xml:lang="en">step width</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/supplyFanMotorSize -->
+    <!-- https://w3id.org/rec/asset/supplyFanMotorSize -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/supplyFanMotorSize">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/supplyFanMotorSize">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/HP"/>
+        <rdfs:label xml:lang="en">supply fan motor size</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/supplyFanNominalAirflow -->
+    <!-- https://w3id.org/rec/asset/supplyFanNominalAirflow -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/supplyFanNominalAirflow">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/supplyFanNominalAirflow">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">supply fan nominal airflow</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/switchingMechanism -->
+    <!-- https://w3id.org/rec/asset/switchingMechanism -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/switchingMechanism">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/AutomaticTransferSwitch"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/switchingMechanism">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/AutomaticTransferSwitch"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1742,37 +1773,37 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/systemPressure -->
+    <!-- https://w3id.org/rec/asset/systemPressure -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/systemPressure">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/systemPressure">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/PSI"/>
         <rdfs:label xml:lang="en">system pressure</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/tankCapacity -->
+    <!-- https://w3id.org/rec/asset/tankCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/tankCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/tankCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
         <rdfs:label xml:lang="en">tank capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/technology -->
+    <!-- https://w3id.org/rec/asset/technology -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/technology">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/technology">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">technology</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/transitionType -->
+    <!-- https://w3id.org/rec/asset/transitionType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/transitionType">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/AutomaticTransferSwitch"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/transitionType">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/AutomaticTransferSwitch"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1795,9 +1826,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/turnoverDate -->
+    <!-- https://w3id.org/rec/asset/turnoverDate -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/turnoverDate">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/turnoverDate">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:label xml:lang="en">turnover date</rdfs:label>
@@ -1805,18 +1836,18 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/type -->
+    <!-- https://w3id.org/rec/asset/type -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/type">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/type">
         <rdfs:comment xml:lang="en">Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values.</rdfs:comment>
         <rdfs:label xml:lang="en">type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/ventilationConfiguration -->
+    <!-- https://w3id.org/rec/asset/ventilationConfiguration -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/ventilationConfiguration">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/ventilationConfiguration">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1845,9 +1876,9 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ventilationStrategy -->
+    <!-- https://w3id.org/rec/asset/ventilationStrategy -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/ventilationStrategy">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/ventilationStrategy">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1882,93 +1913,99 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/voltage -->
+    <!-- https://w3id.org/rec/asset/voltage -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/voltage">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/voltage">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+        <rdfs:label xml:lang="en">voltage</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/voltageInput -->
+    <!-- https://w3id.org/rec/asset/voltageInput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/voltageInput">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/voltageInput">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+        <rdfs:label xml:lang="en">input voltage</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/voltageOutput -->
+    <!-- https://w3id.org/rec/asset/voltageOutput -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/voltageOutput">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/voltageOutput">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+        <rdfs:label xml:lang="en">output voltage</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/voltagePrimary -->
+    <!-- https://w3id.org/rec/asset/voltagePrimary -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/voltagePrimary">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/voltagePrimary">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+        <rdfs:label xml:lang="en">primary voltage</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/voltageSecondary -->
+    <!-- https://w3id.org/rec/asset/voltageSecondary -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/voltageSecondary">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/voltageSecondary">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+        <rdfs:label xml:lang="en">secondary voltage</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/waterPerFlush -->
+    <!-- https://w3id.org/rec/asset/waterPerFlush -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/waterPerFlush">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/waterPerFlush">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/weightCapacity -->
+    <!-- https://w3id.org/rec/asset/weightCapacity -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/weightCapacity">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/weightCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
+        <rdfs:label xml:lang="en">weight capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/wireSize -->
+    <!-- https://w3id.org/rec/asset/wireSize -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/wireSize">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/ElectricalCircuit"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/wireSize">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/ElectricalCircuit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">wire size</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/wireType -->
+    <!-- https://w3id.org/rec/asset/wireType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/wireType">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/assets/ElectricalCircuit"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/wireType">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/ElectricalCircuit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">wire type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/workingPressure -->
+    <!-- https://w3id.org/rec/asset/workingPressure -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/workingPressure">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/workingPressure">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/PSI"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/assets/zoneDelivery -->
+    <!-- https://w3id.org/rec/asset/zoneDelivery -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/assets/zoneDelivery">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/zoneDelivery">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -2014,13 +2051,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/AirHandlingUnit -->
+    <!-- https://w3id.org/rec/asset/AirHandlingUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/AirHandlingUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/AirHandlingUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/airflowModulation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/airflowModulation"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2042,7 +2079,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/dehumidificationMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/dehumidificationMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2088,7 +2125,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/dischargeDuctworkConfiguration"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/dischargeDuctworkConfiguration"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2116,13 +2153,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/filterType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/filterType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/humidificationMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/humidificationMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2156,19 +2193,19 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/netSensibleCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/preHeatingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/preHeatingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2202,7 +2239,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/primaryCoolingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryCoolingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2230,7 +2267,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/primaryHeatingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryHeatingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2264,7 +2301,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/reHeatingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2298,25 +2335,25 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/refrigerentType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerentType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/returnFanMotorSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/returnFanMotorSize"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/returnFanNominalAirflow"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/returnFanNominalAirflow"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/secondaryCoolingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/secondaryCoolingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2344,19 +2381,19 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/supplyFanMotorSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/supplyFanMotorSize"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/supplyFanNominalAirflow"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/supplyFanNominalAirflow"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ventilationConfiguration"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ventilationConfiguration"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2384,7 +2421,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ventilationStrategy"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ventilationStrategy"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2418,7 +2455,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/zoneDelivery"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/zoneDelivery"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2455,22 +2492,22 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ArchitecturalAsset -->
+    <!-- https://w3id.org/rec/asset/ArchitecturalAsset -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ArchitecturalAsset">
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ArchitecturalAsset">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:label xml:lang="en">Architectural asset</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/AutomaticTransferSwitch -->
+    <!-- https://w3id.org/rec/asset/AutomaticTransferSwitch -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/AutomaticTransferSwitch">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/TransferSwitch"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/AutomaticTransferSwitch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TransferSwitch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/switchingMechanism"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/switchingMechanism"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2498,7 +2535,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/transitionType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/transitionType"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2523,30 +2560,30 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/BackdraftDamper -->
+    <!-- https://w3id.org/rec/asset/BackdraftDamper -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/BackdraftDamper">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Damper"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/BackdraftDamper">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Damper"/>
         <rdfs:label xml:lang="en">Backdraft Damper</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/Bed -->
+    <!-- https://w3id.org/rec/asset/Bed -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Bed">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Furniture"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Bed">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Furniture"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/Boiler -->
+    <!-- https://w3id.org/rec/asset/Boiler -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Boiler">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Boiler">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/medium"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/medium"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2568,25 +2605,25 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerOutput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/tankCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2610,28 +2647,28 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/CAVBox -->
+    <!-- https://w3id.org/rec/asset/CAVBox -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/CAVBox">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/TerminalUnit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/CAVBox">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TerminalUnit"/>
         <rdfs:label xml:lang="en">CAV box</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/CeilingFan -->
+    <!-- https://w3id.org/rec/asset/CeilingFan -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/CeilingFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Fan"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/CeilingFan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/bladeDiameter"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/bladeDiameter"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxRotationSpeed"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxRotationSpeed"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2640,30 +2677,30 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Chair -->
+    <!-- https://w3id.org/rec/asset/Chair -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Chair">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Furniture"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Chair">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Furniture"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/ChilledWaterPlant -->
+    <!-- https://w3id.org/rec/asset/ChilledWaterPlant -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ChilledWaterPlant">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ChilledWaterPlant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:label xml:lang="en">Chilled water plant</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/Chiller -->
+    <!-- https://w3id.org/rec/asset/Chiller -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Chiller">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Chiller">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/compressorType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/compressorType"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2703,25 +2740,25 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/netSensibleCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/refrigerentType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerentType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2746,49 +2783,49 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/CondensingUnit -->
+    <!-- https://w3id.org/rec/asset/CondensingUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/CondensingUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/CondensingUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/eer"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/eer"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/netSensibleCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/netSensibleHeatingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleHeatingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalHeatingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalHeatingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/refrigerentType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerentType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2813,13 +2850,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ConveyanceEquipment -->
+    <!-- https://w3id.org/rec/asset/ConveyanceEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ConveyanceEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/MountedEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ConveyanceEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2828,31 +2865,31 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/CoolingTower -->
+    <!-- https://w3id.org/rec/asset/CoolingTower -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/CoolingTower">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/CoolingTower">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/fanMotorPower"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fanMotorPower"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/flowCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalAirflow"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalAirflow"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2861,13 +2898,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Damper -->
+    <!-- https://w3id.org/rec/asset/Damper -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Damper">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Damper">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/bladeType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/bladeType"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2895,7 +2932,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ductInletShape"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletShape"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2923,13 +2960,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ductInletSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletSize"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/leakageClass"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/leakageClass"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2957,7 +2994,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/service"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/service"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2988,46 +3025,46 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/DedicatedOutdoorAirSystem -->
+    <!-- https://w3id.org/rec/asset/DedicatedOutdoorAirSystem -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/DedicatedOutdoorAirSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/AirHandlingUnit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/DedicatedOutdoorAirSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AirHandlingUnit"/>
         <rdfs:label xml:lang="en">Dedicated Outdoor Air System</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/DomesticWaterPump -->
+    <!-- https://w3id.org/rec/asset/DomesticWaterPump -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/DomesticWaterPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingPump"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/DomesticWaterPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/Drain -->
+    <!-- https://w3id.org/rec/asset/Drain -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Drain">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Drain">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/EjectorPump -->
+    <!-- https://w3id.org/rec/asset/EjectorPump -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/EjectorPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingPump"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/EjectorPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricTankWaterHeater -->
+    <!-- https://w3id.org/rec/asset/ElectricTankWaterHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricTankWaterHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/TankWaterHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricTankWaterHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TankWaterHeater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3035,13 +3072,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricTanklessWaterHeater -->
+    <!-- https://w3id.org/rec/asset/ElectricTanklessWaterHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricTanklessWaterHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/TanklessWaterHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricTanklessWaterHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TanklessWaterHeater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3049,13 +3086,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricUnitHeater -->
+    <!-- https://w3id.org/rec/asset/ElectricUnitHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricUnitHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/UnitHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricUnitHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/UnitHeater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3064,19 +3101,19 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricalCircuit -->
+    <!-- https://w3id.org/rec/asset/ElectricalCircuit -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricalCircuit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalCircuit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/CBRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/CBRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/poles"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/poles"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3104,19 +3141,19 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/voltage"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltage"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/wireSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/wireSize"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/wireType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/wireType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3125,13 +3162,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricalCircuit1Pole -->
+    <!-- https://w3id.org/rec/asset/ElectricalCircuit1Pole -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricalCircuit1Pole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalCircuit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalCircuit1Pole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalCircuit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phase1"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phase1"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3162,13 +3199,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricalCircuit2Pole -->
+    <!-- https://w3id.org/rec/asset/ElectricalCircuit2Pole -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricalCircuit2Pole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalCircuit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalCircuit2Pole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalCircuit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phase1"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phase1"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3196,7 +3233,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phase2"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phase2"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3227,13 +3264,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricalCircuit3Pole -->
+    <!-- https://w3id.org/rec/asset/ElectricalCircuit3Pole -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricalCircuit3Pole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalCircuit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalCircuit3Pole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalCircuit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phase1"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phase1"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3261,7 +3298,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phase2"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phase2"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3289,7 +3326,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phase3"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phase3"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3320,28 +3357,28 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricalEquipment -->
+    <!-- https://w3id.org/rec/asset/ElectricalEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricalEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/MountedEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
         <rdfs:label xml:lang="en">Electrical equipment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricalPanel -->
+    <!-- https://w3id.org/rec/asset/ElectricalPanel -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricalPanel">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxNumberOfPoles"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxNumberOfPoles"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phasesOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesOutput"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3363,13 +3400,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/shortCircuitRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/shortCircuitRating"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/voltageInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageInput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3378,13 +3415,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricalPanelMCB -->
+    <!-- https://w3id.org/rec/asset/ElectricalPanelMCB -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricalPanelMCB">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalPanel"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanelMCB">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalPanel"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/MCBRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/MCBRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3393,13 +3430,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElectricalPanelMLO -->
+    <!-- https://w3id.org/rec/asset/ElectricalPanelMLO -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElectricalPanelMLO">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalPanel"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanelMLO">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalPanel"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/mainsRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mainsRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3408,37 +3445,37 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Elevator -->
+    <!-- https://w3id.org/rec/asset/Elevator -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Elevator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ConveyanceEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Elevator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ConveyanceEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxLandings"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxLandings"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxTravelDistance"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxTravelDistance"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxTravelSpeed"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxTravelSpeed"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/personCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/personCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/weightCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/weightCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3447,19 +3484,19 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ElevatorMachine -->
+    <!-- https://w3id.org/rec/asset/ElevatorMachine -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ElevatorMachine">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ConveyanceEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElevatorMachine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ConveyanceEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/motorPower"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/motorPower"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/weightCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/weightCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3468,31 +3505,31 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Escalator -->
+    <!-- https://w3id.org/rec/asset/Escalator -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Escalator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ConveyanceEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Escalator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ConveyanceEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/inclination"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inclination"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxTravelSpeed"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxTravelSpeed"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxVerticalRise"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxVerticalRise"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/stepWidth"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/stepWidth"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3501,22 +3538,22 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ExhaustFan -->
+    <!-- https://w3id.org/rec/asset/ExhaustFan -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ExhaustFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Fan"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ExhaustFan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
         <rdfs:label xml:lang="en">Exhaust Fan</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/ExpansionTank -->
+    <!-- https://w3id.org/rec/asset/ExpansionTank -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ExpansionTank">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Tank"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ExpansionTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Tank"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3546,13 +3583,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Fan -->
+    <!-- https://w3id.org/rec/asset/Fan -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Fan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Fan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/driveType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/driveType"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3574,7 +3611,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ductInletShape"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletShape"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3602,31 +3639,31 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ductInletSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletSize"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxAirflowRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxAirflowRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/minAirflowRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/minAirflowRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/motorPower"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/motorPower"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3635,13 +3672,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/FanCoilUnit -->
+    <!-- https://w3id.org/rec/asset/FanCoilUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FanCoilUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/TerminalUnit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FanCoilUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TerminalUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/coolingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/coolingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3669,43 +3706,43 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/fanMotorPower"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fanMotorPower"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/filterType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/filterType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/netSensibleCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalAirflow"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalAirflow"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalCoolingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/refrigerentType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerentType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3730,13 +3767,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/FanCoilUnitReheat -->
+    <!-- https://w3id.org/rec/asset/FanCoilUnitReheat -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FanCoilUnitReheat">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/FanCoilUnit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FanCoilUnitReheat">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FanCoilUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/reHeatingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3773,13 +3810,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/FanPoweredBox -->
+    <!-- https://w3id.org/rec/asset/FanPoweredBox -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FanPoweredBox">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/VAVBox"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FanPoweredBox">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/VAVBox"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/configuration"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/configuration"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3804,13 +3841,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/FanPoweredBoxReheat -->
+    <!-- https://w3id.org/rec/asset/FanPoweredBoxReheat -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FanPoweredBoxReheat">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/FanPoweredBox"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FanPoweredBoxReheat">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FanPoweredBox"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/reHeatingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3847,31 +3884,31 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Faucet -->
+    <!-- https://w3id.org/rec/asset/Faucet -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Faucet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingFixture"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Faucet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingFixture"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/mountedOn"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/assets/Sink"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mountedOn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Sink"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxFlowRate"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxFlowRate"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/numberOfHandles"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/numberOfHandles"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3895,22 +3932,22 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/FireAlarmEquipment -->
+    <!-- https://w3id.org/rec/asset/FireAlarmEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FireAlarmEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/FireProtectionEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FireAlarmEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FireProtectionEquipment"/>
         <rdfs:label xml:lang="en">Fire Alarm Equipment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/FireDamper -->
+    <!-- https://w3id.org/rec/asset/FireDamper -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FireDamper">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Damper"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FireDamper">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Damper"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/fireRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fireRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HR"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3919,55 +3956,55 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/FireExtinguisher -->
+    <!-- https://w3id.org/rec/asset/FireExtinguisher -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FireExtinguisher">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/FireSuppressionEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FireExtinguisher">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FireSuppressionEquipment"/>
         <rdfs:label xml:lang="en">Fire Extinguisher</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/FireProtectionEquipment -->
+    <!-- https://w3id.org/rec/asset/FireProtectionEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FireProtectionEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/MountedEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FireProtectionEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
         <rdfs:label xml:lang="en">Fire Protection Equipment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/FirePump -->
+    <!-- https://w3id.org/rec/asset/FirePump -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FirePump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/SprinklerEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FirePump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/flowCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/headCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/headCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/pressureCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pressureCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/pumpingMedia"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pumpingMedia"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3976,34 +4013,34 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/FireSmokeDamper -->
+    <!-- https://w3id.org/rec/asset/FireSmokeDamper -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FireSmokeDamper">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/FireDamper"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FireSmokeDamper">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FireDamper"/>
         <rdfs:label xml:lang="en">Fire/Smoke Damper</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/FireSprinklerHead -->
+    <!-- https://w3id.org/rec/asset/FireSprinklerHead -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FireSprinklerHead">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/SprinklerEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FireSprinklerHead">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/kFactorImperial"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/kFactorImperial"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/kFactorMetric"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/kFactorMetric"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4040,36 +4077,36 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/FireSuppressionEquipment -->
+    <!-- https://w3id.org/rec/asset/FireSuppressionEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FireSuppressionEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/FireProtectionEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FireSuppressionEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FireProtectionEquipment"/>
         <rdfs:label xml:lang="en">Fire Suppression Equipment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/FloorDrain -->
+    <!-- https://w3id.org/rec/asset/FloorDrain -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FloorDrain">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Drain"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FloorDrain">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Drain"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/FlushometerValve -->
+    <!-- https://w3id.org/rec/asset/FlushometerValve -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/FlushometerValve">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingFixture"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/FlushometerValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingFixture"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/mountedOn"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mountedOn"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/technology"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/technology"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4091,7 +4128,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4113,7 +4150,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/waterPerFlush"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/waterPerFlush"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4122,22 +4159,22 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Furniture -->
+    <!-- https://w3id.org/rec/asset/Furniture -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Furniture">
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Furniture">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:label xml:lang="en">Furniture</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/GasTankWaterHeater -->
+    <!-- https://w3id.org/rec/asset/GasTankWaterHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/GasTankWaterHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/TankWaterHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/GasTankWaterHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TankWaterHeater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4145,13 +4182,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/GasTanklessWaterHeater -->
+    <!-- https://w3id.org/rec/asset/GasTanklessWaterHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/GasTanklessWaterHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/TanklessWaterHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/GasTanklessWaterHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TanklessWaterHeater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4159,43 +4196,43 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Generator -->
+    <!-- https://w3id.org/rec/asset/Generator -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Generator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Generator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/bulkStorageCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/bulkStorageCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/dayTankCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/dayTankCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/frequency"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/frequency"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/fuelType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fuelType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/modeOfOperation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/modeOfOperation"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phasesOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesOutput"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4217,31 +4254,31 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/primePower"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primePower"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/primePowerKVA"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primePowerKVA"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/standbyPower"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/standbyPower"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/standbyPowerKVA"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/standbyPowerKVA"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/voltageOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageOutput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4249,46 +4286,46 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/HVACEquipment -->
+    <!-- https://w3id.org/rec/asset/HVACEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/HVACEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/MountedEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
         <rdfs:label xml:lang="en">HVAC Equipment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/HVACPump -->
+    <!-- https://w3id.org/rec/asset/HVACPump -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/HVACPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/flowCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/headCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/headCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/pressureCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pressureCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/pumpingMedia"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pumpingMedia"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4313,28 +4350,28 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/HeatExchanger -->
+    <!-- https://w3id.org/rec/asset/HeatExchanger -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/HeatExchanger">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HeatExchanger">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:label xml:lang="en">Heat exchanger</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/HotWaterUnitHeater -->
+    <!-- https://w3id.org/rec/asset/HotWaterUnitHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/HotWaterUnitHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/UnitHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HotWaterUnitHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/UnitHeater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/condensate"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/condensate"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/flowCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4343,63 +4380,63 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ITEquipment -->
+    <!-- https://w3id.org/rec/asset/ITEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ITEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/MountedEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ITEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
         <rdfs:label xml:lang="en">IT Equipment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/ITHardware -->
+    <!-- https://w3id.org/rec/asset/ITHardware -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ITHardware">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ITEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ITHardware">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITEquipment"/>
         <rdfs:label xml:lang="en">IT Hardware</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/IrrigationPump -->
+    <!-- https://w3id.org/rec/asset/IrrigationPump -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/IrrigationPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingPump"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/IrrigationPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/JockeyPump -->
+    <!-- https://w3id.org/rec/asset/JockeyPump -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/JockeyPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/SprinklerEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/JockeyPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/flowCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/headCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/headCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/pressureCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pressureCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/pumpingMedia"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pumpingMedia"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4408,31 +4445,31 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/LightingController -->
+    <!-- https://w3id.org/rec/asset/LightingController -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/LightingController">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/LightingEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/LightingController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/LightingEquipment"/>
         <rdfs:label xml:lang="en">Lighting Controller</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/LightingEquipment -->
+    <!-- https://w3id.org/rec/asset/LightingEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/LightingEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/MountedEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/LightingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
         <rdfs:label xml:lang="en">Lighting Equipment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/Luminaire -->
+    <!-- https://w3id.org/rec/asset/Luminaire -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Luminaire">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/LightingEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Luminaire">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/LightingEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4463,18 +4500,18 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/MakeupAirUnit -->
+    <!-- https://w3id.org/rec/asset/MakeupAirUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/MakeupAirUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/AirHandlingUnit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/MakeupAirUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AirHandlingUnit"/>
         <rdfs:label xml:lang="en">Makeup Air Unit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/MountedEquipment -->
+    <!-- https://w3id.org/rec/asset/MountedEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/MountedEquipment">
+    <owl:Class rdf:about="https://w3id.org/rec/asset/MountedEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Mounted equipment</rdfs:label>
@@ -4482,31 +4519,31 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/MovingWalkway -->
+    <!-- https://w3id.org/rec/asset/MovingWalkway -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/MovingWalkway">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ConveyanceEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/MovingWalkway">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ConveyanceEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/inclination"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inclination"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxLength"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxLength"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxTravelSpeed"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxTravelSpeed"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/stepWidth"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/stepWidth"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4515,53 +4552,53 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/PlumbingEquipment -->
+    <!-- https://w3id.org/rec/asset/PlumbingEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/PlumbingEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/MountedEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/PlumbingFixture -->
+    <!-- https://w3id.org/rec/asset/PlumbingFixture -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/PlumbingFixture">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingFixture">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/PlumbingPump -->
+    <!-- https://w3id.org/rec/asset/PlumbingPump -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/PlumbingPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/flowCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/headCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/headCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/pressureCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pressureCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/pumpingMedia"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pumpingMedia"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4569,13 +4606,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/PlumbingStorageTank -->
+    <!-- https://w3id.org/rec/asset/PlumbingStorageTank -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/PlumbingStorageTank">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Tank"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingStorageTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Tank"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/arrangement"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/arrangement"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4597,7 +4634,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4621,106 +4658,106 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/RoofDrain -->
+    <!-- https://w3id.org/rec/asset/RoofDrain -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/RoofDrain">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Drain"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/RoofDrain">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Drain"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/RooftopUnit -->
+    <!-- https://w3id.org/rec/asset/RooftopUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/RooftopUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/AirHandlingUnit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/RooftopUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AirHandlingUnit"/>
         <rdfs:label xml:lang="en">Rooftop Unit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/Server -->
+    <!-- https://w3id.org/rec/asset/Server -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Server">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ITHardware"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Server">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITHardware"/>
         <rdfs:label xml:lang="en">Server</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/Sink -->
+    <!-- https://w3id.org/rec/asset/Sink -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Sink">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingFixture"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Sink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingFixture"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/SmokeDamper -->
+    <!-- https://w3id.org/rec/asset/SmokeDamper -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/SmokeDamper">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Damper"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SmokeDamper">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Damper"/>
         <rdfs:label xml:lang="en">Smoke Damper</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/SprinklerEquipment -->
+    <!-- https://w3id.org/rec/asset/SprinklerEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/SprinklerEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/FireSuppressionEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FireSuppressionEquipment"/>
         <rdfs:label xml:lang="en">Sprinkler Equipment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/StairPressurizationFan -->
+    <!-- https://w3id.org/rec/asset/StairPressurizationFan -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/StairPressurizationFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Fan"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/StairPressurizationFan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
         <rdfs:label xml:lang="en">Stair Pressurization Fan</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/SteamUnitHeater -->
+    <!-- https://w3id.org/rec/asset/SteamUnitHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/SteamUnitHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/UnitHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SteamUnitHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/UnitHeater"/>
         <rdfs:label xml:lang="en">Steam unit heater</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/SumpPump -->
+    <!-- https://w3id.org/rec/asset/SumpPump -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/SumpPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingPump"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SumpPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/SupplyFan -->
+    <!-- https://w3id.org/rec/asset/SupplyFan -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/SupplyFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Fan"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SupplyFan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
         <rdfs:label xml:lang="en">Supply Fan</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/Tank -->
+    <!-- https://w3id.org/rec/asset/Tank -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Tank">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Tank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/systemPressure"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/systemPressure"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/tankCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4728,13 +4765,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/TankWaterHeater -->
+    <!-- https://w3id.org/rec/asset/TankWaterHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/TankWaterHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/WaterHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/TankWaterHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/WaterHeater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/tankCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4742,21 +4779,21 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/TanklessWaterHeater -->
+    <!-- https://w3id.org/rec/asset/TanklessWaterHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/TanklessWaterHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/WaterHeater"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/TanklessWaterHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/WaterHeater"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/TerminalUnit -->
+    <!-- https://w3id.org/rec/asset/TerminalUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/TerminalUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/TerminalUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ductInletConfiguration"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletConfiguration"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4778,7 +4815,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ductInletShape"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletShape"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4806,19 +4843,19 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/ductInletSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletSize"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/maxAirflowRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxAirflowRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/minAirflowRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/minAirflowRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4827,13 +4864,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Toilet -->
+    <!-- https://w3id.org/rec/asset/Toilet -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Toilet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingFixture"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Toilet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingFixture"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/installationType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/installationType"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4855,7 +4892,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/waterPerFlush"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/waterPerFlush"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4863,22 +4900,22 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/ToiletFlushometer -->
+    <!-- https://w3id.org/rec/asset/ToiletFlushometer -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ToiletFlushometer">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Toilet"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ToiletFlushometer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Toilet"/>
         <rdfs:label xml:lang="en">Toilet with Flushometer</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/ToiletTank -->
+    <!-- https://w3id.org/rec/asset/ToiletTank -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/ToiletTank">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Toilet"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ToiletTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Toilet"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/flushingType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flushingType"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4903,28 +4940,28 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/TransferFan -->
+    <!-- https://w3id.org/rec/asset/TransferFan -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/TransferFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Fan"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/TransferFan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
         <rdfs:label xml:lang="en">Transfer Fan</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/TransferSwitch -->
+    <!-- https://w3id.org/rec/asset/TransferSwitch -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/TransferSwitch">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/TransferSwitch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/mainsRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mainsRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/poles"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/poles"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4949,13 +4986,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Transformer -->
+    <!-- https://w3id.org/rec/asset/Transformer -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Transformer">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Transformer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phases"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phases"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4977,25 +5014,25 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/sizeKVA"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/sizeKVA"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/voltagePrimary"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltagePrimary"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/voltageSecondary"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageSecondary"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5004,13 +5041,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/UPS -->
+    <!-- https://w3id.org/rec/asset/UPS -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/UPS">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/UPS">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phasesInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesInput"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -5032,7 +5069,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/phasesOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesOutput"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -5054,31 +5091,31 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerOutput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/powerOutputKVA"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerOutputKVA"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/runtime"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/runtime"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MIN"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/voltageInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageInput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/voltageOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageOutput"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5087,19 +5124,19 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/UnitHeater -->
+    <!-- https://w3id.org/rec/asset/UnitHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/UnitHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/UnitHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/fanMotorPower"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fanMotorPower"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/heatingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/heatingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -5139,19 +5176,19 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalAirflow"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalAirflow"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/nominalHeatingCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalHeatingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -5176,21 +5213,21 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/Urinal -->
+    <!-- https://w3id.org/rec/asset/Urinal -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/Urinal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingFixture"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Urinal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingFixture"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/UrinalFlushometer -->
+    <!-- https://w3id.org/rec/asset/UrinalFlushometer -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/UrinalFlushometer">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Urinal"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/UrinalFlushometer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Urinal"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/waterPerFlush"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/waterPerFlush"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5199,31 +5236,31 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/UrinalWaterless -->
+    <!-- https://w3id.org/rec/asset/UrinalWaterless -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/UrinalWaterless">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/Urinal"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/UrinalWaterless">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Urinal"/>
         <rdfs:label xml:lang="en">Urinal - Waterless</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/VAVBox -->
+    <!-- https://w3id.org/rec/asset/VAVBox -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/VAVBox">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/TerminalUnit"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/VAVBox">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TerminalUnit"/>
         <rdfs:label xml:lang="en">VAV box</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/assets/VAVBoxReheat -->
+    <!-- https://w3id.org/rec/asset/VAVBoxReheat -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/VAVBoxReheat">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/VAVBox"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/VAVBoxReheat">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/VAVBox"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/reHeatingMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -5260,13 +5297,13 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/VariableFrequencyDrive -->
+    <!-- https://w3id.org/rec/asset/VariableFrequencyDrive -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/VariableFrequencyDrive">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/ElectricalEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/VariableFrequencyDrive">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -5297,37 +5334,37 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/WaterFilter -->
+    <!-- https://w3id.org/rec/asset/WaterFilter -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/WaterFilter">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/HVACEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/WaterFilter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/filtrationRating"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/filtrationRating"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/flowCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/tankCapacity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/assets/workingPressure"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/workingPressure"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5336,10 +5373,10 @@
     
 
 
-    <!-- https://w3id.org/rec/assets/WaterHeater -->
+    <!-- https://w3id.org/rec/asset/WaterHeater -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/assets/WaterHeater">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/assets/PlumbingEquipment"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/WaterHeater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
     </owl:Class>
     
 
@@ -5352,113 +5389,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/CBRating">
+    <rdf:Description rdf:about="https://w3id.org/rec/asset/CBRating">
         <rdfs:label xml:lang="en">circuit breaker rating</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/MCBRating">
-        <rdfs:label xml:lang="en">main circuit breaker rating</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/bladeDiameter">
-        <rdfs:label xml:lang="en">blade diameter</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/bulkStorageCapacity">
-        <rdfs:label xml:lang="en">bulk storage capacity</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/dayTankCapacity">
-        <rdfs:label xml:lang="en">day tank capacity</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/ductInletSize">
-        <rdfs:label xml:lang="en">duct inlet size</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/fireRating">
-        <rdfs:label xml:lang="en">fire rating</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/inclination">
-        <rdfs:label xml:lang="en">inclination</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/mainsRating">
-        <rdfs:label xml:lang="en">mains rating</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/maxAirflowRating">
-        <rdfs:label xml:lang="en">maximum airflow rating</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/maxLength">
-        <rdfs:label xml:lang="en">maximum length</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/maxRotationSpeed">
-        <rdfs:label xml:lang="en">maximum rotation speed</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/maxTravelDistance">
-        <rdfs:label xml:lang="en">maximum travel distance</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/maxTravelSpeed">
-        <rdfs:label xml:lang="en">maximum travel speed</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/maxVerticalRise">
-        <rdfs:label xml:lang="en">maximum vertical rise</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/minAirflowRating">
-        <rdfs:label xml:lang="en">minimum airflow rating</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/motorPower">
-        <rdfs:label xml:lang="en">motor power</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/netSensibleCoolingCapacity">
-        <rdfs:label xml:lang="en">net sensible cooling capacity</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/nominalCoolingCapacity">
-        <rdfs:label xml:lang="en">nominal cooling capacity</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/powerInput">
-        <rdfs:label xml:lang="en">power input</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/powerOutput">
-        <rdfs:label xml:lang="en">power output</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/pressureCapacity">
-        <rdfs:label xml:lang="en">pressure capacity</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/primePower">
+    <rdf:Description rdf:about="https://w3id.org/rec/asset/primePower">
         <rdfs:label xml:lang="en">prime power rating (Watt)</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/returnFanMotorSize">
-        <rdfs:label xml:lang="en">return fan motor size</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/returnFanNominalAirflow">
-        <rdfs:label xml:lang="en">return fan nominal airflow</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/runtime">
-        <rdfs:label xml:lang="en">runtime</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/standbyPower">
+    <rdf:Description rdf:about="https://w3id.org/rec/asset/standbyPower">
         <rdfs:label xml:lang="en">standby power rating (Watt)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/stepWidth">
-        <rdfs:label xml:lang="en">step width</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/supplyFanMotorSize">
-        <rdfs:label xml:lang="en">supply fan motor size</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/supplyFanNominalAirflow">
-        <rdfs:label xml:lang="en">supply fan nominal airflow</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/voltage">
-        <rdfs:label xml:lang="en">voltage</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/voltageInput">
-        <rdfs:label xml:lang="en">input voltage</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/voltageOutput">
-        <rdfs:label xml:lang="en">output voltage</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/voltagePrimary">
-        <rdfs:label xml:lang="en">primary voltage</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/voltageSecondary">
-        <rdfs:label xml:lang="en">secondary voltage</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/assets/weightCapacity">
-        <rdfs:label xml:lang="en">weight capacity</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
