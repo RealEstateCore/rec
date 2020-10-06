@@ -332,6 +332,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/commissionedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">commissioned by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -341,6 +342,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/installedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">installed by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -349,6 +351,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/isFedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:label xml:lang="en">is fed by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -358,6 +361,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/manufacturedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">manufactured by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -373,7 +377,9 @@
 
     <!-- https://w3id.org/rec/asset/mountedOn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/mountedOn"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/mountedOn">
+        <rdfs:label xml:lang="en">mounted on</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -382,6 +388,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/servicedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">serviced by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -547,6 +554,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:label xml:lang="en">compressor type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -555,13 +563,16 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/condensate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">condensate</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/rec/asset/configuration -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/configuration"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/configuration">
+        <rdfs:label xml:lang="en">configuration</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -591,6 +602,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:label xml:lang="en">cooling method</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -688,6 +700,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/driveType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">drive type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -712,6 +725,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:label xml:lang="en">duct inlet configuration</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -799,6 +813,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/fanMotorPower">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/HP"/>
+        <rdfs:label xml:lang="en">fan motor power</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -817,6 +832,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/filtrationRating">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">microns</rdfs:comment>
+        <rdfs:label xml:lang="en">filtration rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -863,6 +879,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/fuelType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">fuel type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -916,6 +933,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:label xml:lang="en">heating method</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -980,6 +998,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/initialCost">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">initial cost</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -998,6 +1017,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/installationType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">installation type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1152,6 +1172,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/modeOfOperation">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">mode of operation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1187,6 +1208,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/netSensibleHeatingCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label xml:lang="en">net sensible heating capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1195,6 +1217,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalAirflow">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">nominal airflow</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1212,6 +1235,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalHeatingCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label xml:lang="en">nominal heating capacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1221,6 +1245,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/numberOfHandles">
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Faucet"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">number of handles</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1605,6 +1630,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/pumpingMedia">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">pumping media</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1895,7 +1921,6 @@
     <!-- https://w3id.org/rec/asset/type -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/type">
-        <rdfs:comment xml:lang="en">Generic equipment typing property; typically used in class restrictions together with a restricted set of allowed string values.</rdfs:comment>
         <rdfs:label xml:lang="en">type</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2018,6 +2043,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/waterPerFlush">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
+        <rdfs:label xml:lang="en">water per flush</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2055,6 +2081,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/workingPressure">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+        <rdfs:label xml:lang="en">working pressure</rdfs:label>
     </owl:DatatypeProperty>
     
 
