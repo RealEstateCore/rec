@@ -653,21 +653,8 @@ Deprecated in favour of inverse properties core:servesSpace and core:servesAsset
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/serves">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">The coverage or impact area of a given device or sensor. For example: an air-treatment Device might serve several Rooms or a full Building. Note that devices can also service one another, e.g., an air-treatment Device might serve an air diffuser Device.
-
-Deprecated in favour of core:servesSpace and core:servesAsset</rdfs:comment>
+        <rdfs:comment xml:lang="en">The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset.</rdfs:comment>
         <rdfs:label xml:lang="en">serves</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/core/servesAsset -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servesAsset">
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:comment xml:lang="en">The asset that a given asset, sensor, or actuator works for/services. For example, an air-treatment Asset might serve an air diffuser Asset.</rdfs:comment>
-        <rdfs:label xml:lang="en">serves asset</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -713,16 +700,6 @@ Deprecated in favour of core:servesSpace</rdfs:comment>
 Deprecated in favour of core:servesAsset</rdfs:comment>
         <rdfs:label xml:lang="en">serves device</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/core/servesSpace -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servesSpace">
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
-        <rdfs:comment xml:lang="en">The coverage or impact area of a given asset, sensor, or actuator. For example: an air-treatment Asset might serve several Rooms or a full Building.</rdfs:comment>
-        <rdfs:label xml:lang="en">serves space</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1293,14 +1270,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servesAsset"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servesSpace"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/serves"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1435,14 +1406,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/Capability">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servesAsset"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servesSpace"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/serves"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Capability indicates the capacity of a rec entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term &quot;point&quot;. Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.</rdfs:comment>
