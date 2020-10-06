@@ -327,14 +327,6 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/CBRating -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/CBRating">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/ElectricalCircuit"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/asset/commissionedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/commissionedBy">
@@ -385,27 +377,11 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/primePower -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/primePower">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/asset/servicedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/servicedBy">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/standbyPower -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/standbyPower">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
     </owl:ObjectProperty>
     
 
@@ -424,7 +400,9 @@
     <!-- https://w3id.org/rec/asset/CBRating -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/CBRating">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/ElectricalCircuit"/>
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/A"/>
+        <rdfs:label xml:lang="en">circuit breaker rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1606,7 +1584,9 @@
     <!-- https://w3id.org/rec/asset/primePower -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primePower">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label xml:lang="en">prime power rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1773,7 +1753,9 @@
     <!-- https://w3id.org/rec/asset/standbyPower -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/standbyPower">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label xml:lang="en">standby power rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -5699,26 +5681,6 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Wireless access point</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/asset/CBRating">
-        <rdfs:label xml:lang="en">circuit breaker rating</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/asset/primePower">
-        <rdfs:label xml:lang="en">prime power rating (Watt)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/rec/asset/standbyPower">
-        <rdfs:label xml:lang="en">standby power rating (Watt)</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 
