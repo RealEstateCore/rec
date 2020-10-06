@@ -342,7 +342,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/feeds">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
         <rdfs:label xml:lang="en">feeds</rdfs:label>
     </owl:ObjectProperty>
     
@@ -361,7 +360,6 @@
     <!-- https://w3id.org/rec/asset/isFedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/isFedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
         <rdfs:label xml:lang="en">is fed by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -4756,6 +4754,18 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/MountedEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/feeds"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Mounted equipment</rdfs:label>
     </owl:Class>
