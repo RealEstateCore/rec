@@ -64,6 +64,7 @@
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/asset/substance">
         <rdfs:range rdf:resource="https://w3id.org/rec/asset/EquipmentFeedSubstance"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/feeds"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
     </owl:AnnotationProperty>
     
@@ -333,6 +334,16 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
         <rdfs:label xml:lang="en">commissioned by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/feeds -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/feeds">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:label xml:lang="en">feeds</rdfs:label>
     </owl:ObjectProperty>
     
 
