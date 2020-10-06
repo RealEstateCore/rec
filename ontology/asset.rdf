@@ -1433,11 +1433,31 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/poeType -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/poeType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">1,2,3,4</rdfs:comment>
+        <rdfs:label xml:lang="en">PoE type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/poles -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/poles">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">poles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/portSpeed -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/portSpeed">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">10/100/1000MB, 10GB</rdfs:comment>
+        <rdfs:label xml:lang="en">port speed</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3079,6 +3099,21 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/DataNetworkEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/DataNetworkEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mountedInRack"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/ITRack"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Data network equipment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/DedicatedOutdoorAirSystem -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/DedicatedOutdoorAirSystem">
@@ -3588,6 +3623,69 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Escalator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/EthernetRouter -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/EthernetRouter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/DataNetworkEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/heightRUs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/numberOfPorts"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Ethernet router</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/EthernetSwitch -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/EthernetSwitch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/DataNetworkEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/heightRUs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/numberOfPorts"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Ethernet switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/EthernetSwitchPort -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/EthernetSwitchPort">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/DataNetworkEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/poeType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/portSpeed"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Ethernet switch port</rdfs:label>
     </owl:Class>
     
 
@@ -4677,6 +4775,27 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/NetworkSecurityEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/NetworkSecurityEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/DataNetworkEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/heightRUs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/numberOfPorts"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Network security equipment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/PlumbingEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingEquipment">
@@ -5514,6 +5633,71 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/WaterHeater">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/WirelessAccessPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/WirelessAccessPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/DataNetworkEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mounting"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Indoor</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Outdoor</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>WiFi4</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>WiFi5</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>WiFi6</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>WiFi7</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Wireless access point</rdfs:label>
     </owl:Class>
     
 
