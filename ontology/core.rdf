@@ -1413,6 +1413,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/operatedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Campus</rdfs:label>
     </owl:Class>
