@@ -336,7 +336,7 @@ Deprecated in favour of qudt:unit</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasPart">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Points to sub-entities of this node that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -458,7 +458,7 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/includedIn">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/includes"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Collection"/>
-        <rdfs:comment xml:lang="en">Indicates that a REC entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment.</rdfs:comment>
         <rdfs:label xml:lang="en">included in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -468,7 +468,7 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/includes">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
-        <rdfs:comment xml:lang="en">Indicates that a collection entity includes some member entity, e.g., a campus includes some building, an apartment includes some room, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Member entities of a collection; e.g., a Campus includes some Space, an Apartment includes some Room, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">includes</rdfs:label>
     </owl:ObjectProperty>
     
@@ -513,7 +513,7 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isPartOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a super-entity of the same type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc).</rdfs:comment>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -589,7 +589,7 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/ownedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/owns"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
-        <rdfs:comment xml:lang="en">Property that defines the legal owner(s) of a given REC entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property that defines the legal owner(s) of a given entity.</rdfs:comment>
         <rdfs:label xml:lang="en">owned by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -599,7 +599,7 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/owns">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Agent"/>
-        <rdfs:comment xml:lang="en">Indicates that an agent is the legal owner of a given REC entity, e.g., a Company owns some Real Estate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that an agent is the legal owner of a given entity, e.g., a Company owns some Real Estate.</rdfs:comment>
         <rdfs:label xml:lang="en">owns</rdfs:label>
     </owl:ObjectProperty>
     
