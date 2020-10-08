@@ -1244,7 +1244,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Agent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Agent">
-        <rdfs:comment xml:lang="en">The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Group) to be anchored in one joint place, on the Agent class. Conceptually this mimics the Agent class from the well-known FOAF vocabulary, see http://xmlns.com/foaf/spec/#term_Agent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Company, Department...) to be anchored in one joint place, on the Agent class.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
     
@@ -1479,7 +1479,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A Capability indicates the capacity of a rec entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term &quot;point&quot;. Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Capability indicates the capacity of an entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term &quot;point&quot;. Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.</rdfs:comment>
         <rdfs:label xml:lang="en">Capability</rdfs:label>
     </owl:Class>
     
@@ -2009,7 +2009,7 @@ Describes the type of values that can be observed by sensors or set by actuators
                 <owl:onClass rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Capability to detect or measure properties of the physical world.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
