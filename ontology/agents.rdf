@@ -90,7 +90,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Person"/>
         <rdfs:comment xml:lang="en">A person&apos;s family name.</rdfs:comment>
         <rdfs:label xml:lang="en">family name</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/familyName"/>
     </owl:DatatypeProperty>
     
 
@@ -102,7 +101,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Person"/>
         <rdfs:comment xml:lang="en">A person&apos;s first name (if they have one; this varies across cultural contexts).</rdfs:comment>
         <rdfs:label xml:lang="en">first name</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/firstName"/>
     </owl:DatatypeProperty>
     
 
@@ -112,9 +110,8 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/agents/gender">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Person"/>
-        <rdfs:comment xml:lang="en">A gender designation for a Person. Stricter than FOAF, which allows all Agents to have gender.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A gender designation for a Person.</rdfs:comment>
         <rdfs:label xml:lang="en">gender</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/gender"/>
     </owl:DatatypeProperty>
     
 
@@ -126,7 +123,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Person"/>
         <rdfs:comment xml:lang="en">A person&apos;s personal, individual name.</rdfs:comment>
         <rdfs:label xml:lang="en">given name</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/givenName"/>
     </owl:DatatypeProperty>
     
 
@@ -147,7 +143,6 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/agents/lastName">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/agents/name"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/agents/Person"/>
-        <rdfs:comment rdf:resource="http://xmlns.com/foaf/0.1/lastName"/>
         <rdfs:comment xml:lang="en">A person&apos;s last name (if they have one; this varies across cultural contexts).</rdfs:comment>
         <rdfs:label xml:lang="en">last name</rdfs:label>
     </owl:DatatypeProperty>
@@ -168,8 +163,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/agents/name">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Agent"/>
-        <rdfs:comment rdf:resource="http://xmlns.com/foaf/0.1/name"/>
-        <rdfs:comment xml:lang="en">A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents).</rdfs:comment>
+        <rdfs:comment xml:lang="en">A name for some Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
     
