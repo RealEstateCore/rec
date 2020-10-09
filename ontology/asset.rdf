@@ -2945,7 +2945,7 @@
     <!-- https://w3id.org/rec/asset/ConveyanceEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/ConveyanceEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
@@ -3467,7 +3467,7 @@
     <!-- https://w3id.org/rec/asset/ElectricalEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
         <rdfs:label xml:lang="en">Electrical equipment</rdfs:label>
     </owl:Class>
     
@@ -3608,6 +3608,28 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Elevator Machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/Equipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Equipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/feeds"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -4138,7 +4160,7 @@
     <!-- https://w3id.org/rec/asset/FireProtectionEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/FireProtectionEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
         <rdfs:label xml:lang="en">Fire Protection Equipment</rdfs:label>
     </owl:Class>
     
@@ -4459,7 +4481,7 @@
     <!-- https://w3id.org/rec/asset/HVACEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
         <rdfs:label xml:lang="en">HVAC Equipment</rdfs:label>
     </owl:Class>
     
@@ -4553,7 +4575,7 @@
     <!-- https://w3id.org/rec/asset/ITEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/ITEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
         <rdfs:label xml:lang="en">IT Equipment</rdfs:label>
     </owl:Class>
     
@@ -4698,7 +4720,7 @@
     <!-- https://w3id.org/rec/asset/LightingEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/LightingEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
         <rdfs:label xml:lang="en">Lighting Equipment</rdfs:label>
     </owl:Class>
     
@@ -4746,28 +4768,6 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/MakeupAirUnit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AirHandlingUnit"/>
         <rdfs:label xml:lang="en">Makeup Air Unit</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/asset/MountedEquipment -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/asset/MountedEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/feeds"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Equipment that is permanently or semi-permanently mounted or installed in a building, e.g., HVAC systems, electrical systems, elevators, CC-TV-systems, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Mounted equipment</rdfs:label>
     </owl:Class>
     
 
@@ -4829,7 +4829,7 @@
     <!-- https://w3id.org/rec/asset/PlumbingEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingEquipment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/MountedEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
     </owl:Class>
     
 
