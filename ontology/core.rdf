@@ -289,6 +289,7 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
     <!-- https://w3id.org/rec/core/hasCapability -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasCapability">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isCapabilityOf"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:label xml:lang="en">has capability</rdfs:label>
     </owl:ObjectProperty>
@@ -470,6 +471,16 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
         <rdfs:comment xml:lang="en">Member entities of a collection; e.g., a Campus includes some Space, an Apartment includes some Room, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">includes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/isCapabilityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isCapabilityOf">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:comment xml:lang="en">The entity (Asset, Space, LogicalDevice, etc.) that has this Capability.</rdfs:comment>
+        <rdfs:label xml:lang="en">is capabilty of</rdfs:label>
     </owl:ObjectProperty>
     
 
