@@ -257,6 +257,14 @@
     
 
 
+    <!-- http://qudt.org/vocab/unit/KiloW -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/KiloW">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- http://qudt.org/vocab/unit/KiloW-HR -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/KiloW-HR">
@@ -25068,11 +25076,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:iec61360Code>0112/2///62720#UAA583</qudt:iec61360Code>
         <qudt:symbol>kW</qudt:symbol>
         <qudt:uneceCommonCode>KWT</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The kilowatt is a derived unit of power in the International System of Units (SI),  The unit, defined as 1,000 joule per second, measures the rate of energy conversion or transfer.\)</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Watt</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Watt?oldid=494906356</qudt:informativeReference>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Kilowatt</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -36790,8 +36793,8 @@ The abvolt is another option for a unit of voltage in the cgs system.</terms:des
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The  \(\textit{ampere}\), often shortened to \(\textit{amp}\), is the SI unit of electric current and is one of the seven SI base units.
 \(\text{A}\ \equiv\ \text{amp (or ampere)}\ \equiv\ \frac{\text{C}}{\text{s}}\ \equiv\ \frac{\text{coulomb}}{\text{second}}\ \equiv\ \frac{\text{J}}{\text{Wb}}\ \equiv\ \frac{\text{joule}}{\text{weber}}\)
 Note that SI supports only the use of symbols and deprecates the use of any abbreviations for units.</terms:description>
-        <qudt:ucumCode>A</qudt:ucumCode>
         <rdfs:label>Ampere</rdfs:label>
+        <qudt:ucumCode>A</qudt:ucumCode>
         <skos:altLabel>amp</skos:altLabel>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
@@ -36812,16 +36815,16 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/DEG_C">
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:guidance rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&lt;p&gt;See NIST section &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec06.html#6.2.8&quot;&gt;SP811 section 6.2.8&lt;/a&gt;&lt;/p&gt;</qudt:guidance>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:guidance rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&lt;p&gt;See NIST section &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec04.html#4.2.1.1&quot;&gt;SP811 section 4.2.1.1&lt;/a&gt;&lt;/p&gt;</qudt:guidance>
         <rdfs:label>Degree Celsius</rdfs:label>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Celsius</qudt:dbpediaMatch>
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(degC\)</qudt:expression>
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\,^{\circ}{\rm C}\)</qudt:latexDefinition>
+        <skos:altLabel>degree-centigrade</skos:altLabel>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Celsius?oldid=494152178</qudt:informativeReference>
         <qudt:ucumCode>Cel</qudt:ucumCode>
-        <skos:altLabel>degree-centigrade</skos:altLabel>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Celsius}\), also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales&apos; null points as being precisely \(273.15\,^{\circ}{\rm C}\).&lt;/p&gt;</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/HP">
@@ -36862,12 +36865,19 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Kilopascal is a unit of pressure. 1 kPa is approximately the pressure exerted by a 10-g mass resting on a 1-cm2 area. 101.3 kPa = 1 atm. There are 1,000 pascals in 1 kilopascal.</terms:description>
         <rdfs:label>Kilopascal</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloW">
+        <rdfs:label>Kilowatt</rdfs:label>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The kilowatt is a derived unit of power in the International System of Units (SI),  The unit, defined as 1,000 joule per second, measures the rate of energy conversion or transfer.\)</terms:description>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Watt?oldid=494906356</qudt:informativeReference>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Watt</qudt:dbpediaMatch>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloW-HR">
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilowatt_hour</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The kilowatt hour, or kilowatt-hour, (symbol \(kW \cdot h\), \(kW h\) or \(kWh\)) is a unit of energy equal to 1000 watt hours or 3.6 megajoules. For constant power, energy in watt hours is the product of power in watts and time in hours. The kilowatt hour is most commonly known as a billing unit for energy delivered to consumers by electric utilities.</terms:description>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kW-h\)</qudt:expression>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Kilowatt_hour?oldid=494927235</qudt:informativeReference>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kW-h\)</qudt:expression>
         <rdfs:label>Kilowatthour</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/L">
@@ -36888,8 +36898,8 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/LUX">
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Lux?oldid=494700274</qudt:informativeReference>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Lux</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Lux</qudt:dbpediaMatch>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The SI unit for measuring the illumination (illuminance) of a surface. One lux is defined as an illumination of one lumen per square meter or 0.0001 phot. In considering the various light units, it&apos;s useful to think about light originating at a point and shining upon a surface. The intensity of the light source is measured in candelas; the total light flux in transit is measured in lumens (1 lumen = 1 candelau00b7steradian); and the amount of light received per unit of surface area is measured in lux (1 lux = 1 lumen/square meter). One lux is equal to approximately 0.09290 foot candle.</terms:description>
         <rdfs:label>Lux</rdfs:label>
         <qudt:ucumCode>lx</qudt:ucumCode>
@@ -36918,8 +36928,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <rdfs:label>Minute</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/MilliM">
-        <qudt:ucumCode>mm</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
+        <qudt:ucumCode>mm</qudt:ucumCode>
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
@@ -36950,8 +36960,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <qudt:ucumCode>W</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Watt</qudt:dbpediaMatch>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Watt?oldid=494906356</qudt:informativeReference>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The SI unit of power. Power is the rate at which work is done, or (equivalently) the rate at which energy is expended. One watt is equal to a power rate of one joule of work per second of time. This unit is used both in mechanics and in electricity, so it links the mechanical and electrical units to one another. In mechanical terms, one watt equals about 0.001 341 02 horsepower (hp) or 0.737 562 foot-pound per second (lbf/s). In electrical terms, one watt is the power produced by a current of one ampere flowing through an electric potential of one volt. The name of the unit honors James Watt (1736-1819), the British engineer whose improvements to the steam engine are often credited with igniting the Industrial Revolution.\)</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The SI unit of power. Power is the rate at which work is done, or (equivalently) the rate at which energy is expended. One watt is equal to a power rate of one joule of work per second of time. This unit is used both in mechanics and in electricity, so it links the mechanical and electrical units to one another. In mechanical terms, one watt equals about 0.001 341 02 horsepower (hp) or 0.737 562 foot-pound per second (lbf/s). In electrical terms, one watt is the power produced by a current of one ampere flowing through an electric potential of one volt. The name of the unit honors James Watt (1736-1819), the British engineer whose improvements to the steam engine are often credited with igniting the Industrial Revolution.\)</terms:description>
         <rdfs:label>Watt</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://voag.linkedmodel.org/schema/voag#QUDT-QUANTITY-KINDS-VocabCatalogEntry_v1.2">
