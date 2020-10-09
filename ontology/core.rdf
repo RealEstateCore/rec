@@ -1688,12 +1688,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
 
     <owl:Class rdf:about="https://w3id.org/rec/core/FlowSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Flow sensor</rdfs:label>
     </owl:Class>
     
@@ -1960,6 +1954,12 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
 
     <owl:Class rdf:about="https://w3id.org/rec/core/MassFlowSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Mass flow sensor</rdfs:label>
     </owl:Class>
     
