@@ -144,28 +144,6 @@
     
 
 
-    <!-- https://w3id.org/rec/business/BusinessRegion -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/business/BusinessRegion">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/SpaceCollection"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A region consisting of a set of included spaces, that serves some specific business/organizational purpose. E.g., &quot;EMEA&quot;, &quot;The Back Bay&quot;, &quot;New England&quot;, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Business region</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/business/Lease -->
 
     <owl:Class rdf:about="https://w3id.org/rec/business/Lease">
