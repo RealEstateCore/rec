@@ -2305,6 +2305,33 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/AccessControlEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/AccessControlEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SecurityEquipment"/>
+        <rdfs:label xml:lang="en">Access control equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/AccessControlPanel -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/AccessControlPanel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AccessControlEquipment"/>
+        <rdfs:label xml:lang="en">Access control panel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/AccessReader -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/AccessReader">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AccessControlEquipment"/>
+        <rdfs:label xml:lang="en">Access reader</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/AirHandlingUnit -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/AirHandlingUnit">
@@ -4941,6 +4968,24 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/IntercomEntry -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/IntercomEntry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AccessControlEquipment"/>
+        <rdfs:label xml:lang="en">Intercom entry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/IntrusionDetectionEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/IntrusionDetectionEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SecurityEquipment"/>
+        <rdfs:label xml:lang="en">Intrusion detection equipment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/IrrigationPump -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/IrrigationPump">
@@ -5221,6 +5266,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/RequestToExitDevice -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/RequestToExitDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AccessControlEquipment"/>
+        <rdfs:label xml:lang="en">Request to exit device</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/RoofDrain -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/RoofDrain">
@@ -5234,6 +5288,15 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/RooftopUnit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AirHandlingUnit"/>
         <rdfs:label xml:lang="en">Rooftop Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SecurityEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SecurityEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
+        <rdfs:label xml:lang="en">Security equipment</rdfs:label>
     </owl:Class>
     
 
@@ -5316,6 +5379,25 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/SupplyFan">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
         <rdfs:label xml:lang="en">Supply Fan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SurveillanceCamera -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SurveillanceCamera">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/VideoSurveillanceEquipment"/>
+        <rdfs:label xml:lang="en">Surveillance camera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SurveillanceNVR -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SurveillanceNVR">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/VideoSurveillanceEquipment"/>
+        <rdfs:comment xml:lang="en">Network video recorder.</rdfs:comment>
+        <rdfs:label xml:lang="en">Surveillance NVR</rdfs:label>
     </owl:Class>
     
 
@@ -5974,6 +6056,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Variable frequency drive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/VideoSurveillanceEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/VideoSurveillanceEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SecurityEquipment"/>
+        <rdfs:label xml:lang="en">Video surveillance equipment</rdfs:label>
     </owl:Class>
     
 
