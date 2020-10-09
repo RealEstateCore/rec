@@ -922,7 +922,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/flowCapacity">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
-        <rdfs:comment xml:lang="en">litres per minute</rdfs:comment>
         <rdfs:label xml:lang="en">flow capacity</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1187,8 +1186,7 @@
     <!-- https://w3id.org/rec/asset/maxFlowRate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxFlowRate">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment xml:lang="en">litres per minute</rdfs:comment>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
         <rdfs:label xml:lang="en">maximum flow rate</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -4357,7 +4355,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxFlowRate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
