@@ -195,7 +195,9 @@
 
     <!-- http://qudt.org/vocab/unit/CentiM -->
 
-    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/CentiM"/>
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/CentiM">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdfs:Datatype>
     
 
 
@@ -235,6 +237,30 @@
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/KiloGM">
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/KiloGM-PER-HR -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/KiloGM-PER-HR">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/KiloPA -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/KiloPA">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/KiloW-HR -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/KiloW-HR">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </rdfs:Datatype>
     
 
@@ -305,7 +331,9 @@
 
     <!-- http://qudt.org/vocab/unit/REV-PER-MIN -->
 
-    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/REV-PER-MIN"/>
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/REV-PER-MIN">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdfs:Datatype>
     
 
 
@@ -23917,12 +23945,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA607</qudt:iec61360Code>
         <qudt:uneceCommonCode>E93</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Kilogram Per Hour (kg/h) is a unit in the category of Mass flow rate. It is also known as kilogram/hour. Kilogram Per Hour (kg/h) has a dimension of MT-1 where M is mass, and T is time. It can be converted to the corresponding standard SI unit kg/s by multiplying its value by a factor of 0.000277777777778.</terms:description>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kg/h\)</qudt:expression>
-        <qudt:ucumCode>kg.h-1</qudt:ucumCode>
-        <qudt:ucumCode>kg/h</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Kilogram per Hour</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -24744,17 +24766,13 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/KiloPA">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DerivedUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ForcePerArea"/>
+        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Pressure"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/PA"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA575</qudt:iec61360Code>
         <qudt:symbol>KPa</qudt:symbol>
         <qudt:uneceCommonCode>KPA</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Kilopascal is a unit of pressure. 1 kPa is approximately the pressure exerted by a 10-g mass resting on a 1-cm2 area. 101.3 kPa = 1 atm. There are 1,000 pascals in 1 kilopascal.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Pascal_%28unit%29</qudt:dbpediaMatch>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Kilopascal</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -25066,12 +25084,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Energy"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3600000.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The kilowatt hour, or kilowatt-hour, (symbol \(kW \cdot h\), \(kW h\) or \(kWh\)) is a unit of energy equal to 1000 watt hours or 3.6 megajoules. For constant power, energy in watt hours is the product of power in watts and time in hours. The kilowatt hour is most commonly known as a billing unit for energy delivered to consumers by electric utilities.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilowatt_hour</qudt:dbpediaMatch>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kW-h\)</qudt:expression>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Kilowatt_hour?oldid=494927235</qudt:informativeReference>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Kilowatthour</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -36044,9 +36056,6 @@ The abvolt is another option for a unit of voltage in the cgs system.</terms:des
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3600.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>W-hr</qudt:symbol>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The watt hour is a unit of energy, equal to 3,600 joule.</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Watthour</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -36811,8 +36820,8 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(degC\)</qudt:expression>
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\,^{\circ}{\rm C}\)</qudt:latexDefinition>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Celsius?oldid=494152178</qudt:informativeReference>
-        <skos:altLabel>degree-centigrade</skos:altLabel>
         <qudt:ucumCode>Cel</qudt:ucumCode>
+        <skos:altLabel>degree-centigrade</skos:altLabel>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Celsius}\), also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales&apos; null points as being precisely \(273.15\,^{\circ}{\rm C}\).&lt;/p&gt;</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/HP">
@@ -36839,6 +36848,28 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:ucumCode>kg</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilogram</qudt:dbpediaMatch>
     </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloGM-PER-HR">
+        <qudt:ucumCode>kg/h</qudt:ucumCode>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:ucumCode>kg.h-1</qudt:ucumCode>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kg/h\)</qudt:expression>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Kilogram Per Hour (kg/h) is a unit in the category of Mass flow rate. It is also known as kilogram/hour. Kilogram Per Hour (kg/h) has a dimension of MT-1 where M is mass, and T is time. It can be converted to the corresponding standard SI unit kg/s by multiplying its value by a factor of 0.000277777777778.</terms:description>
+        <rdfs:label>Kilogram per Hour</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloPA">
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Pascal_%28unit%29</qudt:dbpediaMatch>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Kilopascal is a unit of pressure. 1 kPa is approximately the pressure exerted by a 10-g mass resting on a 1-cm2 area. 101.3 kPa = 1 atm. There are 1,000 pascals in 1 kilopascal.</terms:description>
+        <rdfs:label>Kilopascal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloW-HR">
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilowatt_hour</qudt:dbpediaMatch>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The kilowatt hour, or kilowatt-hour, (symbol \(kW \cdot h\), \(kW h\) or \(kWh\)) is a unit of energy equal to 1000 watt hours or 3.6 megajoules. For constant power, energy in watt hours is the product of power in watts and time in hours. The kilowatt hour is most commonly known as a billing unit for energy delivered to consumers by electric utilities.</terms:description>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kW-h\)</qudt:expression>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Kilowatt_hour?oldid=494927235</qudt:informativeReference>
+        <rdfs:label>Kilowatthour</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/L">
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Litre</qudt:dbpediaMatch>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(litre\) (American spelling: \(\textit{liter}\); SI symbol \(l\) or \(L\)) is a non-SI metric system unit of volume equal to \(1 \textit{cubic decimetre}\) (\(dm^3\)), 1,000 cubic centimetres (\(cm^3\)) or \(1/1000 \textit{cubic metre}\). If the lower case &quot;L&quot; is used as the symbol, it is sometimes rendered as a cursive &quot;l&quot; to help distinguish it from the capital &quot;I&quot;, although this usage has no official approval by any international bureau.</terms:description>
@@ -36857,11 +36888,11 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/LUX">
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Lux?oldid=494700274</qudt:informativeReference>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Lux</qudt:dbpediaMatch>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The SI unit for measuring the illumination (illuminance) of a surface. One lux is defined as an illumination of one lumen per square meter or 0.0001 phot. In considering the various light units, it&apos;s useful to think about light originating at a point and shining upon a surface. The intensity of the light source is measured in candelas; the total light flux in transit is measured in lumens (1 lumen = 1 candelau00b7steradian); and the amount of light received per unit of surface area is measured in lux (1 lux = 1 lumen/square meter). One lux is equal to approximately 0.09290 foot candle.</terms:description>
-        <qudt:ucumCode>lx</qudt:ucumCode>
         <rdfs:label>Lux</rdfs:label>
+        <qudt:ucumCode>lx</qudt:ucumCode>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/M">
         <qudt:ucumCode>m</qudt:ucumCode>
@@ -36887,10 +36918,10 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <rdfs:label>Minute</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/MilliM">
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
         <qudt:ucumCode>mm</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch.</terms:description>
         <rdfs:label>Millimeter</rdfs:label>
@@ -36910,8 +36941,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Volt?oldid=494812083</qudt:informativeReference>
         <rdfs:label>Volt</rdfs:label>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Volt} is the SI unit of electric potential. Separating electric charges creates potential energy, which can be measured in energy units such as joules. Electric potential is defined as the amount of potential energy present per unit of charge. Electric potential is measured in volts, with one volt representing a potential of one joule per coulomb of charge. The name of the unit honors the Italian scientist Count Alessandro Volta (1745-1827), the inventor of the first battery.  The volt also may be expressed with a variety of other units. For example, a volt is also equal to one watt per ampere (W/A) and one joule per ampere per second (J/A/s).\)</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Volt</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Volt</qudt:dbpediaMatch>
         <qudt:ucumCode>V</qudt:ucumCode>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/W">
