@@ -2922,6 +2922,7 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Boiler</rdfs:label>
     </owl:Class>
     
 
@@ -3341,6 +3342,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/DomesticWaterPump">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
+        <rdfs:label xml:lang="en">Domestic water pump</rdfs:label>
     </owl:Class>
     
 
@@ -3349,6 +3351,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Drain">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+        <rdfs:label xml:lang="en">Drain</rdfs:label>
     </owl:Class>
     
 
@@ -3357,6 +3360,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/EjectorPump">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
+        <rdfs:label xml:lang="en">Ejector pump</rdfs:label>
     </owl:Class>
     
 
@@ -3371,6 +3375,7 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electric water heater with tank</rdfs:label>
     </owl:Class>
     
 
@@ -3385,6 +3390,7 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Electric tank-less water heater</rdfs:label>
     </owl:Class>
     
 
@@ -4014,42 +4020,6 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/ExpansionTank -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/asset/ExpansionTank">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Tank"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Bladder</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Compression</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>Diaphragm</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/asset/Fan -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Fan">
@@ -4395,6 +4365,7 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Faucet</rdfs:label>
     </owl:Class>
     
 
@@ -4557,6 +4528,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/FloorDrain">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Drain"/>
+        <rdfs:label xml:lang="en">Floor drain</rdfs:label>
     </owl:Class>
     
 
@@ -4684,6 +4656,7 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Gas water heater with tank</rdfs:label>
     </owl:Class>
     
 
@@ -4698,6 +4671,7 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Gas tank-less water heater</rdfs:label>
     </owl:Class>
     
 
@@ -5006,6 +4980,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/IrrigationPump">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
+        <rdfs:label xml:lang="en">Irrigation pump</rdfs:label>
     </owl:Class>
     
 
@@ -5180,6 +5155,44 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
+        <rdfs:label xml:lang="en">Plumbing equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PlumbingExpansionTank -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingExpansionTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingTank"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Bladder</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Compression</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Diaphragm</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Plumbing expansion tank</rdfs:label>
     </owl:Class>
     
 
@@ -5188,6 +5201,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingFixture">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+        <rdfs:label xml:lang="en">Plumbing fixture</rdfs:label>
     </owl:Class>
     
 
@@ -5226,6 +5240,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Plumbing pump</rdfs:label>
     </owl:Class>
     
 
@@ -5233,7 +5248,7 @@
     <!-- https://w3id.org/rec/asset/PlumbingStorageTank -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingStorageTank">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Tank"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingTank"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/arrangement"/>
@@ -5278,6 +5293,28 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Plumbing storage tank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PlumbingTank -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/systemPressure"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Plumbing tank</rdfs:label>
     </owl:Class>
     
 
@@ -5295,6 +5332,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/RoofDrain">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Drain"/>
+        <rdfs:label xml:lang="en">Roof drain</rdfs:label>
     </owl:Class>
     
 
@@ -5351,6 +5389,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Sink">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingFixture"/>
+        <rdfs:label xml:lang="en">Sink</rdfs:label>
     </owl:Class>
     
 
@@ -5395,6 +5434,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/SumpPump">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
+        <rdfs:label xml:lang="en">Sump pump</rdfs:label>
     </owl:Class>
     
 
@@ -5427,26 +5467,6 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/Tank -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/asset/Tank">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/systemPressure"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/asset/TankWaterHeater -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/TankWaterHeater">
@@ -5457,6 +5477,7 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Water heater with tank</rdfs:label>
     </owl:Class>
     
 
@@ -5465,6 +5486,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/TanklessWaterHeater">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/WaterHeater"/>
+        <rdfs:label xml:lang="en">Tank-less water heater</rdfs:label>
     </owl:Class>
     
 
@@ -5647,6 +5669,7 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Toilet</rdfs:label>
     </owl:Class>
     
 
@@ -5968,6 +5991,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Urinal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingFixture"/>
+        <rdfs:label xml:lang="en">Urinal</rdfs:label>
     </owl:Class>
     
 
@@ -6137,6 +6161,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/WaterHeater">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+        <rdfs:label xml:lang="en">Water heater</rdfs:label>
     </owl:Class>
     
 
