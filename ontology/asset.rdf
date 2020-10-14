@@ -1560,6 +1560,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/pipeDiameter -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/pipeDiameter">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+        <rdfs:label xml:lang="en">pipe diameter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/poeType -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/poeType">
@@ -5151,6 +5160,24 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/PlumbingBalancingValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingBalancingValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
+        <rdfs:label xml:lang="en">Balancing valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PlumbingCheckValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingCheckValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
+        <rdfs:label xml:lang="en">Check valve</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/PlumbingEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingEquipment">
@@ -5206,6 +5233,24 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/PlumbingGlobeValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingGlobeValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
+        <rdfs:label xml:lang="en">Globe valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PlumbingPressureReducingValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingPressureReducingValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
+        <rdfs:label xml:lang="en">Pressure reducing valve</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/PlumbingPump -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingPump">
@@ -5241,6 +5286,52 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Plumbing pump</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PlumbingShutOffValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingShutOffValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Ball</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Butterfly</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Gate</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Shut-off valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PlumbingSolenoidValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingSolenoidValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
+        <rdfs:label xml:lang="en">Solenoid valve</rdfs:label>
     </owl:Class>
     
 
@@ -5315,6 +5406,33 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Plumbing tank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PlumbingValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pipeDiameter"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pressureCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Plumbing valve</rdfs:label>
     </owl:Class>
     
 
