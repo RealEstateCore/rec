@@ -1598,6 +1598,16 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/powerDensity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/powerDensity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Watts/square meter</rdfs:comment>
+        <rdfs:label xml:lang="en">power density</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/powerInput -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/powerInput">
@@ -3077,6 +3087,33 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Chiller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/CleanAgentCabinet -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/CleanAgentCabinet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/CleanAgentEquipment"/>
+        <rdfs:label xml:lang="en">Clean agent cabinet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/CleanAgentEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/CleanAgentEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FireSuppressionEquipment"/>
+        <rdfs:label xml:lang="en">Clean agent equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/CleanAgentTank -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/CleanAgentTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/CleanAgentEquipment"/>
+        <rdfs:label xml:lang="en">Clean agent tank</rdfs:label>
     </owl:Class>
     
 
@@ -4793,11 +4830,84 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/HVACBalancingValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACBalancingValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACValve"/>
+        <rdfs:label xml:lang="en">Balancing valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACCheckValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACCheckValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACValve"/>
+        <rdfs:label xml:lang="en">Check valve</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/HVACEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Equipment"/>
         <rdfs:label xml:lang="en">HVAC Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACGlobeValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACGlobeValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACValve"/>
+        <rdfs:label xml:lang="en">Globe valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACHeatTracing -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACHeatTracing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerDensity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ConstantWattage</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>SelfRegulating</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">HVAC heat tracing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACPressureReducingValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACPressureReducingValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACValve"/>
+        <rdfs:label xml:lang="en">Pressure-reducing valve</rdfs:label>
     </owl:Class>
     
 
@@ -4853,6 +4963,79 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">HVAC pump</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACShutOffValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACShutOffValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACValve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Ball</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Butterfly</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Gate</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Shut-off valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACSolenoidValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACSolenoidValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACValve"/>
+        <rdfs:label xml:lang="en">Solenoid valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pipeDiameter"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pressureCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">HVAC valve</rdfs:label>
     </owl:Class>
     
 
@@ -5251,11 +5434,48 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/PlumbingHeatTracing -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingHeatTracing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerDensity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ConstantWattage</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>SelfRegulating</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Plumbing heat tracing</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/PlumbingPressureReducingValve -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingPressureReducingValve">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
-        <rdfs:label xml:lang="en">Pressure reducing valve</rdfs:label>
+        <rdfs:label xml:lang="en">Pressure-reducing valve</rdfs:label>
     </owl:Class>
     
 
@@ -5446,6 +5666,33 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/PreActionCabinet -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PreActionCabinet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PreActionEquipment"/>
+        <rdfs:label xml:lang="en">Pre-action cabinet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PreActionEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PreActionEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
+        <rdfs:label xml:lang="en">Pre-action equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PreActionTank -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PreActionTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PreActionEquipment"/>
+        <rdfs:label xml:lang="en">Pre-action tank</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/RequestToExitDevice -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/RequestToExitDevice">
@@ -5530,11 +5777,172 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/SprinklerBalancingValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerBalancingValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerValve"/>
+        <rdfs:label xml:lang="en">Balancing valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerCheckValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerCheckValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerValve"/>
+        <rdfs:label xml:lang="en">Check valve</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/SprinklerEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/FireSuppressionEquipment"/>
         <rdfs:label xml:lang="en">Sprinkler Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerGlobeValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerGlobeValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerValve"/>
+        <rdfs:label xml:lang="en">Globe valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerHeatTracing -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerHeatTracing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerDensity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ConstantWattage</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>SelfRegulating</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sprinkler heat tracing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerPressureReducingValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerPressureReducingValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerValve"/>
+        <rdfs:label xml:lang="en">Pressure-reducing valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerShutOffValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerShutOffValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerValve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Ball</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Butterfly</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Gate</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Shut-off valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerSolenoidValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerSolenoidValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerValve"/>
+        <rdfs:label xml:lang="en">Solenoid valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerTank -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sprinkler tank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerValve -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pipeDiameter"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pressureCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sprinkler valve</rdfs:label>
     </owl:Class>
     
 
