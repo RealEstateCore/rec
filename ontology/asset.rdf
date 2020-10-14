@@ -347,6 +347,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/fromSpace -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/fromSpace">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:label xml:lang="en">from space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/installedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/installedBy">
@@ -416,6 +425,15 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Meter"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/asset/Meter"/>
         <rdfs:label xml:lang="en">sub-meter of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/toSpace -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/toSpace">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:label xml:lang="en">to space</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -936,6 +954,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/frameMaterial -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/frameMaterial">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">frame material</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/frequency -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/frequency">
@@ -1005,6 +1032,15 @@
             </rdfs:Datatype>
         </rdfs:range>
         <rdfs:label xml:lang="en">heating method</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/height -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/height">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+        <rdfs:label xml:lang="en">height</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1170,6 +1206,15 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/massFlow">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
         <rdfs:label xml:lang="en">mass flow</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/material -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/material">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">material</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1379,6 +1424,15 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/numberOfPorts">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">number of ports</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/partitionMaterial -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/partitionMaterial">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">partition material</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2043,6 +2097,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/thickness -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/thickness">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+        <rdfs:label xml:lang="en">thickness</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/transitionType -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/transitionType">
@@ -2245,6 +2308,24 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/width -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/width">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+        <rdfs:label xml:lang="en">width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/windowMaterial -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/windowMaterial">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">window material</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/wireSize -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/wireSize">
@@ -2336,6 +2417,15 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/AccessControlPanel">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/AccessControlEquipment"/>
         <rdfs:label xml:lang="en">Access control panel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/AccessPanel -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/AccessPanel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/BarrierAsset"/>
+        <rdfs:label xml:lang="en">Access panel</rdfs:label>
     </owl:Class>
     
 
@@ -2876,6 +2966,85 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/BarrierAsset -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/BarrierAsset">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ArchitecturalAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fromSpace"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/toSpace"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fireRating"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/frameMaterial"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/height"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/material"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/thickness"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Exterior</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Interior</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/width"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Barrier asset</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/Bed -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Bed">
@@ -3398,6 +3567,15 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/DomesticWaterPump">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingPump"/>
         <rdfs:label xml:lang="en">Domestic water pump</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/Door -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Door">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/BarrierAsset"/>
+        <rdfs:label xml:lang="en">Door</rdfs:label>
     </owl:Class>
     
 
@@ -5352,6 +5530,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/Partition -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Partition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/BarrierAsset"/>
+        <rdfs:label xml:lang="en">Partition</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/PlumbingBalancingValve -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingBalancingValve">
@@ -6742,6 +6929,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Water meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/Window -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Window">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/BarrierAsset"/>
+        <rdfs:label xml:lang="en">Window</rdfs:label>
     </owl:Class>
     
 
