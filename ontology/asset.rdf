@@ -1258,7 +1258,7 @@
     <!-- https://w3id.org/rec/asset/maxNumberOfPoles -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/maxNumberOfPoles">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/ElectricalPanel"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/ElectricalPanelboard"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">max number of poles</rdfs:label>
     </owl:DatatypeProperty>
@@ -3899,6 +3899,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/ElectricalDistributionEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalDistributionEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
+        <rdfs:label xml:lang="en">Electrical distribution equipment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/ElectricalEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalEquipment">
@@ -3908,10 +3917,19 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/ElectricalPanel -->
+    <!-- https://w3id.org/rec/asset/ElectricalGenerationStorageEquipment -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanel">
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalGenerationStorageEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
+        <rdfs:label xml:lang="en">Electrical generation &amp; storage equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/ElectricalPanelboard -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanelboard">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalDistributionEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxNumberOfPoles"/>
@@ -3957,10 +3975,10 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/ElectricalPanelMCB -->
+    <!-- https://w3id.org/rec/asset/ElectricalPanelboardMCB -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanelMCB">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalPanel"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanelboardMCB">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalPanelboard"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/MCBRating"/>
@@ -3972,10 +3990,10 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/ElectricalPanelMLO -->
+    <!-- https://w3id.org/rec/asset/ElectricalPanelboardMLO -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanelMLO">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalPanel"/>
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanelboardMLO">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalPanelboard"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mainsRating"/>
@@ -4921,7 +4939,7 @@
     <!-- https://w3id.org/rec/asset/Generator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Generator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalGenerationStorageEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/bulkStorageCapacity"/>
@@ -6448,7 +6466,7 @@
     <!-- https://w3id.org/rec/asset/TransferSwitch -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/TransferSwitch">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalDistributionEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mainsRating"/>
@@ -6485,7 +6503,7 @@
     <!-- https://w3id.org/rec/asset/Transformer -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Transformer">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalDistributionEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phases"/>
@@ -6540,7 +6558,7 @@
     <!-- https://w3id.org/rec/asset/UPS -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/UPS">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalGenerationStorageEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesInput"/>
@@ -6797,7 +6815,7 @@
     <!-- https://w3id.org/rec/asset/VariableFrequencyDrive -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/VariableFrequencyDrive">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalDistributionEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
