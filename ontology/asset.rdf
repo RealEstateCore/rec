@@ -1128,6 +1128,40 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/inputPhases -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/inputPhases">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>One</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Three</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">input phases</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/inputVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/inputVoltage">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+        <rdfs:label xml:lang="en">input voltage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/installationDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/installationDate">
@@ -1428,6 +1462,40 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/outputPhases -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/outputPhases">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>One</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Three</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">output phases</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/outputVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/outputVoltage">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
+        <rdfs:label xml:lang="en">output voltage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/partitionMaterial -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/partitionMaterial">
@@ -1560,56 +1628,6 @@
             </rdfs:Datatype>
         </rdfs:range>
         <rdfs:label xml:lang="en">phases</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/phasesInput -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/phasesInput">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>One</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Three</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">input phases</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/phasesOutput -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/phasesOutput">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>One</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Three</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">output phases</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2223,24 +2241,6 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/voltage">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
         <rdfs:label xml:lang="en">voltage</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/voltageInput -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/voltageInput">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
-        <rdfs:label xml:lang="en">input voltage</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/voltageOutput -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/voltageOutput">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
-        <rdfs:label xml:lang="en">output voltage</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3163,6 +3163,49 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/Busway -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Busway">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalDistributionEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputPhases"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>One</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Three</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputVoltage"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/shortCircuitRating"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Busway</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/CAVBox -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/CAVBox">
@@ -3322,6 +3365,15 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/CleanAgentTank">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/CleanAgentEquipment"/>
         <rdfs:label xml:lang="en">Clean agent tank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/Cogenerator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Cogenerator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Generator"/>
+        <rdfs:label xml:lang="en">Cogenerator</rdfs:label>
     </owl:Class>
     
 
@@ -4085,13 +4137,19 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalDistributionEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputVoltage"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxNumberOfPoles"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/outputPhases"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -4115,12 +4173,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/shortCircuitRating"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageInput"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Electrical panelboard</rdfs:label>
@@ -4147,12 +4199,6 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/ElectricalPanelboardMLO">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalPanelboard"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mainsRating"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/A"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Electrical panelboard MLO</rdfs:label>
     </owl:Class>
     
@@ -5239,7 +5285,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/outputPhases"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -5257,6 +5303,12 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/outputVoltage"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5283,12 +5335,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageOutput"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Generator</rdfs:label>
     </owl:Class>
     
 
@@ -5619,6 +5666,27 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/System"/>
         <rdfs:label xml:lang="en">HVAC system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACTank -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACTank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/systemPressure"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">HVAC Tank</rdfs:label>
     </owl:Class>
     
 
@@ -6888,6 +6956,92 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/Switchboard -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Switchboard">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalDistributionEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputPhases"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>One</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Three</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputVoltage"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/shortCircuitRating"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Switchboard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/Switchgear -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Switchgear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalDistributionEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputPhases"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>One</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Three</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputVoltage"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/shortCircuitRating"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Switchgear</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/System -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/System">
@@ -7303,7 +7457,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ElectricalGenerationStorageEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesInput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputPhases"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -7325,7 +7479,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/phasesOutput"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/inputVoltage"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/outputPhases"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -7343,6 +7503,12 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/outputVoltage"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7361,18 +7527,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/runtime"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MIN"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageInput"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/voltageOutput"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">UPS</rdfs:label>
