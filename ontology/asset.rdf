@@ -963,6 +963,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/freeAirDelivery -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/freeAirDelivery">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">free air delivery</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/frequency -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/frequency">
@@ -2448,6 +2457,42 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/AirCompressor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/AirCompressor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/freeAirDelivery"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/motorPower"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/workingPressure"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Air compressor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/AirFilter -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/AirFilter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:label xml:lang="en">Air filter</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/AirHandlingUnit -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/AirHandlingUnit">
@@ -3374,6 +3419,14 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/Cogenerator">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Generator"/>
         <rdfs:label xml:lang="en">Cogenerator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/Component -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Component">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
     </owl:Class>
     
 
@@ -5349,6 +5402,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/HVACBackflowPreventer -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACBackflowPreventer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACValve"/>
+        <rdfs:label xml:lang="en">Backflow preventer</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/HVACBalancingValve -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACBalancingValve">
@@ -5511,6 +5573,15 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACOutsideAirSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACConditionedAirSystem"/>
         <rdfs:label xml:lang="en">HVAC outside air system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACPressureReducingStation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACPressureReducingStation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACValve"/>
+        <rdfs:label xml:lang="en">Pressure reducing station</rdfs:label>
     </owl:Class>
     
 
@@ -5732,6 +5803,15 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACWaterSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACSystem"/>
         <rdfs:label xml:lang="en">HVAC water system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACWaterTreatment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACWaterTreatment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:label xml:lang="en">Water treatment</rdfs:label>
     </owl:Class>
     
 
@@ -6192,6 +6272,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/PlumbingBackflowPreventer -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingBackflowPreventer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
+        <rdfs:label xml:lang="en">Backflow preventer</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/PlumbingBalancingValve -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingBalancingValve">
@@ -6328,6 +6417,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Plumbing heat tracing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PlumbingPressureReducingStation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingPressureReducingStation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingValve"/>
+        <rdfs:label xml:lang="en">Pressure reducing station</rdfs:label>
     </owl:Class>
     
 
@@ -6554,6 +6652,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/PlumbingWaterTreatment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingWaterTreatment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
+        <rdfs:label xml:lang="en">Water treatment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/PreActionCabinet -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PreActionCabinet">
@@ -6695,6 +6802,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/SprinklerBackflowPreventer -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerBackflowPreventer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerValve"/>
+        <rdfs:label xml:lang="en">Backflow preventer</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/SprinklerBalancingValve -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerBalancingValve">
@@ -6764,6 +6880,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Sprinkler heat tracing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/SprinklerPressureReducingStation -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerPressureReducingStation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerValve"/>
+        <rdfs:label xml:lang="en">Pressure reducing station</rdfs:label>
     </owl:Class>
     
 
@@ -7775,7 +7900,7 @@
     <!-- https://w3id.org/rec/asset/WaterFilter -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/WaterFilter">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACWaterTreatment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/filtrationRating"/>
