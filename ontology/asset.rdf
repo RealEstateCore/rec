@@ -3464,6 +3464,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Component">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:label xml:lang="en">Component</rdfs:label>
     </owl:Class>
     
 
@@ -5798,18 +5799,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACTank">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/systemPressure"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Tank"/>
         <rdfs:label xml:lang="en">HVAC Tank</rdfs:label>
     </owl:Class>
     
@@ -6635,18 +6625,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingTank">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/systemPressure"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Tank"/>
         <rdfs:label xml:lang="en">Plumbing tank</rdfs:label>
     </owl:Class>
     
@@ -6989,12 +6968,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerTank">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Tank"/>
         <rdfs:label xml:lang="en">Sprinkler tank</rdfs:label>
     </owl:Class>
     
@@ -7226,6 +7200,26 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/Tank -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/Tank">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/systemPressure"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/tankCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
