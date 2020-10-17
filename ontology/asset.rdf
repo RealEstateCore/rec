@@ -9,6 +9,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="http://www.linkedmodel.org/owl/schema/core#"
+     xmlns:dtdl="dtmi:dtdl:context;2#"
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -338,6 +339,24 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/exhaustFan -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/exhaustFan">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:label xml:lang="en">exhaust fan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/fan -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/fan">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:label xml:lang="en">fan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/feeds -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/feeds">
@@ -409,6 +428,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/returnFan -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/returnFan">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:label xml:lang="en">return fan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/servicedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/servicedBy">
@@ -425,6 +453,15 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Meter"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/asset/Meter"/>
         <rdfs:label xml:lang="en">sub-meter of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/supplyFan -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/supplyFan">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:label xml:lang="en">supply fan</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2488,8 +2525,25 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/AirFilter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Air filter</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/rec/asset/AirFilter"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <dtdl:dtdlType rdf:resource="dtmi:dtdl:class:Component;2"/>
+    </owl:Axiom>
     
 
 
@@ -2497,6 +2551,24 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/AirHandlingUnit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/exhaustFan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/returnFan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/supplyFan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/airflowModulation"/>
@@ -2783,18 +2855,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/returnFanMotorSize"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/returnFanNominalAirflow"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/secondaryCoolingMethod"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
@@ -2819,18 +2879,6 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/supplyFanMotorSize"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/supplyFanNominalAirflow"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3263,7 +3311,7 @@
     <!-- https://w3id.org/rec/asset/CeilingFan -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/CeilingFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACFan"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/bladeDiameter"/>
@@ -3558,19 +3606,13 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fanMotorPower"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalAirflow"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4544,7 +4586,7 @@
     <!-- https://w3id.org/rec/asset/ExhaustFan -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/ExhaustFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACFan"/>
         <rdfs:label xml:lang="en">Exhaust Fan</rdfs:label>
     </owl:Class>
     
@@ -4553,7 +4595,7 @@
     <!-- https://w3id.org/rec/asset/Fan -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Fan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/driveType"/>
@@ -4578,40 +4620,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletShape"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Oval</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Rectangle</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>Round</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletSize"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/maxAirflowRating"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
@@ -4630,8 +4638,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalAirflow"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Fan</rdfs:label>
@@ -4643,6 +4651,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/FanCoilUnit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/TerminalUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/coolingMethod"/>
@@ -4673,12 +4687,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fanMotorPower"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HP"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/filterType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -4687,12 +4695,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalAirflow"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4781,6 +4783,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/FanPoweredBox">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/VAVBox"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/configuration"/>
@@ -5491,6 +5499,61 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACExhaustAirSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACAirSystem"/>
         <rdfs:label xml:lang="en">HVAC exhaust air system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACFan -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACFan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletShape"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Oval</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Rectangle</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Round</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletSize"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Fan</rdfs:label>
     </owl:Class>
     
 
@@ -7011,7 +7074,7 @@
     <!-- https://w3id.org/rec/asset/StairPressurizationFan -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/StairPressurizationFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACFan"/>
         <rdfs:label xml:lang="en">Stair Pressurization Fan</rdfs:label>
     </owl:Class>
     
@@ -7056,7 +7119,7 @@
     <!-- https://w3id.org/rec/asset/SupplyFan -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/SupplyFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACFan"/>
         <rdfs:label xml:lang="en">Supply Fan</rdfs:label>
     </owl:Class>
     
@@ -7478,7 +7541,7 @@
     <!-- https://w3id.org/rec/asset/TransferFan -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/TransferFan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Fan"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACFan"/>
         <rdfs:label xml:lang="en">Transfer Fan</rdfs:label>
     </owl:Class>
     
@@ -7665,8 +7728,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fanMotorPower"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/fan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7707,12 +7770,6 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalAirflow"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
