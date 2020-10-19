@@ -14,7 +14,7 @@ RealEstateCore is not aiming to be a new standard, but we rather intend for it b
 
 If have been using RealEstateCore as part of your research, please cite us. The key paper to cite is:
 
-* Hammar K., Wallin E.O., Karlberg P., Hälleberg D. (2019) **The RealEstateCore Ontology**. In: Ghidini C. et al. (eds) The Semantic Web – ISWC 2019. ISWC 2019. Lecture Notes in Computer Science, vol 11779. Springer, Cham  
+* Hammar K., Wallin E.O., Karlberg P., Hälleberg D. (2019) **The RealEstateCore Ontology**. In: Ghidini C. et al. (eds) The Semantic Web – ISWC 2019. ISWC 2019. Lecture Notes in Computer Science, vol 11779. Springer, Cham
 **DOI:** https://doi.org/10.1007/978-3-030-30796-7_9
 
 ## What are the benefits for the property owners?
@@ -32,4 +32,4 @@ We encourage you to contribute to make RealEstateCore better. Please point out b
 
 * Comment or create a new Issue for bug reporting
 * For improvements, please fork the rec repository, make your changes and send a pull request
-* [Joint our chat](https://gitter.im/RealEstateCore/community)
+* [Join our chat](https://gitter.im/RealEstateCore/community)
