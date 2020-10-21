@@ -11,14 +11,19 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/rec/core/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:core1="http://www.linkedmodel.org/owl/schema/core#"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/core/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.2/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.2/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/units/3.3/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
@@ -29,7 +34,7 @@ Note that this module reuses certain classes, properties, and named individuals 
         <dc:title>RealEstateCore Core Module</dc:title>
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23</dcterms:modified>
         <vann:preferredNamespacePrefix>core</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/core/3.2/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/core/3.3/</vann:preferredNamespaceUri>
         <cpannotationschema:coversRequirements xml:lang="en">How many rooms are there in Building 1?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">What does electricity meter 3 measure? In what units?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">Where in Building 1 (i.e., in which rooms) are there devices mounted?</cpannotationschema:coversRequirements>
@@ -38,7 +43,7 @@ Note that this module reuses certain classes, properties, and named individuals 
         <cpannotationschema:coversRequirements xml:lang="en">Which buildings and land make up the real estate Ulvsnaes 1:7?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?</cpannotationschema:coversRequirements>
         <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -76,6 +81,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -96,7 +107,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
 GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
-        <rdfs:label xml:lang="en">defaultGeometry</rdfs:label>
+        <rdfs:label xml:lang="en">default geometry</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -109,7 +120,17 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
 GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
-        <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
+        <rdfs:label xml:lang="en">has geometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/architectedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/architectedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">architected by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -137,14 +158,37 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/componentOfBuilding -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/componentOfBuilding">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasBuildingComponent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
+        <rdfs:comment xml:lang="en">Indicates which Building a certain Building Component is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">component of building</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/constructedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/constructedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">constructed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/containsMountedDevice -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/containsMountedDevice">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMountedIn"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to Devices mounted within them.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Parthood traversal property linking to mounted Devices.</rdfs:comment>
         <rdfs:label xml:lang="en">contains mounted device</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -164,8 +208,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The measurement unit used by some Device.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The measurement unit used by some Device.
+
+Deprecated in favour of qudt:unit</rdfs:comment>
         <rdfs:label xml:lang="en">device measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -176,8 +223,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Quantity Kind that a device measures or affects.
+
+Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:label xml:lang="en">device quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -188,8 +238,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">A unit used to measure some aspect of some Event.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A unit used to measure some aspect of some Event.
+
+Deprecated in favour of qudt:unit</rdfs:comment>
         <rdfs:label xml:lang="en">event measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -200,8 +253,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasQuantityKind"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">The Quantity Kind that an event measures or affects.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Quantity Kind that an event measures or affects.
+
+Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:label xml:lang="en">event quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -221,12 +277,21 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasBuildingComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasBuildingComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isPartOfBuilding"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking Buildings to the Building Components that they are made up of.</rdfs:comment>
         <rdfs:label xml:lang="en">has building component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasCapability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasCapability">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isCapabilityOf"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:label xml:lang="en">has capability</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -247,8 +312,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMeasurementUnit">
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements.
+
+Deprecated in favour of qudt:unit</rdfs:comment>
         <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -256,10 +324,10 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasMember -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasMember">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isMemberOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
         <rdfs:comment xml:lang="en">has member</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -269,7 +337,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasPart">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -279,8 +347,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasQuantityKind">
         <rdfs:range rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc.
+
+Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:label xml:lang="en">quantity kind</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -294,6 +365,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking a piece of RealEstate to its constituent components (i.e., Buildings and Land).</rdfs:comment>
         <rdfs:label xml:lang="en">has real estate component</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -301,12 +373,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasSubBuildingComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSubBuildingComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasSuperBuildingComponent"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking BuildingComponents to their constituent sub-components.</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-BuildingComponent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -314,12 +386,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasSubDevice -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSubDevice">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasSuperDevice"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">Parthood traversal property linking a Device to any sub-Devices that it contains.</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-device</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -327,11 +399,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasSuperBuildingComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSuperBuildingComponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">has super-BuildingComponent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -339,11 +411,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/hasSuperDevice -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasSuperDevice">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">A property that allows for nesting of devices within devices.</rdfs:comment>
         <rdfs:label xml:lang="en">has super-Device</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -354,6 +426,61 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Type"/>
         <rdfs:comment xml:lang="en">A generic typing relation, holding between individuals and their types (which are also expressed as individuals). This construct allows implementors to add their own types without modifying the ontology and its classes. See the Explicit Typing design pattern in the MODL design library for further discussion.</rdfs:comment>
         <rdfs:label xml:lang="en">has type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/hostedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hostedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:comment xml:lang="en">Indicates the physical hardware asset that a given logical device is hosted and executed on.</rdfs:comment>
+        <rdfs:label xml:lang="en">hosted by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/hosts -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hosts">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:comment xml:lang="en">Indicates that a given Asset hosts a logical device; e.g., a Raspberry Pi hosts a Home Assistant installation, or an IoT-connect smart camera unit hosts an IoT Edge runtime.</rdfs:comment>
+        <rdfs:label xml:lang="en">hosts</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/includedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/includedIn">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/includes"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:comment xml:lang="en">Indicates that an entity is included in some Collection, e.g., a Building is included in a RealEstate, or a Room is included in an Apartment.</rdfs:comment>
+        <rdfs:label xml:lang="en">included in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/includes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/includes">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:comment xml:lang="en">Member entities of a collection; e.g., a Campus includes some Space, an Apartment includes some Room, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/isCapabilityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isCapabilityOf">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:comment xml:lang="en">The entity (Asset, Space, LogicalDevice, etc.) that has this Capability.</rdfs:comment>
+        <rdfs:label xml:lang="en">is capabilty of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -361,9 +488,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/isMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMemberOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Collection"/>
         <rdfs:label xml:lang="en">is member of</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -375,6 +502,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">Property describing where a Device is mounted.</rdfs:comment>
         <rdfs:label xml:lang="en">is mounted in</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -387,6 +515,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">Property describing in which Building Component (most typically a Room) that a Device is mounted.</rdfs:comment>
         <rdfs:label xml:lang="en">is mounted in Building Component</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -395,7 +524,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isPartOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc).</rdfs:comment>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -404,11 +533,13 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/isPartOfBuilding -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isPartOfBuilding">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
-        <rdfs:comment xml:lang="en">Indicates which Building a certain Building Component is part of.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates which Building a certain Building Component is part of.
+
+Deprecated in favour of core:componentOfBuilding</rdfs:comment>
         <rdfs:label xml:lang="en">is part of building</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -420,6 +551,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/RealEstate"/>
         <rdfs:comment xml:lang="en">Indicates that a Building or a piece of Land belongs to / is part of a given Real Estate.</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/locatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/locatedIn">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -435,12 +576,53 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/observes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/observes">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:comment xml:lang="en">Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for. This allows systems to perform graph propagation of sensor values, e.g., letting a temperature sensor that observes a given room set the temperature for that room.</rdfs:comment>
+        <rdfs:label xml:lang="en">observes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/operatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/operatedBy">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:label xml:lang="en">operated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/ownedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/ownedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/owns"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:comment xml:lang="en">Property that defines the legal owner(s) of a given entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">owned by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/owns -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/owns">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:comment xml:lang="en">Indicates that an agent is the legal owner of a given entity, e.g., a Company owns some Real Estate.</rdfs:comment>
+        <rdfs:label xml:lang="en">owns</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/premisesType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/premisesType">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Premises"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/PremisesType"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -451,8 +633,21 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
-        <rdfs:comment xml:lang="en">A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A unit used to specificy some Quantity Kind, such as temperature, pressure, etc.
+
+Deprecated in favour of qudt:unit</rdfs:comment>
         <rdfs:label xml:lang="en">quantity kind measurement unit</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/sensorInterface -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/sensorInterface">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
+        <rdfs:label xml:lang="en">sensor interface</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -462,8 +657,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">Indicates that an area or entity is served by some device or sensor. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that an area or entity is served by some device or sensor. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor.
+
+Deprecated in favour of inverse properties core:servesSpace and core:servesAsset</rdfs:comment>
         <rdfs:label xml:lang="en">served by</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -472,7 +670,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/serves">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">The coverage or impact area of a given device or sensor. For example: an air-treatment Device might serve several Rooms or a full Building. Note that devices can also service one another, e.g., an air-treatment Device might serve an air diffuser Device.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset.</rdfs:comment>
         <rdfs:label xml:lang="en">serves</rdfs:label>
     </owl:ObjectProperty>
     
@@ -484,8 +682,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
-        <rdfs:comment xml:lang="en">Indicates how a Device serves an entire Building.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves an entire Building.
+
+Deprecated in favour of core:servesSpace</rdfs:comment>
         <rdfs:label xml:lang="en">serves building</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -496,8 +697,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">Indicates how a Device serves a particular Building Component (e.g., a Room).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves a particular Building Component (e.g., a Room).
+
+Deprecated in favour of core:servesSpace</rdfs:comment>
         <rdfs:label xml:lang="en">serves building component</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -508,8 +712,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/serves"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">Indicates how a Device serves another Device.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates how a Device serves another Device.
+
+Deprecated in favour of core:servesAsset</rdfs:comment>
         <rdfs:label xml:lang="en">serves device</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -569,6 +776,33 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/IPAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/IPAddress">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">IP address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/MACAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/MACAddress">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">MAC address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/comment -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/comment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">comment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/hasAliasID -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasAliasID">
@@ -605,8 +839,12 @@ After discussion in REC technical committee, an approach based on owl:sameAs and
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasComment">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
-        <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character. E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Extra information about an object that is of a more exceptional character. E.g. &quot;This Device needs to be replaced no later than 2020&quot;, &quot;Note: Black color is used to mark warmwater inlet&quot;.
+
+Deprecated in favour of core:comment.</rdfs:comment>
         <rdfs:label xml:lang="en">has comment</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -900,11 +1138,59 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
+    <!-- https://w3id.org/rec/core/levelNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/levelNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Level"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">A number indicating the ordinal number of this level within the building. Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others.</rdfs:comment>
+        <rdfs:label xml:lang="en">level number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/modelNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/modelNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">model number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/personCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/personCapacity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of people who can fit in a Room or Elevator.</rdfs:comment>
+        <rdfs:label xml:lang="en">person capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/physicalTagNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/physicalTagNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">physical tag number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/schemaName -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/schemaName">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/DataSchema"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/serialNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/serialNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">serial number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -919,12 +1205,31 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
+    <!-- https://w3id.org/rec/core/type -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/unitSign -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/unitSign">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
         <rdfs:comment xml:lang="en">The syntactical representation of a unit, e.g., m^3 for cubic meter, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">unit sign</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/url -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/url">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">URL</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -955,8 +1260,32 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Agent -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Agent">
-        <rdfs:comment xml:lang="en">The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Group) to be anchord in one joint place, on the Agent class. Conceptually this mimics the Agent class from the well-known FOAF vocabulary, see http://xmlns.com/foaf/spec/#term_Agent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Company, Department...) to be anchored in one joint place, on the Agent class.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/AirFlowSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/AirFlowSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Air flow sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/AirTemperatureSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/AirTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/TemperatureSensor"/>
+        <rdfs:label xml:lang="en">Air temperature sensor</rdfs:label>
     </owl:Class>
     
 
@@ -964,10 +1293,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Apartment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Apartment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/SpaceCollection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMember"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Room"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -976,10 +1311,113 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/Asset -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Asset">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hosts"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/serves"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/IPAddress"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/MACAddress"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasComment"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/modelNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/physicalTagNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/serialNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Something which is placed inside of a building, but is not an integral part of that building&apos;s structure; e.g., furniture, equipment, systems, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/AssetCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/AssetCollection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:label xml:lang="en">Asset collection</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">A confined building structure.</rdfs:comment>
         <rdfs:label xml:lang="en">Building</rdfs:label>
     </owl:Class>
@@ -991,17 +1429,37 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/BuildingComponent">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasSuperBuildingComponent"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/componentOfBuilding"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Building"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOfBuilding"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/componentOfBuilding"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A part that constitutes a piece of a building&apos;s structural makeup. E.g., Facade, Wall, Slab, RoofInner, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Building component</rdfs:label>
         <o2o:endpoint>buildingcomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
@@ -1009,10 +1467,94 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/CO2Sensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/CO2Sensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Measurement unit: PPM.</rdfs:comment>
+        <rdfs:label xml:lang="en">CO2 sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/CO2Setpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/CO2Setpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Unit: PPM.</rdfs:comment>
+        <rdfs:label xml:lang="en">CO2 setpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Campus -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Campus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/SpaceCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/operatedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Campus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Capability -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Capability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/serves"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Capability indicates the capacity of an entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term &quot;point&quot;. Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Capability</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Collection -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Collection">
+        <rdfs:comment xml:lang="en">An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings).</rdfs:comment>
         <rdfs:label xml:lang="en">Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/DamperStatusSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/DamperStatusSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
     </owl:Class>
     
 
@@ -1042,10 +1584,58 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device can contain subdevices or be part of superdevices. It is subclassed into more specific device types, e.g., Sensor,  Actuator, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device can contain subdevices or be part of superdevices. It is subclassed into more specific device types, e.g., Sensor, Actuator, etc.
+
+Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the software), and core:Capability (the measurement or actuation capability).</rdfs:comment>
         <rdfs:label xml:lang="en">Device</rdfs:label>
-        <o2o:endpoint>device</o2o:endpoint>
-        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Document -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Document">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/url"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/ElectricalEnergySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/ElectricalEnergySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/EnergySensor"/>
+        <rdfs:label xml:lang="en">Electrical energy sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/ElectricalPowerSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/ElectricalPowerSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PowerSensor"/>
+        <rdfs:label xml:lang="en">Electrical power sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/EnergySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/EnergySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW-HR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Energy sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1059,12 +1649,116 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/FanStatusSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/FanStatusSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/FireExtinguisherRemovedSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/FireExtinguisherRemovedSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/FireExtinguisherTroubleSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/FireExtinguisherTroubleSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/FlowSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/FlowSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:label xml:lang="en">Flow sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/FlowSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/FlowSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Flow setpoint</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/GeoReferenceOrigo -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/GeoReferenceOrigo">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:comment xml:lang="en">A fixed point for e.g. a building structure. Commonly refered to as &quot;insertion point&quot; in CAD-programs. Used as origo for LocalCoordinates.</rdfs:comment>
         <rdfs:label xml:lang="en">Geo-reference origo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/HVACZone -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/HVACZone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Zone"/>
+        <rdfs:label xml:lang="en">HVAC zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/HumiditySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/HumiditySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Relative humidity sensor, measures in % RH.</rdfs:comment>
+        <rdfs:label xml:lang="en">Humidity sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/HumiditySetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/HumiditySetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Unit: % relative humidity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Humidity setpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/IlluminanceSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/IlluminanceSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/LUX"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Illuminance sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1082,8 +1776,135 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Land">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/RealEstateComponent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">A piece of land upon which one or more buildings may be situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/LeakSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/LeakSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Level -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Level">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:comment xml:lang="en">The level of a building, a.k.a. storey, floor, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Level</rdfs:label>
+        <o2o:endpoint>level</o2o:endpoint>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/LogicalController -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/LogicalController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Logical controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/LogicalDevice -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/LogicalDevice">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hostedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hostedBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/IPAddress"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A piece of equipment or software that communicates and interacts with a digital twin platform. Could, e.g., be an integrated circuit inside of a smart HVAC unit, or a virtual server running on a Kubernetes cluster. Logical devices can have Capability instances (through hasCapability) that describe their input/output capabilties. If Logical Devices are embedded within Asset entities (through the locatedIn property) such capabilties typically denote the capabilities of the asset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Logical device</rdfs:label>
+        <o2o:endpoint>logicaldevice</o2o:endpoint>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/LogicalGateway -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/LogicalGateway">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Logical gateway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/LogicalServer -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/LogicalServer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+        <rdfs:label xml:lang="en">Logical server</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/MassFlowSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/MassFlowSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Mass flow sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/MassSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/MassSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Mass sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1091,7 +1912,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/MeasurementUnit -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/MeasurementUnit">
-        <rdfs:comment xml:lang="en">The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
+        <rdfs:comment xml:lang="en">Deprecated in favour of qudt:Unit
+
+The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
 
 Exceptions to SI:
 Express temperature in Celsius,
@@ -1100,8 +1923,24 @@ Angle i degrees (360 degress = 1 revolution)
 MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement unit</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>measurementunit</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/MotionSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/MotionSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Motion sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1112,14 +1951,14 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/eventQuantityKind"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1134,12 +1973,95 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/OccupancySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/OccupancySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Occupancy sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Parameter -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Parameter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:label xml:lang="en">Parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/PeopleCountSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/PeopleCountSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">People count sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Portfolio -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Portfolio">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A portfolio is a grouping of real estates, spaces, or other portfolios that share some business-relevant commonality, e.g., are managed by the same company, are rented out to the same tenant, share utilization or legal definition (industrial vs commercial), etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Portfolio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/PowerSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/PowerSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Power sensor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Premises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Premises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/SpaceCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A premises is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant.</rdfs:comment>
         <rdfs:label xml:lang="en">Premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1149,6 +2071,22 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/PremisesType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
         <rdfs:label xml:lang="en">Premises type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/PressureSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/PressureSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Pressure sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1162,9 +2100,12 @@ MillimeterPerHour for Precipation</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Deprecated in favour of qudt:QuantityKind
+
+Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT.</rdfs:comment>
         <rdfs:label xml:lang="en">Quantity kind</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>quantitykind</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
@@ -1174,6 +2115,31 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <!-- https://w3id.org/rec/core/RealEstate -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/SpaceCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/ownedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/ownedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The legal/administrative representation of some lands and/or buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate</rdfs:label>
         <o2o:endpoint>realestate</o2o:endpoint>
@@ -1193,8 +2159,19 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Types of objects that can make up a piece of real estate, e.g., land and buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate component</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>realestatecomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Region -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Region">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:comment xml:lang="en">An administrative geospatial unit larger than the individual real estate. For instance, &quot;Lombary&quot;, &quot;North America&quot;, &quot;The Back Bay&quot;, &quot;Elnätsområde Syd&quot;, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Region</rdfs:label>
     </owl:Class>
     
 
@@ -1203,34 +2180,81 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Room">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/personCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Base class for all more specific room types.</rdfs:comment>
         <rdfs:label xml:lang="en">Room</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/rec/core/Room"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Axiom>
     
 
 
     <!-- https://w3id.org/rec/core/Sensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Sensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/deviceQuantityKind"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/observes"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Capability to detect or measure properties of the physical world.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/rec/core/Device"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/rec/core/SensorInterface -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/SensorInterface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Software"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/dataSchema"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1250,6 +2274,15 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Setpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Setpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Parameter"/>
+        <rdfs:label xml:lang="en">Setpoint</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Software -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Software">
@@ -1259,10 +2292,260 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Space -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Space">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/architectedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/constructedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/operatedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/ownedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/SpaceCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/SpaceCollection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Space collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/StatusSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/StatusSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Status sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/SubBuilding -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/SubBuilding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Tower</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Wing</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sub-building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/TVOCSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/TVOCSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Measurement unit: PPM.</rdfs:comment>
+        <rdfs:label xml:lang="en">TVOC sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/TemperatureSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Temperature sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/TemperatureSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/TemperatureSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Temperature setpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/ThermalEnergySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/ThermalEnergySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/EnergySensor"/>
+        <rdfs:label xml:lang="en">Thermal energy sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/ThermalPowerSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/ThermalPowerSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PowerSensor"/>
+        <rdfs:label xml:lang="en">Thermal power sensor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Type">
         <rdfs:label xml:lang="en">Type</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/VolumeSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/VolumeSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Volume sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/WaterFlowSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/WaterFlowSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Water flow sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/WaterTemperatureSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/WaterTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/TemperatureSensor"/>
+        <rdfs:label xml:lang="en">Water temperature sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Zone -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Zone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:comment xml:lang="en">A sub-zone within a building, e.g., an HVAC zone, a security zone, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone</rdfs:label>
     </owl:Class>
     
 
@@ -1739,15 +3022,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Length">
         <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
         <rdfs:label xml:lang="en">Length</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/rec/core/Level -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/rec/core/Level">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/QuantityKind"/>
-        <rdfs:label xml:lang="en">Level</rdfs:label>
     </owl:NamedIndividual>
     
 
