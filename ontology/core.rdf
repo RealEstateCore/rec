@@ -656,12 +656,8 @@ Deprecated in favour of qudt:unit</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/serves"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Device"/>
-        <rdfs:comment xml:lang="en">Indicates that an area or entity is served by some device or sensor. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor.
-
-Deprecated in favour of inverse properties core:servesSpace and core:servesAsset</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that a Space or Asset is served by some Sensor/Actuator or other Asset. For example: an entrance room might be served by (e.g., covered by) some camera equipment, or a conference room served by a CO2 sensor. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset.</rdfs:comment>
         <rdfs:label xml:lang="en">served by</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -669,7 +665,6 @@ Deprecated in favour of inverse properties core:servesSpace and core:servesAsset
     <!-- https://w3id.org/rec/core/serves -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/serves">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">The coverage or impact area of a given Asset or Sensor/Actuator. For example: an air-treatment unit might serve several Rooms or a full Building. Note that Assets can also service one another, e.g., an air-treatment Asset might serve an air diffuser Asset.</rdfs:comment>
         <rdfs:label xml:lang="en">serves</rdfs:label>
     </owl:ObjectProperty>
@@ -1354,6 +1349,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2353,6 +2354,12 @@ Describes the type of values that can be observed by sensors or set by actuators
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/ownedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/servedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
