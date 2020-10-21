@@ -9,10 +9,14 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/rec/core/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:core1="http://www.linkedmodel.org/owl/schema/core#"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/device/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/device/3.3/"/>
@@ -270,8 +274,11 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/observes">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:comment xml:lang="en">Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for.
+
+Deprecated in favour of core:observes</rdfs:comment>
         <rdfs:label xml:lang="en">observes</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -282,8 +289,11 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/device/observes"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuator"/>
-        <rdfs:comment xml:lang="en">The actuator that a sensor is configured or designed to observe.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The actuator that a sensor is configured or designed to observe.
+
+Deprecated in favour of core:observes</rdfs:comment>
         <rdfs:label xml:lang="en">observes actuator</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -291,8 +301,9 @@
     <!-- https://w3id.org/rec/device/sensorInterface -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/sensorInterface">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/SensorInterface"/>
+        <rdfs:comment xml:lang="en">Deprecated in favour of core:sensorInterface</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -486,7 +497,9 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasAuxiliaryData"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Deprecated in favour of core:MACAddress.</rdfs:comment>
         <rdfs:label xml:lang="en">has MAC address</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -616,6 +629,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     <!-- https://w3id.org/rec/device/Actuator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Actuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -635,6 +649,12 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
         <o2o:endpoint>actuator</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/rec/device/Actuator"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/rec/core/Device"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Axiom>
     
 
 
@@ -856,6 +876,7 @@ Deprecated in favour of core:Observation.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:comment xml:lang="en">The power source for the device.</rdfs:comment>
         <rdfs:label xml:lang="en">Power source</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -914,6 +935,8 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Deprecated in favour of core:SensorInterface</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 

@@ -9,10 +9,14 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/rec/core/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:core1="http://www.linkedmodel.org/owl/schema/core#"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/building/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/building/3.3/"/>
@@ -778,8 +782,11 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/building/Storey">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
+        <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan.
+
+Deprecated in favour of core:Level</rdfs:comment>
         <rdfs:label xml:lang="en">Storey</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>storey</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
