@@ -8,19 +8,15 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:core="http://www.linkedmodel.org/owl/schema/core#"
-     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:actuation="https://w3id.org/rec/actuation/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/actuation/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/actuation/3.3/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/device/3.3/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/actuation/3.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/device/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per Karlberg</dc:creator>
@@ -29,8 +25,8 @@
         <dc:title>RealEstateCore Actuation Module</dc:title>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23</terms:modified>
         <vann:preferredNamespacePrefix>actuation</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/actuation/3.3/</vann:preferredNamespaceUri>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.3</owl:versionInfo>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/actuation/3.2/</vann:preferredNamespaceUri>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -132,6 +128,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/actuation/isActuationInterfaceOf">
         <rdfs:domain rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuator"/>
         <rdfs:label xml:lang="en">is actuation interface of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -143,6 +140,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/actuation/isActuationInterfaceOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/device/Actuator"/>
         <rdfs:label xml:lang="en">is default actuation interface of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -686,26 +684,6 @@ Deprecated in favour of the definitions provided in the new dataschemas module.<
         <rdfs:label xml:lang="en">Value restriction</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/Actuator -->
-
-    <rdf:Description rdf:about="https://w3id.org/rec/device/Actuator">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/hasActuationInterface"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/actuation/hasDefaultActuationInterface"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/rec/actuation/ActuationInterface"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
 </rdf:RDF>
 
 

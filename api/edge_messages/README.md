@@ -8,7 +8,7 @@ The Edge Message specification is expressed using JSON Schema (see [json-schema.
 ## Edge Message Walkthrough
 
 The format corresponds to a version of RealEstateCore and is stated at the root of the message, so that different versions devices using different versions can be used next to each other, but still parsed correctly.  
-`"format": "rec3.3"`
+`"format": "rec3.2"`
 
 Edge messages are sent to or from core:Devices. Hence Device Id is also included in the message root.  
 `"deviceId":"myDeviceId"`

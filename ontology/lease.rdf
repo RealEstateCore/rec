@@ -15,8 +15,8 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/lease/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/lease/3.3/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/core/3.3/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/lease/3.2/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
@@ -25,7 +25,7 @@
         <dc:title>RealEstateCore Lease Module</dc:title>
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23</dcterms:modified>
         <vann:preferredNamespacePrefix>lease</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/lease/3.3/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/lease/3.2/</vann:preferredNamespaceUri>
         <cpannotationschema:coversRequirements xml:lang="en">What contract governs the lease of building 7?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">What purpose is Building 7 leased for?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">When does the lease on Building 7 run out?</cpannotationschema:coversRequirements>
@@ -33,8 +33,7 @@
         <cpannotationschema:coversRequirements xml:lang="en">Who owns Building 7?</cpannotationschema:coversRequirements>
         <rdfs:comment xml:lang="en">The LeaseContract class is as of yet underdefined -- we need to liaise with legal expertise to define the requirements here. Also, lease remuneration needs to be modelled. The base case, monthly rent, is easy -- but more complex and forward-looking payment models are likely to be relevant in some use cases also.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.3</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -80,7 +79,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/rec/lease/Lease"/>
         <rdfs:comment xml:lang="en">The object (e.g., property, equipment, etc) that this a lease of.</rdfs:comment>
         <rdfs:label xml:lang="en">lease of</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -92,7 +90,6 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
         <rdfs:comment xml:lang="en">The agent (organization or person) leasing some leasable object, i.e., the user of the asset.</rdfs:comment>
         <rdfs:label xml:lang="en">leasee</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -104,7 +101,6 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
         <rdfs:comment xml:lang="en">The agent (organization or person) leasing out some leasable object, i.e., the owner of the asset.</rdfs:comment>
         <rdfs:label xml:lang="en">leasor</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -163,7 +159,6 @@
         <rdfs:range rdf:resource="https://w3id.org/rec/lease/LeaseContract"/>
         <rdfs:comment xml:lang="en">A lease is regulated by some contract entered into by the leasor and leasees.</rdfs:comment>
         <rdfs:label xml:lang="en">regulated by</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -199,7 +194,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Time at which a lease arrangement ends.</rdfs:comment>
         <rdfs:label xml:lang="en">lease end</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -212,7 +206,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Time at which a lease arrangement begins.</rdfs:comment>
         <rdfs:label xml:lang="en">lease start</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -231,7 +224,7 @@
     <!-- https://w3id.org/rec/lease/CoffeePremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/CoffeePremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -239,7 +232,7 @@
     <!-- https://w3id.org/rec/lease/EducationalPremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/EducationalPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -247,7 +240,7 @@
     <!-- https://w3id.org/rec/lease/GaragePremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/GaragePremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -255,7 +248,7 @@
     <!-- https://w3id.org/rec/lease/HotelPremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/HotelPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -263,7 +256,7 @@
     <!-- https://w3id.org/rec/lease/LaboratoryPremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/LaboratoryPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -282,7 +275,6 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/Lease">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -292,7 +284,6 @@
     <owl:Class rdf:about="https://w3id.org/rec/lease/LeaseContract">
         <rdfs:comment xml:lang="en">Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement.</rdfs:comment>
         <rdfs:label xml:lang="en">Lease contract</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -300,7 +291,7 @@
     <!-- https://w3id.org/rec/lease/LightIndustryPremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/LightIndustryPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -308,7 +299,7 @@
     <!-- https://w3id.org/rec/lease/OfficePremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/OfficePremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -336,7 +327,7 @@
     <!-- https://w3id.org/rec/lease/ResidentialPremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/ResidentialPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -344,7 +335,7 @@
     <!-- https://w3id.org/rec/lease/RestaurantPremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/RestaurantPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -352,7 +343,7 @@
     <!-- https://w3id.org/rec/lease/RetailPremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/RetailPremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -360,7 +351,7 @@
     <!-- https://w3id.org/rec/lease/StoragePremises -->
 
     <owl:Class rdf:about="https://w3id.org/rec/lease/StoragePremises">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Premises"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/lease/Premises"/>
     </owl:Class>
     
 
@@ -473,37 +464,47 @@
      -->
 
     <rdf:Description rdf:about="https://w3id.org/rec/lease/CoffeePremises">
-        <owl:deprecated xml:lang="en">Coffee premises</owl:deprecated>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/EducationalPremises">
-        <rdfs:label xml:lang="en">Educational premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">EducationalPremises</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/GaragePremises">
-        <rdfs:label xml:lang="en">Garage premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">GaragePremises</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/HotelPremises">
-        <rdfs:label xml:lang="en">Hotel premises</rdfs:label>
+        <rdfs:label xml:lang="en">HotelPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/LaboratoryPremises">
-        <rdfs:label xml:lang="en">Laboratory premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">LaboratoryPremises</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/LightIndustryPremises">
-        <rdfs:label xml:lang="en">Light industry premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">LightIndustryPremises</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/OfficePremises">
-        <rdfs:label xml:lang="en">Office premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">OfficePremises</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/ResidentialPremises">
-        <rdfs:label xml:lang="en">Residential premises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">ResidentialPremises</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/RestaurantPremises">
-        <rdfs:label xml:lang="en">Restaurant premises</rdfs:label>
+        <rdfs:label xml:lang="en">RestaurantPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/RetailPremises">
-        <rdfs:label xml:lang="en">Retail premises</rdfs:label>
+        <rdfs:label xml:lang="en">RetailPremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/lease/StoragePremises">
-        <rdfs:label xml:lang="en">Storage premises</rdfs:label>
+        <rdfs:label xml:lang="en">StoragePremises</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
 </rdf:RDF>
 

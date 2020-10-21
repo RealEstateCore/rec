@@ -9,7 +9,6 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:dcam="http://purl.org/dc/dcam/"
-     xmlns:dtdl="dtmi:dtdl:context;2#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
@@ -18,7 +17,7 @@
      xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/metadata/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/metadata/3.3/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/metadata/3.2/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:contributor>Erik Wallin</dc:contributor>
         <dc:contributor>Karl Hammar</dc:contributor>
@@ -31,14 +30,14 @@ The copyright on the constituent parts (classes, properties, named individuals) 
         <dc:title>RealEstateCore Metadata Module</dc:title>
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23</dcterms:modified>
         <vann:preferredNamespacePrefix>metadata</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/metadata/3.3/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/metadata/3.2/</vann:preferredNamespaceUri>
         <rdfs:isDefinedBy rdf:resource="http://creativecommons.org/ns#"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
         <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"/>
         <rdfs:isDefinedBy rdf:resource="https://karlhammar.com/owl2oas/o2o.owl#"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.3</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -311,24 +310,6 @@ The copyright on the constituent parts (classes, properties, named individuals) 
         <rdfs:comment xml:lang="en">Usage of this annotation on an object or data property indicates that the property shall, when translated into RDF or OAS representations, be an ordered RDF list.</rdfs:comment>
         <rdfs:label xml:lang="en">list property</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://w3id.org/rec/metadata/dtdlType -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/metadata/dtdlType">
-        <rdfs:label xml:lang="en">DTDL type</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://w3id.org/rec/metadata/semanticType -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/rec/metadata/semanticType">
-        <rdfs:comment xml:lang="en">Indicates which DTDL Semantic Type that an OWL datatype expresses.</rdfs:comment>
-        <rdfs:label xml:lang="en">Semantic Type</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:AnnotationProperty>
 </rdf:RDF>
 
