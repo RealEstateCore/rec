@@ -1,5 +1,18 @@
 # RealEstateCore Release Notes
 
+## V3.3 -- Assets, Spatial Model, Capability Model, QUDT
+
+Version 3.3 is a major feature release that contains a wealth of new features, some of which are:
+
+* A new Asset module, covering systems and equipment mounted within buildings, at depth. This is based on an interpretation and extension of the Brick Schema ontology, carried out in conjunction with Willow and Microsoft. See also the [DTDL](https://aka.ms/dtdl) version of RealEstateCore in the [Azure Open Digital Twins Buildings repository](https://github.com/Azure/opendigitaltwins-building)&lt;/a&gt;.
+* An updated spatial model that clearly differentiates between Building Components and Spaces; where the former make up the building&apos;s structural elements, and the latter make up physical spaces inside (rooms, levels, etc) or outside (regions, land, etc) of a building. This is in line with the W3C LBD BOT ontology.
+* A simplified set of topological relations to connect sub- and super-entities within the top-level REC class tree. &quot;isPartOf&quot; and &quot;hasPart&quot; are now defined to operate on entities of the same type, i.e., Spaces have only Spaces as parts, Assets have only Assets as parts, etc. 
+* A Capability model based on the BMS notion of Points (as represented in, e.g., Brick Schema) or Affordances (as represented in Web of Things). Subclasses of Capability denote specific sensorsing or actuation capabilities that can be assigned to Spaces, Assets, etc.
+* LogicalDevice -- represents a connected entity that pushes data to the cloud, which is typically an instance of a piece of software (e.g., an IoTEdge module, a HomeAssistant install, some proprietary BMS system, etc).
+* A partial integration of Quantity Kinds and Units from the established QUDT ontology. We have punned a subset of these units to datatypes in REC, allowing them to be used as ranges of data properties, providing fine-grained semantics for such properties. These units are held in the new Units module.
+
+As a consequence of the above changes, REC 3.3 deprecates many existing core functionalities. In keeping with our semantic versioning policy, entities or axioms from REC 3.2 that are deprecated remain usable and with unchanged semantics until the next compatibility-breaking REC release (4.0).
+
 ## V3.2 -- Analytics, Data Schemas, and Sensor Interfaces
 
 Version 3.2 is a feature release that contains:

@@ -1156,9 +1156,21 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     <!-- https://w3id.org/rec/core/personCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/personCapacity">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment xml:lang="en">The number of people who can fit in a Room or Elevator.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The number of people who can fit in a Space.</rdfs:comment>
         <rdfs:label xml:lang="en">person capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/personOccupancy -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/personOccupancy">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of people presently occupying a Space.</rdfs:comment>
+        <rdfs:label xml:lang="en">person occupancy</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1176,6 +1188,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/propertyRegisterDesignation">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/RealEstate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Reference to the unique identity of the real estate in the property register in the country where the real estate is located.</rdfs:comment>
         <rdfs:label xml:lang="en">property register designation</rdfs:label>
     </owl:DatatypeProperty>
@@ -2192,12 +2205,6 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:Class rdf:about="https://w3id.org/rec/core/Room">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/personCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Base class for all more specific room types.</rdfs:comment>
         <rdfs:label xml:lang="en">Room</rdfs:label>
     </owl:Class>
@@ -2370,6 +2377,18 @@ Describes the type of values that can be observed by sensors or set by actuators
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/servedBy"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/personCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/personOccupancy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
@@ -2553,6 +2572,15 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:Class rdf:about="https://w3id.org/rec/core/WaterTemperatureSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/TemperatureSensor"/>
         <rdfs:label xml:lang="en">Water temperature sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Workspace -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Workspace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Zone"/>
+        <rdfs:label xml:lang="en">Workspace</rdfs:label>
     </owl:Class>
     
 
