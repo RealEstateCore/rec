@@ -557,11 +557,11 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/batteryLife -->
+    <!-- https://w3id.org/rec/asset/batteryPercentage -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/batteryLife">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MIN"/>
-        <rdfs:label xml:lang="en">battery life</rdfs:label>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/batteryPercentage">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">battery percentage</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -6786,8 +6786,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ICTEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/batteryLife"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MIN"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/batteryPercentage"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
