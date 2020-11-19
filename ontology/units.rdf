@@ -664,6 +664,8 @@
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Acceleration">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CentiM-PER-SEC2"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/G"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC2"/>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">Acceleration is the (instantaneous) rate of change of velocity. Acceleration may be either linear acceleration, or angular acceleration. It is a vector quantity with dimension \(length/time^{2}\) for linear acceleration, or in the case of angular acceleration, with dimension \(angle/time^{2}\). In SI units, linear acceleration is measured in \(meters/second^{2}\) (\(m \cdot s^{-2}\)) and angular acceleration is measured in \(radians/second^{2}\). In physics, any increase or decrease in speed is referred to as acceleration and similarly, motion in a circle at constant speed is also an acceleration, since the direction component of the velocity is changing.</terms:description>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Acceleration</qudt:dbpediaMatch>
@@ -674,64 +676,15 @@
     
 
 
-    <!-- http://qudt.org/vocab/quantitykind/ActiveEnergy -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ActiveEnergy">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/J"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/Energy"/>
-        <qudt:abbreviation>active-energy</qudt:abbreviation>
-        <qudt:plainTextDescription>&quot;Active Energy&quot; is the electrical energy transformable into some other form of energy.</qudt:plainTextDescription>
-        <qudt:symbol>W</qudt:symbol>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.electropedia.org/iev/iev.nsf/display?openform&amp;ievref=601-01-19</qudt:informativeReference>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=31891</qudt:informativeReference>
-        <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(W = \int_{t_1}^{t_2} p dt\), where \(p\) is instantaneous power and the integral interval is the time interval from \(t_1\) to \(t_2\).</qudt:latexDefinition>
-        <qudt:normativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/catalogue_detail?csnumber=43012</qudt:normativeReference>
-        <qudt:symbolToken rdf:datatype="http://www.w3.org/2001/XMLSchema#token">W</qudt:symbolToken>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Active Energy</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/quantitykind/ActivePower -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ActivePower">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:symbol>P</qudt:symbol>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(Active Power\) is, under periodic conditions, the mean value, taken over one period \(T\), of the instantaneous power \(p\). In complex notation, \(P = \mathbf{Re} \; \underline{S}\), where \(\underline{S}\) is \(\textit{complex power}\)&quot;.</terms:description>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.electropedia.org/iev/iev.nsf/display?openform&amp;ievref=131-11-42</qudt:informativeReference>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=31891</qudt:informativeReference>
-        <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(P = \frac{1}{T}\int_{0}^{T} pdt\), where \(T\) is the period and \(p\) is instantaneous power.</qudt:latexDefinition>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Active Power</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/quantitykind/Altitude -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Altitude">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI_N"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/Length"/>
-        <qudt:plainTextDescription>Altitude or height is defined based on the context in which it is used (aviation, geometry, geographical survey, sport, and more). As a general definition, altitude is a distance measurement, usually in the vertical or &quot;up&quot; direction, between a reference datum and a point or object. The reference datum also often varies according to the context. [Wikipedia]</qudt:plainTextDescription>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Altitude</qudt:dbpediaMatch>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Altitude</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://qudt.org/vocab/quantitykind/Angle -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Angle">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MIN_Angle"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/DimensionlessRatio"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ARCMIN"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ARCSEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DEG"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/RAD"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/REV"/>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The inclination to each other of two intersecting lines, measured by the arc of a circle intercepted between the two lines forming the angle, the center of the circle being the point of intersection.  An acute angle is less than \(90^\circ\), a right angle \(90^\circ\); an obtuse angle, more than \(90^\circ\) but less than \(180^\circ\); a straight angle, \(180^\circ\); a reflex angle, more than \(180^\circ\) but less than \(360^\circ\); a perigon, \(360^\circ\). Any angle not a multiple of \(90^\circ\) is an oblique angle. If the sum of two angles is \(90^\circ\), they are complementary angles; if \(180^\circ\), supplementary angles; if \(360^\circ\), explementary angles.</terms:description>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Angle</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
@@ -771,7 +724,6 @@
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/REV-PER-HR"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/REV-PER-SEC"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/Frequency"/>
         <qudt:baseUnitDimensions>/s</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>U/T</qudt:baseUnitDimensions>
         <qudt:plainTextDescription>The change of angle per unit time; specifically, in celestial mechanics, the change in angle of the radius vector per unit time.</qudt:plainTextDescription>
@@ -787,16 +739,14 @@
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Area">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/AC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ARE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BARN"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CentiM2"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT2"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HA"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/IN2"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloM2"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M2"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI2"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MIL_Circ"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckArea"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliM2"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YD2"/>
         <qudt:baseCGSUnitDimensions>cm^2</qudt:baseCGSUnitDimensions>
         <qudt:baseSIUnitDimensions rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(m^2\)</qudt:baseSIUnitDimensions>
@@ -820,9 +770,8 @@
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Capacitance">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FARAD"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FARAD_Ab"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FARAD_Stat"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroFARAD"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliFARAD"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NanoFARAD"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PicoFARAD"/>
         <qudt:baseUnitDimensions>A^2 \cdot s^4/kg \cdot m^2</qudt:baseUnitDimensions>
@@ -843,10 +792,8 @@
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Concentration">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:plainTextDescription>In chemistry, concentration is defined as the abundance of a constituent divided by the total volume of a mixture. Furthermore, in chemistry, four types of mathematical description can be distinguished: mass concentration, molar concentration, number concentration, and volume concentration. The term concentration can be applied to any kind of chemical mixture, but most frequently it refers to solutes in solutions.</qudt:plainTextDescription>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Concentration</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Concentration</qudt:informativeReference>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PPM"/>
         <rdfs:label>Concentration</rdfs:label>
     </owl:NamedIndividual>
     
@@ -856,8 +803,8 @@
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/DataRate">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloBIT-PER-SEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaBIT-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BIT-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BYTE-PER-SEC"/>
         <qudt:plainTextDescription>The frequency derived from the period of time required to transmit one bit. This represents the amount of data transferred per second by a communications channel or a computing or storage device. Data rate is measured in units of bits per second (written &quot;b/s&quot; or &quot;bps&quot;), bytes per second (Bps), or baud. When applied to data rate, the multiplier prefixes &quot;kilo-&quot;, &quot;mega-&quot;, &quot;giga-&quot;, etc. (and their abbreviations, &quot;k&quot;, &quot;M&quot;, &quot;G&quot;, etc.) always denote powers of 1000. For example, 64 kbps is 64,000 bits per second. This contrasts with units of storage which use different prefixes to denote multiplication by powers of 1024, for example 1 kibibit = 1024 bits.</qudt:plainTextDescription>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Data_rate</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
@@ -866,24 +813,26 @@
     
 
 
+    <!-- http://qudt.org/vocab/quantitykind/DataSize -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/DataSize">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BIT"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
+        <rdfs:label>Data Size</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/quantitykind/Density -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Density">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GRAIN-PER-GAL"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GM-PER-DeciM3"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GM-PER-M3"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-M3"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB-PER-FT3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB-PER-GAL"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB-PER-IN3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB-PER-M3"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB-PER-YD3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliGM-PER-DeciL"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ_PER-GAL"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ_PER-IN3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckDensity"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/SLUG-PER-FT3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_LONG-PER-YD3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_SHORT-PER-YD3"/>
         <qudt:baseUnitDimensions>M/L^3</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>kg/m^3</qudt:baseUnitDimensions>
         <qudt:latexSymbol rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\rho\)</qudt:latexSymbol>
@@ -898,62 +847,22 @@
     
 
 
-    <!-- http://qudt.org/vocab/quantitykind/Dimensionless -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Dimensionless">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DECADE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GigaBYTE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloBYTE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloBYTE-PER-SEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaBYTE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaBYTE_Memory"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NP"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NUM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OCT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PebiBYTE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PetaBYTE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TeraBYTE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/UNITLESS"/>
-        <qudt:baseUnitDimensions></qudt:baseUnitDimensions>
-        <qudt:baseUnitDimensions>U</qudt:baseUnitDimensions>
-        <qudt:symbol>U</qudt:symbol>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">In dimensional analysis, a dimensionless quantity or quantity of dimension one is a quantity without an associated physical dimension. It is thus a &quot;pure&quot; number, and as such always has a dimension of 1. Dimensionless quantities are widely used in mathematics, physics, engineering, economics, and in everyday life (such as in counting). Numerous well-known quantities, such as \(\pi\), \(\epsilon\), and \(\psi\), are dimensionless. By contrast, non-dimensionless quantities are measured in units of length, area, time, etc. Dimensionless quantities are often defined as products or ratios of quantities that are not dimensionless, but whose dimensions cancel out when their powers are multiplied.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Dimensionless_quantity</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Dimensionless_quantity</qudt:informativeReference>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Dimensionless</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/quantitykind/DimensionlessRatio -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/DimensionlessRatio">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DeciB_M"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MACH"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PPB"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PPM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PPTH"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PPTR"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
-        <qudt:latexSymbol rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\Uppsi\)</qudt:latexSymbol>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Dimensionless Ratio</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://qudt.org/vocab/quantitykind/Distance -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Distance">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/AU"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/IN"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloM"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/Length"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI_N"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroM"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NanoM"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YD"/>
         <qudt:plainTextDescription>&quot;Distance&quot; is a numerical description of how far apart objects are. </qudt:plainTextDescription>
         <qudt:symbol>d</qudt:symbol>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Distance</qudt:informativeReference>
@@ -984,35 +893,11 @@
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ElectricCharge">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/A-HR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/AttoC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/C"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/C_Ab"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/C_Stat"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CentiC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DecaC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DeciC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/E"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ElementaryCharge"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ExaC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/F"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FemtoC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GigaC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HectoC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NanoC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PetaC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PicoC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckCharge"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TeraC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YoctoC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YottaC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ZeptoC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ZettaC"/>
         <qudt:baseUnitDimensions>A \cdot s</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>I \cdot T</qudt:baseUnitDimensions>
         <qudt:symbol>Q</qudt:symbol>
@@ -1033,15 +918,9 @@
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ElectricCurrent">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/A"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/A_Ab"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/A_Stat"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BIOT"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloA"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroA"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliA"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NanoA"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PicoA"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckCurrent"/>
         <qudt:baseUnitDimensions>A</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>I</qudt:baseUnitDimensions>
         <qudt:plainTextDescription>&quot;Electric Current&quot; is the flow (movement) of electric charge. The amount of electric current through some surface, for example, a section through a copper conductor, is defined as the amount of electric charge flowing through that surface over time. Current is a scalar-valued quantity. Electric current is one of the base quantities in the International System of Quantities, ISQ, on which the International System of Units, SI, is based. </qudt:plainTextDescription>
@@ -1058,7 +937,13 @@
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Energy">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/EV"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GigaJ"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/J"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloJ"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloW-HR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaEV"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaJ"/>
         <qudt:plainTextDescription>Energy is the quantity characterizing the ability of a system to do work.</qudt:plainTextDescription>
         <qudt:symbol>E</qudt:symbol>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Energy</qudt:dbpediaMatch>
@@ -1073,16 +958,11 @@
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Force">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DYN"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KIP_F"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloGM_F"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloP"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB_F"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaLB_F"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ_F"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PDL"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckForce"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_F_US"/>
         <qudt:baseUnitDimensions>L \cdot M/T^2</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>kg \cdot m/s^2</qudt:baseUnitDimensions>
         <qudt:symbol>F</qudt:symbol>
@@ -1106,12 +986,6 @@
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HZ"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloHZ"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaHZ"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NUM-PER-YR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PER-HR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PER-MIN"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PER-SEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckFrequency"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/SAMPLE-PER-SEC"/>
         <qudt:baseUnitDimensions>/T</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>/s</qudt:baseUnitDimensions>
         <qudt:latexSymbol rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\nu, f\)</qudt:latexSymbol>
@@ -1132,6 +1006,8 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Illuminance">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LUX"/>
         <qudt:plainTextDescription>Illuminance is the total luminous flux incident on a surface, per unit area. It is a measure of the intensity of the incident light, wavelength-weighted by the luminosity function to correlate with human brightness perception.</qudt:plainTextDescription>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Illuminance</qudt:dbpediaMatch>
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(E_v = \frac{d\Phi}{dA}\), where \(d\Phi\) is the luminous flux incident on an element of the surface with area \(dA\).</qudt:latexDefinition>
@@ -1146,8 +1022,6 @@ Alternatively,
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Inductance">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/H"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/H_Ab"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/H_Stat"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroH"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliH"/>
         <qudt:baseUnitDimensions>L^2 \cdot M/I^2 \cdot T^2</qudt:baseUnitDimensions>
@@ -1160,27 +1034,6 @@ Alternatively,
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(L =\frac{\Psi}{I}\), where \(I\) is an electric current in a thin conducting loop, and \(\Psi\) is the linked flux caused by that electric current.</qudt:latexDefinition>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Inductance</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/quantitykind/InformationEntropy -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/InformationEntropy">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BAN"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BIT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ERLANG"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HART"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NAT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NAT-PER-SEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/SHANNON"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
-        <qudt:plainTextDescription>Information Entropy is a concept from information theory. It tells how much information there is in an event. In general, the more uncertain or random the event is, the more information it will contain. The concept of information entropy was created by a mathematician. He was named Claude Elwood Shannon. It has applications in many areas, including lossless data compression, statistical inference, cryptography and recently in other disciplines as biology, physics or machine learning.</qudt:plainTextDescription>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://simple.wikipedia.org/wiki/Information_entropy</qudt:informativeReference>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Information Entropy</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1204,34 +1057,17 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Length">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ANGSTROM"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/AU"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CH"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DeciM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FATH"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FM"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT_US"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FUR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FUR_Long"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FemtoM"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/IN"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LY"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI_N"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI_US"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroIN"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilLength"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PARSEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PCA"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckLength"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ROD"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NanoM"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YD"/>
         <qudt:baseUnitDimensions>L</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>m</qudt:baseUnitDimensions>
@@ -1249,11 +1085,7 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Luminance">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CD-PER-IN2"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CD-PER-M2"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT-LA"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LA"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/STILB"/>
         <qudt:baseUnitDimensions>J/L^2</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>cd/m^2</qudt:baseUnitDimensions>
         <qudt:plainTextDescription>Luminance is a photometric measure of the luminous intensity per unit area of light travelling in a given direction. It describes the amount of light that passes through or is emitted from a particular area, and falls within a given solid angle.</qudt:plainTextDescription>
@@ -1262,6 +1094,21 @@ Alternatively,
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(L_v = \frac{dI_v}{dA}\), where \(dI_v\) is the luminous intensity of an element of the surface with the area \(dA\) of the orthogonal projection of this element on a plane perpendicular to the given direction.</qudt:latexDefinition>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Luminance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/Luminosity -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Luminosity">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GigaW"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaW"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroW"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliW"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:label>Luminosity</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1290,7 +1137,6 @@ Alternatively,
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/LuminousIntensity">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CD"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CP"/>
         <qudt:baseUnitDimensions>J</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>cd</qudt:baseUnitDimensions>
         <qudt:plainTextDescription>Luminous Intensity is a measure of the wavelength-weighted power emitted by a light source in a particular direction per unit solid angle. The weighting is determined by the luminosity function, a standardized model of the sensitivity of the human eye to different wavelengths.</qudt:plainTextDescription>
@@ -1307,8 +1153,6 @@ Alternatively,
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MagneticFlux">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MX"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/UnitPole"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/V_Ab-SEC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/WB"/>
         <qudt:baseUnitDimensions>L^2 \cdot M/I \cdot T^2</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>kg \cdot m^2/A \cdot s^2</qudt:baseUnitDimensions>
@@ -1330,10 +1174,7 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MagneticFluxDensity">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/Gamma"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/Gs"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/T"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/T_Ab"/>
         <qudt:baseUnitDimensions>kg/A \cdot s^2</qudt:baseUnitDimensions>
         <qudt:symbol>B</qudt:symbol>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Magnetic Flux Density&quot; is a vector quantity and is the magnetic flux per unit area of a magnetic field at right angles to the magnetic force. It can be defined in terms of the effects the field has, for example by \(B = F/q v \sin \theta\), where \(F\) is the force a moving charge \(q\) would experience if it was travelling at a velocity \(v\) in a direction making an angle θ with that of the field. The magnetic field strength is also a vector quantity and is related to \(B\) by: \(H = B/\mu\), where \(\mu\) is the permeability of the medium.</terms:description>
@@ -1350,30 +1191,12 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Mass">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/AMU"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CARAT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CWT_LONG"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CWT_SHORT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DWT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/EarthMass"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GRAIN"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB_T"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LunarMass"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ_TROY"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckMass"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroGM"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliGM"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/SLUG"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/SolarMass"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TONNE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_Assay"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_LONG"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_SHORT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_UK"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_US"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/U"/>
         <qudt:baseUnitDimensions>M</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>kg</qudt:baseUnitDimensions>
         <qudt:symbol>m</qudt:symbol>
@@ -1390,6 +1213,9 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/MassFlowRate">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GM-PER-HR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GM-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-SEC"/>
         <qudt:baseUnitDimensions>kg sec^{-1}</qudt:baseUnitDimensions>
         <qudt:latexSymbol rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\dot{m}\)</qudt:latexSymbol>
@@ -1415,23 +1241,12 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Power">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BTU_IT-PER-HR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BTU_IT-PER-SEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/ERG-PER-SEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT-LB_F-PER-HR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT-LB_F-PER-MIN"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT-LB_F-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GigaW"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HP"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HP-PER-M"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HP-PER-V"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HP_Boiler"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloCAL-PER-MIN"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloCAL-PER-SEC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaW"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroW"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliW"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckPower"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_FG"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/W"/>
         <qudt:baseUnitDimensions>L^2 \cdot M/T^3</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>kg \cdot m^2/s^3</qudt:baseUnitDimensions>
@@ -1462,7 +1277,6 @@ Alternatively,
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\lambda = \left | P \right | / \left | S \right |\), where \(P\) is active power and \(S\) is apparent power.</qudt:latexDefinition>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Power Factor</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://qudt.org/vocab/quantitykind/ActivePower"/>
     </owl:NamedIndividual>
     
 
@@ -1471,9 +1285,14 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Pressure">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BARYE"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/N-PER-M2"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BAR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/IN_H2O"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/IN_HG"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliBAR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliM_HG"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PA"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PSI"/>
         <qudt:plainTextDescription>Pressure is an effect which occurs when a force is applied on a surface. Pressure is the amount of force acting on a unit area. Pressure is distinct from stress, as the former is the ratio of the component of force normal to a surface to the surface area. Stress is a tensor that relates the vector force to the vector area.</qudt:plainTextDescription>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Pressure</qudt:dbpediaMatch>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Pressure</qudt:informativeReference>
@@ -1481,22 +1300,6 @@ Alternatively,
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(p = \frac{dF}{dA}\), where \(dF\) is the force component perpendicular to the surface element of area \(dA\).</qudt:latexDefinition>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
         <rdfs:label>Pressure</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://qudt.org/vocab/quantitykind/ReactivePower -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/ReactivePower">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/V-A_Reactive"/>
-        <qudt:symbol>Q</qudt:symbol>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Reactive Power}, for a linear two-terminal element or two-terminal circuit, under sinusoidal conditions, is the quantity equal to the product of the apparent power \(S\) and the sine of the displacement angle \(\psi\). The absolute value of the reactive power is equal to the non-active power. The ISO (and SI) unit for reactive power is the voltampere. The special name \textit{var} and symbol \textit{var&quot; are given in IEC 60027 1.</terms:description>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.electropedia.org/iev/iev.nsf/display?openform&amp;ievref=131-11-44</qudt:informativeReference>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=31891</qudt:informativeReference>
-        <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(Q = lm \underline{S}\), where \(\underline{S}\) is complex power. Alternatively expressed as: \(Q = S \cdot \sin  \psi\), where \(\psi\) is the displacement angle.</qudt:latexDefinition>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Reactive Power</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1522,10 +1325,10 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Resistance">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloOHM"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaOHM"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliOHM"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OHM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OHM_Ab"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OHM_Stat"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckImpedance"/>
         <qudt:baseUnitDimensions>L^2 \cdot M/I^2 \cdot T^3</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>kg \cdot m^2/A^2 \cdot s^3</qudt:baseUnitDimensions>
         <qudt:plainTextDescription>The electrical resistance of an object is a measure of its opposition to the passage of a steady electric current.</qudt:plainTextDescription>
@@ -1541,27 +1344,11 @@ Alternatively,
     
 
 
-    <!-- http://qudt.org/vocab/quantitykind/SoundPressure -->
-
-    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/SoundPressure">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PA"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/Pressure"/>
-        <qudt:abbreviation>p</qudt:abbreviation>
-        <qudt:plainTextDescription>Sound Pressure is the difference between instantaneous total pressure and static pressure.</qudt:plainTextDescription>
-        <qudt:symbol>p</qudt:symbol>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Static_pressure</qudt:informativeReference>
-        <vaem:todo>belongs to SOQ-ISO</vaem:todo>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
-        <rdfs:label>Sound pressure</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://qudt.org/vocab/quantitykind/SoundPressureLevel -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/SoundPressureLevel">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/B"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DeciB"/>
         <qudt:symbol>L</qudt:symbol>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">Sound pressure level (\(SPL\)) or sound level  is a logarithmic measure of the effective sound pressure of a sound relative to a reference value. It is measured in decibels (dB) above a standard reference level.</terms:description>
@@ -1578,6 +1365,9 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Temperature">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DEG_F"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/K"/>
         <qudt:plainTextDescription>Temperature is a physical property of matter that quantitatively expresses the common notions of hot and cold. Objects of low temperature are cold, while various degrees of higher temperatures are referred to as warm or hot. Heat spontaneously flows from bodies of a higher temperature to bodies of lower temperature, at a rate that increases with the temperature difference and the thermal conductivity.</qudt:plainTextDescription>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Temperature</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/quantitykind"/>
@@ -1590,7 +1380,10 @@ Alternatively,
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Thrust">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <skos:broader rdf:resource="http://qudt.org/vocab/quantitykind/Force"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB_F"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ_F"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TON_F_US"/>
         <qudt:plainTextDescription>Thrust is a reaction force described quantitatively by Newton&apos;s Second and Third Laws. When a system expels or accelerates mass in one direction the accelerated mass will cause a proportional but opposite force on that system.</qudt:plainTextDescription>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">Thrust is a reaction force described quantitatively by Newton&apos;s Second and Third Laws. When a system expels or accelerates mass in one direction the accelerated mass will cause a proportional but opposite force on that system.
 The pushing or pulling force developed by an aircraft engine or a rocket engine.
@@ -1608,27 +1401,13 @@ The force exerted in any direction by a fluid jet or by a powered screw, as, the
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Time">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DAY"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DAY_Sidereal"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/HR_Sidereal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloSEC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MIN"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MIN_Sidereal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MO"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MO_MeanGREGORIAN"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MO_MeanJulian"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MO_Synodic"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroSEC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliSEC"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/NanoSEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckTime"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/SEC"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/SH"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/WK"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YR_Common"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YR_Sidereal"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YR_TROPICAL"/>
         <qudt:baseUnitDimensions>T</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>s</qudt:baseUnitDimensions>
         <qudt:plainTextDescription>Time is a basic component of the measuring system used to sequence events, to compare the durations of events and the intervals between them, and to quantify the motions of objects.</qudt:plainTextDescription>
@@ -1644,12 +1423,7 @@ The force exerted in any direction by a fluid jet or by a powered screw, as, the
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Torque">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/DYN-CentiM"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloGM_F-PER-M"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB_F-FT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/LB_F-IN"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ_F-IN"/>
         <qudt:baseUnitDimensions>L^2 \cdot M/T^2</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>kg \cdot m^2/s^2</qudt:baseUnitDimensions>
         <qudt:latexSymbol rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\tau\)</qudt:latexSymbol>
@@ -1677,6 +1451,14 @@ t stands for time.</terms:description>
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Velocity">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CentiM-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KN"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloM-PER-HR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloM-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M-PER-HR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI-PER-HR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI-PER-SEC"/>
         <qudt:plainTextDescription>In kinematics, velocity is the speed of an object and a specification of its direction of motion. Speed describes only how fast an object is moving, whereas velocity gives both how fast and in what direction the object is moving.</qudt:plainTextDescription>
         <qudt:symbol>v</qudt:symbol>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Velocity</qudt:dbpediaMatch>
@@ -1691,6 +1473,11 @@ t stands for time.</terms:description>
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Voltage">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/KiloV"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MegaV"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MicroV"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliV"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/V"/>
         <qudt:latexSymbol rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\(U_{ab}\)\)</qudt:latexSymbol>
         <qudt:symbol>U</qudt:symbol>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Voltage}\), also referred to as \(\textit{Electric Tension}\), is the difference between electrical potentials of two points. For an electric field within a medium, \(U_{ab} = - \int_{r_a}^{r_b} E . {dr}\), where \(E\) is electric field strength.
@@ -1707,21 +1494,16 @@ For an irrotational electric field, the voltage is independent of the path betwe
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Volume">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/AC-FT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/BBL"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/CentiM3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FBM"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/FT3"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GAL_UK"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/GAL_US"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/IN3"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/L"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MI3"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliM3"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PINT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PlanckVolume"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/RT"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/STR"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TBSP"/>
-        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/TSP"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ_VOL_UK"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/OZ_VOL_US"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/YD3"/>
         <qudt:baseUnitDimensions>L^3</qudt:baseUnitDimensions>
         <qudt:baseUnitDimensions>m^3</qudt:baseUnitDimensions>
@@ -1737,7 +1519,12 @@ For an irrotational electric field, the voltage is independent of the path betwe
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/VolumeFlowRate">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/L-PER-HR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M3-PER-HR"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/M3-PER-SEC"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliL-PER-HR"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/MilliL-PER-SEC"/>
         <qudt:baseUnitDimensions>m sec^{-1}</qudt:baseUnitDimensions>
         <qudt:plainTextDescription>Volumetric Flow Rate, (also known as volume flow rate, rate of fluid flow or volume velocity) is the volume of fluid which passes through a given surface per unit time.</qudt:plainTextDescription>
         <qudt:symbol>q_V</qudt:symbol>
@@ -2411,7 +2198,6 @@ For an irrotational electric field, the voltage is independent of the path betwe
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/BAN">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/InformationEntropy"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.30258509</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>ban</qudt:symbol>
@@ -2812,7 +2598,6 @@ For an irrotational electric field, the voltage is independent of the path betwe
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/BIT">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/InformationEntropy"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.693147181</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA339</qudt:iec61360Code>
@@ -3820,7 +3605,6 @@ For an irrotational electric field, the voltage is independent of the path betwe
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/BYTE">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DerivedUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.54517744</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA354</qudt:iec61360Code>
@@ -3832,6 +3616,15 @@ For an irrotational electric field, the voltage is independent of the path betwe
         <qudt:ucumCode>By</qudt:ucumCode>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <rdfs:label>Byte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/BYTE-PER-SEC -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/BYTE-PER-SEC">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:label>Kilobyte per Second</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4890,6 +4683,7 @@ The number 2997924580 is 10 times the value of the speed of light expressed in m
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/CentiM-PER-SEC2">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DerivedUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Acceleration"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB398</qudt:iec61360Code>
@@ -5290,7 +5084,6 @@ The number 2997924580 is 10 times the value of the speed of light expressed in m
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DimensionlessUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/LogarithmicUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>oct</qudt:symbol>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">One decade is a factor of 10 difference between two numbers (an order of magnitude difference) measured on a logarithmic scale. It is especially useful when referring to frequencies and when describing frequency response of electronic systems, such as audio amplifiers and filters. The factor-of-ten in a decade can be in either direction: so one decade up from 100 Hz is 1000 Hz, and one decade down is 10 Hz. The factor-of-ten is what is important, not the unit used, so \(3.14 rad/s\) is one decade down from \(31.4 rad/s\).</terms:description>
@@ -6237,7 +6030,6 @@ The Baumé scale is a pair of hydrometer scales developed by French pharmacist A
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/DeciB_M">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DimensionlessUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/DimensionlessRatio"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>dBm</qudt:symbol>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Decibel Referred to 1mw&quot; is a  &apos;Dimensionless Ratio&apos; expressed as \(dBm\).</terms:description>
@@ -6692,7 +6484,6 @@ The Baumé scale is a pair of hydrometer scales developed by French pharmacist A
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/ERLANG">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/InformationEntropy"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB340</qudt:iec61360Code>
@@ -8543,7 +8334,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/GR">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DimensionlessUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/DimensionlessRatio"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>gr</qudt:symbol>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">the tangent of an angle of inclination multiplied by 100</terms:description>
@@ -8717,7 +8507,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/GigaBYTE">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.073741824E9</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -8871,7 +8660,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/GigaW">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ActivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E9</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA154</qudt:iec61360Code>
@@ -9017,7 +8805,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/HART">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/InformationEntropy"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB344</qudt:iec61360Code>
@@ -9441,7 +9228,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/HectoPA-L-PER-SEC">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Power"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ReactivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA530</qudt:iec61360Code>
@@ -9458,7 +9244,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/HectoPA-M3-PER-SEC">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Power"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ReactivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA531</qudt:iec61360Code>
@@ -10556,7 +10341,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/KiloBYTE">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1024.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -10575,7 +10359,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/KiloBYTE-PER-SEC">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DerivedUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/BIT-PER-SEC"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB306</qudt:iec61360Code>
@@ -11778,6 +11561,15 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     
 
 
+    <!-- http://qudt.org/vocab/unit/KiloM2 -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/KiloM2">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:label>Square Kilometer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit/KiloM3-PER-SEC2 -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/KiloM3-PER-SEC2">
@@ -12175,7 +11967,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/KiloV-A_Reactive">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ReactivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA648</qudt:iec61360Code>
@@ -13877,6 +13668,15 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     
 
 
+    <!-- http://qudt.org/vocab/unit/MI-PER-SEC -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MI-PER-SEC">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:label>Mile per Second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit/MI2 -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MI2">
@@ -14405,7 +14205,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MegaBYTE">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <qudt:exactMatch rdf:resource="http://qudt.org/vocab/unit/MegaBYTE"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1048576.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -14423,7 +14222,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MegaBYTE_Memory">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1048576.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -14718,7 +14516,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MegaJ-PER-SEC">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ActivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000000.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB177</qudt:iec61360Code>
@@ -14969,7 +14766,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MegaV-A_Reactive">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ReactivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000000.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB199</qudt:iec61360Code>
@@ -15767,7 +15563,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MicroW">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ActivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-6</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA080</qudt:iec61360Code>
@@ -17583,7 +17378,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/NAT">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/InformationEntropy"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>nat</qudt:symbol>
@@ -17600,7 +17394,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/NAT-PER-SEC">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/InformationEntropy"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&quot;Nat per Second&quot; is information rate in natural units.</terms:description>
@@ -17619,7 +17412,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DimensionlessUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/LogarithmicUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA253</qudt:iec61360Code>
         <qudt:symbol>Np</qudt:symbol>
@@ -17651,7 +17443,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/NUM">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>\#</qudt:symbol>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&quot;Number&quot; is a unit for  &apos;Dimensionless&apos; expressed as (\#\).</terms:description>
@@ -17899,7 +17690,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/NanoW">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ActivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-9</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA910</qudt:iec61360Code>
@@ -17917,7 +17707,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DimensionlessUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/LogarithmicUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>oct</qudt:symbol>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">An octave is a doubling or halving of a frequency.  One oct is the logarithmic frequency interval between \(f1\) and \(f2\) when \(f2/f1 = 2\).</terms:description>
@@ -19355,7 +19144,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PERCENT">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/DimensionlessRatio"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA000</qudt:iec61360Code>
         <qudt:symbol>\%</qudt:symbol>
@@ -19826,7 +19614,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PPB">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/DimensionlessRatio"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-9</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>ppb</qudt:symbol>
@@ -19843,7 +19630,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PPM">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/DimensionlessRatio"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-6</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>ppm</qudt:symbol>
@@ -19860,7 +19646,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PPTH">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/DimensionlessRatio"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>ppth</qudt:symbol>
@@ -19877,7 +19662,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PPTR">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/DimensionlessRatio"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-12</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>pptr</qudt:symbol>
@@ -20002,7 +19786,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PebiBYTE">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.125899906842624E15</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -20039,7 +19822,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PetaBYTE">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E15</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -20264,7 +20046,6 @@ where, \(e\) is the elementary charge, \(\epsilon_0\) is the electric constant, 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PicoW">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ActivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-12</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA935</qudt:iec61360Code>
@@ -21284,7 +21065,6 @@ Under the International System of Units (via the International Committee for Wei
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/SHANNON">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/InformationEntropy"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB343</qudt:iec61360Code>
@@ -22294,7 +22074,6 @@ Under the International System of Units (via the International Committee for Wei
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/TeraBYTE">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:isScalingOf rdf:resource="http://qudt.org/vocab/unit/BYTE"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1048576.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
@@ -22381,7 +22160,6 @@ Under the International System of Units (via the International Committee for Wei
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/TeraW">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ActivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E12</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA289</qudt:iec61360Code>
@@ -22451,7 +22229,6 @@ Under the International System of Units (via the International Committee for Wei
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/UNITLESS">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/DimensionlessUnit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>U</qudt:symbol>
@@ -22527,7 +22304,6 @@ Under the International System of Units (via the International Committee for Wei
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/V-A_Reactive">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/ReactivePower"/>
         <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</qudt:conversionMultiplier>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAB023</qudt:iec61360Code>
@@ -23465,7 +23241,6 @@ The abvolt is another option for a unit of voltage in the cgs system.</terms:des
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/Z">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Dimensionless"/>
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:symbol>Z</qudt:symbol>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">In chemistry and physics, the atomic number (also known as the proton number) is the number of protons found in the nucleus of an atom and therefore identical to the charge number of the nucleus. It is conventionally represented by the symbol Z. The atomic number uniquely identifies a chemical element. In an atom of neutral charge, the atomic number is also equal to the number of electrons.</terms:description>
