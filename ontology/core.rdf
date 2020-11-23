@@ -336,7 +336,6 @@ Deprecated in favour of qudt:unit</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasPart">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment xml:lang="en">Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
@@ -485,6 +484,16 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isLocationOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/locatedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:label xml:lang="en">is location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/isMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isMemberOf">
@@ -523,7 +532,6 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
     <!-- https://w3id.org/rec/core/isPartOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/isPartOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment xml:lang="en">Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc).</rdfs:comment>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
     </owl:ObjectProperty>
