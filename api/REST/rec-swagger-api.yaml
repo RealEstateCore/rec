@@ -129,42 +129,57 @@ components:
         desc:
           type: string
     actuation_ActuationInterface:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: actuation:ActuationInterface
-        label:
-          type: string
-        core:dataSchema:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: core:DataSchema
+      allOf:
+      - $ref: '#/components/schemas/core_Software'
+      - type: object
+        required:
+        - '@context'
+        properties:
+          '@id':
+            type: string
+          '@type':
+            type: string
+            default: actuation:ActuationInterface
+          label:
+            type: string
+          core:dataSchema:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: core:DataSchema
     device_Actuator:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: device:Actuator
-        label:
-          type: string
-        actuation:hasActuationInterface:
-          type: array
-          items:
+      allOf:
+      - $ref: '#/components/schemas/core_Capability'
+      - type: object
+        required:
+        - '@context'
+        properties:
+          '@id':
+            type: string
+          '@type':
+            type: string
+            default: device:Actuator
+          label:
+            type: string
+          actuation:hasActuationInterface:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: actuation:ActuationInterface
+            minItems: 1
+          actuation:hasDefaultActuationInterface:
             type: object
             required:
             - '@id'
@@ -174,29 +189,18 @@ components:
               '@type':
                 type: string
                 default: actuation:ActuationInterface
-          minItems: 1
-        actuation:hasDefaultActuationInterface:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: actuation:ActuationInterface
-        device:observedBy:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Sensor
+          device:observedBy:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: core:Sensor
     device_PlacementContext:
       type: object
       required:
@@ -500,22 +504,24 @@ components:
         label:
           type: string
     core_Level:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:Level
-        label:
-          type: string
-        core:levelNumber:
-          type: array
-          items:
-            type: integer
-            format: int32
+      allOf:
+      - $ref: '#/components/schemas/core_Space'
+      - type: object
+        required:
+        - '@context'
+        properties:
+          '@id':
+            type: string
+          '@type':
+            type: string
+            default: core:Level
+          label:
+            type: string
+          core:levelNumber:
+            type: array
+            items:
+              type: integer
+              format: int32
     core_LogicalDevice:
       type: object
       required:
@@ -571,60 +577,112 @@ components:
           items:
             type: string
     core_RealEstate:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:RealEstate
-        label:
-          type: string
-        core:propertyRegisterDesignation:
-          type: array
-          items:
+      allOf:
+      - $ref: '#/components/schemas/core_SpaceCollection'
+      - type: object
+        required:
+        - '@context'
+        properties:
+          '@id':
             type: string
-        core:includes:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Space
-        core:ownedBy:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Agent
+          '@type':
+            type: string
+            default: core:RealEstate
+          label:
+            type: string
+          core:propertyRegisterDesignation:
+            type: array
+            items:
+              type: string
+          core:includes:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: core:Space
+          core:ownedBy:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: core:Agent
     core_Sensor:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:Sensor
-        label:
-          type: string
-        device:generatedException:
-          type: array
-          items:
+      allOf:
+      - $ref: '#/components/schemas/core_Capability'
+      - type: object
+        required:
+        - '@context'
+        properties:
+          '@id':
+            type: string
+          '@type':
+            type: string
+            default: core:Sensor
+          label:
+            type: string
+          device:generatedException:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: device:Exception
+          core:generatedObservation:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: core:Observation
+          core:sensorInterface:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: core:SensorInterface
+            minItems: 1
+          qudt:unit:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: qudt:Unit
+            minItems: 1
+          qudt:hasQuantityKind:
             type: object
             required:
             - '@id'
@@ -633,55 +691,7 @@ components:
                 type: string
               '@type':
                 type: string
-                default: device:Exception
-        core:generatedObservation:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Observation
-        core:sensorInterface:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:SensorInterface
-          minItems: 1
-        qudt:unit:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: qudt:Unit
-          minItems: 1
-        qudt:hasQuantityKind:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: qudt:QuantityKind
+                default: qudt:QuantityKind
     core_Software:
       type: object
       required:
@@ -825,29 +835,31 @@ components:
                 type: string
                 default: core:Agent
     core_SpaceCollection:
-      type: object
-      required:
-      - '@context'
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: core:SpaceCollection
-        label:
-          type: string
-        core:includes:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: core:Space
+      allOf:
+      - $ref: '#/components/schemas/core_Collection'
+      - type: object
+        required:
+        - '@context'
+        properties:
+          '@id':
+            type: string
+          '@type':
+            type: string
+            default: core:SpaceCollection
+          label:
+            type: string
+          core:includes:
+            type: array
+            items:
+              type: object
+              required:
+              - '@id'
+              properties:
+                '@id':
+                  type: string
+                '@type':
+                  type: string
+                  default: core:Space
     qudt_QuantityKind:
       type: object
       required:
