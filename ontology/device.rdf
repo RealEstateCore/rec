@@ -605,6 +605,826 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/AirFlowSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/AirFlowSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/AirTemperatureSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/AirTemperatureSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/CO2Sensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/CO2Sensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/DamperStatusSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/DamperStatusSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/ElectricalEnergySensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/ElectricalEnergySensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridEV"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridIntake"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridInternal"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridLocalProduction"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridTenant"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/ElectricalPowerSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/ElectricalPowerSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridEV"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridIntake"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridInternal"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridLocalProduction"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridTenant"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/EnergySensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/EnergySensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridEV"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridIntake"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridInternal"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridLocalProduction"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridTenant"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/FanStatusSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/FanStatusSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/FireExtinguisherRemovedSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/FireExtinguisherRemovedSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/FireExtinguisherTroubleSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/FireExtinguisherTroubleSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/FlowSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/FlowSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/HumiditySensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/HumiditySensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/IlluminanceSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/IlluminanceSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/LeakSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/LeakSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/MassFlowSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/MassFlowSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamReturn"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/MotionSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/MotionSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/OccupancySensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/OccupancySensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/PeopleCountSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/PeopleCountSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/PowerSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/PowerSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridEV"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridIntake"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridInternal"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridLocalProduction"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridTenant"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/PressureSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/PressureSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/StatusSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/StatusSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/TVOCSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/TVOCSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/TemperatureSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/TemperatureSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/CirculationAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExhaustAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ExtractAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/IndoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/OutdoorAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SupplyAir"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/ThermalEnergySensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/ThermalEnergySensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridEV"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridIntake"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridInternal"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridLocalProduction"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ElectricalGridTenant"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/ThermalPowerSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/ThermalPowerSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SteamFlow"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/VolumeSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/VolumeSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/WaterFlowSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/WaterFlowSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/rec/core/WaterTemperatureSensor -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/WaterTemperatureSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/ColdWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/DistrictHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HeatRecovery"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/HotWaterReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/Hwrc"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/PrimaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/RecyclingEnergyReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryCoolingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingFlow"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/SecondaryHeatingReturn"/>
+                            <rdf:Description rdf:about="https://w3id.org/rec/device/WasteWater"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/rec/device/Actuation -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Actuation">
