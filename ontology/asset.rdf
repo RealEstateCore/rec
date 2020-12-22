@@ -876,7 +876,7 @@
     <!-- https://w3id.org/rec/asset/eer -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/eer">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">energy efficiency ratio</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -3208,7 +3208,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/eer"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5617,12 +5617,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/UnitHeater"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/condensate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
@@ -6721,6 +6715,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/SteamUnitHeater">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/UnitHeater"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/condensate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Steam unit heater</rdfs:label>
     </owl:Class>
     
