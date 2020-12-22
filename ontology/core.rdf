@@ -1105,7 +1105,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     <!-- https://w3id.org/rec/core/hasValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasValue">
-        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., observations, actuations, data points, etc).</rdfs:comment>
+        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., Sensors, Setpoints, etc).</rdfs:comment>
         <rdfs:label xml:lang="en">has value</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1522,7 +1522,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Unit: PPM.</rdfs:comment>
@@ -1643,6 +1643,12 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
 
     <owl:Class rdf:about="https://w3id.org/rec/core/ElectricalEnergySensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/EnergySensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW-HR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Electrical energy sensor</rdfs:label>
     </owl:Class>
     
@@ -1661,12 +1667,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
 
     <owl:Class rdf:about="https://w3id.org/rec/core/EnergySensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW-HR"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Energy sensor</rdfs:label>
     </owl:Class>
     
@@ -1771,7 +1771,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Unit: % relative humidity.</rdfs:comment>
@@ -1918,7 +1918,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
-                <owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Mass flow sensor</rdfs:label>
@@ -2523,6 +2523,12 @@ Describes the type of values that can be observed by sensors or set by actuators
 
     <owl:Class rdf:about="https://w3id.org/rec/core/ThermalEnergySensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/EnergySensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Thermal energy sensor</rdfs:label>
     </owl:Class>
     

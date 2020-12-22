@@ -46,6 +46,7 @@
     <!-- https://w3id.org/rec/asset/rackBottomPosition -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/asset/rackBottomPosition">
+        <rdfs:label xml:lang="en">rack bottom position (RU)</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/mountedInRack"/>
     </owl:AnnotationProperty>
@@ -55,6 +56,7 @@
     <!-- https://w3id.org/rec/asset/rackTopPosition -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/asset/rackTopPosition">
+        <rdfs:label xml:lang="en">rack top position (RU)</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/mountedInRack"/>
     </owl:AnnotationProperty>
@@ -64,6 +66,7 @@
     <!-- https://w3id.org/rec/asset/substance -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/rec/asset/substance">
+        <rdfs:label xml:lang="en">substance</rdfs:label>
         <rdfs:range rdf:resource="https://w3id.org/rec/asset/EquipmentFeedSubstance"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/feeds"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/isFedBy"/>
@@ -79,6 +82,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -384,6 +393,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/heatingMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/heatingMethod">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
+        <rdfs:label xml:lang="en">heating method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/installedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/installedBy">
@@ -429,6 +447,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/mixingBox -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/mixingBox">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/HVACMixingBox"/>
+        <rdfs:label xml:lang="en">mixing box</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/mountedInRack -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/mountedInRack">
@@ -446,11 +473,47 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/preHeatingMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/preHeatingMethod">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
+        <rdfs:label xml:lang="en">pre-heating method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/primaryCoolingMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/primaryCoolingMethod">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/HVACCoolingMethod"/>
+        <rdfs:label xml:lang="en">primary cooling method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/reHeatingMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/reHeatingMethod">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
+        <rdfs:label xml:lang="en">re-heating method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/returnFan -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/returnFan">
         <rdfs:range rdf:resource="https://w3id.org/rec/asset/Fan"/>
         <rdfs:label xml:lang="en">return fan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/secondaryCoolingMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/secondaryCoolingMethod">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/HVACCoolingMethod"/>
+        <rdfs:label xml:lang="en">secondary cooling method</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -560,7 +623,7 @@
     <!-- https://w3id.org/rec/asset/batteryPercentage -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/batteryPercentage">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">battery percentage</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -619,7 +682,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/commissionDate">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:label xml:lang="en">commission date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -681,37 +744,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/configuration">
         <rdfs:label xml:lang="en">configuration</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/coolingMethod -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/coolingMethod">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>ChilledWater</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>DX</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>None</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">cooling method</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -832,67 +864,11 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/ductInletConfiguration -->
+    <!-- https://w3id.org/rec/asset/economizer -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/ductInletConfiguration">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>dual</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>single</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">duct inlet configuration</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/ductInletShape -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/ductInletShape">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>oval</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>rectangle</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>round</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">duct inlet shape</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/ductInletSize -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/ductInletSize">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
-        <rdfs:label xml:lang="en">duct inlet size</rdfs:label>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/economizer">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">economizer</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -900,7 +876,7 @@
     <!-- https://w3id.org/rec/asset/eer -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/eer">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">energy efficiency ratio</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -928,7 +904,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/expectedEndOfLife">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:label xml:lang="en">expected end-of-life</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1075,49 +1051,6 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/heatingMethod -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/heatingMethod">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Electric</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Gas</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>HotWater</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>None</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>Steam</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">heating method</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/rec/asset/height -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/height">
@@ -1248,7 +1181,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/installationDate">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:label xml:lang="en">installation date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1483,7 +1416,6 @@
     <!-- https://w3id.org/rec/asset/netSensibleCoolingCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/netSensibleCoolingCapacity">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
         <rdfs:label xml:lang="en">net sensible cooling capacity</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1492,7 +1424,6 @@
     <!-- https://w3id.org/rec/asset/netSensibleHeatingCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/netSensibleHeatingCapacity">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
         <rdfs:label xml:lang="en">net sensible heating capacity</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1510,7 +1441,6 @@
     <!-- https://w3id.org/rec/asset/nominalCoolingCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalCoolingCapacity">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
         <rdfs:label xml:lang="en">nominal cooling capacity</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1519,7 +1449,6 @@
     <!-- https://w3id.org/rec/asset/nominalHeatingCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalHeatingCapacity">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
         <rdfs:label xml:lang="en">nominal heating capacity</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1574,6 +1503,15 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/outputVoltage">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/V"/>
         <rdfs:label xml:lang="en">output voltage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/outsideDiameter -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/outsideDiameter">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+        <rdfs:label xml:lang="en">outside diameter</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1755,8 +1693,8 @@
     <!-- https://w3id.org/rec/asset/powerDensity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/powerDensity">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:comment xml:lang="en">Watts/square meter</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Watts/length unit</rdfs:comment>
         <rdfs:label xml:lang="en">power density</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1765,7 +1703,6 @@
     <!-- https://w3id.org/rec/asset/powerInput -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/powerInput">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
         <rdfs:label xml:lang="en">power input</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1774,7 +1711,6 @@
     <!-- https://w3id.org/rec/asset/powerOutput -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/powerOutput">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
         <rdfs:label xml:lang="en">power output</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1789,43 +1725,6 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/preHeatingMethod -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/preHeatingMethod">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Electric</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Gas</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>HotWater</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>None</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">pre-heating method</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/rec/asset/pressureCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/pressureCapacity">
@@ -1835,79 +1734,11 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/primaryCoolingMethod -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primaryCoolingMethod">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>ChilledWater</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>DX</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>None</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">primary cooling method</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/primaryHeatingMethod -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primaryHeatingMethod">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Electric</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Gas</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>HotWater</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>None</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">primary heating method</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/rec/asset/primePower -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primePower">
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
         <rdfs:label xml:lang="en">prime power rating</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1932,43 +1763,6 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/reHeatingMethod -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/reHeatingMethod">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Electric</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Gas</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>HotWater</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>None</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">re-heating method</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/rec/asset/recovery100FRise -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/recovery100FRise">
@@ -1980,9 +1774,9 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/refrigerentType -->
+    <!-- https://w3id.org/rec/asset/refrigerantType -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/refrigerentType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/refrigerantType">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">refrigerant type</rdfs:label>
     </owl:DatatypeProperty>
@@ -2025,23 +1819,31 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/secondaryCoolingMethod -->
+    <!-- https://w3id.org/rec/asset/service -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/secondaryCoolingMethod">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/service">
+        <rdfs:label xml:lang="en">service</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/shape -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/shape">
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>ChilledWater</rdf:first>
+                        <rdf:first>oval</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>DX</rdf:first>
+                                <rdf:first>rectangle</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>None</rdf:first>
+                                        <rdf:first>round</rdf:first>
                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
@@ -2051,15 +1853,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:label xml:lang="en">secondary cooling method</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/rec/asset/service -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/service">
-        <rdfs:label xml:lang="en">service</rdfs:label>
+        <rdfs:label xml:lang="en">shape</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2069,6 +1863,15 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/shortCircuitRating">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">short circuit rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/size -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/size">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+        <rdfs:label xml:lang="en">size</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2086,7 +1889,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/standbyPower">
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/Generator"/>
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/W"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
         <rdfs:label xml:lang="en">standby power rating</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2141,30 +1944,6 @@
     <!-- https://w3id.org/rec/asset/switchingMechanism -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/switchingMechanism">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/AutomaticTransferSwitch"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>CircuitBreakerMoldedCase</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>CircuitBreakerPowerCase</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Contactor</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
         <rdfs:label xml:lang="en">switching mechanism</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2209,24 +1988,6 @@
     <!-- https://w3id.org/rec/asset/transitionType -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/transitionType">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/asset/AutomaticTransferSwitch"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Closed</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Open</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
         <rdfs:label xml:lang="en">transition type</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2236,7 +1997,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/turnoverDate">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:label xml:lang="en">turnover date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2402,7 +2163,7 @@
     <!-- https://w3id.org/rec/asset/wifiSignalStrength -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/wifiSignalStrength">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">Wi-Fi signal strength</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2593,8 +2354,38 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mixingBox"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACMixingBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/preHeatingMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryCoolingMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACCoolingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/returnFan"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/secondaryCoolingMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACCoolingMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2742,177 +2533,19 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/preHeatingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Electric</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Gas</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>HotWater</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>None</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryCoolingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>ChilledWater</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>DX</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>None</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryHeatingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Electric</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Gas</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>HotWater</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>None</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Electric</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Gas</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>HotWater</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>None</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerentType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerantType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/secondaryCoolingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>ChilledWater</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>DX</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>None</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3254,7 +2887,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerOutput"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3433,18 +3066,18 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerentType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerantType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3527,36 +3160,36 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/eer"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleHeatingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalHeatingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerentType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerantType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3660,7 +3293,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Cooling tower</rdfs:label>
@@ -3887,7 +3520,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletConfiguration"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/configuration"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3909,7 +3542,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletShape"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/shape"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -3937,7 +3570,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/ductInletSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/size"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4456,7 +4089,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/exportPower"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4468,7 +4101,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/importPower"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4480,7 +4113,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netPower"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4783,30 +4416,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/coolingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>ChilledWater</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>DX</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>None</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryCoolingMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACCoolingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/secondaryCoolingMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACCoolingMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4818,18 +4435,18 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/netSensibleCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerentType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerantType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4867,35 +4484,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Electric</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Gas</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>HotWater</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>None</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Fan coil unit with reheat</rdfs:label>
@@ -4947,35 +4536,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Electric</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Gas</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>HotWater</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>None</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Fan powered box with reheat</rdfs:label>
@@ -5373,7 +4934,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Gas water heater with tank</rdfs:label>
@@ -5388,7 +4949,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Gas tank-less water heater</rdfs:label>
@@ -5470,7 +5031,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primePower"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5482,7 +5043,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/standbyPower"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5555,6 +5116,50 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACConditionedAirSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACAirSystem"/>
         <rdfs:label xml:lang="en">HVAC conditioned air system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACCoolingMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACCoolingMethod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/outsideDiameter"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/refrigerantType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ChilledWater</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>DX</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">HVAC cooling method</rdfs:label>
+        <metadata:dtdlType>component</metadata:dtdlType>
     </owl:Class>
     
 
@@ -5647,10 +5252,20 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACHeatTracing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HeatTracing"/>
+        <rdfs:label xml:lang="en">HVAC heat tracing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACHeatingMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACHeatingMethod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerDensity"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/outsideDiameter"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5661,12 +5276,24 @@
                         <owl:oneOf>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>ConstantWattage</rdf:first>
+                                <rdf:first>Electric</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>SelfRegulating</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        <rdf:first>Gas</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>HotWater</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Steam</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
@@ -5675,7 +5302,8 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">HVAC heat tracing</rdfs:label>
+        <rdfs:label xml:lang="en">HVAC heating method</rdfs:label>
+        <metadata:dtdlType>component</metadata:dtdlType>
     </owl:Class>
     
 
@@ -5694,6 +5322,22 @@
     <owl:Class rdf:about="https://w3id.org/rec/asset/HVACHumidificationSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACWaterSystem"/>
         <rdfs:label xml:lang="en">HVAC humidification system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/HVACMixingBox -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HVACMixingBox">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/economizer"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">HVAC mixing box</rdfs:label>
+        <metadata:dtdlType>component</metadata:dtdlType>
     </owl:Class>
     
 
@@ -5882,16 +5526,47 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/HeatTracing -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/HeatTracing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerDensity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ConstantWattage</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>SelfRegulating</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Heat tracing</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/HotWaterUnitHeater -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/HotWaterUnitHeater">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/UnitHeater"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/condensate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
@@ -6415,35 +6090,8 @@
     <!-- https://w3id.org/rec/asset/PlumbingHeatTracing -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingHeatTracing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HeatTracing"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/PlumbingEquipment"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerDensity"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>ConstantWattage</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>SelfRegulating</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Plumbing heat tracing</rdfs:label>
     </owl:Class>
     
@@ -6787,13 +6435,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/batteryPercentage"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/wifiSignalStrength"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Sensor equipment</rdfs:label>
@@ -6888,35 +6536,8 @@
     <!-- https://w3id.org/rec/asset/SprinklerHeatTracing -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/SprinklerHeatTracing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HeatTracing"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerDensity"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>ConstantWattage</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>SelfRegulating</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Sprinkler heat tracing</rdfs:label>
     </owl:Class>
     
@@ -7046,6 +6667,12 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/SteamUnitHeater">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/UnitHeater"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/condensate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Steam unit heater</rdfs:label>
     </owl:Class>
     
@@ -7638,7 +7265,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerOutput"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7671,47 +7298,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/heatingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Electric</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Gas</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>HotWater</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>None</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>Steam</rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalHeatingCapacity"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7790,35 +7383,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Electric</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Gas</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>HotWater</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>None</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">VAV box with reheat</rdfs:label>
