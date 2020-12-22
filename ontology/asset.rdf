@@ -1859,7 +1859,7 @@
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:label xml:lang="en">duct inlet shape</rdfs:label>
+        <rdfs:label xml:lang="en">shape</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1877,7 +1877,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/size">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
-        <rdfs:label xml:lang="en">duct inlet size</rdfs:label>
+        <rdfs:label xml:lang="en">size</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1951,29 +1951,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/switchingMechanism">
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/AutomaticTransferSwitch"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>CircuitBreakerMoldedCase</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>CircuitBreakerPowerCase</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Contactor</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
         <rdfs:label xml:lang="en">switching mechanism</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2019,23 +1996,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/transitionType">
         <rdfs:domain rdf:resource="https://w3id.org/rec/asset/AutomaticTransferSwitch"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Closed</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Open</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
         <rdfs:label xml:lang="en">transition type</rdfs:label>
     </owl:DatatypeProperty>
     
