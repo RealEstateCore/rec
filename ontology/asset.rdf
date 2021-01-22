@@ -5617,18 +5617,9 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/ITEthernetNetworkSystem -->
+    <!-- https://w3id.org/rec/asset/ICTHardware -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/asset/ITEthernetNetworkSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITSystem"/>
-        <rdfs:label xml:lang="en">IT Ethernet network system</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/asset/ITHardware -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/asset/ITHardware">
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ICTHardware">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ICTEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5636,7 +5627,16 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/ITRack"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">IT Hardware</rdfs:label>
+        <rdfs:label xml:lang="en">ICT Hardware</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/ITEthernetNetworkSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ITEthernetNetworkSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITSystem"/>
+        <rdfs:label xml:lang="en">IT Ethernet network system</rdfs:label>
     </owl:Class>
     
 
@@ -6470,7 +6470,7 @@
     <!-- https://w3id.org/rec/asset/Server -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Server">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITHardware"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ICTHardware"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/heightRUs"/>
