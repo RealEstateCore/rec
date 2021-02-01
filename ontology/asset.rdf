@@ -2747,6 +2747,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/BACnetController -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/BACnetController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Controller"/>
+        <rdfs:label xml:lang="en">BACnet controller</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/BACnetNetworkSystem -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/BACnetNetworkSystem">
@@ -2807,13 +2816,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/thickness"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/type"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/service"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:oneOf>
@@ -2831,6 +2834,12 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/thickness"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3420,6 +3429,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Data network equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/DaylightSensorEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/DaylightSensorEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SensorEquipment"/>
+        <rdfs:label xml:lang="en">Daylight Sensor</rdfs:label>
     </owl:Class>
     
 
@@ -5578,6 +5596,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/IAQSensorEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/IAQSensorEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SensorEquipment"/>
+        <rdfs:label xml:lang="en">Indoor Air Quality Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/ICTEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/ICTEquipment">
@@ -5608,18 +5635,9 @@
     
 
 
-    <!-- https://w3id.org/rec/asset/ITEthernetNetworkSystem -->
+    <!-- https://w3id.org/rec/asset/ICTHardware -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/asset/ITEthernetNetworkSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITSystem"/>
-        <rdfs:label xml:lang="en">IT Ethernet network system</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/asset/ITHardware -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/asset/ITHardware">
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ICTHardware">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ICTEquipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5627,7 +5645,16 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/ITRack"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">IT Hardware</rdfs:label>
+        <rdfs:label xml:lang="en">ICT Hardware</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/ITEthernetNetworkSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ITEthernetNetworkSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITSystem"/>
+        <rdfs:label xml:lang="en">IT Ethernet network system</rdfs:label>
     </owl:Class>
     
 
@@ -5748,6 +5775,15 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Pump"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SprinklerEquipment"/>
         <rdfs:label xml:lang="en">Jockey Pump</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/LeakDetectorEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/LeakDetectorEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SensorEquipment"/>
+        <rdfs:label xml:lang="en">Leak Detector</rdfs:label>
     </owl:Class>
     
 
@@ -5876,6 +5912,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/ModbusController -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ModbusController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Controller"/>
+        <rdfs:label xml:lang="en">Modbus controller</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/ModbusNetworkSystem -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/ModbusNetworkSystem">
@@ -5966,11 +6011,29 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/OccupancySensorEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/OccupancySensorEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SensorEquipment"/>
+        <rdfs:label xml:lang="en">Occupancy Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/Partition -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Partition">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/BarrierAsset"/>
         <rdfs:label xml:lang="en">Partition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/PeopleCountSensorEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PeopleCountSensorEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SensorEquipment"/>
+        <rdfs:label xml:lang="en">People Count Sensor</rdfs:label>
     </owl:Class>
     
 
@@ -6452,7 +6515,7 @@
     <!-- https://w3id.org/rec/asset/Server -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Server">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ITHardware"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/ICTHardware"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/heightRUs"/>
@@ -7024,6 +7087,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/ThermostatEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/ThermostatEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SensorEquipment"/>
+        <rdfs:label xml:lang="en">Thermostat</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/Toilet -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Toilet">
@@ -7451,6 +7523,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Variable frequency drive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/asset/VibrationSensorEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/VibrationSensorEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/SensorEquipment"/>
+        <rdfs:label xml:lang="en">Vibration Sensor</rdfs:label>
     </owl:Class>
     
 

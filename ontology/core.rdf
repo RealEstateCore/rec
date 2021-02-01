@@ -1105,8 +1105,11 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     <!-- https://w3id.org/rec/core/hasValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/hasValue">
-        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., Sensors, Setpoints, etc).</rdfs:comment>
+        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., Sensors, Setpoints, etc).
+
+Deprecated in favor of core:value.</rdfs:comment>
         <rdfs:label xml:lang="en">has value</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -1137,6 +1140,17 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
         <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasSerialization"/>
         <rdfs:comment xml:lang="en">Expressed as a string adhering to the notation &quot;(x,y,z)&quot;, where x, y, and z ar whole or decimal numbers indicating the position in the local building coordinate system, measured in meters. This relates to the outside world coordinate refence system via the values expressed by GeoReferenceOrigo.</rdfs:comment>
         <rdfs:label xml:lang="en">is located at local coordinates</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/lastMeasuredTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/lastMeasuredTime">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Time when Sensor/Actuator measures the value of the capability.</rdfs:comment>
+        <rdfs:label xml:lang="en">last measured time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1260,6 +1274,15 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (&qu
     
 
 
+    <!-- https://w3id.org/rec/core/value -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/value">
+        <rdfs:comment xml:lang="en">REC entities may be associated with values (e.g., Sensors, Setpoints, etc).</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1298,7 +1321,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1505,7 +1528,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1521,7 +1544,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1566,6 +1589,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/serves"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastMeasuredTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Capability indicates the capacity of an entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term &quot;point&quot;. Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.</rdfs:comment>
@@ -1645,7 +1674,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/EnergySensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW-HR"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1720,7 +1749,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1754,7 +1783,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1770,7 +1799,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1786,11 +1815,20 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/LUX"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Illuminance sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/InferredOccupancySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/InferredOccupancySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/OccupancySensor"/>
+        <rdfs:label xml:lang="en">Inferred occupancy sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1917,7 +1955,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1932,7 +1970,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1968,7 +2006,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1995,7 +2033,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2011,7 +2049,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2035,7 +2073,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2066,7 +2104,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2114,7 +2152,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2432,7 +2470,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2479,7 +2517,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2495,7 +2533,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2510,7 +2548,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2525,7 +2563,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/EnergySensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2558,7 +2596,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2573,7 +2611,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/value"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
