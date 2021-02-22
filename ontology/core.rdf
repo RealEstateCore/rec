@@ -1354,30 +1354,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/AirFlowSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/AirFlowSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Air flow sensor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/AirTemperatureSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/AirTemperatureSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/TemperatureSensor"/>
-        <rdfs:label xml:lang="en">Air temperature sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Apartment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Apartment">
@@ -1655,14 +1631,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/DamperStatusSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/DamperStatusSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/DataSchema -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/DataSchema">
@@ -1711,53 +1679,11 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     
 
 
-    <!-- https://w3id.org/rec/core/ElectricalPowerSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/ElectricalPowerSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PowerSensor"/>
-        <rdfs:label xml:lang="en">Electrical power sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Event -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
         <rdfs:comment xml:lang="en">A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/FanStatusSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/FanStatusSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/FireExtinguisherRemovedSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/FireExtinguisherRemovedSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/FireExtinguisherTroubleSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/FireExtinguisherTroubleSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/FlowSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/FlowSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:label xml:lang="en">Flow sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1796,22 +1722,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     
 
 
-    <!-- https://w3id.org/rec/core/HumiditySensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/HumiditySensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Relative humidity sensor, measures in % RH.</rdfs:comment>
-        <rdfs:label xml:lang="en">Humidity sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/HumiditySetpoint -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/HumiditySetpoint">
@@ -1844,14 +1754,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">A piece of land upon which one or more buildings may be situated.</rdfs:comment>
         <rdfs:label xml:lang="en">Land</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/LeakSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/LeakSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/StatusSensor"/>
     </owl:Class>
     
 
@@ -1944,21 +1846,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     
 
 
-    <!-- https://w3id.org/rec/core/MassFlowSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/MassFlowSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM-PER-HR"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Mass flow sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/MeasurementUnit -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/MeasurementUnit">
@@ -2017,21 +1904,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/core/PeopleCountSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/PeopleCountSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">People count sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Portfolio -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Portfolio">
@@ -2044,21 +1916,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A portfolio is a grouping of real estates, spaces, or other portfolios that share some business-relevant commonality, e.g., are managed by the same company, are rented out to the same tenant, share utilization or legal definition (industrial vs commercial), etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Portfolio</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/PowerSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/PowerSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Power sensor</rdfs:label>
     </owl:Class>
     
 
@@ -2385,21 +2242,6 @@ Describes the type of values that can be observed by sensors or set by actuators
     
 
 
-    <!-- https://w3id.org/rec/core/StatusSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/StatusSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Status sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/SubBuilding -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/SubBuilding">
@@ -2432,21 +2274,6 @@ Describes the type of values that can be observed by sensors or set by actuators
     
 
 
-    <!-- https://w3id.org/rec/core/TemperatureSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/TemperatureSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Temperature sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/TemperatureSetpoint -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/TemperatureSetpoint">
@@ -2462,44 +2289,11 @@ Describes the type of values that can be observed by sensors or set by actuators
     
 
 
-    <!-- https://w3id.org/rec/core/ThermalPowerSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/ThermalPowerSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PowerSensor"/>
-        <rdfs:label xml:lang="en">Thermal power sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Type">
         <rdfs:label xml:lang="en">Type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/WaterFlowSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/WaterFlowSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/FlowSensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Water flow sensor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/WaterTemperatureSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/WaterTemperatureSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/TemperatureSensor"/>
-        <rdfs:label xml:lang="en">Water temperature sensor</rdfs:label>
     </owl:Class>
     
 
