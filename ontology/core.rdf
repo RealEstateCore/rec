@@ -584,6 +584,17 @@ Deprecated in favour of core:componentOfBuilding</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/observedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/observedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/observes"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:comment xml:lang="en">Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">observed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/observes -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/observes">
@@ -1302,6 +1313,24 @@ Deprecated in favor of core:value.</rdfs:comment>
 GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">Geometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/Actuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/Actuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/observedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuator takes some control input and executes some real-world action based on this input. Examples include setting dampers/valves in heating/cooling systems at certain configurations, opening or closing a smart lock, turning on or off an electric radiator, etc. REC does not provide semantics for every type of actuator you might find in a building; rather we here provide classes and properties that allows users to define their own actuator models, based on the systems they have, adhering to REC.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuator</rdfs:label>
+        <o2o:endpoint>actuator</o2o:endpoint>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
 
