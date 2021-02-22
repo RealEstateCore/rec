@@ -193,6 +193,14 @@
     
 
 
+    <!-- http://qudt.org/vocab/unit/CD-PER-M2 -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/CD-PER-M2">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- http://qudt.org/vocab/unit/CentiM -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/CentiM">
@@ -228,6 +236,14 @@
     <!-- http://qudt.org/vocab/unit/HR -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/HR">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/HZ -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/HZ">
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </rdfs:Datatype>
     
@@ -324,6 +340,14 @@
     <!-- http://qudt.org/vocab/unit/MilliM -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/MilliM">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/N-M -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/N-M">
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </rdfs:Datatype>
     
@@ -1801,10 +1825,6 @@ For an irrotational electric field, the voltage is independent of the path betwe
         <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
         <qudt:iec61360Code>0112/2///62720#UAA371</qudt:iec61360Code>
         <qudt:uneceCommonCode>A24</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The candela per square metre (\(cd/m^2\)) is the derived SI unit of luminance. The unit is based on the candela, the SI unit of luminous intensity, and the square metre, the SI unit of area. Nit (nt) is a deprecated non-SI name also used for this unit (\(1 nit = 1 cd/m^2\)). As a measure of light emitted per unit area, this unit is frequently used to specify the brightness of a display device. Most consumer desktop liquid crystal displays have luminances of 200 to 300 \(cd/m^2\); the sRGB spec for monitors targets 80 cd/m2. HDTVs range from 450 to about 1000 cd/m2. Typically, calibrated monitors should have a brightness of \(120 cd/m^2\). \(Nit\) is believed to come from the Latin word nitere, to shine.</terms:description>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(cd/m^2\)</qudt:expression>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>candela per square meter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2518,11 +2538,6 @@ For an irrotational electric field, the voltage is independent of the path betwe
         <qudt:iec61360Code>0112/2///62720#UAA170</qudt:iec61360Code>
         <qudt:symbol>Hz</qudt:symbol>
         <qudt:uneceCommonCode>HTZ</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The hertz (symbol Hz) is the SI unit of frequency defined as the number of cycles per second of a periodic phenomenon. One of its most common uses is the description of the sine wave, particularly those used in radio and audio applications, such as the frequency of musical tones. The word &quot;hertz&quot; is named for Heinrich Rudolf Hertz, who was the first to conclusively prove the existence of electromagnetic waves.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Hertz</qudt:dbpediaMatch>
-        <qudt:ucumCode>Hz</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Hertz</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4020,12 +4035,6 @@ For an irrotational electric field, the voltage is independent of the path betwe
         <qudt:siUnitsExpression>N.m</qudt:siUnitsExpression>
         <qudt:symbol>N-m</qudt:symbol>
         <qudt:uneceCommonCode>NU</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&quot;Torque&quot; is the tendency of a force to cause a rotation, is the product of the force and the distance from the center of rotation to the point where the force is applied. Torque has the same units as work or energy, but it is a different physical concept. To stress the difference, scientists measure torque in newton meters rather than in joules, the SI unit of work. One newton meter is approximately 0.737562 pound foot.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Newton_metre</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Newton_metre?oldid=493923333</qudt:informativeReference>
-        <qudt:ucumCode>N.m</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Newton Meter</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4865,10 +4874,16 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/CD-PER-M2">
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The candela per square metre (\(cd/m^2\)) is the derived SI unit of luminance. The unit is based on the candela, the SI unit of luminous intensity, and the square metre, the SI unit of area. Nit (nt) is a deprecated non-SI name also used for this unit (\(1 nit = 1 cd/m^2\)). As a measure of light emitted per unit area, this unit is frequently used to specify the brightness of a display device. Most consumer desktop liquid crystal displays have luminances of 200 to 300 \(cd/m^2\); the sRGB spec for monitors targets 80 cd/m2. HDTVs range from 450 to about 1000 cd/m2. Typically, calibrated monitors should have a brightness of \(120 cd/m^2\). \(Nit\) is believed to come from the Latin word nitere, to shine.</terms:description>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(cd/m^2\)</qudt:expression>
+        <rdfs:label>candela per square meter</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/CentiM">
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Centimetre</qudt:dbpediaMatch>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units.</terms:description>
         <qudt:ucumCode>cm</qudt:ucumCode>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units.</terms:description>
         <rdfs:label>Centimeter</rdfs:label>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Centimetre?oldid=494931891</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
@@ -4884,12 +4899,12 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:guidance rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&lt;p&gt;See NIST section &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec06.html#6.2.8&quot;&gt;SP811 section 6.2.8&lt;/a&gt;&lt;/p&gt;</qudt:guidance>
         <qudt:guidance rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&lt;p&gt;See NIST section &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec04.html#4.2.1.1&quot;&gt;SP811 section 4.2.1.1&lt;/a&gt;&lt;/p&gt;</qudt:guidance>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Celsius</qudt:dbpediaMatch>
         <rdfs:label>Degree Celsius</rdfs:label>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Celsius</qudt:dbpediaMatch>
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(degC\)</qudt:expression>
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\,^{\circ}{\rm C}\)</qudt:latexDefinition>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Celsius?oldid=494152178</qudt:informativeReference>
         <skos:altLabel>degree-centigrade</skos:altLabel>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Celsius?oldid=494152178</qudt:informativeReference>
         <qudt:ucumCode>Cel</qudt:ucumCode>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Celsius}\), also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales&apos; null points as being precisely \(273.15\,^{\circ}{\rm C}\).&lt;/p&gt;</terms:description>
     </rdf:Description>
@@ -4902,12 +4917,19 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:ucumCode>[HP]</qudt:ucumCode>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/HR">
-        <rdfs:label>Hour</rdfs:label>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The hour (common symbol: h or hr) is a unit of measurement of time. In modern usage, an hour comprises 60 minutes, or 3,600 seconds. It is approximately 1/24 of a mean solar day. An hour in the Universal Coordinated Time (UTC) time standard can include a negative or positive leap second, and may therefore have a duration of 3,599 or 3,601 seconds for adjustment purposes. Although it is not a standard defined by the International System of Units, the hour is a unit accepted for use with SI, represented by the symbol h.</terms:description>
+        <rdfs:label>Hour</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:ucumCode>h</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Hour</qudt:dbpediaMatch>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Hour?oldid=495040268</qudt:informativeReference>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/HZ">
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The hertz (symbol Hz) is the SI unit of frequency defined as the number of cycles per second of a periodic phenomenon. One of its most common uses is the description of the sine wave, particularly those used in radio and audio applications, such as the frequency of musical tones. The word &quot;hertz&quot; is named for Heinrich Rudolf Hertz, who was the first to conclusively prove the existence of electromagnetic waves.</terms:description>
+        <rdfs:label>Hertz</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Hertz</qudt:dbpediaMatch>
+        <qudt:ucumCode>Hz</qudt:ucumCode>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloGM">
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
@@ -4921,8 +4943,8 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:ucumCode>kg/h</qudt:ucumCode>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:ucumCode>kg.h-1</qudt:ucumCode>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kg/h\)</qudt:expression>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Kilogram Per Hour (kg/h) is a unit in the category of Mass flow rate. It is also known as kilogram/hour. Kilogram Per Hour (kg/h) has a dimension of MT-1 where M is mass, and T is time. It can be converted to the corresponding standard SI unit kg/s by multiplying its value by a factor of 0.000277777777778.</terms:description>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kg/h\)</qudt:expression>
         <rdfs:label>Kilogram per Hour</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/KiloPA">
@@ -4947,13 +4969,13 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <rdfs:label>Kilowatthour</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/L">
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Litre</qudt:dbpediaMatch>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(litre\) (American spelling: \(\textit{liter}\); SI symbol \(l\) or \(L\)) is a non-SI metric system unit of volume equal to \(1 \textit{cubic decimetre}\) (\(dm^3\)), 1,000 cubic centimetres (\(cm^3\)) or \(1/1000 \textit{cubic metre}\). If the lower case &quot;L&quot; is used as the symbol, it is sometimes rendered as a cursive &quot;l&quot; to help distinguish it from the capital &quot;I&quot;, although this usage has no official approval by any international bureau.</terms:description>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Litre</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <rdfs:label>Liter</rdfs:label>
         <skos:altLabel>litre</skos:altLabel>
-        <qudt:ucumCode>L</qudt:ucumCode>
         <qudt:ucumCode>l</qudt:ucumCode>
+        <qudt:ucumCode>L</qudt:ucumCode>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Litre?oldid=494846400</qudt:informativeReference>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/L-PER-SEC">
@@ -4964,11 +4986,11 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/LUX">
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Lux?oldid=494700274</qudt:informativeReference>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Lux</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Lux</qudt:dbpediaMatch>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The SI unit for measuring the illumination (illuminance) of a surface. One lux is defined as an illumination of one lumen per square meter or 0.0001 phot. In considering the various light units, it&apos;s useful to think about light originating at a point and shining upon a surface. The intensity of the light source is measured in candelas; the total light flux in transit is measured in lumens (1 lumen = 1 candelau00b7steradian); and the amount of light received per unit of surface area is measured in lux (1 lux = 1 lumen/square meter). One lux is equal to approximately 0.09290 foot candle.</terms:description>
-        <rdfs:label>Lux</rdfs:label>
         <qudt:ucumCode>lx</qudt:ucumCode>
+        <rdfs:label>Lux</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/M">
         <qudt:ucumCode>m</qudt:ucumCode>
@@ -4996,11 +5018,19 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/MilliM">
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
         <qudt:ucumCode>mm</qudt:ucumCode>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
         <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch.</terms:description>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
         <rdfs:label>Millimeter</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/N-M">
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Newton_metre?oldid=493923333</qudt:informativeReference>
+        <rdfs:label>Newton Meter</rdfs:label>
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Newton_metre</qudt:dbpediaMatch>
+        <qudt:ucumCode>N.m</qudt:ucumCode>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&quot;Torque&quot; is the tendency of a force to cause a rotation, is the product of the force and the distance from the center of rotation to the point where the force is applied. Torque has the same units as work or energy, but it is a different physical concept. To stress the difference, scientists measure torque in newton meters rather than in joules, the SI unit of work. One newton meter is approximately 0.737562 pound foot.</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/PSI">
         <rdfs:label>PSI</rdfs:label>
@@ -5026,8 +5056,8 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <qudt:ucumCode>W</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Watt</qudt:dbpediaMatch>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Watt?oldid=494906356</qudt:informativeReference>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(The SI unit of power. Power is the rate at which work is done, or (equivalently) the rate at which energy is expended. One watt is equal to a power rate of one joule of work per second of time. This unit is used both in mechanics and in electricity, so it links the mechanical and electrical units to one another. In mechanical terms, one watt equals about 0.001 341 02 horsepower (hp) or 0.737 562 foot-pound per second (lbf/s). In electrical terms, one watt is the power produced by a current of one ampere flowing through an electric potential of one volt. The name of the unit honors James Watt (1736-1819), the British engineer whose improvements to the steam engine are often credited with igniting the Industrial Revolution.\)</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <rdfs:label>Watt</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://voag.linkedmodel.org/schema/voag#QUDT-QUANTITY-KINDS-VocabCatalogEntry_v1.2">

@@ -978,6 +978,13 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/FrequencySensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/HZ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Frequency sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1206,6 +1213,13 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/LuminanceSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/CD-PER-M2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Luminance sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1726,6 +1740,13 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/TorqueSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/N-M"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Torque sensor</rdfs:label>
     </owl:Class>
     
 
