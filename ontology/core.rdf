@@ -1561,22 +1561,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/CO2Sensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/CO2Sensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Measurement unit: PPM.</rdfs:comment>
-        <rdfs:label xml:lang="en">CO2 sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/CO2Setpoint -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/CO2Setpoint">
@@ -1883,15 +1867,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     
 
 
-    <!-- https://w3id.org/rec/core/InferredOccupancySensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/InferredOccupancySensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/OccupancySensor"/>
-        <rdfs:label xml:lang="en">Inferred occupancy sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Information -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Information">
@@ -2023,21 +1998,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     
 
 
-    <!-- https://w3id.org/rec/core/MassSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/MassSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Mass sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/MeasurementUnit -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/MeasurementUnit">
@@ -2098,21 +2058,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A sensor observation.</rdfs:comment>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/OccupancySensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/OccupancySensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Occupancy sensor</rdfs:label>
     </owl:Class>
     
 
@@ -2201,21 +2146,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
         <rdfs:label xml:lang="en">Premises type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/PressureSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/PressureSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Pressure sensor</rdfs:label>
     </owl:Class>
     
 
@@ -2552,22 +2482,6 @@ Describes the type of values that can be observed by sensors or set by actuators
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A part of a larger building complex, e.g., a wing, a tower, or an interconnected (through walkways or other means) but largely free-standing building.</rdfs:comment>
         <rdfs:label xml:lang="en">Sub-building</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/TVOCSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/TVOCSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Measurement unit: PPM.</rdfs:comment>
-        <rdfs:label xml:lang="en">TVOC sensor</rdfs:label>
     </owl:Class>
     
 
