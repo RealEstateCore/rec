@@ -1711,35 +1711,11 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     
 
 
-    <!-- https://w3id.org/rec/core/ElectricalEnergySensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/ElectricalEnergySensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/EnergySensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloW-HR"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Electrical energy sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/ElectricalPowerSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/ElectricalPowerSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/PowerSensor"/>
         <rdfs:label xml:lang="en">Electrical power sensor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/EnergySensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/EnergySensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:label xml:lang="en">Energy sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1848,21 +1824,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Unit: % relative humidity.</rdfs:comment>
         <rdfs:label xml:lang="en">Humidity setpoint</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/IlluminanceSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/IlluminanceSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/LUX"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Illuminance sensor</rdfs:label>
     </owl:Class>
     
 
@@ -2015,21 +1976,6 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <o2o:endpoint>measurementunit</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/MotionSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/MotionSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Motion sensor</rdfs:label>
     </owl:Class>
     
 
@@ -2516,21 +2462,6 @@ Describes the type of values that can be observed by sensors or set by actuators
     
 
 
-    <!-- https://w3id.org/rec/core/ThermalEnergySensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/ThermalEnergySensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/EnergySensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Thermal energy sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/ThermalPowerSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/ThermalPowerSensor">
@@ -2545,21 +2476,6 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:Class rdf:about="https://w3id.org/rec/core/Type">
         <rdfs:label xml:lang="en">Type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/VolumeSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/VolumeSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Volume sensor</rdfs:label>
     </owl:Class>
     
 
