@@ -714,6 +714,14 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/CO2Setpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Unit: PPM.</rdfs:comment>
+        <rdfs:label xml:lang="en">CO2 setpoint</rdfs:label>
     </owl:Class>
     
 
@@ -962,6 +970,13 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/FlowSetpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Flow setpoint</rdfs:label>
     </owl:Class>
     
 
@@ -1088,6 +1103,14 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/HumiditySetpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Unit: % relative humidity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Humidity setpoint</rdfs:label>
     </owl:Class>
     
 
@@ -1692,6 +1715,13 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/TemperatureSetpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Temperature setpoint</rdfs:label>
     </owl:Class>
     
 

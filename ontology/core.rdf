@@ -1537,22 +1537,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/CO2Setpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/CO2Setpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Unit: PPM.</rdfs:comment>
-        <rdfs:label xml:lang="en">CO2 setpoint</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Campus -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Campus">
@@ -1688,21 +1672,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     
 
 
-    <!-- https://w3id.org/rec/core/FlowSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/FlowSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Flow setpoint</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/GeoReferenceOrigo -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/GeoReferenceOrigo">
@@ -1718,22 +1687,6 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     <owl:Class rdf:about="https://w3id.org/rec/core/HVACZone">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Zone"/>
         <rdfs:label xml:lang="en">HVAC zone</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/HumiditySetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/HumiditySetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Unit: % relative humidity.</rdfs:comment>
-        <rdfs:label xml:lang="en">Humidity setpoint</rdfs:label>
     </owl:Class>
     
 
@@ -2270,21 +2223,6 @@ Describes the type of values that can be observed by sensors or set by actuators
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A part of a larger building complex, e.g., a wing, a tower, or an interconnected (through walkways or other means) but largely free-standing building.</rdfs:comment>
         <rdfs:label xml:lang="en">Sub-building</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/core/TemperatureSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/TemperatureSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Setpoint"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Temperature setpoint</rdfs:label>
     </owl:Class>
     
 
