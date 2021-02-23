@@ -679,6 +679,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/AzimuthSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/SolarAngleSensor"/>
+        <rdfs:label xml:lang="en">Solar azimuth angle sensor</rdfs:label>
     </owl:Class>
     
 
@@ -842,6 +843,13 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DewPointSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Dewpoint temperature sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1008,6 +1016,13 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/FrostSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Frost sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1039,14 +1054,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Measurement unit: PPM.</rdfs:comment>
         <rdfs:label xml:lang="en">Gas sensor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/HailSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/HailSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSensor"/>
     </owl:Class>
     
 
@@ -1506,6 +1513,13 @@ Deprecated in favour of core:Observation.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PrecipitationSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Precipitation sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1629,14 +1643,28 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/SolarAngleSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Solar angle sensor</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/device/SolarRadianceSensor -->
+    <!-- https://w3id.org/rec/device/SolarIrradianceSensor -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/SolarRadianceSensor">
+    <owl:Class rdf:about="https://w3id.org/rec/device/SolarIrradianceSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W-PER-M2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Solar irradiance sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1840,6 +1868,13 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/WindDirectionSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WindSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Wind direction sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1848,6 +1883,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/WindSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSensor"/>
+        <rdfs:label xml:lang="en">Wind sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1856,6 +1892,13 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/WindSpeedSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WindSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/M-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Wind speed sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1864,6 +1907,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/ZenithSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/SolarAngleSensor"/>
+        <rdfs:label xml:lang="en">Solar zenith angle sensor</rdfs:label>
     </owl:Class>
     
 
