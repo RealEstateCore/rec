@@ -1155,22 +1155,23 @@ Deprecated in favor of core:value.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/core/lastReportedTime -->
+    <!-- https://w3id.org/rec/core/lastValue -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/lastReportedTime">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/lastValue">
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">Time when a core:Capability reported an updated value (see core:lastReportedValue).</rdfs:comment>
-        <rdfs:label xml:lang="en">last reported time</rdfs:label>
+        <rdfs:comment xml:lang="en">Most recently reported value of a core:Capability.</rdfs:comment>
+        <rdfs:label xml:lang="en">last reported value</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/rec/core/lastReportedValue -->
+    <!-- https://w3id.org/rec/core/lastValueTime -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/lastReportedValue">
-        <rdfs:comment xml:lang="en">Most recently reported value of a core:Capability.</rdfs:comment>
-        <rdfs:label xml:lang="en">last reported value</rdfs:label>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/core/lastValueTime">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Time when a core:Capability reported an updated value (see core:lastValue).</rdfs:comment>
+        <rdfs:label xml:lang="en">last reported time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1590,14 +1591,14 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedTime"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastReportedValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValueTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Capability indicates the capacity of an entity, be it a Space, an Asset, or a Device, to produce or ingest data. This is roughly equivalent to the established Brick Schema and generic BMS term &quot;point&quot;. Specific subclasses specialize this behaviour: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system.</rdfs:comment>
