@@ -1750,6 +1750,12 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hostedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
             </owl:Restriction>
