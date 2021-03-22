@@ -595,6 +595,162 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/position -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/position">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Bypass</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Differential</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Discharge</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Entering</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Exhaust</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>Leaving</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>Output</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>Outside</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first>Return</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first>Supply</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first>Underfloor</rdf:first>
+                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The (optional) capability position relative to the system or space that it interacts with. E.g., a water temperature sensor can be positioned on the supply or return flow, air humidity can be measured entering or leaving a system, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/device/substance -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/substance">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Air</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ChilledWater</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>DeionisedWater</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>DomesticHotWater</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>HighTemperatureHotWater</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>HotWater</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>MediumTemperatureHotWater</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>OutsideAir</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first>Steam</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first>Water</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The (optional) substance that a capability measures or interacts with; e.g., a TemperatureSensor can measure air temperature or water temperature, a Flow Demand Setpoint can be configured to control steam demand or chilled water demand, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">substance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -666,15 +822,6 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/AirTemperatureSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/AirTemperatureSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/TemperatureSensor"/>
-        <rdfs:label xml:lang="en">Air temperature sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/AzimuthSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/AzimuthSensor">
@@ -690,6 +837,22 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/CommunicationConfiguration"/>
         <rdfs:comment xml:lang="en">Specific classes and properties to be extended in upcoming version.</rdfs:comment>
         <rdfs:label>BACnetConfiguration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/BinarySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/BinarySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Grouping of sensors that return a single boolean value signal, e.g., fire sensors, level sensors, motion sensors, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Binary sensor</rdfs:label>
     </owl:Class>
     
 
@@ -741,6 +904,24 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/device/CommunicationsBus">
         <rdfs:comment xml:lang="en">Type of communications bus for the Device.</rdfs:comment>
         <rdfs:label xml:lang="en">Communications bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/ConductivitySensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/ConductivitySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:label xml:lang="en">Conductivity sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/ContactSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/ContactSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
+        <rdfs:label xml:lang="en">Contact sensor</rdfs:label>
     </owl:Class>
     
 
@@ -905,8 +1086,18 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <!-- https://w3id.org/rec/device/DoorOpenSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DoorOpenSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/StatusSensor"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
         <rdfs:label xml:lang="en">Door open sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/DurationSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/DurationSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:comment xml:lang="en">Measures the duration of some process, activity, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Duration sensor</rdfs:label>
     </owl:Class>
     
 
@@ -955,7 +1146,7 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <!-- https://w3id.org/rec/device/EquipmentMalfunctionSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/EquipmentMalfunctionSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/StatusSensor"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
         <rdfs:label xml:lang="en">Equipment malfunction sensor</rdfs:label>
     </owl:Class>
     
@@ -964,7 +1155,7 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <!-- https://w3id.org/rec/device/EquipmentRemovedSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/EquipmentRemovedSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/StatusSensor"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
         <rdfs:label xml:lang="en">Equipment removed sensor</rdfs:label>
     </owl:Class>
     
@@ -983,8 +1174,17 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <!-- https://w3id.org/rec/device/FanOnOffSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/FanOnOffSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/StatusSensor"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
         <rdfs:label xml:lang="en">Fan on/off sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/FireSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/FireSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
+        <rdfs:label xml:lang="en">Fire sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1192,7 +1392,7 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <!-- https://w3id.org/rec/device/LeakSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/LeakSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/StatusSensor"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
         <rdfs:label xml:lang="en">Leak sensor</rdfs:label>
     </owl:Class>
     
@@ -1397,13 +1597,7 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <!-- https://w3id.org/rec/device/MotionSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/MotionSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
         <rdfs:label xml:lang="en">Motion sensor</rdfs:label>
     </owl:Class>
     
@@ -1457,13 +1651,7 @@ Deprecated in favour of core:Observation.</rdfs:comment>
     <!-- https://w3id.org/rec/device/OccupancySensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/OccupancySensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
         <rdfs:label xml:lang="en">Occupancy sensor</rdfs:label>
     </owl:Class>
     
@@ -1515,6 +1703,22 @@ Deprecated in favour of core:Observation.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PositionCommand">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/PositionSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/PositionSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Measures current position of a component (e.g., a damper, a valve, etc.) in terms of a fraction of its full range of motion.</rdfs:comment>
+        <rdfs:label xml:lang="en">Position sensor</rdfs:label>
     </owl:Class>
     
 
@@ -1746,21 +1950,6 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/StatusSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/StatusSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Status sensor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/TVOCSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/TVOCSensor">
@@ -1869,6 +2058,16 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/UsageSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/UsageSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/VolumeSensor"/>
+        <rdfs:comment xml:lang="en">Senses accumulated usage of some substance (see device:substance property) over time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Usage sensor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/ValveCommand -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/ValveCommand">
@@ -1903,15 +2102,6 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Volume sensor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/WaterTemperatureSensor -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/WaterTemperatureSensor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/TemperatureSensor"/>
-        <rdfs:label xml:lang="en">Water temperature sensor</rdfs:label>
     </owl:Class>
     
 
