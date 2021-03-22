@@ -80,7 +80,9 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
+        <rdfs:comment xml:lang="en">Deprecated in favor of device:position and device:substance.</rdfs:comment>
         <rdfs:label xml:lang="en">device placement context</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -91,7 +93,9 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/device/hasPlacementContext"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
+        <rdfs:comment xml:lang="en">Deprecated in favor of device:position and device:substance.</rdfs:comment>
         <rdfs:label xml:lang="en">event placement context</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -242,7 +246,9 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/device/hasPlacementContext">
         <rdfs:range rdf:resource="https://w3id.org/rec/device/PlacementContext"/>
+        <rdfs:comment xml:lang="en">Deprecated in favor of device:position and device:substance.</rdfs:comment>
         <rdfs:label xml:lang="en">has placement context</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1703,10 +1709,11 @@ Deprecated in favour of core:Observation.</rdfs:comment>
     <!-- https://w3id.org/rec/device/PlacementContext -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PlacementContext">
-        <rdfs:comment xml:lang="en">Description of the context or media that a sensor or actuator is operating within.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of the context or media that a sensor or actuator is operating within.
+
+Deprecated in favor of device:position and device:substance.</rdfs:comment>
         <rdfs:label xml:lang="en">Placement context</rdfs:label>
-        <o2o:endpoint>placementcontext</o2o:endpoint>
-        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
