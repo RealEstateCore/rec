@@ -912,6 +912,12 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/ConductivitySensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/S-PER-M"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Conductivity sensor</rdfs:label>
     </owl:Class>
     
@@ -1096,6 +1102,12 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DurationSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Measures the duration of some process, activity, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Duration sensor</rdfs:label>
     </owl:Class>

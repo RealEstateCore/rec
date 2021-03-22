@@ -369,6 +369,22 @@
     
 
 
+    <!-- http://qudt.org/vocab/unit/S-PER-M -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/S-PER-M">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/SEC -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/SEC">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdfs:Datatype>
+    
+
+
     <!-- http://qudt.org/vocab/unit/V -->
 
     <rdfs:Datatype rdf:about="http://qudt.org/vocab/unit/V">
@@ -821,6 +837,16 @@
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
         <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/PPM"/>
         <rdfs:label>Concentration</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/vocab/quantitykind/Conductivity -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/quantitykind/Conductivity">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+        <qudt:applicableUnit rdf:resource="http://qudt.org/vocab/unit/S-PER-M"/>
+        <rdfs:label xml:lang="en">Conductivity</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4485,6 +4511,15 @@ For an irrotational electric field, the voltage is independent of the path betwe
     
 
 
+    <!-- http://qudt.org/vocab/unit/S-PER-M -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/S-PER-M">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Conductivity"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://qudt.org/vocab/unit/SEC -->
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/SEC">
@@ -4496,13 +4531,6 @@ For an irrotational electric field, the voltage is independent of the path betwe
         <qudt:iec61360Code>0112/2///62720#UAD722</qudt:iec61360Code>
         <qudt:symbol>s</qudt:symbol>
         <qudt:uneceCommonCode>SEC</qudt:uneceCommonCode>
-        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(Second\) (symbol: \(s\)) is the base unit of time in the International System of Units (SI) and is also a unit of time in other systems of measurement. Between the years1000 (when al-Biruni used seconds) and 1960 the second was defined as \(1/86400\) of a mean solar day (that definition still applies in some astronomical and legal contexts). Between 1960 and 1967, it was defined in terms of the period of the Earth&apos;s orbit around the Sun in 1900, but it is now defined more precisely in atomic terms.  
-Under the International System of Units (via the International Committee for Weights and Measures, or CIPM), since 1967 the second has been defined as the duration of \({9192631770}\) periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom.In 1997 CIPM added that the periods would be defined for a caesium atom at rest, and approaching the theoretical temperature of absolute zero, and in 1999, it included corrections from ambient radiation.</terms:description>
-        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Second</qudt:dbpediaMatch>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Second?oldid=495241006</qudt:informativeReference>
-        <qudt:ucumCode>s</qudt:ucumCode>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
-        <rdfs:label>Second</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4871,8 +4899,8 @@ Under the International System of Units (via the International Committee for Wei
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The  \(\textit{ampere}\), often shortened to \(\textit{amp}\), is the SI unit of electric current and is one of the seven SI base units.
 \(\text{A}\ \equiv\ \text{amp (or ampere)}\ \equiv\ \frac{\text{C}}{\text{s}}\ \equiv\ \frac{\text{coulomb}}{\text{second}}\ \equiv\ \frac{\text{J}}{\text{Wb}}\ \equiv\ \frac{\text{joule}}{\text{weber}}\)
 Note that SI supports only the use of symbols and deprecates the use of any abbreviations for units.</terms:description>
-        <qudt:ucumCode>A</qudt:ucumCode>
         <rdfs:label>Ampere</rdfs:label>
+        <qudt:ucumCode>A</qudt:ucumCode>
         <skos:altLabel>amp</skos:altLabel>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ampere?oldid=494026699</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
@@ -4885,8 +4913,8 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/CentiM">
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Centimetre</qudt:dbpediaMatch>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units.</terms:description>
         <qudt:ucumCode>cm</qudt:ucumCode>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A centimetre is a unit of length in the metric system, equal to one hundredth of a metre, which is the SI base unit of length. Centi is the SI prefix for a factor of 10.  The centimetre is the base unit of length in the now deprecated centimetre-gram-second (CGS) system of units.</terms:description>
         <rdfs:label>Centimeter</rdfs:label>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Centimetre?oldid=494931891</qudt:informativeReference>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
@@ -4899,16 +4927,16 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/DEG_C">
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:guidance rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&lt;p&gt;See NIST section &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec06.html#6.2.8&quot;&gt;SP811 section 6.2.8&lt;/a&gt;&lt;/p&gt;</qudt:guidance>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:guidance rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&lt;p&gt;See NIST section &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec04.html#4.2.1.1&quot;&gt;SP811 section 4.2.1.1&lt;/a&gt;&lt;/p&gt;</qudt:guidance>
         <rdfs:label>Degree Celsius</rdfs:label>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Celsius</qudt:dbpediaMatch>
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(degC\)</qudt:expression>
         <qudt:latexDefinition rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\,^{\circ}{\rm C}\)</qudt:latexDefinition>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Celsius?oldid=494152178</qudt:informativeReference>
         <qudt:ucumCode>Cel</qudt:ucumCode>
         <skos:altLabel>degree-centigrade</skos:altLabel>
-        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Celsius?oldid=494152178</qudt:informativeReference>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(\textit{Celsius}\), also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty. This definition fixes the magnitude of both the degree Celsius and the kelvin as precisely 1 part in 273.16 (approximately 0.00366) of the difference between absolute zero and the triple point of water. Thus, it sets the magnitude of one degree Celsius and that of one kelvin as exactly the same. Additionally, it establishes the difference between the two scales&apos; null points as being precisely \(273.15\,^{\circ}{\rm C}\).&lt;/p&gt;</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/HP">
@@ -4920,8 +4948,8 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:ucumCode>[HP]</qudt:ucumCode>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/HR">
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The hour (common symbol: h or hr) is a unit of measurement of time. In modern usage, an hour comprises 60 minutes, or 3,600 seconds. It is approximately 1/24 of a mean solar day. An hour in the Universal Coordinated Time (UTC) time standard can include a negative or positive leap second, and may therefore have a duration of 3,599 or 3,601 seconds for adjustment purposes. Although it is not a standard defined by the International System of Units, the hour is a unit accepted for use with SI, represented by the symbol h.</terms:description>
         <rdfs:label>Hour</rdfs:label>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The hour (common symbol: h or hr) is a unit of measurement of time. In modern usage, an hour comprises 60 minutes, or 3,600 seconds. It is approximately 1/24 of a mean solar day. An hour in the Universal Coordinated Time (UTC) time standard can include a negative or positive leap second, and may therefore have a duration of 3,599 or 3,601 seconds for adjustment purposes. Although it is not a standard defined by the International System of Units, the hour is a unit accepted for use with SI, represented by the symbol h.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:ucumCode>h</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Hour</qudt:dbpediaMatch>
@@ -4967,8 +4995,8 @@ Note that SI supports only the use of symbols and deprecates the use of any abbr
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Kilowatt_hour</qudt:dbpediaMatch>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The kilowatt hour, or kilowatt-hour, (symbol \(kW \cdot h\), \(kW h\) or \(kWh\)) is a unit of energy equal to 1000 watt hours or 3.6 megajoules. For constant power, energy in watt hours is the product of power in watts and time in hours. The kilowatt hour is most commonly known as a billing unit for energy delivered to consumers by electric utilities.</terms:description>
-        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kW-h\)</qudt:expression>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Kilowatt_hour?oldid=494927235</qudt:informativeReference>
+        <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(kW-h\)</qudt:expression>
         <rdfs:label>Kilowatthour</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/L">
@@ -5019,12 +5047,12 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <rdfs:label>Minute</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/MilliM">
-        <qudt:ucumCode>mm</qudt:ucumCode>
         <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Millimetre</qudt:dbpediaMatch>
-        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <qudt:ucumCode>mm</qudt:ucumCode>
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(mm\)</qudt:expression>
-        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
         <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Millimetre?oldid=493032457</qudt:informativeReference>
+        <terms:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The millimetre (International spelling as used by the International Bureau of Weights and Measures) or millimeter (American spelling) (SI unit symbol mm) is a unit of length in the metric system, equal to one thousandth of a metre, which is the SI base unit of length. It is equal to 1000 micrometres or 1000000 nanometres. A millimetre is equal to exactly 5/127 (approximately 0.039370) of an inch.</terms:description>
         <rdfs:label>Millimeter</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/N-M">
@@ -5044,6 +5072,18 @@ The official SI symbolic abbreviation is mu00b7s-1, or equivalently either m/s.<
         <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">&quot;Revolution per Minute&quot; is a unit for  &apos;Angular Velocity&apos; expressed as \(rev/min\).</terms:description>
         <qudt:expression rdf:datatype="http://qudt.org/schema/qudt/LatexString">\(rev/min\)</qudt:expression>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/S-PER-M">
+        <rdfs:label xml:lang="en">Siemens per Meter</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit/SEC">
+        <qudt:dbpediaMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Second</qudt:dbpediaMatch>
+        <qudt:informativeReference rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Second?oldid=495241006</qudt:informativeReference>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">The \(Second\) (symbol: \(s\)) is the base unit of time in the International System of Units (SI) and is also a unit of time in other systems of measurement. Between the years1000 (when al-Biruni used seconds) and 1960 the second was defined as \(1/86400\) of a mean solar day (that definition still applies in some astronomical and legal contexts). Between 1960 and 1967, it was defined in terms of the period of the Earth&apos;s orbit around the Sun in 1900, but it is now defined more precisely in atomic terms.  
+Under the International System of Units (via the International Committee for Weights and Measures, or CIPM), since 1967 the second has been defined as the duration of \({9192631770}\) periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom.In 1997 CIPM added that the periods would be defined for a caesium atom at rest, and approaching the theoretical temperature of absolute zero, and in 1999, it included corrections from ambient radiation.</terms:description>
+        <qudt:ucumCode>s</qudt:ucumCode>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.1/vocab/unit"/>
+        <rdfs:label>Second</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://qudt.org/vocab/unit/V">
         <qudt:latexDefinition>\(\text{V}\ \equiv\ \text{volt}\ \equiv\ \frac{\text{J}}{\text{C}}\ \equiv\ \frac{\text{joule}}{\text{coulomb}}\ \equiv\ \frac{\text{W.s}}{\text{C}}\ \equiv\ \frac{\text{watt.second}}{\text{coulomb}}\ \equiv\ \frac{\text{W}}{\text{A}}\ \equiv\ \frac{\text{watt}}{\text{amp}}\)</qudt:latexDefinition>
