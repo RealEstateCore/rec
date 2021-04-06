@@ -1086,6 +1086,14 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/AbsentActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/AbsentActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PresentAbsentActuator"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/Actuation -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Actuation">
@@ -1157,6 +1165,21 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/BinaryActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/BinaryActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Binary actuator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/BinarySensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/BinarySensor">
@@ -1169,14 +1192,6 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Grouping of sensors that return a single boolean value signal, e.g., fire sensors, level sensors, motion sensors, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Binary sensor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/BypassCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/BypassCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
     </owl:Class>
     
 
@@ -1206,6 +1221,14 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/CloseActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/CloseActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/OpenCloseActuator"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/CommunicationConfiguration -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/CommunicationConfiguration">
@@ -1220,6 +1243,14 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/device/CommunicationsBus">
         <rdfs:comment xml:lang="en">Type of communications bus for the Device.</rdfs:comment>
         <rdfs:label xml:lang="en">Communications bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/CompressorRunActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/CompressorRunActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/RunActuator"/>
     </owl:Class>
     
 
@@ -1248,14 +1279,6 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/CoolingCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/CoolingCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/CoolingDemandSetpoint -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/CoolingDemandSetpoint">
@@ -1275,6 +1298,14 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Current sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/DamperOpenActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/DamperOpenActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/OpenActuator"/>
     </owl:Class>
     
 
@@ -1303,6 +1334,24 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/DefaultActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/DefaultActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/DefaultOverrideActuator"/>
+        <rdfs:label xml:lang="en">Default actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/DefaultOverrideActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/DefaultOverrideActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryActuator"/>
+        <rdfs:label xml:lang="en">Default/override actuator</rdfs:label>
     </owl:Class>
     
 
@@ -1389,22 +1438,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/DirectionCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/DirectionCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/DisableCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/DisableCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/DoorOpenSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DoorOpenSensor">
@@ -1450,14 +1483,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/device/ElectricalPowerSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PowerSensor"/>
         <rdfs:label xml:lang="en">Electrical power sensor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/EnableCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/EnableCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
     </owl:Class>
     
 
@@ -1508,6 +1533,31 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/FanRunActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/FanRunActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/RunActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/FaultActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/FaultActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/NormalFaultActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/FaultResetActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/FaultResetActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/ResetActuator"/>
+        <rdfs:label xml:lang="en">Fault reset actuator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/FireSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/FireSensor">
@@ -1545,14 +1595,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Flow setpoint</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/FrequencyCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/FrequencyCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
     </owl:Class>
     
 
@@ -1618,26 +1660,10 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/HeatingCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/HeatingCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/HeatingDemandSetpoint -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/HeatingDemandSetpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/DemandSetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/HumidifyCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/HumidifyCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
     </owl:Class>
     
 
@@ -1789,18 +1815,11 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/LoadShedCommand -->
+    <!-- https://w3id.org/rec/device/LoadShedOverrideActuator -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/LoadShedCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/LuminanceCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/LuminanceCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
+    <owl:Class rdf:about="https://w3id.org/rec/device/LoadShedOverrideActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/OverrideActuator"/>
+        <rdfs:label xml:lang="en">Load shed override actuator</rdfs:label>
     </owl:Class>
     
 
@@ -1922,19 +1941,28 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/ModeCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/ModeCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/MotionSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/MotionSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinarySensor"/>
         <rdfs:label xml:lang="en">Motion sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/NormalActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/NormalActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/NormalFaultActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/NormalFaultActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/NormalFaultActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryActuator"/>
+        <rdfs:label xml:lang="en">Normal/fault actuator</rdfs:label>
     </owl:Class>
     
 
@@ -1993,10 +2021,53 @@ Deprecated in favour of core:Observation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/OverrideCommand -->
+    <!-- https://w3id.org/rec/device/OffActuator -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/OverrideCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
+    <owl:Class rdf:about="https://w3id.org/rec/device/OffActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/OnOffActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/OnActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/OnActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/OnOffActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/OnOffActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/OnOffActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryActuator"/>
+        <rdfs:label xml:lang="en">On/off actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/OpenActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/OpenActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/OpenCloseActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/OpenCloseActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/OpenCloseActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryActuator"/>
+        <rdfs:label xml:lang="en">Open/close actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/OverrideActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/OverrideActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/DefaultOverrideActuator"/>
+        <rdfs:label xml:lang="en">Override actuator</rdfs:label>
     </owl:Class>
     
 
@@ -2032,14 +2103,6 @@ Deprecated in favour of core:Observation.</rdfs:comment>
 Deprecated in favor of device:position and device:substance.</rdfs:comment>
         <rdfs:label xml:lang="en">Placement context</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/PositionCommand -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/PositionCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
     </owl:Class>
     
 
@@ -2109,6 +2172,23 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/PresentAbsentActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/PresentAbsentActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryActuator"/>
+        <rdfs:label xml:lang="en">Present/absent actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/PresentActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/PresentActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PresentAbsentActuator"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/PressureSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PressureSensor">
@@ -2138,18 +2218,19 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/PumpCommand -->
+    <!-- https://w3id.org/rec/device/PumpRunActuator -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/PumpCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
+    <owl:Class rdf:about="https://w3id.org/rec/device/PumpRunActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/RunActuator"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/rec/device/ResetCommand -->
+    <!-- https://w3id.org/rec/device/ResetActuator -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/ResetCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
+    <owl:Class rdf:about="https://w3id.org/rec/device/ResetActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/DefaultActuator"/>
+        <rdfs:label xml:lang="en">Reset actuator</rdfs:label>
     </owl:Class>
     
 
@@ -2164,6 +2245,23 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/RunActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/RunActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/RunStopActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/RunStopActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/RunStopActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryActuator"/>
+        <rdfs:label xml:lang="en">Run/stop actuator</rdfs:label>
     </owl:Class>
     
 
@@ -2287,6 +2385,14 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/StopActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/StopActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/RunStopActuator"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/TVOCSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/TVOCSensor">
@@ -2405,10 +2511,10 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/ValveCommand -->
+    <!-- https://w3id.org/rec/device/ValveOpenActuator -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/ValveCommand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Actuator"/>
+    <owl:Class rdf:about="https://w3id.org/rec/device/ValveOpenActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/OpenActuator"/>
     </owl:Class>
     
 
