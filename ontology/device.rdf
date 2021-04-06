@@ -1118,14 +1118,6 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/AccelerationSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/AccelerationSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/Actuation -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/Actuation">
@@ -1178,34 +1170,18 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/AirQualitySetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/AirQualitySetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/AngleSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/AngleSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/AreaSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/AreaSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/AzimuthSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/AzimuthSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/SolarAngleSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/AzimuthSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/AzimuthSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/SolarAngleSetpoint"/>
     </owl:Class>
     
 
@@ -1291,10 +1267,10 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/CapacitanceSetpoint -->
+    <!-- https://w3id.org/rec/device/CO2Setpoint -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/CapacitanceSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
+    <owl:Class rdf:about="https://w3id.org/rec/device/CO2Setpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/GasSetpoint"/>
     </owl:Class>
     
 
@@ -1413,18 +1389,18 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/ConductanceSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/ConductanceSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/ConductivitySensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/ConductivitySensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/ConductivitySetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/ConductivitySetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
     </owl:Class>
     
 
@@ -1457,14 +1433,6 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/CoolingLevelState">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/OnLevelState"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/CountSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/CountSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
     </owl:Class>
     
 
@@ -1549,22 +1517,6 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/DataRateSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/DataRateSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/DataSizeSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/DataSizeSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/DefaultActuator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DefaultActuator">
@@ -1631,14 +1583,6 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/DensitySetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/DensitySetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/DeviceEvents -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DeviceEvents">
@@ -1678,6 +1622,14 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/DewPointSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/DewPointSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/DischargeAirDamperPositionActuator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DischargeAirDamperPositionActuator">
@@ -1710,14 +1662,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/DistanceSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/DistanceSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/DurationSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/DurationSensor">
@@ -1726,9 +1670,9 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/ElectricChargeSetpoint -->
+    <!-- https://w3id.org/rec/device/DurationSetpoint -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/ElectricChargeSetpoint">
+    <owl:Class rdf:about="https://w3id.org/rec/device/DurationSetpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
     </owl:Class>
     
@@ -1742,10 +1686,26 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/ElectricalEnergySetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/ElectricalEnergySetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/EnergySetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/ElectricalPowerSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/ElectricalPowerSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PowerSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/ElectricalPowerSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/ElectricalPowerSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PowerSetpoint"/>
     </owl:Class>
     
 
@@ -1761,14 +1721,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <!-- https://w3id.org/rec/device/EnergySetpoint -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/EnergySetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/EnthalpySetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/EnthalpySetpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
     </owl:Class>
     
@@ -1985,14 +1937,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/ForceSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/ForceSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/FrequencySensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/FrequencySensor">
@@ -2017,6 +1961,14 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/FrostSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/FrostSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/GasFlowSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/GasFlowSensor">
@@ -2025,10 +1977,26 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/GasFlowSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/GasFlowSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/FlowSetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/GasSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/GasSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/GasSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/GasSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
     </owl:Class>
     
 
@@ -2097,14 +2065,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/HumidityRatioSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/HumidityRatioSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/HumiditySensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/HumiditySensor">
@@ -2132,22 +2092,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     <!-- https://w3id.org/rec/device/IlluminanceSetpoint -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/IlluminanceSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/InductanceSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/InductanceSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/IrradianceSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/IrradianceSetpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
     </owl:Class>
     
@@ -2196,14 +2140,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/LengthSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/LengthSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/LevelActuator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/LevelActuator">
@@ -2240,6 +2176,14 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/LiquidFlowSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/FlowSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/LiquidFlowSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/LiquidFlowSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/FlowSetpoint"/>
     </owl:Class>
     
 
@@ -2335,30 +2279,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/LuminositySetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/LuminositySetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/LuminousFluxSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/LuminousFluxSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/LuminousIntensitySetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/LuminousIntensitySetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/MBusConfiguration -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/MBusConfiguration">
@@ -2369,26 +2289,18 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/MagneticDensitySetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/MagneticDensitySetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/MagneticFluxSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/MagneticFluxSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/MassFlowSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/MassFlowSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/FlowSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/MassFlowSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/MassFlowSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/FlowSetpoint"/>
     </owl:Class>
     
 
@@ -2948,6 +2860,14 @@ Deprecated in favour of core:Observation.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/PeopleCountSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/PeopleCountSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/PercentUnityActuator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PercentUnityActuator">
@@ -3031,14 +2951,6 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/PowerFactorSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/PowerFactorSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/PowerSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PowerSensor">
@@ -3070,6 +2982,14 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PrecipitationSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/PrecipitationSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/PrecipitationSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSetpoint"/>
     </owl:Class>
     
 
@@ -3268,14 +3188,6 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/ResistanceSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/ResistanceSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/ReturnAirDamperPositionActuator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/ReturnAirDamperPositionActuator">
@@ -3465,14 +3377,6 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/SignalStrengthSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/SignalStrengthSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/SmokeSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/SmokeSensor">
@@ -3505,6 +3409,14 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/SolarAngleSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/SolarAngleSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/SolarIrradianceSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/SolarIrradianceSensor">
@@ -3513,10 +3425,10 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/SoundPressureLevelSetpoint -->
+    <!-- https://w3id.org/rec/device/SolarIrradianceSetpoint -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/SoundPressureLevelSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
+    <owl:Class rdf:about="https://w3id.org/rec/device/SolarIrradianceSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSetpoint"/>
     </owl:Class>
     
 
@@ -3525,6 +3437,14 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/SpeedSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/SpeedSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/SpeedSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
     </owl:Class>
     
 
@@ -3617,6 +3537,14 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/TVOCSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/TVOCSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/GasSetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/TemperatureSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/TemperatureSensor">
@@ -3641,6 +3569,14 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/ThermalEnergySetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/ThermalEnergySetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/EnergySetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/ThermalPowerSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/ThermalPowerSensor">
@@ -3649,26 +3585,10 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/ThrustSetpoint -->
+    <!-- https://w3id.org/rec/device/ThermalPowerSetpoint -->
 
-    <owl:Class rdf:about="https://w3id.org/rec/device/ThrustSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/TimeSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/TimeSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/TimeSpanSetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/TimeSpanSetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
+    <owl:Class rdf:about="https://w3id.org/rec/device/ThermalPowerSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PowerSetpoint"/>
     </owl:Class>
     
 
@@ -3693,6 +3613,14 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/device/UsageSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/VolumeSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/UsageSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/UsageSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/VolumeSetpoint"/>
     </owl:Class>
     
 
@@ -3793,14 +3721,6 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/VelocitySetpoint -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/VelocitySetpoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/VoltageSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/VoltageSensor">
@@ -3841,10 +3761,26 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/WeatherSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/WeatherSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/WindDirectionSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/WindDirectionSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WindSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/WindDirectionSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/WindDirectionSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WindSetpoint"/>
     </owl:Class>
     
 
@@ -3857,6 +3793,14 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/WindSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/WindSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WeatherSetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/WindSpeedSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/WindSpeedSensor">
@@ -3865,10 +3809,26 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/WindSpeedSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/WindSpeedSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/WindSetpoint"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/ZenithSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/ZenithSensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/SolarAngleSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/ZenithSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/ZenithSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/SolarAngleSetpoint"/>
     </owl:Class>
     
 
