@@ -407,6 +407,15 @@
     
 
 
+    <!-- https://w3id.org/rec/building/Kitchenette -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/Kitchenette">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+        <rdfs:label xml:lang="en">Kitechenette</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/building/Laboratory -->
 
     <owl:Class rdf:about="https://w3id.org/rec/building/Laboratory">
@@ -523,6 +532,15 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/building/OfficeRoom">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/Office"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/building/Pantry -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/building/Pantry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+        <rdfs:label xml:lang="en">Pantry</rdfs:label>
     </owl:Class>
     
 
@@ -1731,8 +1749,8 @@ Deprecated in favour of core:Level</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/DisabledToilet">
         <rdfs:seeAlso xml:lang="en">RWC</rdfs:seeAlso>
-        <rdfs:label xml:lang="en">DisabledToilet</rdfs:label>
         <rdfs:seeAlso xml:lang="en">HWC</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">DisabledToilet</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/DishingRoom">
         <rdfs:label xml:lang="en">DishingRoom</rdfs:label>
@@ -1830,6 +1848,8 @@ Deprecated in favour of core:Level</rdfs:comment>
         <rdfs:label xml:lang="en">ParkingSlotWarm</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/Pentry">
+        <rdfs:comment xml:lang="en">Deprecated in favour of building:Pantry</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <rdfs:label xml:lang="en">Pentry</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/PersonalHygiene">
