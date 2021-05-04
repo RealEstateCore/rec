@@ -2692,15 +2692,6 @@ Deprecated in favour of the core:Equipment hierarchy.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/rec/device/LeakState -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/LeakState">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryState"/>
-        <rdfs:label xml:lang="en">Leak state</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/device/LevelActuator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/LevelActuator">
@@ -4765,7 +4756,7 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/SEC"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Time sensor</rdfs:label>
@@ -4780,10 +4771,40 @@ Deprecated in favour of core:Sensor.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/SEC"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Time setpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/TimeSpanSensor -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/TimeSpanSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Time span sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/TimeSpanSetpoint -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/TimeSpanSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/QuantitySetpoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Time span setpoint</rdfs:label>
     </owl:Class>
     
 
