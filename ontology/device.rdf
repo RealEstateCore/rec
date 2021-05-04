@@ -1084,6 +1084,15 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/AbsenceActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/AbsenceActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PresenceAbsenceActuator"/>
+        <rdfs:label xml:lang="en">Absence actuator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/AbsenceSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/AbsenceSensor">
@@ -1107,15 +1116,6 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/device/AbsenceState">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PresenceAbsenceState"/>
         <rdfs:label xml:lang="en">Absence state</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/AbsentActuator -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/AbsentActuator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PresentAbsentActuator"/>
-        <rdfs:label xml:lang="en">Absent actuator</rdfs:label>
     </owl:Class>
     
 
@@ -4031,6 +4031,15 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/PresenceAbsenceActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/PresenceAbsenceActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryActuator"/>
+        <rdfs:label xml:lang="en">Presence/absence actuator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/PresenceAbsenceSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PresenceAbsenceSensor">
@@ -4058,6 +4067,15 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/PresenceActuator -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/PresenceActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PresenceAbsenceActuator"/>
+        <rdfs:label xml:lang="en">Presence actuator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/device/PresenceSensor -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/PresenceSensor">
@@ -4081,24 +4099,6 @@ Deprecated in favor of device:position and device:substance.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/device/PresenceState">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PresenceAbsenceState"/>
         <rdfs:label xml:lang="en">Presence state</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/PresentAbsentActuator -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/PresentAbsentActuator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/BinaryActuator"/>
-        <rdfs:label xml:lang="en">Present/absent actuator</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/rec/device/PresentActuator -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/device/PresentActuator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/PresentAbsentActuator"/>
-        <rdfs:label xml:lang="en">Present actuator</rdfs:label>
     </owl:Class>
     
 
