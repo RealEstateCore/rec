@@ -29,7 +29,7 @@ Additional functionality may be implemented and a mechanism to understanding suc
 
 **Principle.** In addition to the minimum set of requirements, the specification comprises optional requirements which must be followed _if chosen to be included_ in an API implementation (designated _"should"_).
 
-![Requirement Diagram](https://github.com/RealEstateCore/rec/blob/3.3/api/REST/REC_API_Requirement_diagram.png)
+![Requirement Diagram](REC_API_Requirement_diagram.png)
 
 Furthermore, recommendations are expressed for areas where the REC Consortium considers to add requirements in the future. 
 
