@@ -357,6 +357,31 @@ Deprecated in favour of core:observes</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/capabilityLimit -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/capabilityLimit">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/CapabilityTagSet"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Maximum</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Minimum</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/device/hasActuationCommandTime -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/hasActuationCommandTime">
@@ -1084,6 +1109,19 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/Capability -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/core/Capability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/tags"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/device/CapabilityTagSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/rec/device/AbsenceActuator -->
 
     <owl:Class rdf:about="https://w3id.org/rec/device/AbsenceActuator">
@@ -1614,6 +1652,17 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/device/COAirQualitySetpoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/device/AirQualitySetpoint"/>
         <rdfs:label xml:lang="en">CO air quality setpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/device/CapabilityTagSet -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/device/CapabilityTagSet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/TagSet"/>
+        <rdfs:comment xml:lang="en">Encapuslates a set of tags that may be applicable to Capability instances.</rdfs:comment>
+        <rdfs:label xml:lang="en">Capability tag set</rdfs:label>
+        <metadata:dtdlType>component</metadata:dtdlType>
     </owl:Class>
     
 
