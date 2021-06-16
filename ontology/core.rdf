@@ -735,6 +735,15 @@ Deprecated in favour of core:servesAsset</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/tags -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/tags">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/TagSet"/>
+        <rdfs:label xml:lang="en">tags</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1701,7 +1710,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     <!-- https://w3id.org/rec/core/Information -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Information">
-        <rdfs:comment xml:lang="en">A generic catch-all superclass for all kinds of intangible data types used in a broad variety of contexts, e.g., measurement scales or units, response codes, currency identifiers, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A generic catch-all superclass for all kinds of intangible REC types used in a broad variety of contexts, e.g., configurations, tags, data series, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Information</rdfs:label>
     </owl:Class>
     
@@ -2261,6 +2270,17 @@ Describes the type of values that can be observed by sensors or set by actuators
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A part of a larger building complex, e.g., a wing, a tower, or an interconnected (through walkways or other means) but largely free-standing building.</rdfs:comment>
         <rdfs:label xml:lang="en">Sub-building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/TagSet -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/TagSet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+        <rdfs:comment xml:lang="en">A set of categorization tags associated a REC entity. Used for compatibility with legacy point- or tag-based systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tag set</rdfs:label>
+        <metadata:dtdlType>component</metadata:dtdlType>
     </owl:Class>
     
 
