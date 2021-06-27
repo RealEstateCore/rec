@@ -393,6 +393,8 @@ Deprecated in favour of core:observes</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">Operational mode for HVAC equipment (Project Haystack).</rdfs:comment>
+        <rdfs:label xml:lang="en">HVAC mode</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -430,11 +432,21 @@ Deprecated in favour of core:observes</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/device/assetComponent -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/assetComponent">
+        <rdfs:comment xml:lang="en">The component that is part of an asset which the capability is associated with.</rdfs:comment>
+        <rdfs:label xml:lang="en">asset component</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/device/demand -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/demand">
         <rdfs:domain rdf:resource="https://w3id.org/rec/device/CapabilityTagSet"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Rate required for a process. For a setpoint, this sets the required rate for a process such as cooling, heating, air flow, or water flow. For a sensor, this measures the rate of a process over a given interval such as electrical power demand or cooling energy demand.</rdfs:comment>
         <rdfs:label xml:lang="en">demand</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -445,6 +457,7 @@ Deprecated in favour of core:observes</rdfs:comment>
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/effective">
         <rdfs:domain rdf:resource="https://w3id.org/rec/device/CapabilityTagSet"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Current control setpoint in effect taking into account other factors (Project Haystack).</rdfs:comment>
         <rdfs:label xml:lang="en">effective</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -501,6 +514,8 @@ Deprecated in favour of core:observes</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">Phase measurement in a three-phase electrical system (Project Haystack).</rdfs:comment>
+        <rdfs:label xml:lang="en">electrical phase</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -768,6 +783,8 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">Parameter that places and upper (maximum) or lower (minimum) bound on permitted values of another capability.</rdfs:comment>
+        <rdfs:label xml:lang="en">limit</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -799,6 +816,8 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">Mode which defines how to control a space based on occupancy status.</rdfs:comment>
+        <rdfs:label xml:lang="en">occupancy mode</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -806,7 +825,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     <!-- https://w3id.org/rec/device/phenomenon -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/phenomenon">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/CapabilityTagSet"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1131,7 +1150,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
             </rdfs:Datatype>
         </rdfs:range>
         <rdfs:comment xml:lang="en">The phenomenon that a capability measures or interacts with; e.g., a TemperatureSensor can measure air temperature or water temperature, a Flow Demand Setpoint can be configured to control steam demand or chilled water demand, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">substance</rdfs:label>
+        <rdfs:label xml:lang="en">phenomenon</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1139,7 +1158,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     <!-- https://w3id.org/rec/device/position -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/position">
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/device/CapabilityTagSet"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1300,6 +1319,7 @@ Deprecated in favour of core:hasProcessedTime.</rdfs:comment>
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/device/stage">
         <rdfs:domain rdf:resource="https://w3id.org/rec/device/CapabilityTagSet"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Stage number of a control loop for an equipment, equipment group, or system that is defined by the process controller. The first stage is 1, second stage 2, etc. (Project Haystack).</rdfs:comment>
         <rdfs:label xml:lang="en">stage</rdfs:label>
     </owl:DatatypeProperty>
     
