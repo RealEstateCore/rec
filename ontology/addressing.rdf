@@ -20,6 +20,7 @@
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/addressing/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/addressing/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/business/3.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.3/"/>
         <ns:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
@@ -143,6 +144,19 @@
         <rdfs:label xml:lang="en">Address</rdfs:label>
         <metadata:dtdlType>component</metadata:dtdlType>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/business/TenantUnit -->
+
+    <rdf:Description rdf:about="https://w3id.org/rec/business/TenantUnit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/addressing/address"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/addressing/Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 
