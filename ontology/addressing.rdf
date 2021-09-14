@@ -45,11 +45,11 @@
     
 
 
-    <!-- https://w3id.org/rec/addressing/hasAddress -->
+    <!-- https://w3id.org/rec/addressing/address -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/addressing/hasAddress">
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/addressing/address">
         <rdfs:range rdf:resource="https://w3id.org/rec/addressing/Address"/>
-        <rdfs:label xml:lang="en">has address</rdfs:label>
+        <rdfs:label xml:lang="en">address</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -151,7 +151,7 @@
     <rdf:Description rdf:about="https://w3id.org/rec/core/Building">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/addressing/hasAddress"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/addressing/address"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/addressing/Address"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -164,7 +164,7 @@
     <rdf:Description rdf:about="https://w3id.org/rec/core/Land">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/addressing/hasAddress"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/addressing/address"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/addressing/Address"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -177,7 +177,7 @@
     <rdf:Description rdf:about="https://w3id.org/rec/core/SubBuilding">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/addressing/hasAddress"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/addressing/address"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/addressing/Address"/>
             </owl:Restriction>
         </rdfs:subClassOf>
