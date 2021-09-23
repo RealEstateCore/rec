@@ -473,6 +473,24 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/pipeInlet -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/pipeInlet">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/PipeConnection"/>
+        <rdfs:label xml:lang="en">pipe inlet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/pipeOutlet -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/pipeOutlet">
+        <rdfs:range rdf:resource="https://w3id.org/rec/asset/PipeConnection"/>
+        <rdfs:label xml:lang="en">pipe outlet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/preHeatingMethod -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/asset/preHeatingMethod">
@@ -1177,6 +1195,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/insideDiameter -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/insideDiameter">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+        <rdfs:label xml:lang="en">inside diameter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/installationDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/installationDate">
@@ -1446,6 +1473,15 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/nominalExternalStaticPressure -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalExternalStaticPressure">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+        <rdfs:label xml:lang="en">nominal external static pressure</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/nominalHeatingCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalHeatingCapacity">
@@ -1656,6 +1692,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/pipeDiameter">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+        <rdfs:comment xml:lang="en">Deprecate this property as it has been replaced by pipeInlet and pipeOutlet.</rdfs:comment>
         <rdfs:label xml:lang="en">pipe diameter</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2138,6 +2175,16 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/waterPerFlush">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L"/>
         <rdfs:label xml:lang="en">water per flush</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/weight -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/weight">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Asset"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloGM"/>
+        <rdfs:label xml:lang="en">weight</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -4416,6 +4463,12 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalExternalStaticPressure"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Fan</rdfs:label>
         <metadata:dtdlType>component</metadata:dtdlType>
     </owl:Class>
@@ -6039,6 +6092,28 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/PipeConnection -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/asset/PipeConnection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/insideDiameter"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/outsideDiameter"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Pipe connection</rdfs:label>
+        <metadata:dtdlType>component</metadata:dtdlType>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rec/asset/PlumbingBackflowPreventer -->
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/PlumbingBackflowPreventer">
@@ -6384,6 +6459,18 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Pump">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pipeInlet"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/PipeConnection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pipeOutlet"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/PipeConnection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
@@ -7468,6 +7555,18 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/Valve">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pipeInlet"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/PipeConnection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/pipeOutlet"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/PipeConnection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/flowCapacity"/>
