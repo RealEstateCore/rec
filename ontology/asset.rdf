@@ -1476,7 +1476,7 @@
     <!-- https://w3id.org/rec/asset/nominalExternalStaticPressure -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/nominalExternalStaticPressure">
-        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
         <rdfs:label xml:lang="en">nominal external static pressure</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1771,6 +1771,33 @@
     
 
 
+    <!-- https://w3id.org/rec/asset/primaryFlowCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primaryFlowCapacity">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">primary flow capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/primaryMaxPressure -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primaryMaxPressure">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
+        <rdfs:label xml:lang="en">primary maximum pressure</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/primaryMaxTemperature -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primaryMaxTemperature">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+        <rdfs:label xml:lang="en">primary maximum temperature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/asset/primePower -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/primePower">
@@ -1852,6 +1879,33 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/runtime">
         <rdfs:range rdf:resource="http://qudt.org/vocab/unit/MIN"/>
         <rdfs:label xml:lang="en">runtime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/secondaryFlowCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/secondaryFlowCapacity">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+        <rdfs:label xml:lang="en">secondary flow capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/secondaryMaxPressure -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/secondaryMaxPressure">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
+        <rdfs:label xml:lang="en">secondary maximum pressure</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/asset/secondaryMaxTemperature -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/asset/secondaryMaxTemperature">
+        <rdfs:range rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+        <rdfs:label xml:lang="en">secondary maximum temperature</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2586,6 +2640,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalCoolingCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalHeatingCapacity"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4475,7 +4535,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalExternalStaticPressure"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/PSI"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Fan</rdfs:label>
@@ -4510,6 +4570,34 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/filterType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/mounting"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ceiling</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>floor</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>wall</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4567,6 +4655,12 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalHeatingCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Fan coil unit with reheat</rdfs:label>
     </owl:Class>
     
@@ -4617,6 +4711,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalHeatingCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Fan powered box with reheat</rdfs:label>
@@ -5619,6 +5719,42 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/asset/HeatExchanger">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/asset/HVACEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryFlowCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryMaxPressure"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/primaryMaxTemperature"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/secondaryFlowCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/L-PER-SEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/secondaryMaxPressure"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/KiloPA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/secondaryMaxTemperature"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Heat exchanger</rdfs:label>
     </owl:Class>
     
@@ -5946,6 +6082,12 @@
                         </owl:oneOf>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/powerInput"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/W"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Luminaire</rdfs:label>
@@ -7590,6 +7732,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/asset/reHeatingMethod"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/asset/HVACHeatingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/asset/nominalHeatingCapacity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">VAV box with reheat</rdfs:label>
