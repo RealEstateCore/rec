@@ -158,11 +158,11 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/categorizationAttributes -->
+    <!-- https://w3id.org/rec/core/categorizationProperties -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/categorizationAttributes">
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/AttributeSet"/>
-        <rdfs:label xml:lang="en">categorization attributes</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/categorizationProperties">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/PropertySet"/>
+        <rdfs:label xml:lang="en">categorization properties</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1499,17 +1499,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/AttributeSet -->
-
-    <owl:Class rdf:about="https://w3id.org/rec/core/AttributeSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
-        <rdfs:comment xml:lang="en">A set of categorization attributes associated with a REC entity. Used for compatibility with legacy point- or tag-based systems.</rdfs:comment>
-        <rdfs:label xml:lang="en">Tag set</rdfs:label>
-        <metadata:dtdlType>component</metadata:dtdlType>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/rec/core/Building -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Building">
@@ -1951,6 +1940,17 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Type"/>
         <rdfs:label xml:lang="en">Premises type</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/PropertySet -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/PropertySet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Information"/>
+        <rdfs:comment xml:lang="en">A set of categorization properties associated with a REC entity, complementing the subsumpion hierarchy and allowing orthogonal categorization without the use of multiple inheritance structures. Used for compatibility with legacy point- or tag-based systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property set</rdfs:label>
+        <metadata:dtdlType>component</metadata:dtdlType>
     </owl:Class>
     
 
