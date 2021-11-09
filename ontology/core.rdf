@@ -1558,6 +1558,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/isPartOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
             </owl:Restriction>
@@ -1804,6 +1810,12 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2222,6 +2234,12 @@ Describes the type of values that can be observed by sensors or set by actuators
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
