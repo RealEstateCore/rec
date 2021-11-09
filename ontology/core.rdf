@@ -202,6 +202,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/controlledBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/controlledBy">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:label xml:lang="en">controlled by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/dataSchema -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/dataSchema">
@@ -237,6 +247,16 @@ Deprecated in favour of qudt:unit</rdfs:comment>
 Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <rdfs:label xml:lang="en">device quantity kind</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/documentTopic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/documentTopic">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Document"/>
+        <rdfs:label xml:lang="en">document topic</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -301,6 +321,15 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isCapabilityOf"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:label xml:lang="en">has capability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasDocument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasDocument">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Document"/>
+        <rdfs:label xml:lang="en">has document</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1343,6 +1372,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/controlledBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/observedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Sensor"/>
             </owl:Restriction>
@@ -1404,6 +1439,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1521,8 +1562,20 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1625,6 +1678,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Collection -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Collection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings).</rdfs:comment>
         <rdfs:label xml:lang="en">Collection</rdfs:label>
     </owl:Class>
@@ -1668,6 +1733,12 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     <!-- https://w3id.org/rec/core/Document -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Document">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/url"/>
@@ -1759,6 +1830,12 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/LogicalDevice"/>
             </owl:Restriction>
@@ -1767,6 +1844,12 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hostedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1884,6 +1967,12 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Parameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/controlledBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
@@ -2167,6 +2256,12 @@ Describes the type of values that can be observed by sensors or set by actuators
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasCapability"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
