@@ -202,6 +202,16 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/controlledBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/controlledBy">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:label xml:lang="en">controlled by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/dataSchema -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/dataSchema">
@@ -1362,6 +1372,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/controlledBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/observedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Sensor"/>
             </owl:Restriction>
@@ -1951,6 +1967,12 @@ MillimeterPerHour for Precipation</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Parameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/controlledBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/lastValue"/>
