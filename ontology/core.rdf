@@ -241,6 +241,16 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/rec/core/documentTopic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/documentTopic">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Document"/>
+        <rdfs:label xml:lang="en">document topic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/eventMeasurementUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/eventMeasurementUnit">
@@ -301,6 +311,15 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isCapabilityOf"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:label xml:lang="en">has capability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/core/hasDocument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasDocument">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Document"/>
+        <rdfs:label xml:lang="en">has document</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1408,6 +1427,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Asset"/>
             </owl:Restriction>
@@ -1521,6 +1546,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
             </owl:Restriction>
@@ -1625,6 +1656,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Collection -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Collection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings).</rdfs:comment>
         <rdfs:label xml:lang="en">Collection</rdfs:label>
     </owl:Class>
@@ -1668,6 +1705,12 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     <!-- https://w3id.org/rec/core/Document -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Document">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/url"/>
