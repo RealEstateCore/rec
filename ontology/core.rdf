@@ -167,10 +167,22 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/componentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/componentOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasBuildingComponent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Space"/>
+        <rdfs:comment xml:lang="en">Links a Building Component to a Space, that the Building Component is either contained in, adjacent to or intersecting with.</rdfs:comment>
+        <rdfs:label xml:lang="en">component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/componentOfBuilding -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/componentOfBuilding">
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/hasBuildingComponent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/componentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Building"/>
         <rdfs:comment xml:lang="en">Indicates which Building a certain Building Component is part of.</rdfs:comment>
@@ -307,9 +319,9 @@ Deprecated in favour of qudt:hasQuantityKind</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/hasBuildingComponent">
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/isPartOfBuilding"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Building"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
-        <rdfs:comment xml:lang="en">Parthood traversal property linking Buildings to the Building Components that they are made up of.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Space to a BuildingComponent that is either contained in, adjacent to or intersecting with the Space.</rdfs:comment>
         <rdfs:label xml:lang="en">has building component</rdfs:label>
     </owl:ObjectProperty>
     
