@@ -1372,6 +1372,7 @@ Deprecated in favor of core:value.</rdfs:comment>
 GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
         <rdfs:label xml:lang="en">Geometry</rdfs:label>
+        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geometry</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -1412,6 +1413,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/Agent">
         <rdfs:comment xml:lang="en">The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Company, Department...) to be anchored in one joint place, on the Agent class.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
+        <o2o:endpoint>agent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -1539,6 +1541,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Something which is placed inside of a building, but is not an integral part of that building&apos;s structure; e.g., furniture, equipment, systems, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Asset</rdfs:label>
+        <o2o:endpoint>asset</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -1705,6 +1708,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings).</rdfs:comment>
         <rdfs:label xml:lang="en">Collection</rdfs:label>
+        <o2o:endpoint>collection</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -1760,6 +1764,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Document</rdfs:label>
+        <o2o:endpoint>document</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -1770,6 +1775,7 @@ Deprecated in favour of core:Asset (the hardware), core:LogicalDevice (the softw
     <owl:Class rdf:about="https://w3id.org/rec/core/Event">
         <rdfs:comment xml:lang="en">A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
+        <o2o:endpoint>event</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -1996,6 +2002,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Parameter</rdfs:label>
+        <o2o:endpoint>parameter</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -2153,6 +2160,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Space"/>
         <rdfs:comment xml:lang="en">Base class for all more specific room types.</rdfs:comment>
         <rdfs:label xml:lang="en">Room</rdfs:label>
+        <o2o:endpoint>room</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     <owl:Axiom>
@@ -2206,6 +2214,7 @@ Describes the type of values that can be observed by sensors or set by actuators
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <o2o:endpoint>sensorinterface</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -2222,6 +2231,7 @@ Describes the type of values that can be observed by sensors or set by actuators
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Service</rdfs:label>
+        <o2o:endpoint>service</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -2241,6 +2251,7 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:Class rdf:about="https://w3id.org/rec/core/Software">
         <rdfs:comment xml:lang="en">Any piece of software or similar digital resource (including data schemas, etc) that executes or can be loaded on some or many parts of a RealEstateCore-enabled distributed system.</rdfs:comment>
         <rdfs:label xml:lang="en">Software</rdfs:label>
+        <o2o:endpoint>software</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -2335,6 +2346,7 @@ Describes the type of values that can be observed by sensors or set by actuators
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces. E.g., a Region can contain many pieces of Land, which in turn can contain many Buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Space</rdfs:label>
+        <o2o:endpoint>space</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -2366,6 +2378,7 @@ Describes the type of values that can be observed by sensors or set by actuators
     <owl:Class rdf:about="https://w3id.org/rec/core/State">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Capability"/>
         <rdfs:label xml:lang="en">State</rdfs:label>
+        <o2o:endpoint>state</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
