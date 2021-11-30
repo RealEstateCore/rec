@@ -9,11 +9,15 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/rec/core/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:core1="http://www.linkedmodel.org/owl/schema/core#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:analytics="https://w3id.org/rec/analytics/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/analytics/">
@@ -123,6 +127,7 @@
     <owl:Class rdf:about="https://w3id.org/rec/analytics/AnalysisProcess">
         <rdfs:comment xml:lang="en">Some process that generates analysis results, e.g., predictions, aggregates, series, etc. This could be anything from the execution of a machine learning classifier to a simple mathematical averaging operation. The modelling of specific analysis processes and their semantics remains to be done.</rdfs:comment>
         <rdfs:label xml:lang="en">Analysis process</rdfs:label>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
 
