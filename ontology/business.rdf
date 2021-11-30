@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/rec/business/"
+     xml:base="https://w3id.org/rec/business/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:o2o="https://karlhammar.com/owl2oas/o2o.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://www.linkedmodel.org/owl/schema/core#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:business="https://w3id.org/rec/business/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/rec/business/">
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/business/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/agents/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/core/3.3/"/>
+        <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
+        <dc:description xml:lang="en">This REC module covers business processes, business relations, etc.</dc:description>
+        <dc:publisher>RealEstateCore Consortium</dc:publisher>
+        <dc:title>RealEstateCore Business Module</dc:title>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-08-12</dcterms:modified>
+        <vann:preferredNamespacePrefix>business</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/business/3.3/</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/business/hasRole -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/business/hasRole">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/business/Role"/>
+        <rdfs:comment xml:lang="en">A role that is held by some agent (e.g., a Person could hold a Sales Representative role, or an organization could hold a Maintenance Responsibility role).</rdfs:comment>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/business/leaseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/business/leaseOf">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/business/Lease"/>
+        <rdfs:comment xml:lang="en">The object (e.g., property, equipment, etc) that this a lease of.</rdfs:comment>
+        <rdfs:label xml:lang="en">lease of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/business/leasee -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/business/leasee">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/business/Lease"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:comment xml:lang="en">The agent leasing some leasable object, i.e., the user of the asset.</rdfs:comment>
+        <rdfs:label xml:lang="en">leasee</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/business/leasor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/business/leasor">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/business/Lease"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/Agent"/>
+        <rdfs:comment xml:lang="en">The agent leasing out some leasable object, i.e., the owner of the asset.</rdfs:comment>
+        <rdfs:label xml:lang="en">leasor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rec/business/regulatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/business/regulatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/business/Lease"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/business/LeaseContract"/>
+        <rdfs:comment xml:lang="en">A lease is regulated by some contract entered into by the leasor and leasees.</rdfs:comment>
+        <rdfs:label xml:lang="en">regulated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/business/leaseEnd -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/business/leaseEnd">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/business/Lease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Time at which a lease arrangement ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">lease end</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/business/leaseStart -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/business/leaseStart">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/business/Lease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Time at which a lease arrangement begins.</rdfs:comment>
+        <rdfs:label xml:lang="en">lease start</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/rec/business/Lease -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/business/Lease">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Event"/>
+        <rdfs:label xml:lang="en">Lease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/business/LeaseContract -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/business/LeaseContract">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Document"/>
+        <rdfs:comment xml:lang="en">Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lease contract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/business/Role -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/business/Role">
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+        <o2o:endpoint>role</o2o:endpoint>
+        <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/business/TenantUnit -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/business/TenantUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/SpaceCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/includes"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A tenant unit is an administrative grouping of spaces (buildings, building components, real estates, etc.) that are used for some purpose by a real estate holder or tenant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tenant unit</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

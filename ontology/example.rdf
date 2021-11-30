@@ -9,27 +9,32 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/rec/core/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:asset="https://w3id.org/rec/asset/"
      xmlns:device="https://w3id.org/rec/device/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:example="https://w3id.org/rec/example/"
      xmlns:building="https://w3id.org/rec/building/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:actuation="https://w3id.org/rec/actuation/"
      xmlns:dataschemas="https://w3id.org/rec/dataschemas/"
+     xmlns:linkedmodel="http://www.linkedmodel.org/owl/schema/core#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/example/">
-        <owl:versionIRI rdf:resource="https://w3id.org/rec/example/3.2/"/>
-        <owl:imports rdf:resource="https://w3id.org/rec/full/3.2/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rec/example/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/full/3.3/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
         <dc:description xml:lang="en">This is an example REC graph populated with a minimal set of buildings, rooms, and sensors.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Example</dc:title>
-        <dcterms:modified>2020-06-23</dcterms:modified>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-23</dcterms:modified>
         <vann:preferredNamespacePrefix>example</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/rec/example/3.2/</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/rec/example/3.3/</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
@@ -77,11 +82,11 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueKitchenLight">
         <rdf:type rdf:resource="https://w3id.org/rec/device/Actuator"/>
+        <qudt:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
         <actuation:hasActuationInterface rdf:resource="https://w3id.org/rec/example/HueBulbBrightnessInterface"/>
         <actuation:hasActuationInterface rdf:resource="https://w3id.org/rec/example/HueBulbLightColorInterface"/>
         <actuation:hasDefaultActuationInterface rdf:resource="https://w3id.org/rec/example/HueBulbBrightnessInterface"/>
-        <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
-        <core:isMountedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen"/>
+        <core:locatedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen"/>
     </owl:NamedIndividual>
     
 
@@ -89,11 +94,11 @@
     <!-- https://w3id.org/rec/example/HueMotionSensor1 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Device"/>
-        <core:hasSubDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_LightMeter"/>
-        <core:hasSubDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_MotionDetector"/>
-        <core:hasSubDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_Thermometer"/>
-        <core:isMountedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/asset/SensorEquipment"/>
+        <core:hasCapability rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_LightMeter"/>
+        <core:hasCapability rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_MotionDetector"/>
+        <core:hasCapability rdf:resource="https://w3id.org/rec/example/HueMotionSensor1_Thermometer"/>
+        <core:locatedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance"/>
     </owl:NamedIndividual>
     
 
@@ -101,11 +106,11 @@
     <!-- https://w3id.org/rec/example/HueMotionSensor1_LightMeter -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_LightMeter">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Lux"/>
-        <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Illuminance"/>
-        <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
-        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/core/IlluminanceSensor"/>
+        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Illuminance"/>
+        <qudt:unit rdf:resource="http://qudt.org/vocab/unit/LUX"/>
+        <core:isCapabilityOf rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
+        <core:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface"/>
     </owl:NamedIndividual>
     
 
@@ -113,11 +118,9 @@
     <!-- https://w3id.org/rec/example/HueMotionSensor1_MotionDetector -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_MotionDetector">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/BooleanDetection"/>
-        <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Presence"/>
-        <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
-        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/core/MotionSensor"/>
+        <core:isCapabilityOf rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
+        <core:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface"/>
     </owl:NamedIndividual>
     
 
@@ -125,11 +128,11 @@
     <!-- https://w3id.org/rec/example/HueMotionSensor1_Thermometer -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensor1_Thermometer">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Sensor"/>
-        <core:hasMeasurementUnit rdf:resource="https://w3id.org/rec/core/Celsius"/>
-        <core:hasQuantityKind rdf:resource="https://w3id.org/rec/core/Temperature"/>
-        <core:hasSuperDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
-        <device:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/core/AirTemperatureSensor"/>
+        <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Temperature"/>
+        <qudt:unit rdf:resource="http://qudt.org/vocab/unit/C"/>
+        <core:isCapabilityOf rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
+        <core:sensorInterface rdf:resource="https://w3id.org/rec/example/HueMotionSensorThermometerInterface"/>
     </owl:NamedIndividual>
     
 
@@ -137,7 +140,7 @@
     <!-- https://w3id.org/rec/example/HueMotionSensorLightMeterInterface -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorLightMeterInterface">
-        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
         <core:dataSchema rdf:resource="https://w3id.org/rec/example/LuxAsInteger"/>
     </owl:NamedIndividual>
     
@@ -146,7 +149,7 @@
     <!-- https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface">
-        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
         <core:dataSchema rdf:resource="https://w3id.org/rec/example/MotionAsBoolean"/>
     </owl:NamedIndividual>
     
@@ -155,7 +158,7 @@
     <!-- https://w3id.org/rec/example/HueMotionSensorThermometerInterface -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/HueMotionSensorThermometerInterface">
-        <rdf:type rdf:resource="https://w3id.org/rec/device/SensorInterface"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
         <core:dataSchema rdf:resource="https://w3id.org/rec/example/TemperatureAsFloat"/>
     </owl:NamedIndividual>
     
@@ -199,9 +202,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2">
         <rdf:type rdf:resource="https://w3id.org/rec/core/RealEstate"/>
-        <core:hasRealEstateComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_Garage"/>
-        <core:hasRealEstateComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse"/>
-        <core:hasRealEstateComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_StorageBuilding"/>
+        <core:includes rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_Garage"/>
+        <core:includes rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse"/>
+        <core:includes rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_StorageBuilding"/>
     </owl:NamedIndividual>
     
 
@@ -210,7 +213,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_Garage">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Building"/>
-        <core:isPartOfRealEstate rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
+        <core:includedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
     </owl:NamedIndividual>
     
 
@@ -219,9 +222,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Building"/>
-        <core:hasBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
-        <core:hasBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor"/>
-        <core:isPartOfRealEstate rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
+        <core:hasPart rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
+        <core:hasPart rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor"/>
+        <core:includedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
     </owl:NamedIndividual>
     
 
@@ -229,9 +232,8 @@
     <!-- https://w3id.org/rec/example/Ulvsnaes2_MainHouse_BlueBedroom -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_BlueBedroom">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
-        <building:roomType rdf:resource="https://w3id.org/rec/building/Bedroom"/>
-        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/building/Bedroom"/>
+        <core:isPartOf rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor"/>
     </owl:NamedIndividual>
     
 
@@ -239,9 +241,8 @@
     <!-- https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
-        <building:roomType rdf:resource="https://w3id.org/rec/building/DiningRoom"/>
-        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/building/DiningRoom"/>
+        <core:isPartOf rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
     </owl:NamedIndividual>
     
 
@@ -249,10 +250,9 @@
     <!-- https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
-        <building:roomType rdf:resource="https://w3id.org/rec/building/Entrance"/>
-        <core:containsMountedDevice rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
-        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/building/Entrance"/>
+        <core:isLocationOf rdf:resource="https://w3id.org/rec/example/HueMotionSensor1"/>
+        <core:isPartOf rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
     </owl:NamedIndividual>
     
 
@@ -260,12 +260,12 @@
     <!-- https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/Storey"/>
-        <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom"/>
-        <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance"/>
-        <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen"/>
-        <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Office"/>
-        <core:isPartOfBuilding rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/core/Level"/>
+        <core:hasPart rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom"/>
+        <core:hasPart rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance"/>
+        <core:hasPart rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen"/>
+        <core:hasPart rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Office"/>
+        <core:isPartOf rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse"/>
     </owl:NamedIndividual>
     
 
@@ -273,10 +273,9 @@
     <!-- https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
-        <building:roomType rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
-        <core:containsMountedDevice rdf:resource="https://w3id.org/rec/example/HueKitchenLight"/>
-        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/building/FoodHandlingRoom"/>
+        <core:isLocationOf rdf:resource="https://w3id.org/rec/example/HueKitchenLight"/>
+        <core:isPartOf rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
     </owl:NamedIndividual>
     
 
@@ -284,9 +283,8 @@
     <!-- https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Office -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Office">
-        <rdf:type rdf:resource="https://w3id.org/rec/core/Room"/>
-        <building:roomType rdf:resource="https://w3id.org/rec/building/OfficeRoom"/>
-        <core:hasSuperBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/building/OfficeRoom"/>
+        <core:isPartOf rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor"/>
     </owl:NamedIndividual>
     
 
@@ -294,9 +292,9 @@
     <!-- https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor">
-        <rdf:type rdf:resource="https://w3id.org/rec/building/Storey"/>
-        <core:hasSubBuildingComponent rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_BlueBedroom"/>
-        <core:isPartOfBuilding rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse"/>
+        <rdf:type rdf:resource="https://w3id.org/rec/core/Level"/>
+        <core:hasPart rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse_BlueBedroom"/>
+        <core:isPartOf rdf:resource="https://w3id.org/rec/example/Ulvsnaes2_MainHouse"/>
     </owl:NamedIndividual>
     
 
@@ -305,7 +303,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rec/example/Ulvsnaes2_StorageBuilding">
         <rdf:type rdf:resource="https://w3id.org/rec/core/Building"/>
-        <core:isPartOfRealEstate rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
+        <core:includedIn rdf:resource="https://w3id.org/rec/example/Ulvsnaes2"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
