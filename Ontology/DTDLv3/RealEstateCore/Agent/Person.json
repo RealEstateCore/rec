@@ -1,0 +1,50 @@
+{
+  "@id": "dtmi:org:w3id:rec:Person;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "familyName",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "gender"
+      },
+      "name": "gender",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "givenName",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "URL link to an image that represents the person."
+      },
+      "displayName": {
+        "en": "image"
+      },
+      "name": "image",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A natural person (i.e., an individual human being)."
+  },
+  "displayName": {
+    "en": "Person"
+  },
+  "extends": "dtmi:org:w3id:rec:Agent;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

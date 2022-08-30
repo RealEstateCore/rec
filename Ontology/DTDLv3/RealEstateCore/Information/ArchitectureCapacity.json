@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:org:w3id:rec:ArchitectureCapacity;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "E.g., per Building Code"
+      },
+      "displayName": {
+        "en": "maximum occupancy"
+      },
+      "name": "maxOccupancy",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "seating capacity"
+      },
+      "name": "seatingCapacity",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Describes business-relevant capacity measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."
+  },
+  "displayName": {
+    "en": "Architecture capacity"
+  },
+  "extends": "dtmi:org:w3id:rec:Information;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

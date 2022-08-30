@@ -1,5 +1,30 @@
 # RealEstateCore Release Notes
 
+## v4.0 Public Preview -- Brick Schema integration, native DTDL
+
+REC4 is a major rewrite touching many aspects of our definitions, toolchains, formats, etc. This is a preview version for which we are now requesting comments and feedback. General availability of REC4 will be later in the fall 2022.
+
+### RealEstateCore 4 New Features
+
+* We now release RealEstateCore as both SHACL (RDF Shapes Constraint Language) and DTDL (Digital Twin Definition Language) models. 
+* We've collaborated with the Brick Schema project to incorporate brick:Point and brick:Equipment, replacing previous REC-specific Capability and Equipment types.
+* For better compliance with Brick Schema, we are moving to using the BSD license.
+* We include generated documentation for all types directly in the GitHub repo and download.
+* There is a new developer site at [https://dev.realestatecore.io](https://dev.realestatecore.io)
+
+### Deprecated features
+
+* The OWL version of REC is deprecated.
+
+### Known issues
+
+The public preview release of REC4 has some known issues that will be addressed by the general availability release of REC4 later this fall. 
+
+* REC4 contains some files whose paths are long enough to cause issues on Windows. If you are using Windows, we recommend checking REC4 out as high up in your folder hierarchy as possible, to avoid this issue (e.g., C:\REC\). We are working on a mitigation strategy involving shortening some longer names.
+* The preview version of the REC4 REST API is not JSON-LD compliant. We are working to reconcile a conceptual difference between DTDL and SHACL models, specifically on global or local field declarations, which affect how field names and contexts are generated in the API.
+* The edge message schema has not yet been updated for REC4. A REC4-compliant edge message schema will be shipped with the GA release.
+
+
 ## V3.3 -- Assets, Spatial Model, Capability Model, QUDT
 
 Version 3.3 is a major feature release that contains a wealth of new features, some of which are:

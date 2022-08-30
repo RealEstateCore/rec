@@ -1,0 +1,71 @@
+{
+  "@id": "dtmi:org:w3id:rec:PostalAddress;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "address line 1"
+      },
+      "name": "addressLine1",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "address line 2"
+      },
+      "name": "addressLine2",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "city"
+      },
+      "name": "city",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The country, e.g., USA, Sweden, Argentina, or optionally a two-letter ISO 3166-1 alpha-2 country code, e.g., \"SE\", \"US\", etc."
+      },
+      "displayName": {
+        "en": "country"
+      },
+      "name": "country",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "postal code"
+      },
+      "name": "postalCode",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "region"
+      },
+      "name": "region",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Postal address"
+  },
+  "extends": "dtmi:org:w3id:rec:Information;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

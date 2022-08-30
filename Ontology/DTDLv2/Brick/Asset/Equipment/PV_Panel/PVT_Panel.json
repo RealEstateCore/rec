@@ -1,0 +1,40 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:PVT_Panel;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "PVT Panel"
+  },
+  "extends": [
+    "dtmi:org:brickschema:schema:Brick:Solar_Thermal_Collector;1",
+    "dtmi:org:brickschema:schema:Brick:PV_Panel;1"
+  ],
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

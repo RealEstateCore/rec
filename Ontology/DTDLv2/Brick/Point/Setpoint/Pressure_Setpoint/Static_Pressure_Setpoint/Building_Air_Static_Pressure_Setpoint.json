@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Building_Air_Static_Pressure_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Building Air Static Pressure Setpoint"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Static_Pressure_Setpoint;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

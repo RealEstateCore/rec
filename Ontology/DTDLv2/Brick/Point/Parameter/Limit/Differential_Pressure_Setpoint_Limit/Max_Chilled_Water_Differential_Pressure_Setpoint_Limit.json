@@ -1,0 +1,40 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Max_Chilled_Water_Differential_Pressure_Setpoint_Limit;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Max Chilled Water Differential Pressure Setpoint Limit"
+  },
+  "extends": [
+    "dtmi:org:brickschema:schema:Brick:Max_Limit;1",
+    "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Setpoint_Limit;1"
+  ],
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Heat_Sink_Temperature_Sensor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Temperature",
+        "Sensor",
+        "Point",
+        "Heat_Sink"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Heat Sink Temperature Sensor"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Temperature_Sensor;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}
