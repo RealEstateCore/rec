@@ -1,0 +1,39 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Coil;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Water",
+        "Equipment",
+        "Cool",
+        "Coil",
+        "Chilled"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Chilled Water Coil"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Cooling_Coil;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

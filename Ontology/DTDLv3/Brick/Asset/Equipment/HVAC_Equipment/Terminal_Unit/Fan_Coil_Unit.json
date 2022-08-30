@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Fan_Coil_Unit;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Unit",
+        "Fan",
+        "Equipment",
+        "Coil"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Fan Coil Unit"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Terminal_Unit;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

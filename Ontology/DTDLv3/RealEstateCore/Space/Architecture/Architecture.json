@@ -1,0 +1,292 @@
+{
+  "@id": "dtmi:org:w3id:rec:Architecture;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "area"
+      },
+      "name": "area",
+      "schema": "dtmi:org:w3id:rec:ArchitectureArea;1"
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "capacity"
+      },
+      "name": "capacity",
+      "schema": "dtmi:org:w3id:rec:ArchitectureCapacity;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Physical address of the architecture (site, building, sub-building, entrance room, etc.) in question."
+      },
+      "displayName": {
+        "en": "address"
+      },
+      "name": "address",
+      "target": "dtmi:org:w3id:rec:PostalAddress;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "adjacent element"
+      },
+      "name": "adjacentElement",
+      "target": "dtmi:org:w3id:rec:BuildingElement;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "architected by"
+      },
+      "name": "architectedBy",
+      "target": "dtmi:org:w3id:rec:Agent;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "name": "constructedBy",
+      "target": "dtmi:org:w3id:rec:Agent;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Links an Architecture to BuildingElement that is contained in the Space."
+      },
+      "displayName": {
+        "en": "contains element"
+      },
+      "name": "containsElement",
+      "target": "dtmi:org:w3id:rec:BuildingElement;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "documentation"
+      },
+      "name": "documentation",
+      "target": "dtmi:org:w3id:rec:Document;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has point"
+      },
+      "name": "hasPoint",
+      "target": "dtmi:org:brickschema:schema:Brick:Point;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "intersecting element"
+      },
+      "name": "intersectingElement",
+      "target": "dtmi:org:w3id:rec:BuildingElement;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "is fed by"
+      },
+      "name": "isFedBy",
+      "properties": {
+        "@type": "Property",
+        "displayName": {
+          "en": "substance"
+        },
+        "name": "substance",
+        "schema": {
+          "@type": "Enum",
+          "enumValues": [
+            {
+              "enumValue": "ACElec",
+              "name": "ACElec"
+            },
+            {
+              "enumValue": "Air",
+              "name": "Air"
+            },
+            {
+              "enumValue": "BlowdownWater",
+              "name": "BlowdownWater"
+            },
+            {
+              "enumValue": "ChilledWater",
+              "name": "ChilledWater"
+            },
+            {
+              "enumValue": "ColdDomesticWater",
+              "name": "ColdDomesticWater"
+            },
+            {
+              "enumValue": "Condensate",
+              "name": "Condensate"
+            },
+            {
+              "enumValue": "CondenserWater",
+              "name": "CondenserWater"
+            },
+            {
+              "enumValue": "DCElec",
+              "name": "DCElec"
+            },
+            {
+              "enumValue": "Diesel",
+              "name": "Diesel"
+            },
+            {
+              "enumValue": "DriveElec",
+              "name": "DriveElec"
+            },
+            {
+              "enumValue": "Ethernet",
+              "name": "Ethernet"
+            },
+            {
+              "enumValue": "ExhaustAir",
+              "name": "ExhaustAir"
+            },
+            {
+              "enumValue": "Freight",
+              "name": "Freight"
+            },
+            {
+              "enumValue": "FuelOil",
+              "name": "FuelOil"
+            },
+            {
+              "enumValue": "Gasoline",
+              "name": "Gasoline"
+            },
+            {
+              "enumValue": "GreaseExhaustAir",
+              "name": "GreaseExhaustAir"
+            },
+            {
+              "enumValue": "HotDomesticWater",
+              "name": "HotDomesticWater"
+            },
+            {
+              "enumValue": "HotWater",
+              "name": "HotWater"
+            },
+            {
+              "enumValue": "IrrigationWater",
+              "name": "IrrigationWater"
+            },
+            {
+              "enumValue": "Light",
+              "name": "Light"
+            },
+            {
+              "enumValue": "MakeupWater",
+              "name": "MakeupWater"
+            },
+            {
+              "enumValue": "NaturalGas",
+              "name": "NaturalGas"
+            },
+            {
+              "enumValue": "NonPotableDomesticWater",
+              "name": "NonPotableDomesticWater"
+            },
+            {
+              "enumValue": "OutsideAir",
+              "name": "OutsideAir"
+            },
+            {
+              "enumValue": "People",
+              "name": "People"
+            },
+            {
+              "enumValue": "Propane",
+              "name": "Propane"
+            },
+            {
+              "enumValue": "RecircHotDomesticWater",
+              "name": "RecircHotDomesticWater"
+            },
+            {
+              "enumValue": "Refrig",
+              "name": "Refrig"
+            },
+            {
+              "enumValue": "ReturnAir",
+              "name": "ReturnAir"
+            },
+            {
+              "enumValue": "SprinklerWater",
+              "name": "SprinklerWater"
+            },
+            {
+              "enumValue": "Steam",
+              "name": "Steam"
+            },
+            {
+              "enumValue": "StormDrainage",
+              "name": "StormDrainage"
+            },
+            {
+              "enumValue": "SupplyAir",
+              "name": "SupplyAir"
+            },
+            {
+              "enumValue": "TransferAir",
+              "name": "TransferAir"
+            },
+            {
+              "enumValue": "WasteVentDrainage",
+              "name": "WasteVentDrainage"
+            },
+            {
+              "enumValue": "Water",
+              "name": "Water"
+            }
+          ],
+          "valueSchema": "string"
+        },
+        "writable": true
+      },
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "operated by"
+      },
+      "name": "operatedBy",
+      "target": "dtmi:org:w3id:rec:Agent;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "owned by"
+      },
+      "name": "ownedBy",
+      "target": "dtmi:org:w3id:rec:Agent;1",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A designed/landscaped (or potentially designed/landscaped) part of the physical world that has a 3D spatial extent. E.g., a building site, a building, levels within the building, rooms, etc."
+  },
+  "displayName": {
+    "en": "Architecture"
+  },
+  "extends": "dtmi:org:w3id:rec:Space;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

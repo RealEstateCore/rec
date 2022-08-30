@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_System;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Domestic Hot Water System"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:System;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Reset_Differential_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Supply Air Temperature Reset Differential Setpoint"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Temperature_Differential_Reset_Setpoint;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

@@ -1,0 +1,512 @@
+# baseURI: https://w3id.org/rec/brickpatches
+# imports: https://brickschema.org/schema/1.3/Brick
+# imports: https://w3id.org/rec
+
+@prefix : <https://w3id.org/rec/brickpatches#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <https://w3id.org/rec#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+brick:Ablutions_Room
+  owl:deprecated true ;
+.
+brick:Atrium
+  owl:deprecated true ;
+.
+brick:Auditorium
+  owl:deprecated true ;
+.
+brick:Basement
+  owl:deprecated true ;
+.
+brick:Battery_Room
+  owl:deprecated true ;
+.
+brick:Bench_Space
+  owl:deprecated true ;
+.
+brick:Break_Room
+  owl:deprecated true ;
+.
+brick:Breakroom
+  owl:deprecated true ;
+.
+brick:Broadcast_Room
+  owl:deprecated true ;
+.
+brick:Building
+  owl:deprecated true ;
+.
+brick:Cafeteria
+  owl:deprecated true ;
+.
+brick:Cold_Box
+  owl:deprecated true ;
+.
+brick:Collection
+  owl:deprecated true ;
+.
+brick:Common_Space
+  owl:deprecated true ;
+.
+brick:Concession
+  owl:deprecated true ;
+.
+brick:Conference_Room
+  owl:deprecated true ;
+.
+brick:Control_Room
+  owl:deprecated true ;
+.
+brick:Copy_Room
+  owl:deprecated true ;
+.
+brick:Cubicle
+  owl:deprecated true ;
+.
+brick:Detention_Room
+  owl:deprecated true ;
+.
+brick:Differential_Temperature_Setpoint
+  a sh:NodeShape ;
+.
+brick:Distribution_Frame
+  owl:deprecated true ;
+.
+brick:Electrical_Room
+  owl:deprecated true ;
+.
+brick:Elevator_Shaft
+  owl:deprecated true ;
+.
+brick:Elevator_Space
+  owl:deprecated true ;
+.
+brick:Employee_Entrance_Lobby
+  owl:deprecated true ;
+.
+brick:Enclosed_Office
+  owl:deprecated true ;
+.
+brick:Energy_Zone
+  owl:deprecated true ;
+.
+brick:Entrance
+  owl:deprecated true ;
+.
+brick:Environment_Box
+  owl:deprecated true ;
+.
+brick:Equipment
+  rdfs:subClassOf rec:Asset ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path brick:feeds ;
+      sh:name "feeds" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path brick:isFedBy ;
+      sh:name "is fed by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+brick:Equipment_Room
+  owl:deprecated true ;
+.
+brick:Exercise_Room
+  owl:deprecated true ;
+.
+brick:Field_Of_Play
+  owl:deprecated true ;
+.
+brick:Fire_Zone
+  owl:deprecated true ;
+.
+brick:First_Aid_Room
+  owl:deprecated true ;
+.
+brick:Floor
+  owl:deprecated true ;
+.
+brick:Food_Service_Room
+  owl:deprecated true ;
+.
+brick:Freezer
+  owl:deprecated true ;
+.
+brick:Furniture
+  owl:deprecated true ;
+.
+brick:Gatehouse
+  owl:deprecated true ;
+.
+brick:Generator_Room
+  owl:deprecated true ;
+.
+brick:HVAC_Zone
+  owl:deprecated true ;
+.
+brick:Hallway
+  owl:deprecated true ;
+.
+brick:Hazardous_Materials_Storage
+  owl:deprecated true ;
+.
+brick:Hospitality_Box
+  owl:deprecated true ;
+.
+brick:Hot_Box
+  owl:deprecated true ;
+.
+brick:IDF
+  owl:deprecated true ;
+.
+brick:Information_Area
+  owl:deprecated true ;
+.
+brick:Janitor_Room
+  owl:deprecated true ;
+.
+brick:Laboratory
+  owl:deprecated true ;
+.
+brick:Library
+  owl:deprecated true ;
+.
+brick:Lighting
+  a sh:NodeShape ;
+.
+brick:Lighting_Zone
+  owl:deprecated true ;
+.
+brick:Loading_Dock
+  owl:deprecated true ;
+.
+brick:Lobby
+  owl:deprecated true ;
+.
+brick:Location
+  owl:deprecated true ;
+.
+brick:Loop
+  rdfs:subClassOf rec:Collection ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:includes ;
+      sh:class brick:Equipment ;
+      sh:minCount 1 ;
+      sh:name "includes" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+brick:Lounge
+  owl:deprecated true ;
+.
+brick:MDF
+  owl:deprecated true ;
+.
+brick:Mail_Room
+  owl:deprecated true ;
+.
+brick:Majlis
+  owl:deprecated true ;
+.
+brick:Massage_Room
+  owl:deprecated true ;
+.
+brick:Mechanical_Room
+  owl:deprecated true ;
+.
+brick:Media_Hot_Desk
+  owl:deprecated true ;
+.
+brick:Media_Production_Room
+  owl:deprecated true ;
+.
+brick:Media_Room
+  owl:deprecated true ;
+.
+brick:Medical_Room
+  owl:deprecated true ;
+.
+brick:Office
+  owl:deprecated true ;
+.
+brick:Office_Kitchen
+  owl:deprecated true ;
+.
+brick:Open_Office
+  owl:deprecated true ;
+.
+brick:Outdoor_Area
+  owl:deprecated true ;
+.
+brick:Outside
+  owl:deprecated true ;
+.
+brick:PV_Array
+  rdfs:subClassOf rec:Collection ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:includes ;
+      sh:class brick:PV_Panel ;
+      sh:minCount 1 ;
+      sh:name "includes" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+brick:Parking_Level
+  owl:deprecated true ;
+.
+brick:Parking_Space
+  owl:deprecated true ;
+.
+brick:Parking_Structure
+  owl:deprecated true ;
+.
+brick:Photovoltaic_Array
+  owl:deprecated true ;
+.
+brick:Plumbing_Room
+  owl:deprecated true ;
+.
+brick:Point
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path brick:hasQuantity ;
+      sh:class brick:Quantity ;
+      sh:name "has quantity" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path brick:hasSubstance ;
+      sh:class brick:Substance ;
+      sh:name "has substance" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+brick:Portfolio
+  owl:deprecated true ;
+.
+brick:Prayer_Room
+  owl:deprecated true ;
+.
+brick:Private_Office
+  owl:deprecated true ;
+.
+brick:Pump_Room
+  owl:deprecated true ;
+.
+brick:Reception
+  owl:deprecated true ;
+.
+brick:Region
+  owl:deprecated true ;
+.
+brick:Rest_Room
+  owl:deprecated true ;
+.
+brick:Restroom
+  owl:deprecated true ;
+.
+brick:Retail_Room
+  owl:deprecated true ;
+.
+brick:Riser
+  owl:deprecated true ;
+.
+brick:Rooftop
+  owl:deprecated true ;
+.
+brick:Room
+  owl:deprecated true ;
+.
+brick:Security_Service_Room
+  owl:deprecated true ;
+.
+brick:Server_Room
+  owl:deprecated true ;
+.
+brick:Service_Room
+  owl:deprecated true ;
+.
+brick:Shared_Office
+  owl:deprecated true ;
+.
+brick:Shower
+  owl:deprecated true ;
+.
+brick:Site
+  owl:deprecated true ;
+.
+brick:Space
+  owl:deprecated true ;
+.
+brick:Sports_Service_Room
+  owl:deprecated true ;
+.
+brick:Stage_Riser
+  owl:deprecated true ;
+.
+brick:Staircase
+  owl:deprecated true ;
+.
+brick:Storage_Room
+  owl:deprecated true ;
+.
+brick:Storey
+  owl:deprecated true ;
+.
+brick:Studio
+  owl:deprecated true ;
+.
+brick:Switch_Room
+  owl:deprecated true ;
+.
+brick:System
+  rdfs:subClassOf rec:Collection ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:includes ;
+      sh:class brick:Equipment ;
+      sh:minCount 1 ;
+      sh:name "includes" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+brick:TETRA_Room
+  owl:deprecated true ;
+.
+brick:Team_Room
+  owl:deprecated true ;
+.
+brick:Telecom_Room
+  owl:deprecated true ;
+.
+brick:Ticketing_Booth
+  owl:deprecated true ;
+.
+brick:Transformer_Room
+  owl:deprecated true ;
+.
+brick:Tunnel
+  owl:deprecated true ;
+.
+brick:Vertical_Space
+  owl:deprecated true ;
+.
+brick:Visitor_Lobby
+  owl:deprecated true ;
+.
+brick:Wardrobe
+  owl:deprecated true ;
+.
+brick:Waste_Storage
+  owl:deprecated true ;
+.
+brick:Water_Tank
+  owl:deprecated true ;
+.
+brick:Wing
+  owl:deprecated true ;
+.
+brick:Workshop
+  owl:deprecated true ;
+.
+brick:Zone
+  owl:deprecated true ;
+.
+brick:feeds
+  owl:equivalentProperty rec:feeds ;
+.
+brick:hasLocation
+  owl:equivalentProperty rec:locatedIn ;
+.
+brick:hasPart
+  owl:deprecated true ;
+  owl:equivalentProperty rec:hasPart ;
+.
+brick:hasPoint
+  owl:equivalentProperty rec:hasPoint ;
+.
+brick:isFedBy
+  owl:equivalentProperty rec:isFedBy ;
+.
+brick:isPartOf
+  owl:equivalentProperty rec:isPartOf ;
+.
+<https://brickschema.org/schema/BrickShape#ValueShape>
+  a sh:NodeShape ;
+.
+rec:Asset
+  a sh:NodeShape ;
+.
+rec:AssetCollection
+  a sh:NodeShape ;
+.
+rec:Collection
+  a sh:NodeShape ;
+.
+rec:EquipmentCollection
+  a sh:NodeShape ;
+.
+rec:substance
+  a owl:AnnotationProperty ;
+  rdfs:domain brick:feeds ;
+  rdfs:domain brick:isFedBy ;
+  rdfs:label "substance" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "ACElec"
+          "Air"
+          "BlowdownWater"
+          "ChilledWater"
+          "ColdDomesticWater"
+          "Condensate"
+          "CondenserWater"
+          "DCElec"
+          "Diesel"
+          "DriveElec"
+          "Ethernet"
+          "ExhaustAir"
+          "Freight"
+          "FuelOil"
+          "Gasoline"
+          "GreaseExhaustAir"
+          "HotDomesticWater"
+          "HotWater"
+          "IrrigationWater"
+          "Light"
+          "MakeupWater"
+          "NaturalGas"
+          "NonPotableDomesticWater"
+          "OutsideAir"
+          "People"
+          "Propane"
+          "RecircHotDomesticWater"
+          "Refrig"
+          "ReturnAir"
+          "SprinklerWater"
+          "Steam"
+          "StormDrainage"
+          "SupplyAir"
+          "TransferAir"
+          "WasteVentDrainage"
+          "Water"
+        ) ;
+    ] ;
+.
+<https://w3id.org/rec/brickpatches>
+  a owl:Ontology ;
+  owl:imports <https://brickschema.org/schema/1.3/Brick> ;
+  owl:imports <https://w3id.org/rec> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.

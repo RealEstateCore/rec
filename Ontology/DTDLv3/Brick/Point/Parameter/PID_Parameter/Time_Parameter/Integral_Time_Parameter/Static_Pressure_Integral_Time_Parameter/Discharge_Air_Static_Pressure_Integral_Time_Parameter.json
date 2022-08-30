@@ -1,0 +1,43 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Static_Pressure_Integral_Time_Parameter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Time",
+        "Static",
+        "Pressure",
+        "Point",
+        "Parameter",
+        "PID",
+        "Integral",
+        "Discharge",
+        "Air"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Discharge Air Static Pressure Integral Time Parameter"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Static_Pressure_Integral_Time_Parameter;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

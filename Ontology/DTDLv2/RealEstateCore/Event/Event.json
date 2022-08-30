@@ -1,0 +1,95 @@
+{
+  "@id": "dtmi:org:w3id:rec:Event;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Custom Tags"
+      },
+      "name": "customTags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Event ending timestamp."
+      },
+      "displayName": {
+        "en": "end"
+      },
+      "name": "end",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Event start timestamp."
+      },
+      "displayName": {
+        "en": "start"
+      },
+      "name": "start",
+      "schema": "dateTime",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "timestamp"
+      },
+      "name": "timestamp",
+      "schema": "dateTime",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A temporally indexed entity, e.g., an observation, a lease, a construction project, etc. Can be instantaneous (timestamp property assigned) or have temporal extent (start and end properties assigned). Subclasses may define specific behaviour and requirements, e.g., on spatial indexing, agent participation, etc."
+  },
+  "displayName": {
+    "en": "Event"
+  },
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

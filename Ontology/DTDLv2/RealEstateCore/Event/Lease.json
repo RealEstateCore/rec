@@ -1,0 +1,60 @@
+{
+  "@id": "dtmi:org:w3id:rec:Lease;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The object (e.g., property, equipment, etc) that this a lease of."
+      },
+      "displayName": {
+        "en": "lease of"
+      },
+      "name": "leaseOf",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The agent leasing some leasable object, i.e., the user of the asset."
+      },
+      "displayName": {
+        "en": "leasee"
+      },
+      "name": "leasee",
+      "target": "dtmi:org:w3id:rec:Agent;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The agent leasing out some leasable object, i.e., the owner of the asset."
+      },
+      "displayName": {
+        "en": "leasor"
+      },
+      "name": "leasor",
+      "target": "dtmi:org:w3id:rec:Agent;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates the contract regulating the terms of the lease in question. "
+      },
+      "displayName": {
+        "en": "regulated by"
+      },
+      "name": "regulatedBy",
+      "target": "dtmi:org:w3id:rec:LeaseContract;1",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Lease"
+  },
+  "extends": "dtmi:org:w3id:rec:Event;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

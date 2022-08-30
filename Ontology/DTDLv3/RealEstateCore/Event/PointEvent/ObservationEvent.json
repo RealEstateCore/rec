@@ -1,0 +1,27 @@
+{
+  "@id": "dtmi:org:w3id:rec:ObservationEvent;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "The brick:Point that emitted this observation."
+      },
+      "displayName": {
+        "en": "source point"
+      },
+      "maxMultiplicity": 1,
+      "name": "sourcePoint",
+      "target": "dtmi:org:brickschema:schema:Brick:Point;1",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Observation event"
+  },
+  "extends": "dtmi:org:w3id:rec:PointEvent;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}
