@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Collection](../Collection.md) > [System](System.md) > [HVAC_System](#)
+[Index](../../index.md) > [Collection](../Collection.md) > [System](System.md) > [HVAC_System](#)
 # HVAC_System
 
 **Display name:** HVAC System<br />

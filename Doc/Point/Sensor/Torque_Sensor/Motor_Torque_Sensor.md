@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Torque_Sensor](Torque_Sensor.md) > [Motor_Torque_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Torque_Sensor](Torque_Sensor.md) > [Motor_Torque_Sensor](#)
 # Motor_Torque_Sensor
 
 **Display name:** Motor Torque Sensor<br />

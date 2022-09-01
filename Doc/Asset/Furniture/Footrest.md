@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Asset](../Asset.md) > [Furniture](Furniture.md) > [Footrest](#)
+[Index](../../index.md) > [Asset](../Asset.md) > [Furniture](Furniture.md) > [Footrest](#)
 # Footrest
 
 **Display name:** Footrest<br />

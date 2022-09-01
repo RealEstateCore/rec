@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Water_Heater](Water_Heater.md) > [Collection_Basin_Water_Heater](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Water_Heater](Water_Heater.md) > [Collection_Basin_Water_Heater](#)
 # Collection_Basin_Water_Heater
 
 **Display name:** Collection Basin Water Heater<br />

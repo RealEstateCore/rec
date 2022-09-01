@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Voltage_Alarm](Voltage_Alarm.md) > [Low_Voltage_Alarm](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Voltage_Alarm](Voltage_Alarm.md) > [Low_Voltage_Alarm](#)
 # Low_Voltage_Alarm
 
 **Display name:** Low Voltage Alarm<br />

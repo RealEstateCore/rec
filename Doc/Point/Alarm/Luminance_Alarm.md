@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Luminance_Alarm](#)
+[Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Luminance_Alarm](#)
 # Luminance_Alarm
 
 **Display name:** Luminance Alarm<br />

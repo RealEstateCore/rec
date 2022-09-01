@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Bypass_Air_Humidity_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Bypass_Air_Humidity_Setpoint](#)
 # Bypass_Air_Humidity_Setpoint
 
 **Display name:** Bypass Air Humidity Setpoint<br />

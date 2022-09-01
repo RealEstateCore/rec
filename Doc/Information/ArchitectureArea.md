@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Information](Information.md) > [ArchitectureArea](#)
+[Index](../index.md) > [Information](Information.md) > [ArchitectureArea](#)
 # ArchitectureArea
 
 Describes business-relevant area measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged.

@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Current_Ratio_Setpoint](#)
+[Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Current_Ratio_Setpoint](#)
 # Current_Ratio_Setpoint
 
 **Display name:** Current Ratio Setpoint<br />

@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Status](Status.md) > [Stages_Status](#)
+[Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Stages_Status](#)
 # Stages_Status
 
 **Display name:** Stages Status<br />

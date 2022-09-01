@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Maintenance_Required_Alarm](#)
+[Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Maintenance_Required_Alarm](#)
 # Maintenance_Required_Alarm
 
 **Display name:** Maintenance Required Alarm<br />

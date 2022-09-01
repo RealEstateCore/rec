@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Gas_Sensor](#)
+[Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Gas_Sensor](#)
 # Gas_Sensor
 
 **Display name:** Gas Sensor<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Valve_Command](Valve_Command.md) > [Valve_Position_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Valve_Command](Valve_Command.md) > [Valve_Position_Command](#)
 # Valve_Position_Command
 
 **Display name:** Valve Position Command<br />

@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Collection](Collection.md) > [Campus](#)
+[Index](../index.md) > [Collection](Collection.md) > [Campus](#)
 # Campus
 
 A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc.

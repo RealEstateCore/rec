@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Enable_Command](Enable_Command.md) > [Enable_Differential_Enthalpy_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Enable_Command](Enable_Command.md) > [Enable_Differential_Enthalpy_Command](#)
 # Enable_Differential_Enthalpy_Command
 
 **Display name:** Enable Differential Enthalpy Command<br />

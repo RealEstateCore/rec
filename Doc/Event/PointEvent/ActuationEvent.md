@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Event](../Event.md) > [PointEvent](PointEvent.md) > [ActuationEvent](#)
+[Index](../../index.md) > [Event](../Event.md) > [PointEvent](PointEvent.md) > [ActuationEvent](#)
 # ActuationEvent
 
 **Display name:** Actuation event<br />

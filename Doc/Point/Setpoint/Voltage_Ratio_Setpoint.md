@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Voltage_Ratio_Setpoint](#)
+[Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Voltage_Ratio_Setpoint](#)
 # Voltage_Ratio_Setpoint
 
 **Display name:** Voltage Ratio Setpoint<br />

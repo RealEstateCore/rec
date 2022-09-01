@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Status](Status.md) > [Emergency_Generator_Status](#)
+[Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Emergency_Generator_Status](#)
 # Emergency_Generator_Status
 
 **Display name:** Emergency Generator Status<br />

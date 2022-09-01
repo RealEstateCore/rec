@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Occupancy_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Occupancy_Sensor](#)
 # Occupancy_Sensor
 
 **Display name:** Occupancy Sensor<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [On_Off_Command](On_Off_Command.md) > [Lead_On_Off_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [On_Off_Command](On_Off_Command.md) > [Lead_On_Off_Command](#)
 # Lead_On_Off_Command
 
 **Display name:** Lead On Off Command<br />

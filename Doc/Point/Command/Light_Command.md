@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Command](Command.md) > [Light_Command](#)
+[Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Light_Command](#)
 # Light_Command
 
 **Display name:** Light Command<br />

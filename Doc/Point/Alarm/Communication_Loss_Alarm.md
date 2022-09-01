@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Communication_Loss_Alarm](#)
+[Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Communication_Loss_Alarm](#)
 # Communication_Loss_Alarm
 
 **Display name:** Communication Loss Alarm<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Table](Table.md) > [ReceptionTable](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Table](Table.md) > [ReceptionTable](#)
 # ReceptionTable
 
 **Display name:** Reception table<br />

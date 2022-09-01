@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Pressure_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Pressure_Sensor](#)
 # Pressure_Sensor
 
 **Display name:** Pressure Sensor<br />

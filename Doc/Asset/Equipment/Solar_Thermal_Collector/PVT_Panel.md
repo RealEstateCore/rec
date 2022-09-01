@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Solar_Thermal_Collector](Solar_Thermal_Collector.md) > [PVT_Panel](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Solar_Thermal_Collector](Solar_Thermal_Collector.md) > [PVT_Panel](#)
 # PVT_Panel
 
 **Display name:** PVT Panel<br />

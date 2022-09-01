@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Lamp](Lamp.md) > [DeskLamp](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Lamp](Lamp.md) > [DeskLamp](#)
 # DeskLamp
 
 **Display name:** Desk lamp<br />

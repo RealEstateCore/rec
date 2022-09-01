@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [Load_Shed_Status](../Load_Shed_Status.md) > [Leaving_Hot_Water_Temperature_Load_Shed_Status](Leaving_Hot_Water_Temperature_Load_Shed_Status.md) > [Leaving_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Status](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [Load_Shed_Status](../Load_Shed_Status.md) > [Leaving_Hot_Water_Temperature_Load_Shed_Status](Leaving_Hot_Water_Temperature_Load_Shed_Status.md) > [Leaving_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Status](#)
 # Leaving_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Status
 
 **Display name:** Leaving Medium Temperature Hot Water Temperature Load Shed Statu<br />

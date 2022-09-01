@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Direction_Sensor](Direction_Sensor.md) > [Wind_Direction_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Direction_Sensor](Direction_Sensor.md) > [Wind_Direction_Sensor](#)
 # Wind_Direction_Sensor
 
 **Display name:** Wind Direction Sensor<br />

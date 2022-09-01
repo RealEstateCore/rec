@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Space](../../../Space.md) > [Architecture](../../Architecture.md) > [Room](../Room.md) > [Shelter](Shelter.md) > [ShelterGasLock](#)
+[Index](../../../../index.md) > [Space](../../../Space.md) > [Architecture](../../Architecture.md) > [Room](../Room.md) > [Shelter](Shelter.md) > [ShelterGasLock](#)
 # ShelterGasLock
 
 **Display name:** Shelter gas lock<br />

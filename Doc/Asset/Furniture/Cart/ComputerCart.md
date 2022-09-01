@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Cart](Cart.md) > [ComputerCart](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Cart](Cart.md) > [ComputerCart](#)
 # ComputerCart
 
 **Display name:** Computer cart<br />

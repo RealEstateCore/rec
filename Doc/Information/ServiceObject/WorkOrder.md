@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Information](../Information.md) > [ServiceObject](ServiceObject.md) > [WorkOrder](#)
+[Index](../../index.md) > [Information](../Information.md) > [ServiceObject](ServiceObject.md) > [WorkOrder](#)
 # WorkOrder
 
 **Display name:** Work order<br />

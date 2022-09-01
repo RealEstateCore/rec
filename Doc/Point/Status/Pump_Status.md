@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Status](Status.md) > [Pump_Status](#)
+[Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Pump_Status](#)
 # Pump_Status
 
 **Display name:** Pump Status<br />

@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Information](Information.md) > [PostalAddress](#)
+[Index](../index.md) > [Information](Information.md) > [PostalAddress](#)
 # PostalAddress
 
 **Display name:** Postal address<br />

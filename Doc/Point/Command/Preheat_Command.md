@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Command](Command.md) > [Preheat_Command](#)
+[Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Preheat_Command](#)
 # Preheat_Command
 
 **Display name:** Preheat Command<br />

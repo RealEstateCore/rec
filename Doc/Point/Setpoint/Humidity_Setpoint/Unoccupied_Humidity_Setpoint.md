@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Unoccupied_Humidity_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Unoccupied_Humidity_Setpoint](#)
 # Unoccupied_Humidity_Setpoint
 
 **Display name:** Unoccupied Humidity Setpoint<br />

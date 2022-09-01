@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Mode_Command](Mode_Command.md) > [Automatic_Mode_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Mode_Command](Mode_Command.md) > [Automatic_Mode_Command](#)
 # Automatic_Mode_Command
 
 **Display name:** Automatic Mode Command<br />

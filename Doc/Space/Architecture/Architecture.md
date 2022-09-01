@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Space](../Space.md) > [Architecture](#)
+[Index](../../index.md) > [Space](../Space.md) > [Architecture](#)
 # Architecture
 
 A designed/landscaped (or potentially designed/landscaped) part of the physical world that has a 3D spatial extent. E.g., a building site, a building, levels within the building, rooms, etc.

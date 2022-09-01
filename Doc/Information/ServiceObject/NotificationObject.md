@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Information](../Information.md) > [ServiceObject](ServiceObject.md) > [NotificationObject](#)
+[Index](../../index.md) > [Information](../Information.md) > [ServiceObject](ServiceObject.md) > [NotificationObject](#)
 # NotificationObject
 
 **Display name:** Notification object<br />

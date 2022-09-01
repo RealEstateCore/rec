@@ -1,4 +1,4 @@
-[Index](../../../../../Index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Water_Temperature_Sensor](../Water_Temperature_Sensor.md) > [Leaving_Hot_Water_Temperature_Sensor](Leaving_Hot_Water_Temperature_Sensor.md) > [Hot_Water_Differential_Temperature_Sensor](#)
+[Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Water_Temperature_Sensor](../Water_Temperature_Sensor.md) > [Leaving_Hot_Water_Temperature_Sensor](Leaving_Hot_Water_Temperature_Sensor.md) > [Hot_Water_Differential_Temperature_Sensor](#)
 # Hot_Water_Differential_Temperature_Sensor
 
 **Display name:** Hot Water Differential Temperature Sensor<br />

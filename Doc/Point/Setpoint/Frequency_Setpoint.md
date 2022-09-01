@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Frequency_Setpoint](#)
+[Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Frequency_Setpoint](#)
 # Frequency_Setpoint
 
 **Display name:** Frequency Setpoint<br />

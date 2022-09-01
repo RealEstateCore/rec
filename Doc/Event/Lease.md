@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Event](Event.md) > [Lease](#)
+[Index](../index.md) > [Event](Event.md) > [Lease](#)
 # Lease
 
 **Display name:** Lease<br />

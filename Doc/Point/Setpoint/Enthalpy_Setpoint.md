@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Enthalpy_Setpoint](#)
+[Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Enthalpy_Setpoint](#)
 # Enthalpy_Setpoint
 
 **Display name:** Enthalpy Setpoint<br />

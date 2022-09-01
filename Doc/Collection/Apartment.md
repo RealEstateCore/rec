@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Collection](Collection.md) > [Apartment](#)
+[Index](../index.md) > [Collection](Collection.md) > [Apartment](#)
 # Apartment
 
 **Display name:** Apartment<br />

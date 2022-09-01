@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Collection](Collection.md) > [Premises](#)
+[Index](../index.md) > [Collection](Collection.md) > [Premises](#)
 # Premises
 
 A premises is an administrative grouping of spaces that are used for some commercial or industrial purpose by a real estate holder or tenant. E.g, a suite of offices, a shop, or an industrial workshop.

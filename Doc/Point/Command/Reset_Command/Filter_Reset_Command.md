@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Reset_Command](Reset_Command.md) > [Filter_Reset_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Reset_Command](Reset_Command.md) > [Filter_Reset_Command](#)
 # Filter_Reset_Command
 
 **Display name:** Filter Reset Command<br />

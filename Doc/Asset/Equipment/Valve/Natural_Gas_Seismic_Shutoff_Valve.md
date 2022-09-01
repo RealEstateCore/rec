@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Valve](Valve.md) > [Natural_Gas_Seismic_Shutoff_Valve](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Valve](Valve.md) > [Natural_Gas_Seismic_Shutoff_Valve](#)
 # Natural_Gas_Seismic_Shutoff_Valve
 
 **Display name:** Natural Gas Seismic Shutoff Valve<br />

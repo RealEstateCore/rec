@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Relay](#)
+[Index](../../index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Relay](#)
 # Relay
 
 **Display name:** Relay<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [CO2_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [CO2_Setpoint](#)
 # CO2_Setpoint
 
 **Display name:** CO2 Setpoint<br />

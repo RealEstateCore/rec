@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Illuminance_Setpoint](#)
+[Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Illuminance_Setpoint](#)
 # Illuminance_Setpoint
 
 **Display name:** Illuminance Setpoint<br />

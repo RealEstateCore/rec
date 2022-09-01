@@ -1,4 +1,4 @@
-[Index](../../../../../Index.md) > [Point](../../../../Point.md) > [Status](../../../Status.md) > [On_Status](../../On_Status.md) > [On_Off_Status](../On_Off_Status.md) > [Start_Stop_Status](Start_Stop_Status.md) > [Cooling_Start_Stop_Status](#)
+[Index](../../../../../index.md) > [Point](../../../../Point.md) > [Status](../../../Status.md) > [On_Status](../../On_Status.md) > [On_Off_Status](../On_Off_Status.md) > [Start_Stop_Status](Start_Stop_Status.md) > [Cooling_Start_Stop_Status](#)
 # Cooling_Start_Stop_Status
 
 **Display name:** Cooling Start Stop Status<br />

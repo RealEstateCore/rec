@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Piezoelectric_Sensor](#)
+[Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Piezoelectric_Sensor](#)
 # Piezoelectric_Sensor
 
 **Display name:** Piezoelectric Sensor<br />

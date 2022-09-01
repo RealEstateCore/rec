@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Mode_Status](Mode_Status.md) > [Zone_Air_Conditioning_Mode_Status](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Mode_Status](Mode_Status.md) > [Zone_Air_Conditioning_Mode_Status](#)
 # Zone_Air_Conditioning_Mode_Status
 
 **Display name:** Zone Air Conditioning Mode Status<br />

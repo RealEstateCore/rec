@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Shading_System](Shading_System.md) > [Blind_Group](#)
+[Index](../../../index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Shading_System](Shading_System.md) > [Blind_Group](#)
 # Blind_Group
 
 **Display name:** Blind Group<br />

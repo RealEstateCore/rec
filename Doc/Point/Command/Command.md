@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Command](#)
+[Index](../../index.md) > [Point](../Point.md) > [Command](#)
 # Command
 
 **Display name:** Command<br />
