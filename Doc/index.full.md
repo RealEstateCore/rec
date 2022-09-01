@@ -1,4 +1,4 @@
-#Full Type Index
+# Full Type Index
 
 * [Agent](Agent/Agent.md)
     * [Organization](Agent/Organization/Organization.md)
