@@ -1,4 +1,4 @@
-[Index](../../../../../Index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Air_Temperature_Setpoint](../Air_Temperature_Setpoint.md) > [Effective_Air_Temperature_Setpoint](Effective_Air_Temperature_Setpoint.md) > [Effective_Discharge_Air_Temperature_Setpoint](#)
+[Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Air_Temperature_Setpoint](../Air_Temperature_Setpoint.md) > [Effective_Air_Temperature_Setpoint](Effective_Air_Temperature_Setpoint.md) > [Effective_Discharge_Air_Temperature_Setpoint](#)
 # Effective_Discharge_Air_Temperature_Setpoint
 
 **Display name:** Effective Discharge Air Temperature Setpoint<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [PV_Panel](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [PV_Panel](#)
 # PV_Panel
 
 **Display name:** PV Panel<br />

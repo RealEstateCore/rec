@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Alarm](../../Alarm.md) > [Temperature_Alarm](../Temperature_Alarm.md) > [High_Temperature_Alarm](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Alarm](../../Alarm.md) > [Temperature_Alarm](../Temperature_Alarm.md) > [High_Temperature_Alarm](#)
 # High_Temperature_Alarm
 
 **Display name:** High Temperature Alarm<br />

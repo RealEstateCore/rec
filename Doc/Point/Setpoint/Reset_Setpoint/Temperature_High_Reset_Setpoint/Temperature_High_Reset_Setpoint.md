@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Reset_Setpoint](../Reset_Setpoint.md) > [Temperature_High_Reset_Setpoint](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Reset_Setpoint](../Reset_Setpoint.md) > [Temperature_High_Reset_Setpoint](#)
 # Temperature_High_Reset_Setpoint
 
 **Display name:** Temperature High Reset Setpoint<br />

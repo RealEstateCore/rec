@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Agent](Agent.md) > [Person](#)
+[Index](../index.md) > [Agent](Agent.md) > [Person](#)
 # Person
 
 A natural person (i.e., an individual human being).

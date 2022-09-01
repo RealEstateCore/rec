@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Usage_Sensor](Usage_Sensor.md) > [Energy_Usage_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Usage_Sensor](Usage_Sensor.md) > [Energy_Usage_Sensor](#)
 # Energy_Usage_Sensor
 
 **Display name:** Energy Usage Sensor<br />

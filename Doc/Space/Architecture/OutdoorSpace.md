@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Space](../Space.md) > [Architecture](Architecture.md) > [OutdoorSpace](#)
+[Index](../../index.md) > [Space](../Space.md) > [Architecture](Architecture.md) > [OutdoorSpace](#)
 # OutdoorSpace
 
 **Display name:** Outdoor space<br />

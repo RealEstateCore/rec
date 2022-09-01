@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [ArchitecturalAsset](../ArchitecturalAsset.md) > [BarrierAsset](BarrierAsset.md) > [AccessPanel](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [ArchitecturalAsset](../ArchitecturalAsset.md) > [BarrierAsset](BarrierAsset.md) > [AccessPanel](#)
 # AccessPanel
 
 **Display name:** Access panel<br />

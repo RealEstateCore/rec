@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Demand_Sensor](../Demand_Sensor.md) > [Heating_Demand_Sensor](Heating_Demand_Sensor.md) > [Average_Heating_Demand_Sensor](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Demand_Sensor](../Demand_Sensor.md) > [Heating_Demand_Sensor](Heating_Demand_Sensor.md) > [Average_Heating_Demand_Sensor](#)
 # Average_Heating_Demand_Sensor
 
 **Display name:** Average Heating Demand Sensor<br />

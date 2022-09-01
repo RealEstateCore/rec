@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Hail_Sensor](#)
+[Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Hail_Sensor](#)
 # Hail_Sensor
 
 **Display name:** Hail Sensor<br />

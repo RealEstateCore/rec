@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Weather_Station](#)
+[Index](../../index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Weather_Station](#)
 # Weather_Station
 
 **Display name:** Weather Station<br />

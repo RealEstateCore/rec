@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fault_Status](Fault_Status.md) > [Last_Fault_Code_Status](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fault_Status](Fault_Status.md) > [Last_Fault_Code_Status](#)
 # Last_Fault_Code_Status
 
 **Display name:** Last Fault Code Status<br />

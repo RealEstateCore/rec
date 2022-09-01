@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Collection](#)
+[Index](../index.md) > [Collection](#)
 # Collection
 
 An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings). Inclusion in a Collection is determined by the 'includes' field on a specific subclass.

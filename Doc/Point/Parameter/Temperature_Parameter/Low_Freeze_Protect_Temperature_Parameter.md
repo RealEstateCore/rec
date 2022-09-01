@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Temperature_Parameter](Temperature_Parameter.md) > [Low_Freeze_Protect_Temperature_Parameter](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Temperature_Parameter](Temperature_Parameter.md) > [Low_Freeze_Protect_Temperature_Parameter](#)
 # Low_Freeze_Protect_Temperature_Parameter
 
 **Display name:** Low Freeze Protect Temperature Parameter<br />

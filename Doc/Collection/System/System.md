@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Collection](../Collection.md) > [System](#)
+[Index](../../index.md) > [Collection](../Collection.md) > [System](#)
 # System
 
 **Display name:** System<br />

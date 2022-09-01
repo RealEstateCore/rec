@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [PID_Parameter](../PID_Parameter.md) > [Gain_Parameter](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [PID_Parameter](../PID_Parameter.md) > [Gain_Parameter](#)
 # Gain_Parameter
 
 **Display name:** Gain Parameter<br />

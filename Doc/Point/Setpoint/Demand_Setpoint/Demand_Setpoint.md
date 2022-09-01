@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Demand_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Demand_Setpoint](#)
 # Demand_Setpoint
 
 **Display name:** Demand Setpoint<br />

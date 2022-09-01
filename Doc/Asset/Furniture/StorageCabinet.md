@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Asset](../Asset.md) > [Furniture](Furniture.md) > [StorageCabinet](#)
+[Index](../../index.md) > [Asset](../Asset.md) > [Furniture](Furniture.md) > [StorageCabinet](#)
 # StorageCabinet
 
 **Display name:** Storage cabinet<br />

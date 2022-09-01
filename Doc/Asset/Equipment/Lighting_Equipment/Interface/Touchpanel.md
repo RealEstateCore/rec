@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Lighting_Equipment](../Lighting_Equipment.md) > [Interface](Interface.md) > [Touchpanel](#)
+[Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Lighting_Equipment](../Lighting_Equipment.md) > [Interface](Interface.md) > [Touchpanel](#)
 # Touchpanel
 
 **Display name:** Touchpanel<br />

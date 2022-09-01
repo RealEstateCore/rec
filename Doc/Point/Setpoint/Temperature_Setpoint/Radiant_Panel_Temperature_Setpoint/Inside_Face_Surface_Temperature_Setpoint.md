@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Radiant_Panel_Temperature_Setpoint](Radiant_Panel_Temperature_Setpoint.md) > [Inside_Face_Surface_Temperature_Setpoint](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Radiant_Panel_Temperature_Setpoint](Radiant_Panel_Temperature_Setpoint.md) > [Inside_Face_Surface_Temperature_Setpoint](#)
 # Inside_Face_Surface_Temperature_Setpoint
 
 **Display name:** Inside Face Surface Temperature Setpoint<br />

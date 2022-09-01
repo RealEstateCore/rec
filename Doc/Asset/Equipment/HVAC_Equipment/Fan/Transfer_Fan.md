@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Transfer_Fan](#)
+[Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Transfer_Fan](#)
 # Transfer_Fan
 
 **Display name:** Transfer Fan<br />

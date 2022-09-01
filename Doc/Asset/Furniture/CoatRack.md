@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Asset](../Asset.md) > [Furniture](Furniture.md) > [CoatRack](#)
+[Index](../../index.md) > [Asset](../Asset.md) > [Furniture](Furniture.md) > [CoatRack](#)
 # CoatRack
 
 **Display name:** Coat rack<br />

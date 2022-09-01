@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Collection](../Collection.md) > [Loop](#)
+[Index](../../index.md) > [Collection](../Collection.md) > [Loop](#)
 # Loop
 
 **Display name:** Loop<br />

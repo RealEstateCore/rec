@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Reset_Setpoint](../Reset_Setpoint.md) > [Discharge_Air_Flow_Reset_Setpoint](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Reset_Setpoint](../Reset_Setpoint.md) > [Discharge_Air_Flow_Reset_Setpoint](#)
 # Discharge_Air_Flow_Reset_Setpoint
 
 **Display name:** Discharge Air Flow Reset Setpoint<br />

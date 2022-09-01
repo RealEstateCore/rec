@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Usage_Sensor](Usage_Sensor.md) > [Natural_Gas_Usage_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Usage_Sensor](Usage_Sensor.md) > [Natural_Gas_Usage_Sensor](#)
 # Natural_Gas_Usage_Sensor
 
 **Display name:** Natural Gas Usage Sensor<br />

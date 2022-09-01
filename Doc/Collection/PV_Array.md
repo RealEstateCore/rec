@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Collection](Collection.md) > [PV_Array](#)
+[Index](../index.md) > [Collection](Collection.md) > [PV_Array](#)
 # PV_Array
 
 **Display name:** PV Array<br />

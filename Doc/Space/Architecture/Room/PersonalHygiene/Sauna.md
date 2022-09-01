@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Space](../../../Space.md) > [Architecture](../../Architecture.md) > [Room](../Room.md) > [PersonalHygiene](PersonalHygiene.md) > [Sauna](#)
+[Index](../../../../index.md) > [Space](../../../Space.md) > [Architecture](../../Architecture.md) > [Room](../Room.md) > [PersonalHygiene](PersonalHygiene.md) > [Sauna](#)
 # Sauna
 
 **Display name:** Sauna<br />

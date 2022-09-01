@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Position_Sensor](Position_Sensor.md) > [Damper_Position_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Position_Sensor](Position_Sensor.md) > [Damper_Position_Sensor](#)
 # Damper_Position_Sensor
 
 **Display name:** Damper Position Sensor<br />

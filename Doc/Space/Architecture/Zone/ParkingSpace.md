@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Space](../../Space.md) > [Architecture](../Architecture.md) > [Zone](Zone.md) > [ParkingSpace](#)
+[Index](../../../index.md) > [Space](../../Space.md) > [Architecture](../Architecture.md) > [Zone](Zone.md) > [ParkingSpace](#)
 # ParkingSpace
 
 **Display name:** Parking space<br />

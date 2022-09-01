@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Water_Level_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Water_Level_Sensor](#)
 # Water_Level_Sensor
 
 **Display name:** Water Level Sensor<br />

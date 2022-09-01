@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Humidity_Alarm](Humidity_Alarm.md) > [High_Humidity_Alarm](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Humidity_Alarm](Humidity_Alarm.md) > [High_Humidity_Alarm](#)
 # High_Humidity_Alarm
 
 **Display name:** High Humidity Alarm<br />

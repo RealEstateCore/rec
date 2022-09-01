@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Space](../../Space.md) > [Architecture](../Architecture.md) > [Room](Room.md) > [Workshop](#)
+[Index](../../../index.md) > [Space](../../Space.md) > [Architecture](../Architecture.md) > [Room](Room.md) > [Workshop](#)
 # Workshop
 
 **Display name:** Workshop<br />

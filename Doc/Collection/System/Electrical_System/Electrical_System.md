@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Electrical_System](#)
+[Index](../../../index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Electrical_System](#)
 # Electrical_System
 
 **Display name:** Electrical System<br />

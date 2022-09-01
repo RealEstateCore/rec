@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Reset_Command](Reset_Command.md) > [Speed_Reset_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Reset_Command](Reset_Command.md) > [Speed_Reset_Command](#)
 # Speed_Reset_Command
 
 **Display name:** Speed Reset Command<br />

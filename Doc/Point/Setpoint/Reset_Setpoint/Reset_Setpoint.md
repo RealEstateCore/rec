@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Reset_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Reset_Setpoint](#)
 # Reset_Setpoint
 
 **Display name:** Reset Setpoint<br />

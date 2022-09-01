@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fault_Status](Fault_Status.md) > [Humidifier_Fault_Status](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fault_Status](Fault_Status.md) > [Humidifier_Fault_Status](#)
 # Humidifier_Fault_Status
 
 **Display name:** Humidifier Fault Status<br />

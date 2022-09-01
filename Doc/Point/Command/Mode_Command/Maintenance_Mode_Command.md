@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Mode_Command](Mode_Command.md) > [Maintenance_Mode_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Mode_Command](Mode_Command.md) > [Maintenance_Mode_Command](#)
 # Maintenance_Mode_Command
 
 **Display name:** Maintenance Mode Command<br />

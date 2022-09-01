@@ -1,4 +1,4 @@
-[Index](../Index.md) > [BuildingElement](BuildingElement.md) > [Roof](#)
+[Index](../index.md) > [BuildingElement](BuildingElement.md) > [Roof](#)
 # Roof
 
 **Display name:** Roof<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Fire_Safety_Equipment](Fire_Safety_Equipment.md) > [Fire_Control_Panel](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Fire_Safety_Equipment](Fire_Safety_Equipment.md) > [Fire_Control_Panel](#)
 # Fire_Control_Panel
 
 **Display name:** Fire Control Panel<br />

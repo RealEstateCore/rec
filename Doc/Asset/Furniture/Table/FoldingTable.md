@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Table](Table.md) > [FoldingTable](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Table](Table.md) > [FoldingTable](#)
 # FoldingTable
 
 **Display name:** Folding table<br />

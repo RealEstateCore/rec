@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Status](Status.md) > [Tint_Status](#)
+[Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Tint_Status](#)
 # Tint_Status
 
 **Display name:** Tint Status<br />

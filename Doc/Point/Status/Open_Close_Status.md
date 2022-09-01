@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Status](Status.md) > [Open_Close_Status](#)
+[Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Open_Close_Status](#)
 # Open_Close_Status
 
 **Display name:** Open Close Status<br />

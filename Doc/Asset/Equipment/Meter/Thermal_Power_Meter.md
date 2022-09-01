@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Meter](Meter.md) > [Thermal_Power_Meter](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Meter](Meter.md) > [Thermal_Power_Meter](#)
 # Thermal_Power_Meter
 
 **Display name:** Thermal Power Meter<br />

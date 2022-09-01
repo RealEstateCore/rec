@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Air_Grains_Sensor](Air_Grains_Sensor.md) > [Return_Air_Grains_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Air_Grains_Sensor](Air_Grains_Sensor.md) > [Return_Air_Grains_Sensor](#)
 # Return_Air_Grains_Sensor
 
 **Display name:** Return Air Grains Sensor<br />

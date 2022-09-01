@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Damper_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Damper_Command](#)
 # Damper_Command
 
 **Display name:** Damper Command<br />

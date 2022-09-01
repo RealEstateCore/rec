@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Meter](../Meter.md) > [Electrical_Meter](Electrical_Meter.md) > [Building_Electrical_Meter](#)
+[Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Meter](../Meter.md) > [Electrical_Meter](Electrical_Meter.md) > [Building_Electrical_Meter](#)
 # Building_Electrical_Meter
 
 **Display name:** Building Electrical Meter<br />

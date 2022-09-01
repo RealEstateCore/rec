@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Delay_Parameter](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Delay_Parameter](#)
 # Delay_Parameter
 
 **Display name:** Delay Parameter<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Load_Parameter](Load_Parameter.md) > [Min_Load_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Load_Parameter](Load_Parameter.md) > [Min_Load_Setpoint](#)
 # Min_Load_Setpoint
 
 **Display name:** Min Load Setpoint<br />

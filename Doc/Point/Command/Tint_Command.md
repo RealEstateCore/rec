@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Command](Command.md) > [Tint_Command](#)
+[Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Tint_Command](#)
 # Tint_Command
 
 **Display name:** Tint Command<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Temperature_Setpoint](Temperature_Setpoint.md) > [Schedule_Temperature_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Temperature_Setpoint](Temperature_Setpoint.md) > [Schedule_Temperature_Setpoint](#)
 # Schedule_Temperature_Setpoint
 
 **Display name:** Schedule Temperature Setpoint<br />

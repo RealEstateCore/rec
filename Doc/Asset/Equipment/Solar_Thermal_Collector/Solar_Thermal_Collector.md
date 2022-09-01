@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Solar_Thermal_Collector](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Solar_Thermal_Collector](#)
 # Solar_Thermal_Collector
 
 **Display name:** Solar Thermal Collector<br />

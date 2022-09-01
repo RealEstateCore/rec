@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Setpoint](#)
+[Index](../../index.md) > [Point](../Point.md) > [Setpoint](#)
 # Setpoint
 
 **Display name:** Setpoint<br />

@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Command](Command.md) > [Luminance_Command](#)
+[Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Luminance_Command](#)
 # Luminance_Command
 
 **Display name:** Luminance Command<br />

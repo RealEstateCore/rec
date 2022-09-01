@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Information](Information.md) > [PointOfInterest](#)
+[Index](../index.md) > [Information](Information.md) > [PointOfInterest](#)
 # PointOfInterest
 
 **Display name:** Point of Interest<br />

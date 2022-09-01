@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Leak_Alarm](Leak_Alarm.md) > [Condensate_Leak_Alarm](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Leak_Alarm](Leak_Alarm.md) > [Condensate_Leak_Alarm](#)
 # Condensate_Leak_Alarm
 
 **Display name:** Condensate Leak Alarm<br />

@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Solar_Radiance_Sensor](#)
+[Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Solar_Radiance_Sensor](#)
 # Solar_Radiance_Sensor
 
 **Display name:** Solar Radiance Sensor<br />

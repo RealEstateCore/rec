@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Power_Sensor](../Power_Sensor.md) > [Electric_Power_Sensor](Electric_Power_Sensor.md) > [Peak_Power_Demand_Sensor](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Power_Sensor](../Power_Sensor.md) > [Electric_Power_Sensor](Electric_Power_Sensor.md) > [Peak_Power_Demand_Sensor](#)
 # Peak_Power_Demand_Sensor
 
 **Display name:** Peak Power Demand Sensor<br />

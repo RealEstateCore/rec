@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Safety_System](#)
+[Index](../../../index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Safety_System](#)
 # Safety_System
 
 **Display name:** Safety System<br />

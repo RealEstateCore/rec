@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Motor](../Motor.md) > [VFD](VFD.md) > [Fan_VFD](#)
+[Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Motor](../Motor.md) > [VFD](VFD.md) > [Fan_VFD](#)
 # Fan_VFD
 
 **Display name:** Fan VFD<br />

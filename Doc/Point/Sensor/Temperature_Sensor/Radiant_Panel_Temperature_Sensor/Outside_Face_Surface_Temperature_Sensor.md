@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Temperature_Sensor](../Temperature_Sensor.md) > [Radiant_Panel_Temperature_Sensor](Radiant_Panel_Temperature_Sensor.md) > [Outside_Face_Surface_Temperature_Sensor](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Temperature_Sensor](../Temperature_Sensor.md) > [Radiant_Panel_Temperature_Sensor](Radiant_Panel_Temperature_Sensor.md) > [Outside_Face_Surface_Temperature_Sensor](#)
 # Outside_Face_Surface_Temperature_Sensor
 
 **Display name:** Outside Face Surface Temperature Sensor<br />

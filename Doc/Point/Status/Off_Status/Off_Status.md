@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Off_Status](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Off_Status](#)
 # Off_Status
 
 **Display name:** Off Status<br />

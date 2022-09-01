@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Angle_Sensor](Angle_Sensor.md) > [Solar_Azimuth_Angle_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Angle_Sensor](Angle_Sensor.md) > [Solar_Azimuth_Angle_Sensor](#)
 # Solar_Azimuth_Angle_Sensor
 
 **Display name:** Solar Azimuth Angle Sensor<br />

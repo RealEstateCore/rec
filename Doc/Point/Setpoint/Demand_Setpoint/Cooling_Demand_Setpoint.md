@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Demand_Setpoint](Demand_Setpoint.md) > [Cooling_Demand_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Demand_Setpoint](Demand_Setpoint.md) > [Cooling_Demand_Setpoint](#)
 # Cooling_Demand_Setpoint
 
 **Display name:** Cooling Demand Setpoint<br />

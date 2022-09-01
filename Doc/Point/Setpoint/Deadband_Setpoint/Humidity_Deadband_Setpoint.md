@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Deadband_Setpoint](Deadband_Setpoint.md) > [Humidity_Deadband_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Deadband_Setpoint](Deadband_Setpoint.md) > [Humidity_Deadband_Setpoint](#)
 # Humidity_Deadband_Setpoint
 
 **Display name:** Humidity Deadband Setpoint<br />

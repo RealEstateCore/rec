@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Disable_Command](Disable_Command.md) > [Disable_Differential_Temperature_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Disable_Command](Disable_Command.md) > [Disable_Differential_Temperature_Command](#)
 # Disable_Differential_Temperature_Command
 
 **Display name:** Disable Differential Temperature Command<br />

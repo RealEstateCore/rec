@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Lighting_Equipment](../Lighting_Equipment.md) > [Lighting](Lighting.md) > [Luminaire_Driver](#)
+[Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Lighting_Equipment](../Lighting_Equipment.md) > [Lighting](Lighting.md) > [Luminaire_Driver](#)
 # Luminaire_Driver
 
 **Display name:** Luminaire Driver<br />

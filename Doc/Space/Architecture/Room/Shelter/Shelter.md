@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Space](../../../Space.md) > [Architecture](../../Architecture.md) > [Room](../Room.md) > [Shelter](#)
+[Index](../../../../index.md) > [Space](../../../Space.md) > [Architecture](../../Architecture.md) > [Room](../Room.md) > [Shelter](#)
 # Shelter
 
 **Display name:** Shelter<br />

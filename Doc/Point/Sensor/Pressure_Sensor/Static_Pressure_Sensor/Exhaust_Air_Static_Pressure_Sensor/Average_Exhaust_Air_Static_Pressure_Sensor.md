@@ -1,4 +1,4 @@
-[Index](../../../../../Index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Pressure_Sensor](../../Pressure_Sensor.md) > [Static_Pressure_Sensor](../Static_Pressure_Sensor.md) > [Exhaust_Air_Static_Pressure_Sensor](Exhaust_Air_Static_Pressure_Sensor.md) > [Average_Exhaust_Air_Static_Pressure_Sensor](#)
+[Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Pressure_Sensor](../../Pressure_Sensor.md) > [Static_Pressure_Sensor](../Static_Pressure_Sensor.md) > [Exhaust_Air_Static_Pressure_Sensor](Exhaust_Air_Static_Pressure_Sensor.md) > [Average_Exhaust_Air_Static_Pressure_Sensor](#)
 # Average_Exhaust_Air_Static_Pressure_Sensor
 
 **Display name:** Average Exhaust Air Static Pressure Sensor<br />

@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Collection](../../../Collection.md) > [System](../../System.md) > [Electrical_System](../Electrical_System.md) > [Energy_System](Energy_System.md) > [Energy_Generation_System](#)
+[Index](../../../../index.md) > [Collection](../../../Collection.md) > [System](../../System.md) > [Electrical_System](../Electrical_System.md) > [Energy_System](Energy_System.md) > [Energy_Generation_System](#)
 # Energy_Generation_System
 
 **Display name:** Energy Generation System<br />

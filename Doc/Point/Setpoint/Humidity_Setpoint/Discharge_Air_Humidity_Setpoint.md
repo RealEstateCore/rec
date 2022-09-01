@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Discharge_Air_Humidity_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Discharge_Air_Humidity_Setpoint](#)
 # Discharge_Air_Humidity_Setpoint
 
 **Display name:** Discharge Air Humidity Setpoint<br />

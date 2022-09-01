@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Current_Sensor](Current_Sensor.md) > [Motor_Current_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Current_Sensor](Current_Sensor.md) > [Motor_Current_Sensor](#)
 # Motor_Current_Sensor
 
 **Display name:** Motor Current Sensor<br />

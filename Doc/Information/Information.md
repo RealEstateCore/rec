@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Information](#)
+[Index](../index.md) > [Information](#)
 # Information
 
 **Display name:** Information<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Dewpoint_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Dewpoint_Sensor](#)
 # Dewpoint_Sensor
 
 **Display name:** Dewpoint Sensor<br />

@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Command](Command.md) > [Pump_Command](#)
+[Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Pump_Command](#)
 # Pump_Command
 
 **Display name:** Pump Command<br />

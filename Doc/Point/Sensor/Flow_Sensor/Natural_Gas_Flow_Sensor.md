@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Flow_Sensor](Flow_Sensor.md) > [Natural_Gas_Flow_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Flow_Sensor](Flow_Sensor.md) > [Natural_Gas_Flow_Sensor](#)
 # Natural_Gas_Flow_Sensor
 
 **Display name:** Natural Gas Flow Sensor<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Frequency_Command](Frequency_Command.md) > [Min_Frequency_Command](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Frequency_Command](Frequency_Command.md) > [Min_Frequency_Command](#)
 # Min_Frequency_Command
 
 **Display name:** Min Frequency Command<br />

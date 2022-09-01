@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Pressure_Status](Pressure_Status.md) > [Supply_Air_Duct_Pressure_Status](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Pressure_Status](Pressure_Status.md) > [Supply_Air_Duct_Pressure_Status](#)
 # Supply_Air_Duct_Pressure_Status
 
 **Display name:** Supply Air Duct Pressure Status<br />

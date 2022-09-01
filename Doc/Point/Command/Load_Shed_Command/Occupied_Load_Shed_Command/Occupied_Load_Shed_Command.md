@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Command](../../Command.md) > [Load_Shed_Command](../Load_Shed_Command.md) > [Occupied_Load_Shed_Command](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Command](../../Command.md) > [Load_Shed_Command](../Load_Shed_Command.md) > [Occupied_Load_Shed_Command](#)
 # Occupied_Load_Shed_Command
 
 **Display name:** Occupied Load Shed Command<br />

@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [On_Status](../On_Status.md) > [On_Off_Status](On_Off_Status.md) > [Locally_On_Off_Status](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [On_Status](../On_Status.md) > [On_Off_Status](On_Off_Status.md) > [Locally_On_Off_Status](#)
 # Locally_On_Off_Status
 
 **Display name:** Locally On Off Status<br />

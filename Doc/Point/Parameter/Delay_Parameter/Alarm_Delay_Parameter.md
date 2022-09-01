@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Delay_Parameter](Delay_Parameter.md) > [Alarm_Delay_Parameter](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Delay_Parameter](Delay_Parameter.md) > [Alarm_Delay_Parameter](#)
 # Alarm_Delay_Parameter
 
 **Display name:** Alarm Delay Parameter<br />

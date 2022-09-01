@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Chair](Chair.md) > [FoldingChair](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Furniture](../Furniture.md) > [Chair](Chair.md) > [FoldingChair](#)
 # FoldingChair
 
 **Display name:** Folding chair<br />

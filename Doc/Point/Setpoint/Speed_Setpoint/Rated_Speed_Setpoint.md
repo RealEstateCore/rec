@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Speed_Setpoint](Speed_Setpoint.md) > [Rated_Speed_Setpoint](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Speed_Setpoint](Speed_Setpoint.md) > [Rated_Speed_Setpoint](#)
 # Rated_Speed_Setpoint
 
 **Display name:** Rated Speed Setpoint<br />

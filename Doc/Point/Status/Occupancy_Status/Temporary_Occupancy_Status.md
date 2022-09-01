@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Occupancy_Status](Occupancy_Status.md) > [Temporary_Occupancy_Status](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Occupancy_Status](Occupancy_Status.md) > [Temporary_Occupancy_Status](#)
 # Temporary_Occupancy_Status
 
 **Display name:** Temporary Occupancy Status<br />

@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Smoke_Alarm](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Smoke_Alarm](#)
 # Smoke_Alarm
 
 **Display name:** Smoke Alarm<br />

@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Event](../Event.md) > [PointEvent](PointEvent.md) > [ExceptionEvent](#)
+[Index](../../index.md) > [Event](../Event.md) > [PointEvent](PointEvent.md) > [ExceptionEvent](#)
 # ExceptionEvent
 
 **Display name:** Exception event<br />

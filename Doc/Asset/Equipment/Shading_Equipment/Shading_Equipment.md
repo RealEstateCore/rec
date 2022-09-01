@@ -1,4 +1,4 @@
-[Index](../../../Index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Shading_Equipment](#)
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Shading_Equipment](#)
 # Shading_Equipment
 
 **Display name:** Shading Equipment<br />

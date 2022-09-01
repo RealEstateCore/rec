@@ -1,4 +1,4 @@
-[Index](../../../../../Index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Radiant_Panel_Temperature_Setpoint](../Radiant_Panel_Temperature_Setpoint.md) > [Embedded_Temperature_Setpoint](Embedded_Temperature_Setpoint.md) > [Core_Temperature_Setpoint](#)
+[Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Radiant_Panel_Temperature_Setpoint](../Radiant_Panel_Temperature_Setpoint.md) > [Embedded_Temperature_Setpoint](Embedded_Temperature_Setpoint.md) > [Core_Temperature_Setpoint](#)
 # Core_Temperature_Setpoint
 
 **Display name:** Core Temperature Setpoint<br />

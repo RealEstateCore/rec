@@ -1,4 +1,4 @@
-[Index](../../../../Index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Current_Sensor](../Current_Sensor.md) > [Current_Output_Sensor](Current_Output_Sensor.md) > [PV_Current_Output_Sensor](#)
+[Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Current_Sensor](../Current_Sensor.md) > [Current_Output_Sensor](Current_Output_Sensor.md) > [PV_Current_Output_Sensor](#)
 # PV_Current_Output_Sensor
 
 **Display name:** PV Current Output Sensor<br />

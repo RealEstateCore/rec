@@ -1,4 +1,4 @@
-[Index](../Index.md) > [Asset](#)
+[Index](../index.md) > [Asset](#)
 # Asset
 
 Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc.

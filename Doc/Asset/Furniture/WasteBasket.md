@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Asset](../Asset.md) > [Furniture](Furniture.md) > [WasteBasket](#)
+[Index](../../index.md) > [Asset](../Asset.md) > [Furniture](Furniture.md) > [WasteBasket](#)
 # WasteBasket
 
 **Display name:** Waste basket<br />

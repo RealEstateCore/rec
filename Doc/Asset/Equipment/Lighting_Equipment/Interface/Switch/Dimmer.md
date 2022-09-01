@@ -1,4 +1,4 @@
-[Index](../../../../../Index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [Lighting_Equipment](../../Lighting_Equipment.md) > [Interface](../Interface.md) > [Switch](Switch.md) > [Dimmer](#)
+[Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [Lighting_Equipment](../../Lighting_Equipment.md) > [Interface](../Interface.md) > [Switch](Switch.md) > [Dimmer](#)
 # Dimmer
 
 **Display name:** Dimmer<br />

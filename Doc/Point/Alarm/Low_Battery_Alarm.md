@@ -1,4 +1,4 @@
-[Index](../../Index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Low_Battery_Alarm](#)
+[Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Low_Battery_Alarm](#)
 # Low_Battery_Alarm
 
 **Display name:** Low Battery Alarm<br />
