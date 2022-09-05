@@ -1527,6 +1527,21 @@ rec:RadiologyRoom
   rdfs:label "Radiology room" ;
   rdfs:subClassOf rec:HealthcareRoom ;
 .
+rec:RealEstate
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:comment "The legal/administrative representation of some lands and/or buildings. I.e., \"Fastighet\" (Swedish), \"Ejendom\" (Denmark), etc." ;
+  rdfs:label "Real Estate" ;
+  rdfs:subClassOf rec:Collection ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:includes ;
+      sh:class rec:Architecture ;
+      sh:minCount 1 ;
+      sh:name "includes" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 rec:Reception
   a rdfs:Class ;
   a sh:NodeShape ;
