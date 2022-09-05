@@ -18,6 +18,13 @@ A sub-zone within or outside of a building defined to support some technology an
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Architecture](../Architecture.md):** area, capacity
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -39,5 +46,6 @@ A sub-zone within or outside of a building defined to support some technology an
 * [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn
 * [Campus](../../../Collection/Campus.md).includes
 * [Premises](../../../Collection/Premises.md).includes
+* [RealEstate](../../../Collection/RealEstate.md).includes
 * [Space](../../Space.md).hasPart
 * [Space](../../Space.md).isPartOf

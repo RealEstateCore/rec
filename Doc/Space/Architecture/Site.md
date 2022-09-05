@@ -9,6 +9,13 @@ A piece of land upon which zero or more buildings may be situated.
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Architecture](Architecture.md):** area, capacity
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -30,5 +37,6 @@ A piece of land upon which zero or more buildings may be situated.
 * [BuildingElement](../../BuildingElement/BuildingElement.md).locatedIn
 * [Campus](../../Collection/Campus.md).includes
 * [Premises](../../Collection/Premises.md).includes
+* [RealEstate](../../Collection/RealEstate.md).includes
 * [Space](../Space.md).hasPart
 * [Space](../Space.md).isPartOf

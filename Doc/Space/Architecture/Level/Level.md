@@ -16,6 +16,13 @@ The level of a building, a.k.a. storey, floor, etc.
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Architecture](../Architecture.md):** area, capacity
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -40,5 +47,6 @@ The level of a building, a.k.a. storey, floor, etc.
 * [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn
 * [Campus](../../../Collection/Campus.md).includes
 * [Premises](../../../Collection/Premises.md).includes
+* [RealEstate](../../../Collection/RealEstate.md).includes
 * [Space](../../Space.md).hasPart
 * [Space](../../Space.md).isPartOf

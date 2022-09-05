@@ -20,6 +20,15 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|area|**en**: area||[ArchitectureArea](../../Information/ArchitectureArea.md)|
+|capacity|**en**: capacity||[ArchitectureCapacity](../../Information/ArchitectureCapacity.md)|
+
+---
+
 ## Relationships
 
 |Name|Display name|Description|Multiplicity|Target|Properties|Writable|
@@ -52,6 +61,7 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 * [BuildingElement](../../BuildingElement/BuildingElement.md).locatedIn
 * [Campus](../../Collection/Campus.md).includes
 * [Premises](../../Collection/Premises.md).includes
+* [RealEstate](../../Collection/RealEstate.md).includes
 ### Inherited
 * [Asset](../../Asset/Asset.md).locatedIn
 * [Space](../Space.md).hasPart
