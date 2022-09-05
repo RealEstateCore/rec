@@ -1004,6 +1004,48 @@ rec:Garage
   rdfs:label "Garage" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:Georeference
+  a <dtmi:dtdl:class:Component> ;
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:comment "Encapsulates a georeference globally placing a spatially located entity in terms of latitude, longitude, altitude, and bearing." ;
+  rdfs:label "Georeference" ;
+  rdfs:subClassOf rec:Information ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:alt ;
+      sh:datatype xsd:float ;
+      sh:description "Altitude" ;
+      sh:maxCount 1 ;
+      sh:name "alt" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:bearing ;
+      sh:datatype xsd:float ;
+      sh:description "The angle between local coordinate system and a north-south meridian." ;
+      sh:maxCount 1 ;
+      sh:name "bearing" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:lat ;
+      sh:datatype xsd:float ;
+      sh:description "Latitude" ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "lat" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:long ;
+      sh:datatype xsd:float ;
+      sh:description "Longitude" ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "long" ;
+    ] ;
+.
 rec:GroupRoom
   a rdfs:Class ;
   a sh:NodeShape ;
@@ -1796,6 +1838,15 @@ rec:Space
       sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]." ;
       sh:maxCount 1 ;
       sh:name "geometry" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rec:georeference ;
+      sh:class rec:Georeference ;
+      sh:description "A fixed point for, e.g., a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for locally defined geometries." ;
+      sh:maxCount 1 ;
+      sh:name "georeference" ;
+      sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
       a sh:PropertyShape ;
