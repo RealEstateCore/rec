@@ -49,6 +49,7 @@ For an index of the entire inheritance tree (much larger), see the [Full Type In
     * [Portfolio](Collection/Portfolio.md)
     * [Premises](Collection/Premises.md)
     * [PV_Array](Collection/PV_Array.md)
+    * [RealEstate](Collection/RealEstate.md)
     * [System](Collection/System/System.md)
 * [Event](Event/Event.md)
     * [ElevatorTrip](Event/ElevatorTrip.md)

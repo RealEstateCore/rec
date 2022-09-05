@@ -17,6 +17,7 @@ An administrative grouping of entities that are adressed and treated as a unit f
 * [FurnitureCollection](FurnitureCollection.md)
 * [Portfolio](Portfolio.md)
 * [Premises](Premises.md)
+* [RealEstate](RealEstate.md)
 * [Loop](Loop/Loop.md)
 * [System](System/System.md)
 
