@@ -14,6 +14,13 @@
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Architecture](../../Architecture.md):** area, capacity
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -36,5 +43,6 @@
 * [Apartment](../../../../Collection/Apartment.md).includes
 * [Campus](../../../../Collection/Campus.md).includes
 * [Premises](../../../../Collection/Premises.md).includes
+* [RealEstate](../../../../Collection/RealEstate.md).includes
 * [Space](../../../Space.md).hasPart
 * [Space](../../../Space.md).isPartOf
