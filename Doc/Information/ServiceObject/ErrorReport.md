@@ -9,14 +9,14 @@
 ## Relationships
 
 ### Inherited Relationships
-* **[ServiceObject](ServiceObject.md):** acknowledgedBy, closedBy, createdBy, producedBy, relatedTo, severity, status
+* **[ServiceObject](ServiceObject.md):** acknowledgedBy, closedBy, createdBy, producedBy, relatedTo
 
 ---
 
 ## Properties
 
 ### Inherited Properties
-* **[ServiceObject](ServiceObject.md):** acknowledgedTime, closedTime, createdTime
+* **[ServiceObject](ServiceObject.md):** acknowledgedTime, closedTime, createdTime, severity, status
 * **[Information](../Information.md):** customTags, externalIds, name
 
 ---

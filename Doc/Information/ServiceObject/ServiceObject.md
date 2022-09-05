@@ -23,8 +23,6 @@
 |createdBy|**en**: created by||0-1|[Agent](../../Agent/Agent.md)||True|
 |producedBy|**en**: produced by||0-Infinity|[Point](../../Point/Point.md)||True|
 |relatedTo|**en**: related to||0-Infinity|||True|
-|severity|**en**: severity||0-1|||True|
-|status|**en**: status||0-1|||True|
 
 ---
 
@@ -35,6 +33,8 @@
 |acknowledgedTime|**en**: acknowledged time||dateTime|True|
 |closedTime|**en**: closed time||dateTime|True|
 |createdTime|**en**: created time||dateTime|True|
+|severity|**en**: severity||enum (Major, Minor, Severe)|True|
+|status|**en**: status||enum (Acknowledged, Closed, Unacknowledged)|True|
 ### Inherited Properties
 * **[Information](../Information.md):** customTags, externalIds, name
 
