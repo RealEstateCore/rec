@@ -28781,6 +28781,14 @@ brick:Illuminance_Sensor
   rdfs:label "Illuminance Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the total luminous flux incident on a surface, per unit area"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Illuminance ;
@@ -39324,6 +39332,14 @@ brick:Motion_Sensor
   rdfs:label "Motion Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Detects the presence of motion in some area"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownBooleanShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Motion ;
@@ -54600,6 +54616,14 @@ brick:Temperature_Sensor
   rdfs:label "Temperature Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures temperature: the physical property of matter that quantitatively expresses the common notions of hot and cold"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -61017,6 +61041,48 @@ WHERE {
       sh:prefixes owl: ;
     ] ;
   sh:targetClass brick:Entity ;
+.
+bsh:LastKnownBooleanShape
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf bsh:LastKnownValueShape ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:timestamp ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "timestamp" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:value ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+bsh:LastKnownDoubleShape
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf bsh:LastKnownValueShape ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:timestamp ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "timestamp" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 bsh:LastKnownValueShape
   rdf:type owl:Class ;

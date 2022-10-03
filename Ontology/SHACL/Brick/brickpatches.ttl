@@ -167,6 +167,16 @@ brick:Hot_Box
 brick:IDF
   owl:deprecated "true"^^xsd:boolean ;
 .
+brick:Illuminance_Sensor
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class <https://brickschema.org/schema/BrickShape#LastKnownDoubleShape> ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 brick:Information_Area
   owl:deprecated "true"^^xsd:boolean ;
 .
@@ -234,6 +244,16 @@ brick:Media_Room
 .
 brick:Medical_Room
   owl:deprecated "true"^^xsd:boolean ;
+.
+brick:Motion_Sensor
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class <https://brickschema.org/schema/BrickShape#LastKnownBooleanShape> ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
 .
 brick:Office
   owl:deprecated "true"^^xsd:boolean ;
@@ -396,6 +416,16 @@ brick:Team_Room
 brick:Telecom_Room
   owl:deprecated "true"^^xsd:boolean ;
 .
+brick:Temperature_Sensor
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class <https://brickschema.org/schema/BrickShape#LastKnownDoubleShape> ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 brick:Ticketing_Booth
   owl:deprecated "true"^^xsd:boolean ;
 .
@@ -454,6 +484,48 @@ brick:isPointOf
   owl:deprecated "true"^^xsd:boolean ;
   owl:equivalentProperty rec:isPointOf ;
 .
+<https://brickschema.org/schema/BrickShape#LastKnownBooleanShape>
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf <https://brickschema.org/schema/BrickShape#LastKnownValueShape> ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:timestamp ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "timestamp" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:value ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+<https://brickschema.org/schema/BrickShape#LastKnownDoubleShape>
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf <https://brickschema.org/schema/BrickShape#LastKnownValueShape> ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:timestamp ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "timestamp" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 <https://brickschema.org/schema/BrickShape#ValueShape>
   rdf:type sh:NodeShape ;
 .
@@ -470,12 +542,12 @@ rec:EquipmentCollection
   rdf:type sh:NodeShape ;
 .
 rec:substance
-  a owl:AnnotationProperty ;
+  rdf:type owl:AnnotationProperty ;
   rdfs:domain rec:feeds ;
   rdfs:domain rec:isFedBy ;
   rdfs:label "substance" ;
   rdfs:range [
-      a rdfs:Datatype ;
+      rdf:type rdfs:Datatype ;
       owl:oneOf (
           "ACElec"
           "Air"
