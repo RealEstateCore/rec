@@ -1,0 +1,40 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Differential_Pressure_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Setpoint",
+        "Pressure",
+        "Point",
+        "Discharge",
+        "Differential",
+        "Air"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Discharge Air Differential Pressure Setpoint"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Air_Differential_Pressure_Setpoint;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

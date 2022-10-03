@@ -1,0 +1,42 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Low_Outside_Air_Lockout_Temperature_Differential_Parameter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Temperature",
+        "Point",
+        "Parameter",
+        "Outside",
+        "Low",
+        "Lockout",
+        "Differential",
+        "Air"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Low Outside Air Lockout Temperature Differential Parameter"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Outside_Air_Lockout_Temperature_Differential_Parameter;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Exhaust_Fan_Disable_Command;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Point",
+        "Fan",
+        "Exhaust",
+        "Disable",
+        "Command"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Exhaust Fan Disable Command"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Disable_Command;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}
