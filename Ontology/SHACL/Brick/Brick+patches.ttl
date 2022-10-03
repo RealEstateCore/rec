@@ -20892,13 +20892,13 @@ brick:Equipment
   sh:message "Equipment is an exclusive top class." ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path brick:feeds ;
+      sh:path rec:feeds ;
       sh:name "feeds" ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path brick:isFedBy ;
+      sh:path rec:isFedBy ;
       sh:name "is fed by" ;
       sh:nodeKind sh:IRI ;
     ] ;
@@ -44565,6 +44565,12 @@ brick:Point
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:isPointOf ;
+      sh:name "is point of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
       sh:path brick:isPointOf ;
       sh:message "A point can be associated with Locations or Equipment." ;
       sh:or (
@@ -59956,6 +59962,7 @@ brick:feeds
   rdf:type owl:IrreflexiveProperty ;
   rdf:type owl:ObjectProperty ;
   rdfs:label "Feeds" ;
+  owl:deprecated "true"^^xsd:boolean ;
   owl:equivalentProperty rec:feeds ;
   owl:inverseOf brick:isFedBy ;
   skos:definition "The subject is upstream of the object in the context of some sequential process; some media is passed between them"@en ;
@@ -60094,6 +60101,7 @@ brick:isFedBy
   rdf:type owl:IrreflexiveProperty ;
   rdf:type owl:ObjectProperty ;
   rdfs:label "Is fed by" ;
+  owl:deprecated "true"^^xsd:boolean ;
   owl:equivalentProperty rec:isFedBy ;
   owl:inverseOf brick:feeds ;
 .
@@ -60129,6 +60137,8 @@ brick:isPointOf
   rdf:type owl:ObjectProperty ;
   rdfs:domain brick:Point ;
   rdfs:label "Is point of" ;
+  owl:deprecated "true"^^xsd:boolean ;
+  owl:equivalentProperty rec:isPointOf ;
   owl:inverseOf brick:hasPoint ;
   skos:definition "The subject is a source of telemetry related to the object. In some systems the source of telemetry may be represented as a digital/analog input/output point"@en ;
 .
@@ -63911,53 +63921,6 @@ rec:Collection
 .
 rec:EquipmentCollection
   rdf:type sh:NodeShape ;
-.
-rec:substance
-  rdf:type owl:AnnotationProperty ;
-  rdfs:domain brick:feeds ;
-  rdfs:domain brick:isFedBy ;
-  rdfs:label "substance" ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "ACElec"
-          "Air"
-          "BlowdownWater"
-          "ChilledWater"
-          "ColdDomesticWater"
-          "Condensate"
-          "CondenserWater"
-          "DCElec"
-          "Diesel"
-          "DriveElec"
-          "Ethernet"
-          "ExhaustAir"
-          "Freight"
-          "FuelOil"
-          "Gasoline"
-          "GreaseExhaustAir"
-          "HotDomesticWater"
-          "HotWater"
-          "IrrigationWater"
-          "Light"
-          "MakeupWater"
-          "NaturalGas"
-          "NonPotableDomesticWater"
-          "OutsideAir"
-          "People"
-          "Propane"
-          "RecircHotDomesticWater"
-          "Refrig"
-          "ReturnAir"
-          "SprinklerWater"
-          "Steam"
-          "StormDrainage"
-          "SupplyAir"
-          "TransferAir"
-          "WasteVentDrainage"
-          "Water"
-        ) ;
-    ] ;
 .
 <https://w3id.org/rec/brickpatches>
   owl:versionInfo "Created with TopBraid Composer" ;

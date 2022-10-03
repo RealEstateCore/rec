@@ -105,13 +105,13 @@ brick:Equipment
   rdfs:subClassOf rec:Asset ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path brick:feeds ;
+      sh:path rec:feeds ;
       sh:name "feeds" ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path brick:isFedBy ;
+      sh:path rec:isFedBy ;
       sh:name "is fed by" ;
       sh:nodeKind sh:IRI ;
     ] ;
@@ -291,6 +291,12 @@ brick:Point
       sh:name "has substance" ;
       sh:nodeKind sh:IRI ;
     ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:isPointOf ;
+      sh:name "is point of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
 .
 brick:Portfolio
   owl:deprecated "true"^^xsd:boolean ;
@@ -424,6 +430,7 @@ brick:Zone
   owl:deprecated "true"^^xsd:boolean ;
 .
 brick:feeds
+  owl:deprecated "true"^^xsd:boolean ;
   owl:equivalentProperty rec:feeds ;
 .
 brick:hasLocation
@@ -437,10 +444,15 @@ brick:hasPoint
   owl:equivalentProperty rec:hasPoint ;
 .
 brick:isFedBy
+  owl:deprecated "true"^^xsd:boolean ;
   owl:equivalentProperty rec:isFedBy ;
 .
 brick:isPartOf
   owl:equivalentProperty rec:isPartOf ;
+.
+brick:isPointOf
+  owl:deprecated "true"^^xsd:boolean ;
+  owl:equivalentProperty rec:isPointOf ;
 .
 <https://brickschema.org/schema/BrickShape#ValueShape>
   rdf:type sh:NodeShape ;
@@ -456,53 +468,6 @@ rec:Collection
 .
 rec:EquipmentCollection
   rdf:type sh:NodeShape ;
-.
-rec:substance
-  rdf:type owl:AnnotationProperty ;
-  rdfs:domain brick:feeds ;
-  rdfs:domain brick:isFedBy ;
-  rdfs:label "substance" ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "ACElec"
-          "Air"
-          "BlowdownWater"
-          "ChilledWater"
-          "ColdDomesticWater"
-          "Condensate"
-          "CondenserWater"
-          "DCElec"
-          "Diesel"
-          "DriveElec"
-          "Ethernet"
-          "ExhaustAir"
-          "Freight"
-          "FuelOil"
-          "Gasoline"
-          "GreaseExhaustAir"
-          "HotDomesticWater"
-          "HotWater"
-          "IrrigationWater"
-          "Light"
-          "MakeupWater"
-          "NaturalGas"
-          "NonPotableDomesticWater"
-          "OutsideAir"
-          "People"
-          "Propane"
-          "RecircHotDomesticWater"
-          "Refrig"
-          "ReturnAir"
-          "SprinklerWater"
-          "Steam"
-          "StormDrainage"
-          "SupplyAir"
-          "TransferAir"
-          "WasteVentDrainage"
-          "Water"
-        ) ;
-    ] ;
 .
 <https://w3id.org/rec/brickpatches>
   rdf:type owl:Ontology ;
