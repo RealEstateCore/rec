@@ -469,6 +469,53 @@ rec:Collection
 rec:EquipmentCollection
   rdf:type sh:NodeShape ;
 .
+rec:substance
+  a owl:AnnotationProperty ;
+  rdfs:domain rec:feeds ;
+  rdfs:domain rec:isFedBy ;
+  rdfs:label "substance" ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "ACElec"
+          "Air"
+          "BlowdownWater"
+          "ChilledWater"
+          "ColdDomesticWater"
+          "Condensate"
+          "CondenserWater"
+          "DCElec"
+          "Diesel"
+          "DriveElec"
+          "Ethernet"
+          "ExhaustAir"
+          "Freight"
+          "FuelOil"
+          "Gasoline"
+          "GreaseExhaustAir"
+          "HotDomesticWater"
+          "HotWater"
+          "IrrigationWater"
+          "Light"
+          "MakeupWater"
+          "NaturalGas"
+          "NonPotableDomesticWater"
+          "OutsideAir"
+          "People"
+          "Propane"
+          "RecircHotDomesticWater"
+          "Refrig"
+          "ReturnAir"
+          "SprinklerWater"
+          "Steam"
+          "StormDrainage"
+          "SupplyAir"
+          "TransferAir"
+          "WasteVentDrainage"
+          "Water"
+        ) ;
+    ] ;
+.
 <https://w3id.org/rec/brickpatches>
   rdf:type owl:Ontology ;
   owl:imports <https://brickschema.org/schema/1.3/Brick> ;
