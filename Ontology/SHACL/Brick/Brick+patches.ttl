@@ -2484,6 +2484,14 @@ brick:Adjust_Sensor
   rdfs:label "Adjust Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures user-provided adjustment of some value"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Adjust ;
@@ -3022,6 +3030,14 @@ brick:Air_Grains_Sensor
   rdfs:label "Air Grains Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the mass of water vapor in air"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Air ;
@@ -3197,6 +3213,14 @@ brick:Air_Quality_Sensor
   rdfs:label "Air Quality Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "A sensor which provides a measure of air quality"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Air ;
@@ -3611,6 +3635,14 @@ brick:Alarm
   owl:disjointWith brick:Setpoint ;
   owl:disjointWith brick:Status ;
   skos:definition "Alarm points are signals (either audible or visual) that alert an operator to an off-normal condition which requires some form of corrective action"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownValueShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Alarm ;
@@ -3852,6 +3884,14 @@ brick:Angle_Sensor
   rdfs:label "Angle Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measues the planar angle of some phenomenon"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Angle ;
@@ -6530,6 +6570,14 @@ brick:Capacity_Sensor
   qudt:hasQuantityKind brick:Capacity ;
   rdfs:label "Capacity Sensor" ;
   rdfs:subClassOf brick:Sensor ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Capacity ;
@@ -8507,6 +8555,14 @@ brick:Command
   owl:disjointWith brick:Setpoint ;
   owl:disjointWith brick:Status ;
   skos:definition "A Command is an output point that directly determines the behavior of equipment and/or affects relevant operational points."@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownValueShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Command ;
@@ -9321,6 +9377,14 @@ brick:Conductivity_Sensor
   rdfs:label "Conductivity Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures electrical conductance"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Conductivity ;
@@ -9423,6 +9487,14 @@ brick:Contact_Sensor
   rdfs:label "Contact Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Senses or detects contact, such as for determining if a door is closed."@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownBooleanShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Contact ;
@@ -10730,6 +10802,14 @@ brick:Current_Sensor
   rdfs:label "Current Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Senses the amperes of electrical current passing through the sensor"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Current ;
@@ -11452,6 +11532,14 @@ brick:Demand_Sensor
   rdfs:label "Demand Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the amount of power consumed by the use of some process; typically found by multiplying the tonnage of a unit (e.g. RTU) by the efficiency rating in kW/ton"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Demand ;
@@ -11689,6 +11777,14 @@ brick:Dewpoint_Sensor
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Dew_point> ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Senses the dewpoint temperature . Dew point is the temperature to which air must be cooled to become saturated with water vapor"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Dewpoint ;
@@ -12936,6 +13032,14 @@ brick:Direction_Sensor
   rdfs:label "Direction Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the direction in degrees in which a phenomenon is occuring"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Direction ;
@@ -16133,6 +16237,14 @@ brick:Duration_Sensor
   rdfs:label "Duration Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the duration of a phenomenon or event"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDurationShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Duration ;
@@ -18383,6 +18495,14 @@ brick:Energy_Sensor
   rdfs:label "Energy Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures energy consumption"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Energy ;
@@ -18487,7 +18607,6 @@ brick:Energy_Usage_Sensor
   rdf:type owl:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Energy Usage Sensor" ;
-  rdfs:subClassOf brick:Energy_Sensor ;
   rdfs:subClassOf brick:Usage_Sensor ;
   skos:definition "Measures the total amount of energy used over some period of time"@en ;
   sh:rule [
@@ -20717,6 +20836,14 @@ brick:Enthalpy_Sensor
   rdfs:label "Enthalpy Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the total heat content of some substance"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Enthalpy ;
@@ -23220,6 +23347,14 @@ brick:Fire_Sensor
   rdfs:label "Fire Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the presence of fire"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownBooleanShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Fire ;
@@ -23645,6 +23780,14 @@ brick:Flow_Sensor
   rdfs:label "Flow Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the rate of flow of some substance"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Flow ;
@@ -23998,6 +24141,14 @@ brick:Frequency_Sensor
   rdfs:label "Frequency Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the frequency of a phenomenon or aspect of a phenomenon, e.g. the frequency of a fan turning"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Frequency ;
@@ -24181,6 +24332,14 @@ brick:Frost_Sensor
   rdfs:subClassOf brick:Sensor ;
   rdfs:subClassOf brick:Temperature_Sensor ;
   skos:definition "Senses the presence of frost or conditions that may cause frost"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownBooleanShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Frost ;
@@ -24465,6 +24624,14 @@ brick:Gas_Sensor
   rdfs:label "Gas Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures gas concentration (other than CO2)"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Gas ;
@@ -24601,6 +24768,14 @@ brick:Generation_Sensor
   rdfs:label "Generation Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "A sensor measuring how much something has been generated."@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Generation ;
@@ -24909,6 +25084,14 @@ brick:Hail_Sensor
   rdfs:label "Hail Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures hail in terms of its size and damage potential"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Hail ;
@@ -25282,6 +25465,14 @@ brick:Heat_Sensor
   rdfs:label "Heat Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures heat"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Heat ;
@@ -28518,6 +28709,14 @@ brick:Humidity_Sensor
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Humidity> ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the concentration of water vapor in air"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Humidity ;
@@ -28846,6 +29045,14 @@ brick:Imbalance_Sensor
   rdfs:label "Imbalance Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "A sensor which measures difference (imbalance) between phases of an electrical system"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Imbalance ;
@@ -33737,6 +33944,14 @@ brick:Luminance_Sensor
   rdfs:label "Luminance Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the luminous intensity per unit area of light travelling in a given direction"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Luminance ;
@@ -39776,7 +39991,6 @@ brick:Natural_Gas_Flow_Sensor
   qudt:hasQuantityKind brick:Flow ;
   rdfs:label "Natural Gas Flow Sensor" ;
   rdfs:subClassOf brick:Flow_Sensor ;
-  rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the rate of flow of natural gas"@en ;
   sh:rule [
       rdf:type sh:TripleRule ;
@@ -40126,6 +40340,14 @@ brick:Occupancy_Count_Sensor
   rdfs:label "Occupancy Count Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Sensors measuring the number of people in an area"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownIntegerShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Count ;
@@ -40194,6 +40416,14 @@ brick:Occupancy_Sensor
   rdfs:label "Occupancy Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Detects occupancy of some space or area"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownBooleanShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Occupancy ;
@@ -43378,7 +43608,6 @@ brick:PIR_Sensor
   rdf:type sh:NodeShape ;
   rdfs:label "PIR Sensor" ;
   rdfs:subClassOf brick:Motion_Sensor ;
-  rdfs:subClassOf brick:Occupancy_Sensor ;
   skos:definition "Detects the presense of motion in some area using the differential change in infrared intensity between two or more receptors"@en ;
   sh:rule [
       rdf:type sh:TripleRule ;
@@ -43970,6 +44199,14 @@ brick:Parameter
   owl:disjointWith brick:Setpoint ;
   owl:disjointWith brick:Status ;
   skos:definition "Parameter points are configuration settings used to guide the operation of equipment and control systems; for example they may provide bounds on valid setpoint values"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownValueShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Parameter ;
@@ -44202,7 +44439,6 @@ brick:Peak_Power_Demand_Sensor
   qudt:hasQuantityKind brick:Peak_Power ;
   rdfs:label "Peak Power Demand Sensor" ;
   rdfs:subClassOf brick:Demand_Sensor ;
-  rdfs:subClassOf brick:Electric_Power_Sensor ;
   skos:definition "The peak power consumed by a process over some period of time"@en ;
   sh:rule [
       rdf:type sh:TripleRule ;
@@ -44440,6 +44676,14 @@ brick:Piezoelectric_Sensor
   rdfs:label "Piezoelectric Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Senses changes pressure, acceleration, temperature, force or strain via the piezoelectric effect"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Piezoelectric ;
@@ -44731,6 +44975,14 @@ brick:Position_Sensor
   rdfs:label "Position Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the current position of a component in terms of a fraction of its full range of motion"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -44978,6 +45230,14 @@ brick:Power_Factor_Sensor
   rdfs:label "Power Factor Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Sensors measuring power Factor, under periodic conditions, is the ratio of the absolute value of the active power (P) to the apparent power (S)."@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Factor ;
@@ -45050,6 +45310,14 @@ brick:Power_Sensor
   rdfs:label "Power Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the amount of instantaneous power consumed"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -45629,6 +45897,14 @@ brick:Pressure_Sensor
   rdfs:label "Pressure Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measure the amount of force acting on a unit area"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -46512,7 +46788,6 @@ brick:Rain_Duration_Sensor
   rdf:type sh:NodeShape ;
   rdfs:label "Rain Duration Sensor" ;
   rdfs:subClassOf brick:Duration_Sensor ;
-  rdfs:subClassOf brick:Rain_Sensor ;
   skos:definition "Measures the duration of precipitation within some time frame"@en ;
   sh:rule [
       rdf:type sh:TripleRule ;
@@ -46550,6 +46825,14 @@ brick:Rain_Sensor
   rdfs:label "Rain Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the amount of precipitation fallen"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -49229,6 +49512,14 @@ brick:Setpoint
   owl:disjointWith brick:Sensor ;
   owl:disjointWith brick:Status ;
   skos:definition "A Setpoint is an input value at which the desired property is set"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownValueShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -49724,6 +50015,14 @@ brick:Solar_Radiance_Sensor
   rdfs:label "Solar Radiance Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "The amount of light that passes through or is emitted from the sun and falls within a given solid angle in a specified direction"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -50070,6 +50369,14 @@ brick:Speed_Sensor
   rdfs:label "Speed Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the magnitude of velocity of some form of movement"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -51099,6 +51406,14 @@ brick:Status
   owl:disjointWith brick:Sensor ;
   owl:disjointWith brick:Setpoint ;
   skos:definition "A Status is input point that reports the current operating mode, state, position, or condition of an item. Statuses are observations and should be considered 'read-only'"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownValueShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -55455,6 +55770,14 @@ brick:Torque_Sensor
   rdfs:label "Torque Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures torque, the tendency of a force to rotate an object about some axis"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -57001,6 +57324,14 @@ brick:Usage_Sensor
   rdfs:label "Usage Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the amount of some substance that is consumed or used, over some period of time"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -58097,6 +58428,14 @@ brick:Voltage_Sensor
   rdfs:label "Voltage Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the voltage of an electrical device or object"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -58660,6 +58999,14 @@ brick:Water_Level_Sensor
   rdfs:label "Water Level Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the height/level of water in some container"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Level ;
@@ -61079,6 +61426,48 @@ bsh:LastKnownDoubleShape
       rdf:type sh:PropertyShape ;
       sh:path brick:value ;
       sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+bsh:LastKnownDurationShape
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf bsh:LastKnownValueShape ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:timestamp ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "timestamp" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:value ;
+      sh:datatype xsd:duration ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+bsh:LastKnownIntegerShape
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf bsh:LastKnownValueShape ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:timestamp ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "timestamp" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:value ;
+      sh:datatype xsd:integer ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
       sh:name "value" ;

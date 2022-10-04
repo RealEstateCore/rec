@@ -18457,7 +18457,6 @@ brick:Energy_Usage_Sensor
   rdf:type owl:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Energy Usage Sensor" ;
-  rdfs:subClassOf brick:Energy_Sensor ;
   rdfs:subClassOf brick:Usage_Sensor ;
   skos:definition "Measures the total amount of energy used over some period of time"@en ;
   sh:rule [
@@ -39669,7 +39668,6 @@ brick:Natural_Gas_Flow_Sensor
   qudt:hasQuantityKind brick:Flow ;
   rdfs:label "Natural Gas Flow Sensor" ;
   rdfs:subClassOf brick:Flow_Sensor ;
-  rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the rate of flow of natural gas"@en ;
   sh:rule [
       rdf:type sh:TripleRule ;
@@ -43266,7 +43264,6 @@ brick:PIR_Sensor
   rdf:type sh:NodeShape ;
   rdfs:label "PIR Sensor" ;
   rdfs:subClassOf brick:Motion_Sensor ;
-  rdfs:subClassOf brick:Occupancy_Sensor ;
   skos:definition "Detects the presense of motion in some area using the differential change in infrared intensity between two or more receptors"@en ;
   sh:rule [
       rdf:type sh:TripleRule ;
@@ -44078,7 +44075,6 @@ brick:Peak_Power_Demand_Sensor
   qudt:hasQuantityKind brick:Peak_Power ;
   rdfs:label "Peak Power Demand Sensor" ;
   rdfs:subClassOf brick:Demand_Sensor ;
-  rdfs:subClassOf brick:Electric_Power_Sensor ;
   skos:definition "The peak power consumed by a process over some period of time"@en ;
   sh:rule [
       rdf:type sh:TripleRule ;
@@ -46362,7 +46358,6 @@ brick:Rain_Duration_Sensor
   rdf:type sh:NodeShape ;
   rdfs:label "Rain Duration Sensor" ;
   rdfs:subClassOf brick:Duration_Sensor ;
-  rdfs:subClassOf brick:Rain_Sensor ;
   skos:definition "Measures the duration of precipitation within some time frame"@en ;
   sh:rule [
       rdf:type sh:TripleRule ;

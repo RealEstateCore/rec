@@ -3,6 +3,27 @@
   "@type": "Interface",
   "contents": [
     {
+      "@type": "Property",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "timestamp",
+            "schema": "dateTime"
+          },
+          {
+            "name": "value",
+            "schema": "double"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
       "@type": [
         "Initialized",
         "Property"
