@@ -5,54 +5,30 @@
     {
       "@type": "Property",
       "description": {
-        "en": "Altitude"
+        "en": "A GeoJSON Point coordinate indicating the placement of the local coordinate system origin point (0,0) in the containing global coordinate system. Units: X and Y coordinates in decimal degrees, altitude (if present) in meters."
       },
       "displayName": {
-        "en": "alt"
+        "en": "reference point"
       },
-      "name": "alt",
-      "schema": "float",
+      "name": "referencePoint",
+      "schema": "string",
       "writable": true
     },
     {
       "@type": "Property",
       "description": {
-        "en": "The angle between local coordinate system and a north-south meridian."
+        "en": "The angle between the Y-axis of the local coordinate system and a global north-south meridian."
       },
       "displayName": {
         "en": "bearing"
       },
       "name": "bearing",
-      "schema": "float",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "description": {
-        "en": "Latitude"
-      },
-      "displayName": {
-        "en": "lat"
-      },
-      "name": "lat",
-      "schema": "float",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "description": {
-        "en": "Longitude"
-      },
-      "displayName": {
-        "en": "long"
-      },
-      "name": "long",
-      "schema": "float",
+      "schema": "double",
       "writable": true
     }
   ],
   "description": {
-    "en": "Encapsulates a georeference globally placing a spatially located entity in terms of latitude, longitude, altitude, and bearing."
+    "en": "A georeference provides linkage between the local coordinate system used within a building (e.g., measured in meters) and a global coordinate system (e.g., lat, long, alt), such that locally placed Spaces can be resolved and rendered in that global coordinate system (e.g., for mapping purposes)."
   },
   "displayName": {
     "en": "Georeference"
