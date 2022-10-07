@@ -5,18 +5,6 @@
     {
       "@type": "Property",
       "description": {
-        "en": "A GeoJSON Point coordinate indicating the placement of the local coordinate system origin point (0,0) in the containing global coordinate system. Units: X and Y coordinates in decimal degrees, altitude (if present) in meters."
-      },
-      "displayName": {
-        "en": "reference point"
-      },
-      "name": "referencePoint",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "description": {
         "en": "The angle between the Y-axis of the local coordinate system and a global north-south meridian."
       },
       "displayName": {
@@ -24,6 +12,18 @@
       },
       "name": "bearing",
       "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A GeoJSON Point coordinate indicating the placement of the local coordinate system origin point (0,0) in the containing global coordinate system. Units: X and Y coordinates in decimal degrees, altitude (if present) in meters."
+      },
+      "displayName": {
+        "en": "reference point"
+      },
+      "name": "referencePoint",
+      "schema": "string",
       "writable": true
     }
   ],
