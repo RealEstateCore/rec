@@ -59,6 +59,7 @@ For an index of the entire inheritance tree (much larger), see the [Full Type In
     * [ArchitectureArea](Information/ArchitectureArea.md)
     * [ArchitectureCapacity](Information/ArchitectureCapacity.md)
     * [Document](Information/Document/Document.md)
+    * [Georeference](Information/Georeference.md)
     * [PointOfInterest](Information/PointOfInterest.md)
     * [PostalAddress](Information/PostalAddress.md)
     * [ServiceObject](Information/ServiceObject/ServiceObject.md)

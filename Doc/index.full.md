@@ -352,6 +352,7 @@
     * [ArchitectureCapacity](Information/ArchitectureCapacity.md)
     * [Document](Information/Document/Document.md)
         * [LeaseContract](Information/Document/LeaseContract.md)
+    * [Georeference](Information/Georeference.md)
     * [PointOfInterest](Information/PointOfInterest.md)
     * [PostalAddress](Information/PostalAddress.md)
     * [ServiceObject](Information/ServiceObject/ServiceObject.md)
