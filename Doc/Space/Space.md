@@ -15,6 +15,14 @@ A contiguous part of the physical world that contains or can contain sub-spaces.
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|georeference|**en**: georeference|**en**: A fixed point for, e.g., a building structure. Commonly refered to as "insertion point" in CAD-programs. Used as origo for locally defined geometries.|[Georeference](../Information/Georeference.md)|
+
+---
+
 ## Relationships
 
 |Name|Display name|Description|Multiplicity|Target|Properties|Writable|
@@ -31,7 +39,7 @@ A contiguous part of the physical world that contains or can contain sub-spaces.
 |-|-|-|-|-|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|
 |externalIds|**en**: External IDs||map (string->string)|True|
-|geometry|**en**: geometry|**en**: A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]].|Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
+|geometry|**en**: geometry|**en**: A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]. Unit: meters.|Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 |name|**en**: name||string|True|
 
 ---
