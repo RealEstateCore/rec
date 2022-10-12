@@ -1008,11 +1008,11 @@ rec:Georeference
   rdfs:subClassOf rec:Information ;
   sh:property [
       a sh:PropertyShape ;
-      sh:path rec:referencePoint ;
+      sh:path rec:originReferencePoint ;
       sh:datatype  geojson:Point;
       sh:description "A GeoJSON Point coordinate indicating the placement of the local coordinate system origin point (0,0) in the containing global coordinate system. Units: X and Y coordinates in decimal degrees, altitude (if present) in meters." ;
       sh:maxCount 1 ;
-      sh:name "reference point" ;
+      sh:name "origin reference point" ;
     ] ;
   sh:property [
       a sh:PropertyShape ;
