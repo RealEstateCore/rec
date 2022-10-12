@@ -44436,6 +44436,14 @@ brick:Rain_Level_Sensor
   rdfs:label "Rain Level Sensor" ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the amount of precipitation fallen"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Point ;
@@ -44704,6 +44712,14 @@ brick:Refrigerant_Level_Sensor
   rdf:type sh:NodeShape ;
   rdfs:label "Refrigerant Level Sensor" ;
   rdfs:subClassOf brick:Sensor ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class bsh:LastKnownDoubleShape ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Level ;

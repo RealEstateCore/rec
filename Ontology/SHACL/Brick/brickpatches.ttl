@@ -680,6 +680,16 @@ brick:Private_Office
 brick:Pump_Room
   owl:deprecated "true"^^xsd:boolean ;
 .
+brick:Rain_Level_Sensor
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class <https://brickschema.org/schema/BrickShape#LastKnownDoubleShape> ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 brick:Rain_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
@@ -692,6 +702,16 @@ brick:Rain_Sensor
 .
 brick:Reception
   owl:deprecated "true"^^xsd:boolean ;
+.
+brick:Refrigerant_Level_Sensor
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class <https://brickschema.org/schema/BrickShape#LastKnownDoubleShape> ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
 .
 brick:Region
   owl:deprecated "true"^^xsd:boolean ;
