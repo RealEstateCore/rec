@@ -1,6 +1,29 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:Parameter;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "value",
+            "schema": "string"
+          },
+          {
+            "name": "timestamp",
+            "schema": "dateTime"
+          }
+        ]
+      },
+      "writable": true
+    }
+  ],
   "displayName": {
     "en": "Parameter"
   },

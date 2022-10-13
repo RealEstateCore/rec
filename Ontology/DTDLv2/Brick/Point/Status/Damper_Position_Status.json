@@ -1,28 +1,7 @@
 {
-  "@id": "dtmi:org:brickschema:schema:Brick:Contact_Sensor;1",
+  "@id": "dtmi:org:brickschema:schema:Brick:Damper_Position_Status;1",
   "@type": "Interface",
   "contents": [
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "last known value"
-      },
-      "name": "lastKnownValue",
-      "schema": {
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "value",
-            "schema": "boolean"
-          },
-          {
-            "name": "timestamp",
-            "schema": "dateTime"
-          }
-        ]
-      },
-      "writable": true
-    },
     {
       "@type": [
         "Property"
@@ -49,9 +28,9 @@
     }
   ],
   "displayName": {
-    "en": "Contact Sensor"
+    "en": "Damper Position Status"
   },
-  "extends": "dtmi:org:brickschema:schema:Brick:Sensor;1",
+  "extends": "dtmi:org:brickschema:schema:Brick:Status;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]
