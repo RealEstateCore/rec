@@ -2023,7 +2023,7 @@ sosa:ObservableProperty
     ) ;
   dcterms:issued "2016-11-16" ;
   dcterms:license <https://github.com/BrickSchema/brick/blob/master/LICENSE> ;
-  dcterms:modified "2022-10-12" ;
+  dcterms:modified "2022-10-19" ;
   dcterms:publisher [
       rdf:type sdo:Consortium ;
       sdo:legalName "Brick Consortium, Inc" ;
@@ -17514,6 +17514,7 @@ brick:Energy_Usage_Sensor
   rdf:type owl:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Energy Usage Sensor" ;
+  rdfs:subClassOf brick:Energy_Sensor ;
   rdfs:subClassOf brick:Usage_Sensor ;
   skos:definition "Measures the total amount of energy used over some period of time"@en ;
   sh:rule [
@@ -57313,24 +57314,24 @@ bsh:Absolute_HumidityShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
+          unit:LB-PER-GAL_US
           unit:LB-PER-FT3
           unit:LB-PER-M3
+          unit:MilliGM-PER-DeciL
+          unit:SLUG-PER-FT3
+          unit:TON_US-PER-YD3
+          unit:LB-PER-GAL
+          unit:TON_LONG-PER-YD3
+          unit:OZ_PER-GAL
+          unit:LB-PER-GAL_UK
           unit:PlanckDensity
-          unit:LB-PER-YD3
-          unit:KiloGM-PER-M3
           unit:OZ_PER-IN3
           unit:GRAIN-PER-GAL
           unit:TON_UK-PER-YD3
+          unit:LB-PER-YD3
           unit:TON_SHORT-PER-YD3
-          unit:LB-PER-GAL_UK
-          unit:LB-PER-GAL_US
-          unit:OZ_PER-GAL
-          unit:SLUG-PER-FT3
-          unit:MilliGM-PER-DeciL
           unit:LB-PER-IN3
-          unit:TON_LONG-PER-YD3
-          unit:LB-PER-GAL
-          unit:TON_US-PER-YD3
+          unit:KiloGM-PER-M3
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -57351,9 +57352,9 @@ bsh:Active_EnergyShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:KiloW-HR
           unit:MegaW-HR
           unit:W-HR
+          unit:KiloW-HR
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -57424,10 +57425,10 @@ bsh:Alternating_Current_FrequencyShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:KiloHZ
-          unit:GigaHZ
           unit:MegaHZ
           unit:HZ
+          unit:GigaHZ
+          unit:KiloHZ
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -57470,18 +57471,18 @@ bsh:AngleShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:MIN_Angle
-          unit:MIL
-          unit:REV
-          unit:ARCMIN
-          unit:GRAD
-          unit:MilliRAD
-          unit:ARCSEC
-          unit:GON
-          unit:DEG
-          unit:RAD
           unit:MilliARCSEC
+          unit:RAD
+          unit:REV
+          unit:MIN_Angle
+          unit:DEG
+          unit:MIL
+          unit:GON
           unit:MicroRAD
+          unit:MilliRAD
+          unit:GRAD
+          unit:ARCSEC
+          unit:ARCMIN
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -57502,9 +57503,9 @@ bsh:Apparent_EnergyShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:MegaV-A-HR
           unit:KiloV-A-HR
           unit:V-A-HR
+          unit:MegaV-A-HR
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -57570,57 +57571,57 @@ bsh:Atmospheric_PressureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:HectoBAR
-          unit:GigaPA
-          unit:KiloGM-PER-M-SEC2
-          unit:MicroATM
-          unit:CentiM_H2O
-          unit:GM_F-PER-CentiM2
-          unit:PlanckPressure
-          unit:LB_F-PER-IN2
-          unit:IN_H2O
-          unit:MicroBAR
-          unit:PDL-PER-FT2
-          unit:BARYE
-          unit:N-PER-M2
-          unit:HectoPA
-          unit:MilliM_H2O
-          unit:MilliM_HGA
-          unit:N-PER-CentiM2
-          unit:ATM
-          unit:KiloGM_F-PER-CentiM2
-          unit:KiloGM_F-PER-MilliM2
-          unit:MegaBAR
-          unit:MicroTORR
-          unit:KiloPA
-          unit:CentiBAR
-          unit:FT_HG
-          unit:PSI
-          unit:KiloPA_A
-          unit:N-PER-MilliM2
-          unit:KIP_F-PER-IN2
-          unit:IN_HG
-          unit:DYN-PER-CentiM2
           unit:KiloLB_F-PER-IN2
-          unit:TORR
-          unit:FT_H2O
-          unit:MilliM_HG
-          unit:DeciBAR
-          unit:MilliTORR
-          unit:BAR
+          unit:KIP_F-PER-IN2
+          unit:CentiM_H2O
+          unit:IN_H2O
+          unit:LB_F-PER-IN2
+          unit:BARYE
+          unit:GM_F-PER-CentiM2
+          unit:MilliBAR
+          unit:PSI
+          unit:MilliM_H2O
+          unit:FT_HG
           unit:MilliPA
+          unit:PlanckPressure
+          unit:ATM_T
+          unit:N-PER-CentiM2
+          unit:KiloBAR
+          unit:DYN-PER-CentiM2
+          unit:MicroTORR
+          unit:BAR
+          unit:KiloGM-PER-M-SEC2
+          unit:DeciBAR
+          unit:CentiBAR
+          unit:KiloGM_F-PER-CentiM2
+          unit:HectoPA
+          unit:TORR
+          unit:MicroATM
+          unit:LB_F-PER-FT2
+          unit:N-PER-M2
+          unit:PDL-PER-FT2
+          unit:KiloPA_A
+          unit:MilliTORR
+          unit:HectoBAR
+          unit:CM_H2O
+          unit:PA
+          unit:MicroBAR
+          unit:ATM
+          unit:DecaPA
+          unit:FT_H2O
+          unit:MegaPA
+          unit:MegaBAR
+          unit:MilliM_HG
           unit:CentiM_HG
           unit:MicroPA
-          unit:MegaPA
-          unit:CM_H2O
-          unit:ATM_T
-          unit:MilliBAR
           unit:KiloGM_F-PER-M2
-          unit:LB_F-PER-FT2
-          unit:DecaPA
-          unit:KiloBAR
-          unit:PA
+          unit:MilliM_HGA
+          unit:KiloGM_F-PER-MilliM2
+          unit:GigaPA
+          unit:N-PER-MilliM2
+          unit:KiloPA
           unit:BARAD
+          unit:IN_HG
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -57641,18 +57642,18 @@ bsh:AzimuthShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:MIN_Angle
-          unit:MIL
-          unit:REV
-          unit:ARCMIN
-          unit:GRAD
-          unit:MilliRAD
-          unit:ARCSEC
-          unit:GON
-          unit:DEG
-          unit:RAD
           unit:MilliARCSEC
+          unit:RAD
+          unit:REV
+          unit:MIN_Angle
+          unit:DEG
+          unit:MIL
+          unit:GON
           unit:MicroRAD
+          unit:MilliRAD
+          unit:GRAD
+          unit:ARCSEC
+          unit:ARCMIN
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -57860,18 +57861,18 @@ bsh:ConductivityShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:PicoS-PER-M
+          unit:NanoS-PER-CentiM
+          unit:S-PER-CentiM
+          unit:KiloS-PER-M
+          unit:MilliS-PER-CentiM
           unit:MilliS-PER-M
           unit:DeciS-PER-M
-          unit:S-PER-M
-          unit:NanoS-PER-CentiM
-          unit:MicroS-PER-M
-          unit:MegaS-PER-M
-          unit:MilliS-PER-CentiM
-          unit:KiloS-PER-M
-          unit:S-PER-CentiM
-          unit:NanoS-PER-M
           unit:MicroS-PER-CentiM
+          unit:S-PER-M
+          unit:MegaS-PER-M
+          unit:PicoS-PER-M
+          unit:MicroS-PER-M
+          unit:NanoS-PER-M
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -57948,17 +57949,17 @@ bsh:Current_AngleShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:REV
-          unit:MIL
-          unit:ARCMIN
-          unit:GRAD
-          unit:MilliRAD
-          unit:ARCSEC
-          unit:GON
-          unit:DEG
-          unit:RAD
           unit:MilliARCSEC
+          unit:RAD
+          unit:REV
+          unit:DEG
+          unit:MIL
+          unit:GON
           unit:MicroRAD
+          unit:MilliRAD
+          unit:GRAD
+          unit:ARCSEC
+          unit:ARCMIN
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58071,12 +58072,12 @@ bsh:DewpointShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:K
-          unit:PlanckTemperature
-          unit:DEG_R
-          unit:DEG_C
-          unit:MilliDEG_C
           unit:DEG_F
+          unit:MilliDEG_C
+          unit:K
+          unit:DEG_C
+          unit:DEG_R
+          unit:PlanckTemperature
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58141,57 +58142,57 @@ bsh:Differential_Dynamic_PressureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:HectoBAR
-          unit:GigaPA
-          unit:KiloGM-PER-M-SEC2
-          unit:MicroATM
-          unit:CentiM_H2O
-          unit:GM_F-PER-CentiM2
-          unit:PlanckPressure
-          unit:LB_F-PER-IN2
-          unit:IN_H2O
-          unit:MicroBAR
-          unit:PDL-PER-FT2
-          unit:BARYE
-          unit:N-PER-M2
-          unit:HectoPA
-          unit:MilliM_H2O
-          unit:MilliM_HGA
-          unit:N-PER-CentiM2
-          unit:ATM
-          unit:KiloGM_F-PER-CentiM2
-          unit:KiloGM_F-PER-MilliM2
-          unit:MegaBAR
-          unit:MicroTORR
-          unit:KiloPA
-          unit:CentiBAR
-          unit:FT_HG
-          unit:PSI
-          unit:KiloPA_A
-          unit:N-PER-MilliM2
-          unit:KIP_F-PER-IN2
-          unit:IN_HG
-          unit:DYN-PER-CentiM2
           unit:KiloLB_F-PER-IN2
-          unit:TORR
-          unit:FT_H2O
-          unit:MilliM_HG
-          unit:DeciBAR
-          unit:MilliTORR
-          unit:BAR
+          unit:KIP_F-PER-IN2
+          unit:CentiM_H2O
+          unit:IN_H2O
+          unit:LB_F-PER-IN2
+          unit:BARYE
+          unit:GM_F-PER-CentiM2
+          unit:MilliBAR
+          unit:PSI
+          unit:MilliM_H2O
+          unit:FT_HG
           unit:MilliPA
+          unit:PlanckPressure
+          unit:ATM_T
+          unit:N-PER-CentiM2
+          unit:KiloBAR
+          unit:DYN-PER-CentiM2
+          unit:MicroTORR
+          unit:BAR
+          unit:KiloGM-PER-M-SEC2
+          unit:DeciBAR
+          unit:CentiBAR
+          unit:KiloGM_F-PER-CentiM2
+          unit:HectoPA
+          unit:TORR
+          unit:MicroATM
+          unit:LB_F-PER-FT2
+          unit:N-PER-M2
+          unit:PDL-PER-FT2
+          unit:KiloPA_A
+          unit:MilliTORR
+          unit:HectoBAR
+          unit:CM_H2O
+          unit:PA
+          unit:MicroBAR
+          unit:ATM
+          unit:DecaPA
+          unit:FT_H2O
+          unit:MegaPA
+          unit:MegaBAR
+          unit:MilliM_HG
           unit:CentiM_HG
           unit:MicroPA
-          unit:MegaPA
-          unit:CM_H2O
-          unit:ATM_T
-          unit:MilliBAR
           unit:KiloGM_F-PER-M2
-          unit:LB_F-PER-FT2
-          unit:DecaPA
-          unit:KiloBAR
-          unit:PA
+          unit:MilliM_HGA
+          unit:KiloGM_F-PER-MilliM2
+          unit:GigaPA
+          unit:N-PER-MilliM2
+          unit:KiloPA
           unit:BARAD
+          unit:IN_HG
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58212,57 +58213,57 @@ bsh:Differential_Static_PressureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:HectoBAR
-          unit:GigaPA
-          unit:KiloGM-PER-M-SEC2
-          unit:MicroATM
-          unit:CentiM_H2O
-          unit:GM_F-PER-CentiM2
-          unit:PlanckPressure
-          unit:LB_F-PER-IN2
-          unit:IN_H2O
-          unit:MicroBAR
-          unit:PDL-PER-FT2
-          unit:BARYE
-          unit:N-PER-M2
-          unit:HectoPA
-          unit:MilliM_H2O
-          unit:MilliM_HGA
-          unit:N-PER-CentiM2
-          unit:ATM
-          unit:KiloGM_F-PER-CentiM2
-          unit:KiloGM_F-PER-MilliM2
-          unit:MegaBAR
-          unit:MicroTORR
-          unit:KiloPA
-          unit:CentiBAR
-          unit:FT_HG
-          unit:PSI
-          unit:KiloPA_A
-          unit:N-PER-MilliM2
-          unit:KIP_F-PER-IN2
-          unit:IN_HG
-          unit:DYN-PER-CentiM2
           unit:KiloLB_F-PER-IN2
-          unit:TORR
-          unit:FT_H2O
-          unit:MilliM_HG
-          unit:DeciBAR
-          unit:MilliTORR
-          unit:BAR
+          unit:KIP_F-PER-IN2
+          unit:CentiM_H2O
+          unit:IN_H2O
+          unit:LB_F-PER-IN2
+          unit:BARYE
+          unit:GM_F-PER-CentiM2
+          unit:MilliBAR
+          unit:PSI
+          unit:MilliM_H2O
+          unit:FT_HG
           unit:MilliPA
+          unit:PlanckPressure
+          unit:ATM_T
+          unit:N-PER-CentiM2
+          unit:KiloBAR
+          unit:DYN-PER-CentiM2
+          unit:MicroTORR
+          unit:BAR
+          unit:KiloGM-PER-M-SEC2
+          unit:DeciBAR
+          unit:CentiBAR
+          unit:KiloGM_F-PER-CentiM2
+          unit:HectoPA
+          unit:TORR
+          unit:MicroATM
+          unit:LB_F-PER-FT2
+          unit:N-PER-M2
+          unit:PDL-PER-FT2
+          unit:KiloPA_A
+          unit:MilliTORR
+          unit:HectoBAR
+          unit:CM_H2O
+          unit:PA
+          unit:MicroBAR
+          unit:ATM
+          unit:DecaPA
+          unit:FT_H2O
+          unit:MegaPA
+          unit:MegaBAR
+          unit:MilliM_HG
           unit:CentiM_HG
           unit:MicroPA
-          unit:MegaPA
-          unit:CM_H2O
-          unit:ATM_T
-          unit:MilliBAR
           unit:KiloGM_F-PER-M2
-          unit:LB_F-PER-FT2
-          unit:DecaPA
-          unit:KiloBAR
-          unit:PA
+          unit:MilliM_HGA
+          unit:KiloGM_F-PER-MilliM2
+          unit:GigaPA
+          unit:N-PER-MilliM2
+          unit:KiloPA
           unit:BARAD
+          unit:IN_HG
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58283,12 +58284,12 @@ bsh:Differential_TemperatureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:K
-          unit:PlanckTemperature
-          unit:DEG_R
-          unit:DEG_C
-          unit:MilliDEG_C
           unit:DEG_F
+          unit:MilliDEG_C
+          unit:K
+          unit:DEG_C
+          unit:DEG_R
+          unit:PlanckTemperature
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58309,9 +58310,9 @@ bsh:Dry_Bulb_TemperatureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:DEG_C
-          unit:K
           unit:DEG_F
+          unit:K
+          unit:DEG_C
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58360,17 +58361,17 @@ bsh:ElectricCurrentShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:A
-          unit:A_Ab
-          unit:BIOT
-          unit:MegaA
-          unit:MicroA
           unit:KiloA
-          unit:MilliA
-          unit:NanoA
+          unit:BIOT
           unit:A_Stat
+          unit:NanoA
+          unit:A_Ab
           unit:PlanckCurrent
+          unit:MicroA
+          unit:MilliA
+          unit:MegaA
           unit:PicoA
+          unit:A
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58398,17 +58399,17 @@ bsh:Electric_CurrentShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:A
-          unit:A_Ab
-          unit:BIOT
-          unit:MegaA
-          unit:MicroA
           unit:KiloA
-          unit:MilliA
-          unit:NanoA
+          unit:BIOT
           unit:A_Stat
+          unit:NanoA
+          unit:A_Ab
           unit:PlanckCurrent
+          unit:MicroA
+          unit:MilliA
+          unit:MegaA
           unit:PicoA
+          unit:A
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58429,16 +58430,16 @@ bsh:Electric_EnergyShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:KiloV-A_Reactive-HR
-          unit:KiloW-HR
-          unit:MegaV-A_Reactive-HR
-          unit:KiloV-A-HR
           unit:MegaW-HR
-          unit:MegaV-A-HR
+          unit:KiloV-A-HR
           unit:J
-          unit:V-A_Reactive-HR
           unit:W-HR
           unit:V-A-HR
+          unit:MegaV-A-HR
+          unit:KiloW-HR
+          unit:V-A_Reactive-HR
+          unit:KiloV-A_Reactive-HR
+          unit:MegaV-A_Reactive-HR
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58459,52 +58460,52 @@ bsh:Electric_PowerShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:PSI-IN3-PER-SEC
-          unit:J-PER-SEC
-          unit:FT-LB_F-PER-SEC
-          unit:NanoW
+          unit:MilliBAR-M3-PER-SEC
           unit:PSI-M3-PER-SEC
-          unit:HP-PER-M
           unit:PlanckPower
-          unit:PA-M3-PER-SEC
-          unit:TeraW
-          unit:HP_Boiler
-          unit:HP
-          unit:BTU_IT-PER-SEC
-          unit:J-PER-HR
-          unit:W
-          unit:MicroW
-          unit:HP_Brake
+          unit:KiloCAL-PER-MIN
+          unit:MegaV-A
+          unit:MegaV-A_Reactive
+          unit:KiloV-A_Reactive
+          unit:NanoW
           unit:FT-LB_F-PER-MIN
           unit:V-A_Reactive
-          unit:HP_Electric
-          unit:MegaPA-M3-PER-SEC
-          unit:MilliW
-          unit:TON_FG
-          unit:HP-PER-V
-          unit:GigaW
-          unit:MegaV-A_Reactive
-          unit:BAR-L-PER-SEC
-          unit:HP_Metric
-          unit:BAR-M3-PER-SEC
-          unit:MilliBAR-M3-PER-SEC
-          unit:FT-LB_F-PER-HR
-          unit:MegaW
-          unit:ERG-PER-SEC
-          unit:KiloW
-          unit:KiloV-A
-          unit:KiloCAL-PER-MIN
-          unit:MegaJ-PER-SEC
-          unit:MegaV-A
           unit:V-A
           unit:MilliBAR-L-PER-SEC
+          unit:PA-M3-PER-SEC
+          unit:GigaW
           unit:PicoW
-          unit:KiloCAL-PER-SEC
-          unit:KiloV-A_Reactive
-          unit:MegaPA-L-PER-SEC
-          unit:PA-L-PER-SEC
+          unit:BTU_IT-PER-SEC
+          unit:TeraW
+          unit:MegaPA-M3-PER-SEC
+          unit:HP
+          unit:HP_Metric
+          unit:BAR-M3-PER-SEC
+          unit:TON_FG
+          unit:W
+          unit:FT-LB_F-PER-SEC
+          unit:PSI-IN3-PER-SEC
+          unit:MegaJ-PER-SEC
+          unit:HP_Electric
           unit:PSI-YD3-PER-SEC
+          unit:J-PER-HR
+          unit:MegaPA-L-PER-SEC
+          unit:ERG-PER-SEC
+          unit:PA-L-PER-SEC
+          unit:HP_Brake
+          unit:KiloCAL-PER-SEC
+          unit:MicroW
+          unit:BAR-L-PER-SEC
+          unit:FT-LB_F-PER-HR
+          unit:HP-PER-V
+          unit:J-PER-SEC
+          unit:MegaW
+          unit:HP-PER-M
+          unit:KiloW
+          unit:MilliW
           unit:BTU_IT-PER-HR
+          unit:KiloV-A
+          unit:HP_Boiler
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58525,49 +58526,49 @@ bsh:EnthalpyShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:KiloV-A_Reactive-HR
-          unit:THM_EEC
-          unit:KiloW-HR
-          unit:MegaEV
-          unit:TOE
-          unit:EV
-          unit:KiloEV
-          unit:KiloCAL
-          unit:MilliJ
-          unit:W-SEC
-          unit:PlanckEnergy
-          unit:QUAD
-          unit:V-A-HR
-          unit:TeraJ
-          unit:N-M
-          unit:TeraW-HR
-          unit:BTU_IT
-          unit:AttoJ
-          unit:J
           unit:GigaJ
-          unit:GigaW-HR
-          unit:FemtoJ
-          unit:FT-LB_F
-          unit:BTU_TH
-          unit:KiloJ
+          unit:PlanckEnergy
           unit:KiloV-A-HR
-          unit:CAL_IT
-          unit:FT-PDL
-          unit:PetaJ
-          unit:V-A_Reactive-HR
-          unit:W-HR
-          unit:ERG
+          unit:TOE
           unit:GigaEV
+          unit:QUAD
+          unit:MegaJ
+          unit:MegaV-A-HR
+          unit:CAL_IT
+          unit:PetaJ
+          unit:TonEnergy
+          unit:ERG
+          unit:W-SEC
+          unit:KiloCAL
+          unit:E_h
+          unit:KiloEV
+          unit:KiloJ
+          unit:MilliJ
+          unit:FT-LB_F
+          unit:THM_EEC
+          unit:AttoJ
+          unit:KiloW-HR
+          unit:V-A_Reactive-HR
+          unit:MegaV-A_Reactive-HR
+          unit:TeraJ
+          unit:MegaW-HR
+          unit:BTU_IT
+          unit:N-M
+          unit:FemtoJ
+          unit:THM_US
+          unit:J
+          unit:TeraW-HR
+          unit:EV
+          unit:V-A-HR
+          unit:W-HR
+          unit:GigaW-HR
+          unit:KiloV-A_Reactive-HR
+          unit:BTU_TH
+          unit:ExaJ
+          unit:FT-PDL
+          unit:MegaEV
           unit:CAL_TH
           unit:MegaTOE
-          unit:MegaJ
-          unit:THM_US
-          unit:MegaV-A_Reactive-HR
-          unit:TonEnergy
-          unit:E_h
-          unit:MegaW-HR
-          unit:MegaV-A-HR
-          unit:ExaJ
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58588,102 +58589,102 @@ bsh:FlowShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:CentiM3-PER-MIN
-          unit:M3-PER-DAY
-          unit:GAL_UK-PER-HR
-          unit:BBL_US-PER-DAY
-          unit:GAL_US-PER-MIN
-          unit:BU_US_DRY-PER-SEC
           unit:PK_US_DRY-PER-MIN
-          unit:PK_US_DRY-PER-HR
-          unit:OZ_VOL_US-PER-MIN
-          unit:OZ_VOL_US-PER-SEC
-          unit:PK_US_DRY-PER-DAY
-          unit:PK_UK-PER-DAY
-          unit:IN3-PER-HR
-          unit:GI_UK-PER-HR
-          unit:BU_US_DRY-PER-MIN
-          unit:QT_UK-PER-HR
-          unit:IN3-PER-SEC
-          unit:GI_US-PER-HR
-          unit:QT_US-PER-HR
-          unit:M3-PER-HR
-          unit:PINT_UK-PER-HR
-          unit:PINT_US-PER-HR
-          unit:DeciM3-PER-MIN
-          unit:OZ_VOL_UK-PER-MIN
           unit:BBL_US_PET-PER-SEC
+          unit:PK_US_DRY-PER-HR
+          unit:PINT_UK-PER-MIN
+          unit:GAL_UK-PER-HR
+          unit:OZ_VOL_UK-PER-DAY
+          unit:BBL_UK_PET-PER-DAY
+          unit:MilliL-PER-MIN
+          unit:DeciM3-PER-MIN
+          unit:IN3-PER-HR
           unit:GI_US-PER-MIN
-          unit:CentiM3-PER-DAY
-          unit:GAL_UK-PER-MIN
-          unit:GAL_US-PER-SEC
-          unit:M3-PER-SEC
-          unit:BBL_UK_PET-PER-MIN
-          unit:GAL_US-PER-HR
-          unit:FT3-PER-HR
-          unit:GI_UK-PER-SEC
-          unit:QT_UK-PER-DAY
+          unit:CentiM3-PER-HR
+          unit:PINT_US-PER-HR
+          unit:PINT_UK-PER-DAY
+          unit:CentiM3-PER-MIN
+          unit:M3-PER-HR
+          unit:PK_UK-PER-SEC
+          unit:QT_UK-PER-SEC
           unit:GAL_UK-PER-DAY
-          unit:QT_US-PER-MIN
-          unit:GAL_US-PER-DAY
-          unit:YD3-PER-HR
-          unit:YD3-PER-SEC
+          unit:L-PER-HR
+          unit:QT_US-PER-DAY
           unit:YD3-PER-DAY
-          unit:L-PER-MIN
-          unit:MilliL-PER-HR
+          unit:BU_UK-PER-HR
+          unit:DeciM3-PER-SEC
+          unit:M3-PER-MIN
+          unit:OZ_VOL_US-PER-SEC
+          unit:CentiM3-PER-DAY
+          unit:GI_UK-PER-HR
+          unit:DeciM3-PER-HR
+          unit:YD3-PER-HR
+          unit:OZ_VOL_US-PER-HR
+          unit:PK_UK-PER-MIN
+          unit:GI_US-PER-HR
+          unit:FT3-PER-SEC
+          unit:M3-PER-SEC
+          unit:YD3-PER-MIN
+          unit:BU_US_DRY-PER-MIN
+          unit:GAL_US-PER-DAY
+          unit:PINT_US-PER-DAY
+          unit:GI_UK-PER-SEC
+          unit:MilliL-PER-SEC
+          unit:PK_US_DRY-PER-SEC
+          unit:BBL_UK_PET-PER-MIN
+          unit:GI_UK-PER-MIN
+          unit:PK_UK-PER-HR
+          unit:QT_UK-PER-MIN
+          unit:BU_UK-PER-MIN
+          unit:M3-PER-DAY
+          unit:BU_US_DRY-PER-HR
+          unit:OZ_VOL_UK-PER-SEC
+          unit:BBL_UK_PET-PER-SEC
+          unit:PINT_US-PER-SEC
+          unit:BBL_US-PER-DAY
+          unit:FT3-PER-DAY
+          unit:GI_US-PER-SEC
           unit:GAL_UK-PER-SEC
           unit:BU_UK-PER-SEC
-          unit:YD3-PER-MIN
-          unit:FT3-PER-SEC
-          unit:PINT_UK-PER-SEC
-          unit:DeciM3-PER-HR
-          unit:BU_UK-PER-MIN
-          unit:PINT_US-PER-SEC
-          unit:KiloL-PER-HR
-          unit:GI_UK-PER-DAY
-          unit:PINT_US-PER-DAY
-          unit:QT_UK-PER-SEC
-          unit:PINT_UK-PER-DAY
-          unit:PK_UK-PER-MIN
-          unit:L-PER-HR
-          unit:OZ_VOL_US-PER-HR
-          unit:BBL_UK_PET-PER-SEC
-          unit:M3-PER-MIN
-          unit:GI_UK-PER-MIN
-          unit:BBL_UK_PET-PER-DAY
-          unit:OZ_VOL_UK-PER-SEC
-          unit:BU_US_DRY-PER-DAY
-          unit:BU_US_DRY-PER-HR
-          unit:CentiM3-PER-SEC
-          unit:FT3-PER-MIN
-          unit:OZ_VOL_UK-PER-HR
-          unit:L-PER-SEC
-          unit:CentiM3-PER-HR
-          unit:QT_UK-PER-MIN
-          unit:IN3-PER-MIN
-          unit:BBL_US_PET-PER-HR
-          unit:MilliL-PER-SEC
-          unit:GI_US-PER-SEC
-          unit:GI_US-PER-DAY
-          unit:PK_UK-PER-SEC
-          unit:QT_US-PER-SEC
-          unit:DeciM3-PER-DAY
-          unit:QT_US-PER-DAY
-          unit:DeciM3-PER-SEC
-          unit:PINT_UK-PER-MIN
-          unit:BBL_US-PER-MIN
-          unit:FT3-PER-DAY
-          unit:PK_UK-PER-HR
-          unit:BBL_UK_PET-PER-HR
-          unit:OZ_VOL_UK-PER-DAY
+          unit:PK_UK-PER-DAY
+          unit:GAL_US-PER-MIN
+          unit:IN3-PER-SEC
           unit:OZ_VOL_US-PER-DAY
-          unit:PK_US_DRY-PER-SEC
-          unit:MilliL-PER-DAY
+          unit:BU_US_DRY-PER-SEC
+          unit:OZ_VOL_UK-PER-HR
+          unit:OZ_VOL_US-PER-MIN
+          unit:GI_UK-PER-DAY
+          unit:QT_US-PER-SEC
+          unit:CentiM3-PER-SEC
+          unit:GI_US-PER-DAY
+          unit:PINT_UK-PER-SEC
           unit:BU_UK-PER-DAY
-          unit:BU_UK-PER-HR
+          unit:GAL_US-PER-SEC
+          unit:QT_US-PER-HR
+          unit:BBL_UK_PET-PER-HR
+          unit:GAL_US-PER-HR
+          unit:BBL_US_PET-PER-HR
+          unit:GAL_UK-PER-MIN
+          unit:FT3-PER-MIN
+          unit:KiloL-PER-HR
+          unit:BBL_US-PER-MIN
+          unit:PK_US_DRY-PER-DAY
+          unit:YD3-PER-SEC
+          unit:MilliL-PER-DAY
+          unit:MilliL-PER-HR
+          unit:OZ_VOL_UK-PER-MIN
+          unit:QT_UK-PER-DAY
+          unit:DeciM3-PER-DAY
+          unit:IN3-PER-MIN
+          unit:PINT_UK-PER-HR
+          unit:L-PER-MIN
           unit:L-PER-DAY
-          unit:MilliL-PER-MIN
+          unit:QT_UK-PER-HR
+          unit:BU_US_DRY-PER-DAY
+          unit:QT_US-PER-MIN
           unit:PINT_US-PER-MIN
+          unit:FT3-PER-HR
+          unit:L-PER-SEC
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58747,28 +58748,28 @@ bsh:FrequencyShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:PER-HR
-          unit:PERCENT-PER-WK
-          unit:KiloHZ
+          unit:SAMPLE-PER-SEC
+          unit:PER-YR
           unit:PER-WK
-          unit:NUM-PER-YR
-          unit:PER-MIN
-          unit:PER-SEC
           unit:PERCENT-PER-HR
-          unit:PlanckFrequency
-          unit:PER-DAY
-          unit:GigaHZ
-          unit:PER-MilliSEC
-          unit:PER-MO
-          unit:MegaHZ
           unit:PERCENT-PER-DAY
+          unit:PER-DAY
+          unit:PER-HR
+          unit:GigaHZ
+          unit:NUM-PER-YR
+          unit:HZ
+          unit:KiloHZ
+          unit:PlanckFrequency
+          unit:PERCENT-PER-WK
           unit:NUM-PER-SEC
+          unit:TeraHZ
           unit:NUM-PER-HR
           unit:failures-in-time
-          unit:PER-YR
-          unit:SAMPLE-PER-SEC
-          unit:HZ
-          unit:TeraHZ
+          unit:MegaHZ
+          unit:PER-MO
+          unit:PER-MIN
+          unit:PER-MilliSEC
+          unit:PER-SEC
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58810,9 +58811,9 @@ bsh:IlluminanceShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:Phot
-          unit:FC
           unit:LUX
+          unit:FC
+          unit:Phot
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58870,10 +58871,10 @@ bsh:IrradianceShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:W-PER-CentiM2
-          unit:W-PER-IN2
           unit:W-PER-M2
+          unit:W-PER-IN2
           unit:W-PER-FT2
+          unit:W-PER-CentiM2
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58911,14 +58912,14 @@ bsh:LevelShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:MilliM
-          unit:FT
-          unit:YD
-          unit:KiloM
-          unit:MicroM
           unit:CentiM
-          unit:M
+          unit:YD
+          unit:MicroM
+          unit:MilliM
           unit:IN
+          unit:M
+          unit:FT
+          unit:KiloM
           unit:DeciM
         ) ;
       sh:maxCount 1 ;
@@ -58940,14 +58941,14 @@ bsh:Linear_SpeedShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:KiloM-PER-SEC
-          unit:MI-PER-SEC
-          unit:M-PER-HR
           unit:MI-PER-HR
-          unit:FT-PER-SEC
           unit:FT-PER-HR
-          unit:M-PER-SEC
+          unit:MI-PER-SEC
+          unit:FT-PER-SEC
+          unit:KiloM-PER-SEC
+          unit:M-PER-HR
           unit:KiloM-PER-HR
+          unit:M-PER-SEC
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -58968,14 +58969,14 @@ bsh:LuminanceShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:CD
-          unit:CD-PER-IN2
           unit:STILB
-          unit:CD-PER-M2
-          unit:LA
-          unit:CP
+          unit:CD
           unit:FT-LA
+          unit:CP
+          unit:LA
+          unit:CD-PER-IN2
           unit:LM
+          unit:CD-PER-M2
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59039,52 +59040,52 @@ bsh:MassShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:TON_LONG
-          unit:DecaGM
-          unit:CWT_LONG
-          unit:HectoGM
-          unit:KiloTON_Metric
-          unit:SLUG
-          unit:TON_Assay
-          unit:Stone_UK
-          unit:DeciTON_Metric
-          unit:DeciTONNE
-          unit:SolarMass
-          unit:NanoGM
           unit:DRAM_US
-          unit:DRAM_UK
-          unit:LB
-          unit:CARAT
-          unit:Da
+          unit:AMU
+          unit:DeciGM
           unit:DWT
-          unit:KiloGM
-          unit:MicroGM
-          unit:TON_US
+          unit:Hundredweight_UK
           unit:TON_SHORT
-          unit:Quarter_UK
-          unit:TONNE
+          unit:LB_T
+          unit:CWT_LONG
+          unit:DecaGM
+          unit:PlanckMass
+          unit:CARAT
+          unit:EarthMass
+          unit:NanoGM
+          unit:GRAIN
+          unit:Da
+          unit:Pennyweight
+          unit:OZ
+          unit:MegaGM
+          unit:GM
+          unit:TON_US
+          unit:SLUG
+          unit:SolarMass
+          unit:MilliGM
+          unit:KiloTONNE
+          unit:Stone_UK
+          unit:KiloGM
+          unit:HectoGM
+          unit:CentiGM
+          unit:TON_Assay
+          unit:U
+          unit:Hundredweight_US
+          unit:DeciTON_Metric
+          unit:MicroGM
+          unit:TON_UK
+          unit:KiloTON_Metric
           unit:LunarMass
+          unit:PicoGM
+          unit:DeciTONNE
           unit:CWT_SHORT
           unit:OZ_TROY
-          unit:GM
-          unit:CentiGM
-          unit:GRAIN
-          unit:OZ
-          unit:DeciGM
-          unit:U
-          unit:PlanckMass
-          unit:EarthMass
-          unit:Hundredweight_UK
-          unit:Hundredweight_US
-          unit:TON_UK
-          unit:LB_T
-          unit:MegaGM
-          unit:MilliGM
-          unit:PicoGM
-          unit:AMU
+          unit:Quarter_UK
+          unit:DRAM_UK
           unit:TON_Metric
-          unit:Pennyweight
-          unit:KiloTONNE
+          unit:TON_LONG
+          unit:TONNE
+          unit:LB
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59250,9 +59251,9 @@ bsh:Operative_TemperatureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:DEG_C
-          unit:K
           unit:DEG_F
+          unit:K
+          unit:DEG_C
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59364,10 +59365,10 @@ bsh:Peak_PowerShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:W
+          unit:KiloW
           unit:MilliW
           unit:MegaW
-          unit:KiloW
+          unit:W
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59425,17 +59426,17 @@ bsh:Phasor_AngleShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:REV
-          unit:MIL
-          unit:ARCMIN
-          unit:GRAD
-          unit:MilliRAD
-          unit:ARCSEC
-          unit:GON
-          unit:DEG
-          unit:RAD
           unit:MilliARCSEC
+          unit:RAD
+          unit:REV
+          unit:DEG
+          unit:MIL
+          unit:GON
           unit:MicroRAD
+          unit:MilliRAD
+          unit:GRAD
+          unit:ARCSEC
+          unit:ARCMIN
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59456,17 +59457,17 @@ bsh:Phasor_MagnitudeShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:REV
-          unit:MIL
-          unit:ARCMIN
-          unit:GRAD
-          unit:MilliRAD
-          unit:ARCSEC
-          unit:GON
-          unit:DEG
-          unit:RAD
           unit:MilliARCSEC
+          unit:RAD
+          unit:REV
+          unit:DEG
+          unit:MIL
+          unit:GON
           unit:MicroRAD
+          unit:MilliRAD
+          unit:GRAD
+          unit:ARCSEC
+          unit:ARCMIN
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59541,53 +59542,53 @@ bsh:PowerShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:PSI-IN3-PER-SEC
-          unit:J-PER-SEC
-          unit:FT-LB_F-PER-SEC
-          unit:NanoW
+          unit:MilliBAR-M3-PER-SEC
           unit:PSI-M3-PER-SEC
-          unit:HP-PER-M
           unit:PlanckPower
-          unit:PA-M3-PER-SEC
-          unit:TeraW
-          unit:HP_Boiler
-          unit:HP
-          unit:BTU_IT-PER-SEC
-          unit:J-PER-HR
-          unit:W
-          unit:MicroW
-          unit:HP_Brake
-          unit:BTU_IT
+          unit:KiloCAL-PER-MIN
+          unit:MegaV-A
+          unit:MegaV-A_Reactive
+          unit:KiloV-A_Reactive
+          unit:NanoW
           unit:FT-LB_F-PER-MIN
           unit:V-A_Reactive
-          unit:HP_Electric
-          unit:MegaPA-M3-PER-SEC
-          unit:MilliW
-          unit:TON_FG
-          unit:HP-PER-V
-          unit:GigaW
-          unit:MegaV-A_Reactive
-          unit:BAR-L-PER-SEC
-          unit:HP_Metric
-          unit:BAR-M3-PER-SEC
-          unit:MilliBAR-M3-PER-SEC
-          unit:FT-LB_F-PER-HR
-          unit:MegaW
-          unit:ERG-PER-SEC
-          unit:KiloW
-          unit:KiloV-A
-          unit:KiloCAL-PER-MIN
-          unit:MegaJ-PER-SEC
-          unit:MegaV-A
           unit:V-A
           unit:MilliBAR-L-PER-SEC
+          unit:PA-M3-PER-SEC
+          unit:GigaW
           unit:PicoW
-          unit:KiloCAL-PER-SEC
-          unit:KiloV-A_Reactive
-          unit:MegaPA-L-PER-SEC
-          unit:PA-L-PER-SEC
+          unit:BTU_IT-PER-SEC
+          unit:TeraW
+          unit:MegaPA-M3-PER-SEC
+          unit:HP
+          unit:HP_Metric
+          unit:BAR-M3-PER-SEC
+          unit:TON_FG
+          unit:W
+          unit:FT-LB_F-PER-SEC
+          unit:PSI-IN3-PER-SEC
+          unit:MegaJ-PER-SEC
+          unit:HP_Electric
+          unit:BTU_IT
           unit:PSI-YD3-PER-SEC
+          unit:J-PER-HR
+          unit:MegaPA-L-PER-SEC
+          unit:ERG-PER-SEC
+          unit:PA-L-PER-SEC
+          unit:HP_Brake
+          unit:KiloCAL-PER-SEC
+          unit:MicroW
+          unit:BAR-L-PER-SEC
+          unit:FT-LB_F-PER-HR
+          unit:HP-PER-V
+          unit:J-PER-SEC
+          unit:MegaW
+          unit:HP-PER-M
+          unit:KiloW
+          unit:MilliW
           unit:BTU_IT-PER-HR
+          unit:KiloV-A
+          unit:HP_Boiler
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59629,14 +59630,14 @@ bsh:PrecipitationShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:MilliM
-          unit:FT
-          unit:YD
-          unit:KiloM
-          unit:MicroM
           unit:CentiM
-          unit:M
+          unit:YD
+          unit:MicroM
+          unit:MilliM
           unit:IN
+          unit:M
+          unit:FT
+          unit:KiloM
           unit:DeciM
         ) ;
       sh:maxCount 1 ;
@@ -59658,57 +59659,57 @@ bsh:PressureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:HectoBAR
-          unit:GigaPA
-          unit:KiloGM-PER-M-SEC2
-          unit:MicroATM
-          unit:CentiM_H2O
-          unit:GM_F-PER-CentiM2
-          unit:PlanckPressure
-          unit:LB_F-PER-IN2
-          unit:IN_H2O
-          unit:MicroBAR
-          unit:PDL-PER-FT2
-          unit:BARYE
-          unit:N-PER-M2
-          unit:HectoPA
-          unit:MilliM_H2O
-          unit:MilliM_HGA
-          unit:N-PER-CentiM2
-          unit:ATM
-          unit:KiloGM_F-PER-CentiM2
-          unit:KiloGM_F-PER-MilliM2
-          unit:MegaBAR
-          unit:MicroTORR
-          unit:KiloPA
-          unit:CentiBAR
-          unit:FT_HG
-          unit:PSI
-          unit:KiloPA_A
-          unit:N-PER-MilliM2
-          unit:KIP_F-PER-IN2
-          unit:IN_HG
-          unit:DYN-PER-CentiM2
           unit:KiloLB_F-PER-IN2
-          unit:TORR
-          unit:FT_H2O
-          unit:MilliM_HG
-          unit:DeciBAR
-          unit:MilliTORR
-          unit:BAR
+          unit:KIP_F-PER-IN2
+          unit:CentiM_H2O
+          unit:IN_H2O
+          unit:LB_F-PER-IN2
+          unit:BARYE
+          unit:GM_F-PER-CentiM2
+          unit:MilliBAR
+          unit:PSI
+          unit:MilliM_H2O
+          unit:FT_HG
           unit:MilliPA
+          unit:PlanckPressure
+          unit:ATM_T
+          unit:N-PER-CentiM2
+          unit:KiloBAR
+          unit:DYN-PER-CentiM2
+          unit:MicroTORR
+          unit:BAR
+          unit:KiloGM-PER-M-SEC2
+          unit:DeciBAR
+          unit:CentiBAR
+          unit:KiloGM_F-PER-CentiM2
+          unit:HectoPA
+          unit:TORR
+          unit:MicroATM
+          unit:LB_F-PER-FT2
+          unit:N-PER-M2
+          unit:PDL-PER-FT2
+          unit:KiloPA_A
+          unit:MilliTORR
+          unit:HectoBAR
+          unit:CM_H2O
+          unit:PA
+          unit:MicroBAR
+          unit:ATM
+          unit:DecaPA
+          unit:FT_H2O
+          unit:MegaPA
+          unit:MegaBAR
+          unit:MilliM_HG
           unit:CentiM_HG
           unit:MicroPA
-          unit:MegaPA
-          unit:CM_H2O
-          unit:ATM_T
-          unit:MilliBAR
           unit:KiloGM_F-PER-M2
-          unit:LB_F-PER-FT2
-          unit:DecaPA
-          unit:KiloBAR
-          unit:PA
+          unit:MilliM_HGA
+          unit:KiloGM_F-PER-MilliM2
+          unit:GigaPA
+          unit:N-PER-MilliM2
+          unit:KiloPA
           unit:BARAD
+          unit:IN_HG
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59783,9 +59784,9 @@ bsh:Radiant_TemperatureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:DEG_C
-          unit:K
           unit:DEG_F
+          unit:K
+          unit:DEG_C
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59827,9 +59828,9 @@ bsh:Reactive_EnergyShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
+          unit:V-A_Reactive-HR
           unit:KiloV-A_Reactive-HR
           unit:MegaV-A_Reactive-HR
-          unit:V-A_Reactive-HR
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59850,9 +59851,9 @@ bsh:Reactive_PowerShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
+          unit:MegaV-A_Reactive
           unit:KiloV-A_Reactive
           unit:V-A_Reactive
-          unit:MegaV-A_Reactive
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59917,12 +59918,12 @@ bsh:Rotational_SpeedShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
+          unit:DEG-PER-SEC
+          unit:DEG-PER-HR
+          unit:DEG-PER-MIN
           unit:RAD-PER-MIN
           unit:RAD-PER-SEC
-          unit:DEG-PER-MIN
           unit:RAD-PER-HR
-          unit:DEG-PER-HR
-          unit:DEG-PER-SEC
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59943,10 +59944,10 @@ bsh:Solar_IrradianceShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:W-PER-CentiM2
-          unit:W-PER-IN2
           unit:W-PER-M2
+          unit:W-PER-IN2
           unit:W-PER-FT2
+          unit:W-PER-CentiM2
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -59988,25 +59989,25 @@ bsh:SpeedShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
+          unit:DEG-PER-HR
+          unit:FT-PER-HR
+          unit:FT-PER-SEC
+          unit:DEG-PER-SEC
           unit:KiloM-PER-SEC
           unit:GigaC-PER-M3
-          unit:MI-PER-SEC
-          unit:GigaHZ-M
-          unit:FT-PER-SEC
-          unit:RAD-PER-MIN
-          unit:FT-PER-HR
-          unit:RAD-PER-SEC
-          unit:DEG-PER-SEC
-          unit:DEG-PER-HR
-          unit:BFT
           unit:FT3-PER-MIN-FT2
-          unit:MegaHZ-M
-          unit:M-PER-HR
-          unit:MI-PER-HR
           unit:DEG-PER-MIN
-          unit:M-PER-SEC
-          unit:KiloM-PER-HR
+          unit:MI-PER-HR
+          unit:BFT
+          unit:GigaHZ-M
+          unit:RAD-PER-SEC
+          unit:MI-PER-SEC
+          unit:MegaHZ-M
+          unit:RAD-PER-MIN
+          unit:M-PER-HR
           unit:HZ-M
+          unit:KiloM-PER-HR
+          unit:M-PER-SEC
           unit:RAD-PER-HR
         ) ;
       sh:maxCount 1 ;
@@ -60045,57 +60046,57 @@ bsh:Static_PressureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:HectoBAR
-          unit:GigaPA
-          unit:KiloGM-PER-M-SEC2
-          unit:MicroATM
-          unit:CentiM_H2O
-          unit:GM_F-PER-CentiM2
-          unit:PlanckPressure
-          unit:LB_F-PER-IN2
-          unit:IN_H2O
-          unit:MicroBAR
-          unit:PDL-PER-FT2
-          unit:BARYE
-          unit:N-PER-M2
-          unit:HectoPA
-          unit:MilliM_H2O
-          unit:MilliM_HGA
-          unit:N-PER-CentiM2
-          unit:ATM
-          unit:KiloGM_F-PER-CentiM2
-          unit:KiloGM_F-PER-MilliM2
-          unit:MegaBAR
-          unit:MicroTORR
-          unit:KiloPA
-          unit:CentiBAR
-          unit:FT_HG
-          unit:PSI
-          unit:KiloPA_A
-          unit:N-PER-MilliM2
-          unit:KIP_F-PER-IN2
-          unit:IN_HG
-          unit:DYN-PER-CentiM2
           unit:KiloLB_F-PER-IN2
-          unit:TORR
-          unit:FT_H2O
-          unit:MilliM_HG
-          unit:DeciBAR
-          unit:MilliTORR
-          unit:BAR
+          unit:KIP_F-PER-IN2
+          unit:CentiM_H2O
+          unit:IN_H2O
+          unit:LB_F-PER-IN2
+          unit:BARYE
+          unit:GM_F-PER-CentiM2
+          unit:MilliBAR
+          unit:PSI
+          unit:MilliM_H2O
+          unit:FT_HG
           unit:MilliPA
+          unit:PlanckPressure
+          unit:ATM_T
+          unit:N-PER-CentiM2
+          unit:KiloBAR
+          unit:DYN-PER-CentiM2
+          unit:MicroTORR
+          unit:BAR
+          unit:KiloGM-PER-M-SEC2
+          unit:DeciBAR
+          unit:CentiBAR
+          unit:KiloGM_F-PER-CentiM2
+          unit:HectoPA
+          unit:TORR
+          unit:MicroATM
+          unit:LB_F-PER-FT2
+          unit:N-PER-M2
+          unit:PDL-PER-FT2
+          unit:KiloPA_A
+          unit:MilliTORR
+          unit:HectoBAR
+          unit:CM_H2O
+          unit:PA
+          unit:MicroBAR
+          unit:ATM
+          unit:DecaPA
+          unit:FT_H2O
+          unit:MegaPA
+          unit:MegaBAR
+          unit:MilliM_HG
           unit:CentiM_HG
           unit:MicroPA
-          unit:MegaPA
-          unit:CM_H2O
-          unit:ATM_T
-          unit:MilliBAR
           unit:KiloGM_F-PER-M2
-          unit:LB_F-PER-FT2
-          unit:DecaPA
-          unit:KiloBAR
-          unit:PA
+          unit:MilliM_HGA
+          unit:KiloGM_F-PER-MilliM2
+          unit:GigaPA
+          unit:N-PER-MilliM2
+          unit:KiloPA
           unit:BARAD
+          unit:IN_HG
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60176,12 +60177,12 @@ bsh:TemperatureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:K
-          unit:PlanckTemperature
-          unit:DEG_R
-          unit:DEG_C
-          unit:MilliDEG_C
           unit:DEG_F
+          unit:MilliDEG_C
+          unit:K
+          unit:DEG_C
+          unit:DEG_R
+          unit:PlanckTemperature
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60225,23 +60226,23 @@ bsh:Thermal_EnergyShape
       sh:path brick:hasUnit ;
       sh:in (
           unit:GigaJ
+          unit:BTU_IT
+          unit:N-M
           unit:CAL_15_DEG_C
-          unit:THM_EEC
-          unit:BTU_MEAN
-          unit:BTU_TH
-          unit:KiloJ
-          unit:KiloCAL
+          unit:THM_US
+          unit:J
+          unit:MegaJ
           unit:CAL_IT
           unit:CAL_MEAN
-          unit:N-M
-          unit:CAL_TH
-          unit:MegaJ
-          unit:THM_US
+          unit:BTU_TH
+          unit:KiloCAL
           unit:KiloCAL_Mean
+          unit:KiloJ
           unit:KiloCAL_TH
+          unit:THM_EEC
+          unit:BTU_MEAN
+          unit:CAL_TH
           unit:KiloCAL_IT
-          unit:BTU_IT
-          unit:J
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60263,10 +60264,10 @@ bsh:Thermal_PowerShape
       sh:path brick:hasUnit ;
       sh:in (
           unit:MilliW
+          unit:KiloW
+          unit:W
           unit:BTU_IT
           unit:MegaW
-          unit:W
-          unit:KiloW
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60287,18 +60288,18 @@ bsh:TiltShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:MIN_Angle
-          unit:MIL
-          unit:REV
-          unit:ARCMIN
-          unit:GRAD
-          unit:MilliRAD
-          unit:ARCSEC
-          unit:GON
-          unit:DEG
-          unit:RAD
           unit:MilliARCSEC
+          unit:RAD
+          unit:REV
+          unit:MIN_Angle
+          unit:DEG
+          unit:MIL
+          unit:GON
           unit:MicroRAD
+          unit:MilliRAD
+          unit:GRAD
+          unit:ARCSEC
+          unit:ARCMIN
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60319,40 +60320,40 @@ bsh:TimeShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:PlanckTime
-          unit:HR_Sidereal
-          unit:CentiPOISE-PER-BAR
-          unit:H-PER-OHM
-          unit:MicroSEC
-          unit:PA-SEC-PER-BAR
-          unit:MO_MeanGREGORIAN
-          unit:POISE-PER-BAR
-          unit:SEC
-          unit:YR
-          unit:NanoSEC
-          unit:YR_Common
-          unit:MO_Synodic
-          unit:MicroH-PER-OHM
-          unit:MilliH-PER-OHM
-          unit:DAY_Sidereal
-          unit:SH
-          unit:MilliSEC
-          unit:H-PER-KiloOHM
-          unit:WK
-          unit:KiloSEC
-          unit:DAY
-          unit:HR
-          unit:MIN
-          unit:MO_MeanJulian
-          unit:MilliPA-SEC-PER-BAR
-          unit:MilliH-PER-KiloOHM
-          unit:MicroH-PER-KiloOHM
-          unit:PicoSEC
-          unit:MIN_Sidereal
-          unit:YR_Sidereal
-          unit:YR_TROPICAL
           unit:MegaYR
+          unit:MilliH-PER-KiloOHM
+          unit:YR_Common
+          unit:SH
+          unit:MicroH-PER-KiloOHM
+          unit:KiloSEC
+          unit:MO_MeanGREGORIAN
+          unit:YR_Sidereal
+          unit:MilliH-PER-OHM
+          unit:YR
+          unit:CentiPOISE-PER-BAR
+          unit:HR_Sidereal
+          unit:MO_Synodic
+          unit:SEC
+          unit:HR
+          unit:YR_TROPICAL
+          unit:POISE-PER-BAR
+          unit:H-PER-OHM
+          unit:MO_MeanJulian
+          unit:DAY
+          unit:MIN_Sidereal
+          unit:H-PER-KiloOHM
+          unit:MilliSEC
+          unit:PA-SEC-PER-BAR
+          unit:DAY_Sidereal
+          unit:WK
+          unit:MicroH-PER-OHM
+          unit:PicoSEC
+          unit:MilliPA-SEC-PER-BAR
+          unit:MicroSEC
           unit:MO
+          unit:PlanckTime
+          unit:MIN
+          unit:NanoSEC
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60392,21 +60393,21 @@ bsh:TorqueShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:N-M
-          unit:CentiN-M
-          unit:N-CentiM
-          unit:OZ_F-IN
-          unit:DYN-CentiM
           unit:KiloN-M
           unit:LB_F-IN
-          unit:MicroN-M
-          unit:J
-          unit:KiloGM_F-PER-M
-          unit:MilliN-M
-          unit:DeciN-M
           unit:KiloGM_F-M
           unit:LB_F-FT
+          unit:MilliN-M
           unit:MegaN-M
+          unit:N-M
+          unit:OZ_F-IN
+          unit:J
+          unit:CentiN-M
+          unit:MicroN-M
+          unit:DYN-CentiM
+          unit:KiloGM_F-PER-M
+          unit:N-CentiM
+          unit:DeciN-M
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60430,57 +60431,57 @@ bsh:Velocity_PressureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:HectoBAR
-          unit:GigaPA
-          unit:KiloGM-PER-M-SEC2
-          unit:MicroATM
-          unit:CentiM_H2O
-          unit:GM_F-PER-CentiM2
-          unit:PlanckPressure
-          unit:LB_F-PER-IN2
-          unit:IN_H2O
-          unit:MicroBAR
-          unit:PDL-PER-FT2
-          unit:BARYE
-          unit:N-PER-M2
-          unit:HectoPA
-          unit:MilliM_H2O
-          unit:MilliM_HGA
-          unit:N-PER-CentiM2
-          unit:ATM
-          unit:KiloGM_F-PER-CentiM2
-          unit:KiloGM_F-PER-MilliM2
-          unit:MegaBAR
-          unit:MicroTORR
-          unit:KiloPA
-          unit:CentiBAR
-          unit:FT_HG
-          unit:PSI
-          unit:KiloPA_A
-          unit:N-PER-MilliM2
-          unit:KIP_F-PER-IN2
-          unit:IN_HG
-          unit:DYN-PER-CentiM2
           unit:KiloLB_F-PER-IN2
-          unit:TORR
-          unit:FT_H2O
-          unit:MilliM_HG
-          unit:DeciBAR
-          unit:MilliTORR
-          unit:BAR
+          unit:KIP_F-PER-IN2
+          unit:CentiM_H2O
+          unit:IN_H2O
+          unit:LB_F-PER-IN2
+          unit:BARYE
+          unit:GM_F-PER-CentiM2
+          unit:MilliBAR
+          unit:PSI
+          unit:MilliM_H2O
+          unit:FT_HG
           unit:MilliPA
+          unit:PlanckPressure
+          unit:ATM_T
+          unit:N-PER-CentiM2
+          unit:KiloBAR
+          unit:DYN-PER-CentiM2
+          unit:MicroTORR
+          unit:BAR
+          unit:KiloGM-PER-M-SEC2
+          unit:DeciBAR
+          unit:CentiBAR
+          unit:KiloGM_F-PER-CentiM2
+          unit:HectoPA
+          unit:TORR
+          unit:MicroATM
+          unit:LB_F-PER-FT2
+          unit:N-PER-M2
+          unit:PDL-PER-FT2
+          unit:KiloPA_A
+          unit:MilliTORR
+          unit:HectoBAR
+          unit:CM_H2O
+          unit:PA
+          unit:MicroBAR
+          unit:ATM
+          unit:DecaPA
+          unit:FT_H2O
+          unit:MegaPA
+          unit:MegaBAR
+          unit:MilliM_HG
           unit:CentiM_HG
           unit:MicroPA
-          unit:MegaPA
-          unit:CM_H2O
-          unit:ATM_T
-          unit:MilliBAR
           unit:KiloGM_F-PER-M2
-          unit:LB_F-PER-FT2
-          unit:DecaPA
-          unit:KiloBAR
-          unit:PA
+          unit:MilliM_HGA
+          unit:KiloGM_F-PER-MilliM2
+          unit:GigaPA
+          unit:N-PER-MilliM2
+          unit:KiloPA
           unit:BARAD
+          unit:IN_HG
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60530,14 +60531,14 @@ bsh:VoltageShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:V_Stat
-          unit:MegaV
-          unit:PlanckVolt
-          unit:MicroV
-          unit:V
-          unit:MilliV
-          unit:V_Ab
           unit:KiloV
+          unit:MicroV
+          unit:V_Ab
+          unit:MegaV
+          unit:MilliV
+          unit:PlanckVolt
+          unit:V_Stat
+          unit:V
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60558,17 +60559,17 @@ bsh:Voltage_AngleShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:REV
-          unit:MIL
-          unit:ARCMIN
-          unit:GRAD
-          unit:MilliRAD
-          unit:ARCSEC
-          unit:GON
-          unit:DEG
-          unit:RAD
           unit:MilliARCSEC
+          unit:RAD
+          unit:REV
+          unit:DEG
+          unit:MIL
+          unit:GON
           unit:MicroRAD
+          unit:MilliRAD
+          unit:GRAD
+          unit:ARCSEC
+          unit:ARCMIN
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60632,9 +60633,9 @@ bsh:Wet_Bulb_TemperatureShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:DEG_C
-          unit:K
           unit:DEG_F
+          unit:K
+          unit:DEG_C
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -60655,17 +60656,17 @@ bsh:Wind_DirectionShape
       rdf:type sh:PropertyShape ;
       sh:path brick:hasUnit ;
       sh:in (
-          unit:REV
-          unit:MIL
-          unit:ARCMIN
-          unit:GRAD
-          unit:MilliRAD
-          unit:ARCSEC
-          unit:GON
-          unit:DEG
-          unit:RAD
           unit:MilliARCSEC
+          unit:RAD
+          unit:REV
+          unit:DEG
+          unit:MIL
+          unit:GON
           unit:MicroRAD
+          unit:MilliRAD
+          unit:GRAD
+          unit:ARCSEC
+          unit:ARCMIN
         ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
