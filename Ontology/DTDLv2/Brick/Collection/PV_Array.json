@@ -3,18 +3,7 @@
   "@type": "Interface",
   "contents": [
     {
-      "@type": "Relationship",
-      "displayName": {
-        "en": "includes"
-      },
-      "name": "includes",
-      "target": "dtmi:org:brickschema:schema:Brick:PV_Panel;1",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Property"
-      ],
+      "@type": "Property",
       "description": {
         "en": "Brick tags associated with this interface."
       },
@@ -32,8 +21,16 @@
           "name": "tagValue",
           "schema": "boolean"
         }
+      }
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "includes"
       },
-      "writable": false
+      "name": "includes",
+      "target": "dtmi:org:brickschema:schema:Brick:PV_Panel;1",
+      "writable": true
     }
   ],
   "displayName": {
