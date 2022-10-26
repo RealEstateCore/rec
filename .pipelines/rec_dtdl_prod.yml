@@ -37,6 +37,6 @@ jobs:
         run: |
           nuget pack Ontology/Ontology.nuspec
 
-      # Publish the Microsoft.SmartPlaces.Facilities.OntologyMapper.Mapped package to Nuget
+      # Publish the Ontology package to Nuget
       - name: 'dotnet publish to nuget'
         run: dotnet nuget push --source "${{ env.NUGET_FEED_URL }}" Ontology/**/*.nupkg
