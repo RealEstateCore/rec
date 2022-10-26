@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>RealEstateCore.Ontologies.Dtdlv2</id>
+    <version>0.1.0-preview</version>
+    <authors>RealEstateCore</authors>
+    <owners>realestatecore</owners>
+    <projectUrl>https://github.com/RealEstateCore/rec</projectUrl>
+    <license type="expression">BSD-3-Clause</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Real Estate Core Graph Ontology</description>
+    <copyright>Copyright ©2022 RealEstateCore</copyright>
+    <tags>ontology rec brick</tags>
+    <contentFiles>
+      <files include="**/*.json" buildAction="EmbeddedResource" copyToOutput="true" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="**/RealEstateCore.DTDL*.json" target="contentFiles\any\any" />
+    <file src="**/RealEstateCore.DTDL*.json" target="content" />
+  </files>
+</package>
