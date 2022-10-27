@@ -9,7 +9,9 @@ requests on our GitHub repository. Such individual contributors include:
 * @ektrah
 * Chris Bupp (@cbupp)
 
-If you are included on this list and would like to be removed, please reach out to dev@realestatecore.io
+If you are not included on this list but feel that you have made contributions, do not hesitate to remind us to add you. Email dev@realestatecore.io with a brief description of the contribution.
+
+Similarly, if you are included on this list and would like to be removed, please reach out to dev@realestatecore.io.
 
 ## Reused Software
 
