@@ -1,14 +1,9 @@
 openapi: 3.0.3
 info:
-  version: "4.0"
-  title: RealEstateCore
-  license:
-    name: BSD
-    url: https://opensource.org/licenses/BSD-3-Clause
+  version: "4.0.0-preview"
+  title: RealEstateCore.Ontology.DTDLv2
   contact:
-    name: RealEstateCore Consortium
-    url: https://realestatecore.io/
-    email: hello@realestatecore.io
+    name: RealEstateCore
   description: RealEstateCore (REC) is an ontology model and API specification for building and interfacing against Smart Buildings, whether on individual building or portfolio level. The REC ontology is released in DTDL (Digital Twin Definition Language) and SHACL (RDF Shapes Contraint language) formats; the REC API is expressed as an OpenAPI Specification (a.k.a. Swagger). We also provide a southbound edge API for bandwidth-constrained devices to communicate telemetry, alerts, commands, etc (see GitHub repository).
 components:
   parameters:
@@ -132,7 +127,7 @@ components:
           type: string
         desc:
           type: string
-    brick_Point:
+    Point:
       type: object
       properties:
         '@id':
@@ -161,11 +156,9 @@ components:
           type: string
         hasSubstance:
           type: string
-        lastKnownValue:
-          type: string
         name:
           type: string
-    brick_Alarm:
+    Alarm:
       type: object
       properties:
         '@id':
@@ -184,6 +177,8 @@ components:
                 type: string
               '@type':
                 type: string
+        lastKnownValue:
+          type: string
         aggregate:
           type: string
         customTags:
@@ -194,11 +189,9 @@ components:
           type: string
         hasSubstance:
           type: string
-        lastKnownValue:
-          type: string
         name:
           type: string
-    brick_Command:
+    Command:
       type: object
       properties:
         '@id':
@@ -217,6 +210,8 @@ components:
                 type: string
               '@type':
                 type: string
+        lastKnownValue:
+          type: string
         aggregate:
           type: string
         customTags:
@@ -227,11 +222,9 @@ components:
           type: string
         hasSubstance:
           type: string
-        lastKnownValue:
-          type: string
         name:
           type: string
-    brick_Parameter:
+    Parameter:
       type: object
       properties:
         '@id':
@@ -250,6 +243,8 @@ components:
                 type: string
               '@type':
                 type: string
+        lastKnownValue:
+          type: string
         aggregate:
           type: string
         customTags:
@@ -260,11 +255,9 @@ components:
           type: string
         hasSubstance:
           type: string
-        lastKnownValue:
-          type: string
         name:
           type: string
-    brick_Sensor:
+    Sensor:
       type: object
       properties:
         '@id':
@@ -293,11 +286,9 @@ components:
           type: string
         hasSubstance:
           type: string
-        lastKnownValue:
-          type: string
         name:
           type: string
-    brick_Setpoint:
+    Setpoint:
       type: object
       properties:
         '@id':
@@ -316,6 +307,8 @@ components:
                 type: string
               '@type':
                 type: string
+        lastKnownValue:
+          type: string
         aggregate:
           type: string
         customTags:
@@ -326,11 +319,9 @@ components:
           type: string
         hasSubstance:
           type: string
-        lastKnownValue:
-          type: string
         name:
           type: string
-    brick_Status:
+    Status:
       type: object
       properties:
         '@id':
@@ -349,6 +340,8 @@ components:
                 type: string
               '@type':
                 type: string
+        lastKnownValue:
+          type: string
         aggregate:
           type: string
         customTags:
@@ -359,11 +352,9 @@ components:
           type: string
         hasSubstance:
           type: string
-        lastKnownValue:
-          type: string
         name:
           type: string
-    rec_Agent:
+    Agent:
       type: object
       properties:
         '@id':
@@ -389,7 +380,7 @@ components:
           type: string
         name:
           type: string
-    rec_Asset:
+    Asset:
       type: object
       properties:
         '@id':
@@ -548,7 +539,7 @@ components:
           format: date
         weight:
           type: string
-    rec_BuildingElement:
+    BuildingElement:
       type: object
       properties:
         '@id':
@@ -606,7 +597,7 @@ components:
           type: string
         name:
           type: string
-    rec_Collection:
+    Collection:
       type: object
       properties:
         '@id':
@@ -632,7 +623,7 @@ components:
           type: string
         name:
           type: string
-    rec_Event:
+    Event:
       type: object
       properties:
         '@id':
@@ -655,7 +646,7 @@ components:
         timestamp:
           type: string
           format: date-time
-    rec_Information:
+    Information:
       type: object
       properties:
         '@id':
@@ -669,7 +660,7 @@ components:
           type: string
         name:
           type: string
-    rec_Space:
+    Space:
       type: object
       properties:
         '@id':
@@ -718,7 +709,7 @@ components:
           type: string
         name:
           type: string
-    rec_Document:
+    Document:
       type: object
       properties:
         '@id':
@@ -754,7 +745,7 @@ components:
           type: string
         name:
           type: string
-    rec_Level:
+    Level:
       type: object
       properties:
         '@id':
@@ -937,7 +928,7 @@ components:
           type: string
         name:
           type: string
-    rec_Site:
+    Site:
       type: object
       properties:
         '@id':
@@ -1117,7 +1108,7 @@ components:
           type: string
         name:
           type: string
-    rec_Room:
+    Room:
       type: object
       properties:
         '@id':
@@ -1303,8 +1294,6 @@ components:
       - '@vocab'
       - '@base'
       - hydra
-      - brick
-      - rec
       properties:
         '@base':
           type: string
@@ -1313,14 +1302,6 @@ components:
           type: string
           format: uri
           default: http://www.w3.org/ns/hydra/core#
-        brick:
-          type: string
-          format: uri
-          default: dtmi:org:brickschema:schema:Brick
-        rec:
-          type: string
-          format: uri
-          default: dtmi:org:w3id:rec
 paths:
   /points:
     get:
@@ -1364,12 +1345,6 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
       - name: name
         description: Filter value on property 'name'.
         schema:
@@ -1400,7 +1375,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/brick_Point'
+                        - $ref: '#/components/schemas/Point'
       tags:
       - points
     post:
@@ -1419,7 +1394,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Point'
+              - $ref: '#/components/schemas/Point'
       responses:
         500:
           description: Internal Server Error
@@ -1437,7 +1412,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Point'
+                - $ref: '#/components/schemas/Point'
       tags:
       - points
   /points/{id}:
@@ -1467,7 +1442,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Point'
+                - $ref: '#/components/schemas/Point'
       tags:
       - points
     put:
@@ -1492,7 +1467,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Point'
+              - $ref: '#/components/schemas/Point'
       responses:
         400:
           description: Bad Request
@@ -1512,7 +1487,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Point'
+                - $ref: '#/components/schemas/Point'
       tags:
       - points
     patch:
@@ -1537,7 +1512,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Point'
+              - $ref: '#/components/schemas/Point'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -1560,7 +1535,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Point'
+                - $ref: '#/components/schemas/Point'
       tags:
       - points
     delete:
@@ -1593,6 +1568,12 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: lastKnownValue
+        description: Filter value on property 'lastKnownValue'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: aggregate
         description: Filter value on property 'aggregate'.
         schema:
@@ -1619,12 +1600,6 @@ paths:
         in: query
       - name: hasSubstance
         description: Filter value on property 'hasSubstance'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -1659,7 +1634,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/brick_Alarm'
+                        - $ref: '#/components/schemas/Alarm'
       tags:
       - alarmpoints
     post:
@@ -1678,7 +1653,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Alarm'
+              - $ref: '#/components/schemas/Alarm'
       responses:
         500:
           description: Internal Server Error
@@ -1696,7 +1671,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Alarm'
+                - $ref: '#/components/schemas/Alarm'
       tags:
       - alarmpoints
   /alarmpoints/{id}:
@@ -1726,7 +1701,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Alarm'
+                - $ref: '#/components/schemas/Alarm'
       tags:
       - alarmpoints
     put:
@@ -1751,7 +1726,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Alarm'
+              - $ref: '#/components/schemas/Alarm'
       responses:
         400:
           description: Bad Request
@@ -1771,7 +1746,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Alarm'
+                - $ref: '#/components/schemas/Alarm'
       tags:
       - alarmpoints
     patch:
@@ -1796,7 +1771,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Alarm'
+              - $ref: '#/components/schemas/Alarm'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -1819,7 +1794,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Alarm'
+                - $ref: '#/components/schemas/Alarm'
       tags:
       - alarmpoints
     delete:
@@ -1852,6 +1827,12 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: lastKnownValue
+        description: Filter value on property 'lastKnownValue'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: aggregate
         description: Filter value on property 'aggregate'.
         schema:
@@ -1878,12 +1859,6 @@ paths:
         in: query
       - name: hasSubstance
         description: Filter value on property 'hasSubstance'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -1918,7 +1893,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/brick_Command'
+                        - $ref: '#/components/schemas/Command'
       tags:
       - commandpoints
     post:
@@ -1937,7 +1912,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Command'
+              - $ref: '#/components/schemas/Command'
       responses:
         500:
           description: Internal Server Error
@@ -1955,7 +1930,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Command'
+                - $ref: '#/components/schemas/Command'
       tags:
       - commandpoints
   /commandpoints/{id}:
@@ -1985,7 +1960,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Command'
+                - $ref: '#/components/schemas/Command'
       tags:
       - commandpoints
     put:
@@ -2010,7 +1985,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Command'
+              - $ref: '#/components/schemas/Command'
       responses:
         400:
           description: Bad Request
@@ -2030,7 +2005,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Command'
+                - $ref: '#/components/schemas/Command'
       tags:
       - commandpoints
     patch:
@@ -2055,7 +2030,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Command'
+              - $ref: '#/components/schemas/Command'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -2078,7 +2053,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Command'
+                - $ref: '#/components/schemas/Command'
       tags:
       - commandpoints
     delete:
@@ -2111,6 +2086,12 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: lastKnownValue
+        description: Filter value on property 'lastKnownValue'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: aggregate
         description: Filter value on property 'aggregate'.
         schema:
@@ -2137,12 +2118,6 @@ paths:
         in: query
       - name: hasSubstance
         description: Filter value on property 'hasSubstance'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -2177,7 +2152,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/brick_Parameter'
+                        - $ref: '#/components/schemas/Parameter'
       tags:
       - parameterpoints
     post:
@@ -2196,7 +2171,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Parameter'
+              - $ref: '#/components/schemas/Parameter'
       responses:
         500:
           description: Internal Server Error
@@ -2214,7 +2189,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Parameter'
+                - $ref: '#/components/schemas/Parameter'
       tags:
       - parameterpoints
   /parameterpoints/{id}:
@@ -2244,7 +2219,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Parameter'
+                - $ref: '#/components/schemas/Parameter'
       tags:
       - parameterpoints
     put:
@@ -2269,7 +2244,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Parameter'
+              - $ref: '#/components/schemas/Parameter'
       responses:
         400:
           description: Bad Request
@@ -2289,7 +2264,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Parameter'
+                - $ref: '#/components/schemas/Parameter'
       tags:
       - parameterpoints
     patch:
@@ -2314,7 +2289,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Parameter'
+              - $ref: '#/components/schemas/Parameter'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -2337,7 +2312,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Parameter'
+                - $ref: '#/components/schemas/Parameter'
       tags:
       - parameterpoints
     delete:
@@ -2400,12 +2375,6 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
       - name: name
         description: Filter value on property 'name'.
         schema:
@@ -2436,7 +2405,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/brick_Sensor'
+                        - $ref: '#/components/schemas/Sensor'
       tags:
       - sensorpoints
     post:
@@ -2455,7 +2424,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Sensor'
+              - $ref: '#/components/schemas/Sensor'
       responses:
         500:
           description: Internal Server Error
@@ -2473,7 +2442,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Sensor'
+                - $ref: '#/components/schemas/Sensor'
       tags:
       - sensorpoints
   /sensorpoints/{id}:
@@ -2503,7 +2472,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Sensor'
+                - $ref: '#/components/schemas/Sensor'
       tags:
       - sensorpoints
     put:
@@ -2528,7 +2497,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Sensor'
+              - $ref: '#/components/schemas/Sensor'
       responses:
         400:
           description: Bad Request
@@ -2548,7 +2517,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Sensor'
+                - $ref: '#/components/schemas/Sensor'
       tags:
       - sensorpoints
     patch:
@@ -2573,7 +2542,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Sensor'
+              - $ref: '#/components/schemas/Sensor'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -2596,7 +2565,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Sensor'
+                - $ref: '#/components/schemas/Sensor'
       tags:
       - sensorpoints
     delete:
@@ -2629,6 +2598,12 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: lastKnownValue
+        description: Filter value on property 'lastKnownValue'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: aggregate
         description: Filter value on property 'aggregate'.
         schema:
@@ -2655,12 +2630,6 @@ paths:
         in: query
       - name: hasSubstance
         description: Filter value on property 'hasSubstance'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -2695,7 +2664,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/brick_Setpoint'
+                        - $ref: '#/components/schemas/Setpoint'
       tags:
       - setpoints
     post:
@@ -2714,7 +2683,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Setpoint'
+              - $ref: '#/components/schemas/Setpoint'
       responses:
         500:
           description: Internal Server Error
@@ -2732,7 +2701,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Setpoint'
+                - $ref: '#/components/schemas/Setpoint'
       tags:
       - setpoints
   /setpoints/{id}:
@@ -2762,7 +2731,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Setpoint'
+                - $ref: '#/components/schemas/Setpoint'
       tags:
       - setpoints
     put:
@@ -2787,7 +2756,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Setpoint'
+              - $ref: '#/components/schemas/Setpoint'
       responses:
         400:
           description: Bad Request
@@ -2807,7 +2776,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Setpoint'
+                - $ref: '#/components/schemas/Setpoint'
       tags:
       - setpoints
     patch:
@@ -2832,7 +2801,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Setpoint'
+              - $ref: '#/components/schemas/Setpoint'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -2855,7 +2824,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Setpoint'
+                - $ref: '#/components/schemas/Setpoint'
       tags:
       - setpoints
     delete:
@@ -2888,6 +2857,12 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: lastKnownValue
+        description: Filter value on property 'lastKnownValue'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: aggregate
         description: Filter value on property 'aggregate'.
         schema:
@@ -2914,12 +2889,6 @@ paths:
         in: query
       - name: hasSubstance
         description: Filter value on property 'hasSubstance'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -2954,7 +2923,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/brick_Status'
+                        - $ref: '#/components/schemas/Status'
       tags:
       - statuspoints
     post:
@@ -2973,7 +2942,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Status'
+              - $ref: '#/components/schemas/Status'
       responses:
         500:
           description: Internal Server Error
@@ -2991,7 +2960,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Status'
+                - $ref: '#/components/schemas/Status'
       tags:
       - statuspoints
   /statuspoints/{id}:
@@ -3021,7 +2990,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Status'
+                - $ref: '#/components/schemas/Status'
       tags:
       - statuspoints
     put:
@@ -3046,7 +3015,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Status'
+              - $ref: '#/components/schemas/Status'
       responses:
         400:
           description: Bad Request
@@ -3066,7 +3035,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Status'
+                - $ref: '#/components/schemas/Status'
       tags:
       - statuspoints
     patch:
@@ -3091,7 +3060,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/brick_Status'
+              - $ref: '#/components/schemas/Status'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -3114,7 +3083,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/brick_Status'
+                - $ref: '#/components/schemas/Status'
       tags:
       - statuspoints
     delete:
@@ -3189,7 +3158,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Agent'
+                        - $ref: '#/components/schemas/Agent'
       tags:
       - agents
     post:
@@ -3208,7 +3177,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Agent'
+              - $ref: '#/components/schemas/Agent'
       responses:
         500:
           description: Internal Server Error
@@ -3226,7 +3195,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Agent'
+                - $ref: '#/components/schemas/Agent'
       tags:
       - agents
   /agents/{id}:
@@ -3256,7 +3225,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Agent'
+                - $ref: '#/components/schemas/Agent'
       tags:
       - agents
     put:
@@ -3281,7 +3250,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Agent'
+              - $ref: '#/components/schemas/Agent'
       responses:
         400:
           description: Bad Request
@@ -3301,7 +3270,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Agent'
+                - $ref: '#/components/schemas/Agent'
       tags:
       - agents
     patch:
@@ -3326,7 +3295,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Agent'
+              - $ref: '#/components/schemas/Agent'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -3349,7 +3318,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Agent'
+                - $ref: '#/components/schemas/Agent'
       tags:
       - agents
     delete:
@@ -3541,7 +3510,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Asset'
+                        - $ref: '#/components/schemas/Asset'
       tags:
       - assets
     post:
@@ -3560,7 +3529,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Asset'
+              - $ref: '#/components/schemas/Asset'
       responses:
         500:
           description: Internal Server Error
@@ -3578,7 +3547,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Asset'
+                - $ref: '#/components/schemas/Asset'
       tags:
       - assets
   /assets/{id}:
@@ -3608,7 +3577,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Asset'
+                - $ref: '#/components/schemas/Asset'
       tags:
       - assets
     put:
@@ -3633,7 +3602,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Asset'
+              - $ref: '#/components/schemas/Asset'
       responses:
         400:
           description: Bad Request
@@ -3653,7 +3622,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Asset'
+                - $ref: '#/components/schemas/Asset'
       tags:
       - assets
     patch:
@@ -3678,7 +3647,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Asset'
+              - $ref: '#/components/schemas/Asset'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -3701,7 +3670,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Asset'
+                - $ref: '#/components/schemas/Asset'
       tags:
       - assets
     delete:
@@ -3791,7 +3760,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_BuildingElement'
+                        - $ref: '#/components/schemas/BuildingElement'
       tags:
       - buildingelements
     post:
@@ -3810,7 +3779,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_BuildingElement'
+              - $ref: '#/components/schemas/BuildingElement'
       responses:
         500:
           description: Internal Server Error
@@ -3828,7 +3797,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_BuildingElement'
+                - $ref: '#/components/schemas/BuildingElement'
       tags:
       - buildingelements
   /buildingelements/{id}:
@@ -3858,7 +3827,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_BuildingElement'
+                - $ref: '#/components/schemas/BuildingElement'
       tags:
       - buildingelements
     put:
@@ -3883,7 +3852,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_BuildingElement'
+              - $ref: '#/components/schemas/BuildingElement'
       responses:
         400:
           description: Bad Request
@@ -3903,7 +3872,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_BuildingElement'
+                - $ref: '#/components/schemas/BuildingElement'
       tags:
       - buildingelements
     patch:
@@ -3928,7 +3897,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_BuildingElement'
+              - $ref: '#/components/schemas/BuildingElement'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -3951,7 +3920,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_BuildingElement'
+                - $ref: '#/components/schemas/BuildingElement'
       tags:
       - buildingelements
     delete:
@@ -4026,7 +3995,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Collection'
+                        - $ref: '#/components/schemas/Collection'
       tags:
       - collections
     post:
@@ -4045,7 +4014,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Collection'
+              - $ref: '#/components/schemas/Collection'
       responses:
         500:
           description: Internal Server Error
@@ -4063,7 +4032,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Collection'
+                - $ref: '#/components/schemas/Collection'
       tags:
       - collections
   /collections/{id}:
@@ -4093,7 +4062,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Collection'
+                - $ref: '#/components/schemas/Collection'
       tags:
       - collections
     put:
@@ -4118,7 +4087,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Collection'
+              - $ref: '#/components/schemas/Collection'
       responses:
         400:
           description: Bad Request
@@ -4138,7 +4107,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Collection'
+                - $ref: '#/components/schemas/Collection'
       tags:
       - collections
     patch:
@@ -4163,7 +4132,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Collection'
+              - $ref: '#/components/schemas/Collection'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -4186,7 +4155,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Collection'
+                - $ref: '#/components/schemas/Collection'
       tags:
       - collections
     delete:
@@ -4274,7 +4243,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Event'
+                        - $ref: '#/components/schemas/Event'
       tags:
       - events
     post:
@@ -4293,7 +4262,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Event'
+              - $ref: '#/components/schemas/Event'
       responses:
         500:
           description: Internal Server Error
@@ -4311,7 +4280,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Event'
+                - $ref: '#/components/schemas/Event'
       tags:
       - events
   /events/{id}:
@@ -4341,7 +4310,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Event'
+                - $ref: '#/components/schemas/Event'
       tags:
       - events
     put:
@@ -4366,7 +4335,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Event'
+              - $ref: '#/components/schemas/Event'
       responses:
         400:
           description: Bad Request
@@ -4386,7 +4355,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Event'
+                - $ref: '#/components/schemas/Event'
       tags:
       - events
     patch:
@@ -4411,7 +4380,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Event'
+              - $ref: '#/components/schemas/Event'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -4434,7 +4403,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Event'
+                - $ref: '#/components/schemas/Event'
       tags:
       - events
     delete:
@@ -4504,7 +4473,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Information'
+                        - $ref: '#/components/schemas/Information'
       tags:
       - information
     post:
@@ -4523,7 +4492,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Information'
+              - $ref: '#/components/schemas/Information'
       responses:
         500:
           description: Internal Server Error
@@ -4541,7 +4510,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Information'
+                - $ref: '#/components/schemas/Information'
       tags:
       - information
   /information/{id}:
@@ -4571,7 +4540,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Information'
+                - $ref: '#/components/schemas/Information'
       tags:
       - information
     put:
@@ -4596,7 +4565,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Information'
+              - $ref: '#/components/schemas/Information'
       responses:
         400:
           description: Bad Request
@@ -4616,7 +4585,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Information'
+                - $ref: '#/components/schemas/Information'
       tags:
       - information
     patch:
@@ -4641,7 +4610,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Information'
+              - $ref: '#/components/schemas/Information'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -4664,7 +4633,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Information'
+                - $ref: '#/components/schemas/Information'
       tags:
       - information
     delete:
@@ -4755,7 +4724,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Space'
+                        - $ref: '#/components/schemas/Space'
       tags:
       - spaces
     post:
@@ -4774,7 +4743,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Space'
+              - $ref: '#/components/schemas/Space'
       responses:
         500:
           description: Internal Server Error
@@ -4792,7 +4761,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Space'
+                - $ref: '#/components/schemas/Space'
       tags:
       - spaces
   /spaces/{id}:
@@ -4822,7 +4791,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Space'
+                - $ref: '#/components/schemas/Space'
       tags:
       - spaces
     put:
@@ -4847,7 +4816,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Space'
+              - $ref: '#/components/schemas/Space'
       responses:
         400:
           description: Bad Request
@@ -4867,7 +4836,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Space'
+                - $ref: '#/components/schemas/Space'
       tags:
       - spaces
     patch:
@@ -4892,7 +4861,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Space'
+              - $ref: '#/components/schemas/Space'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -4915,7 +4884,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Space'
+                - $ref: '#/components/schemas/Space'
       tags:
       - spaces
     delete:
@@ -4995,7 +4964,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Document'
+                        - $ref: '#/components/schemas/Document'
       tags:
       - documents
     post:
@@ -5014,7 +4983,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Document'
+              - $ref: '#/components/schemas/Document'
       responses:
         500:
           description: Internal Server Error
@@ -5032,7 +5001,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Document'
+                - $ref: '#/components/schemas/Document'
       tags:
       - documents
   /documents/{id}:
@@ -5062,7 +5031,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Document'
+                - $ref: '#/components/schemas/Document'
       tags:
       - documents
     put:
@@ -5087,7 +5056,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Document'
+              - $ref: '#/components/schemas/Document'
       responses:
         400:
           description: Bad Request
@@ -5107,7 +5076,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Document'
+                - $ref: '#/components/schemas/Document'
       tags:
       - documents
     patch:
@@ -5132,7 +5101,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Document'
+              - $ref: '#/components/schemas/Document'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -5155,7 +5124,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Document'
+                - $ref: '#/components/schemas/Document'
       tags:
       - documents
     delete:
@@ -5307,7 +5276,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Level'
+                        - $ref: '#/components/schemas/Level'
       tags:
       - levels
     post:
@@ -5326,7 +5295,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Level'
+              - $ref: '#/components/schemas/Level'
       responses:
         500:
           description: Internal Server Error
@@ -5344,7 +5313,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Level'
+                - $ref: '#/components/schemas/Level'
       tags:
       - levels
   /levels/{id}:
@@ -5374,7 +5343,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Level'
+                - $ref: '#/components/schemas/Level'
       tags:
       - levels
     put:
@@ -5399,7 +5368,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Level'
+              - $ref: '#/components/schemas/Level'
       responses:
         400:
           description: Bad Request
@@ -5419,7 +5388,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Level'
+                - $ref: '#/components/schemas/Level'
       tags:
       - levels
     patch:
@@ -5444,7 +5413,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Level'
+              - $ref: '#/components/schemas/Level'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -5467,7 +5436,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Level'
+                - $ref: '#/components/schemas/Level'
       tags:
       - levels
     delete:
@@ -5613,7 +5582,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Site'
+                        - $ref: '#/components/schemas/Site'
       tags:
       - sites
     post:
@@ -5632,7 +5601,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Site'
+              - $ref: '#/components/schemas/Site'
       responses:
         500:
           description: Internal Server Error
@@ -5650,7 +5619,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Site'
+                - $ref: '#/components/schemas/Site'
       tags:
       - sites
   /sites/{id}:
@@ -5680,7 +5649,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Site'
+                - $ref: '#/components/schemas/Site'
       tags:
       - sites
     put:
@@ -5705,7 +5674,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Site'
+              - $ref: '#/components/schemas/Site'
       responses:
         400:
           description: Bad Request
@@ -5725,7 +5694,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Site'
+                - $ref: '#/components/schemas/Site'
       tags:
       - sites
     patch:
@@ -5750,7 +5719,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Site'
+              - $ref: '#/components/schemas/Site'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -5773,7 +5742,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Site'
+                - $ref: '#/components/schemas/Site'
       tags:
       - sites
     delete:
@@ -5919,7 +5888,7 @@ paths:
                           properties:
                             '@context':
                               $ref: '#/components/schemas/Context'
-                        - $ref: '#/components/schemas/rec_Room'
+                        - $ref: '#/components/schemas/Room'
       tags:
       - rooms
     post:
@@ -5938,7 +5907,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Room'
+              - $ref: '#/components/schemas/Room'
       responses:
         500:
           description: Internal Server Error
@@ -5956,7 +5925,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Room'
+                - $ref: '#/components/schemas/Room'
       tags:
       - rooms
   /rooms/{id}:
@@ -5986,7 +5955,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Room'
+                - $ref: '#/components/schemas/Room'
       tags:
       - rooms
     put:
@@ -6011,7 +5980,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Room'
+              - $ref: '#/components/schemas/Room'
       responses:
         400:
           description: Bad Request
@@ -6031,7 +6000,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Room'
+                - $ref: '#/components/schemas/Room'
       tags:
       - rooms
     patch:
@@ -6056,7 +6025,7 @@ paths:
                 properties:
                   '@context':
                     $ref: '#/components/schemas/Context'
-              - $ref: '#/components/schemas/rec_Room'
+              - $ref: '#/components/schemas/Room'
               - type: object
                 maxProperties: 2
                 minProperties: 2
@@ -6079,7 +6048,7 @@ paths:
                   properties:
                     '@context':
                       $ref: '#/components/schemas/Context'
-                - $ref: '#/components/schemas/rec_Room'
+                - $ref: '#/components/schemas/Room'
       tags:
       - rooms
     delete:
