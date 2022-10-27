@@ -35,8 +35,8 @@ jobs:
       # Run nuget package
       - name: 'nuget pack'
         run: |
-          nuget pack Generated/Ontology.nuspec
+          nuget pack Generated/RealEstateCore.Ontology.DTDLv2.nuspec
 
       # Publish the Ontology package to Nuget
       - name: 'publish to nuget'
-        run: nuget push --source "${{ env.NUGET_FEED_URL }}" Generated/RealEstateCore_DTDLv2.nupkg --skip-duplicate
+        run: nuget push --source "${{ env.NUGET_FEED_URL }}" Generated/RealEstateCore.Ontology.DTDLv2.nupkg --skip-duplicate
