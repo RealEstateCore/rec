@@ -9,6 +9,13 @@ An administrative geospatial unit larger than the individual real estate. For in
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Space](Space.md):** georeference
+
+---
+
 ## Relationships
 
 ### Inherited Relationships

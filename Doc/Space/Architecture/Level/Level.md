@@ -20,6 +20,7 @@ The level of a building, a.k.a. storey, floor, etc.
 
 ### Inherited Components
 * **[Architecture](../Architecture.md):** area, capacity
+* **[Space](../../Space.md):** georeference
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Space](../../Space.md) > [Architecture](../Architecture.md) > [Zone](Zone.md) > [OccupancyZone](#)
 # OccupancyZone
 
+Occupancy Zone is a spatial area where devices are monitoring or reporting on the concept of Occupancy (motion sensors, people counters, cameras, etc.)
+
+
 **Display name:** Occupancy zone<br />
 **DTMI:** dtmi:org:w3id:rec:OccupancyZone;1
 
@@ -10,6 +13,7 @@
 
 ### Inherited Components
 * **[Architecture](../Architecture.md):** area, capacity
+* **[Space](../../Space.md):** georeference
 
 ---
 

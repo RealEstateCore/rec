@@ -9,6 +9,7 @@
 ## Child interfaces
 * [ArchitectureArea](ArchitectureArea.md)
 * [ArchitectureCapacity](ArchitectureCapacity.md)
+* [Georeference](Georeference.md)
 * [PointOfInterest](PointOfInterest.md)
 * [PostalAddress](PostalAddress.md)
 * [Document](Document/Document.md)

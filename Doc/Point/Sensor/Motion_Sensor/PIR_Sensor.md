@@ -1,8 +1,8 @@
-[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Temperature_Sensor](Temperature_Sensor.md) > [Frost_Sensor](#)
-# Frost_Sensor
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Motion_Sensor](Motion_Sensor.md) > [PIR_Sensor](#)
+# PIR_Sensor
 
-**Display name:** Frost Sensor<br />
-**DTMI:** dtmi:org:brickschema:schema:Brick:Frost_Sensor;1
+**Display name:** PIR Sensor<br />
+**DTMI:** dtmi:org:brickschema:schema:Brick:PIR_Sensor;1
 
 ---
 
@@ -17,9 +17,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Motion_Sensor](Motion_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

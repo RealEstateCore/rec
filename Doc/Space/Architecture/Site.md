@@ -13,6 +13,7 @@ A piece of land upon which zero or more buildings may be situated.
 
 ### Inherited Components
 * **[Architecture](Architecture.md):** area, capacity
+* **[Space](../Space.md):** georeference
 
 ---
 

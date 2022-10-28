@@ -8,7 +8,7 @@
 
 ## Child interfaces
 * [On_Timer_Sensor](On_Timer_Sensor.md)
-* [Rain_Duration_Sensor](../Rain_Sensor/Rain_Duration_Sensor.md)
+* [Rain_Duration_Sensor](Rain_Duration_Sensor.md)
 * [Run_Time_Sensor](Run_Time_Sensor.md)
 
 ---
@@ -22,8 +22,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 
