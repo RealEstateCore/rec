@@ -33,10 +33,14 @@ jobs:
         with:
           dotnet-version: 6.0.x
 
+      # TODO: Place nuspec file in /Metadata/
+      # TODO: Run the DtdlMerger tool, output result to /Generated/
+      # for subsequent build steps
+
       # Run nuget package
       - name: 'Nuget pack'
         run: |
-          nuget pack Metadata/*.nuspec -OutputDirectory Generated
+          nuget pack Generated/*.nuspec -OutputDirectory Generated
 
       # Publish the Ontology package to Nuget
       - name: 'Publish to Nuget'
