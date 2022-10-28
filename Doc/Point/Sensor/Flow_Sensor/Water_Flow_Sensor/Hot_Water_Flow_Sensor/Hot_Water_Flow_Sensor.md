@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Flow_Sensor](../../Flow_Sensor.md) > [Water_Flow_Sensor](../Water_Flow_Sensor.md) > [Hot_Water_Flow_Sensor](#)
 # Hot_Water_Flow_Sensor
 
+Measures the rate of flow in a hot water circuit
+
+
 **Display name:** Hot Water Flow Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Flow_Sensor;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Flow_Sensor](../../Flow_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

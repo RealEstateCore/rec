@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Electrical_Equipment](Electrical_Equipment.md) > [PlugStrip](#)
 # PlugStrip
 
+A device containing a block of electrical sockets allowing multiple electrical devices to be powered from a single electrical socket.
+
+
 **Display name:** PlugStrip<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PlugStrip;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
 * **[Asset](../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight

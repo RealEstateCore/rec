@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [On_Off_Command](#)
 # On_Off_Command
 
+An On/Off Command controls or reports the binary status of a control loop, relay or equipment activity
+
+
 **Display name:** On Off Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:On_Off_Command;1
 
@@ -25,7 +28,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Command](../Command.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

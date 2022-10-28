@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Standby_Fan](#)
 # Standby_Fan
 
+Fan that is activated as part of a lead/lag operation or when a primary fan raises an alarm
+
+
 **Display name:** Standby Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Standby_Fan;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
 * **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Shading_Equipment](Shading_Equipment.md) > [Blind](#)
 # Blind
 
+A window covering.
+
+
 **Display name:** Blind<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Blind;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
 * **[Asset](../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight

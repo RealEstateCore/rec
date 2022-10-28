@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [Meter](../../Meter.md) > [Water_Meter](../Water_Meter.md) > [Chilled_Water_Meter](#)
 # Chilled_Water_Meter
 
+A meter that measures the usage or consumption of chilled water
+
+
 **Display name:** Chilled Water Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Chilled_Water_Meter;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Humidity_Alarm](#)
 # Humidity_Alarm
 
+An alarm that indicates the off-normal conditions associated with the concentration of water vapor in the air.
+
+
 **Display name:** Humidity Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Humidity_Alarm;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

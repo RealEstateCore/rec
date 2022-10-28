@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [PAU](#)
 # PAU
 
+A type of AHU, use to pre-treat the outdoor air before feed to AHU
+
+
 **Display name:** PAU<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PAU;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
 * **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight

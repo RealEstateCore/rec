@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Drive_Ready_Status](#)
 # Drive_Ready_Status
 
+Indicates if a hard drive or other storage device is ready to be used, e.g. in the context of RAID
+
+
 **Display name:** Drive Ready Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Drive_Ready_Status;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](Status.md):** lastKnownValue
+* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

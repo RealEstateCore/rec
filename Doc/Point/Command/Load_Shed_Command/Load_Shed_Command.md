@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Load_Shed_Command](#)
 # Load_Shed_Command
 
+Controls load shedding behavior provided by a control system
+
+
 **Display name:** Load Shed Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Load_Shed_Command;1
 
@@ -23,7 +26,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Command](../Command.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

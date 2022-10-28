@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Valve](Valve.md) > [Natural_Gas_Seismic_Shutoff_Valve](#)
 # Natural_Gas_Seismic_Shutoff_Valve
 
+Valves that automatically shut off your natural gas service when an earthquake of a sufficient magnitude occurs at the location.
+
+
 **Display name:** Natural Gas Seismic Shutoff Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Natural_Gas_Seismic_Shutoff_Valve;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
 * **[Asset](../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight

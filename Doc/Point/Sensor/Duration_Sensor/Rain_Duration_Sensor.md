@@ -1,8 +1,11 @@
-[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Temperature_Sensor](Temperature_Sensor.md) > [Frost_Sensor](#)
-# Frost_Sensor
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Duration_Sensor](Duration_Sensor.md) > [Rain_Duration_Sensor](#)
+# Rain_Duration_Sensor
 
-**Display name:** Frost Sensor<br />
-**DTMI:** dtmi:org:brickschema:schema:Brick:Frost_Sensor;1
+Measures the duration of precipitation within some time frame
+
+
+**Display name:** Rain Duration Sensor<br />
+**DTMI:** dtmi:org:brickschema:schema:Brick:Rain_Duration_Sensor;1
 
 ---
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Duration_Sensor](Duration_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

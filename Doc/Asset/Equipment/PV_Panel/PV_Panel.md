@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [PV_Panel](#)
 # PV_Panel
 
+An integrated assembly of interconnected photovoltaic cells designed to deliver a selected level of working voltage and current at its output terminals packaged for protection against environment degradation and suited for incorporation in photovoltaic power systems.
+
+
 **Display name:** PV Panel<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PV_Panel;1
 

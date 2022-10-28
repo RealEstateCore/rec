@@ -1,13 +1,15 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Energy_Sensor](#)
 # Energy_Sensor
 
+Measures energy consumption
+
+
 **Display name:** Energy Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Energy_Sensor;1
 
 ---
 
 ## Child interfaces
-* [Energy_Usage_Sensor](../Usage_Sensor/Energy_Usage_Sensor.md)
 * [Electric_Energy_Sensor](Electric_Energy_Sensor/Electric_Energy_Sensor.md)
 
 ---
@@ -21,8 +23,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

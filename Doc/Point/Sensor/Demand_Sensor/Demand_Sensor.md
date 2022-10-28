@@ -1,15 +1,18 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Demand_Sensor](#)
 # Demand_Sensor
 
+Measures the amount of power consumed by the use of some process; typically found by multiplying the tonnage of a unit (e.g. RTU) by the efficiency rating in kW/ton
+
+
 **Display name:** Demand Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Demand_Sensor;1
 
 ---
 
 ## Child interfaces
+* [Peak_Demand_Sensor](Peak_Demand_Sensor.md)
 * [Cooling_Demand_Sensor](Cooling_Demand_Sensor/Cooling_Demand_Sensor.md)
 * [Heating_Demand_Sensor](Heating_Demand_Sensor/Heating_Demand_Sensor.md)
-* [Peak_Power_Demand_Sensor](../Power_Sensor/Electric_Power_Sensor/Peak_Power_Demand_Sensor.md)
 
 ---
 
@@ -22,8 +25,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

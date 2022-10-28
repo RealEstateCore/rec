@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Pressure_Status](#)
 # Pressure_Status
 
+Indicates if pressure is within expected bounds
+
+
 **Display name:** Pressure Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Pressure_Status;1
 
@@ -23,7 +26,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](../Status.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

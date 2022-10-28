@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Pressure_Alarm](Pressure_Alarm.md) > [Low_Suction_Pressure_Alarm](#)
 # Low_Suction_Pressure_Alarm
 
+An alarm that indicates a low suction pressure in the compressor in a refrigeration or air conditioning system.
+
+
 **Display name:** Low Suction Pressure Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Low_Suction_Pressure_Alarm;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

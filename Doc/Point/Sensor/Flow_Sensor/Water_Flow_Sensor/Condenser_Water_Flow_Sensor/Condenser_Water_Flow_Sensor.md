@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Flow_Sensor](../../Flow_Sensor.md) > [Water_Flow_Sensor](../Water_Flow_Sensor.md) > [Condenser_Water_Flow_Sensor](#)
 # Condenser_Water_Flow_Sensor
 
+Measures the flow of the condenser water
+
+
 **Display name:** Condenser Water Flow Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Condenser_Water_Flow_Sensor;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Flow_Sensor](../../Flow_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

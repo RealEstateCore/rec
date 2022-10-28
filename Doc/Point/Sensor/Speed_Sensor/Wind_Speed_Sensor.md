@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Speed_Sensor](Speed_Sensor.md) > [Wind_Speed_Sensor](#)
 # Wind_Speed_Sensor
 
+Measured speed of wind, caused by air moving from high to low pressure
+
+
 **Display name:** Wind Speed Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Wind_Speed_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Speed_Sensor](Speed_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Differential_Setpoint](../../Differential_Setpoint.md) > [Differential_Pressure_Setpoint](../Differential_Pressure_Setpoint.md) > [Air_Differential_Pressure_Setpoint](Air_Differential_Pressure_Setpoint.md) > [Supply_Air_Differential_Pressure_Setpoint](#)
 # Supply_Air_Differential_Pressure_Setpoint
 
+Sets the target air differential pressure between an upstream and downstream point in a supply air duct or conduit
+
+
 **Display name:** Supply Air Differential Pressure Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Supply_Air_Differential_Pressure_Setpoint;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../../Setpoint.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

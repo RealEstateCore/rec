@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Demand_Setpoint](#)
 # Demand_Setpoint
 
+Sets the rate required for a process
+
+
 **Display name:** Demand Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Demand_Setpoint;1
 
@@ -24,7 +27,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../Setpoint.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

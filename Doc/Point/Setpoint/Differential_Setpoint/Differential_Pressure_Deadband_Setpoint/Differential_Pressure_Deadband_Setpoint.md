@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Differential_Setpoint](../Differential_Setpoint.md) > [Differential_Pressure_Deadband_Setpoint](#)
 # Differential_Pressure_Deadband_Setpoint
 
+Sets the size of a deadband of differential pressure
+
+
 **Display name:** Differential Pressure Deadband Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Differential_Pressure_Deadband_Setpoint;1
 
@@ -24,7 +27,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../Setpoint.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

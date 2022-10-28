@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Load_Shed_Status](#)
 # Load_Shed_Status
 
+Indicates if a load shedding policy is in effect
+
+
 **Display name:** Load Shed Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Load_Shed_Status;1
 
@@ -23,7 +26,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](../Status.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

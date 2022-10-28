@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Radiant_Panel_Temperature_Setpoint](#)
 # Radiant_Panel_Temperature_Setpoint
 
+Sets temperature of radiant panel.
+
+
 **Display name:** Radiant Panel Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Radiant_Panel_Temperature_Setpoint;1
 
@@ -23,7 +26,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../Setpoint.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

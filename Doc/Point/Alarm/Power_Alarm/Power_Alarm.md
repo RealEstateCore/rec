@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Power_Alarm](#)
 # Power_Alarm
 
+An alarm that indicates the off-normal conditions associated with electrical power.
+
+
 **Display name:** Power Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Power_Alarm;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Damper](#)
 # Damper
 
+Element inserted into an air-distribution system or element of an air-distribution system permitting modification of the air resistance of the system and consequently changing the airflow rate or shutting off the airflow.
+
+
 **Display name:** Damper<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Damper;1
 

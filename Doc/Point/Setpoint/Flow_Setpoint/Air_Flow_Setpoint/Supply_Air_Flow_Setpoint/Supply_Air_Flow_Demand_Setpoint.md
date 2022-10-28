@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Flow_Setpoint](../../Flow_Setpoint.md) > [Air_Flow_Setpoint](../Air_Flow_Setpoint.md) > [Supply_Air_Flow_Setpoint](Supply_Air_Flow_Setpoint.md) > [Supply_Air_Flow_Demand_Setpoint](#)
 # Supply_Air_Flow_Demand_Setpoint
 
+Sets the rate of supply air flow required for a process
+
+
 **Display name:** Supply Air Flow Demand Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Supply_Air_Flow_Demand_Setpoint;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../../Setpoint.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

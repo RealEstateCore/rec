@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Pressure_Sensor](../Pressure_Sensor.md) > [Static_Pressure_Sensor](#)
 # Static_Pressure_Sensor
 
+Measures resistance to airflow in a heating and cooling system's components and duct work
+
+
 **Display name:** Static Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Static_Pressure_Sensor;1
 
@@ -25,7 +28,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Pressure_Sensor](../Pressure_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

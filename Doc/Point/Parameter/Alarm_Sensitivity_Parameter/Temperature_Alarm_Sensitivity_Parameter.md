@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Alarm_Sensitivity_Parameter](Alarm_Sensitivity_Parameter.md) > [Temperature_Alarm_Sensitivity_Parameter](#)
 # Temperature_Alarm_Sensitivity_Parameter
 
+A parameter indicates the sensitivity to activate a temperature alarm.
+
+
 **Display name:** Temperature Alarm Sensitivity Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Temperature_Alarm_Sensitivity_Parameter;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../Parameter.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

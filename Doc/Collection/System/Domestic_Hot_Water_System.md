@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Collection](../Collection.md) > [System](System.md) > [Domestic_Hot_Water_System](#)
 # Domestic_Hot_Water_System
 
+The equipment, devices and conduits that handle the production and distribution of domestic hot water in a building
+
+
 **Display name:** Domestic Hot Water System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_System;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Collection](../Collection.md):** customTags, externalIds, name
 

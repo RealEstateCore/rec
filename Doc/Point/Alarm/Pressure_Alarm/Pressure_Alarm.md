@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Pressure_Alarm](#)
 # Pressure_Alarm
 
+An alarm that indicates the off-normal conditions associated with pressure.
+
+
 **Display name:** Pressure Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Pressure_Alarm;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

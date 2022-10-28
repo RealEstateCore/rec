@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Enthalpy_Sensor](../Enthalpy_Sensor.md) > [Air_Enthalpy_Sensor](Air_Enthalpy_Sensor.md) > [Return_Air_Enthalpy_Sensor](#)
 # Return_Air_Enthalpy_Sensor
 
+Measures the total heat content of return air
+
+
 **Display name:** Return Air Enthalpy Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Return_Air_Enthalpy_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Enthalpy_Sensor](../Enthalpy_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

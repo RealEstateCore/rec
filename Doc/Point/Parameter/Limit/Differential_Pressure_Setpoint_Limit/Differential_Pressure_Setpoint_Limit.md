@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [Limit](../Limit.md) > [Differential_Pressure_Setpoint_Limit](#)
 # Differential_Pressure_Setpoint_Limit
 
+A parameter that places a lower or upper bound on the range of permitted values of a Differential_Pressure_Setpoint.
+
+
 **Display name:** Differential Pressure Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Differential_Pressure_Setpoint_Limit;1
 
@@ -24,7 +27,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../../Parameter.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

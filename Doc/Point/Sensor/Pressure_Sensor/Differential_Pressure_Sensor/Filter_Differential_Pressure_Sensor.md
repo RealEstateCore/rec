@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Pressure_Sensor](../Pressure_Sensor.md) > [Differential_Pressure_Sensor](Differential_Pressure_Sensor.md) > [Filter_Differential_Pressure_Sensor](#)
 # Filter_Differential_Pressure_Sensor
 
+Measures the difference in pressure on either side of a filter
+
+
 **Display name:** Filter Differential Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Filter_Differential_Pressure_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Pressure_Sensor](../Pressure_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Differential_Setpoint](../Differential_Setpoint.md) > [Differential_Temperature_Setpoint](Differential_Temperature_Setpoint.md) > [Water_Differential_Temperature_Setpoint](#)
 # Water_Differential_Temperature_Setpoint
 
+Sets the target differential temperature between the start and end of a heat transfer cycle in a water circuit
+
+
 **Display name:** Water Differential Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Differential_Temperature_Setpoint;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../Setpoint.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

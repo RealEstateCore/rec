@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Alarm](../../../Alarm.md) > [Temperature_Alarm](../../Temperature_Alarm.md) > [Air_Temperature_Alarm](../Air_Temperature_Alarm.md) > [Return_Air_Temperature_Alarm](Return_Air_Temperature_Alarm.md) > [Low_Return_Air_Temperature_Alarm](#)
 # Low_Return_Air_Temperature_Alarm
 
+An alarm that indicates that return air temperature is too low
+
+
 **Display name:** Low Return Air Temperature Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Low_Return_Air_Temperature_Alarm;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../../../Alarm.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

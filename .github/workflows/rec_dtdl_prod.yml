@@ -1,0 +1,47 @@
+name: Ontology push to Nuget
+
+on:
+  workflow_dispatch:    
+  push:
+    branches: [ "main" ]
+    paths:
+      - "Generated"
+      - "Metadata"
+
+env: 
+  NUGET_FEED_URL: https://api.nuget.org/v3/index.json
+  BUILD_CONFIGURATION: 'Release'    # set this to the appropriate build configuration
+  DOTNET_VERSION: '6.x' 
+  NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }} 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repo
+      - uses: actions/checkout@v3
+      - name: 'Setup Nuget'
+        uses: nuget/setup-nuget@v1
+        with:
+          nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+          nuget-version: '5.x'
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+
+      # TODO: Place nuspec file in /Metadata/
+      # TODO: Run the DtdlMerger tool, output result to /Generated/
+      # for subsequent build steps
+
+      # Run nuget package
+      - name: 'Nuget pack'
+        run: |
+          nuget pack Generated/*.nuspec -OutputDirectory Generated
+
+      # Publish the Ontology package to Nuget
+      - name: 'Publish to Nuget'
+        run: nuget push Generated/*.nupkg -Source "${{ env.NUGET_FEED_URL }}" -SkipDuplicate

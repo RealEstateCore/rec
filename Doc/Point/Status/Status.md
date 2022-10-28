@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](#)
 # Status
 
+A Status is input point that reports the current operating mode, state, position, or condition of an item. Statuses are observations and should be considered 'read-only'
+
+
 **Display name:** Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Status;1
 
@@ -8,6 +11,7 @@
 
 ## Child interfaces
 * [Availability_Status](Availability_Status.md)
+* [Damper_Position_Status](Damper_Position_Status.md)
 * [Disable_Status](Disable_Status.md)
 * [Drive_Ready_Status](Drive_Ready_Status.md)
 * [Emergency_Generator_Status](Emergency_Generator_Status.md)
@@ -52,8 +56,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

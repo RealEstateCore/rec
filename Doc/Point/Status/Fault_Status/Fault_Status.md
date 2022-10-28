@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fault_Status](#)
 # Fault_Status
 
+Indicates the presence of a fault in a device, system or control loop
+
+
 **Display name:** Fault Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fault_Status;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](../Status.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

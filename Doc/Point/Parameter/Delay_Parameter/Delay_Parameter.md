@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Delay_Parameter](#)
 # Delay_Parameter
 
+A parameter determining how long to delay a subsequent action to take place after a received signal
+
+
 **Display name:** Delay Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Delay_Parameter;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../Parameter.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

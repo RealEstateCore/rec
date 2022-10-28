@@ -22,6 +22,7 @@ A sub-zone within or outside of a building defined to support some technology an
 
 ### Inherited Components
 * **[Architecture](../Architecture.md):** area, capacity
+* **[Space](../../Space.md):** georeference
 
 ---
 

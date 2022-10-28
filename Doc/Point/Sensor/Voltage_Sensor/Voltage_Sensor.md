@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Voltage_Sensor](#)
 # Voltage_Sensor
 
+Measures the voltage of an electrical device or object
+
+
 **Display name:** Voltage Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Voltage_Sensor;1
 
@@ -22,8 +25,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

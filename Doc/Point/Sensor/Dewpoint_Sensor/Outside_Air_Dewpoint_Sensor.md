@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Dewpoint_Sensor](Dewpoint_Sensor.md) > [Outside_Air_Dewpoint_Sensor](#)
 # Outside_Air_Dewpoint_Sensor
 
+Senses the dewpoint temperature of outside air
+
+
 **Display name:** Outside Air Dewpoint Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Air_Dewpoint_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Dewpoint_Sensor](Dewpoint_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

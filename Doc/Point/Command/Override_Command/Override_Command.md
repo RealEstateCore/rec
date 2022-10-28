@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Override_Command](#)
 # Override_Command
 
+Controls or reports whether or not a device or control loop is in 'override'
+
+
 **Display name:** Override Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Override_Command;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Command](../Command.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

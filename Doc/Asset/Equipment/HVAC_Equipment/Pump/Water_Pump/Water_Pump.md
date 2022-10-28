@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Pump](../Pump.md) > [Water_Pump](#)
 # Water_Pump
 
+A pump that performs work on water
+
+
 **Display name:** Water Pump<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Pump;1
 

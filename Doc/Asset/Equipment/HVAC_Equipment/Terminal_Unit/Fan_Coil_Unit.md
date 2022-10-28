@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Terminal_Unit](Terminal_Unit.md) > [Fan_Coil_Unit](#)
 # Fan_Coil_Unit
 
+Terminal device consisting of a heating and/or cooling heat exchanger or 'coil' and fan that is used to control the temperature in the space where it is installed
+
+
 **Display name:** Fan Coil Unit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fan_Coil_Unit;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
 * **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight

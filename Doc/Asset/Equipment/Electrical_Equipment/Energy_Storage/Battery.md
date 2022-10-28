@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Electrical_Equipment](../Electrical_Equipment.md) > [Energy_Storage](Energy_Storage.md) > [Battery](#)
 # Battery
 
+A container that stores chemical energy that can be converted into electricity and used as a source of power
+
+
 **Display name:** Battery<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Battery;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
 * **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight

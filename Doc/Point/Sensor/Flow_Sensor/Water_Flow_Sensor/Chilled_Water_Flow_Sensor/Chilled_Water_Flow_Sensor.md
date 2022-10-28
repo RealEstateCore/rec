@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Flow_Sensor](../../Flow_Sensor.md) > [Water_Flow_Sensor](../Water_Flow_Sensor.md) > [Chilled_Water_Flow_Sensor](#)
 # Chilled_Water_Flow_Sensor
 
+Measures the rate of flow in a chilled water circuit
+
+
 **Display name:** Chilled Water Flow Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Chilled_Water_Flow_Sensor;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Flow_Sensor](../../Flow_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

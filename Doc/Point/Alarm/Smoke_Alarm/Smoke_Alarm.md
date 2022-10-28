@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Smoke_Alarm](#)
 # Smoke_Alarm
 
+An alarm that indicates the off-normal conditions associated with smoke.
+
+
 **Display name:** Smoke Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Smoke_Alarm;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

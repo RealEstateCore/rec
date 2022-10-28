@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Valve_Position_Alarm](#)
 # Valve_Position_Alarm
 
+An alarm that indicates that the valve position is not in a normal state.
+
+
 **Display name:** Valve Position Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Valve_Position_Alarm;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](Alarm.md):** lastKnownValue
+* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [Lighting_Equipment](../../Lighting_Equipment.md) > [Interface](../Interface.md) > [Switch](#)
 # Switch
 
+A switch used to operate all or part of a lighting installation
+
+
 **Display name:** Switch<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Switch;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Demand_Sensor](../Demand_Sensor.md) > [Cooling_Demand_Sensor](Cooling_Demand_Sensor.md) > [Average_Cooling_Demand_Sensor](#)
 # Average_Cooling_Demand_Sensor
 
+Measures the average power consumed by a cooling process as the amount of power consumed over some interval
+
+
 **Display name:** Average Cooling Demand Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Average_Cooling_Demand_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Demand_Sensor](../Demand_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

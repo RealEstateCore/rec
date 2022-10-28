@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Electrical_System](#)
 # Electrical_System
 
+Devices that serve or are part of the electrical subsystem in the building
+
+
 **Display name:** Electrical System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Electrical_System;1
 

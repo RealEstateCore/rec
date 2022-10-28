@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Flow_Sensor](#)
 # Flow_Sensor
 
+Measures the rate of flow of some substance
+
+
 **Display name:** Flow Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Flow_Sensor;1
 
@@ -22,8 +25,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

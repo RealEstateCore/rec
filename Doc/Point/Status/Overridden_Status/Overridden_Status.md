@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Overridden_Status](#)
 # Overridden_Status
 
+Indicates if the expected operating status of an equipment or control loop has been overridden
+
+
 **Display name:** Overridden Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Overridden_Status;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](../Status.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,13 +1,15 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Temperature_Sensor](#)
 # Temperature_Sensor
 
+Measures temperature: the physical property of matter that quantitatively expresses the common notions of hot and cold
+
+
 **Display name:** Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Temperature_Sensor;1
 
 ---
 
 ## Child interfaces
-* [Frost_Sensor](Frost_Sensor.md)
 * [Heat_Sink_Temperature_Sensor](Heat_Sink_Temperature_Sensor.md)
 * [Natural_Gas_Temperature_Sensor](Natural_Gas_Temperature_Sensor.md)
 * [Soil_Temperature_Sensor](Soil_Temperature_Sensor.md)
@@ -27,8 +29,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](#)
 # HVAC_Equipment
 
+See Heating_Ventilation_Air_Conditioning_System
+
+
 **Display name:** HVAC Equipment<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:HVAC_Equipment;1
 

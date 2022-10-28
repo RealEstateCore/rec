@@ -26,6 +26,8 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 |-|-|-|-|
 |area|**en**: area||[ArchitectureArea](../../Information/ArchitectureArea.md)|
 |capacity|**en**: capacity||[ArchitectureCapacity](../../Information/ArchitectureCapacity.md)|
+### Inherited Components
+* **[Space](../Space.md):** georeference
 
 ---
 

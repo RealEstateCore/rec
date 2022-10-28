@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Fire_Safety_Equipment](../Fire_Safety_Equipment.md) > [Manual_Fire_Alarm_Activation_Equipment](#)
 # Manual_Fire_Alarm_Activation_Equipment
 
+A device for manually activating fire alarm
+
+
 **Display name:** Manual Fire Alarm Activation Equipment<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Manual_Fire_Alarm_Activation_Equipment;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Heat_Sensor](Heat_Sensor.md) > [Trace_Heat_Sensor](#)
 # Trace_Heat_Sensor
 
+Measures the surface temperature of pipelines carrying temperature-sensitive products; typically used to avoid frosting/freezing
+
+
 **Display name:** Trace Heat Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Trace_Heat_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Heat_Sensor](Heat_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

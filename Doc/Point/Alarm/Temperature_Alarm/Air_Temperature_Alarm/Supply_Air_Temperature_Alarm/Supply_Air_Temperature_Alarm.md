@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Alarm](../../../Alarm.md) > [Temperature_Alarm](../../Temperature_Alarm.md) > [Air_Temperature_Alarm](../Air_Temperature_Alarm.md) > [Supply_Air_Temperature_Alarm](#)
 # Supply_Air_Temperature_Alarm
 
+An alarm that indicates the off-normal conditions associated with the temperature of supply air.
+
+
 **Display name:** Supply Air Temperature Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Alarm;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../../../Alarm.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

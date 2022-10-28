@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Parameter](#)
 # Parameter
 
+Parameter points are configuration settings used to guide the operation of equipment and control systems; for example they may provide bounds on valid setpoint values
+
+
 **Display name:** Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Parameter;1
 
@@ -27,8 +30,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

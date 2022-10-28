@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Meter](../Meter.md) > [Electrical_Meter](Electrical_Meter.md) > [Building_Electrical_Meter](#)
 # Building_Electrical_Meter
 
+A meter that measures the usage or consumption of electricity of a whole building
+
+
 **Display name:** Building Electrical Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Building_Electrical_Meter;1
 
@@ -19,7 +22,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Meter](../Meter.md):** isVirtualMeter
 * **[Equipment](../../Equipment.md):** operationalStageCount

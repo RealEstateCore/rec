@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Meter](Meter.md) > [Thermal_Power_Meter](#)
 # Thermal_Power_Meter
 
+A standalone thermal power meter
+
+
 **Display name:** Thermal Power Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Thermal_Power_Meter;1
 
@@ -19,7 +22,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Meter](Meter.md):** isVirtualMeter
 * **[Equipment](../Equipment.md):** operationalStageCount

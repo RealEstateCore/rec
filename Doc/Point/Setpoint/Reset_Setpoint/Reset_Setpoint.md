@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Reset_Setpoint](#)
 # Reset_Setpoint
 
+Setpoints used in reset strategies
+
+
 **Display name:** Reset Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Reset_Setpoint;1
 
@@ -24,7 +27,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../Setpoint.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

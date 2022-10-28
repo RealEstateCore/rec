@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Pressure_Sensor](../../Pressure_Sensor.md) > [Differential_Pressure_Sensor](../Differential_Pressure_Sensor.md) > [Air_Differential_Pressure_Sensor](#)
 # Air_Differential_Pressure_Sensor
 
+Measures the difference in pressure between two regions of air
+
+
 **Display name:** Air Differential Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Differential_Pressure_Sensor;1
 
@@ -24,7 +27,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Pressure_Sensor](../../Pressure_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

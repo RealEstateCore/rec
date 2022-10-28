@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Humidity_Parameter](#)
 # Humidity_Parameter
 
+Parameters relevant to humidity-related systems and points
+
+
 **Display name:** Humidity Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Humidity_Parameter;1
 
@@ -23,7 +26,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../Parameter.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

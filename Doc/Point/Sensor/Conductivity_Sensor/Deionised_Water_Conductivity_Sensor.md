@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Conductivity_Sensor](Conductivity_Sensor.md) > [Deionised_Water_Conductivity_Sensor](#)
 # Deionised_Water_Conductivity_Sensor
 
+Measures the electrical conductance of deionised water
+
+
 **Display name:** Deionised Water Conductivity Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Deionised_Water_Conductivity_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Conductivity_Sensor](Conductivity_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

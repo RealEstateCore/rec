@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Terminal_Unit](../../Terminal_Unit.md) > [Radiator](../Radiator.md) > [Hot_Water_Radiator](Hot_Water_Radiator.md) > [Hot_Water_Baseboard_Radiator](#)
 # Hot_Water_Baseboard_Radiator
 
+Hydronic heating device located at or near the floor
+
+
 **Display name:** Hot Water Baseboard Radiator<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Baseboard_Radiator;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../../../../Equipment.md):** operationalStageCount
 * **[Asset](../../../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight

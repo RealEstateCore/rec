@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [Mode_Status](../Mode_Status.md) > [Heating_Mode_Status](#)
 # Heating_Mode_Status
 
+Indicates whether a system, device or control loop is in a heating mode
+
+
 **Display name:** Heating Mode Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heating_Mode_Status;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](../../Status.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

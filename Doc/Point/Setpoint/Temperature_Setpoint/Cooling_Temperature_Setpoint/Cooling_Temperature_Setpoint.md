@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Cooling_Temperature_Setpoint](#)
 # Cooling_Temperature_Setpoint
 
+Sets temperature for cooling
+
+
 **Display name:** Cooling Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Temperature_Setpoint;1
 
@@ -31,7 +34,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../Setpoint.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

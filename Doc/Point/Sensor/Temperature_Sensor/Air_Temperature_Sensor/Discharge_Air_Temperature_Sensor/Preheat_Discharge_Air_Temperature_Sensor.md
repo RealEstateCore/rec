@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Air_Temperature_Sensor](../Air_Temperature_Sensor.md) > [Discharge_Air_Temperature_Sensor](Discharge_Air_Temperature_Sensor.md) > [Preheat_Discharge_Air_Temperature_Sensor](#)
 # Preheat_Discharge_Air_Temperature_Sensor
 
+Measures the temperature of discharge air before heating is applied
+
+
 **Display name:** Preheat Discharge Air Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Preheat_Discharge_Air_Temperature_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

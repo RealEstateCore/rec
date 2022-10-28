@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Collection](../Collection.md) > [System](#)
 # System
 
+A System is a combination of equipment and auxiliary devices (e.g., controls, accessories, interconnecting means, and termi­nal elements) by which energy is transformed so it performs a specific function such as HVAC, service water heating, or lighting. (ASHRAE Dictionary).
+
+
 **Display name:** System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:System;1
 

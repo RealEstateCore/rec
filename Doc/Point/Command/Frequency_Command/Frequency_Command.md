@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Frequency_Command](#)
 # Frequency_Command
 
+Controls the frequency of a device's operation (e.g. rotational frequency)
+
+
 **Display name:** Frequency Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Frequency_Command;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Command](../Command.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

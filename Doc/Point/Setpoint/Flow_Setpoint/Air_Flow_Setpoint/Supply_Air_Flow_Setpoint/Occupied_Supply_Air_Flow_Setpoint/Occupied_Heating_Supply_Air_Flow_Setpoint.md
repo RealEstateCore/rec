@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Point](../../../../../Point.md) > [Setpoint](../../../../Setpoint.md) > [Flow_Setpoint](../../../Flow_Setpoint.md) > [Air_Flow_Setpoint](../../Air_Flow_Setpoint.md) > [Supply_Air_Flow_Setpoint](../Supply_Air_Flow_Setpoint.md) > [Occupied_Supply_Air_Flow_Setpoint](Occupied_Supply_Air_Flow_Setpoint.md) > [Occupied_Heating_Supply_Air_Flow_Setpoint](#)
 # Occupied_Heating_Supply_Air_Flow_Setpoint
 
+Sets supply air flow rate for heating when occupied
+
+
 **Display name:** Occupied Heating Supply Air Flow Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Occupied_Heating_Supply_Air_Flow_Setpoint;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../../../Setpoint.md):** lastKnownValue
+* **[Point](../../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

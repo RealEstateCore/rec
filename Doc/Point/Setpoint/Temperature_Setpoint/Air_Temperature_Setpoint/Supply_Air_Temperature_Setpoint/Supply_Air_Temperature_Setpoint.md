@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Air_Temperature_Setpoint](../Air_Temperature_Setpoint.md) > [Supply_Air_Temperature_Setpoint](#)
 # Supply_Air_Temperature_Setpoint
 
+Temperature setpoint for supply air
+
+
 **Display name:** Supply Air Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Setpoint;1
 
@@ -25,7 +28,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../../Setpoint.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Illuminance_Sensor](Illuminance_Sensor.md) > [Outside_Illuminance_Sensor](#)
 # Outside_Illuminance_Sensor
 
+Measures the total luminous flux incident on an outside, per unit area
+
+
 **Display name:** Outside Illuminance Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Illuminance_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Illuminance_Sensor](Illuminance_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Power_Sensor](../Power_Sensor.md) > [Electric_Power_Sensor](#)
 # Electric_Power_Sensor
 
+Measures the amount of instantaneous electric power consumed
+
+
 **Display name:** Electric Power Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Electric_Power_Sensor;1
 
@@ -8,7 +11,6 @@
 
 ## Child interfaces
 * [Active_Power_Sensor](Active_Power_Sensor.md)
-* [Peak_Power_Demand_Sensor](Peak_Power_Demand_Sensor.md)
 * [Reactive_Power_Sensor](Reactive_Power_Sensor.md)
 
 ---
@@ -23,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Power_Sensor](../Power_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

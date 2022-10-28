@@ -1,13 +1,11 @@
-[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Occupancy_Sensor](#)
-# Occupancy_Sensor
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Demand_Sensor](Demand_Sensor.md) > [Peak_Demand_Sensor](#)
+# Peak_Demand_Sensor
 
-**Display name:** Occupancy Sensor<br />
-**DTMI:** dtmi:org:brickschema:schema:Brick:Occupancy_Sensor;1
+The peak power consumed by a process over some period of time
 
----
 
-## Child interfaces
-* [PIR_Sensor](PIR_Sensor.md)
+**Display name:** Peak Demand Sensor<br />
+**DTMI:** dtmi:org:brickschema:schema:Brick:Peak_Demand_Sensor;1
 
 ---
 
@@ -20,8 +18,12 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Demand_Sensor](Demand_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Collection](../../../Collection.md) > [System](../../System.md) > [Heating_Ventilation_Air_Conditioning_System](../Heating_Ventilation_Air_Conditioning_System.md) > [Water_System](Water_System.md) > [Condenser_Water_System](#)
 # Condenser_Water_System
 
+A heat rejection system consisting of (typically) cooling towers, condenser water pumps, chillers and the piping connecting the components
+
+
 **Display name:** Condenser Water System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Condenser_Water_System;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Collection](../../../Collection.md):** customTags, externalIds, name
 

@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Terminal_Unit](../../Terminal_Unit.md) > [Radiator](../Radiator.md) > [Baseboard_Radiator](#)
 # Baseboard_Radiator
 
+Steam, hydronic, or electric heating device located at or near the floor.
+
+
 **Display name:** Baseboard Radiator<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Baseboard_Radiator;1
 

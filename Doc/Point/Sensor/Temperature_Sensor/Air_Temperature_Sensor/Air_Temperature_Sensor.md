@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Temperature_Sensor](../Temperature_Sensor.md) > [Air_Temperature_Sensor](#)
 # Air_Temperature_Sensor
 
+Measures the temperature of air
+
+
 **Display name:** Air Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Temperature_Sensor;1
 
@@ -29,7 +32,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Temperature_Sensor](../Temperature_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

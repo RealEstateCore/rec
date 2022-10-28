@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [Limit](../Limit.md) > [Speed_Setpoint_Limit](Speed_Setpoint_Limit.md) > [Max_Speed_Setpoint_Limit](#)
 # Max_Speed_Setpoint_Limit
 
+A parameter that places an upper bound on the range of permitted values of a Speed_Setpoint.
+
+
 **Display name:** Max Speed Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Speed_Setpoint_Limit;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../../Parameter.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

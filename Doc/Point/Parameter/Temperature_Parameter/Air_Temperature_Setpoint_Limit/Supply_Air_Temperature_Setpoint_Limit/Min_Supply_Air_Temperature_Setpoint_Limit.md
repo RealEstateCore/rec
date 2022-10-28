@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Parameter](../../../Parameter.md) > [Temperature_Parameter](../../Temperature_Parameter.md) > [Air_Temperature_Setpoint_Limit](../Air_Temperature_Setpoint_Limit.md) > [Supply_Air_Temperature_Setpoint_Limit](Supply_Air_Temperature_Setpoint_Limit.md) > [Min_Supply_Air_Temperature_Setpoint_Limit](#)
 # Min_Supply_Air_Temperature_Setpoint_Limit
 
+Parameter for the minimum value of a Supply_Air_Temperature_Setpoint
+
+
 **Display name:** Min Supply Air Temperature Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Min_Supply_Air_Temperature_Setpoint_Limit;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../../../Parameter.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

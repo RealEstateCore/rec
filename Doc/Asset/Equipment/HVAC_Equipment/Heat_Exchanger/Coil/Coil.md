@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Heat_Exchanger](../Heat_Exchanger.md) > [Coil](#)
 # Coil
 
+Cooling or heating element made of pipe or tube that may or may not be finned and formed into helical or serpentine shape (ASHRAE Dictionary)
+
+
 **Display name:** Coil<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Coil;1
 

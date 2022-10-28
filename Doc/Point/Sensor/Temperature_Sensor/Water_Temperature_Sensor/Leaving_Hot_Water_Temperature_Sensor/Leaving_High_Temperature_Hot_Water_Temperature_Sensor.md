@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Water_Temperature_Sensor](../Water_Temperature_Sensor.md) > [Leaving_Hot_Water_Temperature_Sensor](Leaving_Hot_Water_Temperature_Sensor.md) > [Leaving_High_Temperature_Hot_Water_Temperature_Sensor](#)
 # Leaving_High_Temperature_Hot_Water_Temperature_Sensor
 
+Measures the temperature of high-temperature hot water supplied by a hot water system
+
+
 **Display name:** Leaving High Temperature Hot Water Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_High_Temperature_Hot_Water_Temperature_Sensor;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

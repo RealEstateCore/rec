@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Limit](#)
 # Limit
 
+A parameter that places an upper or lower bound on the range of permitted values of another point
+
+
 **Display name:** Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Limit;1
 
@@ -32,7 +35,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../Parameter.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

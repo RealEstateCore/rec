@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Cycle_Alarm](#)
 # Cycle_Alarm
 
+An alarm that indicates off-normal conditions associated with HVAC cycles
+
+
 **Display name:** Cycle Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cycle_Alarm;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

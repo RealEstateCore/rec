@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Emergency_Alarm](#)
 # Emergency_Alarm
 
+Alarms that indicate off-normal conditions associated with emergency systems
+
+
 **Display name:** Emergency Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Emergency_Alarm;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

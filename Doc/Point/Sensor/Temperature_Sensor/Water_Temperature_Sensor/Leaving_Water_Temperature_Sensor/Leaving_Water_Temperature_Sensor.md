@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Water_Temperature_Sensor](../Water_Temperature_Sensor.md) > [Leaving_Water_Temperature_Sensor](#)
 # Leaving_Water_Temperature_Sensor
 
+Measures the temperature of water leaving a piece of equipment or system
+
+
 **Display name:** Leaving Water Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

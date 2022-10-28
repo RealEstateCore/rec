@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Voltage_Alarm](#)
 # Voltage_Alarm
 
+An alarm that indicates the voltage is not in a normal state.
+
+
 **Display name:** Voltage Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Voltage_Alarm;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

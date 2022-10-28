@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Mode_Status](Mode_Status.md) > [Zone_Air_Conditioning_Mode_Status](#)
 # Zone_Air_Conditioning_Mode_Status
 
+Indicates the mode of AC for a zone
+
+
 **Display name:** Zone Air Conditioning Mode Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Zone_Air_Conditioning_Mode_Status;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](../Status.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

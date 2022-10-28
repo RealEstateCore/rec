@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Water_Heater](#)
 # Water_Heater
 
+An apparatus for heating and usually storing hot water
+
+
 **Display name:** Water Heater<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Heater;1
 

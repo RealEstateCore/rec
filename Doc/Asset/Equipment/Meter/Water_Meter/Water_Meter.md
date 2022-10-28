@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Meter](../Meter.md) > [Water_Meter](#)
 # Water_Meter
 
+A meter that measures the usage or consumption of water
+
+
 **Display name:** Water Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Meter;1
 

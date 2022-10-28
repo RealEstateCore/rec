@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Collection](../Collection.md) > [System](System.md) > [HVAC_System](#)
 # HVAC_System
 
+See Heating_Ventilation_Air_Conditioning_System
+
+
 **Display name:** HVAC System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:HVAC_System;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Collection](../Collection.md):** customTags, externalIds, name
 

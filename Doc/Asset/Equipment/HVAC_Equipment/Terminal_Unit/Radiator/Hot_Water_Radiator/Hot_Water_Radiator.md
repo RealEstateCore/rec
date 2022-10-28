@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Terminal_Unit](../../Terminal_Unit.md) > [Radiator](../Radiator.md) > [Hot_Water_Radiator](#)
 # Hot_Water_Radiator
 
+Radiator that uses hot water
+
+
 **Display name:** Hot Water Radiator<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Radiator;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Point](../../../../../Point.md) > [Parameter](../../../../Parameter.md) > [Limit](../../../Limit.md) > [Max_Limit](../../Max_Limit.md) > [Max_Air_Flow_Setpoint_Limit](../Max_Air_Flow_Setpoint_Limit.md) > [Max_Cooling_Supply_Air_Flow_Setpoint_Limit](#)
 # Max_Cooling_Supply_Air_Flow_Setpoint_Limit
 
+A parameter that places an upper bound on the range of permitted values of a Cooling_Supply_Air_Flow_Setpoint.
+
+
 **Display name:** Max Cooling Supply Air Flow Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Cooling_Supply_Air_Flow_Setpoint_Limit;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../../../../Parameter.md):** lastKnownValue
+* **[Point](../../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

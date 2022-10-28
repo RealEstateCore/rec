@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Heat_Exchanger](#)
 # Heat_Exchanger
 
+A heat exchanger is a piece of equipment built for efficient heat transfer from one medium to another. The media may be separated by a solid wall to prevent mixing or they may be in direct contact (BEDES)
+
+
 **Display name:** Heat Exchanger<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heat_Exchanger;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Valve_Command](#)
 # Valve_Command
 
+Controls or reports the openness of a valve (typically as a proportion of its full range of motion)
+
+
 **Display name:** Valve Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Valve_Command;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Command](../Command.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

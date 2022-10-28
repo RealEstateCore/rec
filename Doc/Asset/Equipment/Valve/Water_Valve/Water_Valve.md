@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Valve](../Valve.md) > [Water_Valve](#)
 # Water_Valve
 
+A valve that modulates the flow of water
+
+
 **Display name:** Water Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Valve;1
 

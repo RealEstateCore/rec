@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Lighting_Equipment](../Lighting_Equipment.md) > [Interface](#)
 # Interface
 
+A device that provides an occupant control over a lighting system
+
+
 **Display name:** Interface<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Interface;1
 

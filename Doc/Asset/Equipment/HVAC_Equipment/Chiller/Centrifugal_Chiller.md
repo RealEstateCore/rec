@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Chiller](Chiller.md) > [Centrifugal_Chiller](#)
 # Centrifugal_Chiller
 
+A chiller that uses the vapor compression cycle to chill water. It throws off the heat collected from the chilled water plus the heat from the compressor to a water loop
+
+
 **Display name:** Centrifugal Chiller<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Centrifugal_Chiller;1
 
@@ -18,7 +21,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Chiller](Chiller.md):** coolingCapacity
 * **[Equipment](../../Equipment.md):** operationalStageCount

@@ -20,6 +20,7 @@
 
 ### Inherited Components
 * **[Architecture](../../Architecture.md):** area, capacity
+* **[Space](../../../Space.md):** georeference
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Enthalpy_Sensor](../Enthalpy_Sensor.md) > [Air_Enthalpy_Sensor](#)
 # Air_Enthalpy_Sensor
 
+Measures the total heat content of air
+
+
 **Display name:** Air Enthalpy Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Enthalpy_Sensor;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Enthalpy_Sensor](../Enthalpy_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

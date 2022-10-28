@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Solar_Thermal_Collector](#)
 # Solar_Thermal_Collector
 
+A type of solar panels that converts solar radiation into thermal energy.
+
+
 **Display name:** Solar Thermal Collector<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Solar_Thermal_Collector;1
 

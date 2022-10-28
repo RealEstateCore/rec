@@ -1,5 +1,8 @@
-[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Occupancy_Sensor](Occupancy_Sensor.md) > [PIR_Sensor](#)
+[Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Motion_Sensor](Motion_Sensor.md) > [PIR_Sensor](#)
 # PIR_Sensor
+
+Detects the presense of motion in some area using the differential change in infrared intensity between two or more receptors
+
 
 **Display name:** PIR Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PIR_Sensor;1
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Motion_Sensor](Motion_Sensor.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

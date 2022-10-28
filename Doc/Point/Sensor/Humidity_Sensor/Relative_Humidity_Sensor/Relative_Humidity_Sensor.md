@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Humidity_Sensor](../Humidity_Sensor.md) > [Relative_Humidity_Sensor](#)
 # Relative_Humidity_Sensor
 
+Measures the present state of absolute humidity relative to a maximum humidity given the same temperature
+
+
 **Display name:** Relative Humidity Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Relative_Humidity_Sensor;1
 
@@ -27,7 +30,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Humidity_Sensor](../Humidity_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Radiant_Panel_Temperature_Sensor](../Radiant_Panel_Temperature_Sensor.md) > [Embedded_Temperature_Sensor](#)
 # Embedded_Temperature_Sensor
 
+Measures the internal temperature of the radiant layer of the radiant heating and cooling HVAC system.
+
+
 **Display name:** Embedded Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Embedded_Temperature_Sensor;1
 
@@ -21,7 +24,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

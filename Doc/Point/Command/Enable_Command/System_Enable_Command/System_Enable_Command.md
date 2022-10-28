@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Command](../../Command.md) > [Enable_Command](../Enable_Command.md) > [System_Enable_Command](#)
 # System_Enable_Command
 
+Enables operation of a system
+
+
 **Display name:** System Enable Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:System_Enable_Command;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Command](../../Command.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

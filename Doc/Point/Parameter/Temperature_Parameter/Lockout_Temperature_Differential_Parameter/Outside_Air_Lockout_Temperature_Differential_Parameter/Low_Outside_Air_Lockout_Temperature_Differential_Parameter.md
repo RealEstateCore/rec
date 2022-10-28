@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Parameter](../../../Parameter.md) > [Temperature_Parameter](../../Temperature_Parameter.md) > [Lockout_Temperature_Differential_Parameter](../Lockout_Temperature_Differential_Parameter.md) > [Outside_Air_Lockout_Temperature_Differential_Parameter](Outside_Air_Lockout_Temperature_Differential_Parameter.md) > [Low_Outside_Air_Lockout_Temperature_Differential_Parameter](#)
 # Low_Outside_Air_Lockout_Temperature_Differential_Parameter
 
+The lower bound of the outside air temperature lockout range
+
+
 **Display name:** Low Outside Air Lockout Temperature Differential Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Low_Outside_Air_Lockout_Temperature_Differential_Parameter;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../../../Parameter.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

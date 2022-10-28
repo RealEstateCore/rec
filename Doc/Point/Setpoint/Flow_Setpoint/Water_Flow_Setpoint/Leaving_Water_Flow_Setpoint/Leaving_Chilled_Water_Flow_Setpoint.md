@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Flow_Setpoint](../../Flow_Setpoint.md) > [Water_Flow_Setpoint](../Water_Flow_Setpoint.md) > [Leaving_Water_Flow_Setpoint](Leaving_Water_Flow_Setpoint.md) > [Leaving_Chilled_Water_Flow_Setpoint](#)
 # Leaving_Chilled_Water_Flow_Setpoint
 
+Sets the target flow rate of chilled leaving water
+
+
 **Display name:** Leaving Chilled Water Flow Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Chilled_Water_Flow_Setpoint;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Setpoint](../../../Setpoint.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

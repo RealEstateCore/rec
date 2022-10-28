@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Heat_Exchanger](../../Heat_Exchanger.md) > [Coil](../Coil.md) > [Cooling_Coil](#)
 # Cooling_Coil
 
+A cooling element made of pipe or tube that removes heat from equipment, machines or airflows. Typically filled with either refrigerant or cold water.
+
+
 **Display name:** Cooling Coil<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Coil;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Status](../../../Status.md) > [On_Status](../../On_Status.md) > [On_Off_Status](../On_Off_Status.md) > [Start_Stop_Status](#)
 # Start_Stop_Status
 
+Indicates the active/inactive status of a control loop (but not equipment activities or relays -- use On/Off for this purpose)
+
+
 **Display name:** Start Stop Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Start_Stop_Status;1
 
@@ -26,7 +29,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](../../../Status.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

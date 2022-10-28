@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Parameter](../../../Parameter.md) > [Limit](../../Limit.md) > [Min_Limit](../Min_Limit.md) > [Min_Temperature_Setpoint_Limit](#)
 # Min_Temperature_Setpoint_Limit
 
+A parameter that places a lower bound on the range of permitted values of a Temperature_Setpoint.
+
+
 **Display name:** Min Temperature Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Min_Temperature_Setpoint_Limit;1
 
@@ -22,7 +25,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Parameter](../../../Parameter.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 

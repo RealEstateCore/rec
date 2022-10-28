@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Air_Diffuser](#)
 # Air_Diffuser
 
+A device that is a component of the air distribution system that controls the delivery of conditioned and/or ventilating air into a room
+
+
 **Display name:** Air Diffuser<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Diffuser;1
 

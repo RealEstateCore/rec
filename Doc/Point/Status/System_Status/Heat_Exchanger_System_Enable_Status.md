@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [System_Status](System_Status.md) > [Heat_Exchanger_System_Enable_Status](#)
 # Heat_Exchanger_System_Enable_Status
 
+Indicates if the heat exchanger system has been enabled
+
+
 **Display name:** Heat Exchanger System Enable Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heat_Exchanger_System_Enable_Status;1
 
@@ -17,9 +20,10 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|tags|**en**: Tags|**en**: Brick tags associated with this interface.|array (string)|False|
+|tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Status](../Status.md):** lastKnownValue
+* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 
