@@ -39,4 +39,4 @@ jobs:
 
       # Publish the Ontology package to Nuget
       - name: 'publish to nuget'
-        run: nuget push --source "${{ env.NUGET_FEED_URL }}" Generated/RealEstateCore.Ontology.DTDLv2.nupkg --skip-duplicate
+        run: nuget push -Source "${{ env.NUGET_FEED_URL }}" Generated/RealEstateCore.Ontology.DTDLv2.nupkg -SkipDuplicate
