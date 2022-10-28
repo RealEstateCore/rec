@@ -35,7 +35,7 @@ jobs:
       # Run nuget package
       - name: 'nuget pack'
         run: |
-          nuget pack Generated/RealEstateCore.Ontology.DTDLv2.nuspec
+          nuget pack Generated/RealEstateCore.Ontology.DTDLv2.nuspec -OutputDirectory Generated
 
       # Publish the Ontology package to Nuget
       - name: 'publish to nuget'
