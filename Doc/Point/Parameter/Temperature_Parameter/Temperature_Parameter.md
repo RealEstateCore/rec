@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Temperature_Parameter](#)
 # Temperature_Parameter
 
+Parameters relevant to temperature-related systems and points
+
+
 **Display name:** Temperature Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Temperature_Parameter;1
 

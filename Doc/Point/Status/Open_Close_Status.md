@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Open_Close_Status](#)
 # Open_Close_Status
 
+Indicates the open/close status of a device such as a damper or valve
+
+
 **Display name:** Open Close Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Open_Close_Status;1
 

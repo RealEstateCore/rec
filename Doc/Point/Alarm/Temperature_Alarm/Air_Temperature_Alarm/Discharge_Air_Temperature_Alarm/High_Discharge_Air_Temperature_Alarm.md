@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Alarm](../../../Alarm.md) > [Temperature_Alarm](../../Temperature_Alarm.md) > [Air_Temperature_Alarm](../Air_Temperature_Alarm.md) > [Discharge_Air_Temperature_Alarm](Discharge_Air_Temperature_Alarm.md) > [High_Discharge_Air_Temperature_Alarm](#)
 # High_Discharge_Air_Temperature_Alarm
 
+An alarm that indicates that discharge air temperature is too high
+
+
 **Display name:** High Discharge Air Temperature Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:High_Discharge_Air_Temperature_Alarm;1
 

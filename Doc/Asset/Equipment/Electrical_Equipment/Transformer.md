@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Electrical_Equipment](Electrical_Equipment.md) > [Transformer](#)
 # Transformer
 
+A Transformer is usually fed by a high-voltage source and then steps down the voltage to a lower-voltage feed for low-voltage application (such as lights). Transformers also can step up voltage, but this generally does not apply to in building distribution.
+
+
 **Display name:** Transformer<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Transformer;1
 

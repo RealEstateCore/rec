@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Direction_Sensor](Direction_Sensor.md) > [Wind_Direction_Sensor](#)
 # Wind_Direction_Sensor
 
+Measures the direction of wind in degrees relative to North
+
+
 **Display name:** Wind Direction Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Wind_Direction_Sensor;1
 

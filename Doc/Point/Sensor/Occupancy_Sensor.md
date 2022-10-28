@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Occupancy_Sensor](#)
 # Occupancy_Sensor
 
+Detects occupancy of some space or area
+
+
 **Display name:** Occupancy Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Occupancy_Sensor;1
 

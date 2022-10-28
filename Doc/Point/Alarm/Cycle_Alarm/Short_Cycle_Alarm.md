@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Cycle_Alarm](Cycle_Alarm.md) > [Short_Cycle_Alarm](#)
 # Short_Cycle_Alarm
 
+An alarm that indicates a short cycle occurred. A short cycle occurs when a cooling cycle is prevented from completing its full cycle
+
+
 **Display name:** Short Cycle Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Short_Cycle_Alarm;1
 

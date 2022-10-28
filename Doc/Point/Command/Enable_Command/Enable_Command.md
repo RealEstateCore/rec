@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Enable_Command](#)
 # Enable_Command
 
+Commands that enable functionality
+
+
 **Display name:** Enable Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Enable_Command;1
 

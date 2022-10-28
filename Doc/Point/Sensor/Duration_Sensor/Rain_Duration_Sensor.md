@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Duration_Sensor](Duration_Sensor.md) > [Rain_Duration_Sensor](#)
 # Rain_Duration_Sensor
 
+Measures the duration of precipitation within some time frame
+
+
 **Display name:** Rain Duration Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Rain_Duration_Sensor;1
 

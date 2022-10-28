@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Pressure_Sensor](../Pressure_Sensor.md) > [Velocity_Pressure_Sensor](#)
 # Velocity_Pressure_Sensor
 
+Measures the difference between total pressure and static pressure
+
+
 **Display name:** Velocity Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Velocity_Pressure_Sensor;1
 

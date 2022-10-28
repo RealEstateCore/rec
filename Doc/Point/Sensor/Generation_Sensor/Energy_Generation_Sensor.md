@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Generation_Sensor](Generation_Sensor.md) > [Energy_Generation_Sensor](#)
 # Energy_Generation_Sensor
 
+A sensor measuring the amount of generated energy.
+
+
 **Display name:** Energy Generation Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Energy_Generation_Sensor;1
 

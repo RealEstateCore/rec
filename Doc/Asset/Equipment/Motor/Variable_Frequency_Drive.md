@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Motor](Motor.md) > [Variable_Frequency_Drive](#)
 # Variable_Frequency_Drive
 
+Electronic device that varies its output frequency to vary the rotating speed of a motor, given a fixed input frequency. Used with fans or pumps to vary the flow in the system as a function of a maintained pressure.
+
+
 **Display name:** Variable Frequency Drive<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Variable_Frequency_Drive;1
 

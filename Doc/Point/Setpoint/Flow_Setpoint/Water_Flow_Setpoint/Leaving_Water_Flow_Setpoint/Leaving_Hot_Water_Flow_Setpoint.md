@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Flow_Setpoint](../../Flow_Setpoint.md) > [Water_Flow_Setpoint](../Water_Flow_Setpoint.md) > [Leaving_Water_Flow_Setpoint](Leaving_Water_Flow_Setpoint.md) > [Leaving_Hot_Water_Flow_Setpoint](#)
 # Leaving_Hot_Water_Flow_Setpoint
 
+Sets the target flow rate of hot leaving water
+
+
 **Display name:** Leaving Hot Water Flow Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Hot_Water_Flow_Setpoint;1
 

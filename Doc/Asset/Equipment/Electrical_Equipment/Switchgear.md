@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Electrical_Equipment](Electrical_Equipment.md) > [Switchgear](#)
 # Switchgear
 
+A main disconnect or service disconnect feeds power to a switchgear, which then distributes power to the rest of the building through smaller amperage-rated disconnects.
+
+
 **Display name:** Switchgear<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Switchgear;1
 

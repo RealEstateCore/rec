@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Radiant_Panel_Temperature_Setpoint](Radiant_Panel_Temperature_Setpoint.md) > [Outside_Face_Surface_Temperature_Setpoint](#)
 # Outside_Face_Surface_Temperature_Setpoint
 
+Sets temperature for the outside face surface temperature of the radiant panel.
+
+
 **Display name:** Outside Face Surface Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Face_Surface_Temperature_Setpoint;1
 

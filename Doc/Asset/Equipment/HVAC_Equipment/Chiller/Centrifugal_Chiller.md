@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Chiller](Chiller.md) > [Centrifugal_Chiller](#)
 # Centrifugal_Chiller
 
+A chiller that uses the vapor compression cycle to chill water. It throws off the heat collected from the chilled water plus the heat from the compressor to a water loop
+
+
 **Display name:** Centrifugal Chiller<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Centrifugal_Chiller;1
 

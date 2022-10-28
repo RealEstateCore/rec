@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fault_Status](#)
 # Fault_Status
 
+Indicates the presence of a fault in a device, system or control loop
+
+
 **Display name:** Fault Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fault_Status;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Current_Ratio_Setpoint](#)
 # Current_Ratio_Setpoint
 
+Sets the ratio of currents in a transformer
+
+
 **Display name:** Current Ratio Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Current_Ratio_Setpoint;1
 

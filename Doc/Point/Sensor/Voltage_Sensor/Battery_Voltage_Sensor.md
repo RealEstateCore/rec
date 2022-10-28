@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Voltage_Sensor](Voltage_Sensor.md) > [Battery_Voltage_Sensor](#)
 # Battery_Voltage_Sensor
 
+Measures the capacity of a battery
+
+
 **Display name:** Battery Voltage Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Battery_Voltage_Sensor;1
 

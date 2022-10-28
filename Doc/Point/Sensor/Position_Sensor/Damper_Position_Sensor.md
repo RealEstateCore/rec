@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Position_Sensor](Position_Sensor.md) > [Damper_Position_Sensor](#)
 # Damper_Position_Sensor
 
+Measures the current position of a damper in terms of the percent of fully open
+
+
 **Display name:** Damper Position Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Damper_Position_Sensor;1
 

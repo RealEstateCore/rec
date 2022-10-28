@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [Mode_Status](../Mode_Status.md) > [Cooling_Mode_Status](#)
 # Cooling_Mode_Status
 
+Indicates whether a system, device or control loop is in a cooling mode
+
+
 **Display name:** Cooling Mode Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Mode_Status;1
 

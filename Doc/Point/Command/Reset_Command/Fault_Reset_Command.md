@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Reset_Command](Reset_Command.md) > [Fault_Reset_Command](#)
 # Fault_Reset_Command
 
+Clears a fault status
+
+
 **Display name:** Fault Reset Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fault_Reset_Command;1
 

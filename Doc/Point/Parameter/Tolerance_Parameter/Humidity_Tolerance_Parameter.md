@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Tolerance_Parameter](Tolerance_Parameter.md) > [Humidity_Tolerance_Parameter](#)
 # Humidity_Tolerance_Parameter
 
+A parameter determining the difference between upper and lower limits of humidity.
+
+
 **Display name:** Humidity Tolerance Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Humidity_Tolerance_Parameter;1
 

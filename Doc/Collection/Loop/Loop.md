@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Collection](../Collection.md) > [Loop](#)
 # Loop
 
+A collection of connected equipment; part of a System
+
+
 **Display name:** Loop<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Loop;1
 

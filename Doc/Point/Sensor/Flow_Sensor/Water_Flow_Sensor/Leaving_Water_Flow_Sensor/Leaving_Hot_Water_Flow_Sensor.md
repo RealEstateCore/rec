@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Flow_Sensor](../../Flow_Sensor.md) > [Water_Flow_Sensor](../Water_Flow_Sensor.md) > [Leaving_Water_Flow_Sensor](Leaving_Water_Flow_Sensor.md) > [Leaving_Hot_Water_Flow_Sensor](#)
 # Leaving_Hot_Water_Flow_Sensor
 
+Measures the rate of flow of hot leaving water
+
+
 **Display name:** Leaving Hot Water Flow Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Hot_Water_Flow_Sensor;1
 

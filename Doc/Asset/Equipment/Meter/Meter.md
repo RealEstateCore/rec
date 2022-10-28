@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Meter](#)
 # Meter
 
+A device that measure usage or consumption of some media --- typically a form energy or power.
+
+
 **Display name:** Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Meter;1
 

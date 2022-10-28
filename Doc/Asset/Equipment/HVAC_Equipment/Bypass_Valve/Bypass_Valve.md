@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Bypass_Valve](#)
 # Bypass_Valve
 
+A type of valve installed in a bypass pipeline
+
+
 **Display name:** Bypass Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Bypass_Valve;1
 

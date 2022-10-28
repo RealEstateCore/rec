@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Setpoint](#)
 # Setpoint
 
+A Setpoint is an input value at which the desired property is set
+
+
 **Display name:** Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Setpoint;1
 

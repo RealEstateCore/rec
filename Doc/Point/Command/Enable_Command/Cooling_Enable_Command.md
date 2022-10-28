@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Enable_Command](Enable_Command.md) > [Cooling_Enable_Command](#)
 # Cooling_Enable_Command
 
+Command that enables cooling functionality in equipment but certain condition(s) must be met first before actively cooling. For the actively cooling control, see Cooling_Command.
+
+
 **Display name:** Cooling Enable Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Enable_Command;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Air_Temperature_Sensor](../Air_Temperature_Sensor.md) > [Zone_Air_Temperature_Sensor](Zone_Air_Temperature_Sensor.md) > [Coldest_Zone_Air_Temperature_Sensor](#)
 # Coldest_Zone_Air_Temperature_Sensor
 
+The zone temperature that is coldest; drives the supply temperature of hot air. A computed value rather than a physical sensor. Also referred to as a 'Lowest Zone Air Temperature Sensor'
+
+
 **Display name:** Coldest Zone Air Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Coldest_Zone_Air_Temperature_Sensor;1
 

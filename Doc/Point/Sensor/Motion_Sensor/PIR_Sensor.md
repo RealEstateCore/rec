@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Motion_Sensor](Motion_Sensor.md) > [PIR_Sensor](#)
 # PIR_Sensor
 
+Detects the presense of motion in some area using the differential change in infrared intensity between two or more receptors
+
+
 **Display name:** PIR Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PIR_Sensor;1
 

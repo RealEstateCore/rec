@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Weather_Station](#)
 # Weather_Station
 
+A dedicated weather measurement station
+
+
 **Display name:** Weather Station<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Weather_Station;1
 

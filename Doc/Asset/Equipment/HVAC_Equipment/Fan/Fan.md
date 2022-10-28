@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](#)
 # Fan
 
+Any device with two or more blades or vanes attached to a rotating shaft used to produce an airflow for the purpose of comfort, ventilation, exhaust, heating, cooling, or any other gaseous transport.
+
+
 **Display name:** Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fan;1
 

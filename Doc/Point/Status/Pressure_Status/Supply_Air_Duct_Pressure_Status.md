@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Pressure_Status](Pressure_Status.md) > [Supply_Air_Duct_Pressure_Status](#)
 # Supply_Air_Duct_Pressure_Status
 
+Indicates if air pressure in supply duct is within expected bounds
+
+
 **Display name:** Supply Air Duct Pressure Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Supply_Air_Duct_Pressure_Status;1
 

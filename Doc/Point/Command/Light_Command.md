@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Light_Command](#)
 # Light_Command
 
+Controls the amount of the light provided by the device
+
+
 **Display name:** Light Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Light_Command;1
 

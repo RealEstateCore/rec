@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Air_Quality_Sensor](../Air_Quality_Sensor.md) > [CO2_Sensor](#)
 # CO2_Sensor
 
+Measures properties of CO2 in air
+
+
 **Display name:** CO2 Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:CO2_Sensor;1
 

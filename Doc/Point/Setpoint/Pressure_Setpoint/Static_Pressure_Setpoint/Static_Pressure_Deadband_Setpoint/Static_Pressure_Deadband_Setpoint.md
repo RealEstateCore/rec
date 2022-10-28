@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Pressure_Setpoint](../../Pressure_Setpoint.md) > [Static_Pressure_Setpoint](../Static_Pressure_Setpoint.md) > [Static_Pressure_Deadband_Setpoint](#)
 # Static_Pressure_Deadband_Setpoint
 
+Sets the size of a deadband of static pressure
+
+
 **Display name:** Static Pressure Deadband Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Static_Pressure_Deadband_Setpoint;1
 

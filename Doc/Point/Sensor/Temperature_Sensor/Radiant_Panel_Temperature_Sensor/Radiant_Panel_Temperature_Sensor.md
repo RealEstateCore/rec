@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Temperature_Sensor](../Temperature_Sensor.md) > [Radiant_Panel_Temperature_Sensor](#)
 # Radiant_Panel_Temperature_Sensor
 
+Measures the temperature of the radiant panel of the radiant heating and cooling HVAC system.
+
+
 **Display name:** Radiant Panel Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Radiant_Panel_Temperature_Sensor;1
 

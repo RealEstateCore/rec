@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Adjust_Sensor](Adjust_Sensor.md) > [Temperature_Adjust_Sensor](#)
 # Temperature_Adjust_Sensor
 
+Measures user-provided adjustment of temperature
+
+
 **Display name:** Temperature Adjust Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Temperature_Adjust_Sensor;1
 

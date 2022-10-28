@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Thermostat](#)
 # Thermostat
 
+An automatic control device used to maintain temperature at a fixed or adjustable setpoint.
+
+
 **Display name:** Thermostat<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Thermostat;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Pump](../Pump.md) > [Water_Pump](Water_Pump.md) > [Chilled_Water_Pump](#)
 # Chilled_Water_Pump
 
+A pump that performs work on chilled water; typically part of a chilled water system
+
+
 **Display name:** Chilled Water Pump<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Chilled_Water_Pump;1
 

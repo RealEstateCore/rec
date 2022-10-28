@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Differential_Setpoint](Differential_Setpoint.md) > [Differential_Speed_Setpoint](#)
 # Differential_Speed_Setpoint
 
+Sets differential speed
+
+
 **Display name:** Differential Speed Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Differential_Speed_Setpoint;1
 

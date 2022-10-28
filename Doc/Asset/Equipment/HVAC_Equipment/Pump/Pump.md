@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Pump](#)
 # Pump
 
+Machine for imparting energy to a fluid, causing it to do work, drawing a fluid into itself through an entrance port, and forcing the fluid out through an exhaust port.
+
+
 **Display name:** Pump<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Pump;1
 

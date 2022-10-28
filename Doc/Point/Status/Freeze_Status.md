@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Freeze_Status](#)
 # Freeze_Status
 
+Indicates if a substance contained within a vessel has frozen
+
+
 **Display name:** Freeze Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Freeze_Status;1
 

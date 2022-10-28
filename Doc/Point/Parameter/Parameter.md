@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Parameter](#)
 # Parameter
 
+Parameter points are configuration settings used to guide the operation of equipment and control systems; for example they may provide bounds on valid setpoint values
+
+
 **Display name:** Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Parameter;1
 

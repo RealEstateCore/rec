@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Exhaust_Fan](#)
 # Exhaust_Fan
 
+Fan moving exhaust air -- air that must be removed from a space due to contaminants
+
+
 **Display name:** Exhaust Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Exhaust_Fan;1
 

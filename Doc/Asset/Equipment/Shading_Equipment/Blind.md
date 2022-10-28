@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Shading_Equipment](Shading_Equipment.md) > [Blind](#)
 # Blind
 
+A window covering.
+
+
 **Display name:** Blind<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Blind;1
 

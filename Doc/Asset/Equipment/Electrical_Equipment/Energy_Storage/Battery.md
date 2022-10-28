@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Electrical_Equipment](../Electrical_Equipment.md) > [Energy_Storage](Energy_Storage.md) > [Battery](#)
 # Battery
 
+A container that stores chemical energy that can be converted into electricity and used as a source of power
+
+
 **Display name:** Battery<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Battery;1
 

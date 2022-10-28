@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Collection](../../../Collection.md) > [System](../../System.md) > [Heating_Ventilation_Air_Conditioning_System](../Heating_Ventilation_Air_Conditioning_System.md) > [Water_System](#)
 # Water_System
 
+The equipment, devices and conduits that handle the production and distribution of water in a building
+
+
 **Display name:** Water System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_System;1
 

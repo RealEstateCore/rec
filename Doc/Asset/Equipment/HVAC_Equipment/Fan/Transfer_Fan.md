@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Transfer_Fan](#)
 # Transfer_Fan
 
+A fan that transfers air from a space to another space.
+
+
 **Display name:** Transfer Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Transfer_Fan;1
 

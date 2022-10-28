@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Speed_Status](#)
 # Speed_Status
 
+Indicates the operating speed of a device or equipment, e.g. fan
+
+
 **Display name:** Speed Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Speed_Status;1
 

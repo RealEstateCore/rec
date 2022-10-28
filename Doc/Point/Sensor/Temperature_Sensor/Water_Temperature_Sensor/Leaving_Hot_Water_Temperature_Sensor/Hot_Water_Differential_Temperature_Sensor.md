@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Water_Temperature_Sensor](../Water_Temperature_Sensor.md) > [Leaving_Hot_Water_Temperature_Sensor](Leaving_Hot_Water_Temperature_Sensor.md) > [Hot_Water_Differential_Temperature_Sensor](#)
 # Hot_Water_Differential_Temperature_Sensor
 
+Measures the difference in temperature between the entering water to the boiler or other water heating device and leaving water from the same boiler or other water heating device
+
+
 **Display name:** Hot Water Differential Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Differential_Temperature_Sensor;1
 

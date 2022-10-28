@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Demand_Setpoint](Demand_Setpoint.md) > [Cooling_Demand_Setpoint](#)
 # Cooling_Demand_Setpoint
 
+Sets the rate required for cooling
+
+
 **Display name:** Cooling Demand Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Demand_Setpoint;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Torque_Sensor](#)
 # Torque_Sensor
 
+Measures torque, the tendency of a force to rotate an object about some axis
+
+
 **Display name:** Torque Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Torque_Sensor;1
 

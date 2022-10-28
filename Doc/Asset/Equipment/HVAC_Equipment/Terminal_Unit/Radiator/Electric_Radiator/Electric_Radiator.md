@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Terminal_Unit](../../Terminal_Unit.md) > [Radiator](../Radiator.md) > [Electric_Radiator](#)
 # Electric_Radiator
 
+Electric heating device
+
+
 **Display name:** Electric Radiator<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Electric_Radiator;1
 

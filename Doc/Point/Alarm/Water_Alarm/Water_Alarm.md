@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Water_Alarm](#)
 # Water_Alarm
 
+Alarm that indicates an undesirable event with a pipe, container, or equipment carrying water e.g. water leak
+
+
 **Display name:** Water Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Alarm;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Unoccupied_Humidity_Setpoint](#)
 # Unoccupied_Humidity_Setpoint
 
+Target humidity level when the location is unoccupied.
+
+
 **Display name:** Unoccupied Humidity Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Unoccupied_Humidity_Setpoint;1
 

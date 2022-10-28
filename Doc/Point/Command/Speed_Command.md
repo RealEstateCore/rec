@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Speed_Command](#)
 # Speed_Command
 
+A command to set speed to a certain degree.
+
+
 **Display name:** Speed Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Speed_Command;1
 

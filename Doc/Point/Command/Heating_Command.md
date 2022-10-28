@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Heating_Command](#)
 # Heating_Command
 
+Controls the amount of heating to be delivered (typically as a proportion of total heating output)
+
+
 **Display name:** Heating Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heating_Command;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Water_Temperature_Setpoint](Water_Temperature_Setpoint.md) > [Max_Water_Temperature_Setpoint](#)
 # Max_Water_Temperature_Setpoint
 
+Setpoint for max water temperature
+
+
 **Display name:** Max Water Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Water_Temperature_Setpoint;1
 

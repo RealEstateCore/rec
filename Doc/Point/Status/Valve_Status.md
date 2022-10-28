@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Valve_Status](#)
 # Valve_Status
 
+The current status of the valve.
+
+
 **Display name:** Valve Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Valve_Status;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Collection](../Collection.md) > [System](System.md) > [Domestic_Hot_Water_System](#)
 # Domestic_Hot_Water_System
 
+The equipment, devices and conduits that handle the production and distribution of domestic hot water in a building
+
+
 **Display name:** Domestic Hot Water System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_System;1
 

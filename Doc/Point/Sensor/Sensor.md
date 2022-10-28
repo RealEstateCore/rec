@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](#)
 # Sensor
 
+A Sensor is an input point that represents the value of a device or instrument designed to detect and measure a variable (ASHRAE Dictionary).
+
+
 **Display name:** Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Sensor;1
 

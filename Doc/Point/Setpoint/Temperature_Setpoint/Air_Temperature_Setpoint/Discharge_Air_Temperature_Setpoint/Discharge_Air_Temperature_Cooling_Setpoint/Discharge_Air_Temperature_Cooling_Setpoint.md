@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Point](../../../../../Point.md) > [Setpoint](../../../../Setpoint.md) > [Temperature_Setpoint](../../../Temperature_Setpoint.md) > [Air_Temperature_Setpoint](../../Air_Temperature_Setpoint.md) > [Discharge_Air_Temperature_Setpoint](../Discharge_Air_Temperature_Setpoint.md) > [Discharge_Air_Temperature_Cooling_Setpoint](#)
 # Discharge_Air_Temperature_Cooling_Setpoint
 
+Sets temperature of discharge air for cooling
+
+
 **Display name:** Discharge Air Temperature Cooling Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Cooling_Setpoint;1
 

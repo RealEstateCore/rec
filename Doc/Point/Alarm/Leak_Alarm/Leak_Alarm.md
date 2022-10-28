@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Leak_Alarm](#)
 # Leak_Alarm
 
+An alarm that indicates leaks occured in systems containing fluids
+
+
 **Display name:** Leak Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leak_Alarm;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Collection](../../../Collection.md) > [System](../../System.md) > [Heating_Ventilation_Air_Conditioning_System](../Heating_Ventilation_Air_Conditioning_System.md) > [Water_System](Water_System.md) > [Condenser_Water_System](#)
 # Condenser_Water_System
 
+A heat rejection system consisting of (typically) cooling towers, condenser water pumps, chillers and the piping connecting the components
+
+
 **Display name:** Condenser Water System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Condenser_Water_System;1
 

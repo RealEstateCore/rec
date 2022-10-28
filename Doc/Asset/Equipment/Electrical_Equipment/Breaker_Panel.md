@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Electrical_Equipment](Electrical_Equipment.md) > [Breaker_Panel](#)
 # Breaker_Panel
 
+Breaker Panel distributes power into various end-uses.
+
+
 **Display name:** Breaker Panel<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Breaker_Panel;1
 

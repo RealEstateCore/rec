@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Boiler_Command](#)
 # Boiler_Command
 
+A command to control a boiler
+
+
 **Display name:** Boiler Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Boiler_Command;1
 

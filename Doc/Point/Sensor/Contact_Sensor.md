@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Contact_Sensor](#)
 # Contact_Sensor
 
+Senses or detects contact, such as for determining if a door is closed.
+
+
 **Display name:** Contact Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Contact_Sensor;1
 

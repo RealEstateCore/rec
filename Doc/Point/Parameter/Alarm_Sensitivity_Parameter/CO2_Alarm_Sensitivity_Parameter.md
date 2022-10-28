@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Alarm_Sensitivity_Parameter](Alarm_Sensitivity_Parameter.md) > [CO2_Alarm_Sensitivity_Parameter](#)
 # CO2_Alarm_Sensitivity_Parameter
 
+A parameter indicates the sensitivity to activate a CO2 alarm.
+
+
 **Display name:** CO2 Alarm Sensitivity Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:CO2_Alarm_Sensitivity_Parameter;1
 

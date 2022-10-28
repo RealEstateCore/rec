@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Mode_Command](Mode_Command.md) > [Automatic_Mode_Command](#)
 # Automatic_Mode_Command
 
+Controls whether or not a device or controller is operating in "Automatic" mode
+
+
 **Display name:** Automatic Mode Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Automatic_Mode_Command;1
 

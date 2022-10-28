@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Filter](Filter.md) > [Final_Filter](#)
 # Final_Filter
 
+The last, high-efficiency filter installed in a sequence to remove the finest particulates from the substance being filtered
+
+
 **Display name:** Final Filter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Final_Filter;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Radiant_Panel](Radiant_Panel.md) > [RC_Panel](#)
 # RC_Panel
 
+See Radiant_Ceiling_Panel
+
+
 **Display name:** RC Panel<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:RC_Panel;1
 

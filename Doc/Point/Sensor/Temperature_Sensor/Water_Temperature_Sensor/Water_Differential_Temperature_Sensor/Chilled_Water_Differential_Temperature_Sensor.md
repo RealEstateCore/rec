@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Water_Temperature_Sensor](../Water_Temperature_Sensor.md) > [Water_Differential_Temperature_Sensor](Water_Differential_Temperature_Sensor.md) > [Chilled_Water_Differential_Temperature_Sensor](#)
 # Chilled_Water_Differential_Temperature_Sensor
 
+Measures the difference in temperature between the entering water to the chiller or other water cooling device and leaving water from the same chiller or other water cooling device
+
+
 **Display name:** Chilled Water Differential Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Temperature_Sensor;1
 

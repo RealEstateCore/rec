@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Isolation_Valve](Isolation_Valve.md) > [Condenser_Water_Isolation_Valve](#)
 # Condenser_Water_Isolation_Valve
 
+An isolation valve installed in the condenser water loop
+
+
 **Display name:** Condenser Water Isolation Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Condenser_Water_Isolation_Valve;1
 

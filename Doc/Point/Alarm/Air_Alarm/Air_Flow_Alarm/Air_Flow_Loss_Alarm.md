@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Alarm](../../Alarm.md) > [Air_Alarm](../Air_Alarm.md) > [Air_Flow_Alarm](Air_Flow_Alarm.md) > [Air_Flow_Loss_Alarm](#)
 # Air_Flow_Loss_Alarm
 
+An alarm that indicates loss in air flow.
+
+
 **Display name:** Air Flow Loss Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Flow_Loss_Alarm;1
 

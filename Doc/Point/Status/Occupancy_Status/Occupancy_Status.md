@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Occupancy_Status](#)
 # Occupancy_Status
 
+Indicates if a room or space is occupied
+
+
 **Display name:** Occupancy Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Occupancy_Status;1
 

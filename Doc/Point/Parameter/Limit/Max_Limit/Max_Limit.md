@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [Limit](../Limit.md) > [Max_Limit](#)
 # Max_Limit
 
+A parameter that places an upper bound on the range of permitted values of a Setpoint.
+
+
 **Display name:** Max Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Limit;1
 

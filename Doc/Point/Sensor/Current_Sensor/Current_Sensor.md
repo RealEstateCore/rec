@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Current_Sensor](#)
 # Current_Sensor
 
+Senses the amperes of electrical current passing through the sensor
+
+
 **Display name:** Current Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Current_Sensor;1
 

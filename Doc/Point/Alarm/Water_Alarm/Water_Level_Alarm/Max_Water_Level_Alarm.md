@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Alarm](../../Alarm.md) > [Water_Alarm](../Water_Alarm.md) > [Water_Level_Alarm](Water_Level_Alarm.md) > [Max_Water_Level_Alarm](#)
 # Max_Water_Level_Alarm
 
+Alarm indicating that the maximum water level was reached
+
+
 **Display name:** Max Water Level Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Water_Level_Alarm;1
 

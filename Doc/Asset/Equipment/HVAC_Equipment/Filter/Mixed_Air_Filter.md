@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Filter](Filter.md) > [Mixed_Air_Filter](#)
 # Mixed_Air_Filter
 
+A filter that is applied to the mixture of recirculated and outside air
+
+
 **Display name:** Mixed Air Filter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Mixed_Air_Filter;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Space_Heater](#)
 # Space_Heater
 
+A heater used to warm the air in an enclosed area, such as a room or office
+
+
 **Display name:** Space Heater<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Space_Heater;1
 

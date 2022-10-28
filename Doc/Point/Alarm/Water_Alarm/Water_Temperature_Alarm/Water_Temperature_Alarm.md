@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Alarm](../../Alarm.md) > [Water_Alarm](../Water_Alarm.md) > [Water_Temperature_Alarm](#)
 # Water_Temperature_Alarm
 
+An alarm that indicates the off-normal conditions associated with temperature of water.
+
+
 **Display name:** Water Temperature Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Temperature_Alarm;1
 

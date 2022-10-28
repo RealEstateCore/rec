@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Motor](#)
 # Motor
 
+A machine in which power is applied to do work by the conversion of various forms of energy into mechanical force and motion.
+
+
 **Display name:** Motor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Motor;1
 

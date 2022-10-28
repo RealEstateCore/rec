@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Flow_Setpoint](../../Flow_Setpoint.md) > [Water_Flow_Setpoint](../Water_Flow_Setpoint.md) > [Entering_Water_Flow_Setpoint](Entering_Water_Flow_Setpoint.md) > [Entering_Chilled_Water_Flow_Setpoint](#)
 # Entering_Chilled_Water_Flow_Setpoint
 
+Sets the target flow rate of chilled entering water
+
+
 **Display name:** Entering Chilled Water Flow Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Entering_Chilled_Water_Flow_Setpoint;1
 

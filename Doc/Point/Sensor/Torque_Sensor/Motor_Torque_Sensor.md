@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Torque_Sensor](Torque_Sensor.md) > [Motor_Torque_Sensor](#)
 # Motor_Torque_Sensor
 
+Measures the torque, or rotating power, of a motor
+
+
 **Display name:** Motor Torque Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Motor_Torque_Sensor;1
 

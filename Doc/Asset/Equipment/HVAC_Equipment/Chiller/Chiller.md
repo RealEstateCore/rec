@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Chiller](#)
 # Chiller
 
+Refrigerating machine used to transfer heat between fluids. Chillers are either direct expansion with a compressor or absorption type.
+
+
 **Display name:** Chiller<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Chiller;1
 

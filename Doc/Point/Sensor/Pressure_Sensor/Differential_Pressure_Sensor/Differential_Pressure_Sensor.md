@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Pressure_Sensor](../Pressure_Sensor.md) > [Differential_Pressure_Sensor](#)
 # Differential_Pressure_Sensor
 
+Measures the difference between two applied pressures
+
+
 **Display name:** Differential Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Differential_Pressure_Sensor;1
 

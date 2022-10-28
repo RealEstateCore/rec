@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Alarm](../../Alarm.md) > [Temperature_Alarm](../Temperature_Alarm.md) > [High_Temperature_Alarm](#)
 # High_Temperature_Alarm
 
+An alarm that indicates high temperature.
+
+
 **Display name:** High Temperature Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:High_Temperature_Alarm;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Air_Diffuser](Air_Diffuser.md) > [Laminar_Flow_Air_Diffuser](#)
 # Laminar_Flow_Air_Diffuser
 
+An air diffuser that is designed for low discharge air speeds to provide uniform and unidirectional air pattern which minimizes room air entrainment
+
+
 **Display name:** Laminar Flow Air Diffuser<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Laminar_Flow_Air_Diffuser;1
 

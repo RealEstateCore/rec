@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Position_Command](Position_Command.md) > [Damper_Position_Command](#)
 # Damper_Position_Command
 
+Controls the position (the degree of openness) of a damper
+
+
 **Display name:** Damper Position Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1
 

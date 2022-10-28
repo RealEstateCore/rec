@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [DDAHU](#)
 # DDAHU
 
+See Dual_Duct_Air_Handling_Unit
+
+
 **Display name:** DDAHU<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:DDAHU;1
 

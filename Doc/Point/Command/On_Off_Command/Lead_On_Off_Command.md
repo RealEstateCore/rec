@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [On_Off_Command](On_Off_Command.md) > [Lead_On_Off_Command](#)
 # Lead_On_Off_Command
 
+Controls the active/inactive status of the "lead" part of a lead/lag system
+
+
 **Display name:** Lead On Off Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Lead_On_Off_Command;1
 

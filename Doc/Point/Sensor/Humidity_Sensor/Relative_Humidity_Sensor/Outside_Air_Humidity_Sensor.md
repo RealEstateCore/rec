@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Humidity_Sensor](../Humidity_Sensor.md) > [Relative_Humidity_Sensor](Relative_Humidity_Sensor.md) > [Outside_Air_Humidity_Sensor](#)
 # Outside_Air_Humidity_Sensor
 
+Measures the relative humidity of outside air
+
+
 **Display name:** Outside Air Humidity Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Air_Humidity_Sensor;1
 

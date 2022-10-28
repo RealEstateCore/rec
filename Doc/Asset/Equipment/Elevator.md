@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Elevator](#)
 # Elevator
 
+A device that provides vertical transportation between floors, levels or decks of a building, vessel or other structure
+
+
 **Display name:** Elevator<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Elevator;1
 

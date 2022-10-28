@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Meter](../Meter.md) > [Building_Meter](#)
 # Building_Meter
 
+A meter that measures usage or consumption of some media for a whole building
+
+
 **Display name:** Building Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Building_Meter;1
 

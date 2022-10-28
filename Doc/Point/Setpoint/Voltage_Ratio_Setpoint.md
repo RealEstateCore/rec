@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Voltage_Ratio_Setpoint](#)
 # Voltage_Ratio_Setpoint
 
+Sets the ratio of voltage in a transformer
+
+
 **Display name:** Voltage Ratio Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Voltage_Ratio_Setpoint;1
 

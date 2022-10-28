@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [Dedicated_Outdoor_Air_System_Unit](#)
 # Dedicated_Outdoor_Air_System_Unit
 
+A device that conditions and delivers 100% outdoor air to its assigned spaces. It decouples air-conditioning of the outdoor air, usually used to provide minimum outdoor air ventilation, from conditioning of the internal loads.
+
+
 **Display name:** Dedicated Outdoor Air System Unit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Dedicated_Outdoor_Air_System_Unit;1
 

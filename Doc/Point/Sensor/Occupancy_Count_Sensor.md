@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Occupancy_Count_Sensor](#)
 # Occupancy_Count_Sensor
 
+Sensors measuring the number of people in an area
+
+
 **Display name:** Occupancy Count Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Occupancy_Count_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Cooling_Command](#)
 # Cooling_Command
 
+Controls the amount of cooling to be delivered (typically as a proportion of total cooling output)
+
+
 **Display name:** Cooling Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Command;1
 

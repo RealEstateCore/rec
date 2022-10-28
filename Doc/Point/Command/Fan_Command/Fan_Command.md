@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Fan_Command](#)
 # Fan_Command
 
+Controls properties of fans
+
+
 **Display name:** Fan Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fan_Command;1
 

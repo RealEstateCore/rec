@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Parameter](../../../Parameter.md) > [Temperature_Parameter](../../Temperature_Parameter.md) > [Air_Temperature_Setpoint_Limit](../Air_Temperature_Setpoint_Limit.md) > [Discharge_Air_Temperature_Setpoint_Limit](#)
 # Discharge_Air_Temperature_Setpoint_Limit
 
+A parameter that places a lower or upper bound on the range of permitted values of a Discharge_Air_Temperature_Setpoint.
+
+
 **Display name:** Discharge Air Temperature Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Setpoint_Limit;1
 

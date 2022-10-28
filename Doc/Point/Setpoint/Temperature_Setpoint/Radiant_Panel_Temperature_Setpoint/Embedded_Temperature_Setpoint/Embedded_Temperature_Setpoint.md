@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Radiant_Panel_Temperature_Setpoint](../Radiant_Panel_Temperature_Setpoint.md) > [Embedded_Temperature_Setpoint](#)
 # Embedded_Temperature_Setpoint
 
+Sets temperature for the internal material, e.g. concrete slab, of the radiant panel.
+
+
 **Display name:** Embedded Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Embedded_Temperature_Setpoint;1
 

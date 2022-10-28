@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Current_Sensor](Current_Sensor.md) > [Load_Current_Sensor](#)
 # Load_Current_Sensor
 
+Measures the current consumed by a load
+
+
 **Display name:** Load Current Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Load_Current_Sensor;1
 

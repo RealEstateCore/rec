@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Failure_Alarm](#)
 # Failure_Alarm
 
+Alarms that indicate the failure of devices, equipment, systems and control loops
+
+
 **Display name:** Failure Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Failure_Alarm;1
 

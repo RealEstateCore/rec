@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [PAU](#)
 # PAU
 
+A type of AHU, use to pre-treat the outdoor air before feed to AHU
+
+
 **Display name:** PAU<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PAU;1
 

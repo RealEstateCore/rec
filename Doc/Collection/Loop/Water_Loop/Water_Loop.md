@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Collection](../../Collection.md) > [Loop](../Loop.md) > [Water_Loop](#)
 # Water_Loop
 
+A collection of equipment that transport and regulate water among each other
+
+
 **Display name:** Water Loop<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Loop;1
 

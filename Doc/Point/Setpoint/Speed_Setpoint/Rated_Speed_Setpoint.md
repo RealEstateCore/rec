@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Speed_Setpoint](Speed_Setpoint.md) > [Rated_Speed_Setpoint](#)
 # Rated_Speed_Setpoint
 
+Sets rated speed
+
+
 **Display name:** Rated Speed Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Rated_Speed_Setpoint;1
 

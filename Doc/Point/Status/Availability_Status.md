@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Availability_Status](#)
 # Availability_Status
 
+Indicates if a piece of equipment, system, or functionality is available for operation
+
+
 **Display name:** Availability Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Availability_Status;1
 

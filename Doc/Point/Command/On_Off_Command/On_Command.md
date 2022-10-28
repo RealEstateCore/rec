@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [On_Off_Command](On_Off_Command.md) > [On_Command](#)
 # On_Command
 
+An On Command controls or reports the binary 'on' status of a control loop, relay or equipment activity. It can only be used to start/activate an associated equipment or process, or determine that the related entity is 'on'
+
+
 **Display name:** On Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:On_Command;1
 

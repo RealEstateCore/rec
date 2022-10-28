@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Damper](Damper.md) > [Exhaust_Damper](#)
 # Exhaust_Damper
 
+A damper that modulates the flow of exhaust air
+
+
 **Display name:** Exhaust Damper<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Exhaust_Damper;1
 

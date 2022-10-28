@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Mixed_Air_Humidity_Setpoint](#)
 # Mixed_Air_Humidity_Setpoint
 
+Humidity setpoint for mixed air
+
+
 **Display name:** Mixed Air Humidity Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Mixed_Air_Humidity_Setpoint;1
 

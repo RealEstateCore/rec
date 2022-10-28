@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Solar_Thermal_Collector](Solar_Thermal_Collector.md) > [PVT_Panel](#)
 # PVT_Panel
 
+A type of solar panels that convert solar radiation into usable thermal and electrical energy
+
+
 **Display name:** PVT Panel<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PVT_Panel;1
 

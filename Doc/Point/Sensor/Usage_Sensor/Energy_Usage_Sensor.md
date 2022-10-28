@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Usage_Sensor](Usage_Sensor.md) > [Energy_Usage_Sensor](#)
 # Energy_Usage_Sensor
 
+Measures the total amount of energy used over some period of time
+
+
 **Display name:** Energy Usage Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Energy_Usage_Sensor;1
 

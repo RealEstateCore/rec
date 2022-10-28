@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Tolerance_Parameter](#)
 # Tolerance_Parameter
 
+difference between upper and lower limits of size for a given nominal dimension or value.
+
+
 **Display name:** Tolerance Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Tolerance_Parameter;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Collection](../../../Collection.md) > [System](../../System.md) > [Heating_Ventilation_Air_Conditioning_System](../Heating_Ventilation_Air_Conditioning_System.md) > [Air_System](Air_System.md) > [Ventilation_Air_System](#)
 # Ventilation_Air_System
 
+The equipment, devices, and conduits that handle the introduction and distribution of ventilation air in the building
+
+
 **Display name:** Ventilation Air System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Ventilation_Air_System;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Solar_Radiance_Sensor](#)
 # Solar_Radiance_Sensor
 
+The amount of light that passes through or is emitted from the sun and falls within a given solid angle in a specified direction
+
+
 **Display name:** Solar Radiance Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Solar_Radiance_Sensor;1
 

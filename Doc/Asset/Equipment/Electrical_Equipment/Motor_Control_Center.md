@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Electrical_Equipment](Electrical_Equipment.md) > [Motor_Control_Center](#)
 # Motor_Control_Center
 
+The Motor Control Center is a specialized type of switchgear which provides electrical power to major mechanical systems in the building such as HVAC components.
+
+
 **Display name:** Motor Control Center<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Motor_Control_Center;1
 

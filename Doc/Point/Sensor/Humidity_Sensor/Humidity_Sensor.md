@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Humidity_Sensor](#)
 # Humidity_Sensor
 
+Measures the concentration of water vapor in air
+
+
 **Display name:** Humidity Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Humidity_Sensor;1
 

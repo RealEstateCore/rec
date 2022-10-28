@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Air_Quality_Sensor](../../Air_Quality_Sensor.md) > [Particulate_Matter_Sensor](../Particulate_Matter_Sensor.md) > [PM25_Sensor](PM25_Sensor.md) > [PM25_Level_Sensor](#)
 # PM25_Level_Sensor
 
+Detects level of particulates of size 2.5 microns
+
+
 **Display name:** PM2.5 Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PM25_Level_Sensor;1
 

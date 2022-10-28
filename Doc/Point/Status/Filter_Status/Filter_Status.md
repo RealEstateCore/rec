@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Filter_Status](#)
 # Filter_Status
 
+Indicates if a filter needs to be replaced
+
+
 **Display name:** Filter Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Filter_Status;1
 

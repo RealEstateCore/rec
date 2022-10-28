@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Terminal_Unit](Terminal_Unit.md) > [FCU](#)
 # FCU
 
+See Fan_Coil_Unit
+
+
 **Display name:** FCU<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:FCU;1
 

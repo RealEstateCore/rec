@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Pressure_Status](Pressure_Status.md) > [Discharge_Air_Duct_Pressure_Status](#)
 # Discharge_Air_Duct_Pressure_Status
 
+Indicates if air pressure in discharge duct is within expected bounds
+
+
 **Display name:** Discharge Air Duct Pressure Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Duct_Pressure_Status;1
 

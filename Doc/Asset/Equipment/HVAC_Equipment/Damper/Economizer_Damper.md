@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Damper](Damper.md) > [Economizer_Damper](#)
 # Economizer_Damper
 
+A damper that is part of an economizer that is used to module the flow of air
+
+
 **Display name:** Economizer Damper<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Economizer_Damper;1
 

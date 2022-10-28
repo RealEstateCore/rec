@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Overload_Alarm](#)
 # Overload_Alarm
 
+An alarm that can indicate when a full-load current is exceeded.
+
+
 **Display name:** Overload Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Overload_Alarm;1
 

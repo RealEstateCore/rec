@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Fume_Hood](#)
 # Fume_Hood
 
+A fume-collection device mounted over a work space, table, or shelf and serving to conduct unwanted gases away from the area enclosed.
+
+
 **Display name:** Fume Hood<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fume_Hood;1
 

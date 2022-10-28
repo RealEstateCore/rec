@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Dewpoint_Sensor](Dewpoint_Sensor.md) > [Discharge_Air_Dewpoint_Sensor](#)
 # Discharge_Air_Dewpoint_Sensor
 
+Measures dewpoint of discharge air
+
+
 **Display name:** Discharge Air Dewpoint Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Dewpoint_Sensor;1
 

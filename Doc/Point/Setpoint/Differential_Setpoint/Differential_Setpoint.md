@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Differential_Setpoint](#)
 # Differential_Setpoint
 
+A type of Setpoints that is related to the difference between two measurements
+
+
 **Display name:** Differential Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Differential_Setpoint;1
 

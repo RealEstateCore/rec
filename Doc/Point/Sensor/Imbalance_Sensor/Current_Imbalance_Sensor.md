@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Imbalance_Sensor](Imbalance_Sensor.md) > [Current_Imbalance_Sensor](#)
 # Current_Imbalance_Sensor
 
+A sensor which measures the current difference (imbalance) between phases of an electrical system
+
+
 **Display name:** Current Imbalance Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Current_Imbalance_Sensor;1
 

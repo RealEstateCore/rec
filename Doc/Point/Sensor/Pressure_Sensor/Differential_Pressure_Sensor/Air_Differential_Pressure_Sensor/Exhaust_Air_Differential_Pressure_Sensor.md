@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Pressure_Sensor](../../Pressure_Sensor.md) > [Differential_Pressure_Sensor](../Differential_Pressure_Sensor.md) > [Air_Differential_Pressure_Sensor](Air_Differential_Pressure_Sensor.md) > [Exhaust_Air_Differential_Pressure_Sensor](#)
 # Exhaust_Air_Differential_Pressure_Sensor
 
+Measures the difference in pressure between an upstream and downstream of an air duct or other air conduit used to exhaust air from the building
+
+
 **Display name:** Exhaust Air Differential Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Exhaust_Air_Differential_Pressure_Sensor;1
 

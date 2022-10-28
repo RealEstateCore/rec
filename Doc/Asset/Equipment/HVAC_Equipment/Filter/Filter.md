@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Filter](#)
 # Filter
 
+Device to remove gases from a mixture of gases or to remove solid material from a fluid
+
+
 **Display name:** Filter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Filter;1
 

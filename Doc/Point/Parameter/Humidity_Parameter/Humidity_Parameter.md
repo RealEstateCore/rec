@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Humidity_Parameter](#)
 # Humidity_Parameter
 
+Parameters relevant to humidity-related systems and points
+
+
 **Display name:** Humidity Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Humidity_Parameter;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Usage_Sensor](#)
 # Usage_Sensor
 
+Measures the amount of some substance that is consumed or used, over some period of time
+
+
 **Display name:** Usage Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Usage_Sensor;1
 

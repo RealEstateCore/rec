@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Temperature_Setpoint](Temperature_Setpoint.md) > [Schedule_Temperature_Setpoint](#)
 # Schedule_Temperature_Setpoint
 
+The current setpoint as indicated by the schedule
+
+
 **Display name:** Schedule Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Schedule_Temperature_Setpoint;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Demand_Sensor](#)
 # Demand_Sensor
 
+Measures the amount of power consumed by the use of some process; typically found by multiplying the tonnage of a unit (e.g. RTU) by the efficiency rating in kW/ton
+
+
 **Display name:** Demand Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Demand_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Piezoelectric_Sensor](#)
 # Piezoelectric_Sensor
 
+Senses changes pressure, acceleration, temperature, force or strain via the piezoelectric effect
+
+
 **Display name:** Piezoelectric Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Piezoelectric_Sensor;1
 

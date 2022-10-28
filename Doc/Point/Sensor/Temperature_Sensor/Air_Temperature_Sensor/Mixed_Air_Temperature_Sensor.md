@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Temperature_Sensor](../Temperature_Sensor.md) > [Air_Temperature_Sensor](Air_Temperature_Sensor.md) > [Mixed_Air_Temperature_Sensor](#)
 # Mixed_Air_Temperature_Sensor
 
+Measures the temperature of mixed air
+
+
 **Display name:** Mixed Air Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Mixed_Air_Temperature_Sensor;1
 

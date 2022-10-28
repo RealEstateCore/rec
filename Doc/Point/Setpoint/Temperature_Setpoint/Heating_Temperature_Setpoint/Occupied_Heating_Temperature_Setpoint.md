@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Heating_Temperature_Setpoint](Heating_Temperature_Setpoint.md) > [Occupied_Heating_Temperature_Setpoint](#)
 # Occupied_Heating_Temperature_Setpoint
 
+Sets temperature for heating when occupied
+
+
 **Display name:** Occupied Heating Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Setpoint;1
 

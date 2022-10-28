@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [Limit](../Limit.md) > [Speed_Setpoint_Limit](#)
 # Speed_Setpoint_Limit
 
+A parameter that places a lower or upper bound on the range of permitted values of a Speed_Setpoint.
+
+
 **Display name:** Speed Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Speed_Setpoint_Limit;1
 

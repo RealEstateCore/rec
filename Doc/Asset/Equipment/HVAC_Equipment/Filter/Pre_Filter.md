@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Filter](Filter.md) > [Pre_Filter](#)
 # Pre_Filter
 
+A filter installed in front of a more efficient filter to extend the life of the more expensive higher efficiency filter
+
+
 **Display name:** Pre Filter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Pre_Filter;1
 

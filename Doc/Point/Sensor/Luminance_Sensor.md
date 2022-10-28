@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Luminance_Sensor](#)
 # Luminance_Sensor
 
+Measures the luminous intensity per unit area of light travelling in a given direction
+
+
 **Display name:** Luminance Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Luminance_Sensor;1
 

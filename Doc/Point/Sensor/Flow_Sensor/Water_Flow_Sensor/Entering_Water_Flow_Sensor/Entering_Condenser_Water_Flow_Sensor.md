@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Flow_Sensor](../../Flow_Sensor.md) > [Water_Flow_Sensor](../Water_Flow_Sensor.md) > [Entering_Water_Flow_Sensor](Entering_Water_Flow_Sensor.md) > [Entering_Condenser_Water_Flow_Sensor](#)
 # Entering_Condenser_Water_Flow_Sensor
 
+Measures the flow of the entering condenser water
+
+
 **Display name:** Entering Condenser Water Flow Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Entering_Condenser_Water_Flow_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Alarm_Sensitivity_Parameter](#)
 # Alarm_Sensitivity_Parameter
 
+A parameter indicates the sensitivity to activate an alarm.
+
+
 **Display name:** Alarm Sensitivity Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Alarm_Sensitivity_Parameter;1
 

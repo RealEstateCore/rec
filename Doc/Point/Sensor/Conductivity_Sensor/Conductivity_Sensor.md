@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Conductivity_Sensor](#)
 # Conductivity_Sensor
 
+Measures electrical conductance
+
+
 **Display name:** Conductivity Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Conductivity_Sensor;1
 

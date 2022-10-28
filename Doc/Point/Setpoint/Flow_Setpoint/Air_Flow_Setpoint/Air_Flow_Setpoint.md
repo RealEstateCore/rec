@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Flow_Setpoint](../Flow_Setpoint.md) > [Air_Flow_Setpoint](#)
 # Air_Flow_Setpoint
 
+Sets air flow
+
+
 **Display name:** Air Flow Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Flow_Setpoint;1
 

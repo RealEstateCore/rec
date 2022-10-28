@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Humidity_Sensor](../Humidity_Sensor.md) > [Relative_Humidity_Sensor](Relative_Humidity_Sensor.md) > [Discharge_Air_Humidity_Sensor](#)
 # Discharge_Air_Humidity_Sensor
 
+Measures the relative humidity of discharge air
+
+
 **Display name:** Discharge Air Humidity Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Humidity_Sensor;1
 

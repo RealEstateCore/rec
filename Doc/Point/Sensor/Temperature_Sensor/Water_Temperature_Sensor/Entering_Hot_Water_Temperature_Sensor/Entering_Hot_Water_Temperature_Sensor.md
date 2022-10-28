@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Water_Temperature_Sensor](../Water_Temperature_Sensor.md) > [Entering_Hot_Water_Temperature_Sensor](#)
 # Entering_Hot_Water_Temperature_Sensor
 
+Measures the temperature of water enteringed to a hot water system
+
+
 **Display name:** Entering Hot Water Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Entering_Hot_Water_Temperature_Sensor;1
 

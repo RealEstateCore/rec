@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Air_Quality_Sensor](../../Air_Quality_Sensor.md) > [Particulate_Matter_Sensor](../Particulate_Matter_Sensor.md) > [PM10_Sensor](#)
 # PM10_Sensor
 
+Detects matter of size 10 microns
+
+
 **Display name:** PM10 Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PM10_Sensor;1
 

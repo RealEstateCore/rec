@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Filter](Filter.md) > [Return_Air_Filter](#)
 # Return_Air_Filter
 
+Filters return air
+
+
 **Display name:** Return Air Filter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Return_Air_Filter;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Heating_Valve](Heating_Valve.md) > [Reheat_Valve](#)
 # Reheat_Valve
 
+A valve that controls air temperature by modulating the amount of hot water flowing through a reheat coil
+
+
 **Display name:** Reheat Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Reheat_Valve;1
 

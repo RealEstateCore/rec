@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Air_Quality_Sensor](../../Air_Quality_Sensor.md) > [Particulate_Matter_Sensor](../Particulate_Matter_Sensor.md) > [TVOC_Sensor](TVOC_Sensor.md) > [TVOC_Level_Sensor](#)
 # TVOC_Level_Sensor
 
+A sensor measuring the level of all VOCs in air
+
+
 **Display name:** TVOC Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:TVOC_Level_Sensor;1
 

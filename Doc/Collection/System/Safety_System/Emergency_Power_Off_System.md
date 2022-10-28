@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Safety_System](Safety_System.md) > [Emergency_Power_Off_System](#)
 # Emergency_Power_Off_System
 
+A system that can power down a single piece of equipment or a single system from a single point
+
+
 **Display name:** Emergency Power Off System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Emergency_Power_Off_System;1
 

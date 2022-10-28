@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Lead_Lag_Command](#)
 # Lead_Lag_Command
 
+Enables lead/lag operation
+
+
 **Display name:** Lead Lag Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Lead_Lag_Command;1
 

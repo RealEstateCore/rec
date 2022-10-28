@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Water_Level_Sensor](Water_Level_Sensor.md) > [Deionised_Water_Level_Sensor](#)
 # Deionised_Water_Level_Sensor
 
+Measures the height/level of deionised water in some container
+
+
 **Display name:** Deionised Water Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Deionised_Water_Level_Sensor;1
 

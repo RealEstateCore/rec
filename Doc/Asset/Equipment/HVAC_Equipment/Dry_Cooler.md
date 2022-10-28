@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Dry_Cooler](#)
 # Dry_Cooler
 
+A dry cooler is a fluid cooler that uses air, a relatively dry, non-liquid fluid to accomplish process cooling. (https://submer.com/submer-academy/library/dry-cooler/)
+
+
 **Display name:** Dry Cooler<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Dry_Cooler;1
 

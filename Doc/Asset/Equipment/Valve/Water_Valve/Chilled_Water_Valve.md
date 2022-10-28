@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Valve](../Valve.md) > [Water_Valve](Water_Valve.md) > [Chilled_Water_Valve](#)
 # Chilled_Water_Valve
 
+A valve that modulates the flow of chilled water
+
+
 **Display name:** Chilled Water Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Chilled_Water_Valve;1
 

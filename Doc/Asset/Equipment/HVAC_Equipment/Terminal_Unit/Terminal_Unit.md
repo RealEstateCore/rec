@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Terminal_Unit](#)
 # Terminal_Unit
 
+A device that regulates the volumetric flow rate and/or the temperature of the controlled medium.
+
+
 **Display name:** Terminal Unit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Terminal_Unit;1
 

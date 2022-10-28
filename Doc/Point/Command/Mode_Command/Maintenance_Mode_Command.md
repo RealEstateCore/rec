@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Mode_Command](Mode_Command.md) > [Maintenance_Mode_Command](#)
 # Maintenance_Mode_Command
 
+Controls whether or not a device or controller is operating in "Maintenance" mode
+
+
 **Display name:** Maintenance Mode Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Maintenance_Mode_Command;1
 

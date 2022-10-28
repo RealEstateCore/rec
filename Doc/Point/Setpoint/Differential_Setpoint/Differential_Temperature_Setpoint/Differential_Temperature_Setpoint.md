@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Differential_Setpoint](../Differential_Setpoint.md) > [Differential_Temperature_Setpoint](#)
 # Differential_Temperature_Setpoint
 
+A type of Setpoints that is related to the difference between two temperature measurements
+
+
 **Display name:** Differential Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Differential_Temperature_Setpoint;1
 

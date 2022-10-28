@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Temperature_Sensor](../Temperature_Sensor.md) > [Radiant_Panel_Temperature_Sensor](Radiant_Panel_Temperature_Sensor.md) > [Outside_Face_Surface_Temperature_Sensor](#)
 # Outside_Face_Surface_Temperature_Sensor
 
+Measures the outside surface (relative to the space) of the radiant panel of a radiant heating and cooling HVAC system.
+
+
 **Display name:** Outside Face Surface Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Face_Surface_Temperature_Sensor;1
 

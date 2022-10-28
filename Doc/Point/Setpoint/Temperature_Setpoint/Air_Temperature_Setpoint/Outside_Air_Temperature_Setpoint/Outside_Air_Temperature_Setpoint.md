@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Air_Temperature_Setpoint](../Air_Temperature_Setpoint.md) > [Outside_Air_Temperature_Setpoint](#)
 # Outside_Air_Temperature_Setpoint
 
+Sets temperature of outside air
+
+
 **Display name:** Outside Air Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_Setpoint;1
 

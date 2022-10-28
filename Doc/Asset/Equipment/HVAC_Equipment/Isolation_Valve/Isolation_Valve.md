@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Isolation_Valve](#)
 # Isolation_Valve
 
+A valve that stops the flow of a fluid, usually for maintenance or safety purposes
+
+
 **Display name:** Isolation Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Isolation_Valve;1
 

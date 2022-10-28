@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Relief_Fan](#)
 # Relief_Fan
 
+A fan that is a component of a Relief Air System, ensuring building doesn't become over-pressurised
+
+
 **Display name:** Relief Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Relief_Fan;1
 

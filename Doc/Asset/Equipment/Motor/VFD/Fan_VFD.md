@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Motor](../Motor.md) > [VFD](VFD.md) > [Fan_VFD](#)
 # Fan_VFD
 
+Variable-frequency drive for fans
+
+
 **Display name:** Fan VFD<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fan_VFD;1
 

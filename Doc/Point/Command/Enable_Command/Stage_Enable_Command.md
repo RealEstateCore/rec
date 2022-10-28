@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Enable_Command](Enable_Command.md) > [Stage_Enable_Command](#)
 # Stage_Enable_Command
 
+A point representing a discrete stage which the equipment should be operating at. The desired stage number should be identified by an entity property
+
+
 **Display name:** Stage Enable Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Stage_Enable_Command;1
 

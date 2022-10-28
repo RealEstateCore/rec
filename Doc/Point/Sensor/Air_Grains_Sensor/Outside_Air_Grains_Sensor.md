@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Air_Grains_Sensor](Air_Grains_Sensor.md) > [Outside_Air_Grains_Sensor](#)
 # Outside_Air_Grains_Sensor
 
+Measures the mass of water vapor in outside air
+
+
 **Display name:** Outside Air Grains Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Air_Grains_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Relay_Command](#)
 # Relay_Command
 
+Commands to switch the relay
+
+
 **Display name:** Relay Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Relay_Command;1
 

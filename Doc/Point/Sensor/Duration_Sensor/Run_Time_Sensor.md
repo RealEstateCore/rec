@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Duration_Sensor](Duration_Sensor.md) > [Run_Time_Sensor](#)
 # Run_Time_Sensor
 
+Measures the duration for which a device was in an active or "on" state
+
+
 **Display name:** Run Time Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Run_Time_Sensor;1
 

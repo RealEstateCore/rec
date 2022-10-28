@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Alarm](../../Alarm.md) > [Temperature_Alarm](../Temperature_Alarm.md) > [Air_Temperature_Alarm](#)
 # Air_Temperature_Alarm
 
+An alarm that indicates the off-normal conditions associated with the temperature of air.
+
+
 **Display name:** Air Temperature Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Temperature_Alarm;1
 

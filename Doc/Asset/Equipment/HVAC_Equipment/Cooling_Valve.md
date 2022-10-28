@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Cooling_Valve](#)
 # Cooling_Valve
 
+A valve that controls air temperature by modulating the amount of cold water flowing through a cooling coil
+
+
 **Display name:** Cooling Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Valve;1
 

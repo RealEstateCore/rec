@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Demand_Sensor](../Demand_Sensor.md) > [Cooling_Demand_Sensor](#)
 # Cooling_Demand_Sensor
 
+Measures the amount of power consumed by a cooling process; typically found by multiplying the tonnage of a unit (e.g. RTU) by the efficiency rating in kW/ton
+
+
 **Display name:** Cooling Demand Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Demand_Sensor;1
 

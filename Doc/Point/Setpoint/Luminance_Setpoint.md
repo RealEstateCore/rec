@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Luminance_Setpoint](#)
 # Luminance_Setpoint
 
+Sets luminance
+
+
 **Display name:** Luminance Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Luminance_Setpoint;1
 

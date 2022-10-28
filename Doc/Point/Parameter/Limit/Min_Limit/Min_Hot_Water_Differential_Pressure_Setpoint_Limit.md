@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [Limit](../Limit.md) > [Min_Limit](Min_Limit.md) > [Min_Hot_Water_Differential_Pressure_Setpoint_Limit](#)
 # Min_Hot_Water_Differential_Pressure_Setpoint_Limit
 
+A parameter that places a lower bound on the range of permitted values of a Hot_Water_Differential_Pressure_Setpoint.
+
+
 **Display name:** Min Hot Water Differential Pressure Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Min_Hot_Water_Differential_Pressure_Setpoint_Limit;1
 

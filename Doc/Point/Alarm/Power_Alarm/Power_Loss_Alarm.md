@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Power_Alarm](Power_Alarm.md) > [Power_Loss_Alarm](#)
 # Power_Loss_Alarm
 
+An alarm that indicates a power failure.
+
+
 **Display name:** Power Loss Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Power_Loss_Alarm;1
 

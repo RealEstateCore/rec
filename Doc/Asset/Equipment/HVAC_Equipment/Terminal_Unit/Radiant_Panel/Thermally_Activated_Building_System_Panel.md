@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Radiant_Panel](Radiant_Panel.md) > [Thermally_Activated_Building_System_Panel](#)
 # Thermally_Activated_Building_System_Panel
 
+Radiant panel heating and cooling system where the energy heat source or sink is embedded in the building structure such as in slabs and walls.
+
+
 **Display name:** Thermally Activated Building System Panel<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Thermally_Activated_Building_System_Panel;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Air_Plenum](../Air_Plenum.md) > [Supply_Air_Plenum](Supply_Air_Plenum.md) > [Underfloor_Air_Plenum](#)
 # Underfloor_Air_Plenum
 
+An open space between a structural concrete slab and the underside of a raised access floor system that connects to an air handling unit to receive conditioned and/or ventilating air before delivery to the room(s)
+
+
 **Display name:** Underfloor Air Plenum<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Underfloor_Air_Plenum;1
 

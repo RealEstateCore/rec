@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Point](../../../../../Point.md) > [Setpoint](../../../../Setpoint.md) > [Flow_Setpoint](../../../Flow_Setpoint.md) > [Air_Flow_Setpoint](../../Air_Flow_Setpoint.md) > [Discharge_Air_Flow_Setpoint](../Discharge_Air_Flow_Setpoint.md) > [Unoccupied_Discharge_Air_Flow_Setpoint](Unoccupied_Discharge_Air_Flow_Setpoint.md) > [Unoccupied_Cooling_Discharge_Air_Flow_Setpoint](#)
 # Unoccupied_Cooling_Discharge_Air_Flow_Setpoint
 
+Sets discharge air flow for cooling when unoccupied
+
+
 **Display name:** Unoccupied Cooling Discharge Air Flow Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Unoccupied_Cooling_Discharge_Air_Flow_Setpoint;1
 

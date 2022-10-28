@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Point](../../../../../Point.md) > [Parameter](../../../../Parameter.md) > [Limit](../../../Limit.md) > [Min_Limit](../../Min_Limit.md) > [Min_Air_Flow_Setpoint_Limit](../Min_Air_Flow_Setpoint_Limit.md) > [Min_Cooling_Supply_Air_Flow_Setpoint_Limit](#)
 # Min_Cooling_Supply_Air_Flow_Setpoint_Limit
 
+A parameter that places a lower bound on the range of permitted values of a Cooling_Supply_Air_Flow_Setpoint.
+
+
 **Display name:** Min Cooling Supply Air Flow Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Min_Cooling_Supply_Air_Flow_Setpoint_Limit;1
 

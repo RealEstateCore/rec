@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Electrical_Equipment](Electrical_Equipment.md) > [Disconnect_Switch](#)
 # Disconnect_Switch
 
+Building power is most commonly provided by utility company through a master disconnect switch (sometimes called a service disconnect) in the main electrical room of a building. The Utility Company provided master disconnect switch often owns or restricts access to this switch. There can also be other cases where a disconnect is placed into an electrical system to allow service cut-off to a portion of the building.
+
+
 **Display name:** Disconnect Switch<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Disconnect_Switch;1
 

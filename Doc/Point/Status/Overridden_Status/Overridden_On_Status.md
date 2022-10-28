@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Overridden_Status](Overridden_Status.md) > [Overridden_On_Status](#)
 # Overridden_On_Status
 
+Indicates if a control loop, relay or equipment has been turned on when it would otherwise be scheduled to be off
+
+
 **Display name:** Overridden On Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Overridden_On_Status;1
 

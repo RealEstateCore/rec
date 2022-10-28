@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Reset_Setpoint](../Reset_Setpoint.md) > [Discharge_Air_Flow_Reset_Setpoint](#)
 # Discharge_Air_Flow_Reset_Setpoint
 
+Setpoints used in Reset strategies
+
+
 **Display name:** Discharge Air Flow Reset Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Reset_Setpoint;1
 

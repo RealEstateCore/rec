@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Power_Factor_Sensor](#)
 # Power_Factor_Sensor
 
+Sensors measuring power Factor, under periodic conditions, is the ratio of the absolute value of the active power (P) to the apparent power (S).
+
+
 **Display name:** Power Factor Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Power_Factor_Sensor;1
 

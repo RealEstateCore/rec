@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Water_Temperature_Sensor](../Water_Temperature_Sensor.md) > [Leaving_Hot_Water_Temperature_Sensor](Leaving_Hot_Water_Temperature_Sensor.md) > [Leaving_High_Temperature_Hot_Water_Temperature_Sensor](#)
 # Leaving_High_Temperature_Hot_Water_Temperature_Sensor
 
+Measures the temperature of high-temperature hot water supplied by a hot water system
+
+
 **Display name:** Leaving High Temperature Hot Water Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_High_Temperature_Hot_Water_Temperature_Sensor;1
 

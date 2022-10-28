@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Humidity_Alarm](Humidity_Alarm.md) > [Low_Humidity_Alarm](#)
 # Low_Humidity_Alarm
 
+An alarm that indicates low concentration of water vapor in the air.
+
+
 **Display name:** Low Humidity Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Low_Humidity_Alarm;1
 

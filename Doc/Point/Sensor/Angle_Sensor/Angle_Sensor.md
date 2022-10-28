@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Angle_Sensor](#)
 # Angle_Sensor
 
+Measues the planar angle of some phenomenon
+
+
 **Display name:** Angle Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Angle_Sensor;1
 

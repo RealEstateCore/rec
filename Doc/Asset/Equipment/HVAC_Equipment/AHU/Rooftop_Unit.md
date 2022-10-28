@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [Rooftop_Unit](#)
 # Rooftop_Unit
 
+Packaged air conditioner mounted on a roof, the conditioned air being discharged directly into the rooms below or through a duct system.
+
+
 **Display name:** Rooftop Unit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Rooftop_Unit;1
 

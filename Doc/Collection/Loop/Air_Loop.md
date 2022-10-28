@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Collection](../Collection.md) > [Loop](Loop.md) > [Air_Loop](#)
 # Air_Loop
 
+The set of connected equipment serving one path of air
+
+
 **Display name:** Air Loop<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Loop;1
 

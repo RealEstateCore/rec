@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Chilled_Beam](Chilled_Beam.md) > [Passive_Chilled_Beam](#)
 # Passive_Chilled_Beam
 
+A chilled beam that does not have an integral air supply and instead relies on natural convection to draw air through the device.
+
+
 **Display name:** Passive Chilled Beam<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Passive_Chilled_Beam;1
 

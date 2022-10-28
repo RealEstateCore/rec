@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Shading_Equipment](Shading_Equipment.md) > [Automatic_Tint_Window](#)
 # Automatic_Tint_Window
 
+A window with tint control.
+
+
 **Display name:** Automatic Tint Window<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Automatic_Tint_Window;1
 

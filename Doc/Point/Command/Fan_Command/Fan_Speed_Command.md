@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Fan_Command](Fan_Command.md) > [Fan_Speed_Command](#)
 # Fan_Speed_Command
 
+Controls the speed of fans
+
+
 **Display name:** Fan Speed Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1
 

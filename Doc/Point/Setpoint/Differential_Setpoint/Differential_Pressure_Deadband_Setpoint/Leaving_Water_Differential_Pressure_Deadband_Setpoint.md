@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Differential_Setpoint](../Differential_Setpoint.md) > [Differential_Pressure_Deadband_Setpoint](Differential_Pressure_Deadband_Setpoint.md) > [Leaving_Water_Differential_Pressure_Deadband_Setpoint](#)
 # Leaving_Water_Differential_Pressure_Deadband_Setpoint
 
+Sets the size of a deadband of differential pressure of leaving water
+
+
 **Display name:** Leaving Water Differential Pressure Deadband Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Water_Differential_Pressure_Deadband_Setpoint;1
 

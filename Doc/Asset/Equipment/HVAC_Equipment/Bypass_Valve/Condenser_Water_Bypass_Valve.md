@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Bypass_Valve](Bypass_Valve.md) > [Condenser_Water_Bypass_Valve](#)
 # Condenser_Water_Bypass_Valve
 
+A valve installed in a bypass line of a condenser water loop
+
+
 **Display name:** Condenser Water Bypass Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Condenser_Water_Bypass_Valve;1
 

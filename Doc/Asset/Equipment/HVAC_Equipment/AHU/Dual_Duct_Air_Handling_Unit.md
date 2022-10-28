@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [Dual_Duct_Air_Handling_Unit](#)
 # Dual_Duct_Air_Handling_Unit
 
+An air handling unit that contains hot and cold decks to supply heating and cooling to a building
+
+
 **Display name:** Dual Duct Air Handling Unit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Dual_Duct_Air_Handling_Unit;1
 

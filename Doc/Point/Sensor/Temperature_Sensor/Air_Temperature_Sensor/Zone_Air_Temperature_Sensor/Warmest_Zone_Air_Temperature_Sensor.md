@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Air_Temperature_Sensor](../Air_Temperature_Sensor.md) > [Zone_Air_Temperature_Sensor](Zone_Air_Temperature_Sensor.md) > [Warmest_Zone_Air_Temperature_Sensor](#)
 # Warmest_Zone_Air_Temperature_Sensor
 
+The zone temperature that is warmest; drives the supply temperature of cold air. A computed value rather than a physical sensor. Also referred to as a 'Highest Zone Air Temperature Sensor'
+
+
 **Display name:** Warmest Zone Air Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Warmest_Zone_Air_Temperature_Sensor;1
 

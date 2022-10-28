@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Demand_Sensor](Demand_Sensor.md) > [Peak_Demand_Sensor](#)
 # Peak_Demand_Sensor
 
+The peak power consumed by a process over some period of time
+
+
 **Display name:** Peak Demand Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Peak_Demand_Sensor;1
 

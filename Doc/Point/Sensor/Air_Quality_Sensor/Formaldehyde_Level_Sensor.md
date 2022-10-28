@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Air_Quality_Sensor](Air_Quality_Sensor.md) > [Formaldehyde_Level_Sensor](#)
 # Formaldehyde_Level_Sensor
 
+Measures the concentration of formaldehyde in air
+
+
 **Display name:** Formaldehyde Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Formaldehyde_Level_Sensor;1
 

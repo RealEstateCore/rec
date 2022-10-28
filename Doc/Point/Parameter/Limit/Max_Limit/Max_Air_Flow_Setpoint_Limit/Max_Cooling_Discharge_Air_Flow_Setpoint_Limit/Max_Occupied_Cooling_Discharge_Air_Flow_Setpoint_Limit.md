@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Point](../../../../../Point.md) > [Parameter](../../../../Parameter.md) > [Limit](../../../Limit.md) > [Max_Limit](../../Max_Limit.md) > [Max_Air_Flow_Setpoint_Limit](../Max_Air_Flow_Setpoint_Limit.md) > [Max_Cooling_Discharge_Air_Flow_Setpoint_Limit](Max_Cooling_Discharge_Air_Flow_Setpoint_Limit.md) > [Max_Occupied_Cooling_Discharge_Air_Flow_Setpoint_Limit](#)
 # Max_Occupied_Cooling_Discharge_Air_Flow_Setpoint_Limit
 
+A parameter that places an upper bound on the range of permitted values of a Occupied_Cooling_Discharge_Air_Flow_Setpoint.
+
+
 **Display name:** Max Occupied Cooling Discharge Air Flow Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Occupied_Cooling_Discharge_Air_Flow_Setpoint_Limit;1
 

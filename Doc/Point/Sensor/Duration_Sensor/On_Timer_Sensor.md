@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Duration_Sensor](Duration_Sensor.md) > [On_Timer_Sensor](#)
 # On_Timer_Sensor
 
+Measures the duration for which a device was in an active or "on" state
+
+
 **Display name:** On Timer Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:On_Timer_Sensor;1
 

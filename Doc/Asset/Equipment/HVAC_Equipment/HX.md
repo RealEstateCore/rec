@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [HX](#)
 # HX
 
+See Heat_Exchanger
+
+
 **Display name:** HX<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:HX;1
 

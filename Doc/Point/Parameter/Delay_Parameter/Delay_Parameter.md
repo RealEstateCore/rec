@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Delay_Parameter](#)
 # Delay_Parameter
 
+A parameter determining how long to delay a subsequent action to take place after a received signal
+
+
 **Display name:** Delay Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Delay_Parameter;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Disable_Command](Disable_Command.md) > [Disable_Differential_Temperature_Command](#)
 # Disable_Differential_Temperature_Command
 
+Disables the use of differential temperature control
+
+
 **Display name:** Disable Differential Temperature Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Disable_Differential_Temperature_Command;1
 

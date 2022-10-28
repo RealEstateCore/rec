@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Pump_Command](#)
 # Pump_Command
 
+Controls or reports the speed of a pump (typically as a proportion of its full pumping capacity)
+
+
 **Display name:** Pump Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Pump_Command;1
 

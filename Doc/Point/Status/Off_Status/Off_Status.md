@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Off_Status](#)
 # Off_Status
 
+Indicates if a control loop, relay or equipment is off
+
+
 **Display name:** Off Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Off_Status;1
 

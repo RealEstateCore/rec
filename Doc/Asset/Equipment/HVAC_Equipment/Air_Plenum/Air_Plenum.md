@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Air_Plenum](#)
 # Air_Plenum
 
+A component of the HVAC the receives air from the air handling unit or room to distribute or exhaust to or from the building
+
+
 **Display name:** Air Plenum<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Plenum;1
 

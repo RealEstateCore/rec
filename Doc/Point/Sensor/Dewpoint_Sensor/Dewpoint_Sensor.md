@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Dewpoint_Sensor](#)
 # Dewpoint_Sensor
 
+Senses the dewpoint temperature . Dew point is the temperature to which air must be cooled to become saturated with water vapor
+
+
 **Display name:** Dewpoint Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Dewpoint_Sensor;1
 

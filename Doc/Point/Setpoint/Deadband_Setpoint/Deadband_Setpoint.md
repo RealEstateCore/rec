@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Deadband_Setpoint](#)
 # Deadband_Setpoint
 
+Sets the size of a deadband
+
+
 **Display name:** Deadband Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Deadband_Setpoint;1
 

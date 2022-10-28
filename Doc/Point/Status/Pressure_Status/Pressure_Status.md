@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Pressure_Status](#)
 # Pressure_Status
 
+Indicates if pressure is within expected bounds
+
+
 **Display name:** Pressure Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Pressure_Status;1
 
