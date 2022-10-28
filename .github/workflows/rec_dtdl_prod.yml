@@ -1,4 +1,4 @@
-name: Ontology Push To Nuget
+name: Ontology push to Nuget
 
 on:
   workflow_dispatch:    
@@ -6,6 +6,7 @@ on:
     branches: [ "main" ]
     paths:
       - "Generated"
+      - "Metadata"
 
 env: 
   NUGET_FEED_URL: https://api.nuget.org/v3/index.json
@@ -33,10 +34,10 @@ jobs:
           dotnet-version: 6.0.x
 
       # Run nuget package
-      - name: 'nuget pack'
+      - name: 'Nuget pack'
         run: |
-          nuget pack Generated/RealEstateCore.Ontology.DTDLv2.nuspec -OutputDirectory Generated
+          nuget pack Metadata/*.nuspec -OutputDirectory Generated
 
       # Publish the Ontology package to Nuget
-      - name: 'publish to nuget'
-        run: nuget push -Source "${{ env.NUGET_FEED_URL }}" Generated/RealEstateCore.Ontology.DTDLv2.nupkg -SkipDuplicate
+      - name: 'Publish to Nuget'
+        run: nuget push Generated/*.nupkg -Source "${{ env.NUGET_FEED_URL }}" -SkipDuplicate
