@@ -8,7 +8,6 @@
 
 ## Child interfaces
 * [Active_Power_Sensor](Active_Power_Sensor.md)
-* [Peak_Power_Demand_Sensor](Peak_Power_Demand_Sensor.md)
 * [Reactive_Power_Sensor](Reactive_Power_Sensor.md)
 
 ---
@@ -23,7 +22,8 @@
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, lastKnownValue, name
+* **[Power_Sensor](../Power_Sensor.md):** lastKnownValue
+* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
 
 ---
 
