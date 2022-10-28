@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Condenser](#)
 # Condenser
 
+A heat exchanger in which the primary heat transfer vapor changes its state to a liquid phase.
+
+
 **Display name:** Condenser<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Condenser;1
 

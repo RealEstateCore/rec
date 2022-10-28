@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Duration_Sensor](#)
 # Duration_Sensor
 
+Measures the duration of a phenomenon or event
+
+
 **Display name:** Duration Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Duration_Sensor;1
 

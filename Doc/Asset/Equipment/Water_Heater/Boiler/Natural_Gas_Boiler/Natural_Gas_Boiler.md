@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [Water_Heater](../../Water_Heater.md) > [Boiler](../Boiler.md) > [Natural_Gas_Boiler](#)
 # Natural_Gas_Boiler
 
+A closed, pressure vessel that uses natural gas for heating water or other fluids to supply steam or hot water for heating, humidification, or other applications.
+
+
 **Display name:** Natural Gas Boiler<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Natural_Gas_Boiler;1
 

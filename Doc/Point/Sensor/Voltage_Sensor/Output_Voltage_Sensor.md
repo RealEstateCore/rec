@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Voltage_Sensor](Voltage_Sensor.md) > [Output_Voltage_Sensor](#)
 # Output_Voltage_Sensor
 
+Measures the voltage output by some process or device
+
+
 **Display name:** Output Voltage Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Output_Voltage_Sensor;1
 

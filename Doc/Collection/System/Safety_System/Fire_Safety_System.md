@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Safety_System](Safety_System.md) > [Fire_Safety_System](#)
 # Fire_Safety_System
 
+A system containing devices and equipment that monitor, detect and suppress fire hazards
+
+
 **Display name:** Fire Safety System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fire_Safety_System;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Change_Filter_Alarm](#)
 # Change_Filter_Alarm
 
+An alarm that indicates that a filter must be changed
+
+
 **Display name:** Change Filter Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Change_Filter_Alarm;1
 

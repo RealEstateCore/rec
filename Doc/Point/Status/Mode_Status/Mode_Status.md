@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Mode_Status](#)
 # Mode_Status
 
+Indicates which mode a system, device or control loop is currently in
+
+
 **Display name:** Mode Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Mode_Status;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Cycle_Alarm](#)
 # Cycle_Alarm
 
+An alarm that indicates off-normal conditions associated with HVAC cycles
+
+
 **Display name:** Cycle Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cycle_Alarm;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Air_Quality_Sensor](../Air_Quality_Sensor.md) > [CO_Sensor](CO_Sensor.md) > [Outside_Air_CO_Sensor](#)
 # Outside_Air_CO_Sensor
 
+Measures the concentration of CO in outside air
+
+
 **Display name:** Outside Air CO Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Air_CO_Sensor;1
 

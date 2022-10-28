@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Gas_Distribution](#)
 # Gas_Distribution
 
+Utilize a gas distribution source to represent how gas is distributed across multiple destinations
+
+
 **Display name:** Gas Distribution<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Gas_Distribution;1
 

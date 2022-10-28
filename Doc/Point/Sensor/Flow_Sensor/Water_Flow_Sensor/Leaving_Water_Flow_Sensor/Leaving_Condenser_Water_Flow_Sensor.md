@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Flow_Sensor](../../Flow_Sensor.md) > [Water_Flow_Sensor](../Water_Flow_Sensor.md) > [Leaving_Water_Flow_Sensor](Leaving_Water_Flow_Sensor.md) > [Leaving_Condenser_Water_Flow_Sensor](#)
 # Leaving_Condenser_Water_Flow_Sensor
 
+Measures the flow of the leaving condenser water
+
+
 **Display name:** Leaving Condenser Water Flow Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Condenser_Water_Flow_Sensor;1
 

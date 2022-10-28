@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Demand_Sensor](../Demand_Sensor.md) > [Heating_Demand_Sensor](#)
 # Heating_Demand_Sensor
 
+Measures the amount of power consumed by a heating process; typically found by multiplying the tonnage of a unit (e.g. RTU) by the efficiency rating in kW/ton
+
+
 **Display name:** Heating Demand Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heating_Demand_Sensor;1
 

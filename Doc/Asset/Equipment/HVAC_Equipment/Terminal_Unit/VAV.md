@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Terminal_Unit](Terminal_Unit.md) > [VAV](#)
 # VAV
 
+See Variable_Air_Volume_Box
+
+
 **Display name:** VAV<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:VAV;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Collection](../../../../Collection.md) > [System](../../../System.md) > [Electrical_System](../../Electrical_System.md) > [Energy_System](../Energy_System.md) > [Energy_Storage_System](#)
 # Energy_Storage_System
 
+A collection of devices that stores electricity
+
+
 **Display name:** Energy Storage System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Energy_Storage_System;1
 

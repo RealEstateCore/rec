@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Tint_Status](#)
 # Tint_Status
 
+The current level of window tint.
+
+
 **Display name:** Tint Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Tint_Status;1
 

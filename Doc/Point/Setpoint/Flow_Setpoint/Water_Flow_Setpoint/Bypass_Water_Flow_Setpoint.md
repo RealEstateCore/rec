@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Flow_Setpoint](../Flow_Setpoint.md) > [Water_Flow_Setpoint](Water_Flow_Setpoint.md) > [Bypass_Water_Flow_Setpoint](#)
 # Bypass_Water_Flow_Setpoint
 
+Sets the target flow rate of bypass water
+
+
 **Display name:** Bypass Water Flow Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Bypass_Water_Flow_Setpoint;1
 

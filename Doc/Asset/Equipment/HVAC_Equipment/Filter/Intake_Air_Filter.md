@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Filter](Filter.md) > [Intake_Air_Filter](#)
 # Intake_Air_Filter
 
+Filters air intake
+
+
 **Display name:** Intake Air Filter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Intake_Air_Filter;1
 

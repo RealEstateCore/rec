@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Valve](#)
 # Valve
 
+A device that regulates, directs or controls the flow of a fluid by opening, closing or partially obstructing various passageways
+
+
 **Display name:** Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Valve;1
 

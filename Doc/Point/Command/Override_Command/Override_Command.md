@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Override_Command](#)
 # Override_Command
 
+Controls or reports whether or not a device or control loop is in 'override'
+
+
 **Display name:** Override Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Override_Command;1
 

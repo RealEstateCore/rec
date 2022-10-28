@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](#)
 # Status
 
+A Status is input point that reports the current operating mode, state, position, or condition of an item. Statuses are observations and should be considered 'read-only'
+
+
 **Display name:** Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Status;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Humidifier](#)
 # Humidifier
 
+A device that adds moisture to air or other gases
+
+
 **Display name:** Humidifier<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Humidifier;1
 

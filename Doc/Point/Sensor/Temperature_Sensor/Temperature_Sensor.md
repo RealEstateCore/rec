@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Temperature_Sensor](#)
 # Temperature_Sensor
 
+Measures temperature: the physical property of matter that quantitatively expresses the common notions of hot and cold
+
+
 **Display name:** Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Temperature_Sensor;1
 

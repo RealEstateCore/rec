@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Discharge_Fan](#)
 # Discharge_Fan
 
+Fan moving air discharged from HVAC vents
+
+
 **Display name:** Discharge Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Fan;1
 

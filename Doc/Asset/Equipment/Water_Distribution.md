@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Water_Distribution](#)
 # Water_Distribution
 
+Utilize a water distribution source to represent how water is distributed across multiple destinations (pipes)
+
+
 **Display name:** Water Distribution<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Distribution;1
 

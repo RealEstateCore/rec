@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fault_Status](Fault_Status.md) > [Humidifier_Fault_Status](#)
 # Humidifier_Fault_Status
 
+Indicates the presence of a fault in a humidifier
+
+
 **Display name:** Humidifier Fault Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Humidifier_Fault_Status;1
 

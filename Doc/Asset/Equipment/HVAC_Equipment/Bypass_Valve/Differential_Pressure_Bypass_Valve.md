@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Bypass_Valve](Bypass_Valve.md) > [Differential_Pressure_Bypass_Valve](#)
 # Differential_Pressure_Bypass_Valve
 
+A 2-way, self contained proportional valve with an integral differential pressure adjustment setting.
+
+
 **Display name:** Differential Pressure Bypass Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Differential_Pressure_Bypass_Valve;1
 

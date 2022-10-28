@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Temperature_Deadband_Setpoint](Temperature_Deadband_Setpoint.md) > [Occupied_Cooling_Temperature_Deadband_Setpoint](#)
 # Occupied_Cooling_Temperature_Deadband_Setpoint
 
+Sets the size of a deadband of temperature for cooling when occupied
+
+
 **Display name:** Occupied Cooling Temperature Deadband Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Occupied_Cooling_Temperature_Deadband_Setpoint;1
 

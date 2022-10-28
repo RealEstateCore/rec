@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Terminal_Unit](../../Terminal_Unit.md) > [Radiator](../Radiator.md) > [Hot_Water_Radiator](Hot_Water_Radiator.md) > [Hot_Water_Baseboard_Radiator](#)
 # Hot_Water_Baseboard_Radiator
 
+Hydronic heating device located at or near the floor
+
+
 **Display name:** Hot Water Baseboard Radiator<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Baseboard_Radiator;1
 

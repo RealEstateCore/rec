@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Meter](../Meter.md) > [Gas_Meter](#)
 # Gas_Meter
 
+A meter that measures the usage or consumption of gas
+
+
 **Display name:** Gas Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Gas_Meter;1
 

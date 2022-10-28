@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [Limit](../Limit.md) > [Fresh_Air_Setpoint_Limit](#)
 # Fresh_Air_Setpoint_Limit
 
+A parameter that places a lower or upper bound on the range of permitted values of a Fresh_Air_Setpoint.
+
+
 **Display name:** Fresh Air Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fresh_Air_Setpoint_Limit;1
 

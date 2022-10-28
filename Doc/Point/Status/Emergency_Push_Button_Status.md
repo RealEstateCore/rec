@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Emergency_Push_Button_Status](#)
 # Emergency_Push_Button_Status
 
+Indicates if an emergency button has been pushed
+
+
 **Display name:** Emergency Push Button Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Emergency_Push_Button_Status;1
 

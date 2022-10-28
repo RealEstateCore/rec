@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Thermostat_Status](#)
 # Thermostat_Status
 
+Status of a thermostat
+
+
 **Display name:** Thermostat Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Thermostat_Status;1
 

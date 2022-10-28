@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Flow_Setpoint](../../Flow_Setpoint.md) > [Air_Flow_Setpoint](../Air_Flow_Setpoint.md) > [Discharge_Air_Flow_Setpoint](Discharge_Air_Flow_Setpoint.md) > [Discharge_Air_Flow_Demand_Setpoint](#)
 # Discharge_Air_Flow_Demand_Setpoint
 
+Sets the rate of discharge air flow required for a process
+
+
 **Display name:** Discharge Air Flow Demand Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Demand_Setpoint;1
 

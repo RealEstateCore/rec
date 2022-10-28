@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [Makeup_Air_Unit](#)
 # Makeup_Air_Unit
 
+A device designed to condition ventilation air introduced into a space or to replace air exhausted from a process or general area exhaust. The device may be used to prevent negative pressure within buildings or to reduce airborne contaminants in a space.
+
+
 **Display name:** Makeup Air Unit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Makeup_Air_Unit;1
 

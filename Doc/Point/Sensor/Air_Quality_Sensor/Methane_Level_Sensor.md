@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Air_Quality_Sensor](Air_Quality_Sensor.md) > [Methane_Level_Sensor](#)
 # Methane_Level_Sensor
 
+Measures the concentration of methane in air
+
+
 **Display name:** Methane Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Methane_Level_Sensor;1
 

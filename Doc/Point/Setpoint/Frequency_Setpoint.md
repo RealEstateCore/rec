@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Frequency_Setpoint](#)
 # Frequency_Setpoint
 
+Sets frequency
+
+
 **Display name:** Frequency Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Frequency_Setpoint;1
 

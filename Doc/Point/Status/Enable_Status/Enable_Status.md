@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Enable_Status](#)
 # Enable_Status
 
+Indicates if a system or piece of functionality has been enabled
+
+
 **Display name:** Enable Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Enable_Status;1
 

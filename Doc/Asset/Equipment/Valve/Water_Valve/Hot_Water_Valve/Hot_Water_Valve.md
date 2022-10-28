@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [Valve](../../Valve.md) > [Water_Valve](../Water_Valve.md) > [Hot_Water_Valve](#)
 # Hot_Water_Valve
 
+A valve regulating the flow of hot water
+
+
 **Display name:** Hot Water Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Valve;1
 

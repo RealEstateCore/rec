@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Demand_Setpoint](Demand_Setpoint.md) > [Preheat_Demand_Setpoint](#)
 # Preheat_Demand_Setpoint
 
+Sets the rate required for preheat
+
+
 **Display name:** Preheat Demand Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Preheat_Demand_Setpoint;1
 

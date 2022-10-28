@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Manual_Auto_Status](#)
 # Manual_Auto_Status
 
+Indicates if a system is under manual or automatic operation
+
+
 **Display name:** Manual Auto Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Manual_Auto_Status;1
 

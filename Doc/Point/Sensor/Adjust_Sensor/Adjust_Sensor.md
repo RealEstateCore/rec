@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Adjust_Sensor](#)
 # Adjust_Sensor
 
+Measures user-provided adjustment of some value
+
+
 **Display name:** Adjust Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Adjust_Sensor;1
 

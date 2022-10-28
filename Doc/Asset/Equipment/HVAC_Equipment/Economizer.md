@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Economizer](#)
 # Economizer
 
+Device that, on proper variable sensing, initiates control signals or actions to conserve energy. A control system that reduces the mechanical heating and cooling requirement.
+
+
 **Display name:** Economizer<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Economizer;1
 

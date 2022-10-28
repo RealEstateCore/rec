@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Water_Temperature_Setpoint](../Water_Temperature_Setpoint.md) > [Leaving_Water_Temperature_Setpoint](#)
 # Leaving_Water_Temperature_Setpoint
 
+Sets temperature of leaving water
+
+
 **Display name:** Leaving Water Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Setpoint;1
 

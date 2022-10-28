@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Water_Level_Sensor](Water_Level_Sensor.md) > [Collection_Basin_Water_Level_Sensor](#)
 # Collection_Basin_Water_Level_Sensor
 
+Measures the level of the water in the collection basin, e.g. within a Cooling_Tower
+
+
 **Display name:** Collection Basin Water Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Collection_Basin_Water_Level_Sensor;1
 

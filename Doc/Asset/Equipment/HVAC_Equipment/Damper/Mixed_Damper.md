@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Damper](Damper.md) > [Mixed_Damper](#)
 # Mixed_Damper
 
+A damper that modulates the flow of the mixed outside and return air streams
+
+
 **Display name:** Mixed Damper<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Mixed_Damper;1
 

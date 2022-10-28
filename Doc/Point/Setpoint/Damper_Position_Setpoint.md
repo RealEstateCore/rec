@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Damper_Position_Setpoint](#)
 # Damper_Position_Setpoint
 
+Sets the position of damper
+
+
 **Display name:** Damper Position Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1
 

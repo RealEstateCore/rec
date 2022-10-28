@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Direction_Sensor](#)
 # Direction_Sensor
 
+Measures the direction in degrees in which a phenomenon is occuring
+
+
 **Display name:** Direction Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Direction_Sensor;1
 

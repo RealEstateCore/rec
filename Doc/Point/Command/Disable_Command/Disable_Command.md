@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Disable_Command](#)
 # Disable_Command
 
+Commands that disable functionality
+
+
 **Display name:** Disable Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Disable_Command;1
 

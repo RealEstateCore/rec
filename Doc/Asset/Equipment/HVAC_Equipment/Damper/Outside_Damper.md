@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Damper](Damper.md) > [Outside_Damper](#)
 # Outside_Damper
 
+A damper that modulates the flow of outside air
+
+
 **Display name:** Outside Damper<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Damper;1
 

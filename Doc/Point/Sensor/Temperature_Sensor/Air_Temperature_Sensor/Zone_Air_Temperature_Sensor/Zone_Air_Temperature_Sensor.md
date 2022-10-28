@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Air_Temperature_Sensor](../Air_Temperature_Sensor.md) > [Zone_Air_Temperature_Sensor](#)
 # Zone_Air_Temperature_Sensor
 
+A physical or virtual sensor which represents the temperature of an HVAC Zone
+
+
 **Display name:** Zone Air Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Zone_Air_Temperature_Sensor;1
 

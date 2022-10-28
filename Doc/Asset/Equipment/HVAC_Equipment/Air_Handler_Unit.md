@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Air_Handler_Unit](#)
 # Air_Handler_Unit
 
+Assembly consisting of sections containing a fan or fans and other necessary equipment to perform one or more of the following functions: circulating, filtration, heating, cooling, heat recovery, humidifying, dehumidifying, and mixing of air. Is usually connected to an air-distribution system.
+
+
 **Display name:** Air Handler Unit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Handler_Unit;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Radiant_Panel](Radiant_Panel.md) > [Radiant_Ceiling_Panel](#)
 # Radiant_Ceiling_Panel
 
+Radiant panel heating and cooling system that are usually made from metal and suspended under the ceiling or insulated from the building structure.
+
+
 **Display name:** Radiant Ceiling Panel<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Radiant_Ceiling_Panel;1
 

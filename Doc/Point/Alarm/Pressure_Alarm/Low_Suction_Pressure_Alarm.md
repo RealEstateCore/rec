@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Pressure_Alarm](Pressure_Alarm.md) > [Low_Suction_Pressure_Alarm](#)
 # Low_Suction_Pressure_Alarm
 
+An alarm that indicates a low suction pressure in the compressor in a refrigeration or air conditioning system.
+
+
 **Display name:** Low Suction Pressure Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Low_Suction_Pressure_Alarm;1
 

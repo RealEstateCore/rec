@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Frost_Sensor](#)
 # Frost_Sensor
 
+Senses the presence of frost or conditions that may cause frost
+
+
 **Display name:** Frost Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Frost_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Heat_Sensor](#)
 # Heat_Sensor
 
+Measures heat
+
+
 **Display name:** Heat Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heat_Sensor;1
 

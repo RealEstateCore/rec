@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Air_Quality_Sensor](../Air_Quality_Sensor.md) > [Radioactivity_Concentration_Sensor](#)
 # Radioactivity_Concentration_Sensor
 
+Measures the concentration of radioactivity
+
+
 **Display name:** Radioactivity Concentration Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Radioactivity_Concentration_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Temperature_Sensor](Temperature_Sensor.md) > [Soil_Temperature_Sensor](#)
 # Soil_Temperature_Sensor
 
+Measures the temperature of soil
+
+
 **Display name:** Soil Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Soil_Temperature_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Humidity_Sensor](../Humidity_Sensor.md) > [Relative_Humidity_Sensor](Relative_Humidity_Sensor.md) > [Mixed_Air_Humidity_Sensor](#)
 # Mixed_Air_Humidity_Sensor
 
+Measures the humidity of mixed air
+
+
 **Display name:** Mixed Air Humidity Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Mixed_Air_Humidity_Sensor;1
 

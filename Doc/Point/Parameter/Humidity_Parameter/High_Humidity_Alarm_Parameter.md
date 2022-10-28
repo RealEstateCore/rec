@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Humidity_Parameter](Humidity_Parameter.md) > [High_Humidity_Alarm_Parameter](#)
 # High_Humidity_Alarm_Parameter
 
+A parameter determining the humidity level at which to trigger a high humidity alarm
+
+
 **Display name:** High Humidity Alarm Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:High_Humidity_Alarm_Parameter;1
 

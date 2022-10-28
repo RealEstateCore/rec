@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Angle_Sensor](Angle_Sensor.md) > [Solar_Zenith_Angle_Sensor](#)
 # Solar_Zenith_Angle_Sensor
 
+Measures the zenith angle of the sun
+
+
 **Display name:** Solar Zenith Angle Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Solar_Zenith_Angle_Sensor;1
 

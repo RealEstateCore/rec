@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Water_Temperature_Setpoint](../Water_Temperature_Setpoint.md) > [Leaving_Water_Temperature_Setpoint](Leaving_Water_Temperature_Setpoint.md) > [Entering_Condenser_Water_Temperature_Setpoint](#)
 # Entering_Condenser_Water_Temperature_Setpoint
 
+The temperature setpoint for the entering condenser water
+
+
 **Display name:** Entering Condenser Water Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Entering_Condenser_Water_Temperature_Setpoint;1
 

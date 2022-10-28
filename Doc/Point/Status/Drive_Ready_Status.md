@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Drive_Ready_Status](#)
 # Drive_Ready_Status
 
+Indicates if a hard drive or other storage device is ready to be used, e.g. in the context of RAID
+
+
 **Display name:** Drive Ready Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Drive_Ready_Status;1
 

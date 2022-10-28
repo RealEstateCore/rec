@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Meter](Meter.md) > [Thermal_Power_Meter](#)
 # Thermal_Power_Meter
 
+A standalone thermal power meter
+
+
 **Display name:** Thermal Power Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Thermal_Power_Meter;1
 

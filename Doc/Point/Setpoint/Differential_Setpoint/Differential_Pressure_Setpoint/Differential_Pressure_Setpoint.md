@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Differential_Setpoint](../Differential_Setpoint.md) > [Differential_Pressure_Setpoint](#)
 # Differential_Pressure_Setpoint
 
+Sets differential pressure
+
+
 **Display name:** Differential Pressure Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Differential_Pressure_Setpoint;1
 

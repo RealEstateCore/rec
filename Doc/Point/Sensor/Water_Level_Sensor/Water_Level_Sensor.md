@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Water_Level_Sensor](#)
 # Water_Level_Sensor
 
+Measures the height/level of water in some container
+
+
 **Display name:** Water Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Level_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Emergency_Alarm](Emergency_Alarm.md) > [Emergency_Generator_Alarm](#)
 # Emergency_Generator_Alarm
 
+An alarm that indicates off-normal conditions associated with an emergency generator
+
+
 **Display name:** Emergency Generator Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Emergency_Generator_Alarm;1
 

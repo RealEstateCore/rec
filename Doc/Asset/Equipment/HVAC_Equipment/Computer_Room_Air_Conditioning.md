@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Computer_Room_Air_Conditioning](#)
 # Computer_Room_Air_Conditioning
 
+A device that monitors and maintains the temperature, air distribution and humidity in a network room or data center.
+
+
 **Display name:** Computer Room Air Conditioning<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Computer_Room_Air_Conditioning;1
 

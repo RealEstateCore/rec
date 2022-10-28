@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Collection](../../Collection.md) > [System](../System.md) > [Shading_System](#)
 # Shading_System
 
+Devices that can control daylighting through various means
+
+
 **Display name:** Shading System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Shading_System;1
 

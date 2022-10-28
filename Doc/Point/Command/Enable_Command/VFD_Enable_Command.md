@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Enable_Command](Enable_Command.md) > [VFD_Enable_Command](#)
 # VFD_Enable_Command
 
+Enables operation of a variable frequency drive
+
+
 **Display name:** VFD Enable Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:VFD_Enable_Command;1
 

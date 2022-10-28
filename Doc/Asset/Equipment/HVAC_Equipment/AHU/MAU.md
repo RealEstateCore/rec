@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [MAU](#)
 # MAU
 
+See Makeup_Air_Unit
+
+
 **Display name:** MAU<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:MAU;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Hot_Deck](#)
 # Hot_Deck
 
+Part of a dual duct air handling unit that supplies heating to a building
+
+
 **Display name:** Hot Deck<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Deck;1
 

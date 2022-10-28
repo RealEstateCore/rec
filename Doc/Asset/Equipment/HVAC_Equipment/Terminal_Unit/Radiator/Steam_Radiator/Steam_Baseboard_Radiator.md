@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Terminal_Unit](../../Terminal_Unit.md) > [Radiator](../Radiator.md) > [Steam_Radiator](Steam_Radiator.md) > [Steam_Baseboard_Radiator](#)
 # Steam_Baseboard_Radiator
 
+Steam heating device located at or near the floor
+
+
 **Display name:** Steam Baseboard Radiator<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Steam_Baseboard_Radiator;1
 

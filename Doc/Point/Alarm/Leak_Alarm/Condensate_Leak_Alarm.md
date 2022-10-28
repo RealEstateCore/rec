@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Leak_Alarm](Leak_Alarm.md) > [Condensate_Leak_Alarm](#)
 # Condensate_Leak_Alarm
 
+An alarm that indicates a leak of condensate from a cooling system
+
+
 **Display name:** Condensate Leak Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Condensate_Leak_Alarm;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Pressure_Setpoint](../Pressure_Setpoint.md) > [Static_Pressure_Setpoint](Static_Pressure_Setpoint.md) > [Building_Air_Static_Pressure_Setpoint](#)
 # Building_Air_Static_Pressure_Setpoint
 
+Sets static pressure of the entire building
+
+
 **Display name:** Building Air Static Pressure Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Building_Air_Static_Pressure_Setpoint;1
 

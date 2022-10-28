@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Limit](Limit.md) > [Close_Limit](#)
 # Close_Limit
 
+A parameter that places a lower or upper bound on the range of permitted values of a Close_Setpoint.
+
+
 **Display name:** Close Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Close_Limit;1
 

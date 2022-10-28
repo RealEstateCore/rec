@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Ceiling_Fan](#)
 # Ceiling_Fan
 
+A fan installed on the ceiling of a room for the purpose of air circulation
+
+
 **Display name:** Ceiling Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Ceiling_Fan;1
 

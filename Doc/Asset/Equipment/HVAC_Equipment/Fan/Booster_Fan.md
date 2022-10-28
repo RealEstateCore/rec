@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Booster_Fan](#)
 # Booster_Fan
 
+Fan activated to increase airflow beyond what is provided by the default configuration
+
+
 **Display name:** Booster Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Booster_Fan;1
 

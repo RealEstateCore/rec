@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Heating_Valve](#)
 # Heating_Valve
 
+A valve that controls air temperature by modulating the amount of hot water flowing through a heating coil
+
+
 **Display name:** Heating Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heating_Valve;1
 

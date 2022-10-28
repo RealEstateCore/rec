@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Pressure_Sensor](../Pressure_Sensor.md) > [Static_Pressure_Sensor](Static_Pressure_Sensor.md) > [Underfloor_Air_Plenum_Static_Pressure_Sensor](#)
 # Underfloor_Air_Plenum_Static_Pressure_Sensor
 
+Measures the outward push of air against the plenum surfaces and used to measure the resistance when air moves through the plenum
+
+
 **Display name:** Underfloor Air Plenum Static Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Underfloor_Air_Plenum_Static_Pressure_Sensor;1
 

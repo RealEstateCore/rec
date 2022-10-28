@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Hail_Sensor](#)
 # Hail_Sensor
 
+Measures hail in terms of its size and damage potential
+
+
 **Display name:** Hail Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hail_Sensor;1
 

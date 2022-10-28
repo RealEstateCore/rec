@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Current_Sensor](Current_Sensor.md) > [Motor_Current_Sensor](#)
 # Motor_Current_Sensor
 
+Measures the current consumed by a motor
+
+
 **Display name:** Motor Current Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Motor_Current_Sensor;1
 

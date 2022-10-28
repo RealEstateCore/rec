@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Terminal_Unit](Terminal_Unit.md) > [Induction_Unit](#)
 # Induction_Unit
 
+A device with an primary air connection and integrated coil and condensate pan that performs sensible and latent cooling of a space. Essentially an Active Chilled Beam with a built in condensate pan.
+
+
 **Display name:** Induction Unit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Induction_Unit;1
 

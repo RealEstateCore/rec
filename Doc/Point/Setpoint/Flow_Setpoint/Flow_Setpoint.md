@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Flow_Setpoint](#)
 # Flow_Setpoint
 
+Sets flow
+
+
 **Display name:** Flow Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Flow_Setpoint;1
 

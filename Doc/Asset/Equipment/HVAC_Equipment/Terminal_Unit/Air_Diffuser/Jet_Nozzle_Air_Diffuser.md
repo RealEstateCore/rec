@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Air_Diffuser](Air_Diffuser.md) > [Jet_Nozzle_Air_Diffuser](#)
 # Jet_Nozzle_Air_Diffuser
 
+An air diffuser that is designed to produce high velocity discharge air stream to throw the air over a large distance or target the air stream to a localize area
+
+
 **Display name:** Jet Nozzle Air Diffuser<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Jet_Nozzle_Air_Diffuser;1
 

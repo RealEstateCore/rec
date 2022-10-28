@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Variable_Air_Volume_Box](#)
 # Variable_Air_Volume_Box
 
+A device that regulates the volume and temperature of air delivered to a zone by opening or closing a damper
+
+
 **Display name:** Variable Air Volume Box<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Variable_Air_Volume_Box;1
 

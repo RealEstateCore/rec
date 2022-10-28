@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Collection](../Collection.md) > [System](System.md) > [Lighting_System](#)
 # Lighting_System
 
+The equipment, devices and interfaces that serve or are a part of the lighting subsystem in a building
+
+
 **Display name:** Lighting System<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Lighting_System;1
 

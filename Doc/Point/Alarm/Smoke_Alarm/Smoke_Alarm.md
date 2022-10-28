@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Smoke_Alarm](#)
 # Smoke_Alarm
 
+An alarm that indicates the off-normal conditions associated with smoke.
+
+
 **Display name:** Smoke Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Smoke_Alarm;1
 

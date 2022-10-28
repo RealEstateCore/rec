@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Point](../../../../../Point.md) > [Setpoint](../../../../Setpoint.md) > [Temperature_Setpoint](../../../Temperature_Setpoint.md) > [Water_Temperature_Setpoint](../../Water_Temperature_Setpoint.md) > [Hot_Water_Temperature_Setpoint](../Hot_Water_Temperature_Setpoint.md) > [Domestic_Hot_Water_Temperature_Setpoint](Domestic_Hot_Water_Temperature_Setpoint.md) > [Leaving_Domestic_Hot_Water_Temperature_Setpoint](#)
 # Leaving_Domestic_Hot_Water_Temperature_Setpoint
 
+Sets temperature of leavinging part of domestic hot water
+
+
 **Display name:** Leaving Domestic Hot Water Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Domestic_Hot_Water_Temperature_Setpoint;1
 

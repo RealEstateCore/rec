@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Heating_Valve](Heating_Valve.md) > [Return_Heating_Valve](#)
 # Return_Heating_Valve
 
+A valve installed on the return side of a heat exchanger
+
+
 **Display name:** Return Heating Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Return_Heating_Valve;1
 

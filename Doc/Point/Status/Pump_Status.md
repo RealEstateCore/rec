@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Pump_Status](#)
 # Pump_Status
 
+Status of a pump
+
+
 **Display name:** Pump Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Pump_Status;1
 

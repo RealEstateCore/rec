@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Frequency_Command](Frequency_Command.md) > [Max_Frequency_Command](#)
 # Max_Frequency_Command
 
+Sets the maximum permitted frequency
+
+
 **Display name:** Max Frequency Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Frequency_Command;1
 

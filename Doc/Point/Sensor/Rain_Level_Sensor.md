@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Rain_Level_Sensor](#)
 # Rain_Level_Sensor
 
+Measures the amount of precipitation fallen
+
+
 **Display name:** Rain Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Rain_Level_Sensor;1
 

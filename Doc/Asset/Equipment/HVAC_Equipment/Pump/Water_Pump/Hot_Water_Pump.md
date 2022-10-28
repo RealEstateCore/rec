@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Pump](../Pump.md) > [Water_Pump](Water_Pump.md) > [Hot_Water_Pump](#)
 # Hot_Water_Pump
 
+A pump that performs work on hot water; typically part of a hot water system
+
+
 **Display name:** Hot Water Pump<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Pump;1
 

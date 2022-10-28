@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Dewpoint_Sensor](Dewpoint_Sensor.md) > [Exhaust_Air_Dewpoint_Sensor](#)
 # Exhaust_Air_Dewpoint_Sensor
 
+Measures dewpoint of exhaust air
+
+
 **Display name:** Exhaust Air Dewpoint Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Exhaust_Air_Dewpoint_Sensor;1
 

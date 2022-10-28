@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fan_Status](#)
 # Fan_Status
 
+Indicates properties of fans
+
+
 **Display name:** Fan Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fan_Status;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Damper](Damper.md) > [Return_Damper](#)
 # Return_Damper
 
+A damper that modulates the flow of return air
+
+
 **Display name:** Return Damper<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Return_Damper;1
 

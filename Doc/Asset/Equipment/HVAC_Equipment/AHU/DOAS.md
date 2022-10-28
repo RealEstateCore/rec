@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [AHU](AHU.md) > [DOAS](#)
 # DOAS
 
+See Dedicated_Outdoor_Air_System_Unit
+
+
 **Display name:** DOAS<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:DOAS;1
 

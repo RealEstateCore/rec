@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Gas_Sensor](#)
 # Gas_Sensor
 
+Measures gas concentration (other than CO2)
+
+
 **Display name:** Gas Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Gas_Sensor;1
 

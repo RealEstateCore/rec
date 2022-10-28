@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Imbalance_Sensor](#)
 # Imbalance_Sensor
 
+A sensor which measures difference (imbalance) between phases of an electrical system
+
+
 **Display name:** Imbalance Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Imbalance_Sensor;1
 

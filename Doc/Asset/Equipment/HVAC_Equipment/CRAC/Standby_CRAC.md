@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [CRAC](CRAC.md) > [Standby_CRAC](#)
 # Standby_CRAC
 
+A CRAC that is activated as part of a lead/lag operation or when an alarm occurs in a primary unit
+
+
 **Display name:** Standby CRAC<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Standby_CRAC;1
 

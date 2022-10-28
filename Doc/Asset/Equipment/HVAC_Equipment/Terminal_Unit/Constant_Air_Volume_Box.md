@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Terminal_Unit](Terminal_Unit.md) > [Constant_Air_Volume_Box](#)
 # Constant_Air_Volume_Box
 
+A terminal unit for which supply air flow rate is constant and the supply air temperature is varied to meet thermal load
+
+
 **Display name:** Constant Air Volume Box<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Constant_Air_Volume_Box;1
 

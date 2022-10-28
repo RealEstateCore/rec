@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Air_Temperature_Sensor](../Air_Temperature_Sensor.md) > [Discharge_Air_Temperature_Sensor](#)
 # Discharge_Air_Temperature_Sensor
 
+Measures the temperature of discharge air
+
+
 **Display name:** Discharge Air Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Illuminance_Setpoint](#)
 # Illuminance_Setpoint
 
+Target Illuminance of the zone.
+
+
 **Display name:** Illuminance Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Illuminance_Setpoint;1
 

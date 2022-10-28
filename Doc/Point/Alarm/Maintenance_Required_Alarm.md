@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Maintenance_Required_Alarm](#)
 # Maintenance_Required_Alarm
 
+An alarm that indicates that repair/maintenance is required on an associated device or equipment
+
+
 **Display name:** Maintenance Required Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Maintenance_Required_Alarm;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Lead_Lag_Status](#)
 # Lead_Lag_Status
 
+Indicates if lead/lag operation is enabled
+
+
 **Display name:** Lead Lag Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Lead_Lag_Status;1
 

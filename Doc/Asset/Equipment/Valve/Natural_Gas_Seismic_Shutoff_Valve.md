@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Valve](Valve.md) > [Natural_Gas_Seismic_Shutoff_Valve](#)
 # Natural_Gas_Seismic_Shutoff_Valve
 
+Valves that automatically shut off your natural gas service when an earthquake of a sufficient magnitude occurs at the location.
+
+
 **Display name:** Natural Gas Seismic Shutoff Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Natural_Gas_Seismic_Shutoff_Valve;1
 

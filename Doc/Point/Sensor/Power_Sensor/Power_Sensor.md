@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Power_Sensor](#)
 # Power_Sensor
 
+Measures the amount of instantaneous power consumed
+
+
 **Display name:** Power Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Power_Sensor;1
 

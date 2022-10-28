@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Damper_Command](#)
 # Damper_Command
 
+Controls properties of dampers
+
+
 **Display name:** Damper Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Damper_Command;1
 

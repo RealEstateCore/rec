@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Valve_Position_Alarm](#)
 # Valve_Position_Alarm
 
+An alarm that indicates that the valve position is not in a normal state.
+
+
 **Display name:** Valve Position Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Valve_Position_Alarm;1
 

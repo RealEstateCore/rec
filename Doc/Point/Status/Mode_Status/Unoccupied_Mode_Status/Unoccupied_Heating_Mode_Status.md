@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [Mode_Status](../Mode_Status.md) > [Unoccupied_Mode_Status](Unoccupied_Mode_Status.md) > [Unoccupied_Heating_Mode_Status](#)
 # Unoccupied_Heating_Mode_Status
 
+Indicates whether a system, device or control loop is in an unoccupied heating mode
+
+
 **Display name:** Unoccupied Heating Mode Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Mode_Status;1
 

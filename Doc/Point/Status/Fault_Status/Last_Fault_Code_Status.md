@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Fault_Status](Fault_Status.md) > [Last_Fault_Code_Status](#)
 # Last_Fault_Code_Status
 
+Indicates the last fault code that occurred
+
+
 **Display name:** Last Fault Code Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Last_Fault_Code_Status;1
 

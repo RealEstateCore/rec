@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Heat_Exchanger](../../Heat_Exchanger.md) > [Coil](../Coil.md) > [Heating_Coil](#)
 # Heating_Coil
 
+A heating element typically made of pipe, tube or wire that emits heat. Typically filled with hot water, or, in the case of wire, uses electricity.
+
+
 **Display name:** Heating Coil<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heating_Coil;1
 

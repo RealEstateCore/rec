@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Command](../../../Command.md) > [Enable_Command](../../Enable_Command.md) > [System_Enable_Command](../System_Enable_Command.md) > [Hot_Water_System_Enable_Command](Hot_Water_System_Enable_Command.md) > [Domestic_Hot_Water_System_Enable_Command](#)
 # Domestic_Hot_Water_System_Enable_Command
 
+Enables operation of the domestic hot water system
+
+
 **Display name:** Domestic Hot Water System Enable Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_System_Enable_Command;1
 

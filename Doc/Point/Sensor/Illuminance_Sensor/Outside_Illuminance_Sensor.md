@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Illuminance_Sensor](Illuminance_Sensor.md) > [Outside_Illuminance_Sensor](#)
 # Outside_Illuminance_Sensor
 
+Measures the total luminous flux incident on an outside, per unit area
+
+
 **Display name:** Outside Illuminance Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Illuminance_Sensor;1
 

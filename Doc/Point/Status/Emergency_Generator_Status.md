@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Emergency_Generator_Status](#)
 # Emergency_Generator_Status
 
+Indicates if an emergency generator is active
+
+
 **Display name:** Emergency Generator Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Emergency_Generator_Status;1
 

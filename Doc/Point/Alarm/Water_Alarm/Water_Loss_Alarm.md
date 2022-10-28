@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Water_Alarm](Water_Alarm.md) > [Water_Loss_Alarm](#)
 # Water_Loss_Alarm
 
+An alarm that indicates a loss of water e.g. during transport
+
+
 **Display name:** Water Loss Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Loss_Alarm;1
 

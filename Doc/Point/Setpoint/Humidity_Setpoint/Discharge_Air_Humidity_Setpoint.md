@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Discharge_Air_Humidity_Setpoint](#)
 # Discharge_Air_Humidity_Setpoint
 
+Humidity setpoint for discharge air
+
+
 **Display name:** Discharge Air Humidity Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Humidity_Setpoint;1
 

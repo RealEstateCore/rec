@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [Mode_Status](../Mode_Status.md) > [Occupied_Mode_Status](#)
 # Occupied_Mode_Status
 
+Indicates if a system, device or control loop is in "Occupied" mode
+
+
 **Display name:** Occupied Mode Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1
 

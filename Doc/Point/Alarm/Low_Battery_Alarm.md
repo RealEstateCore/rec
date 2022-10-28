@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Low_Battery_Alarm](#)
 # Low_Battery_Alarm
 
+An alarm that indicates the battery is low.
+
+
 **Display name:** Low Battery Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Low_Battery_Alarm;1
 

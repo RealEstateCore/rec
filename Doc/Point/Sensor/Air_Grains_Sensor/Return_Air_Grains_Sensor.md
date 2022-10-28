@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Air_Grains_Sensor](Air_Grains_Sensor.md) > [Return_Air_Grains_Sensor](#)
 # Return_Air_Grains_Sensor
 
+Measures the mass of water vapor in return air
+
+
 **Display name:** Return Air Grains Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Return_Air_Grains_Sensor;1
 

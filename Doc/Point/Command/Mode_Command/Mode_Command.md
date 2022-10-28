@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Mode_Command](#)
 # Mode_Command
 
+Controls the operating mode of a device or controller
+
+
 **Display name:** Mode Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Mode_Command;1
 

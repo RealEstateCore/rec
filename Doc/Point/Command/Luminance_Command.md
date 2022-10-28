@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Luminance_Command](#)
 # Luminance_Command
 
+Controls the amount of luminance delivered by a lighting system
+
+
 **Display name:** Luminance Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Luminance_Command;1
 

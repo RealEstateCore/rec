@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Air_Quality_Sensor](#)
 # Air_Quality_Sensor
 
+A sensor which provides a measure of air quality
+
+
 **Display name:** Air Quality Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Air_Quality_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [CO2_Alarm](#)
 # CO2_Alarm
 
+An alarm that indicates the off-normal conditions associated with the presence of carbon dioxide.
+
+
 **Display name:** CO2 Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:CO2_Alarm;1
 

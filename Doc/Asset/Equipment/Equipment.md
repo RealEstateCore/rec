@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Asset](../Asset.md) > [Equipment](#)
 # Equipment
 
+devices that serve all or part of the building and may include electric power, lighting, transportation, or service water heating, including, but not limited to, furnaces, boilers, air conditioners, heat pumps, chillers, water heaters, lamps, luminaires, ballasts, elevators, escalators, or other devices or installations.
+
+
 **Display name:** Equipment<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Equipment;1
 

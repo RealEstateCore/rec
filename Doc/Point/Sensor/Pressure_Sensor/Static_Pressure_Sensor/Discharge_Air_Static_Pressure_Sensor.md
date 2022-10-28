@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Pressure_Sensor](../Pressure_Sensor.md) > [Static_Pressure_Sensor](Static_Pressure_Sensor.md) > [Discharge_Air_Static_Pressure_Sensor](#)
 # Discharge_Air_Static_Pressure_Sensor
 
+The static pressure of air within discharge regions of an HVAC system
+
+
 **Display name:** Discharge Air Static Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Discharge_Air_Static_Pressure_Sensor;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Flow_Sensor](../Flow_Sensor.md) > [Air_Flow_Sensor](Air_Flow_Sensor.md) > [Mixed_Air_Flow_Sensor](#)
 # Mixed_Air_Flow_Sensor
 
+Measures the rate of flow of mixed air
+
+
 **Display name:** Mixed Air Flow Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Mixed_Air_Flow_Sensor;1
 

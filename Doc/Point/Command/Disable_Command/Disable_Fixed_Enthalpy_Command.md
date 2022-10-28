@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Disable_Command](Disable_Command.md) > [Disable_Fixed_Enthalpy_Command](#)
 # Disable_Fixed_Enthalpy_Command
 
+Disables the use of fixed enthalpy control
+
+
 **Display name:** Disable Fixed Enthalpy Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Disable_Fixed_Enthalpy_Command;1
 

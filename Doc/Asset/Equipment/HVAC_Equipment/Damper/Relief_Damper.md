@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Damper](Damper.md) > [Relief_Damper](#)
 # Relief_Damper
 
+A damper that is a component of a Relief Air System, ensuring building doesn't become over-pressurised
+
+
 **Display name:** Relief Damper<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Relief_Damper;1
 

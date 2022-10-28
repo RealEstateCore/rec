@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Temperature_Parameter](Temperature_Parameter.md) > [Low_Temperature_Alarm_Parameter](#)
 # Low_Temperature_Alarm_Parameter
 
+A parameter determining the temperature level at which to trigger a low temperature alarm
+
+
 **Display name:** Low Temperature Alarm Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Low_Temperature_Alarm_Parameter;1
 

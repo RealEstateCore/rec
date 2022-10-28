@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Air_Quality_Sensor](../Air_Quality_Sensor.md) > [CO_Sensor](CO_Sensor.md) > [CO_Level_Sensor](#)
 # CO_Level_Sensor
 
+Measures the concentration of CO
+
+
 **Display name:** CO Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:CO_Level_Sensor;1
 

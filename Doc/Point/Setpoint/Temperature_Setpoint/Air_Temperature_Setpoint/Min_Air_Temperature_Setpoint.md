@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Air_Temperature_Setpoint](Air_Temperature_Setpoint.md) > [Min_Air_Temperature_Setpoint](#)
 # Min_Air_Temperature_Setpoint
 
+Setpoint for minimum air temperature
+
+
 **Display name:** Min Air Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Min_Air_Temperature_Setpoint;1
 

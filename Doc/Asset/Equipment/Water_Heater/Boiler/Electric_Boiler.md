@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Water_Heater](../Water_Heater.md) > [Boiler](Boiler.md) > [Electric_Boiler](#)
 # Electric_Boiler
 
+A closed, pressure vessel that uses electricity for heating water or other fluids to supply steam or hot water for heating, humidification, or other applications.
+
+
 **Display name:** Electric Boiler<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Electric_Boiler;1
 

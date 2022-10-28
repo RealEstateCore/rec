@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Alarm](../../Alarm.md) > [Water_Alarm](../Water_Alarm.md) > [Water_Level_Alarm](Water_Level_Alarm.md) > [Min_Water_Level_Alarm](#)
 # Min_Water_Level_Alarm
 
+Alarm indicating that the minimum water level was reached
+
+
 **Display name:** Min Water Level Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Min_Water_Level_Alarm;1
 

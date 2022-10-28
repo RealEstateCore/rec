@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Limit](Limit.md) > [Current_Limit](#)
 # Current_Limit
 
+A parameter that places a lower or upper bound on the range of permitted values of a Current_Setpoint.
+
+
 **Display name:** Current Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Current_Limit;1
 

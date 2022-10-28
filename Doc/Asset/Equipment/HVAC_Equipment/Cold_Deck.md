@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [Cold_Deck](#)
 # Cold_Deck
 
+Part of a dual duct air handling unit that supplies cooling to a building
+
+
 **Display name:** Cold Deck<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cold_Deck;1
 

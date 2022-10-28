@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Demand_Setpoint](#)
 # Demand_Setpoint
 
+Sets the rate required for a process
+
+
 **Display name:** Demand Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Demand_Setpoint;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Chilled_Beam](Chilled_Beam.md) > [Active_Chilled_Beam](#)
 # Active_Chilled_Beam
 
+A Chilled Beam with an integral primary air connection that induces air flow through the device.
+
+
 **Display name:** Active Chilled Beam<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Active_Chilled_Beam;1
 

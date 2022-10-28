@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Status](Status.md) > [Lockout_Status](#)
 # Lockout_Status
 
+Indicates if a piece of equipment, system, or functionality has been locked out from operation
+
+
 **Display name:** Lockout Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Lockout_Status;1
 

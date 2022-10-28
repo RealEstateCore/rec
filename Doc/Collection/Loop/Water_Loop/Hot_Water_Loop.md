@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Collection](../../Collection.md) > [Loop](../Loop.md) > [Water_Loop](Water_Loop.md) > [Hot_Water_Loop](#)
 # Hot_Water_Loop
 
+A collection of equipment that transport and regulate hot water among each other
+
+
 **Display name:** Hot Water Loop<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Loop;1
 

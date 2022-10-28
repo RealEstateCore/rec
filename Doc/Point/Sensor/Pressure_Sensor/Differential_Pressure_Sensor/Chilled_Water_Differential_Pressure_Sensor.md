@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Pressure_Sensor](../Pressure_Sensor.md) > [Differential_Pressure_Sensor](Differential_Pressure_Sensor.md) > [Chilled_Water_Differential_Pressure_Sensor](#)
 # Chilled_Water_Differential_Pressure_Sensor
 
+Measures the difference in water pressure on either side of a chilled water valve
+
+
 **Display name:** Chilled Water Differential Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Pressure_Sensor;1
 

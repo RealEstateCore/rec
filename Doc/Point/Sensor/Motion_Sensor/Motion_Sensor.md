@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Motion_Sensor](#)
 # Motion_Sensor
 
+Detects the presence of motion in some area
+
+
 **Display name:** Motion Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Motion_Sensor;1
 

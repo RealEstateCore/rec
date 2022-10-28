@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Enable_Command](Enable_Command.md) > [Heating_Enable_Command](#)
 # Heating_Enable_Command
 
+Command that enables heating functionality in equipment but certain condition(s) must be met first before actively heating. For the actively heating control, see Heating_Command.
+
+
 **Display name:** Heating Enable Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heating_Enable_Command;1
 

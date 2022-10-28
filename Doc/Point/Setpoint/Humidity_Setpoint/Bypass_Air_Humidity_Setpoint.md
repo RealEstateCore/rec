@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](Humidity_Setpoint.md) > [Bypass_Air_Humidity_Setpoint](#)
 # Bypass_Air_Humidity_Setpoint
 
+Humidity setpoint for bypass air
+
+
 **Display name:** Bypass Air Humidity Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Bypass_Air_Humidity_Setpoint;1
 

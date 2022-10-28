@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Water_Temperature_Setpoint](../Water_Temperature_Setpoint.md) > [Leaving_Water_Temperature_Setpoint](Leaving_Water_Temperature_Setpoint.md) > [Leaving_Water_Temperature_Deadband_Setpoint](#)
 # Leaving_Water_Temperature_Deadband_Setpoint
 
+Sets the size of a deadband of temperature of leaving water
+
+
 **Display name:** Leaving Water Temperature Deadband Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Deadband_Setpoint;1
 

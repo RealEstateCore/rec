@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [Humidity_Setpoint](#)
 # Humidity_Setpoint
 
+Sets humidity
+
+
 **Display name:** Humidity Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Humidity_Setpoint;1
 

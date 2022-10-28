@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](#)
 # Command
 
+A Command is an output point that directly determines the behavior of equipment and/or affects relevant operational points.
+
+
 **Display name:** Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Command;1
 

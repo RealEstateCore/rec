@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Radiant_Panel](#)
 # Radiant_Panel
 
+A temperature-controlled surface that provides fifty percent (50%) or more of the design heat transfer by thermal radiation.
+
+
 **Display name:** Radiant Panel<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Radiant_Panel;1
 

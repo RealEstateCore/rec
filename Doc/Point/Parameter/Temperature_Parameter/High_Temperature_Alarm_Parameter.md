@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Temperature_Parameter](Temperature_Parameter.md) > [High_Temperature_Alarm_Parameter](#)
 # High_Temperature_Alarm_Parameter
 
+A parameter determining the temperature level at which to trigger a high temperature alarm
+
+
 **Display name:** High Temperature Alarm Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:High_Temperature_Alarm_Parameter;1
 

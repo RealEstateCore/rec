@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Meter](../Meter.md) > [Electrical_Meter](#)
 # Electrical_Meter
 
+A meter that measures the usage or consumption of electricity
+
+
 **Display name:** Electrical Meter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Electrical_Meter;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [On_Status](#)
 # On_Status
 
+Indicates if a control loop, relay or equipment is on
+
+
 **Display name:** On Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:On_Status;1
 

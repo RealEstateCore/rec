@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Delay_Parameter](Delay_Parameter.md) > [Alarm_Delay_Parameter](#)
 # Alarm_Delay_Parameter
 
+A parameter determining how long to delay an alarm after sufficient conditions have been met
+
+
 **Display name:** Alarm Delay Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Alarm_Delay_Parameter;1
 

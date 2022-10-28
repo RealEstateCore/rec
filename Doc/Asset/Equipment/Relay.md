@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Asset](../Asset.md) > [Equipment](Equipment.md) > [Relay](#)
 # Relay
 
+an electrically operated switch
+
+
 **Display name:** Relay<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Relay;1
 

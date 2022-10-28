@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [System_Status](System_Status.md) > [System_Shutdown_Status](#)
 # System_Shutdown_Status
 
+Indicates if a system has been shutdown
+
+
 **Display name:** System Shutdown Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:System_Shutdown_Status;1
 

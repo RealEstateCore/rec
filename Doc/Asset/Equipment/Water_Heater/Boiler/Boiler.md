@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Water_Heater](../Water_Heater.md) > [Boiler](#)
 # Boiler
 
+A closed, pressure vessel that uses fuel or electricity for heating water or other fluids to supply steam or hot water for heating, humidification, or other applications.
+
+
 **Display name:** Boiler<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Boiler;1
 

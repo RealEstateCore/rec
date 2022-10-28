@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Parameter](../../../Parameter.md) > [Limit](../../Limit.md) > [Max_Limit](../Max_Limit.md) > [Max_Temperature_Setpoint_Limit](#)
 # Max_Temperature_Setpoint_Limit
 
+A parameter that places an upper bound on the range of permitted values of a Temperature_Setpoint.
+
+
 **Display name:** Max Temperature Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Temperature_Setpoint_Limit;1
 

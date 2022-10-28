@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Position_Command](#)
 # Position_Command
 
+Controls or reports the position of some object
+
+
 **Display name:** Position Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Position_Command;1
 

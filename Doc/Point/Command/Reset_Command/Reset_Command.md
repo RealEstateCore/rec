@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Command](../Command.md) > [Reset_Command](#)
 # Reset_Command
 
+Commands that reset a flag, property or value to its default
+
+
 **Display name:** Reset Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Reset_Command;1
 

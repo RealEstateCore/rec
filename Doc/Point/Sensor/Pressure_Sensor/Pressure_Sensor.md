@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Pressure_Sensor](#)
 # Pressure_Sensor
 
+Measure the amount of force acting on a unit area
+
+
 **Display name:** Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Pressure_Sensor;1
 

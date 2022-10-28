@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Temperature_Setpoint](../../Temperature_Setpoint.md) > [Air_Temperature_Setpoint](../Air_Temperature_Setpoint.md) > [Return_Air_Temperature_Setpoint](#)
 # Return_Air_Temperature_Setpoint
 
+The target temperature for return air, often used as an approximation of zone air temperature
+
+
 **Display name:** Return Air Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_Setpoint;1
 

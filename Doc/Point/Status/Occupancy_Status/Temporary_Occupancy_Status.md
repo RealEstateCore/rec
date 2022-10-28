@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Occupancy_Status](Occupancy_Status.md) > [Temporary_Occupancy_Status](#)
 # Temporary_Occupancy_Status
 
+For systems that differentiate between scheduled occupied/unoccupied mode, this indicates if a space is temporarily occupied when it would otherwise be unoccupied
+
+
 **Display name:** Temporary Occupancy Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Temporary_Occupancy_Status;1
 

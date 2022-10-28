@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Alarm](Alarm.md) > [Communication_Loss_Alarm](#)
 # Communication_Loss_Alarm
 
+An alarm that indicates a loss of communication e.g. with a device or controller
+
+
 **Display name:** Communication Loss Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Communication_Loss_Alarm;1
 

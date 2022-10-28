@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Temperature_Sensor](Temperature_Sensor.md) > [Heat_Sink_Temperature_Sensor](#)
 # Heat_Sink_Temperature_Sensor
 
+Measure temperature of the heat sink on a device such as a VFD.
+
+
 **Display name:** Heat Sink Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Heat_Sink_Temperature_Sensor;1
 

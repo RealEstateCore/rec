@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Setpoint](../Setpoint.md) > [CO2_Setpoint](CO2_Setpoint.md) > [Return_Air_CO2_Setpoint](#)
 # Return_Air_CO2_Setpoint
 
+Sets some property of CO2 in Return Air
+
+
 **Display name:** Return Air CO2 Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Return_Air_CO2_Setpoint;1
 

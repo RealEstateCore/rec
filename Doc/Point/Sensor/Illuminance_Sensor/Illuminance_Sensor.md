@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Illuminance_Sensor](#)
 # Illuminance_Sensor
 
+Measures the total luminous flux incident on a surface, per unit area
+
+
 **Display name:** Illuminance Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Illuminance_Sensor;1
 

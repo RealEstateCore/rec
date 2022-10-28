@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Energy_Sensor](../Energy_Sensor.md) > [Electric_Energy_Sensor](Electric_Energy_Sensor.md) > [Reactive_Energy_Sensor](#)
 # Reactive_Energy_Sensor
 
+Measures the integral of reactive power
+
+
 **Display name:** Reactive Energy Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Reactive_Energy_Sensor;1
 

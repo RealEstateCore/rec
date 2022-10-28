@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Setpoint](Setpoint.md) > [Dewpoint_Setpoint](#)
 # Dewpoint_Setpoint
 
+Sets dew point
+
+
 **Display name:** Dewpoint Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Dewpoint_Setpoint;1
 

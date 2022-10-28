@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [Lighting_Equipment](../../Lighting_Equipment.md) > [Interface](../Interface.md) > [Switch](Switch.md) > [Dimmer](#)
 # Dimmer
 
+A switch providing continuous control over all or part of a lighting installation; typically potentiometer-based
+
+
 **Display name:** Dimmer<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Dimmer;1
 

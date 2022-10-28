@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [HVAC_Equipment](HVAC_Equipment.md) > [CRAH](#)
 # CRAH
 
+a computer room air handler (CRAH) uses fans, cooling coils and a water-chiller system to remove heat.
+
+
 **Display name:** CRAH<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:CRAH;1
 

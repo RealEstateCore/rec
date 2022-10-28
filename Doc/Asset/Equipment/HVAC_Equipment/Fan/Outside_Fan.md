@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Outside_Fan](#)
 # Outside_Fan
 
+Fan moving outside air; air that is supplied into the building from the outdoors
+
+
 **Display name:** Outside Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Fan;1
 

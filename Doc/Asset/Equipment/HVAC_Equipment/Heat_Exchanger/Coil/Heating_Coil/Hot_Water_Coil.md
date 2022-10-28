@@ -1,6 +1,9 @@
 [Index](../../../../../../index.md) > [Asset](../../../../../Asset.md) > [Equipment](../../../../Equipment.md) > [HVAC_Equipment](../../../HVAC_Equipment.md) > [Heat_Exchanger](../../Heat_Exchanger.md) > [Coil](../Coil.md) > [Heating_Coil](Heating_Coil.md) > [Hot_Water_Coil](#)
 # Hot_Water_Coil
 
+A heating element typically made of pipe, tube or wire that emits heat that is filled with hot water.
+
+
 **Display name:** Hot Water Coil<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Coil;1
 

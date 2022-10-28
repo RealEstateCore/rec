@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Direction_Command](#)
 # Direction_Command
 
+Commands that affect the direction of some phenomenon
+
+
 **Display name:** Direction Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Direction_Command;1
 

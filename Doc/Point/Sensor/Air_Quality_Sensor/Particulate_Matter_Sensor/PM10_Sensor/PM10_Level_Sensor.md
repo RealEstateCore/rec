@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Air_Quality_Sensor](../../Air_Quality_Sensor.md) > [Particulate_Matter_Sensor](../Particulate_Matter_Sensor.md) > [PM10_Sensor](PM10_Sensor.md) > [PM10_Level_Sensor](#)
 # PM10_Level_Sensor
 
+Detects level of particulates of size 10 microns
+
+
 **Display name:** PM10 Level Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PM10_Level_Sensor;1
 

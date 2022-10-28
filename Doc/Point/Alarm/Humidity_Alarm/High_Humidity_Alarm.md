@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Humidity_Alarm](Humidity_Alarm.md) > [High_Humidity_Alarm](#)
 # High_Humidity_Alarm
 
+An alarm that indicates high concentration of water vapor in the air.
+
+
 **Display name:** High Humidity Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:High_Humidity_Alarm;1
 

@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Sensor](Sensor.md) > [Fire_Sensor](#)
 # Fire_Sensor
 
+Measures the presence of fire
+
+
 **Display name:** Fire Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fire_Sensor;1
 

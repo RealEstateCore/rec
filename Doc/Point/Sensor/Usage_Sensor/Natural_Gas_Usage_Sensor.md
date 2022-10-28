@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Usage_Sensor](Usage_Sensor.md) > [Natural_Gas_Usage_Sensor](#)
 # Natural_Gas_Usage_Sensor
 
+Measures the amount of natural gas that is consumed or used, over some period of time
+
+
 **Display name:** Natural Gas Usage Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Natural_Gas_Usage_Sensor;1
 

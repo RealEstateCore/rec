@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Direction_Status](#)
 # Direction_Status
 
+Indicates which direction a device is operating in
+
+
 **Display name:** Direction Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Direction_Status;1
 

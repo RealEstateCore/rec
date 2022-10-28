@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Valve](../Valve.md) > [Water_Valve](Water_Valve.md) > [Thermostatic_Mixing_Valve](#)
 # Thermostatic_Mixing_Valve
 
+A valve that blends hot water with cold water to ensure constant, safe shower and bath outlet temperatures, preventing scalding.
+
+
 **Display name:** Thermostatic Mixing Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Thermostatic_Mixing_Valve;1
 

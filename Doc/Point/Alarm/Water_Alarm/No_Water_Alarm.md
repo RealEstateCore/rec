@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Water_Alarm](Water_Alarm.md) > [No_Water_Alarm](#)
 # No_Water_Alarm
 
+Alarm indicating that there is no water in the equipment or system
+
+
 **Display name:** No Water Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:No_Water_Alarm;1
 

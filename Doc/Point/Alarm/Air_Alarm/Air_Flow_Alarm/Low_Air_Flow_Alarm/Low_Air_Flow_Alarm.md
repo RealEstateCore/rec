@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Alarm](../../../Alarm.md) > [Air_Alarm](../../Air_Alarm.md) > [Air_Flow_Alarm](../Air_Flow_Alarm.md) > [Low_Air_Flow_Alarm](#)
 # Low_Air_Flow_Alarm
 
+An alarm that indicates that the air flow is lower than normal.
+
+
 **Display name:** Low Air Flow Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Low_Air_Flow_Alarm;1
 

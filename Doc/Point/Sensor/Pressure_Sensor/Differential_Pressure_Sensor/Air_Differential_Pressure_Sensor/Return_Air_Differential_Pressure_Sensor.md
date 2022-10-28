@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Pressure_Sensor](../../Pressure_Sensor.md) > [Differential_Pressure_Sensor](../Differential_Pressure_Sensor.md) > [Air_Differential_Pressure_Sensor](Air_Differential_Pressure_Sensor.md) > [Return_Air_Differential_Pressure_Sensor](#)
 # Return_Air_Differential_Pressure_Sensor
 
+Measures the difference in pressure between the return and supply side
+
+
 **Display name:** Return Air Differential Pressure Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Return_Air_Differential_Pressure_Sensor;1
 

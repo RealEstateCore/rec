@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Parameter](../Parameter.md) > [Tolerance_Parameter](Tolerance_Parameter.md) > [Temperature_Tolerance_Parameter](#)
 # Temperature_Tolerance_Parameter
 
+A parameter determining the difference between upper and lower limits of temperature.
+
+
 **Display name:** Temperature Tolerance Parameter<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Temperature_Tolerance_Parameter;1
 

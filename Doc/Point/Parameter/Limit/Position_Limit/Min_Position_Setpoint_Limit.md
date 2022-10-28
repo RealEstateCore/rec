@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Parameter](../../Parameter.md) > [Limit](../Limit.md) > [Position_Limit](Position_Limit.md) > [Min_Position_Setpoint_Limit](#)
 # Min_Position_Setpoint_Limit
 
+A parameter that places a lower bound on the range of permitted values of a Position_Setpoint.
+
+
 **Display name:** Min Position Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Min_Position_Setpoint_Limit;1
 

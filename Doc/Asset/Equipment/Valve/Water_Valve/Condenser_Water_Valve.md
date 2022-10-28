@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Valve](../Valve.md) > [Water_Valve](Water_Valve.md) > [Condenser_Water_Valve](#)
 # Condenser_Water_Valve
 
+A valve that modulates the flow of condenser water
+
+
 **Display name:** Condenser Water Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Condenser_Water_Valve;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Status](../../Status.md) > [Mode_Status](../Mode_Status.md) > [Operating_Mode_Status](Operating_Mode_Status.md) > [Vent_Operating_Mode_Status](#)
 # Vent_Operating_Mode_Status
 
+Indicates the current operating mode of a vent
+
+
 **Display name:** Vent Operating Mode Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Vent_Operating_Mode_Status;1
 

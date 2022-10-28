@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Sensor](../../Sensor.md) > [Current_Sensor](../Current_Sensor.md) > [Current_Output_Sensor](Current_Output_Sensor.md) > [Photovoltaic_Current_Output_Sensor](#)
 # Photovoltaic_Current_Output_Sensor
 
+Senses the amperes of electrical current produced as output by a photovoltaic device
+
+
 **Display name:** Photovoltaic Current Output Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Photovoltaic_Current_Output_Sensor;1
 

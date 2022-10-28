@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Air_Temperature_Sensor](../Air_Temperature_Sensor.md) > [Outside_Air_Temperature_Sensor](Outside_Air_Temperature_Sensor.md) > [Intake_Air_Temperature_Sensor](#)
 # Intake_Air_Temperature_Sensor
 
+Measures air at the interface between the building and the outside
+
+
 **Display name:** Intake Air Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Intake_Air_Temperature_Sensor;1
 

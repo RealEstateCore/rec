@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Setpoint](../../../Setpoint.md) > [Differential_Setpoint](../../Differential_Setpoint.md) > [Differential_Pressure_Setpoint](../Differential_Pressure_Setpoint.md) > [Air_Differential_Pressure_Setpoint](Air_Differential_Pressure_Setpoint.md) > [Supply_Air_Differential_Pressure_Setpoint](#)
 # Supply_Air_Differential_Pressure_Setpoint
 
+Sets the target air differential pressure between an upstream and downstream point in a supply air duct or conduit
+
+
 **Display name:** Supply Air Differential Pressure Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Supply_Air_Differential_Pressure_Setpoint;1
 

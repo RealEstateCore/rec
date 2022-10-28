@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Cooling_Tower_Fan](#)
 # Cooling_Tower_Fan
 
+A fan that pulls air through a cooling tower and across the louvers where the water falls to aid in heat exchange by the process of evaporation
+
+
 **Display name:** Cooling Tower Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Cooling_Tower_Fan;1
 

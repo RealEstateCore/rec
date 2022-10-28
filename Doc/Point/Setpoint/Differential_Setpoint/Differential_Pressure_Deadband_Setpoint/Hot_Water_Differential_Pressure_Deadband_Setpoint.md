@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Differential_Setpoint](../Differential_Setpoint.md) > [Differential_Pressure_Deadband_Setpoint](Differential_Pressure_Deadband_Setpoint.md) > [Hot_Water_Differential_Pressure_Deadband_Setpoint](#)
 # Hot_Water_Differential_Pressure_Deadband_Setpoint
 
+Sets the size of a deadband of differential pressure of hot water
+
+
 **Display name:** Hot Water Differential Pressure Deadband Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Hot_Water_Differential_Pressure_Deadband_Setpoint;1
 

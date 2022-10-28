@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Position_Sensor](Position_Sensor.md) > [Sash_Position_Sensor](#)
 # Sash_Position_Sensor
 
+Measures the current position of a sash in terms of the percent of fully open
+
+
 **Display name:** Sash Position Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Sash_Position_Sensor;1
 

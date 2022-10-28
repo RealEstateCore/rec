@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Tint_Command](#)
 # Tint_Command
 
+The target level of window tint.
+
+
 **Display name:** Tint Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Tint_Command;1
 

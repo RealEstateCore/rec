@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Asset](../../../../Asset.md) > [Equipment](../../../Equipment.md) > [HVAC_Equipment](../../HVAC_Equipment.md) > [Terminal_Unit](../Terminal_Unit.md) > [Radiator](#)
 # Radiator
 
+Heat exchangers designed to transfer thermal energy from one medium to another
+
+
 **Display name:** Radiator<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Radiator;1
 

@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Valve](../Valve.md) > [Water_Valve](Water_Valve.md) > [Makeup_Water_Valve](#)
 # Makeup_Water_Valve
 
+A valve regulating the flow of makeup water into a water holding tank, e.g. a cooling tower, hot water tank
+
+
 **Display name:** Makeup Water Valve<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Makeup_Water_Valve;1
 

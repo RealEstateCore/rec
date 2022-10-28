@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Voltage_Sensor](Voltage_Sensor.md) > [DC_Bus_Voltage_Sensor](#)
 # DC_Bus_Voltage_Sensor
 
+Measures the voltage across a DC bus
+
+
 **Display name:** DC Bus Voltage Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:DC_Bus_Voltage_Sensor;1
 

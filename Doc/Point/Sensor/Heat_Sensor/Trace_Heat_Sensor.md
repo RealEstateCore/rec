@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Heat_Sensor](Heat_Sensor.md) > [Trace_Heat_Sensor](#)
 # Trace_Heat_Sensor
 
+Measures the surface temperature of pipelines carrying temperature-sensitive products; typically used to avoid frosting/freezing
+
+
 **Display name:** Trace Heat Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Trace_Heat_Sensor;1
 

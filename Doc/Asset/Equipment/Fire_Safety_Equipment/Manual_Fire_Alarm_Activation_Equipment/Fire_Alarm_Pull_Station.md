@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Fire_Safety_Equipment](../Fire_Safety_Equipment.md) > [Manual_Fire_Alarm_Activation_Equipment](Manual_Fire_Alarm_Activation_Equipment.md) > [Fire_Alarm_Pull_Station](#)
 # Fire_Alarm_Pull_Station
 
+An active fire protection device (usually wall-mounted) that when activated initiates an alarm on a fire alarm system. In its simplest form the user activates the alarm by pulling the handle down.
+
+
 **Display name:** Fire Alarm Pull Station<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Fire_Alarm_Pull_Station;1
 

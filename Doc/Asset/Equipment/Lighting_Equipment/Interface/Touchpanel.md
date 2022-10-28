@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [Lighting_Equipment](../Lighting_Equipment.md) > [Interface](Interface.md) > [Touchpanel](#)
 # Touchpanel
 
+A switch used to operate all or part of a lighting installation that uses a touch-based mechanism (typically resistive or capacitive) rather than a mechanical actuator
+
+
 **Display name:** Touchpanel<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Touchpanel;1
 

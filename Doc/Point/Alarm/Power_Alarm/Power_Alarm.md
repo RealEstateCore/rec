@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Alarm](../Alarm.md) > [Power_Alarm](#)
 # Power_Alarm
 
+An alarm that indicates the off-normal conditions associated with electrical power.
+
+
 **Display name:** Power Alarm<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Power_Alarm;1
 

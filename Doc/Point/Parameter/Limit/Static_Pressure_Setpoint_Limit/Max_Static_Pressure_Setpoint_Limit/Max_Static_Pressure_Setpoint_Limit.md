@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Parameter](../../../Parameter.md) > [Limit](../../Limit.md) > [Static_Pressure_Setpoint_Limit](../Static_Pressure_Setpoint_Limit.md) > [Max_Static_Pressure_Setpoint_Limit](#)
 # Max_Static_Pressure_Setpoint_Limit
 
+A parameter that places an upper bound on the range of permitted values of a Static_Pressure_Setpoint.
+
+
 **Display name:** Max Static Pressure Setpoint Limit<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Max_Static_Pressure_Setpoint_Limit;1
 

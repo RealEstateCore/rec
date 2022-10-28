@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Electrical_Equipment](Electrical_Equipment.md) > [Bus_Riser](#)
 # Bus_Riser
 
+Bus Risers are commonly fed from a switchgear and rise up through a series of floors to the main power distribution source for each floor.
+
+
 **Display name:** Bus Riser<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Bus_Riser;1
 

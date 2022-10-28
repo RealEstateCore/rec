@@ -1,6 +1,9 @@
 [Index](../../index.md) > [Point](../Point.md) > [Command](Command.md) > [Preheat_Command](#)
 # Preheat_Command
 
+A command to activate preheating
+
+
 **Display name:** Preheat Command<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Preheat_Command;1
 

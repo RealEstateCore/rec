@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [HVAC_Equipment](../HVAC_Equipment.md) > [Fan](Fan.md) > [Standby_Fan](#)
 # Standby_Fan
 
+Fan that is activated as part of a lead/lag operation or when a primary fan raises an alarm
+
+
 **Display name:** Standby Fan<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Standby_Fan;1
 

@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Status](../Status.md) > [Speed_Status](Speed_Status.md) > [Speed_Mode_Status](#)
 # Speed_Mode_Status
 
+Status indicating the speed mode
+
+
 **Display name:** Speed Mode Status<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Speed_Mode_Status;1
 

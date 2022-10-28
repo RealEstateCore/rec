@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Electrical_Equipment](Electrical_Equipment.md) > [PlugStrip](#)
 # PlugStrip
 
+A device containing a block of electrical sockets allowing multiple electrical devices to be powered from a single electrical socket.
+
+
 **Display name:** PlugStrip<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:PlugStrip;1
 

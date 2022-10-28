@@ -1,6 +1,9 @@
 [Index](../../../../index.md) > [Point](../../../Point.md) > [Setpoint](../../Setpoint.md) > [Temperature_Setpoint](../Temperature_Setpoint.md) > [Water_Temperature_Setpoint](#)
 # Water_Temperature_Setpoint
 
+Sets temperature of water
+
+
 **Display name:** Water Temperature Setpoint<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Water_Temperature_Setpoint;1
 

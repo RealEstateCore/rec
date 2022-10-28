@@ -1,6 +1,9 @@
 [Index](../../../index.md) > [Point](../../Point.md) > [Sensor](../Sensor.md) > [Position_Sensor](Position_Sensor.md) > [Valve_Position_Sensor](#)
 # Valve_Position_Sensor
 
+Measures the current position of a valve in terms of the percent of fully open
+
+
 **Display name:** Valve Position Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Valve_Position_Sensor;1
 

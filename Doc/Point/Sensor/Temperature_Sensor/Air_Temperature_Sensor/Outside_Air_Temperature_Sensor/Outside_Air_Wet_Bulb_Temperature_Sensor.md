@@ -1,6 +1,9 @@
 [Index](../../../../../index.md) > [Point](../../../../Point.md) > [Sensor](../../../Sensor.md) > [Temperature_Sensor](../../Temperature_Sensor.md) > [Air_Temperature_Sensor](../Air_Temperature_Sensor.md) > [Outside_Air_Temperature_Sensor](Outside_Air_Temperature_Sensor.md) > [Outside_Air_Wet_Bulb_Temperature_Sensor](#)
 # Outside_Air_Wet_Bulb_Temperature_Sensor
 
+A sensor measuring the wet-bulb temperature of outside air
+
+
 **Display name:** Outside Air Wet Bulb Temperature Sensor<br />
 **DTMI:** dtmi:org:brickschema:schema:Brick:Outside_Air_Wet_Bulb_Temperature_Sensor;1
 
