@@ -11,9 +11,9 @@ Sets discharge air flow
 
 ## Child interfaces
 * [Discharge_Air_Flow_Demand_Setpoint](Discharge_Air_Flow_Demand_Setpoint.md)
-* [Cooling_Discharge_Air_Flow_Setpoint](Cooling_Discharge_Air_Flow_Setpoint/Cooling_Discharge_Air_Flow_Setpoint.md)
 * [Heating_Discharge_Air_Flow_Setpoint](Heating_Discharge_Air_Flow_Setpoint/Heating_Discharge_Air_Flow_Setpoint.md)
 * [Occupied_Discharge_Air_Flow_Setpoint](Occupied_Discharge_Air_Flow_Setpoint/Occupied_Discharge_Air_Flow_Setpoint.md)
+* [Cooling_Discharge_Air_Flow_Setpoint](Cooling_Discharge_Air_Flow_Setpoint/Cooling_Discharge_Air_Flow_Setpoint.md)
 * [Unoccupied_Discharge_Air_Flow_Setpoint](Unoccupied_Discharge_Air_Flow_Setpoint/Unoccupied_Discharge_Air_Flow_Setpoint.md)
 
 ---
@@ -37,8 +37,8 @@ Sets discharge air flow
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

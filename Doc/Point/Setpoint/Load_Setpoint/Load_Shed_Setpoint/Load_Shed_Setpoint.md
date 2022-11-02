@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [Entering_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Setpoint](Entering_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Setpoint.md)
 * [Leaving_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Setpoint](Leaving_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Setpoint.md)
+* [Entering_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Setpoint](Entering_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Setpoint.md)
 * [Load_Shed_Differential_Pressure_Setpoint](Load_Shed_Differential_Pressure_Setpoint/Load_Shed_Differential_Pressure_Setpoint.md)
 
 ---
@@ -32,8 +32,8 @@
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

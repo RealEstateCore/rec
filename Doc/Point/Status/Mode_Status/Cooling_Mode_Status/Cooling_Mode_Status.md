@@ -10,8 +10,8 @@ Indicates whether a system, device or control loop is in a cooling mode
 ---
 
 ## Child interfaces
-* [Occupied_Cooling_Mode_Status](../Occupied_Mode_Status/Occupied_Cooling_Mode_Status.md)
 * [Unoccupied_Cooling_Mode_Status](../Unoccupied_Mode_Status/Unoccupied_Cooling_Mode_Status.md)
+* [Occupied_Cooling_Mode_Status](../Occupied_Mode_Status/Occupied_Cooling_Mode_Status.md)
 
 ---
 
@@ -34,8 +34,8 @@ Indicates whether a system, device or control loop is in a cooling mode
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

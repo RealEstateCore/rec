@@ -10,8 +10,8 @@ An alarm that indicates the off-normal conditions associated with pressure.
 ---
 
 ## Child interfaces
-* [High_Head_Pressure_Alarm](High_Head_Pressure_Alarm.md)
 * [Low_Suction_Pressure_Alarm](Low_Suction_Pressure_Alarm.md)
+* [High_Head_Pressure_Alarm](High_Head_Pressure_Alarm.md)
 
 ---
 
@@ -34,8 +34,8 @@ An alarm that indicates the off-normal conditions associated with pressure.
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

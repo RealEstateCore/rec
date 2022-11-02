@@ -8,9 +8,9 @@
 
 ## Child interfaces
 * [AlarmObject](AlarmObject.md)
-* [ErrorReport](ErrorReport.md)
 * [NotificationObject](NotificationObject.md)
 * [WorkOrder](WorkOrder.md)
+* [ErrorReport](ErrorReport.md)
 
 ---
 

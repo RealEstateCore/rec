@@ -10,14 +10,14 @@ Sets static pressure
 ---
 
 ## Child interfaces
-* [Building_Air_Static_Pressure_Setpoint](Building_Air_Static_Pressure_Setpoint.md)
 * [Chilled_Water_Static_Pressure_Setpoint](Chilled_Water_Static_Pressure_Setpoint.md)
 * [Exhaust_Air_Static_Pressure_Setpoint](Exhaust_Air_Static_Pressure_Setpoint.md)
-* [Hot_Water_Static_Pressure_Setpoint](Hot_Water_Static_Pressure_Setpoint.md)
+* [Building_Air_Static_Pressure_Setpoint](Building_Air_Static_Pressure_Setpoint.md)
 * [Underfloor_Air_Plenum_Static_Pressure_Setpoint](Underfloor_Air_Plenum_Static_Pressure_Setpoint.md)
+* [Hot_Water_Static_Pressure_Setpoint](Hot_Water_Static_Pressure_Setpoint.md)
+* [Supply_Air_Static_Pressure_Setpoint](Supply_Air_Static_Pressure_Setpoint/Supply_Air_Static_Pressure_Setpoint.md)
 * [Discharge_Air_Static_Pressure_Setpoint](Discharge_Air_Static_Pressure_Setpoint/Discharge_Air_Static_Pressure_Setpoint.md)
 * [Static_Pressure_Deadband_Setpoint](Static_Pressure_Deadband_Setpoint/Static_Pressure_Deadband_Setpoint.md)
-* [Supply_Air_Static_Pressure_Setpoint](Supply_Air_Static_Pressure_Setpoint/Supply_Air_Static_Pressure_Setpoint.md)
 
 ---
 
@@ -40,8 +40,8 @@ Sets static pressure
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

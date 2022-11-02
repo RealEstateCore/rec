@@ -7,10 +7,10 @@
 ---
 
 ## Child interfaces
-* [Chilled_Water_Differential_Pressure_Proportional_Band_Parameter](Chilled_Water_Differential_Pressure_Proportional_Band_Parameter.md)
-* [Entering_Water_Differential_Pressure_Proportional_Band_Parameter](Entering_Water_Differential_Pressure_Proportional_Band_Parameter.md)
 * [Hot_Water_Differential_Pressure_Proportional_Band_Parameter](Hot_Water_Differential_Pressure_Proportional_Band_Parameter.md)
+* [Entering_Water_Differential_Pressure_Proportional_Band_Parameter](Entering_Water_Differential_Pressure_Proportional_Band_Parameter.md)
 * [Leaving_Water_Differential_Pressure_Proportional_Band_Parameter](Leaving_Water_Differential_Pressure_Proportional_Band_Parameter.md)
+* [Chilled_Water_Differential_Pressure_Proportional_Band_Parameter](Chilled_Water_Differential_Pressure_Proportional_Band_Parameter.md)
 
 ---
 
@@ -33,8 +33,8 @@
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

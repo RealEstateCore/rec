@@ -10,8 +10,8 @@
 * [CoffeeTable](CoffeeTable.md)
 * [ConferenceTable](ConferenceTable.md)
 * [EndTable](EndTable.md)
-* [FoldingTable](FoldingTable.md)
 * [ReceptionTable](ReceptionTable.md)
+* [FoldingTable](FoldingTable.md)
 
 ---
 

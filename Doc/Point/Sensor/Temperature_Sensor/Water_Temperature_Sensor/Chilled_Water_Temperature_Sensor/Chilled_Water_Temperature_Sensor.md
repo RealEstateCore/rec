@@ -10,9 +10,9 @@ Measures the temperature of chilled water
 ---
 
 ## Child interfaces
-* [Chilled_Water_Differential_Temperature_Sensor](../Water_Differential_Temperature_Sensor/Chilled_Water_Differential_Temperature_Sensor.md)
-* [Differential_Entering_Leaving_Water_Temperature_Sensor](Differential_Entering_Leaving_Water_Temperature_Sensor.md)
 * [Entering_Chilled_Water_Temperature_Sensor](Entering_Chilled_Water_Temperature_Sensor.md)
+* [Differential_Entering_Leaving_Water_Temperature_Sensor](Differential_Entering_Leaving_Water_Temperature_Sensor.md)
+* [Chilled_Water_Differential_Temperature_Sensor](../Water_Differential_Temperature_Sensor/Chilled_Water_Differential_Temperature_Sensor.md)
 * [Leaving_Chilled_Water_Temperature_Sensor](Leaving_Chilled_Water_Temperature_Sensor.md)
 
 ---
@@ -36,8 +36,8 @@ Measures the temperature of chilled water
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

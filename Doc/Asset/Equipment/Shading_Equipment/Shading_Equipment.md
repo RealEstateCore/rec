@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [Automatic_Tint_Window](Automatic_Tint_Window.md)
 * [Blind](Blind.md)
+* [Automatic_Tint_Window](Automatic_Tint_Window.md)
 
 ---
 

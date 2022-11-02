@@ -11,8 +11,8 @@ An event emanating from or targeting a Point; e.g., an individual Observation fr
 
 ## Child interfaces
 * [ActuationEvent](ActuationEvent.md)
-* [ExceptionEvent](ExceptionEvent.md)
 * [ObservationEvent](ObservationEvent.md)
+* [ExceptionEvent](ExceptionEvent.md)
 
 ---
 

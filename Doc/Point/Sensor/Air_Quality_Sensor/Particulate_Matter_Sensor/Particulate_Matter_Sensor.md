@@ -10,10 +10,10 @@ Detects pollutants in the ambient air
 ---
 
 ## Child interfaces
+* [TVOC_Sensor](TVOC_Sensor/TVOC_Sensor.md)
+* [PM25_Sensor](PM25_Sensor/PM25_Sensor.md)
 * [PM10_Sensor](PM10_Sensor/PM10_Sensor.md)
 * [PM1_Sensor](PM1_Sensor/PM1_Sensor.md)
-* [PM25_Sensor](PM25_Sensor/PM25_Sensor.md)
-* [TVOC_Sensor](TVOC_Sensor/TVOC_Sensor.md)
 
 ---
 
@@ -36,8 +36,8 @@ Detects pollutants in the ambient air
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

@@ -10,9 +10,9 @@ Controls the operating mode of a device or controller
 ---
 
 ## Child interfaces
-* [Automatic_Mode_Command](Automatic_Mode_Command.md)
 * [Box_Mode_Command](Box_Mode_Command.md)
 * [Maintenance_Mode_Command](Maintenance_Mode_Command.md)
+* [Automatic_Mode_Command](Automatic_Mode_Command.md)
 
 ---
 
@@ -35,8 +35,8 @@ Controls the operating mode of a device or controller
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

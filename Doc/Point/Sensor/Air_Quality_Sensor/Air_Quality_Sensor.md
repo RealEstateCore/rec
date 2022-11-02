@@ -10,15 +10,15 @@ A sensor which provides a measure of air quality
 ---
 
 ## Child interfaces
-* [Ammonia_Sensor](Ammonia_Sensor.md)
-* [Formaldehyde_Level_Sensor](Formaldehyde_Level_Sensor.md)
-* [Methane_Level_Sensor](Methane_Level_Sensor.md)
-* [NO2_Level_Sensor](NO2_Level_Sensor.md)
 * [Ozone_Level_Sensor](Ozone_Level_Sensor.md)
-* [CO2_Sensor](CO2_Sensor/CO2_Sensor.md)
+* [NO2_Level_Sensor](NO2_Level_Sensor.md)
+* [Ammonia_Sensor](Ammonia_Sensor.md)
+* [Methane_Level_Sensor](Methane_Level_Sensor.md)
+* [Formaldehyde_Level_Sensor](Formaldehyde_Level_Sensor.md)
+* [Radioactivity_Concentration_Sensor](Radioactivity_Concentration_Sensor/Radioactivity_Concentration_Sensor.md)
 * [CO_Sensor](CO_Sensor/CO_Sensor.md)
 * [Particulate_Matter_Sensor](Particulate_Matter_Sensor/Particulate_Matter_Sensor.md)
-* [Radioactivity_Concentration_Sensor](Radioactivity_Concentration_Sensor/Radioactivity_Concentration_Sensor.md)
+* [CO2_Sensor](CO2_Sensor/CO2_Sensor.md)
 
 ---
 
@@ -43,8 +43,8 @@ A sensor which provides a measure of air quality
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

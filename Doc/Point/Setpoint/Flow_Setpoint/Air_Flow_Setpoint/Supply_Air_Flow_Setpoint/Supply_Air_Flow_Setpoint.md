@@ -11,10 +11,10 @@ Sets supply air flow rate
 
 ## Child interfaces
 * [Supply_Air_Flow_Demand_Setpoint](Supply_Air_Flow_Demand_Setpoint.md)
-* [Cooling_Supply_Air_Flow_Setpoint](Cooling_Supply_Air_Flow_Setpoint/Cooling_Supply_Air_Flow_Setpoint.md)
-* [Heating_Supply_Air_Flow_Setpoint](Heating_Supply_Air_Flow_Setpoint/Heating_Supply_Air_Flow_Setpoint.md)
 * [Occupied_Supply_Air_Flow_Setpoint](Occupied_Supply_Air_Flow_Setpoint/Occupied_Supply_Air_Flow_Setpoint.md)
+* [Cooling_Supply_Air_Flow_Setpoint](Cooling_Supply_Air_Flow_Setpoint/Cooling_Supply_Air_Flow_Setpoint.md)
 * [Unoccupied_Supply_Air_Flow_Setpoint](Unoccupied_Supply_Air_Flow_Setpoint/Unoccupied_Supply_Air_Flow_Setpoint.md)
+* [Heating_Supply_Air_Flow_Setpoint](Heating_Supply_Air_Flow_Setpoint/Heating_Supply_Air_Flow_Setpoint.md)
 
 ---
 
@@ -37,8 +37,8 @@ Sets supply air flow rate
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

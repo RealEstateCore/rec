@@ -29,7 +29,7 @@
 
 ## Target Of
 ### Direct
-* [Asset](../../Asset/Asset.md).documentation
-* [BuildingElement](../../BuildingElement/BuildingElement.md).documentation
 * [Collection](../../Collection/Collection.md).documentation
+* [BuildingElement](../../BuildingElement/BuildingElement.md).documentation
+* [Asset](../../Asset/Asset.md).documentation
 * [Architecture](../../Space/Architecture/Architecture.md).documentation

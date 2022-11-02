@@ -10,9 +10,9 @@ A pump that performs work on water
 ---
 
 ## Child interfaces
+* [Hot_Water_Pump](Hot_Water_Pump.md)
 * [Chilled_Water_Pump](Chilled_Water_Pump.md)
 * [Condenser_Water_Pump](Condenser_Water_Pump.md)
-* [Hot_Water_Pump](Hot_Water_Pump.md)
 
 ---
 

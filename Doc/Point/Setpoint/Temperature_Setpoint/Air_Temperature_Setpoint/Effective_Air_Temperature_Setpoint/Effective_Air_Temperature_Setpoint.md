@@ -7,13 +7,13 @@
 ---
 
 ## Child interfaces
-* [Effective_Discharge_Air_Temperature_Setpoint](Effective_Discharge_Air_Temperature_Setpoint.md)
-* [Effective_Air_Temperature_Cooling_Setpoint](Effective_Air_Temperature_Cooling_Setpoint.md)
-* [Effective_Air_Temperature_Heating_Setpoint](Effective_Air_Temperature_Heating_Setpoint.md)
-* [Effective_Return_Air_Temperature_Setpoint](../Return_Air_Temperature_Setpoint/Effective_Return_Air_Temperature_Setpoint.md)
-* [Effective_Room_Air_Temperature_Setpoint](../Room_Air_Temperature_Setpoint/Effective_Room_Air_Temperature_Setpoint.md)
-* [Effective_Supply_Air_Temperature_Setpoint](../Supply_Air_Temperature_Setpoint/Effective_Supply_Air_Temperature_Setpoint.md)
 * [Effective_Zone_Air_Temperature_Setpoint](../Zone_Air_Temperature_Setpoint/Effective_Zone_Air_Temperature_Setpoint.md)
+* [Effective_Air_Temperature_Cooling_Setpoint](Effective_Air_Temperature_Cooling_Setpoint.md)
+* [Effective_Supply_Air_Temperature_Setpoint](../Supply_Air_Temperature_Setpoint/Effective_Supply_Air_Temperature_Setpoint.md)
+* [Effective_Room_Air_Temperature_Setpoint](../Room_Air_Temperature_Setpoint/Effective_Room_Air_Temperature_Setpoint.md)
+* [Effective_Return_Air_Temperature_Setpoint](../Return_Air_Temperature_Setpoint/Effective_Return_Air_Temperature_Setpoint.md)
+* [Effective_Air_Temperature_Heating_Setpoint](Effective_Air_Temperature_Heating_Setpoint.md)
+* [Effective_Discharge_Air_Temperature_Setpoint](Effective_Discharge_Air_Temperature_Setpoint.md)
 
 ---
 
@@ -36,8 +36,8 @@
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

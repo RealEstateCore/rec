@@ -10,8 +10,8 @@ Measures the voltage of an electrical device or object
 ---
 
 ## Child interfaces
-* [Battery_Voltage_Sensor](Battery_Voltage_Sensor.md)
 * [DC_Bus_Voltage_Sensor](DC_Bus_Voltage_Sensor.md)
+* [Battery_Voltage_Sensor](Battery_Voltage_Sensor.md)
 * [Output_Voltage_Sensor](Output_Voltage_Sensor.md)
 
 ---
@@ -37,8 +37,8 @@ Measures the voltage of an electrical device or object
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

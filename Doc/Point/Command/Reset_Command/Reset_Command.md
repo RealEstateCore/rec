@@ -10,8 +10,8 @@ Commands that reset a flag, property or value to its default
 ---
 
 ## Child interfaces
-* [Fault_Reset_Command](Fault_Reset_Command.md)
 * [Filter_Reset_Command](Filter_Reset_Command.md)
+* [Fault_Reset_Command](Fault_Reset_Command.md)
 * [Speed_Reset_Command](Speed_Reset_Command.md)
 
 ---
@@ -35,8 +35,8 @@ Commands that reset a flag, property or value to its default
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

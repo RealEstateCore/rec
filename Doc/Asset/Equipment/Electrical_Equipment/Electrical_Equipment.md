@@ -7,14 +7,14 @@
 ---
 
 ## Child interfaces
-* [Breaker_Panel](Breaker_Panel.md)
-* [Bus_Riser](Bus_Riser.md)
-* [Disconnect_Switch](Disconnect_Switch.md)
-* [Inverter](Inverter.md)
 * [Motor_Control_Center](Motor_Control_Center.md)
 * [PlugStrip](PlugStrip.md)
 * [Switchgear](Switchgear.md)
 * [Transformer](Transformer.md)
+* [Bus_Riser](Bus_Riser.md)
+* [Breaker_Panel](Breaker_Panel.md)
+* [Inverter](Inverter.md)
+* [Disconnect_Switch](Disconnect_Switch.md)
 * [Energy_Storage](Energy_Storage/Energy_Storage.md)
 
 ---

@@ -11,10 +11,10 @@ A meter that measures usage or consumption of some media for a whole building
 
 ## Child interfaces
 * [Building_Electrical_Meter](../Electrical_Meter/Building_Electrical_Meter.md)
-* [Building_Gas_Meter](../Gas_Meter/Building_Gas_Meter.md)
 * [Building_Water_Meter](../Water_Meter/Building_Water_Meter.md)
-* [Building_Chilled_Water_Meter](../Water_Meter/Chilled_Water_Meter/Building_Chilled_Water_Meter.md)
+* [Building_Gas_Meter](../Gas_Meter/Building_Gas_Meter.md)
 * [Building_Hot_Water_Meter](../Water_Meter/Hot_Water_Meter/Building_Hot_Water_Meter.md)
+* [Building_Chilled_Water_Meter](../Water_Meter/Chilled_Water_Meter/Building_Chilled_Water_Meter.md)
 
 ---
 

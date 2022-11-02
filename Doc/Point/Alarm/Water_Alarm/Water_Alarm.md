@@ -10,9 +10,9 @@ Alarm that indicates an undesirable event with a pipe, container, or equipment c
 ---
 
 ## Child interfaces
-* [Deionized_Water_Alarm](Deionized_Water_Alarm.md)
 * [No_Water_Alarm](No_Water_Alarm.md)
 * [Water_Loss_Alarm](Water_Loss_Alarm.md)
+* [Deionized_Water_Alarm](Deionized_Water_Alarm.md)
 * [Water_Temperature_Alarm](Water_Temperature_Alarm/Water_Temperature_Alarm.md)
 * [Water_Level_Alarm](Water_Level_Alarm/Water_Level_Alarm.md)
 
@@ -37,8 +37,8 @@ Alarm that indicates an undesirable event with a pipe, container, or equipment c
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

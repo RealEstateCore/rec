@@ -11,10 +11,10 @@ A parameter that places a lower bound on the range of permitted values of a Air_
 
 ## Child interfaces
 * [Min_Outside_Air_Flow_Setpoint_Limit](Min_Outside_Air_Flow_Setpoint_Limit.md)
-* [Min_Cooling_Discharge_Air_Flow_Setpoint_Limit](Min_Cooling_Discharge_Air_Flow_Setpoint_Limit/Min_Cooling_Discharge_Air_Flow_Setpoint_Limit.md)
-* [Min_Cooling_Supply_Air_Flow_Setpoint_Limit](Min_Cooling_Supply_Air_Flow_Setpoint_Limit/Min_Cooling_Supply_Air_Flow_Setpoint_Limit.md)
-* [Min_Heating_Discharge_Air_Flow_Setpoint_Limit](Min_Heating_Discharge_Air_Flow_Setpoint_Limit/Min_Heating_Discharge_Air_Flow_Setpoint_Limit.md)
 * [Min_Heating_Supply_Air_Flow_Setpoint_Limit](Min_Heating_Supply_Air_Flow_Setpoint_Limit/Min_Heating_Supply_Air_Flow_Setpoint_Limit.md)
+* [Min_Heating_Discharge_Air_Flow_Setpoint_Limit](Min_Heating_Discharge_Air_Flow_Setpoint_Limit/Min_Heating_Discharge_Air_Flow_Setpoint_Limit.md)
+* [Min_Cooling_Supply_Air_Flow_Setpoint_Limit](Min_Cooling_Supply_Air_Flow_Setpoint_Limit/Min_Cooling_Supply_Air_Flow_Setpoint_Limit.md)
+* [Min_Cooling_Discharge_Air_Flow_Setpoint_Limit](Min_Cooling_Discharge_Air_Flow_Setpoint_Limit/Min_Cooling_Discharge_Air_Flow_Setpoint_Limit.md)
 
 ---
 
@@ -37,8 +37,8 @@ A parameter that places a lower bound on the range of permitted values of a Air_
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

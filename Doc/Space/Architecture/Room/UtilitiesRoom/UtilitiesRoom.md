@@ -7,11 +7,11 @@
 ---
 
 ## Child interfaces
-* [Cabinet](Cabinet.md)
-* [ClimateControlRoom](ClimateControlRoom.md)
-* [DataServerRoom](DataServerRoom.md)
 * [ElectricityRoom](ElectricityRoom.md)
+* [DataServerRoom](DataServerRoom.md)
+* [Cabinet](Cabinet.md)
 * [SprinklerRoom](SprinklerRoom.md)
+* [ClimateControlRoom](ClimateControlRoom.md)
 * [CableRoom](CableRoom/CableRoom.md)
 
 ---
@@ -41,11 +41,11 @@
 
 ## Target Of
 ### Inherited
-* [Asset](../../../../Asset/Asset.md).locatedIn
 * [BuildingElement](../../../../BuildingElement/BuildingElement.md).locatedIn
-* [Apartment](../../../../Collection/Apartment.md).includes
-* [Campus](../../../../Collection/Campus.md).includes
-* [Premises](../../../../Collection/Premises.md).includes
-* [RealEstate](../../../../Collection/RealEstate.md).includes
+* [Asset](../../../../Asset/Asset.md).locatedIn
 * [Space](../../../Space.md).hasPart
 * [Space](../../../Space.md).isPartOf
+* [Apartment](../../../../Collection/Apartment.md).includes
+* [RealEstate](../../../../Collection/RealEstate.md).includes
+* [Campus](../../../../Collection/Campus.md).includes
+* [Premises](../../../../Collection/Premises.md).includes

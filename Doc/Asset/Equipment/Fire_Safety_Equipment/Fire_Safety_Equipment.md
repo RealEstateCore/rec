@@ -7,11 +7,11 @@
 ---
 
 ## Child interfaces
-* [Fire_Alarm](Fire_Alarm.md)
-* [Fire_Alarm_Control_Panel](Fire_Alarm_Control_Panel.md)
-* [Fire_Control_Panel](Fire_Control_Panel.md)
-* [Heat_Detector](Heat_Detector.md)
 * [Smoke_Detector](Smoke_Detector.md)
+* [Fire_Alarm](Fire_Alarm.md)
+* [Heat_Detector](Heat_Detector.md)
+* [Fire_Control_Panel](Fire_Control_Panel.md)
+* [Fire_Alarm_Control_Panel](Fire_Alarm_Control_Panel.md)
 * [Manual_Fire_Alarm_Activation_Equipment](Manual_Fire_Alarm_Activation_Equipment/Manual_Fire_Alarm_Activation_Equipment.md)
 
 ---

@@ -7,12 +7,12 @@
 ---
 
 ## Child interfaces
-* [Entering_Water_Temperature_Proportional_Band_Parameter](Entering_Water_Temperature_Proportional_Band_Parameter.md)
 * [Leaving_Water_Temperature_Proportional_Band_Parameter](Leaving_Water_Temperature_Proportional_Band_Parameter.md)
-* [Differential_Pressure_Proportional_Band](Differential_Pressure_Proportional_Band/Differential_Pressure_Proportional_Band.md)
+* [Entering_Water_Temperature_Proportional_Band_Parameter](Entering_Water_Temperature_Proportional_Band_Parameter.md)
 * [Discharge_Air_Temperature_Proportional_Band_Parameter](Discharge_Air_Temperature_Proportional_Band_Parameter/Discharge_Air_Temperature_Proportional_Band_Parameter.md)
-* [Exhaust_Air_Flow_Proportional_Band_Parameter](Exhaust_Air_Flow_Proportional_Band_Parameter/Exhaust_Air_Flow_Proportional_Band_Parameter.md)
 * [Static_Pressure_Proportional_Band_Parameter](Static_Pressure_Proportional_Band_Parameter/Static_Pressure_Proportional_Band_Parameter.md)
+* [Exhaust_Air_Flow_Proportional_Band_Parameter](Exhaust_Air_Flow_Proportional_Band_Parameter/Exhaust_Air_Flow_Proportional_Band_Parameter.md)
+* [Differential_Pressure_Proportional_Band](Differential_Pressure_Proportional_Band/Differential_Pressure_Proportional_Band.md)
 * [Supply_Air_Temperature_Proportional_Band_Parameter](Supply_Air_Temperature_Proportional_Band_Parameter/Supply_Air_Temperature_Proportional_Band_Parameter.md)
 
 ---
@@ -36,8 +36,8 @@
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

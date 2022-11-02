@@ -10,9 +10,9 @@ Measures the current position of a component in terms of a fraction of its full 
 ---
 
 ## Child interfaces
-* [Damper_Position_Sensor](Damper_Position_Sensor.md)
 * [Sash_Position_Sensor](Sash_Position_Sensor.md)
 * [Valve_Position_Sensor](Valve_Position_Sensor.md)
+* [Damper_Position_Sensor](Damper_Position_Sensor.md)
 
 ---
 
@@ -37,8 +37,8 @@ Measures the current position of a component in terms of a fraction of its full 
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

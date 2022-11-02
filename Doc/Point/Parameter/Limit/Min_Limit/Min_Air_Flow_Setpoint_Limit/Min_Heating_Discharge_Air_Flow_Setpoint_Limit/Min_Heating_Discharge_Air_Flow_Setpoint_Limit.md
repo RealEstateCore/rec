@@ -10,8 +10,8 @@ A parameter that places a lower bound on the range of permitted values of a Heat
 ---
 
 ## Child interfaces
-* [Min_Occupied_Heating_Discharge_Air_Flow_Setpoint_Limit](Min_Occupied_Heating_Discharge_Air_Flow_Setpoint_Limit.md)
 * [Min_Unoccupied_Heating_Discharge_Air_Flow_Setpoint_Limit](Min_Unoccupied_Heating_Discharge_Air_Flow_Setpoint_Limit.md)
+* [Min_Occupied_Heating_Discharge_Air_Flow_Setpoint_Limit](Min_Occupied_Heating_Discharge_Air_Flow_Setpoint_Limit.md)
 
 ---
 
@@ -34,8 +34,8 @@ A parameter that places a lower bound on the range of permitted values of a Heat
 ### Inherited
 * [Asset](../../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

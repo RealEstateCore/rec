@@ -10,8 +10,8 @@ A component of the HVAC the receives air from the air handling unit or room to d
 ---
 
 ## Child interfaces
-* [Discharge_Air_Plenum](Discharge_Air_Plenum.md)
 * [Return_Air_Plenum](Return_Air_Plenum.md)
+* [Discharge_Air_Plenum](Discharge_Air_Plenum.md)
 * [Supply_Air_Plenum](Supply_Air_Plenum/Supply_Air_Plenum.md)
 
 ---

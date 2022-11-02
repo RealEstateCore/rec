@@ -11,10 +11,10 @@ Sets temperature of zone air
 
 ## Child interfaces
 * [Effective_Zone_Air_Temperature_Setpoint](Effective_Zone_Air_Temperature_Setpoint.md)
-* [Occupied_Zone_Air_Temperature_Setpoint](Occupied_Zone_Air_Temperature_Setpoint.md)
 * [Unoccupied_Zone_Air_Temperature_Setpoint](Unoccupied_Zone_Air_Temperature_Setpoint.md)
 * [Zone_Air_Cooling_Temperature_Setpoint](Zone_Air_Cooling_Temperature_Setpoint.md)
 * [Zone_Air_Heating_Temperature_Setpoint](Zone_Air_Heating_Temperature_Setpoint.md)
+* [Occupied_Zone_Air_Temperature_Setpoint](Occupied_Zone_Air_Temperature_Setpoint.md)
 
 ---
 
@@ -37,8 +37,8 @@ Sets temperature of zone air
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

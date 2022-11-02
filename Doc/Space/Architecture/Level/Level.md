@@ -11,8 +11,8 @@ The level of a building, a.k.a. storey, floor, etc.
 
 ## Child interfaces
 * [BasementLevel](BasementLevel.md)
-* [MezzanineLevel](MezzanineLevel.md)
 * [RoofLevel](RoofLevel.md)
+* [MezzanineLevel](MezzanineLevel.md)
 
 ---
 
@@ -44,10 +44,10 @@ The level of a building, a.k.a. storey, floor, etc.
 
 ## Target Of
 ### Inherited
-* [Asset](../../../Asset/Asset.md).locatedIn
 * [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn
-* [Campus](../../../Collection/Campus.md).includes
-* [Premises](../../../Collection/Premises.md).includes
-* [RealEstate](../../../Collection/RealEstate.md).includes
+* [Asset](../../../Asset/Asset.md).locatedIn
 * [Space](../../Space.md).hasPart
 * [Space](../../Space.md).isPartOf
+* [RealEstate](../../../Collection/RealEstate.md).includes
+* [Campus](../../../Collection/Campus.md).includes
+* [Premises](../../../Collection/Premises.md).includes

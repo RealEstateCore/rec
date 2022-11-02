@@ -24,16 +24,13 @@
 
 ## Target Of
 ### Inherited
-* [Agent](../Agent.md).isMemberOf
 * [Asset](../../Asset/Asset.md).commissionedBy
 * [Asset](../../Asset/Asset.md).installedBy
 * [Asset](../../Asset/Asset.md).manufacturedBy
 * [Asset](../../Asset/Asset.md).servicedBy
+* [Agent](../Agent.md).isMemberOf
 * [Lease](../../Event/Lease.md).leasee
 * [Lease](../../Event/Lease.md).leasor
-* [Organization](Organization.md).hasMember
-* [Organization](Organization.md).hasPart
-* [Organization](Organization.md).isPartOf
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).acknowledgedBy
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).closedBy
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).createdBy
@@ -41,3 +38,6 @@
 * [Architecture](../../Space/Architecture/Architecture.md).constructedBy
 * [Architecture](../../Space/Architecture/Architecture.md).operatedBy
 * [Architecture](../../Space/Architecture/Architecture.md).ownedBy
+* [Organization](Organization.md).hasMember
+* [Organization](Organization.md).hasPart
+* [Organization](Organization.md).isPartOf

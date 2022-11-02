@@ -10,8 +10,8 @@ Measures the amount of instantaneous power consumed
 ---
 
 ## Child interfaces
-* [Electric_Power_Sensor](Electric_Power_Sensor/Electric_Power_Sensor.md)
 * [Thermal_Power_Sensor](Thermal_Power_Sensor/Thermal_Power_Sensor.md)
+* [Electric_Power_Sensor](Electric_Power_Sensor/Electric_Power_Sensor.md)
 
 ---
 
@@ -36,8 +36,8 @@ Measures the amount of instantaneous power consumed
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

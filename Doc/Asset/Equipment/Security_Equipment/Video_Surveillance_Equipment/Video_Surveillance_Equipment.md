@@ -7,9 +7,9 @@
 ---
 
 ## Child interfaces
-* [Network_Video_Recorder](Network_Video_Recorder.md)
-* [NVR](NVR.md)
 * [Surveillance_Camera](Surveillance_Camera.md)
+* [NVR](NVR.md)
+* [Network_Video_Recorder](Network_Video_Recorder.md)
 
 ---
 

@@ -10,10 +10,10 @@ Commands that disable functionality
 ---
 
 ## Child interfaces
-* [Disable_Differential_Enthalpy_Command](Disable_Differential_Enthalpy_Command.md)
-* [Disable_Differential_Temperature_Command](Disable_Differential_Temperature_Command.md)
-* [Disable_Fixed_Enthalpy_Command](Disable_Fixed_Enthalpy_Command.md)
 * [Disable_Fixed_Temperature_Command](Disable_Fixed_Temperature_Command.md)
+* [Disable_Differential_Enthalpy_Command](Disable_Differential_Enthalpy_Command.md)
+* [Disable_Fixed_Enthalpy_Command](Disable_Fixed_Enthalpy_Command.md)
+* [Disable_Differential_Temperature_Command](Disable_Differential_Temperature_Command.md)
 
 ---
 
@@ -36,8 +36,8 @@ Commands that disable functionality
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

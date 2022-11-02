@@ -10,10 +10,10 @@ A part that constitutes a piece of a building's structural makeup. E.g., Facade,
 ---
 
 ## Child interfaces
-* [Balcony](Balcony.md)
 * [Facade](Facade.md)
-* [Roof](Roof.md)
 * [Slab](Slab.md)
+* [Balcony](Balcony.md)
+* [Roof](Roof.md)
 * [Wall](Wall/Wall.md)
 
 ---
@@ -41,9 +41,9 @@ A part that constitutes a piece of a building's structural makeup. E.g., Facade,
 
 ## Target Of
 ### Direct
-* [Asset](../Asset/Asset.md).mountedOn
 * [BuildingElement](#).hasPart
 * [BuildingElement](#).isPartOf
+* [Asset](../Asset/Asset.md).mountedOn
 * [Architecture](../Space/Architecture/Architecture.md).adjacentElement
 * [Architecture](../Space/Architecture/Architecture.md).containsElement
 * [Architecture](../Space/Architecture/Architecture.md).intersectingElement

@@ -11,8 +11,8 @@ A parameter that places a lower or upper bound on the range of permitted values 
 
 ## Child interfaces
 * [High_Static_Pressure_Cutout_Setpoint_Limit](High_Static_Pressure_Cutout_Setpoint_Limit.md)
-* [Max_Static_Pressure_Setpoint_Limit](Max_Static_Pressure_Setpoint_Limit/Max_Static_Pressure_Setpoint_Limit.md)
 * [Min_Static_Pressure_Setpoint_Limit](Min_Static_Pressure_Setpoint_Limit/Min_Static_Pressure_Setpoint_Limit.md)
+* [Max_Static_Pressure_Setpoint_Limit](Max_Static_Pressure_Setpoint_Limit/Max_Static_Pressure_Setpoint_Limit.md)
 
 ---
 
@@ -35,8 +35,8 @@ A parameter that places a lower or upper bound on the range of permitted values 
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

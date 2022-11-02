@@ -10,15 +10,15 @@ Measures the temperature of air
 ---
 
 ## Child interfaces
-* [Exhaust_Air_Temperature_Sensor](Exhaust_Air_Temperature_Sensor.md)
 * [Mixed_Air_Temperature_Sensor](Mixed_Air_Temperature_Sensor.md)
-* [Return_Air_Temperature_Sensor](Return_Air_Temperature_Sensor.md)
+* [Exhaust_Air_Temperature_Sensor](Exhaust_Air_Temperature_Sensor.md)
 * [Underfloor_Air_Temperature_Sensor](Underfloor_Air_Temperature_Sensor.md)
-* [Air_Wet_Bulb_Temperature_Sensor](Air_Wet_Bulb_Temperature_Sensor/Air_Wet_Bulb_Temperature_Sensor.md)
-* [Discharge_Air_Temperature_Sensor](Discharge_Air_Temperature_Sensor/Discharge_Air_Temperature_Sensor.md)
+* [Return_Air_Temperature_Sensor](Return_Air_Temperature_Sensor.md)
+* [Zone_Air_Temperature_Sensor](Zone_Air_Temperature_Sensor/Zone_Air_Temperature_Sensor.md)
 * [Outside_Air_Temperature_Sensor](Outside_Air_Temperature_Sensor/Outside_Air_Temperature_Sensor.md)
 * [Supply_Air_Temperature_Sensor](Supply_Air_Temperature_Sensor/Supply_Air_Temperature_Sensor.md)
-* [Zone_Air_Temperature_Sensor](Zone_Air_Temperature_Sensor/Zone_Air_Temperature_Sensor.md)
+* [Air_Wet_Bulb_Temperature_Sensor](Air_Wet_Bulb_Temperature_Sensor/Air_Wet_Bulb_Temperature_Sensor.md)
+* [Discharge_Air_Temperature_Sensor](Discharge_Air_Temperature_Sensor/Discharge_Air_Temperature_Sensor.md)
 
 ---
 
@@ -41,8 +41,8 @@ Measures the temperature of air
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

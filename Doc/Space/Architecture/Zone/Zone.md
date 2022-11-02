@@ -10,11 +10,11 @@ A sub-zone within or outside of a building defined to support some technology an
 ---
 
 ## Child interfaces
+* [Workspace](Workspace.md)
 * [AccessControlZone](AccessControlZone.md)
+* [ParkingSpace](ParkingSpace.md)
 * [HVACZone](HVACZone.md)
 * [OccupancyZone](OccupancyZone.md)
-* [ParkingSpace](ParkingSpace.md)
-* [Workspace](Workspace.md)
 
 ---
 
@@ -43,10 +43,10 @@ A sub-zone within or outside of a building defined to support some technology an
 
 ## Target Of
 ### Inherited
-* [Asset](../../../Asset/Asset.md).locatedIn
 * [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn
-* [Campus](../../../Collection/Campus.md).includes
-* [Premises](../../../Collection/Premises.md).includes
-* [RealEstate](../../../Collection/RealEstate.md).includes
+* [Asset](../../../Asset/Asset.md).locatedIn
 * [Space](../../Space.md).hasPart
 * [Space](../../Space.md).isPartOf
+* [RealEstate](../../../Collection/RealEstate.md).includes
+* [Campus](../../../Collection/Campus.md).includes
+* [Premises](../../../Collection/Premises.md).includes

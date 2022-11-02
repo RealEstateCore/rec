@@ -10,9 +10,9 @@ Measure the amount of force acting on a unit area
 ---
 
 ## Child interfaces
+* [Velocity_Pressure_Sensor](Velocity_Pressure_Sensor/Velocity_Pressure_Sensor.md)
 * [Differential_Pressure_Sensor](Differential_Pressure_Sensor/Differential_Pressure_Sensor.md)
 * [Static_Pressure_Sensor](Static_Pressure_Sensor/Static_Pressure_Sensor.md)
-* [Velocity_Pressure_Sensor](Velocity_Pressure_Sensor/Velocity_Pressure_Sensor.md)
 
 ---
 
@@ -37,8 +37,8 @@ Measure the amount of force acting on a unit area
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

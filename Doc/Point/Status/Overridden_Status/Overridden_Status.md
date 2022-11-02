@@ -10,8 +10,8 @@ Indicates if the expected operating status of an equipment or control loop has b
 ---
 
 ## Child interfaces
-* [Overridden_Off_Status](Overridden_Off_Status.md)
 * [Overridden_On_Status](Overridden_On_Status.md)
+* [Overridden_Off_Status](Overridden_Off_Status.md)
 
 ---
 
@@ -34,8 +34,8 @@ Indicates if the expected operating status of an equipment or control loop has b
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

@@ -10,8 +10,8 @@ Measures the duration of a phenomenon or event
 ---
 
 ## Child interfaces
-* [On_Timer_Sensor](On_Timer_Sensor.md)
 * [Rain_Duration_Sensor](Rain_Duration_Sensor.md)
+* [On_Timer_Sensor](On_Timer_Sensor.md)
 * [Run_Time_Sensor](Run_Time_Sensor.md)
 
 ---
@@ -37,8 +37,8 @@ Measures the duration of a phenomenon or event
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

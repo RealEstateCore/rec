@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [PrinterStand](PrinterStand.md)
 * [TVStand](TVStand.md)
+* [PrinterStand](PrinterStand.md)
 
 ---
 

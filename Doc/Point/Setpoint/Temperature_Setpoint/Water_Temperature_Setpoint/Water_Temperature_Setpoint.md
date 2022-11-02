@@ -13,9 +13,9 @@ Sets temperature of water
 * [Max_Water_Temperature_Setpoint](Max_Water_Temperature_Setpoint.md)
 * [Min_Water_Temperature_Setpoint](Min_Water_Temperature_Setpoint.md)
 * [Chilled_Water_Temperature_Setpoint](Chilled_Water_Temperature_Setpoint/Chilled_Water_Temperature_Setpoint.md)
-* [Entering_Water_Temperature_Setpoint](Entering_Water_Temperature_Setpoint/Entering_Water_Temperature_Setpoint.md)
 * [Hot_Water_Temperature_Setpoint](Hot_Water_Temperature_Setpoint/Hot_Water_Temperature_Setpoint.md)
 * [Leaving_Water_Temperature_Setpoint](Leaving_Water_Temperature_Setpoint/Leaving_Water_Temperature_Setpoint.md)
+* [Entering_Water_Temperature_Setpoint](Entering_Water_Temperature_Setpoint/Entering_Water_Temperature_Setpoint.md)
 * [Domestic_Hot_Water_Temperature_Setpoint](Hot_Water_Temperature_Setpoint/Domestic_Hot_Water_Temperature_Setpoint/Domestic_Hot_Water_Temperature_Setpoint.md)
 
 ---
@@ -39,8 +39,8 @@ Sets temperature of water
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

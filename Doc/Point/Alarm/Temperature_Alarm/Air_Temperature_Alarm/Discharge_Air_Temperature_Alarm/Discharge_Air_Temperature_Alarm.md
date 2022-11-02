@@ -10,8 +10,8 @@ An alarm that indicates the off-normal conditions associated with the temperatur
 ---
 
 ## Child interfaces
-* [High_Discharge_Air_Temperature_Alarm](High_Discharge_Air_Temperature_Alarm.md)
 * [Low_Discharge_Air_Temperature_Alarm](Low_Discharge_Air_Temperature_Alarm.md)
+* [High_Discharge_Air_Temperature_Alarm](High_Discharge_Air_Temperature_Alarm.md)
 
 ---
 
@@ -34,8 +34,8 @@ An alarm that indicates the off-normal conditions associated with the temperatur
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

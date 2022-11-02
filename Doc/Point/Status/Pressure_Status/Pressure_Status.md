@@ -10,8 +10,8 @@ Indicates if pressure is within expected bounds
 ---
 
 ## Child interfaces
-* [Discharge_Air_Duct_Pressure_Status](Discharge_Air_Duct_Pressure_Status.md)
 * [Supply_Air_Duct_Pressure_Status](Supply_Air_Duct_Pressure_Status.md)
+* [Discharge_Air_Duct_Pressure_Status](Discharge_Air_Duct_Pressure_Status.md)
 * [Differential_Pressure_Load_Shed_Status](Differential_Pressure_Load_Shed_Status/Differential_Pressure_Load_Shed_Status.md)
 
 ---
@@ -35,8 +35,8 @@ Indicates if pressure is within expected bounds
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

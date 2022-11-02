@@ -10,8 +10,8 @@ An alarm that indicates the off-normal conditions associated with temperature of
 ---
 
 ## Child interfaces
-* [Entering_Water_Temperature_Alarm](Entering_Water_Temperature_Alarm.md)
 * [Leaving_Water_Temperature_Alarm](Leaving_Water_Temperature_Alarm.md)
+* [Entering_Water_Temperature_Alarm](Entering_Water_Temperature_Alarm.md)
 
 ---
 
@@ -34,8 +34,8 @@ An alarm that indicates the off-normal conditions associated with temperature of
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

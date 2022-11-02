@@ -10,10 +10,10 @@ A valve that modulates the flow of water
 ---
 
 ## Child interfaces
-* [Chilled_Water_Valve](Chilled_Water_Valve.md)
+* [Thermostatic_Mixing_Valve](Thermostatic_Mixing_Valve.md)
 * [Condenser_Water_Valve](Condenser_Water_Valve.md)
 * [Makeup_Water_Valve](Makeup_Water_Valve.md)
-* [Thermostatic_Mixing_Valve](Thermostatic_Mixing_Valve.md)
+* [Chilled_Water_Valve](Chilled_Water_Valve.md)
 * [Hot_Water_Valve](Hot_Water_Valve/Hot_Water_Valve.md)
 
 ---

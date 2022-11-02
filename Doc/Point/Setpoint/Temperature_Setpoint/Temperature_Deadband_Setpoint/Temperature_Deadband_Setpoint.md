@@ -15,8 +15,8 @@ Sets the size of a deadband of temperature
 * [Occupied_Heating_Temperature_Deadband_Setpoint](Occupied_Heating_Temperature_Deadband_Setpoint.md)
 * [Unoccupied_Heating_Temperature_Deadband_Setpoint](Unoccupied_Heating_Temperature_Deadband_Setpoint.md)
 * [Supply_Air_Temperature_Deadband_Setpoint](Supply_Air_Temperature_Deadband_Setpoint/Supply_Air_Temperature_Deadband_Setpoint.md)
-* [Entering_Water_Temperature_Deadband_Setpoint](../Water_Temperature_Setpoint/Entering_Water_Temperature_Setpoint/Entering_Water_Temperature_Deadband_Setpoint.md)
 * [Leaving_Water_Temperature_Deadband_Setpoint](../Water_Temperature_Setpoint/Leaving_Water_Temperature_Setpoint/Leaving_Water_Temperature_Deadband_Setpoint.md)
+* [Entering_Water_Temperature_Deadband_Setpoint](../Water_Temperature_Setpoint/Entering_Water_Temperature_Setpoint/Entering_Water_Temperature_Deadband_Setpoint.md)
 * [Discharge_Air_Temperature_Deadband_Setpoint](../Air_Temperature_Setpoint/Discharge_Air_Temperature_Setpoint/Discharge_Air_Temperature_Deadband_Setpoint/Discharge_Air_Temperature_Deadband_Setpoint.md)
 
 ---
@@ -40,8 +40,8 @@ Sets the size of a deadband of temperature
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

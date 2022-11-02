@@ -10,13 +10,13 @@ Measures the present state of absolute humidity relative to a maximum humidity g
 ---
 
 ## Child interfaces
-* [Discharge_Air_Humidity_Sensor](Discharge_Air_Humidity_Sensor.md)
-* [Exhaust_Air_Humidity_Sensor](Exhaust_Air_Humidity_Sensor.md)
-* [Mixed_Air_Humidity_Sensor](Mixed_Air_Humidity_Sensor.md)
-* [Outside_Air_Humidity_Sensor](Outside_Air_Humidity_Sensor.md)
-* [Return_Air_Humidity_Sensor](Return_Air_Humidity_Sensor.md)
 * [Supply_Air_Humidity_Sensor](Supply_Air_Humidity_Sensor.md)
+* [Discharge_Air_Humidity_Sensor](Discharge_Air_Humidity_Sensor.md)
+* [Mixed_Air_Humidity_Sensor](Mixed_Air_Humidity_Sensor.md)
 * [Zone_Air_Humidity_Sensor](Zone_Air_Humidity_Sensor.md)
+* [Return_Air_Humidity_Sensor](Return_Air_Humidity_Sensor.md)
+* [Outside_Air_Humidity_Sensor](Outside_Air_Humidity_Sensor.md)
+* [Exhaust_Air_Humidity_Sensor](Exhaust_Air_Humidity_Sensor.md)
 
 ---
 
@@ -39,8 +39,8 @@ Measures the present state of absolute humidity relative to a maximum humidity g
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

@@ -11,9 +11,9 @@ Measures properties of CO2 in air
 
 ## Child interfaces
 * [CO2_Differential_Sensor](CO2_Differential_Sensor.md)
-* [CO2_Level_Sensor](CO2_Level_Sensor.md)
-* [Outside_Air_CO2_Sensor](Outside_Air_CO2_Sensor.md)
 * [Return_Air_CO2_Sensor](Return_Air_CO2_Sensor.md)
+* [Outside_Air_CO2_Sensor](Outside_Air_CO2_Sensor.md)
+* [CO2_Level_Sensor](CO2_Level_Sensor.md)
 
 ---
 
@@ -36,8 +36,8 @@ Measures properties of CO2 in air
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

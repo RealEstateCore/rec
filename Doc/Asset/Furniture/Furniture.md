@@ -7,23 +7,23 @@
 ---
 
 ## Child interfaces
-* [Bed](Bed.md)
-* [Bookcase](Bookcase.md)
-* [BulletinBoard](BulletinBoard.md)
-* [CoatRack](CoatRack.md)
-* [FilingCabinet](FilingCabinet.md)
-* [FloorMat](FloorMat.md)
 * [Footrest](Footrest.md)
 * [Safe](Safe.md)
+* [FloorMat](FloorMat.md)
+* [WasteBasket](WasteBasket.md)
 * [Sofa](Sofa.md)
 * [StorageCabinet](StorageCabinet.md)
-* [WasteBasket](WasteBasket.md)
+* [Bookcase](Bookcase.md)
+* [FilingCabinet](FilingCabinet.md)
+* [BulletinBoard](BulletinBoard.md)
+* [Bed](Bed.md)
+* [CoatRack](CoatRack.md)
 * [Cart](Cart/Cart.md)
-* [Chair](Chair/Chair.md)
-* [Desk](Desk/Desk.md)
 * [Lamp](Lamp/Lamp.md)
-* [Stand](Stand/Stand.md)
 * [Table](Table/Table.md)
+* [Chair](Chair/Chair.md)
+* [Stand](Stand/Stand.md)
+* [Desk](Desk/Desk.md)
 
 ---
 

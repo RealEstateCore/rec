@@ -7,11 +7,11 @@
 ---
 
 ## Child interfaces
-* [ArchitectureArea](ArchitectureArea.md)
-* [ArchitectureCapacity](ArchitectureCapacity.md)
 * [Georeference](Georeference.md)
-* [PointOfInterest](PointOfInterest.md)
+* [ArchitectureArea](ArchitectureArea.md)
 * [PostalAddress](PostalAddress.md)
+* [PointOfInterest](PointOfInterest.md)
+* [ArchitectureCapacity](ArchitectureCapacity.md)
 * [Document](Document/Document.md)
 * [ServiceObject](ServiceObject/ServiceObject.md)
 
