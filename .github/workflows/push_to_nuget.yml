@@ -1,0 +1,38 @@
+name: Package and push ontology to nuget.org
+
+on:
+  workflow_dispatch:    
+  push:
+    branches: [ "main" ]
+    paths:
+      - "Metadata/*.nuspec"
+
+env: 
+  NUGET_FEED_URL: https://api.nuget.org/v3/index.json
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: 'Setup Nuget'
+        uses: nuget/setup-nuget@v1
+        with:
+          nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+          nuget-version: '5.x'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+      - name: Configure package generation directory
+        run: |
+          mkdir build
+          cp RealEstateCore*.jsonld build/
+          cp Metadata/*.nuspec build/
+      - name: 'Run nuget pack'
+        run: nuget pack build/*.nuspec -OutputDirectory build
+      - name: 'Publish to nuget.org'
+        run: nuget push build/*.nupkg -Source "${{ env.NUGET_FEED_URL }}" -SkipDuplicate
