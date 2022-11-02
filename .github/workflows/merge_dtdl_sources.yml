@@ -3,9 +3,10 @@ name: Merge DTDL sources
 on:
   workflow_dispatch:
   push:
-    branches: [ "feature-CI" ]
+    branches: 
+      - "feature-CI"
     paths:
-      - "Source"
+      - "/Source/DTDL**"
 
 jobs:
   build:
