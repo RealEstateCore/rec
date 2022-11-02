@@ -7,14 +7,14 @@
 ---
 
 ## Child interfaces
-* [AdmittingRoom](AdmittingRoom.md)
-* [Morgue](Morgue.md)
-* [NeonatalNursingRoom](NeonatalNursingRoom.md)
 * [OperatingRoom](OperatingRoom.md)
+* [NeonatalNursingRoom](NeonatalNursingRoom.md)
+* [AdmittingRoom](AdmittingRoom.md)
 * [OutpatientServicesRoom](OutpatientServicesRoom.md)
+* [Morgue](Morgue.md)
 * [PharmacyRoom](PharmacyRoom.md)
-* [RadiologyRoom](RadiologyRoom.md)
 * [TherapyRoom](TherapyRoom.md)
+* [RadiologyRoom](RadiologyRoom.md)
 
 ---
 
@@ -43,11 +43,11 @@
 
 ## Target Of
 ### Inherited
-* [Asset](../../../../Asset/Asset.md).locatedIn
 * [BuildingElement](../../../../BuildingElement/BuildingElement.md).locatedIn
-* [Apartment](../../../../Collection/Apartment.md).includes
-* [Campus](../../../../Collection/Campus.md).includes
-* [Premises](../../../../Collection/Premises.md).includes
-* [RealEstate](../../../../Collection/RealEstate.md).includes
+* [Asset](../../../../Asset/Asset.md).locatedIn
 * [Space](../../../Space.md).hasPart
 * [Space](../../../Space.md).isPartOf
+* [Apartment](../../../../Collection/Apartment.md).includes
+* [RealEstate](../../../../Collection/RealEstate.md).includes
+* [Campus](../../../../Collection/Campus.md).includes
+* [Premises](../../../../Collection/Premises.md).includes

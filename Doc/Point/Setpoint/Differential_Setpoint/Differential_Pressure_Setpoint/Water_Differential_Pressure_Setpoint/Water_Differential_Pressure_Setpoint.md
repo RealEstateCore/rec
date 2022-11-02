@@ -10,8 +10,8 @@ Sets the target water differential pressure between an upstream and downstream p
 ---
 
 ## Child interfaces
-* [Chilled_Water_Differential_Pressure_Setpoint](Chilled_Water_Differential_Pressure_Setpoint/Chilled_Water_Differential_Pressure_Setpoint.md)
 * [Hot_Water_Differential_Pressure_Setpoint](Hot_Water_Differential_Pressure_Setpoint/Hot_Water_Differential_Pressure_Setpoint.md)
+* [Chilled_Water_Differential_Pressure_Setpoint](Chilled_Water_Differential_Pressure_Setpoint/Chilled_Water_Differential_Pressure_Setpoint.md)
 
 ---
 
@@ -34,8 +34,8 @@ Sets the target water differential pressure between an upstream and downstream p
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

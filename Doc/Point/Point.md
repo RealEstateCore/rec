@@ -7,12 +7,12 @@
 ---
 
 ## Child interfaces
-* [Alarm](Alarm/Alarm.md)
 * [Command](Command/Command.md)
+* [Status](Status/Status.md)
+* [Setpoint](Setpoint/Setpoint.md)
 * [Parameter](Parameter/Parameter.md)
 * [Sensor](Sensor/Sensor.md)
-* [Setpoint](Setpoint/Setpoint.md)
-* [Status](Status/Status.md)
+* [Alarm](Alarm/Alarm.md)
 
 ---
 
@@ -41,8 +41,8 @@
 ### Direct
 * [Asset](../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../Event/PointEvent/ExceptionEvent.md).sourcePoint

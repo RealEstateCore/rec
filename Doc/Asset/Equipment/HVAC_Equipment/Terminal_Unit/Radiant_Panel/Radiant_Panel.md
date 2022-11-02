@@ -10,12 +10,12 @@ A temperature-controlled surface that provides fifty percent (50%) or more of th
 ---
 
 ## Child interfaces
-* [Embedded_Surface_System_Panel](Embedded_Surface_System_Panel.md)
-* [ESS_Panel](ESS_Panel.md)
 * [Radiant_Ceiling_Panel](Radiant_Ceiling_Panel.md)
-* [RC_Panel](RC_Panel.md)
 * [TABS_Panel](TABS_Panel.md)
 * [Thermally_Activated_Building_System_Panel](Thermally_Activated_Building_System_Panel.md)
+* [Embedded_Surface_System_Panel](Embedded_Surface_System_Panel.md)
+* [ESS_Panel](ESS_Panel.md)
+* [RC_Panel](RC_Panel.md)
 
 ---
 

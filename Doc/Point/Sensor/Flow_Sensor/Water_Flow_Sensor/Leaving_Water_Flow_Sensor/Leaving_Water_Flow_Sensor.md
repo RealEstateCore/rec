@@ -11,8 +11,8 @@ Measures the rate of flow of water that is leaving a piece of equipment or syste
 
 ## Child interfaces
 * [Leaving_Chilled_Water_Flow_Sensor](Leaving_Chilled_Water_Flow_Sensor.md)
-* [Leaving_Condenser_Water_Flow_Sensor](Leaving_Condenser_Water_Flow_Sensor.md)
 * [Leaving_Hot_Water_Flow_Sensor](Leaving_Hot_Water_Flow_Sensor.md)
+* [Leaving_Condenser_Water_Flow_Sensor](Leaving_Condenser_Water_Flow_Sensor.md)
 
 ---
 
@@ -35,8 +35,8 @@ Measures the rate of flow of water that is leaving a piece of equipment or syste
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

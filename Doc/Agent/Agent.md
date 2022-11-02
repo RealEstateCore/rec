@@ -41,7 +41,6 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 * [Asset](../Asset/Asset.md).servicedBy
 * [Lease](../Event/Lease.md).leasee
 * [Lease](../Event/Lease.md).leasor
-* [Organization](Organization/Organization.md).hasMember
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).acknowledgedBy
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).closedBy
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).createdBy
@@ -49,3 +48,4 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 * [Architecture](../Space/Architecture/Architecture.md).constructedBy
 * [Architecture](../Space/Architecture/Architecture.md).operatedBy
 * [Architecture](../Space/Architecture/Architecture.md).ownedBy
+* [Organization](Organization/Organization.md).hasMember

@@ -8,9 +8,9 @@
 
 ## Child interfaces
 * [Intrusion_Detection_Equipment](Intrusion_Detection_Equipment.md)
+* [Video_Surveillance_Equipment](Video_Surveillance_Equipment/Video_Surveillance_Equipment.md)
 * [Access_Control_Equipment](Access_Control_Equipment/Access_Control_Equipment.md)
 * [Intercom_Equipment](Intercom_Equipment/Intercom_Equipment.md)
-* [Video_Surveillance_Equipment](Video_Surveillance_Equipment/Video_Surveillance_Equipment.md)
 
 ---
 

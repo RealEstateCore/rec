@@ -10,8 +10,8 @@ Measures the difference between total pressure and static pressure
 ---
 
 ## Child interfaces
-* [Discharge_Air_Velocity_Pressure_Sensor](Discharge_Air_Velocity_Pressure_Sensor.md)
 * [Exhaust_Air_Velocity_Pressure_Sensor](Exhaust_Air_Velocity_Pressure_Sensor.md)
+* [Discharge_Air_Velocity_Pressure_Sensor](Discharge_Air_Velocity_Pressure_Sensor.md)
 * [Supply_Air_Velocity_Pressure_Sensor](Supply_Air_Velocity_Pressure_Sensor.md)
 
 ---
@@ -35,8 +35,8 @@ Measures the difference between total pressure and static pressure
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

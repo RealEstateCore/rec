@@ -10,13 +10,13 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 ---
 
 ## Child interfaces
-* [OutdoorSpace](OutdoorSpace.md)
 * [Site](Site.md)
 * [SubBuilding](SubBuilding.md)
-* [Building](Building/Building.md)
+* [OutdoorSpace](OutdoorSpace.md)
 * [Level](Level/Level.md)
-* [Room](Room/Room.md)
+* [Building](Building/Building.md)
 * [Zone](Zone/Zone.md)
+* [Room](Room/Room.md)
 
 ---
 
@@ -61,9 +61,9 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 ## Target Of
 ### Direct
 * [BuildingElement](../../BuildingElement/BuildingElement.md).locatedIn
+* [RealEstate](../../Collection/RealEstate.md).includes
 * [Campus](../../Collection/Campus.md).includes
 * [Premises](../../Collection/Premises.md).includes
-* [RealEstate](../../Collection/RealEstate.md).includes
 ### Inherited
 * [Asset](../../Asset/Asset.md).locatedIn
 * [Space](../Space.md).hasPart

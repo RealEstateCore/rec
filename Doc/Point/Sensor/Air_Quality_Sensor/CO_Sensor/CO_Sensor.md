@@ -10,10 +10,10 @@ Measures properties of CO
 ---
 
 ## Child interfaces
+* [Return_Air_CO_Sensor](Return_Air_CO_Sensor.md)
+* [Outside_Air_CO_Sensor](Outside_Air_CO_Sensor.md)
 * [CO_Differential_Sensor](CO_Differential_Sensor.md)
 * [CO_Level_Sensor](CO_Level_Sensor.md)
-* [Outside_Air_CO_Sensor](Outside_Air_CO_Sensor.md)
-* [Return_Air_CO_Sensor](Return_Air_CO_Sensor.md)
 
 ---
 
@@ -36,8 +36,8 @@ Measures properties of CO
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

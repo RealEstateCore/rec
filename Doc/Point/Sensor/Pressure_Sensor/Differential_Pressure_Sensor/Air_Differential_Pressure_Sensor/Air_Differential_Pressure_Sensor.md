@@ -10,8 +10,8 @@ Measures the difference in pressure between two regions of air
 ---
 
 ## Child interfaces
-* [Discharge_Air_Differential_Pressure_Sensor](Discharge_Air_Differential_Pressure_Sensor.md)
 * [Exhaust_Air_Differential_Pressure_Sensor](Exhaust_Air_Differential_Pressure_Sensor.md)
+* [Discharge_Air_Differential_Pressure_Sensor](Discharge_Air_Differential_Pressure_Sensor.md)
 * [Return_Air_Differential_Pressure_Sensor](Return_Air_Differential_Pressure_Sensor.md)
 * [Supply_Air_Differential_Pressure_Sensor](Supply_Air_Differential_Pressure_Sensor.md)
 
@@ -36,8 +36,8 @@ Measures the difference in pressure between two regions of air
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

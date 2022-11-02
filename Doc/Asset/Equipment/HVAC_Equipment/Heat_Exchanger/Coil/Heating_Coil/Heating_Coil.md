@@ -10,8 +10,8 @@ A heating element typically made of pipe, tube or wire that emits heat. Typicall
 ---
 
 ## Child interfaces
-* [Direct_Expansion_Heating_Coil](Direct_Expansion_Heating_Coil.md)
 * [Hot_Water_Coil](Hot_Water_Coil.md)
+* [Direct_Expansion_Heating_Coil](Direct_Expansion_Heating_Coil.md)
 
 ---
 

@@ -13,15 +13,15 @@ A parameter that places an upper or lower bound on the range of permitted values
 * [Close_Limit](Close_Limit.md)
 * [Current_Limit](Current_Limit.md)
 * [Ventilation_Air_Flow_Ratio_Limit](Ventilation_Air_Flow_Ratio_Limit.md)
-* [Air_Flow_Setpoint_Limit](Air_Flow_Setpoint_Limit/Air_Flow_Setpoint_Limit.md)
+* [Min_Limit](Min_Limit/Min_Limit.md)
 * [Air_Temperature_Setpoint_Limit](../Temperature_Parameter/Air_Temperature_Setpoint_Limit/Air_Temperature_Setpoint_Limit.md)
-* [Differential_Pressure_Setpoint_Limit](Differential_Pressure_Setpoint_Limit/Differential_Pressure_Setpoint_Limit.md)
 * [Fresh_Air_Setpoint_Limit](Fresh_Air_Setpoint_Limit/Fresh_Air_Setpoint_Limit.md)
 * [Max_Limit](Max_Limit/Max_Limit.md)
-* [Min_Limit](Min_Limit/Min_Limit.md)
-* [Position_Limit](Position_Limit/Position_Limit.md)
+* [Differential_Pressure_Setpoint_Limit](Differential_Pressure_Setpoint_Limit/Differential_Pressure_Setpoint_Limit.md)
 * [Speed_Setpoint_Limit](Speed_Setpoint_Limit/Speed_Setpoint_Limit.md)
 * [Static_Pressure_Setpoint_Limit](Static_Pressure_Setpoint_Limit/Static_Pressure_Setpoint_Limit.md)
+* [Position_Limit](Position_Limit/Position_Limit.md)
+* [Air_Flow_Setpoint_Limit](Air_Flow_Setpoint_Limit/Air_Flow_Setpoint_Limit.md)
 
 ---
 
@@ -44,8 +44,8 @@ A parameter that places an upper or lower bound on the range of permitted values
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

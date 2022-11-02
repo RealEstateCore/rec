@@ -10,9 +10,9 @@ Indicates if a load shedding policy is in effect
 ---
 
 ## Child interfaces
-* [Differential_Pressure_Load_Shed_Status](../Pressure_Status/Differential_Pressure_Load_Shed_Status/Differential_Pressure_Load_Shed_Status.md)
 * [Entering_Hot_Water_Temperature_Load_Shed_Status](Entering_Hot_Water_Temperature_Load_Shed_Status/Entering_Hot_Water_Temperature_Load_Shed_Status.md)
 * [Leaving_Hot_Water_Temperature_Load_Shed_Status](Leaving_Hot_Water_Temperature_Load_Shed_Status/Leaving_Hot_Water_Temperature_Load_Shed_Status.md)
+* [Differential_Pressure_Load_Shed_Status](../Pressure_Status/Differential_Pressure_Load_Shed_Status/Differential_Pressure_Load_Shed_Status.md)
 
 ---
 
@@ -35,8 +35,8 @@ Indicates if a load shedding policy is in effect
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

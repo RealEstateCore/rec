@@ -11,9 +11,9 @@ Sets the size of a deadband of differential pressure
 
 ## Child interfaces
 * [Chilled_Water_Differential_Pressure_Deadband_Setpoint](Chilled_Water_Differential_Pressure_Deadband_Setpoint.md)
-* [Entering_Water_Differential_Pressure_Deadband_Setpoint](Entering_Water_Differential_Pressure_Deadband_Setpoint.md)
 * [Hot_Water_Differential_Pressure_Deadband_Setpoint](Hot_Water_Differential_Pressure_Deadband_Setpoint.md)
 * [Leaving_Water_Differential_Pressure_Deadband_Setpoint](Leaving_Water_Differential_Pressure_Deadband_Setpoint.md)
+* [Entering_Water_Differential_Pressure_Deadband_Setpoint](Entering_Water_Differential_Pressure_Deadband_Setpoint.md)
 
 ---
 
@@ -36,8 +36,8 @@ Sets the size of a deadband of differential pressure
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

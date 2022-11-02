@@ -11,8 +11,8 @@ Measures the amount of power consumed by the use of some process; typically foun
 
 ## Child interfaces
 * [Peak_Demand_Sensor](Peak_Demand_Sensor.md)
-* [Cooling_Demand_Sensor](Cooling_Demand_Sensor/Cooling_Demand_Sensor.md)
 * [Heating_Demand_Sensor](Heating_Demand_Sensor/Heating_Demand_Sensor.md)
+* [Cooling_Demand_Sensor](Cooling_Demand_Sensor/Cooling_Demand_Sensor.md)
 
 ---
 
@@ -37,8 +37,8 @@ Measures the amount of power consumed by the use of some process; typically foun
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

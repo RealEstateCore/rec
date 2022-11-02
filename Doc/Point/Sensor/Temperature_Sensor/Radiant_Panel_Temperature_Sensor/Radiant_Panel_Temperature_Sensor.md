@@ -10,8 +10,8 @@ Measures the temperature of the radiant panel of the radiant heating and cooling
 ---
 
 ## Child interfaces
-* [Inside_Face_Surface_Temperature_Sensor](Inside_Face_Surface_Temperature_Sensor.md)
 * [Outside_Face_Surface_Temperature_Sensor](Outside_Face_Surface_Temperature_Sensor.md)
+* [Inside_Face_Surface_Temperature_Sensor](Inside_Face_Surface_Temperature_Sensor.md)
 * [Embedded_Temperature_Sensor](Embedded_Temperature_Sensor/Embedded_Temperature_Sensor.md)
 
 ---
@@ -35,8 +35,8 @@ Measures the temperature of the radiant panel of the radiant heating and cooling
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

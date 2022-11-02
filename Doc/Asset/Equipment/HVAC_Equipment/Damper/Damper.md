@@ -10,12 +10,12 @@ Element inserted into an air-distribution system or element of an air-distributi
 ---
 
 ## Child interfaces
-* [Economizer_Damper](Economizer_Damper.md)
 * [Exhaust_Damper](Exhaust_Damper.md)
-* [Mixed_Damper](Mixed_Damper.md)
-* [Outside_Damper](Outside_Damper.md)
 * [Relief_Damper](Relief_Damper.md)
+* [Mixed_Damper](Mixed_Damper.md)
 * [Return_Damper](Return_Damper.md)
+* [Economizer_Damper](Economizer_Damper.md)
+* [Outside_Damper](Outside_Damper.md)
 
 ---
 

@@ -10,14 +10,14 @@ Parameter points are configuration settings used to guide the operation of equip
 ---
 
 ## Child interfaces
-* [Alarm_Sensitivity_Parameter](Alarm_Sensitivity_Parameter/Alarm_Sensitivity_Parameter.md)
-* [Delay_Parameter](Delay_Parameter/Delay_Parameter.md)
-* [Humidity_Parameter](Humidity_Parameter/Humidity_Parameter.md)
-* [Limit](Limit/Limit.md)
-* [Load_Parameter](Load_Parameter/Load_Parameter.md)
 * [PID_Parameter](PID_Parameter/PID_Parameter.md)
-* [Temperature_Parameter](Temperature_Parameter/Temperature_Parameter.md)
+* [Load_Parameter](Load_Parameter/Load_Parameter.md)
+* [Delay_Parameter](Delay_Parameter/Delay_Parameter.md)
+* [Alarm_Sensitivity_Parameter](Alarm_Sensitivity_Parameter/Alarm_Sensitivity_Parameter.md)
+* [Limit](Limit/Limit.md)
+* [Humidity_Parameter](Humidity_Parameter/Humidity_Parameter.md)
 * [Tolerance_Parameter](Tolerance_Parameter/Tolerance_Parameter.md)
+* [Temperature_Parameter](Temperature_Parameter/Temperature_Parameter.md)
 
 ---
 
@@ -42,8 +42,8 @@ Parameter points are configuration settings used to guide the operation of equip
 ### Inherited
 * [Asset](../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../Event/PointEvent/ExceptionEvent.md).sourcePoint

@@ -14,8 +14,8 @@ A type of Setpoints that is related to the difference between two measurements
 * [Medium_Temperature_Hot_Water_Differential_Pressure_Load_Shed_Setpoint](Medium_Temperature_Hot_Water_Differential_Pressure_Load_Shed_Setpoint.md)
 * [Differential_Pressure_Deadband_Setpoint](Differential_Pressure_Deadband_Setpoint/Differential_Pressure_Deadband_Setpoint.md)
 * [Differential_Pressure_Setpoint](Differential_Pressure_Setpoint/Differential_Pressure_Setpoint.md)
-* [Differential_Temperature_Setpoint](Differential_Temperature_Setpoint/Differential_Temperature_Setpoint.md)
 * [Temperature_Differential_Reset_Setpoint](Temperature_Differential_Reset_Setpoint/Temperature_Differential_Reset_Setpoint.md)
+* [Differential_Temperature_Setpoint](Differential_Temperature_Setpoint/Differential_Temperature_Setpoint.md)
 
 ---
 
@@ -38,8 +38,8 @@ A type of Setpoints that is related to the difference between two measurements
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

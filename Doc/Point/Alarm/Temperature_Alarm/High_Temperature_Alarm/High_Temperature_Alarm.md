@@ -10,9 +10,9 @@ An alarm that indicates high temperature.
 ---
 
 ## Child interfaces
-* [High_Discharge_Air_Temperature_Alarm](../Air_Temperature_Alarm/Discharge_Air_Temperature_Alarm/High_Discharge_Air_Temperature_Alarm.md)
-* [High_Return_Air_Temperature_Alarm](../Air_Temperature_Alarm/Return_Air_Temperature_Alarm/High_Return_Air_Temperature_Alarm.md)
 * [High_Supply_Air_Temperature_Alarm](../Air_Temperature_Alarm/Supply_Air_Temperature_Alarm/High_Supply_Air_Temperature_Alarm.md)
+* [High_Return_Air_Temperature_Alarm](../Air_Temperature_Alarm/Return_Air_Temperature_Alarm/High_Return_Air_Temperature_Alarm.md)
+* [High_Discharge_Air_Temperature_Alarm](../Air_Temperature_Alarm/Discharge_Air_Temperature_Alarm/High_Discharge_Air_Temperature_Alarm.md)
 
 ---
 
@@ -35,8 +35,8 @@ An alarm that indicates high temperature.
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

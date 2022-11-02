@@ -10,8 +10,8 @@ A parameter that places a lower bound on the range of permitted values of a Temp
 ---
 
 ## Child interfaces
-* [Min_Discharge_Air_Temperature_Setpoint_Limit](Min_Discharge_Air_Temperature_Setpoint_Limit.md)
 * [Min_Supply_Air_Temperature_Setpoint_Limit](../../../Temperature_Parameter/Air_Temperature_Setpoint_Limit/Supply_Air_Temperature_Setpoint_Limit/Min_Supply_Air_Temperature_Setpoint_Limit.md)
+* [Min_Discharge_Air_Temperature_Setpoint_Limit](Min_Discharge_Air_Temperature_Setpoint_Limit.md)
 
 ---
 
@@ -34,8 +34,8 @@ A parameter that places a lower bound on the range of permitted values of a Temp
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

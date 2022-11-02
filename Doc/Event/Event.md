@@ -10,8 +10,8 @@ A temporally indexed entity, e.g., an observation, a lease, a construction proje
 ---
 
 ## Child interfaces
-* [ElevatorTrip](ElevatorTrip.md)
 * [Lease](Lease.md)
+* [ElevatorTrip](ElevatorTrip.md)
 * [PointEvent](PointEvent/PointEvent.md)
 
 ---

@@ -10,12 +10,12 @@ Sets the target flow rate of water
 ---
 
 ## Child interfaces
-* [Bypass_Water_Flow_Setpoint](Bypass_Water_Flow_Setpoint.md)
 * [Condenser_Water_Flow_Setpoint](Condenser_Water_Flow_Setpoint.md)
-* [Chilled_Water_Flow_Setpoint](Chilled_Water_Flow_Setpoint/Chilled_Water_Flow_Setpoint.md)
+* [Bypass_Water_Flow_Setpoint](Bypass_Water_Flow_Setpoint.md)
 * [Entering_Water_Flow_Setpoint](Entering_Water_Flow_Setpoint/Entering_Water_Flow_Setpoint.md)
-* [Hot_Water_Flow_Setpoint](Hot_Water_Flow_Setpoint/Hot_Water_Flow_Setpoint.md)
+* [Chilled_Water_Flow_Setpoint](Chilled_Water_Flow_Setpoint/Chilled_Water_Flow_Setpoint.md)
 * [Leaving_Water_Flow_Setpoint](Leaving_Water_Flow_Setpoint/Leaving_Water_Flow_Setpoint.md)
+* [Hot_Water_Flow_Setpoint](Hot_Water_Flow_Setpoint/Hot_Water_Flow_Setpoint.md)
 
 ---
 
@@ -38,8 +38,8 @@ Sets the target flow rate of water
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

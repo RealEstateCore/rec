@@ -10,9 +10,9 @@ Sets the rate required for a process
 ---
 
 ## Child interfaces
+* [Preheat_Demand_Setpoint](Preheat_Demand_Setpoint.md)
 * [Cooling_Demand_Setpoint](Cooling_Demand_Setpoint.md)
 * [Heating_Demand_Setpoint](Heating_Demand_Setpoint.md)
-* [Preheat_Demand_Setpoint](Preheat_Demand_Setpoint.md)
 * [Air_Flow_Demand_Setpoint](../Flow_Setpoint/Air_Flow_Setpoint/Air_Flow_Demand_Setpoint/Air_Flow_Demand_Setpoint.md)
 
 ---
@@ -36,8 +36,8 @@ Sets the rate required for a process
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

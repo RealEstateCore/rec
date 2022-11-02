@@ -12,8 +12,8 @@ Sets temperature of leaving water
 ## Child interfaces
 * [Leaving_Chilled_Water_Temperature_Setpoint](Leaving_Chilled_Water_Temperature_Setpoint.md)
 * [Leaving_Hot_Water_Temperature_Setpoint](Leaving_Hot_Water_Temperature_Setpoint.md)
-* [Entering_Condenser_Water_Temperature_Setpoint](Entering_Condenser_Water_Temperature_Setpoint.md)
 * [Leaving_Condenser_Water_Temperature_Setpoint](Leaving_Condenser_Water_Temperature_Setpoint.md)
+* [Entering_Condenser_Water_Temperature_Setpoint](Entering_Condenser_Water_Temperature_Setpoint.md)
 * [Leaving_Water_Temperature_Deadband_Setpoint](Leaving_Water_Temperature_Deadband_Setpoint.md)
 * [Leaving_Domestic_Hot_Water_Temperature_Setpoint](../Hot_Water_Temperature_Setpoint/Domestic_Hot_Water_Temperature_Setpoint/Leaving_Domestic_Hot_Water_Temperature_Setpoint.md)
 
@@ -38,8 +38,8 @@ Sets temperature of leaving water
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

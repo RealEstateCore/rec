@@ -37,7 +37,6 @@ A natural person (i.e., an individual human being).
 * [Asset](../Asset/Asset.md).servicedBy
 * [Lease](../Event/Lease.md).leasee
 * [Lease](../Event/Lease.md).leasor
-* [Organization](Organization/Organization.md).hasMember
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).acknowledgedBy
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).closedBy
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).createdBy
@@ -45,3 +44,4 @@ A natural person (i.e., an individual human being).
 * [Architecture](../Space/Architecture/Architecture.md).constructedBy
 * [Architecture](../Space/Architecture/Architecture.md).operatedBy
 * [Architecture](../Space/Architecture/Architecture.md).ownedBy
+* [Organization](Organization/Organization.md).hasMember

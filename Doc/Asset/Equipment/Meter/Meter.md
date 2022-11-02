@@ -11,10 +11,10 @@ A device that measure usage or consumption of some media --- typically a form en
 
 ## Child interfaces
 * [Thermal_Power_Meter](Thermal_Power_Meter.md)
-* [Building_Meter](Building_Meter/Building_Meter.md)
 * [Electrical_Meter](Electrical_Meter/Electrical_Meter.md)
-* [Gas_Meter](Gas_Meter/Gas_Meter.md)
 * [Water_Meter](Water_Meter/Water_Meter.md)
+* [Gas_Meter](Gas_Meter/Gas_Meter.md)
+* [Building_Meter](Building_Meter/Building_Meter.md)
 
 ---
 

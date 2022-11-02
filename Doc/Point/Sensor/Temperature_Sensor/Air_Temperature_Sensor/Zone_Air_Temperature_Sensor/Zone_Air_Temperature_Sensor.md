@@ -10,9 +10,9 @@ A physical or virtual sensor which represents the temperature of an HVAC Zone
 ---
 
 ## Child interfaces
+* [Warmest_Zone_Air_Temperature_Sensor](Warmest_Zone_Air_Temperature_Sensor.md)
 * [Average_Zone_Air_Temperature_Sensor](Average_Zone_Air_Temperature_Sensor.md)
 * [Coldest_Zone_Air_Temperature_Sensor](Coldest_Zone_Air_Temperature_Sensor.md)
-* [Warmest_Zone_Air_Temperature_Sensor](Warmest_Zone_Air_Temperature_Sensor.md)
 
 ---
 
@@ -35,8 +35,8 @@ A physical or virtual sensor which represents the temperature of an HVAC Zone
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

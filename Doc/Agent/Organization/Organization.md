@@ -10,8 +10,8 @@ An organization of any sort (e.g., a business, association, project, consortium,
 ---
 
 ## Child interfaces
-* [Company](Company.md)
 * [Department](Department.md)
+* [Company](Company.md)
 
 ---
 
@@ -49,7 +49,6 @@ An organization of any sort (e.g., a business, association, project, consortium,
 * [Asset](../../Asset/Asset.md).servicedBy
 * [Lease](../../Event/Lease.md).leasee
 * [Lease](../../Event/Lease.md).leasor
-* [Organization](#).hasMember
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).acknowledgedBy
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).closedBy
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).createdBy
@@ -57,3 +56,4 @@ An organization of any sort (e.g., a business, association, project, consortium,
 * [Architecture](../../Space/Architecture/Architecture.md).constructedBy
 * [Architecture](../../Space/Architecture/Architecture.md).operatedBy
 * [Architecture](../../Space/Architecture/Architecture.md).ownedBy
+* [Organization](#).hasMember

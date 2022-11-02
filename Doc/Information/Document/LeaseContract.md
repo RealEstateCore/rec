@@ -30,7 +30,7 @@ Formal document that identifies the Tenant and the leased asset or property; sta
 ### Direct
 * [Lease](../../Event/Lease.md).regulatedBy
 ### Inherited
-* [Asset](../../Asset/Asset.md).documentation
-* [BuildingElement](../../BuildingElement/BuildingElement.md).documentation
 * [Collection](../../Collection/Collection.md).documentation
+* [BuildingElement](../../BuildingElement/BuildingElement.md).documentation
+* [Asset](../../Asset/Asset.md).documentation
 * [Architecture](../../Space/Architecture/Architecture.md).documentation

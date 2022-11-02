@@ -11,8 +11,8 @@ Sets temperature of entering water
 
 ## Child interfaces
 * [Entering_Chilled_Water_Temperature_Setpoint](Entering_Chilled_Water_Temperature_Setpoint.md)
-* [Entering_Hot_Water_Temperature_Setpoint](../Hot_Water_Temperature_Setpoint/Entering_Hot_Water_Temperature_Setpoint.md)
 * [Entering_Water_Temperature_Deadband_Setpoint](Entering_Water_Temperature_Deadband_Setpoint.md)
+* [Entering_Hot_Water_Temperature_Setpoint](../Hot_Water_Temperature_Setpoint/Entering_Hot_Water_Temperature_Setpoint.md)
 * [Entering_Domestic_Hot_Water_Temperature_Setpoint](../Hot_Water_Temperature_Setpoint/Domestic_Hot_Water_Temperature_Setpoint/Entering_Domestic_Hot_Water_Temperature_Setpoint.md)
 
 ---
@@ -36,8 +36,8 @@ Sets temperature of entering water
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

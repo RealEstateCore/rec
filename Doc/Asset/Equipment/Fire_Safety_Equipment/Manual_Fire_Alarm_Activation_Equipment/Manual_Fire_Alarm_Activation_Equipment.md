@@ -10,8 +10,8 @@ A device for manually activating fire alarm
 ---
 
 ## Child interfaces
-* [Fire_Alarm_Manual_Call_Point](Fire_Alarm_Manual_Call_Point.md)
 * [Fire_Alarm_Pull_Station](Fire_Alarm_Pull_Station.md)
+* [Fire_Alarm_Manual_Call_Point](Fire_Alarm_Manual_Call_Point.md)
 
 ---
 

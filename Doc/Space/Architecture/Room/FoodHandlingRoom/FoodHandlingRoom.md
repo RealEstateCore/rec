@@ -7,13 +7,13 @@
 ---
 
 ## Child interfaces
-* [BarRoom](BarRoom.md)
 * [CafeteriaRoom](CafeteriaRoom.md)
-* [CookingRoom](CookingRoom.md)
-* [DiningRoom](DiningRoom.md)
-* [DishingRoom](DishingRoom.md)
+* [BarRoom](BarRoom.md)
 * [Kitchenette](Kitchenette.md)
 * [Pantry](Pantry.md)
+* [CookingRoom](CookingRoom.md)
+* [DishingRoom](DishingRoom.md)
+* [DiningRoom](DiningRoom.md)
 
 ---
 
@@ -42,11 +42,11 @@
 
 ## Target Of
 ### Inherited
-* [Asset](../../../../Asset/Asset.md).locatedIn
 * [BuildingElement](../../../../BuildingElement/BuildingElement.md).locatedIn
-* [Apartment](../../../../Collection/Apartment.md).includes
-* [Campus](../../../../Collection/Campus.md).includes
-* [Premises](../../../../Collection/Premises.md).includes
-* [RealEstate](../../../../Collection/RealEstate.md).includes
+* [Asset](../../../../Asset/Asset.md).locatedIn
 * [Space](../../../Space.md).hasPart
 * [Space](../../../Space.md).isPartOf
+* [Apartment](../../../../Collection/Apartment.md).includes
+* [RealEstate](../../../../Collection/RealEstate.md).includes
+* [Campus](../../../../Collection/Campus.md).includes
+* [Premises](../../../../Collection/Premises.md).includes

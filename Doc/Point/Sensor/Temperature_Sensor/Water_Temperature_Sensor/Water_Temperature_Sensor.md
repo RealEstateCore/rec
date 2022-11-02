@@ -10,15 +10,15 @@ Measures the temperature of water
 ---
 
 ## Child interfaces
-* [Collection_Basin_Water_Temperature_Sensor](Collection_Basin_Water_Temperature_Sensor.md)
 * [Entering_Water_Temperature_Sensor](Entering_Water_Temperature_Sensor.md)
-* [Chilled_Water_Temperature_Sensor](Chilled_Water_Temperature_Sensor/Chilled_Water_Temperature_Sensor.md)
-* [Condenser_Water_Temperature_Sensor](Condenser_Water_Temperature_Sensor/Condenser_Water_Temperature_Sensor.md)
-* [Domestic_Hot_Water_Temperature_Sensor](Domestic_Hot_Water_Temperature_Sensor/Domestic_Hot_Water_Temperature_Sensor.md)
-* [Entering_Hot_Water_Temperature_Sensor](Entering_Hot_Water_Temperature_Sensor/Entering_Hot_Water_Temperature_Sensor.md)
+* [Collection_Basin_Water_Temperature_Sensor](Collection_Basin_Water_Temperature_Sensor.md)
 * [Leaving_Hot_Water_Temperature_Sensor](Leaving_Hot_Water_Temperature_Sensor/Leaving_Hot_Water_Temperature_Sensor.md)
+* [Domestic_Hot_Water_Temperature_Sensor](Domestic_Hot_Water_Temperature_Sensor/Domestic_Hot_Water_Temperature_Sensor.md)
 * [Leaving_Water_Temperature_Sensor](Leaving_Water_Temperature_Sensor/Leaving_Water_Temperature_Sensor.md)
 * [Water_Differential_Temperature_Sensor](Water_Differential_Temperature_Sensor/Water_Differential_Temperature_Sensor.md)
+* [Condenser_Water_Temperature_Sensor](Condenser_Water_Temperature_Sensor/Condenser_Water_Temperature_Sensor.md)
+* [Entering_Hot_Water_Temperature_Sensor](Entering_Hot_Water_Temperature_Sensor/Entering_Hot_Water_Temperature_Sensor.md)
+* [Chilled_Water_Temperature_Sensor](Chilled_Water_Temperature_Sensor/Chilled_Water_Temperature_Sensor.md)
 
 ---
 
@@ -41,8 +41,8 @@ Measures the temperature of water
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

@@ -10,9 +10,9 @@ Controls load shedding behavior provided by a control system
 ---
 
 ## Child interfaces
-* [Occupied_Load_Shed_Command](Occupied_Load_Shed_Command/Occupied_Load_Shed_Command.md)
 * [Standby_Load_Shed_Command](Standby_Load_Shed_Command/Standby_Load_Shed_Command.md)
 * [Unoccupied_Load_Shed_Command](Unoccupied_Load_Shed_Command/Unoccupied_Load_Shed_Command.md)
+* [Occupied_Load_Shed_Command](Occupied_Load_Shed_Command/Occupied_Load_Shed_Command.md)
 
 ---
 
@@ -35,8 +35,8 @@ Controls load shedding behavior provided by a control system
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

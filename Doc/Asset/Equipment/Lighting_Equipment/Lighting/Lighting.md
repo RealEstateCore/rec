@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [Luminaire](Luminaire.md)
 * [Luminaire_Driver](Luminaire_Driver.md)
+* [Luminaire](Luminaire.md)
 
 ---
 

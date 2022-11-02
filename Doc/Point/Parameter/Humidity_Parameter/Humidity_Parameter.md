@@ -10,9 +10,9 @@ Parameters relevant to humidity-related systems and points
 ---
 
 ## Child interfaces
-* [High_Humidity_Alarm_Parameter](High_Humidity_Alarm_Parameter.md)
 * [Humidity_Tolerance_Parameter](../Tolerance_Parameter/Humidity_Tolerance_Parameter.md)
 * [Low_Humidity_Alarm_Parameter](Low_Humidity_Alarm_Parameter.md)
+* [High_Humidity_Alarm_Parameter](High_Humidity_Alarm_Parameter.md)
 
 ---
 
@@ -35,8 +35,8 @@ Parameters relevant to humidity-related systems and points
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

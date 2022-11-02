@@ -10,8 +10,8 @@ Measures user-provided adjustment of some value
 ---
 
 ## Child interfaces
-* [Temperature_Adjust_Sensor](Temperature_Adjust_Sensor.md)
 * [Warm_Cool_Adjust_Sensor](Warm_Cool_Adjust_Sensor.md)
+* [Temperature_Adjust_Sensor](Temperature_Adjust_Sensor.md)
 
 ---
 
@@ -36,8 +36,8 @@ Measures user-provided adjustment of some value
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

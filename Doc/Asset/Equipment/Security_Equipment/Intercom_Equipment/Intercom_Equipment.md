@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [Emergency_Phone](Emergency_Phone.md)
 * [Video_Intercom](Video_Intercom.md)
+* [Emergency_Phone](Emergency_Phone.md)
 
 ---
 

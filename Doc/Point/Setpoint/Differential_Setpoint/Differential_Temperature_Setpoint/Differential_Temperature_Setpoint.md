@@ -10,8 +10,8 @@ A type of Setpoints that is related to the difference between two temperature me
 ---
 
 ## Child interfaces
-* [Differential_Air_Temperature_Setpoint](Differential_Air_Temperature_Setpoint.md)
 * [Water_Differential_Temperature_Setpoint](Water_Differential_Temperature_Setpoint.md)
+* [Differential_Air_Temperature_Setpoint](Differential_Air_Temperature_Setpoint.md)
 
 ---
 
@@ -34,8 +34,8 @@ A type of Setpoints that is related to the difference between two temperature me
 ### Inherited
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

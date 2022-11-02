@@ -10,8 +10,8 @@ Sets the size of a deadband of temperature of supply air
 ---
 
 ## Child interfaces
-* [Cooling_Supply_Air_Temperature_Deadband_Setpoint](Cooling_Supply_Air_Temperature_Deadband_Setpoint.md)
 * [Heating_Supply_Air_Temperature_Deadband_Setpoint](Heating_Supply_Air_Temperature_Deadband_Setpoint.md)
+* [Cooling_Supply_Air_Temperature_Deadband_Setpoint](Cooling_Supply_Air_Temperature_Deadband_Setpoint.md)
 
 ---
 
@@ -34,8 +34,8 @@ Sets the size of a deadband of temperature of supply air
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

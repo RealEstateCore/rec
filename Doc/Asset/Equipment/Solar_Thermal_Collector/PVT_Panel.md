@@ -31,9 +31,9 @@ A type of solar panels that convert solar radiation into usable thermal and elec
 
 ## Target Of
 ### Inherited
-* [PV_Array](../../../Collection/PV_Array.md).includes
 * [Asset](../../Asset.md).hasPart
 * [Asset](../../Asset.md).isPartOf
+* [PV_Array](../../../Collection/PV_Array.md).includes
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).includes
 * [Loop](../../../Collection/Loop/Loop.md).includes
 * [System](../../../Collection/System/System.md).includes

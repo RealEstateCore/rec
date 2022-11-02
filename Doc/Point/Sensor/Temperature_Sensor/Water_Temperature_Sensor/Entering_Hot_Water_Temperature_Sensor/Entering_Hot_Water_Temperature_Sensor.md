@@ -12,8 +12,8 @@ Measures the temperature of water enteringed to a hot water system
 ## Child interfaces
 * [Entering_Domestic_Hot_Water_Temperature_Sensor](Entering_Domestic_Hot_Water_Temperature_Sensor.md)
 * [Entering_High_Temperature_Hot_Water_Temperature_Sensor](Entering_High_Temperature_Hot_Water_Temperature_Sensor.md)
-* [Entering_Medium_Temperature_Hot_Water_Temperature_Sensor](Entering_Medium_Temperature_Hot_Water_Temperature_Sensor.md)
 * [Hot_Water_Differential_Temperature_Sensor](../Leaving_Hot_Water_Temperature_Sensor/Hot_Water_Differential_Temperature_Sensor.md)
+* [Entering_Medium_Temperature_Hot_Water_Temperature_Sensor](Entering_Medium_Temperature_Hot_Water_Temperature_Sensor.md)
 
 ---
 
@@ -36,8 +36,8 @@ Measures the temperature of water enteringed to a hot water system
 ### Inherited
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../../../Event/PointEvent/ExceptionEvent.md).sourcePoint

@@ -27,9 +27,9 @@
 
 ## Target Of
 ### Inherited
-* [Asset](../../Asset/Asset.md).mountedOn
 * [BuildingElement](../BuildingElement.md).hasPart
 * [BuildingElement](../BuildingElement.md).isPartOf
+* [Asset](../../Asset/Asset.md).mountedOn
 * [Architecture](../../Space/Architecture/Architecture.md).adjacentElement
 * [Architecture](../../Space/Architecture/Architecture.md).containsElement
 * [Architecture](../../Space/Architecture/Architecture.md).intersectingElement

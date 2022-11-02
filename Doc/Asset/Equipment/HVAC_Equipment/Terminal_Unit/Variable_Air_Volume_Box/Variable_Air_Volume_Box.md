@@ -10,8 +10,8 @@ A device that regulates the volume and temperature of air delivered to a zone by
 ---
 
 ## Child interfaces
-* [RVAV](RVAV.md)
 * [Variable_Air_Volume_Box_With_Reheat](Variable_Air_Volume_Box_With_Reheat.md)
+* [RVAV](RVAV.md)
 
 ---
 

@@ -10,12 +10,12 @@ Senses the dewpoint temperature . Dew point is the temperature to which air must
 ---
 
 ## Child interfaces
-* [Discharge_Air_Dewpoint_Sensor](Discharge_Air_Dewpoint_Sensor.md)
+* [Supply_Air_Dewpoint_Sensor](Supply_Air_Dewpoint_Sensor.md)
 * [Exhaust_Air_Dewpoint_Sensor](Exhaust_Air_Dewpoint_Sensor.md)
 * [Outside_Air_Dewpoint_Sensor](Outside_Air_Dewpoint_Sensor.md)
-* [Return_Air_Dewpoint_Sensor](Return_Air_Dewpoint_Sensor.md)
-* [Supply_Air_Dewpoint_Sensor](Supply_Air_Dewpoint_Sensor.md)
+* [Discharge_Air_Dewpoint_Sensor](Discharge_Air_Dewpoint_Sensor.md)
 * [Zone_Air_Dewpoint_Sensor](Zone_Air_Dewpoint_Sensor.md)
+* [Return_Air_Dewpoint_Sensor](Return_Air_Dewpoint_Sensor.md)
 
 ---
 
@@ -40,8 +40,8 @@ Senses the dewpoint temperature . Dew point is the temperature to which air must
 ### Inherited
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/EquipmentCollection.md).hasPoint
-* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
+* [ActuationEvent](../../../Event/PointEvent/ActuationEvent.md).targetPoint
+* [ObservationEvent](../../../Event/PointEvent/ObservationEvent.md).sourcePoint
+* [ExceptionEvent](../../../Event/PointEvent/ExceptionEvent.md).sourcePoint
