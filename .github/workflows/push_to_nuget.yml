@@ -1,11 +1,10 @@
 name: Package and push ontology to nuget.org
 
 on:
-  workflow_dispatch:    
-  push:
-    branches: [ "main" ]
-    paths:
-      - "Metadata/*.nuspec"
+  workflow_dispatch:
+  release:
+    types:
+      - released
 
 env: 
   NUGET_FEED_URL: https://api.nuget.org/v3/index.json
