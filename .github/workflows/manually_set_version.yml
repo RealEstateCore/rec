@@ -17,6 +17,7 @@ jobs:
         with:
           token: ${{ secrets.CI_PUSH_PAT }}
       - name: Set version
+        id: set-version
         uses: vers-one/dotnet-project-version-updater@v1.2
         with:
           files: "Metadata/*.nuspec"
@@ -26,5 +27,5 @@ jobs:
           git config user.name "Karl Hammar"
           git config user.email "hammar@users.noreply.github.com"
           git add .
-          git commit -m "Set .nuspec version to ${{ steps.update.outputs.newVersion }}"
+          git commit -m "Set .nuspec version to ${{ steps.set-version.outputs.newVersion }}"
           git push
