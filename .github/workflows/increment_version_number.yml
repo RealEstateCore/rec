@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.CI_PUSH_PAT }}
       - name: Increment revision number
         uses: vers-one/dotnet-project-version-updater@v1.2
         with:
