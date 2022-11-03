@@ -16,7 +16,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      token: ${{ secrets.CI_PUSH_PAT }}
+      with:
+        token: ${{ secrets.CI_PUSH_PAT }}
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
