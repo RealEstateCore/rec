@@ -10,26 +10,26 @@ devices that serve all or part of the building and may include electric power, l
 ---
 
 ## Child interfaces
-* [Gas_Distribution](Gas_Distribution.md)
-* [Water_Distribution](Water_Distribution.md)
-* [Weather_Station](Weather_Station.md)
-* [Relay](Relay.md)
-* [Elevator](Elevator.md)
-* [Steam_Distribution](Steam_Distribution.md)
-* [Lighting_Equipment](Lighting_Equipment/Lighting_Equipment.md)
-* [Meter](Meter/Meter.md)
-* [Safety_Equipment](Safety_Equipment/Safety_Equipment.md)
-* [Valve](Valve/Valve.md)
-* [PV_Panel](PV_Panel/PV_Panel.md)
-* [Electrical_Equipment](Electrical_Equipment/Electrical_Equipment.md)
 * [Camera](Camera/Camera.md)
-* [Shading_Equipment](Shading_Equipment/Shading_Equipment.md)
-* [Water_Heater](Water_Heater/Water_Heater.md)
-* [Solar_Thermal_Collector](Solar_Thermal_Collector/Solar_Thermal_Collector.md)
-* [Fire_Safety_Equipment](Fire_Safety_Equipment/Fire_Safety_Equipment.md)
-* [HVAC_Equipment](HVAC_Equipment/HVAC_Equipment.md)
+* [Electrical_Equipment](Electrical-/Electrical_Equipment.md)
+* [Elevator](Elevator.md)
+* [Fire_Safety_Equipment](Fire_Safety-/Fire_Safety_Equipment.md)
+* [Gas_Distribution](Gas_Distribution.md)
+* [HVAC_Equipment](HVAC-/HVAC_Equipment.md)
+* [Lighting_Equipment](Lighting-/Lighting_Equipment.md)
+* [Meter](Meter/Meter.md)
 * [Motor](Motor/Motor.md)
-* [Security_Equipment](Security_Equipment/Security_Equipment.md)
+* [PV_Panel](PV_Panel/PV_Panel.md)
+* [Relay](Relay.md)
+* [Safety_Equipment](Safety-/Safety_Equipment.md)
+* [Security_Equipment](Security-/Security_Equipment.md)
+* [Shading_Equipment](Shading-/Shading_Equipment.md)
+* [Solar_Thermal_Collector](Solar_Thermal_Collector/Solar_Thermal_Collector.md)
+* [Steam_Distribution](Steam_Distribution.md)
+* [Valve](Valve/Valve.md)
+* [Water_Distribution](Water_Distribution.md)
+* [Water_Heater](Water_Heater/Water_Heater.md)
+* [Weather_Station](Weather_Station.md)
 
 ---
 
@@ -57,23 +57,23 @@ devices that serve all or part of the building and may include electric power, l
 ## Target Of
 ### General
 * [Point](../../Point/Point.md).isPointOf
-* [Space](../../Space/Space.md).isLocationOf
 * [Agent](../../Agent/Agent.md).owns
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [Lease](../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../../Space/Space.md).isLocationOf
 * [Equipment](#).feeds
 * [Equipment](#).isFedBy
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
+* [EquipmentCollection](../../Collection/Equipment-.md).feeds
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Meter](Meter/Meter.md).meters
 ### Direct
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).includes
 * [Loop](../../Collection/Loop/Loop.md).includes
 * [System](../../Collection/System/System.md).includes
+* [EquipmentCollection](../../Collection/Equipment-.md).includes
 ### Inherited
 * [Asset](../Asset.md).hasPart
 * [Asset](../Asset.md).isPartOf

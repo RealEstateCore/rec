@@ -10,13 +10,13 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 ---
 
 ## Child interfaces
+* [Building](Building/Building.md)
+* [Level](Level/Level.md)
+* [OutdoorSpace](OutdoorSpace.md)
+* [Room](Room/Room.md)
 * [Site](Site.md)
 * [SubBuilding](SubBuilding.md)
-* [OutdoorSpace](OutdoorSpace.md)
-* [Level](Level/Level.md)
-* [Building](Building/Building.md)
 * [Zone](Zone/Zone.md)
-* [Room](Room/Room.md)
 
 ---
 
@@ -61,24 +61,24 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 ## Target Of
 ### General
 * [Point](../../Point/Point.md).isPointOf
-* [Space](../Space.md).isLocationOf
 * [Agent](../../Agent/Agent.md).owns
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [Lease](../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](#).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
+* [EquipmentCollection](../../Collection/Equipment-.md).feeds
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](#).isFedBy
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [BuildingElement](../../BuildingElement/BuildingElement.md).locatedIn
-* [RealEstate](../../Collection/RealEstate.md).includes
 * [Campus](../../Collection/Campus.md).includes
 * [Premises](../../Collection/Premises.md).includes
+* [RealEstate](../../Collection/RealEstate.md).includes
 ### Inherited
 * [Asset](../../Asset/Asset.md).locatedIn
 * [Space](../Space.md).hasPart

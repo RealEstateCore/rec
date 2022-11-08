@@ -10,8 +10,8 @@ A contiguous part of the physical world that contains or can contain sub-spaces.
 ---
 
 ## Child interfaces
-* [Region](Region.md)
 * [Architecture](Architecture/Architecture.md)
+* [Region](Region.md)
 
 ---
 
@@ -47,18 +47,18 @@ A contiguous part of the physical world that contains or can contain sub-spaces.
 ## Target Of
 ### General
 * [Point](../Point/Point.md).isPointOf
-* [Space](#).isLocationOf
 * [Agent](../Agent/Agent.md).owns
-* [EquipmentCollection](../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../Collection/Portfolio.md).includes
-* [Lease](../Event/Lease.md).leaseOf
-* [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
+* [Space](#).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](Architecture/Architecture.md).isFedBy
 * [Document](../Information/Document/Document.md).documentTopic
 * [Document](../Information/Document/Document.md).url
+* [EquipmentCollection](../Collection/Equipment-.md).feeds
+* [Lease](../Event/Lease.md).leaseOf
+* [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../Collection/Portfolio.md).includes
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](Architecture/Architecture.md).isFedBy
 * [Meter](../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [Asset](../Asset/Asset.md).locatedIn

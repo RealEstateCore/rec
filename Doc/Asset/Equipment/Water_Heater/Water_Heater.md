@@ -10,8 +10,8 @@ An apparatus for heating and usually storing hot water
 ---
 
 ## Child interfaces
-* [Collection_Basin_Water_Heater](Collection_Basin_Water_Heater.md)
 * [Boiler](Boiler/Boiler.md)
+* [Collection_Basin_Water_Heater](Collection_Basin-.md)
 
 ---
 
@@ -34,22 +34,22 @@ An apparatus for heating and usually storing hot water
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
-* [Space](../../../Space/Space.md).isLocationOf
 * [Agent](../../../Agent/Agent.md).owns
-* [EquipmentCollection](../../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../../Collection/Portfolio.md).includes
-* [Lease](../../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds
 * [Equipment](../Equipment.md).isFedBy
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url
+* [EquipmentCollection](../../../Collection/Equipment-.md).feeds
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
 * [Meter](../Meter/Meter.md).meters
 ### Inherited
-* [Asset](../../Asset.md).hasPart
-* [Asset](../../Asset.md).isPartOf
-* [EquipmentCollection](../../../Collection/EquipmentCollection.md).includes
 * [Loop](../../../Collection/Loop/Loop.md).includes
 * [System](../../../Collection/System/System.md).includes
+* [Asset](../../Asset.md).hasPart
+* [Asset](../../Asset.md).isPartOf
+* [EquipmentCollection](../../../Collection/Equipment-.md).includes

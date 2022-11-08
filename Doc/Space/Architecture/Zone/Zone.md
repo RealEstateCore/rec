@@ -10,11 +10,11 @@ A sub-zone within or outside of a building defined to support some technology an
 ---
 
 ## Child interfaces
-* [Workspace](Workspace.md)
+* [AccessControlZone](AccessControl-.md)
+* [HVACZone](HVAC-.md)
+* [OccupancyZone](Occupancy-.md)
 * [ParkingSpace](ParkingSpace.md)
-* [OccupancyZone](OccupancyZone.md)
-* [AccessControlZone](AccessControlZone.md)
-* [HVACZone](HVACZone.md)
+* [Workspace](Workspace.md)
 
 ---
 
@@ -44,24 +44,24 @@ A sub-zone within or outside of a building defined to support some technology an
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
-* [Space](../../Space.md).isLocationOf
 * [Agent](../../../Agent/Agent.md).owns
-* [EquipmentCollection](../../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../../Collection/Portfolio.md).includes
-* [Lease](../../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../../Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url
+* [EquipmentCollection](../../../Collection/Equipment-.md).feeds
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../Architecture.md).isFedBy
 * [Meter](../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
-* [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn
 * [Asset](../../../Asset/Asset.md).locatedIn
-* [Space](../../Space.md).hasPart
-* [Space](../../Space.md).isPartOf
-* [RealEstate](../../../Collection/RealEstate.md).includes
+* [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn
 * [Campus](../../../Collection/Campus.md).includes
 * [Premises](../../../Collection/Premises.md).includes
+* [RealEstate](../../../Collection/RealEstate.md).includes
+* [Space](../../Space.md).hasPart
+* [Space](../../Space.md).isPartOf

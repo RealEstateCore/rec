@@ -7,12 +7,12 @@
 ---
 
 ## Child interfaces
+* [Alarm](Alarm/Alarm.md)
 * [Command](Command/Command.md)
-* [Status](Status/Status.md)
-* [Setpoint](Setpoint/Setpoint.md)
 * [Parameter](Parameter/Parameter.md)
 * [Sensor](Sensor/Sensor.md)
-* [Alarm](Alarm/Alarm.md)
+* [Setpoint](Setpoint/Setpoint.md)
+* [Status](Status/Status.md)
 
 ---
 
@@ -40,24 +40,24 @@
 ## Target Of
 ### General
 * [Point](#).isPointOf
-* [Space](../Space/Space.md).isLocationOf
 * [Agent](../Agent/Agent.md).owns
-* [EquipmentCollection](../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../Collection/Portfolio.md).includes
-* [Lease](../Event/Lease.md).leaseOf
-* [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
+* [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Document](../Information/Document/Document.md).documentTopic
 * [Document](../Information/Document/Document.md).url
+* [EquipmentCollection](../Collection/Equipment-.md).feeds
+* [Lease](../Event/Lease.md).leaseOf
+* [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../Collection/Portfolio.md).includes
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Meter](../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
-* [Asset](../Asset/Asset.md).hasPoint
-* [EquipmentCollection](../Collection/EquipmentCollection.md).hasPoint
-* [ServiceObject](../Information/ServiceObject/ServiceObject.md).producedBy
+* [ActuationEvent](../Event/Point-/ActuationEvent.md).targetPoint
 * [Architecture](../Space/Architecture/Architecture.md).hasPoint
-* [ActuationEvent](../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ObservationEvent](../Event/PointEvent/ObservationEvent.md).sourcePoint
-* [ExceptionEvent](../Event/PointEvent/ExceptionEvent.md).sourcePoint
+* [Asset](../Asset/Asset.md).hasPoint
+* [EquipmentCollection](../Collection/Equipment-.md).hasPoint
+* [ExceptionEvent](../Event/Point-/ExceptionEvent.md).sourcePoint
+* [ObservationEvent](../Event/Point-/ObservationEvent.md).sourcePoint
+* [ServiceObject](../Information/ServiceObject/ServiceObject.md).producedBy

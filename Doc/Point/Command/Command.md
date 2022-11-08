@@ -10,33 +10,33 @@ A Command is an output point that directly determines the behavior of equipment 
 ---
 
 ## Child interfaces
-* [Tint_Command](Tint_Command.md)
-* [Speed_Command](Speed_Command.md)
-* [Pump_Command](Pump_Command.md)
-* [Cooling_Command](Cooling_Command.md)
-* [Direction_Command](Direction_Command.md)
-* [Luminance_Command](Luminance_Command.md)
-* [Light_Command](Light_Command.md)
-* [Boiler_Command](Boiler_Command.md)
-* [Occupancy_Command](Occupancy_Command.md)
-* [Lead_Lag_Command](Lead_Lag_Command.md)
-* [Relay_Command](Relay_Command.md)
-* [Heating_Command](Heating_Command.md)
-* [Preheat_Command](Preheat_Command.md)
-* [Humidify_Command](Humidify_Command.md)
-* [Bypass_Command](Bypass_Command.md)
-* [Mode_Command](Mode_Command/Mode_Command.md)
-* [Reset_Command](Reset_Command/Reset_Command.md)
-* [Valve_Command](Valve_Command/Valve_Command.md)
-* [Disable_Command](Disable_Command/Disable_Command.md)
-* [Frequency_Command](Frequency_Command/Frequency_Command.md)
-* [Position_Command](Position_Command/Position_Command.md)
-* [On_Off_Command](On_Off_Command/On_Off_Command.md)
-* [Damper_Command](Damper_Command/Damper_Command.md)
-* [Fan_Command](Fan_Command/Fan_Command.md)
-* [Enable_Command](Enable_Command/Enable_Command.md)
-* [Load_Shed_Command](Load_Shed_Command/Load_Shed_Command.md)
-* [Override_Command](Override_Command/Override_Command.md)
+* [Boiler_Command](Boiler-.md)
+* [Bypass_Command](Bypass-.md)
+* [Cooling_Command](Cooling-.md)
+* [Damper_Command](Damper-/Damper_Command.md)
+* [Direction_Command](Direction-.md)
+* [Disable_Command](Disable-/Disable_Command.md)
+* [Enable_Command](Enable-/Enable_Command.md)
+* [Fan_Command](Fan-/Fan_Command.md)
+* [Frequency_Command](Frequency-/Frequency_Command.md)
+* [Heating_Command](Heating-.md)
+* [Humidify_Command](Humidify-.md)
+* [Lead_Lag_Command](Lead_Lag-.md)
+* [Light_Command](Light-.md)
+* [Load_Shed_Command](Load_Shed-/Load_Shed_Command.md)
+* [Luminance_Command](Luminance-.md)
+* [Mode_Command](Mode-/Mode_Command.md)
+* [Occupancy_Command](Occupancy-.md)
+* [On_Off_Command](On_Off-/On_Off_Command.md)
+* [Override_Command](Override-/Override_Command.md)
+* [Position_Command](Position-/Position_Command.md)
+* [Preheat_Command](Preheat-.md)
+* [Pump_Command](Pump-.md)
+* [Relay_Command](Relay-.md)
+* [Reset_Command](Reset-/Reset_Command.md)
+* [Speed_Command](Speed-.md)
+* [Tint_Command](Tint-.md)
+* [Valve_Command](Valve-/Valve_Command.md)
 
 ---
 
@@ -60,24 +60,24 @@ A Command is an output point that directly determines the behavior of equipment 
 ## Target Of
 ### General
 * [Point](../Point.md).isPointOf
-* [Space](../../Space/Space.md).isLocationOf
 * [Agent](../../Agent/Agent.md).owns
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [Lease](../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
+* [EquipmentCollection](../../Collection/Equipment-.md).feeds
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
-* [Asset](../../Asset/Asset.md).hasPoint
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).hasPoint
-* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy
+* [ActuationEvent](../../Event/Point-/ActuationEvent.md).targetPoint
 * [Architecture](../../Space/Architecture/Architecture.md).hasPoint
-* [ActuationEvent](../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ObservationEvent](../../Event/PointEvent/ObservationEvent.md).sourcePoint
-* [ExceptionEvent](../../Event/PointEvent/ExceptionEvent.md).sourcePoint
+* [Asset](../../Asset/Asset.md).hasPoint
+* [EquipmentCollection](../../Collection/Equipment-.md).hasPoint
+* [ExceptionEvent](../../Event/Point-/ExceptionEvent.md).sourcePoint
+* [ObservationEvent](../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy

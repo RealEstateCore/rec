@@ -11,7 +11,7 @@ Something which is placed inside of a building, but is not an integral part of t
 
 ## Child interfaces
 * [Equipment](Equipment/Equipment.md)
-* [ArchitecturalAsset](ArchitecturalAsset/ArchitecturalAsset.md)
+* [ArchitecturalAsset](Architectural-/ArchitecturalAsset.md)
 * [Furniture](Furniture/Furniture.md)
 
 ---
@@ -37,8 +37,6 @@ Something which is placed inside of a building, but is not an integral part of t
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|IPAddress|**en**: IP address||string|True|
-|MACAddress|**en**: MAC address||string|True|
 |assetTag|**en**: asset tag||string|True|
 |commissioningDate|**en**: commissioning date||date|True|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|
@@ -46,6 +44,8 @@ Something which is placed inside of a building, but is not an integral part of t
 |geometry|**en**: geometry|**en**: A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]].|string|True|
 |initialCost|**en**: initial cost||string|True|
 |installationDate|**en**: installation date||date|True|
+|IPAddress|**en**: IP address||string|True|
+|MACAddress|**en**: MAC address||string|True|
 |maintenanceInterval|**en**: maintenance interval||duration|True|
 |modelNumber|**en**: model number||string|True|
 |name|**en**: name||string|True|
@@ -58,18 +58,18 @@ Something which is placed inside of a building, but is not an integral part of t
 ## Target Of
 ### General
 * [Point](../Point/Point.md).isPointOf
-* [Space](../Space/Space.md).isLocationOf
 * [Agent](../Agent/Agent.md).owns
-* [EquipmentCollection](../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../Collection/Portfolio.md).includes
-* [Lease](../Event/Lease.md).leaseOf
-* [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
+* [Space](../Space/Space.md).isLocationOf
 * [Equipment](Equipment/Equipment.md).feeds
 * [Equipment](Equipment/Equipment.md).isFedBy
+* [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Document](../Information/Document/Document.md).documentTopic
 * [Document](../Information/Document/Document.md).url
+* [EquipmentCollection](../Collection/Equipment-.md).feeds
+* [Lease](../Event/Lease.md).leaseOf
+* [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../Collection/Portfolio.md).includes
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Meter](Equipment/Meter/Meter.md).meters
 ### Direct
 * [Asset](#).hasPart

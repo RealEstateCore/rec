@@ -10,8 +10,8 @@ An organization of any sort (e.g., a business, association, project, consortium,
 ---
 
 ## Child interfaces
-* [Department](Department.md)
 * [Company](Company.md)
+* [Department](Department.md)
 
 ---
 
@@ -40,35 +40,35 @@ An organization of any sort (e.g., a business, association, project, consortium,
 ## Target Of
 ### General
 * [Point](../../Point/Point.md).isPointOf
-* [Space](../../Space/Space.md).isLocationOf
 * [Agent](../Agent.md).owns
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [Lease](../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
+* [EquipmentCollection](../../Collection/Equipment-.md).feeds
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [Agent](../Agent.md).isMemberOf
 * [Organization](#).hasPart
 * [Organization](#).isPartOf
 ### Inherited
+* [Architecture](../../Space/Architecture/Architecture.md).architectedBy
+* [Architecture](../../Space/Architecture/Architecture.md).constructedBy
+* [Architecture](../../Space/Architecture/Architecture.md).operatedBy
+* [Architecture](../../Space/Architecture/Architecture.md).ownedBy
 * [Asset](../../Asset/Asset.md).commissionedBy
 * [Asset](../../Asset/Asset.md).installedBy
 * [Asset](../../Asset/Asset.md).manufacturedBy
 * [Asset](../../Asset/Asset.md).servicedBy
 * [Lease](../../Event/Lease.md).leasee
 * [Lease](../../Event/Lease.md).leasor
+* [Organization](#).hasMember
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).acknowledgedBy
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).closedBy
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).createdBy
-* [Architecture](../../Space/Architecture/Architecture.md).architectedBy
-* [Architecture](../../Space/Architecture/Architecture.md).constructedBy
-* [Architecture](../../Space/Architecture/Architecture.md).operatedBy
-* [Architecture](../../Space/Architecture/Architecture.md).ownedBy
-* [Organization](#).hasMember

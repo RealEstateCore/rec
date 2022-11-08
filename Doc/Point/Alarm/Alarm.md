@@ -10,27 +10,27 @@ Alarm points are signals (either audible or visual) that alert an operator to an
 ---
 
 ## Child interfaces
-* [Liquid_Detection_Alarm](Liquid_Detection_Alarm.md)
-* [Luminance_Alarm](Luminance_Alarm.md)
-* [Maintenance_Required_Alarm](Maintenance_Required_Alarm.md)
-* [Low_Battery_Alarm](Low_Battery_Alarm.md)
-* [Valve_Position_Alarm](Valve_Position_Alarm.md)
-* [Overload_Alarm](Overload_Alarm.md)
-* [Change_Filter_Alarm](Change_Filter_Alarm.md)
-* [Communication_Loss_Alarm](Communication_Loss_Alarm.md)
-* [Cycle_Alarm](Cycle_Alarm/Cycle_Alarm.md)
-* [Voltage_Alarm](Voltage_Alarm/Voltage_Alarm.md)
-* [Pressure_Alarm](Pressure_Alarm/Pressure_Alarm.md)
-* [Power_Alarm](Power_Alarm/Power_Alarm.md)
-* [Emergency_Alarm](Emergency_Alarm/Emergency_Alarm.md)
-* [Failure_Alarm](Failure_Alarm/Failure_Alarm.md)
-* [Water_Alarm](Water_Alarm/Water_Alarm.md)
-* [Air_Alarm](Air_Alarm/Air_Alarm.md)
-* [CO2_Alarm](CO2_Alarm/CO2_Alarm.md)
-* [Temperature_Alarm](Temperature_Alarm/Temperature_Alarm.md)
-* [Humidity_Alarm](Humidity_Alarm/Humidity_Alarm.md)
-* [Leak_Alarm](Leak_Alarm/Leak_Alarm.md)
-* [Smoke_Alarm](Smoke_Alarm/Smoke_Alarm.md)
+* [Air_Alarm](Air-/Air_Alarm.md)
+* [Change_Filter_Alarm](Change_Filter-.md)
+* [CO2_Alarm](CO2-/CO2_Alarm.md)
+* [Communication_Loss_Alarm](Communication_Loss-.md)
+* [Cycle_Alarm](Cycle-/Cycle_Alarm.md)
+* [Emergency_Alarm](Emergency-/Emergency_Alarm.md)
+* [Failure_Alarm](Failure-/Failure_Alarm.md)
+* [Humidity_Alarm](Humidity-/Humidity_Alarm.md)
+* [Leak_Alarm](Leak-/Leak_Alarm.md)
+* [Liquid_Detection_Alarm](Liquid_Detection-.md)
+* [Low_Battery_Alarm](Low_Battery-.md)
+* [Luminance_Alarm](Luminance-.md)
+* [Maintenance_Required_Alarm](Maintenance_Required-.md)
+* [Overload_Alarm](Overload-.md)
+* [Power_Alarm](Power-/Power_Alarm.md)
+* [Pressure_Alarm](Pressure-/Pressure_Alarm.md)
+* [Smoke_Alarm](Smoke-/Smoke_Alarm.md)
+* [Temperature_Alarm](Temperature-/Temperature_Alarm.md)
+* [Valve_Position_Alarm](Valve_Position-.md)
+* [Voltage_Alarm](Voltage-/Voltage_Alarm.md)
+* [Water_Alarm](Water-/Water_Alarm.md)
 
 ---
 
@@ -54,24 +54,24 @@ Alarm points are signals (either audible or visual) that alert an operator to an
 ## Target Of
 ### General
 * [Point](../Point.md).isPointOf
-* [Space](../../Space/Space.md).isLocationOf
 * [Agent](../../Agent/Agent.md).owns
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [Lease](../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
+* [EquipmentCollection](../../Collection/Equipment-.md).feeds
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
-* [Asset](../../Asset/Asset.md).hasPoint
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).hasPoint
-* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy
+* [ActuationEvent](../../Event/Point-/ActuationEvent.md).targetPoint
 * [Architecture](../../Space/Architecture/Architecture.md).hasPoint
-* [ActuationEvent](../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ObservationEvent](../../Event/PointEvent/ObservationEvent.md).sourcePoint
-* [ExceptionEvent](../../Event/PointEvent/ExceptionEvent.md).sourcePoint
+* [Asset](../../Asset/Asset.md).hasPoint
+* [EquipmentCollection](../../Collection/Equipment-.md).hasPoint
+* [ExceptionEvent](../../Event/Point-/ExceptionEvent.md).sourcePoint
+* [ObservationEvent](../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy

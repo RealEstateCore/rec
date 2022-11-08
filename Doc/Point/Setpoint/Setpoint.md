@@ -10,26 +10,26 @@ A Setpoint is an input value at which the desired property is set
 ---
 
 ## Child interfaces
-* [Enthalpy_Setpoint](Enthalpy_Setpoint.md)
-* [Dewpoint_Setpoint](Dewpoint_Setpoint.md)
-* [Frequency_Setpoint](Frequency_Setpoint.md)
-* [Damper_Position_Setpoint](Damper_Position_Setpoint.md)
-* [Luminance_Setpoint](Luminance_Setpoint.md)
-* [Illuminance_Setpoint](Illuminance_Setpoint.md)
-* [Current_Ratio_Setpoint](Current_Ratio_Setpoint.md)
-* [Voltage_Ratio_Setpoint](Voltage_Ratio_Setpoint.md)
-* [Demand_Setpoint](Demand_Setpoint/Demand_Setpoint.md)
-* [Deadband_Setpoint](Deadband_Setpoint/Deadband_Setpoint.md)
-* [Reset_Setpoint](Reset_Setpoint/Reset_Setpoint.md)
-* [Time_Setpoint](Time_Setpoint/Time_Setpoint.md)
-* [Pressure_Setpoint](Pressure_Setpoint/Pressure_Setpoint.md)
-* [Flow_Setpoint](Flow_Setpoint/Flow_Setpoint.md)
-* [Speed_Setpoint](Speed_Setpoint/Speed_Setpoint.md)
-* [Differential_Setpoint](Differential_Setpoint/Differential_Setpoint.md)
-* [Load_Setpoint](Load_Setpoint/Load_Setpoint.md)
-* [CO2_Setpoint](CO2_Setpoint/CO2_Setpoint.md)
-* [Temperature_Setpoint](Temperature_Setpoint/Temperature_Setpoint.md)
-* [Humidity_Setpoint](Humidity_Setpoint/Humidity_Setpoint.md)
+* [CO2_Setpoint](CO2-/CO2_Setpoint.md)
+* [Current_Ratio_Setpoint](Current_Ratio-.md)
+* [Damper_Position_Setpoint](Damper_Position-.md)
+* [Deadband_Setpoint](Deadband-/Deadband_Setpoint.md)
+* [Demand_Setpoint](Demand-/Demand_Setpoint.md)
+* [Dewpoint_Setpoint](Dewpoint-.md)
+* [Differential_Setpoint](Differential-/Differential_Setpoint.md)
+* [Enthalpy_Setpoint](Enthalpy-.md)
+* [Flow_Setpoint](Flow-/Flow_Setpoint.md)
+* [Frequency_Setpoint](Frequency-.md)
+* [Humidity_Setpoint](Humidity-/Humidity_Setpoint.md)
+* [Illuminance_Setpoint](Illuminance-.md)
+* [Load_Setpoint](Load-/Load_Setpoint.md)
+* [Luminance_Setpoint](Luminance-.md)
+* [Pressure_Setpoint](Pressure-/Pressure_Setpoint.md)
+* [Reset_Setpoint](Reset-/Reset_Setpoint.md)
+* [Speed_Setpoint](Speed-/Speed_Setpoint.md)
+* [Temperature_Setpoint](Temperature-/Temperature_Setpoint.md)
+* [Time_Setpoint](Time-/Time_Setpoint.md)
+* [Voltage_Ratio_Setpoint](Voltage_Ratio-.md)
 
 ---
 
@@ -53,24 +53,24 @@ A Setpoint is an input value at which the desired property is set
 ## Target Of
 ### General
 * [Point](../Point.md).isPointOf
-* [Space](../../Space/Space.md).isLocationOf
 * [Agent](../../Agent/Agent.md).owns
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [Lease](../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
+* [EquipmentCollection](../../Collection/Equipment-.md).feeds
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
-* [Asset](../../Asset/Asset.md).hasPoint
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).hasPoint
-* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy
+* [ActuationEvent](../../Event/Point-/ActuationEvent.md).targetPoint
 * [Architecture](../../Space/Architecture/Architecture.md).hasPoint
-* [ActuationEvent](../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ObservationEvent](../../Event/PointEvent/ObservationEvent.md).sourcePoint
-* [ExceptionEvent](../../Event/PointEvent/ExceptionEvent.md).sourcePoint
+* [Asset](../../Asset/Asset.md).hasPoint
+* [EquipmentCollection](../../Collection/Equipment-.md).hasPoint
+* [ExceptionEvent](../../Event/Point-/ExceptionEvent.md).sourcePoint
+* [ObservationEvent](../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy

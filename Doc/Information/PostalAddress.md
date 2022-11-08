@@ -24,18 +24,18 @@
 ## Target Of
 ### General
 * [Point](../Point/Point.md).isPointOf
-* [Space](../Space/Space.md).isLocationOf
 * [Agent](../Agent/Agent.md).owns
-* [EquipmentCollection](../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../Collection/Portfolio.md).includes
-* [Lease](../Event/Lease.md).leaseOf
-* [PointOfInterest](PointOfInterest.md).objectOfInterest
+* [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Document](Document/Document.md).documentTopic
 * [Document](Document/Document.md).url
+* [EquipmentCollection](../Collection/Equipment-.md).feeds
+* [Lease](../Event/Lease.md).leaseOf
+* [PointOfInterest](PointOfInterest.md).objectOfInterest
+* [Portfolio](../Collection/Portfolio.md).includes
 * [ServiceObject](ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Meter](../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [Architecture](../Space/Architecture/Architecture.md).address

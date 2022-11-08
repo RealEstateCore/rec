@@ -10,14 +10,14 @@ Parameter points are configuration settings used to guide the operation of equip
 ---
 
 ## Child interfaces
-* [Tolerance_Parameter](Tolerance_Parameter/Tolerance_Parameter.md)
-* [Alarm_Sensitivity_Parameter](Alarm_Sensitivity_Parameter/Alarm_Sensitivity_Parameter.md)
-* [PID_Parameter](PID_Parameter/PID_Parameter.md)
+* [Alarm_Sensitivity_Parameter](Alarm_Sensitivity-/Alarm_Sensitivity_Parameter.md)
+* [Delay_Parameter](Delay-/Delay_Parameter.md)
+* [Humidity_Parameter](Humidity-/Humidity_Parameter.md)
 * [Limit](Limit/Limit.md)
-* [Delay_Parameter](Delay_Parameter/Delay_Parameter.md)
-* [Load_Parameter](Load_Parameter/Load_Parameter.md)
-* [Temperature_Parameter](Temperature_Parameter/Temperature_Parameter.md)
-* [Humidity_Parameter](Humidity_Parameter/Humidity_Parameter.md)
+* [Load_Parameter](Load-/Load_Parameter.md)
+* [PID_Parameter](PID-/PID_Parameter.md)
+* [Temperature_Parameter](Temperature-/Temperature_Parameter.md)
+* [Tolerance_Parameter](Tolerance-/Tolerance_Parameter.md)
 
 ---
 
@@ -41,24 +41,24 @@ Parameter points are configuration settings used to guide the operation of equip
 ## Target Of
 ### General
 * [Point](../Point.md).isPointOf
-* [Space](../../Space/Space.md).isLocationOf
 * [Agent](../../Agent/Agent.md).owns
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [Lease](../../Event/Lease.md).leaseOf
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
+* [EquipmentCollection](../../Collection/Equipment-.md).feeds
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
-* [Asset](../../Asset/Asset.md).hasPoint
-* [EquipmentCollection](../../Collection/EquipmentCollection.md).hasPoint
-* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy
+* [ActuationEvent](../../Event/Point-/ActuationEvent.md).targetPoint
 * [Architecture](../../Space/Architecture/Architecture.md).hasPoint
-* [ActuationEvent](../../Event/PointEvent/ActuationEvent.md).targetPoint
-* [ObservationEvent](../../Event/PointEvent/ObservationEvent.md).sourcePoint
-* [ExceptionEvent](../../Event/PointEvent/ExceptionEvent.md).sourcePoint
+* [Asset](../../Asset/Asset.md).hasPoint
+* [EquipmentCollection](../../Collection/Equipment-.md).hasPoint
+* [ExceptionEvent](../../Event/Point-/ExceptionEvent.md).sourcePoint
+* [ObservationEvent](../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy
