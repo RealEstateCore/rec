@@ -7,9 +7,9 @@
 ---
 
 ## Child interfaces
-* [ComputerCart](ComputerCart.md)
-* [MailroomCart](MailroomCart.md)
 * [PrinterCart](PrinterCart.md)
+* [MailroomCart](MailroomCart.md)
+* [ComputerCart](ComputerCart.md)
 
 ---
 

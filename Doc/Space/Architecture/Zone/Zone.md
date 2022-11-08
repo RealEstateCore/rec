@@ -11,10 +11,10 @@ A sub-zone within or outside of a building defined to support some technology an
 
 ## Child interfaces
 * [Workspace](Workspace.md)
-* [AccessControlZone](AccessControlZone.md)
 * [ParkingSpace](ParkingSpace.md)
-* [HVACZone](HVACZone.md)
 * [OccupancyZone](OccupancyZone.md)
+* [AccessControlZone](AccessControlZone.md)
+* [HVACZone](HVACZone.md)
 
 ---
 

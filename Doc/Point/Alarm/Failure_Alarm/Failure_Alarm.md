@@ -10,8 +10,8 @@ Alarms that indicate the failure of devices, equipment, systems and control loop
 ---
 
 ## Child interfaces
-* [Unit_Failure_Alarm](Unit_Failure_Alarm.md)
 * [Sensor_Failure_Alarm](Sensor_Failure_Alarm.md)
+* [Unit_Failure_Alarm](Unit_Failure_Alarm.md)
 
 ---
 

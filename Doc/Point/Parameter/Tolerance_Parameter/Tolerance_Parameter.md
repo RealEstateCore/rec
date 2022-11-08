@@ -10,8 +10,8 @@ difference between upper and lower limits of size for a given nominal dimension 
 ---
 
 ## Child interfaces
-* [Humidity_Tolerance_Parameter](Humidity_Tolerance_Parameter.md)
 * [Temperature_Tolerance_Parameter](Temperature_Tolerance_Parameter.md)
+* [Humidity_Tolerance_Parameter](Humidity_Tolerance_Parameter.md)
 
 ---
 

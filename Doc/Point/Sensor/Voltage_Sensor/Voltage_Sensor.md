@@ -10,8 +10,8 @@ Measures the voltage of an electrical device or object
 ---
 
 ## Child interfaces
-* [DC_Bus_Voltage_Sensor](DC_Bus_Voltage_Sensor.md)
 * [Battery_Voltage_Sensor](Battery_Voltage_Sensor.md)
+* [DC_Bus_Voltage_Sensor](DC_Bus_Voltage_Sensor.md)
 * [Output_Voltage_Sensor](Output_Voltage_Sensor.md)
 
 ---

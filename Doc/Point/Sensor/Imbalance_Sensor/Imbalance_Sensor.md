@@ -10,8 +10,8 @@ A sensor which measures difference (imbalance) between phases of an electrical s
 ---
 
 ## Child interfaces
-* [Current_Imbalance_Sensor](Current_Imbalance_Sensor.md)
 * [Voltage_Imbalance_Sensor](Voltage_Imbalance_Sensor.md)
+* [Current_Imbalance_Sensor](Current_Imbalance_Sensor.md)
 
 ---
 

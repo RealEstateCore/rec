@@ -10,8 +10,8 @@ Measures the height/level of water in some container
 ---
 
 ## Child interfaces
-* [Collection_Basin_Water_Level_Sensor](Collection_Basin_Water_Level_Sensor.md)
 * [Deionised_Water_Level_Sensor](Deionised_Water_Level_Sensor.md)
+* [Collection_Basin_Water_Level_Sensor](Collection_Basin_Water_Level_Sensor.md)
 
 ---
 

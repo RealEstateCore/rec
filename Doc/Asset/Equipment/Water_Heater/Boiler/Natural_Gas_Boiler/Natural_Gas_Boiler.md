@@ -10,8 +10,8 @@ A closed, pressure vessel that uses natural gas for heating water or other fluid
 ---
 
 ## Child interfaces
-* [Noncondensing_Natural_Gas_Boiler](Noncondensing_Natural_Gas_Boiler.md)
 * [Condensing_Natural_Gas_Boiler](Condensing_Natural_Gas_Boiler.md)
+* [Noncondensing_Natural_Gas_Boiler](Noncondensing_Natural_Gas_Boiler.md)
 
 ---
 

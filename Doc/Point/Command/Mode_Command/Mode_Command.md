@@ -10,9 +10,9 @@ Controls the operating mode of a device or controller
 ---
 
 ## Child interfaces
-* [Box_Mode_Command](Box_Mode_Command.md)
-* [Maintenance_Mode_Command](Maintenance_Mode_Command.md)
 * [Automatic_Mode_Command](Automatic_Mode_Command.md)
+* [Maintenance_Mode_Command](Maintenance_Mode_Command.md)
+* [Box_Mode_Command](Box_Mode_Command.md)
 
 ---
 

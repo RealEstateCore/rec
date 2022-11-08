@@ -10,8 +10,8 @@ A parameter that places a lower or upper bound on the range of permitted values 
 ---
 
 ## Child interfaces
-* [Max_Discharge_Air_Temperature_Setpoint_Limit](../../../Limit/Max_Limit/Max_Temperature_Setpoint_Limit/Max_Discharge_Air_Temperature_Setpoint_Limit.md)
 * [Min_Discharge_Air_Temperature_Setpoint_Limit](../../../Limit/Min_Limit/Min_Temperature_Setpoint_Limit/Min_Discharge_Air_Temperature_Setpoint_Limit.md)
+* [Max_Discharge_Air_Temperature_Setpoint_Limit](../../../Limit/Max_Limit/Max_Temperature_Setpoint_Limit/Max_Discharge_Air_Temperature_Setpoint_Limit.md)
 
 ---
 

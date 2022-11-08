@@ -10,8 +10,8 @@ Sets the temperature of chilled water
 ---
 
 ## Child interfaces
-* [Leaving_Chilled_Water_Temperature_Setpoint](../Leaving_Water_Temperature_Setpoint/Leaving_Chilled_Water_Temperature_Setpoint.md)
 * [Entering_Chilled_Water_Temperature_Setpoint](../Entering_Water_Temperature_Setpoint/Entering_Chilled_Water_Temperature_Setpoint.md)
+* [Leaving_Chilled_Water_Temperature_Setpoint](../Leaving_Water_Temperature_Setpoint/Leaving_Chilled_Water_Temperature_Setpoint.md)
 
 ---
 

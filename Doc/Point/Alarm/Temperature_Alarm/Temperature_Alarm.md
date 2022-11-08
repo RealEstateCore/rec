@@ -10,10 +10,10 @@ An alarm that indicates the off-normal conditions associated with temperature.
 ---
 
 ## Child interfaces
-* [Low_Temperature_Alarm](Low_Temperature_Alarm/Low_Temperature_Alarm.md)
-* [High_Temperature_Alarm](High_Temperature_Alarm/High_Temperature_Alarm.md)
-* [Water_Temperature_Alarm](../Water_Alarm/Water_Temperature_Alarm/Water_Temperature_Alarm.md)
 * [Air_Temperature_Alarm](Air_Temperature_Alarm/Air_Temperature_Alarm.md)
+* [High_Temperature_Alarm](High_Temperature_Alarm/High_Temperature_Alarm.md)
+* [Low_Temperature_Alarm](Low_Temperature_Alarm/Low_Temperature_Alarm.md)
+* [Water_Temperature_Alarm](../Water_Alarm/Water_Temperature_Alarm/Water_Temperature_Alarm.md)
 
 ---
 

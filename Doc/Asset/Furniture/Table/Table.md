@@ -7,11 +7,11 @@
 ---
 
 ## Child interfaces
-* [CoffeeTable](CoffeeTable.md)
-* [ConferenceTable](ConferenceTable.md)
 * [EndTable](EndTable.md)
 * [ReceptionTable](ReceptionTable.md)
 * [FoldingTable](FoldingTable.md)
+* [ConferenceTable](ConferenceTable.md)
+* [CoffeeTable](CoffeeTable.md)
 
 ---
 

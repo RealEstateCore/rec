@@ -10,8 +10,8 @@ Sets the target flow rate of entering water
 ---
 
 ## Child interfaces
-* [Entering_Hot_Water_Flow_Setpoint](../Hot_Water_Flow_Setpoint/Entering_Hot_Water_Flow_Setpoint.md)
 * [Entering_Chilled_Water_Flow_Setpoint](Entering_Chilled_Water_Flow_Setpoint.md)
+* [Entering_Hot_Water_Flow_Setpoint](../Hot_Water_Flow_Setpoint/Entering_Hot_Water_Flow_Setpoint.md)
 
 ---
 

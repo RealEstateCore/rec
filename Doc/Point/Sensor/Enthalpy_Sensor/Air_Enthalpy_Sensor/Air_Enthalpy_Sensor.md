@@ -10,8 +10,8 @@ Measures the total heat content of air
 ---
 
 ## Child interfaces
-* [Outside_Air_Enthalpy_Sensor](Outside_Air_Enthalpy_Sensor.md)
 * [Return_Air_Enthalpy_Sensor](Return_Air_Enthalpy_Sensor.md)
+* [Outside_Air_Enthalpy_Sensor](Outside_Air_Enthalpy_Sensor.md)
 
 ---
 

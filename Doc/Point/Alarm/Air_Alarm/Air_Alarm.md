@@ -9,8 +9,8 @@
 ## Child interfaces
 * [Air_Temperature_Alarm](../Temperature_Alarm/Air_Temperature_Alarm/Air_Temperature_Alarm.md)
 * [Air_Flow_Alarm](Air_Flow_Alarm/Air_Flow_Alarm.md)
-* [Discharge_Air_Smoke_Detection_Alarm](../Smoke_Alarm/Smoke_Detection_Alarm/Discharge_Air_Smoke_Detection_Alarm.md)
 * [Supply_Air_Smoke_Detection_Alarm](../Smoke_Alarm/Smoke_Detection_Alarm/Supply_Air_Smoke_Detection_Alarm.md)
+* [Discharge_Air_Smoke_Detection_Alarm](../Smoke_Alarm/Smoke_Detection_Alarm/Discharge_Air_Smoke_Detection_Alarm.md)
 
 ---
 

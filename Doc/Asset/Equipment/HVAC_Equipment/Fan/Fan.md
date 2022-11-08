@@ -10,17 +10,17 @@ Any device with two or more blades or vanes attached to a rotating shaft used to
 ---
 
 ## Child interfaces
+* [Booster_Fan](Booster_Fan.md)
 * [Exhaust_Fan](Exhaust_Fan.md)
-* [Return_Fan](Return_Fan.md)
-* [Ceiling_Fan](Ceiling_Fan.md)
-* [Outside_Fan](Outside_Fan.md)
-* [Standby_Fan](Standby_Fan.md)
-* [Relief_Fan](Relief_Fan.md)
-* [Discharge_Fan](Discharge_Fan.md)
 * [Supply_Fan](Supply_Fan.md)
+* [Discharge_Fan](Discharge_Fan.md)
+* [Relief_Fan](Relief_Fan.md)
+* [Standby_Fan](Standby_Fan.md)
 * [Transfer_Fan](Transfer_Fan.md)
 * [Cooling_Tower_Fan](Cooling_Tower_Fan.md)
-* [Booster_Fan](Booster_Fan.md)
+* [Ceiling_Fan](Ceiling_Fan.md)
+* [Return_Fan](Return_Fan.md)
+* [Outside_Fan](Outside_Fan.md)
 
 ---
 

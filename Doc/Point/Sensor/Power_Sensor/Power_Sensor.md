@@ -10,8 +10,8 @@ Measures the amount of instantaneous power consumed
 ---
 
 ## Child interfaces
-* [Thermal_Power_Sensor](Thermal_Power_Sensor/Thermal_Power_Sensor.md)
 * [Electric_Power_Sensor](Electric_Power_Sensor/Electric_Power_Sensor.md)
+* [Thermal_Power_Sensor](Thermal_Power_Sensor/Thermal_Power_Sensor.md)
 
 ---
 

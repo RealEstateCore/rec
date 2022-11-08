@@ -10,9 +10,9 @@ Steam, hydronic, or electric heating device located at or near the floor.
 ---
 
 ## Child interfaces
-* [Hot_Water_Baseboard_Radiator](../Hot_Water_Radiator/Hot_Water_Baseboard_Radiator.md)
-* [Steam_Baseboard_Radiator](../Steam_Radiator/Steam_Baseboard_Radiator.md)
 * [Electric_Baseboard_Radiator](../Electric_Radiator/Electric_Baseboard_Radiator.md)
+* [Steam_Baseboard_Radiator](../Steam_Radiator/Steam_Baseboard_Radiator.md)
+* [Hot_Water_Baseboard_Radiator](../Hot_Water_Radiator/Hot_Water_Baseboard_Radiator.md)
 
 ---
 

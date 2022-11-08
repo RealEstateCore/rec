@@ -10,9 +10,9 @@ Measures the amount of some substance that is consumed or used, over some period
 ---
 
 ## Child interfaces
-* [Energy_Usage_Sensor](Energy_Usage_Sensor.md)
-* [Steam_Usage_Sensor](Steam_Usage_Sensor.md)
 * [Natural_Gas_Usage_Sensor](Natural_Gas_Usage_Sensor.md)
+* [Steam_Usage_Sensor](Steam_Usage_Sensor.md)
+* [Energy_Usage_Sensor](Energy_Usage_Sensor.md)
 * [Water_Usage_Sensor](Water_Usage_Sensor/Water_Usage_Sensor.md)
 
 ---

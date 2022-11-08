@@ -10,8 +10,8 @@ Controls the frequency of a device's operation (e.g. rotational frequency)
 ---
 
 ## Child interfaces
-* [Max_Frequency_Command](Max_Frequency_Command.md)
 * [Min_Frequency_Command](Min_Frequency_Command.md)
+* [Max_Frequency_Command](Max_Frequency_Command.md)
 
 ---
 

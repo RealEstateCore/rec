@@ -10,8 +10,8 @@ The level of a building, a.k.a. storey, floor, etc.
 ---
 
 ## Child interfaces
-* [BasementLevel](BasementLevel.md)
 * [RoofLevel](RoofLevel.md)
+* [BasementLevel](BasementLevel.md)
 * [MezzanineLevel](MezzanineLevel.md)
 
 ---

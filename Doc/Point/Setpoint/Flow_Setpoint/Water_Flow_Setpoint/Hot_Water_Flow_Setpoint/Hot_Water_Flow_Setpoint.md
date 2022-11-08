@@ -10,8 +10,8 @@ Sets the target flow rate of hot water
 ---
 
 ## Child interfaces
-* [Entering_Hot_Water_Flow_Setpoint](Entering_Hot_Water_Flow_Setpoint.md)
 * [Leaving_Hot_Water_Flow_Setpoint](../Leaving_Water_Flow_Setpoint/Leaving_Hot_Water_Flow_Setpoint.md)
+* [Entering_Hot_Water_Flow_Setpoint](Entering_Hot_Water_Flow_Setpoint.md)
 
 ---
 

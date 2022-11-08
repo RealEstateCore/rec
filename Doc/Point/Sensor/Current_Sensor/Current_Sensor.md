@@ -10,8 +10,8 @@ Senses the amperes of electrical current passing through the sensor
 ---
 
 ## Child interfaces
-* [Load_Current_Sensor](Load_Current_Sensor.md)
 * [Motor_Current_Sensor](Motor_Current_Sensor.md)
+* [Load_Current_Sensor](Load_Current_Sensor.md)
 * [Current_Output_Sensor](Current_Output_Sensor/Current_Output_Sensor.md)
 
 ---

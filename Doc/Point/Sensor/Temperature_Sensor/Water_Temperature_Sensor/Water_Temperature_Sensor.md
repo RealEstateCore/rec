@@ -13,12 +13,12 @@ Measures the temperature of water
 * [Entering_Water_Temperature_Sensor](Entering_Water_Temperature_Sensor.md)
 * [Collection_Basin_Water_Temperature_Sensor](Collection_Basin_Water_Temperature_Sensor.md)
 * [Leaving_Hot_Water_Temperature_Sensor](Leaving_Hot_Water_Temperature_Sensor/Leaving_Hot_Water_Temperature_Sensor.md)
-* [Domestic_Hot_Water_Temperature_Sensor](Domestic_Hot_Water_Temperature_Sensor/Domestic_Hot_Water_Temperature_Sensor.md)
+* [Chilled_Water_Temperature_Sensor](Chilled_Water_Temperature_Sensor/Chilled_Water_Temperature_Sensor.md)
 * [Leaving_Water_Temperature_Sensor](Leaving_Water_Temperature_Sensor/Leaving_Water_Temperature_Sensor.md)
+* [Entering_Hot_Water_Temperature_Sensor](Entering_Hot_Water_Temperature_Sensor/Entering_Hot_Water_Temperature_Sensor.md)
 * [Water_Differential_Temperature_Sensor](Water_Differential_Temperature_Sensor/Water_Differential_Temperature_Sensor.md)
 * [Condenser_Water_Temperature_Sensor](Condenser_Water_Temperature_Sensor/Condenser_Water_Temperature_Sensor.md)
-* [Entering_Hot_Water_Temperature_Sensor](Entering_Hot_Water_Temperature_Sensor/Entering_Hot_Water_Temperature_Sensor.md)
-* [Chilled_Water_Temperature_Sensor](Chilled_Water_Temperature_Sensor/Chilled_Water_Temperature_Sensor.md)
+* [Domestic_Hot_Water_Temperature_Sensor](Domestic_Hot_Water_Temperature_Sensor/Domestic_Hot_Water_Temperature_Sensor.md)
 
 ---
 

@@ -10,17 +10,17 @@ Sets temperature for heating
 ---
 
 ## Child interfaces
-* [Occupied_Heating_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Occupied_Heating_Temperature_Deadband_Setpoint.md)
-* [Occupied_Heating_Temperature_Setpoint](Occupied_Heating_Temperature_Setpoint.md)
-* [Unoccupied_Heating_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Unoccupied_Heating_Temperature_Deadband_Setpoint.md)
 * [Unoccupied_Heating_Temperature_Setpoint](Unoccupied_Heating_Temperature_Setpoint.md)
+* [Occupied_Heating_Temperature_Setpoint](Occupied_Heating_Temperature_Setpoint.md)
+* [Occupied_Heating_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Occupied_Heating_Temperature_Deadband_Setpoint.md)
+* [Unoccupied_Heating_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Unoccupied_Heating_Temperature_Deadband_Setpoint.md)
 * [Heating_Supply_Air_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Supply_Air_Temperature_Deadband_Setpoint/Heating_Supply_Air_Temperature_Deadband_Setpoint.md)
+* [Unoccupied_Air_Temperature_Heating_Setpoint](../Air_Temperature_Setpoint/Unoccupied_Air_Temperature_Setpoint/Unoccupied_Air_Temperature_Heating_Setpoint.md)
 * [Effective_Air_Temperature_Heating_Setpoint](../Air_Temperature_Setpoint/Effective_Air_Temperature_Setpoint/Effective_Air_Temperature_Heating_Setpoint.md)
 * [Supply_Air_Temperature_Heating_Setpoint](../Air_Temperature_Setpoint/Supply_Air_Temperature_Setpoint/Supply_Air_Temperature_Heating_Setpoint.md)
-* [Open_Heating_Valve_Outside_Air_Temperature_Setpoint](../Air_Temperature_Setpoint/Outside_Air_Temperature_Setpoint/Open_Heating_Valve_Outside_Air_Temperature_Setpoint.md)
-* [Unoccupied_Air_Temperature_Heating_Setpoint](../Air_Temperature_Setpoint/Unoccupied_Air_Temperature_Setpoint/Unoccupied_Air_Temperature_Heating_Setpoint.md)
 * [Zone_Air_Heating_Temperature_Setpoint](../Air_Temperature_Setpoint/Zone_Air_Temperature_Setpoint/Zone_Air_Heating_Temperature_Setpoint.md)
 * [Occupied_Air_Temperature_Heating_Setpoint](../Air_Temperature_Setpoint/Occupied_Air_Temperature_Setpoint/Occupied_Air_Temperature_Heating_Setpoint.md)
+* [Open_Heating_Valve_Outside_Air_Temperature_Setpoint](../Air_Temperature_Setpoint/Outside_Air_Temperature_Setpoint/Open_Heating_Valve_Outside_Air_Temperature_Setpoint.md)
 * [Discharge_Air_Temperature_Heating_Setpoint](../Air_Temperature_Setpoint/Discharge_Air_Temperature_Setpoint/Discharge_Air_Temperature_Heating_Setpoint/Discharge_Air_Temperature_Heating_Setpoint.md)
 
 ---

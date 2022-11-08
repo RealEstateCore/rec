@@ -11,8 +11,8 @@ A device that is a component of the air distribution system that controls the de
 
 ## Child interfaces
 * [Displacement_Flow_Air_Diffuser](Displacement_Flow_Air_Diffuser.md)
-* [Jet_Nozzle_Air_Diffuser](Jet_Nozzle_Air_Diffuser.md)
 * [Laminar_Flow_Air_Diffuser](Laminar_Flow_Air_Diffuser.md)
+* [Jet_Nozzle_Air_Diffuser](Jet_Nozzle_Air_Diffuser.md)
 
 ---
 

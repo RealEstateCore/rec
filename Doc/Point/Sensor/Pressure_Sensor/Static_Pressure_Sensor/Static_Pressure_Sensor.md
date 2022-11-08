@@ -10,10 +10,10 @@ Measures resistance to airflow in a heating and cooling system's components and 
 ---
 
 ## Child interfaces
-* [Building_Air_Static_Pressure_Sensor](Building_Air_Static_Pressure_Sensor.md)
-* [Discharge_Air_Static_Pressure_Sensor](Discharge_Air_Static_Pressure_Sensor.md)
 * [Supply_Air_Static_Pressure_Sensor](Supply_Air_Static_Pressure_Sensor.md)
 * [Underfloor_Air_Plenum_Static_Pressure_Sensor](Underfloor_Air_Plenum_Static_Pressure_Sensor.md)
+* [Building_Air_Static_Pressure_Sensor](Building_Air_Static_Pressure_Sensor.md)
+* [Discharge_Air_Static_Pressure_Sensor](Discharge_Air_Static_Pressure_Sensor.md)
 * [Exhaust_Air_Static_Pressure_Sensor](Exhaust_Air_Static_Pressure_Sensor/Exhaust_Air_Static_Pressure_Sensor.md)
 
 ---

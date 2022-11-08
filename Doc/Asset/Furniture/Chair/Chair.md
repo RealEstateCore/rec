@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [FoldingChair](FoldingChair.md)
 * [OfficeChair](OfficeChair.md)
+* [FoldingChair](FoldingChair.md)
 
 ---
 

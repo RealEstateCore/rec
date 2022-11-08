@@ -10,8 +10,8 @@ Senses the amperes of electrical current produced as output by a device
 ---
 
 ## Child interfaces
-* [Photovoltaic_Current_Output_Sensor](Photovoltaic_Current_Output_Sensor.md)
 * [PV_Current_Output_Sensor](PV_Current_Output_Sensor.md)
+* [Photovoltaic_Current_Output_Sensor](Photovoltaic_Current_Output_Sensor.md)
 
 ---
 

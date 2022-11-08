@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [Discharge_Air_Proportional_Gain_Parameter](Discharge_Air_Proportional_Gain_Parameter.md)
 * [Supply_Air_Proportional_Gain_Parameter](Supply_Air_Proportional_Gain_Parameter.md)
+* [Discharge_Air_Proportional_Gain_Parameter](Discharge_Air_Proportional_Gain_Parameter.md)
 
 ---
 

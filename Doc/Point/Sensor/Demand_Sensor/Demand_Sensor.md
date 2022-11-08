@@ -11,8 +11,8 @@ Measures the amount of power consumed by the use of some process; typically foun
 
 ## Child interfaces
 * [Peak_Demand_Sensor](Peak_Demand_Sensor.md)
-* [Heating_Demand_Sensor](Heating_Demand_Sensor/Heating_Demand_Sensor.md)
 * [Cooling_Demand_Sensor](Cooling_Demand_Sensor/Cooling_Demand_Sensor.md)
+* [Heating_Demand_Sensor](Heating_Demand_Sensor/Heating_Demand_Sensor.md)
 
 ---
 

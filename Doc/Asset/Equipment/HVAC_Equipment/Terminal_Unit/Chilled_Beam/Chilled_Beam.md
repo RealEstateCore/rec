@@ -10,8 +10,8 @@ A device with an integrated coil that performs sensible heating of a space via c
 ---
 
 ## Child interfaces
-* [Passive_Chilled_Beam](Passive_Chilled_Beam.md)
 * [Active_Chilled_Beam](Active_Chilled_Beam.md)
+* [Passive_Chilled_Beam](Passive_Chilled_Beam.md)
 
 ---
 

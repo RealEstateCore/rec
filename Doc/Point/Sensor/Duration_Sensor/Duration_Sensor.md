@@ -10,8 +10,8 @@ Measures the duration of a phenomenon or event
 ---
 
 ## Child interfaces
-* [Rain_Duration_Sensor](Rain_Duration_Sensor.md)
 * [On_Timer_Sensor](On_Timer_Sensor.md)
+* [Rain_Duration_Sensor](Rain_Duration_Sensor.md)
 * [Run_Time_Sensor](Run_Time_Sensor.md)
 
 ---

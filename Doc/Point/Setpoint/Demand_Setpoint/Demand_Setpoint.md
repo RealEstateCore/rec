@@ -10,9 +10,9 @@ Sets the rate required for a process
 ---
 
 ## Child interfaces
-* [Preheat_Demand_Setpoint](Preheat_Demand_Setpoint.md)
 * [Cooling_Demand_Setpoint](Cooling_Demand_Setpoint.md)
 * [Heating_Demand_Setpoint](Heating_Demand_Setpoint.md)
+* [Preheat_Demand_Setpoint](Preheat_Demand_Setpoint.md)
 * [Air_Flow_Demand_Setpoint](../Flow_Setpoint/Air_Flow_Setpoint/Air_Flow_Demand_Setpoint/Air_Flow_Demand_Setpoint.md)
 
 ---

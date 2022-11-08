@@ -10,9 +10,9 @@ Measures the current position of a component in terms of a fraction of its full 
 ---
 
 ## Child interfaces
-* [Sash_Position_Sensor](Sash_Position_Sensor.md)
 * [Valve_Position_Sensor](Valve_Position_Sensor.md)
 * [Damper_Position_Sensor](Damper_Position_Sensor.md)
+* [Sash_Position_Sensor](Sash_Position_Sensor.md)
 
 ---
 

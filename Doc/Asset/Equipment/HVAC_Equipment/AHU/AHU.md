@@ -12,8 +12,8 @@ Assembly consisting of sections containing a fan or fans and other necessary equ
 ## Child interfaces
 * [PAU](PAU.md)
 * [RTU](RTU.md)
-* [DOAS](DOAS.md)
 * [DDAHU](DDAHU.md)
+* [DOAS](DOAS.md)
 * [Dual_Duct_Air_Handling_Unit](Dual_Duct_Air_Handling_Unit.md)
 * [Makeup_Air_Unit](Makeup_Air_Unit.md)
 * [MAU](MAU.md)

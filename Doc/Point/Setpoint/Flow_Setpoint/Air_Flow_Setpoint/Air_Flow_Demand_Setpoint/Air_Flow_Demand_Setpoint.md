@@ -10,8 +10,8 @@ Sets the rate of air flow required for a process
 ---
 
 ## Child interfaces
-* [Discharge_Air_Flow_Demand_Setpoint](../Discharge_Air_Flow_Setpoint/Discharge_Air_Flow_Demand_Setpoint.md)
 * [Supply_Air_Flow_Demand_Setpoint](../Supply_Air_Flow_Setpoint/Supply_Air_Flow_Demand_Setpoint.md)
+* [Discharge_Air_Flow_Demand_Setpoint](../Discharge_Air_Flow_Setpoint/Discharge_Air_Flow_Demand_Setpoint.md)
 
 ---
 

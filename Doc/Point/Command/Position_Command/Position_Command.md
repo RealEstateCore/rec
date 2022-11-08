@@ -10,8 +10,8 @@ Controls or reports the position of some object
 ---
 
 ## Child interfaces
-* [Damper_Position_Command](Damper_Position_Command.md)
 * [Valve_Position_Command](../Valve_Command/Valve_Position_Command.md)
+* [Damper_Position_Command](Damper_Position_Command.md)
 
 ---
 

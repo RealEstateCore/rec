@@ -10,8 +10,8 @@ The static pressure of air within exhaust regions of an HVAC system
 ---
 
 ## Child interfaces
-* [Average_Exhaust_Air_Static_Pressure_Sensor](Average_Exhaust_Air_Static_Pressure_Sensor.md)
 * [Lowest_Exhaust_Air_Static_Pressure_Sensor](Lowest_Exhaust_Air_Static_Pressure_Sensor.md)
+* [Average_Exhaust_Air_Static_Pressure_Sensor](Average_Exhaust_Air_Static_Pressure_Sensor.md)
 
 ---
 

@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [ShelterGasLock](ShelterGasLock.md)
 * [ShelterRoom](ShelterRoom.md)
+* [ShelterGasLock](ShelterGasLock.md)
 
 ---
 

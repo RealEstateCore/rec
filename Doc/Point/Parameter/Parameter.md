@@ -10,14 +10,14 @@ Parameter points are configuration settings used to guide the operation of equip
 ---
 
 ## Child interfaces
-* [PID_Parameter](PID_Parameter/PID_Parameter.md)
-* [Load_Parameter](Load_Parameter/Load_Parameter.md)
-* [Delay_Parameter](Delay_Parameter/Delay_Parameter.md)
-* [Alarm_Sensitivity_Parameter](Alarm_Sensitivity_Parameter/Alarm_Sensitivity_Parameter.md)
-* [Limit](Limit/Limit.md)
-* [Humidity_Parameter](Humidity_Parameter/Humidity_Parameter.md)
 * [Tolerance_Parameter](Tolerance_Parameter/Tolerance_Parameter.md)
+* [Alarm_Sensitivity_Parameter](Alarm_Sensitivity_Parameter/Alarm_Sensitivity_Parameter.md)
+* [PID_Parameter](PID_Parameter/PID_Parameter.md)
+* [Limit](Limit/Limit.md)
+* [Delay_Parameter](Delay_Parameter/Delay_Parameter.md)
+* [Load_Parameter](Load_Parameter/Load_Parameter.md)
 * [Temperature_Parameter](Temperature_Parameter/Temperature_Parameter.md)
+* [Humidity_Parameter](Humidity_Parameter/Humidity_Parameter.md)
 
 ---
 

@@ -10,8 +10,8 @@ An alarm that indicates the off-normal conditions associated with the temperatur
 ---
 
 ## Child interfaces
-* [High_Supply_Air_Temperature_Alarm](High_Supply_Air_Temperature_Alarm.md)
 * [Low_Supply_Air_Temperature_Alarm](Low_Supply_Air_Temperature_Alarm.md)
+* [High_Supply_Air_Temperature_Alarm](High_Supply_Air_Temperature_Alarm.md)
 
 ---
 

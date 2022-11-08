@@ -10,8 +10,8 @@ Refrigerating machine used to transfer heat between fluids. Chillers are either 
 ---
 
 ## Child interfaces
-* [Centrifugal_Chiller](Centrifugal_Chiller.md)
 * [Absorption_Chiller](Absorption_Chiller.md)
+* [Centrifugal_Chiller](Centrifugal_Chiller.md)
 
 ---
 

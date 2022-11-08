@@ -10,9 +10,9 @@ Commands that reset a flag, property or value to its default
 ---
 
 ## Child interfaces
+* [Speed_Reset_Command](Speed_Reset_Command.md)
 * [Filter_Reset_Command](Filter_Reset_Command.md)
 * [Fault_Reset_Command](Fault_Reset_Command.md)
-* [Speed_Reset_Command](Speed_Reset_Command.md)
 
 ---
 

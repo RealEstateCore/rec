@@ -11,8 +11,8 @@ Measures the magnitude of velocity of some form of movement
 
 ## Child interfaces
 * [Differential_Speed_Sensor](Differential_Speed_Sensor.md)
-* [Motor_Speed_Sensor](Motor_Speed_Sensor.md)
 * [Wind_Speed_Sensor](Wind_Speed_Sensor.md)
+* [Motor_Speed_Sensor](Motor_Speed_Sensor.md)
 
 ---
 

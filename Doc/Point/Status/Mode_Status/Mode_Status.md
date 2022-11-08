@@ -10,11 +10,11 @@ Indicates which mode a system, device or control loop is currently in
 ---
 
 ## Child interfaces
-* [Zone_Air_Conditioning_Mode_Status](Zone_Air_Conditioning_Mode_Status.md)
 * [Speed_Mode_Status](../Speed_Status/Speed_Mode_Status.md)
-* [Operating_Mode_Status](Operating_Mode_Status/Operating_Mode_Status.md)
+* [Zone_Air_Conditioning_Mode_Status](Zone_Air_Conditioning_Mode_Status.md)
 * [Unoccupied_Mode_Status](Unoccupied_Mode_Status/Unoccupied_Mode_Status.md)
 * [Cooling_Mode_Status](Cooling_Mode_Status/Cooling_Mode_Status.md)
+* [Operating_Mode_Status](Operating_Mode_Status/Operating_Mode_Status.md)
 * [Occupied_Mode_Status](Occupied_Mode_Status/Occupied_Mode_Status.md)
 * [Heating_Mode_Status](Heating_Mode_Status/Heating_Mode_Status.md)
 

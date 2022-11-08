@@ -10,9 +10,9 @@ Measures the difference between total pressure and static pressure
 ---
 
 ## Child interfaces
+* [Supply_Air_Velocity_Pressure_Sensor](Supply_Air_Velocity_Pressure_Sensor.md)
 * [Exhaust_Air_Velocity_Pressure_Sensor](Exhaust_Air_Velocity_Pressure_Sensor.md)
 * [Discharge_Air_Velocity_Pressure_Sensor](Discharge_Air_Velocity_Pressure_Sensor.md)
-* [Supply_Air_Velocity_Pressure_Sensor](Supply_Air_Velocity_Pressure_Sensor.md)
 
 ---
 

@@ -11,13 +11,13 @@ An administrative grouping of entities that are adressed and treated as a unit f
 
 ## Child interfaces
 * [PV_Array](PV_Array.md)
+* [EquipmentCollection](EquipmentCollection.md)
 * [Apartment](Apartment.md)
 * [RealEstate](RealEstate.md)
-* [Campus](Campus.md)
 * [FurnitureCollection](FurnitureCollection.md)
+* [Campus](Campus.md)
 * [Premises](Premises.md)
 * [Portfolio](Portfolio.md)
-* [EquipmentCollection](EquipmentCollection.md)
 * [Loop](Loop/Loop.md)
 * [System](System/System.md)
 

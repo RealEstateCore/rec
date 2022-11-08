@@ -10,8 +10,8 @@ The target temperature for return air, often used as an approximation of zone ai
 ---
 
 ## Child interfaces
-* [Effective_Return_Air_Temperature_Setpoint](Effective_Return_Air_Temperature_Setpoint.md)
 * [Unoccupied_Return_Air_Temperature_Setpoint](../Unoccupied_Air_Temperature_Setpoint/Unoccupied_Return_Air_Temperature_Setpoint.md)
+* [Effective_Return_Air_Temperature_Setpoint](Effective_Return_Air_Temperature_Setpoint.md)
 * [Occupied_Return_Air_Temperature_Setpoint](Occupied_Return_Air_Temperature_Setpoint.md)
 
 ---

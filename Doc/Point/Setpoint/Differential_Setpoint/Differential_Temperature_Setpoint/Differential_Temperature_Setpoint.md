@@ -10,8 +10,8 @@ A type of Setpoints that is related to the difference between two temperature me
 ---
 
 ## Child interfaces
-* [Water_Differential_Temperature_Setpoint](Water_Differential_Temperature_Setpoint.md)
 * [Differential_Air_Temperature_Setpoint](Differential_Air_Temperature_Setpoint.md)
+* [Water_Differential_Temperature_Setpoint](Water_Differential_Temperature_Setpoint.md)
 
 ---
 

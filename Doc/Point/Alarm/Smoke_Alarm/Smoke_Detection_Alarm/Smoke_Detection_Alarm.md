@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [Discharge_Air_Smoke_Detection_Alarm](Discharge_Air_Smoke_Detection_Alarm.md)
 * [Supply_Air_Smoke_Detection_Alarm](Supply_Air_Smoke_Detection_Alarm.md)
+* [Discharge_Air_Smoke_Detection_Alarm](Discharge_Air_Smoke_Detection_Alarm.md)
 
 ---
 

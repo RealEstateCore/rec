@@ -10,8 +10,8 @@ A valve that controls air temperature by modulating the amount of hot water flow
 ---
 
 ## Child interfaces
-* [Return_Heating_Valve](Return_Heating_Valve.md)
 * [Reheat_Valve](Reheat_Valve.md)
+* [Return_Heating_Valve](Return_Heating_Valve.md)
 * [Hot_Water_Valve](../../Valve/Water_Valve/Hot_Water_Valve/Hot_Water_Valve.md)
 
 ---

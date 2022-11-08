@@ -10,8 +10,8 @@ Measures the rate of flow in a chilled water circuit
 ---
 
 ## Child interfaces
-* [Leaving_Chilled_Water_Flow_Sensor](../Leaving_Water_Flow_Sensor/Leaving_Chilled_Water_Flow_Sensor.md)
 * [Entering_Chilled_Water_Flow_Sensor](../Entering_Water_Flow_Sensor/Entering_Chilled_Water_Flow_Sensor.md)
+* [Leaving_Chilled_Water_Flow_Sensor](../Leaving_Water_Flow_Sensor/Leaving_Chilled_Water_Flow_Sensor.md)
 
 ---
 

@@ -10,10 +10,10 @@ Setpoints used in reset strategies
 ---
 
 ## Child interfaces
+* [Discharge_Air_Flow_Reset_Setpoint](Discharge_Air_Flow_Reset_Setpoint/Discharge_Air_Flow_Reset_Setpoint.md)
 * [Supply_Air_Flow_Reset_Setpoint](Supply_Air_Flow_Reset_Setpoint/Supply_Air_Flow_Reset_Setpoint.md)
 * [Temperature_Low_Reset_Setpoint](Temperature_Low_Reset_Setpoint/Temperature_Low_Reset_Setpoint.md)
 * [Temperature_High_Reset_Setpoint](Temperature_High_Reset_Setpoint/Temperature_High_Reset_Setpoint.md)
-* [Discharge_Air_Flow_Reset_Setpoint](Discharge_Air_Flow_Reset_Setpoint/Discharge_Air_Flow_Reset_Setpoint.md)
 
 ---
 

@@ -10,8 +10,8 @@ Sets discharge air flow when occupied
 ---
 
 ## Child interfaces
-* [Occupied_Heating_Discharge_Air_Flow_Setpoint](Occupied_Heating_Discharge_Air_Flow_Setpoint.md)
 * [Occupied_Cooling_Discharge_Air_Flow_Setpoint](Occupied_Cooling_Discharge_Air_Flow_Setpoint.md)
+* [Occupied_Heating_Discharge_Air_Flow_Setpoint](Occupied_Heating_Discharge_Air_Flow_Setpoint.md)
 
 ---
 

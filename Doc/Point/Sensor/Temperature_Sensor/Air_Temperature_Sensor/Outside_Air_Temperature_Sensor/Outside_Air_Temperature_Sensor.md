@@ -10,8 +10,8 @@ Measures the temperature of outside air
 ---
 
 ## Child interfaces
-* [Intake_Air_Temperature_Sensor](Intake_Air_Temperature_Sensor.md)
 * [Outside_Air_Wet_Bulb_Temperature_Sensor](Outside_Air_Wet_Bulb_Temperature_Sensor.md)
+* [Intake_Air_Temperature_Sensor](Intake_Air_Temperature_Sensor.md)
 * [Outside_Air_Temperature_Enable_Differential_Sensor](Outside_Air_Temperature_Enable_Differential_Sensor/Outside_Air_Temperature_Enable_Differential_Sensor.md)
 
 ---

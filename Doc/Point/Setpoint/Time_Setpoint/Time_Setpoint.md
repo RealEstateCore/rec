@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [Acceleration_Time_Setpoint](Acceleration_Time_Setpoint.md)
 * [Deceleration_Time_Setpoint](Deceleration_Time_Setpoint.md)
+* [Acceleration_Time_Setpoint](Acceleration_Time_Setpoint.md)
 
 ---
 

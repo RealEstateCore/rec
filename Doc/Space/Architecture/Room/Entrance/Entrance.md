@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [ServiceEntrance](ServiceEntrance.md)
 * [MainEntrance](MainEntrance.md)
+* [ServiceEntrance](ServiceEntrance.md)
 
 ---
 

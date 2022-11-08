@@ -10,8 +10,8 @@ Sets temperature of domestic hot water
 ---
 
 ## Child interfaces
-* [Leaving_Domestic_Hot_Water_Temperature_Setpoint](Leaving_Domestic_Hot_Water_Temperature_Setpoint.md)
 * [Entering_Domestic_Hot_Water_Temperature_Setpoint](Entering_Domestic_Hot_Water_Temperature_Setpoint.md)
+* [Leaving_Domestic_Hot_Water_Temperature_Setpoint](Leaving_Domestic_Hot_Water_Temperature_Setpoint.md)
 
 ---
 

@@ -10,8 +10,8 @@ Sets the target flow rate of leaving water
 ---
 
 ## Child interfaces
-* [Leaving_Chilled_Water_Flow_Setpoint](Leaving_Chilled_Water_Flow_Setpoint.md)
 * [Leaving_Hot_Water_Flow_Setpoint](Leaving_Hot_Water_Flow_Setpoint.md)
+* [Leaving_Chilled_Water_Flow_Setpoint](Leaving_Chilled_Water_Flow_Setpoint.md)
 
 ---
 

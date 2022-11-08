@@ -11,8 +11,8 @@ Measure the amount of force acting on a unit area
 
 ## Child interfaces
 * [Velocity_Pressure_Sensor](Velocity_Pressure_Sensor/Velocity_Pressure_Sensor.md)
-* [Differential_Pressure_Sensor](Differential_Pressure_Sensor/Differential_Pressure_Sensor.md)
 * [Static_Pressure_Sensor](Static_Pressure_Sensor/Static_Pressure_Sensor.md)
+* [Differential_Pressure_Sensor](Differential_Pressure_Sensor/Differential_Pressure_Sensor.md)
 
 ---
 

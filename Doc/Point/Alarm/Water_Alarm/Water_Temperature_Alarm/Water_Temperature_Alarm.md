@@ -10,8 +10,8 @@ An alarm that indicates the off-normal conditions associated with temperature of
 ---
 
 ## Child interfaces
-* [Leaving_Water_Temperature_Alarm](Leaving_Water_Temperature_Alarm.md)
 * [Entering_Water_Temperature_Alarm](Entering_Water_Temperature_Alarm.md)
+* [Leaving_Water_Temperature_Alarm](Leaving_Water_Temperature_Alarm.md)
 
 ---
 

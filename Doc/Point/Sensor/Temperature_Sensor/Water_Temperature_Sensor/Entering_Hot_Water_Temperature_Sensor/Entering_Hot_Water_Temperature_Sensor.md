@@ -10,10 +10,10 @@ Measures the temperature of water enteringed to a hot water system
 ---
 
 ## Child interfaces
-* [Entering_Domestic_Hot_Water_Temperature_Sensor](Entering_Domestic_Hot_Water_Temperature_Sensor.md)
 * [Entering_High_Temperature_Hot_Water_Temperature_Sensor](Entering_High_Temperature_Hot_Water_Temperature_Sensor.md)
 * [Hot_Water_Differential_Temperature_Sensor](../Leaving_Hot_Water_Temperature_Sensor/Hot_Water_Differential_Temperature_Sensor.md)
 * [Entering_Medium_Temperature_Hot_Water_Temperature_Sensor](Entering_Medium_Temperature_Hot_Water_Temperature_Sensor.md)
+* [Entering_Domestic_Hot_Water_Temperature_Sensor](Entering_Domestic_Hot_Water_Temperature_Sensor.md)
 
 ---
 

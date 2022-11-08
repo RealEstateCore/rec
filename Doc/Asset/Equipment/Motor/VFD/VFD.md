@@ -10,9 +10,9 @@ Electronic device that varies its output frequency to vary the rotating speed of
 ---
 
 ## Child interfaces
-* [Fan_VFD](Fan_VFD.md)
-* [Heat_Wheel_VFD](Heat_Wheel_VFD.md)
 * [Pump_VFD](Pump_VFD.md)
+* [Heat_Wheel_VFD](Heat_Wheel_VFD.md)
+* [Fan_VFD](Fan_VFD.md)
 
 ---
 

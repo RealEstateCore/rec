@@ -13,8 +13,8 @@ A confined building structure.
 * [Hospital](Hospital.md)
 * [Stadium](Stadium.md)
 * [School](School.md)
-* [ShoppingMall](ShoppingMall.md)
 * [VirtualBuilding](VirtualBuilding.md)
+* [ShoppingMall](ShoppingMall.md)
 
 ---
 

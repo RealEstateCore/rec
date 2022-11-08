@@ -10,8 +10,8 @@ An alarm that indicates the off-normal conditions associated with the concentrat
 ---
 
 ## Child interfaces
-* [High_Humidity_Alarm](High_Humidity_Alarm.md)
 * [Low_Humidity_Alarm](Low_Humidity_Alarm.md)
+* [High_Humidity_Alarm](High_Humidity_Alarm.md)
 
 ---
 

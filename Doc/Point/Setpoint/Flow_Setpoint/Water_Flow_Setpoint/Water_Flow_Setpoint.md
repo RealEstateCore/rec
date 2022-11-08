@@ -12,10 +12,10 @@ Sets the target flow rate of water
 ## Child interfaces
 * [Condenser_Water_Flow_Setpoint](Condenser_Water_Flow_Setpoint.md)
 * [Bypass_Water_Flow_Setpoint](Bypass_Water_Flow_Setpoint.md)
-* [Entering_Water_Flow_Setpoint](Entering_Water_Flow_Setpoint/Entering_Water_Flow_Setpoint.md)
+* [Hot_Water_Flow_Setpoint](Hot_Water_Flow_Setpoint/Hot_Water_Flow_Setpoint.md)
 * [Chilled_Water_Flow_Setpoint](Chilled_Water_Flow_Setpoint/Chilled_Water_Flow_Setpoint.md)
 * [Leaving_Water_Flow_Setpoint](Leaving_Water_Flow_Setpoint/Leaving_Water_Flow_Setpoint.md)
-* [Hot_Water_Flow_Setpoint](Hot_Water_Flow_Setpoint/Hot_Water_Flow_Setpoint.md)
+* [Entering_Water_Flow_Setpoint](Entering_Water_Flow_Setpoint/Entering_Water_Flow_Setpoint.md)
 
 ---
 

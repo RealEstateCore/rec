@@ -10,8 +10,8 @@ An alarm that indicates the off-normal conditions associated with pressure.
 ---
 
 ## Child interfaces
-* [Low_Suction_Pressure_Alarm](Low_Suction_Pressure_Alarm.md)
 * [High_Head_Pressure_Alarm](High_Head_Pressure_Alarm.md)
+* [Low_Suction_Pressure_Alarm](Low_Suction_Pressure_Alarm.md)
 
 ---
 

@@ -11,8 +11,8 @@ Measures the rate of flow of some substance
 
 ## Child interfaces
 * [Natural_Gas_Flow_Sensor](Natural_Gas_Flow_Sensor.md)
-* [Air_Flow_Sensor](Air_Flow_Sensor/Air_Flow_Sensor.md)
 * [Water_Flow_Sensor](Water_Flow_Sensor/Water_Flow_Sensor.md)
+* [Air_Flow_Sensor](Air_Flow_Sensor/Air_Flow_Sensor.md)
 
 ---
 

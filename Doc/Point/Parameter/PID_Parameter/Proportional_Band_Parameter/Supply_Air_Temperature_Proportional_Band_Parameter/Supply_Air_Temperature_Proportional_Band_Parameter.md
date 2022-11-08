@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [Heating_Supply_Air_Temperature_Proportional_Band_Parameter](Heating_Supply_Air_Temperature_Proportional_Band_Parameter.md)
 * [Cooling_Supply_Air_Temperature_Proportional_Band_Parameter](Cooling_Supply_Air_Temperature_Proportional_Band_Parameter.md)
+* [Heating_Supply_Air_Temperature_Proportional_Band_Parameter](Heating_Supply_Air_Temperature_Proportional_Band_Parameter.md)
 
 ---
 

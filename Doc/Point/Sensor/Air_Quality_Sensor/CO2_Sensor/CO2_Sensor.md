@@ -10,8 +10,8 @@ Measures properties of CO2 in air
 ---
 
 ## Child interfaces
-* [CO2_Differential_Sensor](CO2_Differential_Sensor.md)
 * [Return_Air_CO2_Sensor](Return_Air_CO2_Sensor.md)
+* [CO2_Differential_Sensor](CO2_Differential_Sensor.md)
 * [Outside_Air_CO2_Sensor](Outside_Air_CO2_Sensor.md)
 * [CO2_Level_Sensor](CO2_Level_Sensor.md)
 

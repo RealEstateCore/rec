@@ -10,8 +10,8 @@ Sets flow
 ---
 
 ## Child interfaces
-* [Air_Flow_Setpoint](Air_Flow_Setpoint/Air_Flow_Setpoint.md)
 * [Water_Flow_Setpoint](Water_Flow_Setpoint/Water_Flow_Setpoint.md)
+* [Air_Flow_Setpoint](Air_Flow_Setpoint/Air_Flow_Setpoint.md)
 
 ---
 

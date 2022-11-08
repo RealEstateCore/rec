@@ -7,8 +7,8 @@
 ---
 
 ## Child interfaces
-* [LaboratoryDry](LaboratoryDry.md)
 * [LaboratoryWet](LaboratoryWet.md)
+* [LaboratoryDry](LaboratoryDry.md)
 
 ---
 

@@ -10,8 +10,8 @@ A parameter that places an upper bound on the range of permitted values of a Tem
 ---
 
 ## Child interfaces
-* [Max_Discharge_Air_Temperature_Setpoint_Limit](Max_Discharge_Air_Temperature_Setpoint_Limit.md)
 * [Max_Supply_Air_Temperature_Setpoint_Limit](../../../Temperature_Parameter/Air_Temperature_Setpoint_Limit/Supply_Air_Temperature_Setpoint_Limit/Max_Supply_Air_Temperature_Setpoint_Limit.md)
+* [Max_Discharge_Air_Temperature_Setpoint_Limit](Max_Discharge_Air_Temperature_Setpoint_Limit.md)
 
 ---
 
