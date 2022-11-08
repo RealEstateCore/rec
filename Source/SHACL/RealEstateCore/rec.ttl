@@ -77,6 +77,13 @@ rec:Agent
       sh:name "is member of" ;
       sh:nodeKind sh:IRI ;
     ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:owns ;
+      sh:description "Indicates ownership of some thing, e.g., a building, an asset, an organization, etc." ;
+      sh:name "owns" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
 .
 rec:AlarmObject
   rdf:type rdfs:Class ;
