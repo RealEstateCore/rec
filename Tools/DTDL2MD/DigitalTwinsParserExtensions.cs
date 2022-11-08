@@ -16,6 +16,12 @@ namespace DTDL2MD
             return allInterfaces.Where(childInterface => childInterface.Extends.Contains(iface));
         }
 
+        public static IEnumerable<DTRelationshipInfo> UntargetedRelationships(this IReadOnlyDictionary<Dtmi, DTEntityInfo> ontology)
+        {
+            IEnumerable<DTRelationshipInfo> allRelationships = ontology.Values.Where(entity => entity is DTRelationshipInfo).Select(entity => (DTRelationshipInfo)entity);
+            return allRelationships.Where(relationship => relationship.Target == null);
+        }
+
         public static IEnumerable<DTRelationshipInfo> RelationshipsTargeting(this IReadOnlyDictionary<Dtmi, DTEntityInfo> ontology, Dtmi target)
         {
             IEnumerable<DTRelationshipInfo> allRelationships = ontology.Values.Where(entity => entity is DTRelationshipInfo).Select(entity => (DTRelationshipInfo)entity);
