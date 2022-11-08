@@ -240,6 +240,15 @@ namespace DTDL2MD
                 // Incoming Relationship links to this interface
                 output.Add("\n---\n");
                 output.Add("## Target Of");
+                if (ontology.UntargetedRelationships().Any()) {
+                    output.Add("### General");
+                    foreach (DTRelationshipInfo relationship in ontology.UntargetedRelationships())
+                    {
+                        DTEntityInfo definedIn = ontology[relationship.DefinedIn];
+                        output.Add($"* [{GetApiName(definedIn)}]({GetRelativePath(iface, relationship.DefinedIn)}).{relationship.Name}");
+                    }
+                }
+
                 if (ontology.RelationshipsTargeting(iface.Id).Any())
                 {
                     output.Add("### Direct");
