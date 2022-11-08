@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Dimmer;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "A switch providing continuous control over all or part of a lighting installation; typically potentiometer-based"
+  },
+  "displayName": {
+    "en": "Dimmer"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Switch;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

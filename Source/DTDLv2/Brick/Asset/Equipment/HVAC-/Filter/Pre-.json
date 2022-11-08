@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Pre_Filter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "A filter installed in front of a more efficient filter to extend the life of the more expensive higher efficiency filter"
+  },
+  "displayName": {
+    "en": "Pre Filter"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Filter;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

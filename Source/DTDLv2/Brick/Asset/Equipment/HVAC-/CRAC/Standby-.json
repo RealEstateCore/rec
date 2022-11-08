@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Standby_CRAC;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "A CRAC that is activated as part of a lead/lag operation or when an alarm occurs in a primary unit"
+  },
+  "displayName": {
+    "en": "Standby CRAC"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:CRAC;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

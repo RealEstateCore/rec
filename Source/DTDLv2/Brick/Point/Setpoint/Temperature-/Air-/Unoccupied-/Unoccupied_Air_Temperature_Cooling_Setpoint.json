@@ -1,0 +1,40 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Unoccupied_Air_Temperature_Cooling_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Sets temperature of air when unoccupied for cooling"
+  },
+  "displayName": {
+    "en": "Unoccupied Air Temperature Cooling Setpoint"
+  },
+  "extends": [
+    "dtmi:org:brickschema:schema:Brick:Unoccupied_Air_Temperature_Setpoint;1",
+    "dtmi:org:brickschema:schema:Brick:Cooling_Temperature_Setpoint;1"
+  ],
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

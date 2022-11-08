@@ -1,0 +1,40 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Static_Pressure_Deadband_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Sets the size of a deadband of static pressure of discharge air"
+  },
+  "displayName": {
+    "en": "Discharge Air Static Pressure Deadband Setpoint"
+  },
+  "extends": [
+    "dtmi:org:brickschema:schema:Brick:Static_Pressure_Deadband_Setpoint;1",
+    "dtmi:org:brickschema:schema:Brick:Discharge_Air_Static_Pressure_Setpoint;1"
+  ],
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

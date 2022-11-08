@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Return_Air_Humidity_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Humidity setpoint for return air"
+  },
+  "displayName": {
+    "en": "Return Air Humidity Setpoint"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Humidity_Setpoint;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

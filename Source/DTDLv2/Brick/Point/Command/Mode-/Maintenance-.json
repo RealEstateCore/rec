@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Maintenance_Mode_Command;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Controls whether or not a device or controller is operating in \"Maintenance\" mode"
+  },
+  "displayName": {
+    "en": "Maintenance Mode Command"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Mode_Command;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

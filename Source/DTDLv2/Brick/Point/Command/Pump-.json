@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Pump_Command;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Controls or reports the speed of a pump (typically as a proportion of its full pumping capacity)"
+  },
+  "displayName": {
+    "en": "Pump Command"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Command;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

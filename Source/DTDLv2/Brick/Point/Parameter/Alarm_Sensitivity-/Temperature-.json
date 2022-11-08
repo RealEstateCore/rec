@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Temperature_Alarm_Sensitivity_Parameter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "A parameter indicates the sensitivity to activate a temperature alarm."
+  },
+  "displayName": {
+    "en": "Temperature Alarm Sensitivity Parameter"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Alarm_Sensitivity_Parameter;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

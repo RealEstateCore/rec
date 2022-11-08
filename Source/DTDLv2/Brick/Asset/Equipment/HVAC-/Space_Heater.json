@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Space_Heater;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "A heater used to warm the air in an enclosed area, such as a room or office"
+  },
+  "displayName": {
+    "en": "Space Heater"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:HVAC_Equipment;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

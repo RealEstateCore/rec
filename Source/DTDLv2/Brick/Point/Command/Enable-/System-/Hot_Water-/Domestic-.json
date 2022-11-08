@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_System_Enable_Command;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Enables operation of the domestic hot water system"
+  },
+  "displayName": {
+    "en": "Domestic Hot Water System Enable Command"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Hot_Water_System_Enable_Command;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

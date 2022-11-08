@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Outside_Face_Surface_Temperature_Sensor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Measures the outside surface (relative to the space) of the radiant panel of a radiant heating and cooling HVAC system."
+  },
+  "displayName": {
+    "en": "Outside Face Surface Temperature Sensor"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Radiant_Panel_Temperature_Sensor;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

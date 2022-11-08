@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Isolation_Valve;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "An isolation valve installed in the condenser water loop"
+  },
+  "displayName": {
+    "en": "Condenser Water Isolation Valve"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Isolation_Valve;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

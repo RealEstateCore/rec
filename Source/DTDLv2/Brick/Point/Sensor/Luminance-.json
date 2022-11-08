@@ -1,0 +1,58 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Luminance_Sensor;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "value",
+            "schema": "double"
+          },
+          {
+            "name": "timestamp",
+            "schema": "dateTime"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Measures the luminous intensity per unit area of light travelling in a given direction"
+  },
+  "displayName": {
+    "en": "Luminance Sensor"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Sensor;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

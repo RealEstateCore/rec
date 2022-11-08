@@ -1,0 +1,34 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Derivative_Gain_Parameter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "displayName": {
+    "en": "Derivative Gain Parameter"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Gain_Parameter;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Chiller;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Cooling capacity"
+      },
+      "name": "coolingCapacity",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "value",
+            "schema": "string"
+          },
+          {
+            "name": "hasUnit",
+            "schema": {
+              "@type": "Enum",
+              "enumValues": [
+                {
+                  "enumValue": "BTU_IT_PER_HR",
+                  "name": "BTU_IT_PER_HR"
+                },
+                {
+                  "enumValue": "BTU_TH_PER_HR",
+                  "name": "BTU_TH_PER_HR"
+                },
+                {
+                  "enumValue": "TON_FG",
+                  "name": "TON_FG"
+                },
+                {
+                  "enumValue": "W",
+                  "name": "W"
+                }
+              ],
+              "valueSchema": "string"
+            }
+          }
+        ]
+      },
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Refrigerating machine used to transfer heat between fluids. Chillers are either direct expansion with a compressor or absorption type."
+  },
+  "displayName": {
+    "en": "Chiller"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:HVAC_Equipment;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

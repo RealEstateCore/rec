@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Enables hot water system when outside air temperature reaches the indicated value"
+  },
+  "displayName": {
+    "en": "Enable Hot Water System Outside Air Temperature Setpoint"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_Setpoint;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

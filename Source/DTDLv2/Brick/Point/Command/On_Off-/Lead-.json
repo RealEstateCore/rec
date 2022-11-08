@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Lead_On_Off_Command;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "Controls the active/inactive status of the \"lead\" part of a lead/lag system"
+  },
+  "displayName": {
+    "en": "Lead On Off Command"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:On_Off_Command;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

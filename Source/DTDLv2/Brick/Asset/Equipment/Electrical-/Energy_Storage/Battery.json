@@ -1,0 +1,37 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Battery;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "name": "tags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      }
+    }
+  ],
+  "description": {
+    "en": "A container that stores chemical energy that can be converted into electricity and used as a source of power"
+  },
+  "displayName": {
+    "en": "Battery"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Energy_Storage;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}
