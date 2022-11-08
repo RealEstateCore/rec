@@ -29,11 +29,12 @@ IReadOnlyDictionary<Dtmi, DTEntityInfo> ontology = await modelParser.ParseAsync(
 Utf8JsonWriter writer = new Utf8JsonWriter(Console.OpenStandardOutput(), new JsonWriterOptions { Indented = true });
 writer.WriteStartArray();
 
-// Iterate over all interfaces ordered by depth, writing them to output JSON array
+// Iterate over all interfaces ordered by depth and ID, writing them to output JSON array
 foreach (DTInterfaceInfo iFace in ontology.Values
     .Where(entity => entity is DTInterfaceInfo)
     .Select(iFace => (DTInterfaceInfo)iFace)
-    .OrderBy(iFace => GetDepth(iFace)))
+    .OrderBy(iFace => GetDepth(iFace))
+    .ThenBy(iFace => iFace.Id))
 {
     iFace.GetJsonLd().WriteTo(writer);
 }
