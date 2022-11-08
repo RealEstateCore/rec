@@ -59,6 +59,21 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 ---
 
 ## Target Of
+### General
+* [Point](../../Point/Point.md).isPointOf
+* [Space](../Space.md).isLocationOf
+* [Agent](../../Agent/Agent.md).owns
+* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
+* [Portfolio](../../Collection/Portfolio.md).includes
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Equipment](../../Asset/Equipment/Equipment.md).feeds
+* [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [Document](../../Information/Document/Document.md).documentTopic
+* [Document](../../Information/Document/Document.md).url
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Architecture](#).isFedBy
+* [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [BuildingElement](../../BuildingElement/BuildingElement.md).locatedIn
 * [RealEstate](../../Collection/RealEstate.md).includes

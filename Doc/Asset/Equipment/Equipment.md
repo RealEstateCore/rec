@@ -55,6 +55,21 @@ devices that serve all or part of the building and may include electric power, l
 ---
 
 ## Target Of
+### General
+* [Point](../../Point/Point.md).isPointOf
+* [Space](../../Space/Space.md).isLocationOf
+* [Agent](../../Agent/Agent.md).owns
+* [EquipmentCollection](../../Collection/EquipmentCollection.md).feeds
+* [Portfolio](../../Collection/Portfolio.md).includes
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Equipment](#).feeds
+* [Equipment](#).isFedBy
+* [Document](../../Information/Document/Document.md).documentTopic
+* [Document](../../Information/Document/Document.md).url
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
+* [Meter](Meter/Meter.md).meters
 ### Direct
 * [EquipmentCollection](../../Collection/EquipmentCollection.md).includes
 * [Loop](../../Collection/Loop/Loop.md).includes

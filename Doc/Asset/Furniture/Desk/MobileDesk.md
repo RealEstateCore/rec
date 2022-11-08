@@ -21,6 +21,21 @@
 ---
 
 ## Target Of
+### General
+* [Point](../../../Point/Point.md).isPointOf
+* [Space](../../../Space/Space.md).isLocationOf
+* [Agent](../../../Agent/Agent.md).owns
+* [EquipmentCollection](../../../Collection/EquipmentCollection.md).feeds
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Equipment](../../Equipment/Equipment.md).feeds
+* [Equipment](../../Equipment/Equipment.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
+* [Meter](../../Equipment/Meter/Meter.md).meters
 ### Inherited
 * [Asset](../../Asset.md).hasPart
 * [Asset](../../Asset.md).isPartOf
