@@ -1,7 +1,6 @@
 ﻿using CommandLine;
 using Microsoft.Azure.DigitalTwins.Parser;
 using Microsoft.Azure.DigitalTwins.Parser.Models;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace DTDL2MD
@@ -344,20 +343,20 @@ namespace DTDL2MD
             // Construct parent directory structure based on longest parent path to root
             string ifaceName = GetApiName(iface);
             List<DTInterfaceInfo> parentDirectories = GetLongestParentPath(iface);
-            string outputDirectory = string.Join("/", parentDirectories.Select(parent => GetApiName(parent)));
-            // If non-root output directory, add trailing slash
-            if (outputDirectory.Length > 0 )
-            {
-                outputDirectory += "/";
-            }
-            
+            List<string> storagePathComponents = parentDirectories.Select(parent => GetApiName(parent)).ToList();
+
             // If the interface has children, place it with them
             if (ontology.ChildrenOf(iface).Any()) {
-                outputDirectory += $"{ifaceName}/";
+                storagePathComponents.Add(GetApiName(iface));
             }
-            
-            string outputFilePath = outputDirectory + $"{ifaceName}.md";
 
+            // Append class name to storage path
+            storagePathComponents.Add(GetApiName(iface));
+
+            // Shorten storage path length by reducing duplicated substrings
+            List<string> shortenedStoragePathComponents = ShortenStoragePath(storagePathComponents);
+
+            string outputFilePath = string.Join(Path.DirectorySeparatorChar, shortenedStoragePathComponents) + ".md";
             return outputFilePath;
         }
 
@@ -456,6 +455,38 @@ namespace DTDL2MD
                 Console.Error.WriteLine(string.Join("\n\n", parserEx.Errors.Select(error => error.Message)));
                 Environment.Exit(1);
             }
+        }
+
+        private static List<string> ShortenStoragePath(List<string> originalStoragePath) {
+            
+            // Output storage path holding shortened path components
+            List<string> shortenedStoragePath = new List<string>();
+
+            // Iterate over input storage from leaf towards root, skipping last node 
+            // (b/c it has nothing next to compare against)
+            for (int i = originalStoragePath.Count - 1; i > 0; i--) 
+            {
+                string currentComponent = originalStoragePath[i];
+                int nextIndex = i - 1;
+                string nextComponent = originalStoragePath[nextIndex];
+                // If next (parent) path component is a strict substring of self, 
+                // replace that substring in self with "-"
+                if (currentComponent.Contains(nextComponent) && currentComponent != nextComponent) {
+                    string shortenedComponent = currentComponent.Replace(nextComponent, "-").Replace("_-", "-");
+                    shortenedStoragePath.Add(shortenedComponent);
+                }
+                // Otherwise, just return current component unshortened
+                else {
+                    shortenedStoragePath.Add(currentComponent);
+                }
+            }
+            // Since we skipped the last component, we add it back manually
+            shortenedStoragePath.Add(originalStoragePath[0]);
+
+            // At this point shortened storage path (created in leaf->root iteration above) 
+            // needs to be reverted to return a root -> leaf path at which to store files
+            shortenedStoragePath.Reverse();
+            return shortenedStoragePath;
         }
     }
 }
