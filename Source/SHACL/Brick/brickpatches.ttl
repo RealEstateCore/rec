@@ -236,7 +236,7 @@ brick:Energy_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class <https://brickschema.org/schema/BrickShape#LastKnownDoubleShape> ;
+      sh:class rec:EnergyObservationEvent ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -1039,6 +1039,9 @@ rec:AssetCollection
 .
 rec:Collection
   rdf:type sh:NodeShape ;
+.
+rec:EnergyObservationEvent
+  rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:EquipmentCollection
   rdf:type sh:NodeShape ;

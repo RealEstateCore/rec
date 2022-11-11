@@ -10,12 +10,21 @@
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix geojson: <https://geojson.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rec: <https://w3id.org/rec#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+qudt:hasQuantityKind
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain owl:Class ;
+  rdfs:range <qudt:QuantityKind> ;
+.
+<http://qudt.org/vocab/quantitykind/Energy>
+  rdf:type rdfs:Resource ;
+.
 geojson:Polygon
   rdf:type rdfs:Datatype ;
   rdfs:comment "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]." ;
@@ -827,6 +836,22 @@ rec:EndTable
   rdf:type sh:NodeShape ;
   rdfs:label "End table" ;
   rdfs:subClassOf rec:Table ;
+.
+rec:EnergyObservationEvent
+  rdf:type <dtmi:dtdl:class:Component> ;
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Energy> ;
+  rdfs:label "Energy observation event" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:Entrance
   rdf:type rdfs:Class ;
