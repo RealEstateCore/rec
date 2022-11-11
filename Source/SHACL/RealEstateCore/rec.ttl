@@ -22,6 +22,9 @@ qudt:hasQuantityKind
   rdfs:domain owl:Class ;
   rdfs:range <qudt:QuantityKind> ;
 .
+<http://qudt.org/vocab/quantitykind/Angle>
+  rdf:type rdfs:Resource ;
+.
 <http://qudt.org/vocab/quantitykind/Energy>
   rdf:type rdfs:Resource ;
 .
@@ -38,6 +41,12 @@ geojson:Polygon
   owl:imports <https://brickschema.org/schema/1.3/Brick> ;
   owl:imports <https://w3id.org/rec/brickpatches> ;
   owl:versionInfo "4.0" ;
+.
+rec:AccelerationObservationEvent
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Acceleration observation event" ;
+  rdfs:subClassOf rec:ObservationEvent ;
 .
 rec:AccessControlZone
   rdf:type rdfs:Class ;
@@ -99,6 +108,21 @@ rec:AlarmObject
   rdf:type sh:NodeShape ;
   rdfs:label "Alarm object" ;
   rdfs:subClassOf rec:ServiceObject ;
+.
+rec:AngleObservationEvent
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Angle> ;
+  rdfs:label "Angle observation event" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:Apartment
   rdf:type rdfs:Class ;

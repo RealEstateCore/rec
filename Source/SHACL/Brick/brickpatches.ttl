@@ -58,7 +58,7 @@ brick:Angle_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class <https://brickschema.org/schema/BrickShape#LastKnownDoubleShape> ;
+      sh:class rec:AngleObservationEvent ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -1030,6 +1030,12 @@ brick:isPointOf
 .
 <https://brickschema.org/schema/BrickShape#ValueShape>
   rdf:type sh:NodeShape ;
+.
+rec:AccelerationObservationEvent
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:AngleObservationEvent
+  rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:Asset
   rdf:type sh:NodeShape ;
