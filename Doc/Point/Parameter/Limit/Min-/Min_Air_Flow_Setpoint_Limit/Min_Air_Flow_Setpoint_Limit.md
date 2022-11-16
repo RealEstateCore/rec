@@ -55,5 +55,5 @@ A parameter that places a lower bound on the range of permitted values of a Air_
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy

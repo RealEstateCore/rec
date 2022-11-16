@@ -49,5 +49,5 @@ A point representing a discrete stage which the equipment should be operating at
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy

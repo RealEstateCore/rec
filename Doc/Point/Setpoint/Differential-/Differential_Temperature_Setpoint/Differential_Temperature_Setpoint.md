@@ -52,5 +52,5 @@ A type of Setpoints that is related to the difference between two temperature me
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy

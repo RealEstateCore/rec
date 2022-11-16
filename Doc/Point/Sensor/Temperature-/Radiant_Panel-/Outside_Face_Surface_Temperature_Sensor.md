@@ -49,5 +49,5 @@ Measures the outside surface (relative to the space) of the radiant panel of a r
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy

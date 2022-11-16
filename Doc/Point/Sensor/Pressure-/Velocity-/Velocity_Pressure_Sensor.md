@@ -53,5 +53,5 @@ Measures the difference between total pressure and static pressure
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
