@@ -17,10 +17,8 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 3.1.x
-    - name: Clone DTDL Validator
-      run: git clone https://github.com/Azure-Samples/DTDL-Validator.git
+        dotnet-version: 6.0.x
     - name: Build DTDL Validator
-      run: dotnet build ./DTDL-Validator/DTDLValidator-Sample/
+      run: dotnet build ./Tools/DTDLValidator/
     - name: Run DTDL Validator on REC DTDLv2
-      run: dotnet run --project ./DTDL-Validator/DTDLValidator-Sample/DTDLValidator/ --recursive true --directory ./Source/DTDLv2/
+      run: dotnet run --project ./Tools/DTDLValidator/  --recursive true --directory ./Source/DTDLv2/
