@@ -2,7 +2,7 @@ name: Generate Markdown documentation
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches: 
     - main
     paths:
@@ -14,8 +14,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.CI_PUSH_PAT }}
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
@@ -29,10 +27,7 @@ jobs:
           mv DocIndexBackup.md ./Doc/index.md
       - name: Run DTDL2MD to generate docs
         run: dotnet run --project ./Tools/DTDL2MD/ -i ./RealEstateCore.DTDLv2.jsonld -o ./Doc/
-      - name: 'Commit updated documentation'
-        run: |
-          git config user.name "Karl Hammar"
-          git config user.email "hammar@users.noreply.github.com"
-          git add .
-          git commit --allow-empty -m "Automatically regenerated ontology documentation."
-          git push
+      - name: 'Commit merged output'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automatically regenerated ontology documentation.
