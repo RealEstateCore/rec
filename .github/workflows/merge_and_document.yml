@@ -1,0 +1,45 @@
+name: Merge sources, update .nuspec version, and generate DOCS, APIs, etc.
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: 
+      - "main"
+    paths:
+      - "Source/DTDL**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+          token: ${{ secrets.CI_PUSH_PAT }}
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Build DTDL Merger
+      run: dotnet build ./Tools/DTDLMerger/
+    - name: Run DTDL Merger on REC DTDLv2
+      run: dotnet run --project ./Tools/DTDLMerger/ ./Source/DTDLv2/ > ./RealEstateCore.DTDLv2.jsonld
+    - name: Increment .nuspec revision number
+      id: increment
+      uses: vers-one/dotnet-project-version-updater@v1.2
+      with:
+        files: "Metadata/*.nuspec"
+        version: bump-revision
+    - name: Build DTDL2MD
+      run: dotnet build ./Tools/DTDL2MD/
+    - name: Delete old docs
+      run: |
+        mv Doc/index.md ./DocIndexBackup.md
+        rm -rf Doc/*
+        mv DocIndexBackup.md ./Doc/index.md
+    - name: Run DTDL2MD to generate docs
+      run: dotnet run --project ./Tools/DTDL2MD/ -i ./RealEstateCore.DTDLv2.jsonld -o ./Doc/
+    - name: 'Commit merged and documented output'
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Merged and regenerated docs/APIs for revision ${{ steps.increment.outputs.newVersion }}
