@@ -33,7 +33,7 @@ An organization of any sort (e.g., a business, association, project, consortium,
 |-|-|-|-|-|
 |logo|**en**: logo|**en**: URL link to an image/logo that represents the organization.|string|True|
 ### Inherited Properties
-* **[Agent](../Agent.md):** customTags, externalIds, name
+* **[Agent](../Agent.md):** codeName, customTags, externalIds
 
 ---
 
