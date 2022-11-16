@@ -3728,25 +3728,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:AngleObservationEvent;1"
       }
     ],
     "description": {
@@ -4941,25 +4928,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:EnergyObservationEvent;1"
       }
     ],
     "description": {
@@ -18099,6 +18073,17 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:AccelerationObservationEvent;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Acceleration observation event"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:AccessControlZone;1",
     "@type": "Interface",
     "displayName": {
@@ -18116,6 +18101,32 @@
       "en": "Access panel"
     },
     "extends": "dtmi:org:w3id:rec:BarrierAsset;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:AngleObservationEvent;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Angle",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "degreeOfArc",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Angle observation event"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18358,6 +18369,32 @@
       "en": "End table"
     },
     "extends": "dtmi:org:w3id:rec:Table;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:EnergyObservationEvent;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Energy",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "kilowattHour",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Energy observation event"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
