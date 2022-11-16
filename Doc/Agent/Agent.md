@@ -19,7 +19,7 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 
 |Name|Display name|Description|Multiplicity|Target|Properties|Writable|
 |-|-|-|-|-|-|-|
-|isMemberOf|**en**: is member of|**en**: Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property.|0-Infinity|[Organization](Organization/Organization.md)||True|
+|isMemberOf|**en**: is member of|**en**: Indicates membership in an organization. Note: componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property.|0-Infinity|[Organization](Organization/Organization.md)||True|
 |owns|**en**: owns|**en**: Indicates ownership of some thing, e.g., a building, an asset, an organization, etc.|0-Infinity|||True|
 
 ---
