@@ -1,4 +1,4 @@
-name: Merge sources, update .nuspec version, and generate DOCS, APIs, etc.
+name: Merge and generate
 
 on:
   workflow_dispatch:
@@ -14,8 +14,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      with:
-          token: ${{ secrets.CI_PUSH_PAT }}
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
