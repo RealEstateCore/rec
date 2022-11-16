@@ -2,7 +2,7 @@ name: Merge DTDL sources
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches: 
       - "main"
     paths:
@@ -16,8 +16,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.CI_PUSH_PAT }}
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -27,9 +25,6 @@ jobs:
     - name: Run DTDL Merger on REC DTDLv2
       run: dotnet run --project ./Tools/DTDLMerger/ ./Source/DTDLv2/ > ./RealEstateCore.DTDLv2.jsonld
     - name: 'Commit merged output'
-      run: |
-        git config user.name "Karl Hammar"
-        git config user.email "hammar@users.noreply.github.com"
-        git add .
-        git commit -m "Automatically merged sources."
-        git push
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Automatically merged sources
