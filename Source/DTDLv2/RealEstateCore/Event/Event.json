@@ -5,6 +5,35 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "Custom Properties"
+      },
+      "name": "customProperties",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "namespace",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "properties",
+          "schema": {
+            "@type": "Map",
+            "mapKey": {
+              "name": "propertyName",
+              "schema": "string"
+            },
+            "mapValue": {
+              "name": "propertyValue",
+              "schema": "string"
+            }
+          }
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "Custom Tags"
       },
       "name": "customTags",
