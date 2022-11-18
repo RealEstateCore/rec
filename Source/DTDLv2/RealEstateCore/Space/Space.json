@@ -63,25 +63,6 @@
     },
     {
       "@type": "Property",
-      "displayName": {
-        "en": "External IDs"
-      },
-      "name": "externalIds",
-      "schema": {
-        "@type": "Map",
-        "mapKey": {
-          "name": "externalIdName",
-          "schema": "string"
-        },
-        "mapValue": {
-          "name": "externalIdValue",
-          "schema": "string"
-        }
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
       "description": {
         "en": "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
       },
@@ -90,6 +71,25 @@
       },
       "name": "geometry",
       "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Identifiers"
+      },
+      "name": "identifiers",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "namespace",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "identifier",
+          "schema": "string"
+        }
+      },
       "writable": true
     },
     {
