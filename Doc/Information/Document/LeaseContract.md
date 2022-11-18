@@ -22,7 +22,7 @@ Formal document that identifies the Tenant and the leased asset or property; sta
 ## Properties
 
 ### Inherited Properties
-* **[Information](../Information.md):** customTags, externalIds, name
+* **[Information](../Information.md):** customProperties, customTags, identifiers, name
 
 ---
 

@@ -20,7 +20,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[Event](Event.md):** customTags, end, externalIds, name, start, timestamp
+* **[Event](Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
 
 ---
 

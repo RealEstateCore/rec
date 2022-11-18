@@ -28,7 +28,7 @@ Measures resistance to airflow in a heating and cooling system's components and 
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 * **[Pressure_Sensor](../Pressure_Sensor.md):** lastKnownValue
 
 ---

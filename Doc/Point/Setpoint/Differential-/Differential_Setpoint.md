@@ -29,7 +29,7 @@ A type of Setpoints that is related to the difference between two measurements
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 * **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---

@@ -17,7 +17,7 @@
 |postalCode|**en**: postal code||string|True|
 |region|**en**: region||string|True|
 ### Inherited Properties
-* **[Information](Information.md):** customTags, externalIds, name
+* **[Information](Information.md):** customProperties, customTags, identifiers, name
 
 ---
 

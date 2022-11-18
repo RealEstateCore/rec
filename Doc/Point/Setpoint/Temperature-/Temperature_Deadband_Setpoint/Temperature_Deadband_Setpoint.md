@@ -31,7 +31,7 @@ Sets the size of a deadband of temperature
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 * **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---

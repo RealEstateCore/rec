@@ -23,7 +23,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[Information](../Information.md):** customTags, externalIds, name
+* **[Information](../Information.md):** customProperties, customTags, identifiers, name
 
 ---
 

@@ -15,7 +15,7 @@
 |startLevel|**en**: start level||string|True|
 |tripDirection|**en**: trip direction||enum (Down, Up)|True|
 ### Inherited Properties
-* **[Event](Event.md):** customTags, end, externalIds, name, start, timestamp
+* **[Event](Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
 
 ---
 

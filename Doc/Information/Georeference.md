@@ -18,7 +18,7 @@ Encapsulates a georeference globally placing a spatially located entity in terms
 |lat|**en**: lat|**en**: Latitude|float|True|
 |long|**en**: long|**en**: Longitude|float|True|
 ### Inherited Properties
-* **[Information](Information.md):** customTags, externalIds, name
+* **[Information](Information.md):** customProperties, customTags, identifiers, name
 
 ---
 
