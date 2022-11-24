@@ -3702,7 +3702,7 @@ brick:Angle_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class rec:AngleObservationEvent ;
+      sh:class rec:AngleObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -10283,7 +10283,7 @@ brick:Current_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:ElectricCurrentObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -17554,7 +17554,7 @@ brick:Energy_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class rec:EnergyObservationEvent ;
+      sh:class rec:EnergyObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -63372,10 +63372,19 @@ tag:Zone
   rdf:type brick:Tag ;
   rdfs:label "Zone" ;
 .
-rec:AccelerationObservationEvent
+rec:AccelerationObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
-rec:AngleObservationEvent
+rec:AngleObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:AngularAccelerationObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:AngularVelocityObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:AreaObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:Asset
@@ -63384,10 +63393,16 @@ rec:Asset
 rec:AssetCollection
   rdf:type sh:NodeShape ;
 .
+rec:CapacitanceObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
 rec:Collection
   rdf:type sh:NodeShape ;
 .
-rec:EnergyObservationEvent
+rec:ElectricCurrentObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:EnergyObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:EquipmentCollection
