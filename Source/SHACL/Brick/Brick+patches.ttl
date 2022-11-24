@@ -11011,7 +11011,7 @@ brick:Demand_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:PowerObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -11230,7 +11230,7 @@ brick:Dewpoint_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:TemperatureObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -12293,7 +12293,7 @@ brick:Direction_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:AngleObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -15434,7 +15434,7 @@ brick:Duration_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDurationShape ;
+      sh:class rec:TimeSpanObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -22504,7 +22504,7 @@ brick:Flow_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:VolumeFlowRateObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -22797,7 +22797,7 @@ brick:Frequency_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:FrequencyObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -27506,7 +27506,7 @@ brick:Illuminance_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:IlluminanceObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -32270,7 +32270,7 @@ brick:Luminance_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:LuminanceObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -43097,7 +43097,7 @@ brick:Power_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:PowerObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -44439,7 +44439,7 @@ brick:Rain_Level_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:LengthObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -47810,7 +47810,7 @@ brick:Speed_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:VelocityObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -52203,7 +52203,7 @@ brick:Temperature_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:TemperatureObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -52889,7 +52889,7 @@ brick:Torque_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:TorqueObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -55408,7 +55408,7 @@ brick:Voltage_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:VoltageObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -55970,7 +55970,7 @@ brick:Water_Level_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
+      sh:class rec:LengthObservation ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -63399,6 +63399,21 @@ rec:CapacitanceObservation
 rec:Collection
   rdf:type sh:NodeShape ;
 .
+rec:DataRateObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:DataSizeObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:DensityObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:DistanceObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:ElectricChargeObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
 rec:ElectricCurrentObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
@@ -63407,6 +63422,81 @@ rec:EnergyObservation
 .
 rec:EquipmentCollection
   rdf:type sh:NodeShape ;
+.
+rec:ForceObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:FrequencyObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:HumidityObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:IlluminanceObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:InductanceObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:LengthObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:LuminanceObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:LuminousFluxObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:LuminousIntensityObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:MagneticFluxObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:MassFlowRateObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:MassObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:PowerObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:PressureObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:RelativeHumidityObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:ResistanceObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:SoundPressureObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:TemperatureObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:ThrustObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:TimeSpanObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:TorqueObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:VelocityObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:VoltageObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:VolumeFlowRateObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
+rec:VolumeObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:substance
   rdf:type owl:AnnotationProperty ;

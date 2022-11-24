@@ -22,6 +22,9 @@ qudt:hasQuantityKind
   rdfs:domain owl:Class ;
   rdfs:range <qudt:QuantityKind> ;
 .
+<http://qudt.org/vocab/quantitykind/AbsoluteHumidity>
+  rdf:type rdfs:Resource ;
+.
 <http://qudt.org/vocab/quantitykind/Acceleration>
   rdf:type rdfs:Resource ;
   rdfs:label "Acceleration" ;
@@ -54,6 +57,9 @@ qudt:hasQuantityKind
 <http://qudt.org/vocab/quantitykind/Distance>
   rdf:type rdfs:Resource ;
 .
+<http://qudt.org/vocab/quantitykind/ElectricCharge>
+  rdf:type rdfs:Resource ;
+.
 <http://qudt.org/vocab/quantitykind/ElectricCurrent>
   rdf:type rdfs:Resource ;
   rdfs:label "Electric current" ;
@@ -61,7 +67,79 @@ qudt:hasQuantityKind
 <http://qudt.org/vocab/quantitykind/Energy>
   rdf:type rdfs:Resource ;
 .
+<http://qudt.org/vocab/quantitykind/Force>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Frequency>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Illuminance>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Inductance>
+  rdf:type rdfs:Resource ;
+.
 <http://qudt.org/vocab/quantitykind/InformationEntropy>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Length>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Luminance>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/LuminousFlux>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/LuminousIntensity>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/MagneticFlux>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Mass>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/MassFlowRate>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Power>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Pressure>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/RelativeHumidity>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Resistance>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/SoundPressure>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Temperature>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Thrust>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Time>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Torque>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Velocity>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Voltage>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/Volume>
+  rdf:type rdfs:Resource ;
+.
+<http://qudt.org/vocab/quantitykind/VolumeFlowRate>
   rdf:type rdfs:Resource ;
 .
 geojson:Polygon
@@ -964,6 +1042,21 @@ rec:EducationalRoom
   rdfs:label "Educational room" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:ElectricChargeObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/ElectricCharge> ;
+  rdfs:label "Electric charge observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:ElectricCurrentObservation
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1208,6 +1301,36 @@ rec:Footrest
   rdfs:label "Footrest" ;
   rdfs:subClassOf rec:Furniture ;
 .
+rec:ForceObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Force> ;
+  rdfs:label "Force observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:FrequencyObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Frequency> ;
+  rdfs:label "Frequency observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Furniture
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1306,6 +1429,51 @@ rec:Hospital
   rdfs:label "Hospital" ;
   rdfs:subClassOf rec:Building ;
 .
+rec:HumidityObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
+  rdfs:label "Humidity (absolute) observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:IlluminanceObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Illuminance> ;
+  rdfs:label "Illuminance observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:InductanceObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Inductance> ;
+  rdfs:label "Inductance observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Information
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1403,6 +1571,21 @@ rec:LeaseContract
       sh:nodeKind sh:IRI ;
     ] ;
 .
+rec:LengthObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+  rdfs:label "Length observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Level
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1441,6 +1624,66 @@ rec:LockerRoom
   rdfs:label "Locker room" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:LuminanceObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Luminance> ;
+  rdfs:label "Luminance observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:LuminousFluxObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/LuminousFlux> ;
+  rdfs:label "Luminous flux observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:LuminousIntensityObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/LuminousIntensity> ;
+  rdfs:label "Luminous intensity observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:MagneticFluxObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/MagneticFlux> ;
+  rdfs:label "Magnetic flux observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:MailRoom
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1458,6 +1701,36 @@ rec:MainEntrance
   rdf:type sh:NodeShape ;
   rdfs:label "Main entrance" ;
   rdfs:subClassOf rec:Entrance ;
+.
+rec:MassFlowRateObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/MassFlowRate> ;
+  rdfs:label "Mass flow rate observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:MassObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+  rdfs:label "Mass observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:MeditationRoom
   rdf:type rdfs:Class ;
@@ -1768,6 +2041,21 @@ rec:PostalAddress
       sh:name "region" ;
     ] ;
 .
+rec:PowerObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Power> ;
+  rdfs:label "Power observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Premises
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1781,6 +2069,21 @@ rec:Premises
       sh:minCount 1 ;
       sh:name "includes" ;
       sh:nodeKind sh:IRI ;
+    ] ;
+.
+rec:PressureObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Pressure> ;
+  rdfs:label "Pressure observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
     ] ;
 .
 rec:PrinterCart
@@ -1846,6 +2149,36 @@ rec:Region
   rdfs:comment "An administrative geospatial unit larger than the individual real estate. For instance, \"Lombary\", \"North America\", \"The Back Bay\", \"Elnätsområde Syd\", etc." ;
   rdfs:label "Region" ;
   rdfs:subClassOf rec:Space ;
+.
+rec:RelativeHumidityObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/RelativeHumidity> ;
+  rdfs:label "Relative humidity observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:ResistanceObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Resistance> ;
+  rdfs:label "Resistance observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:RestingRoom
   rdf:type rdfs:Class ;
@@ -2059,6 +2392,21 @@ rec:Sofa
   rdfs:label "Sofa" ;
   rdfs:subClassOf rec:Furniture ;
 .
+rec:SoundPressureObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/SoundPressure> ;
+  rdfs:label "Sound pressure observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Space
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -2170,6 +2518,21 @@ rec:TelecommunicationRoom
   rdfs:label "Telecommunication room" ;
   rdfs:subClassOf rec:CableRoom ;
 .
+rec:TemperatureObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Temperature> ;
+  rdfs:label "Temperature observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Theater
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -2182,11 +2545,56 @@ rec:TherapyRoom
   rdfs:label "Therapy room" ;
   rdfs:subClassOf rec:HealthcareRoom ;
 .
+rec:ThrustObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Thrust> ;
+  rdfs:label "Thrust observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:TimeSpanObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Time> ;
+  rdfs:label "Timespan observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Toilet
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Toilet" ;
   rdfs:subClassOf rec:PersonalHygiene ;
+.
+rec:TorqueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Torque> ;
+  rdfs:label "Torque observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:TreatmentRoom
   rdf:type rdfs:Class ;
@@ -2206,11 +2614,71 @@ rec:UtilitiesRoom
   rdfs:label "Utilities room" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:VelocityObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Velocity> ;
+  rdfs:label "Velocity observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:VirtualBuilding
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Virtual building" ;
   rdfs:subClassOf rec:Building ;
+.
+rec:VoltageObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Voltage> ;
+  rdfs:label "Voltage observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:VolumeFlowRateObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/VolumeFlowRate> ;
+  rdfs:label "Volume flow rate observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
+rec:VolumeObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/Volume> ;
+  rdfs:label "Volume observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:Wall
   rdf:type rdfs:Class ;
