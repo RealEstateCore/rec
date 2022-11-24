@@ -53,23 +53,24 @@
     },
     {
       "@type": "Property",
-      "description": {
-        "en": "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
-      },
-      "displayName": {
-        "en": "geometry"
-      },
-      "name": "geometry",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
       "displayName": {
         "en": "name"
       },
       "name": "name",
       "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Polygon representing the spatial extent of this Space."
+      },
+      "displayName": {
+        "en": "geometry"
+      },
+      "maxMultiplicity": 1,
+      "name": "geometry",
+      "target": "dtmi:org:w3id:rec:Polygon;1",
       "writable": true
     },
     {

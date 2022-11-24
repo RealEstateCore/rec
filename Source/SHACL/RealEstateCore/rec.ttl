@@ -16,9 +16,23 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+geojson:MultiPoint
+  rdf:type rdfs:Datatype ;
+  rdfs:label "Point" ;
+  owl:onDatatype xsd:string ;
+.
+geojson:MultiPolygon
+  rdf:type rdfs:Datatype ;
+  rdfs:label "Point" ;
+  owl:onDatatype xsd:string ;
+.
+geojson:Point
+  rdf:type rdfs:Datatype ;
+  rdfs:label "Point" ;
+  owl:onDatatype xsd:string ;
+.
 geojson:Polygon
   rdf:type rdfs:Datatype ;
-  rdfs:comment "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]." ;
   rdfs:label "Polygon" ;
   owl:onDatatype xsd:string ;
 .
@@ -311,8 +325,8 @@ rec:Asset
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path rec:geometry ;
-      sh:datatype geojson:Polygon ;
-      sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]." ;
+      sh:class rec:Geometry ;
+      sh:description "A GeoJSON Geometry representing the position or extent of the asset." ;
       sh:maxCount 1 ;
       sh:name "geometry" ;
     ] ;
@@ -1005,6 +1019,24 @@ rec:Garage
   rdfs:label "Garage" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:Geometry
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Geometry" ;
+  rdfs:subClassOf rec:Information ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:coordinateSystem ;
+      sh:datatype xsd:string ;
+      sh:in (
+          "WGS84"
+          "LocalCoordinates"
+        ) ;
+      sh:maxCount 1 ;
+      sh:name "coordinate system" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+.
 rec:Georeference
   rdf:type <dtmi:dtdl:class:Component> ;
   rdf:type rdfs:Class ;
@@ -1260,6 +1292,34 @@ rec:MothersRoom
   rdfs:label "Mothers' room" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:MultiPoint
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Multi point" ;
+  rdfs:subClassOf rec:Geometry ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:coordinates ;
+      sh:datatype geojson:MultiPoint ;
+      sh:description "A GeoJSON MultiPoint coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[10.0, 40.0], [40.0, 30.0], [20.0, 20.0], [30.0, 10.0]]." ;
+      sh:maxCount 1 ;
+      sh:name "coordinates" ;
+    ] ;
+.
+rec:MultiPolygon
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Multi polygon" ;
+  rdfs:subClassOf rec:Geometry ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:coordinates ;
+      sh:datatype geojson:MultiPolygon ;
+      sh:description "A GeoJSON MultiPolygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[[[30.0, 20.0], [45.0, 40.0], [10.0, 40.0], [30.0, 20.0]]], [[[15.0, 5.0], [40.0, 10.0], [10.0, 20.0], [5.0, 10.0], [15.0, 5.0]]]]." ;
+      sh:maxCount 1 ;
+      sh:name "coordinates" ;
+    ] ;
+.
 rec:MultiPurposeRoom
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1447,6 +1507,20 @@ rec:PhoneBooth
   rdfs:label "PhoneBooth" ;
   rdfs:subClassOf rec:Office ;
 .
+rec:Point
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Point" ;
+  rdfs:subClassOf rec:Geometry ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:coordinates ;
+      sh:datatype geojson:Point ;
+      sh:description "A GeoJSON Point coordinate listing. Coordinate may be expressed in two or three dimensions. Ex: [30.0, 10.0, 0.0]." ;
+      sh:maxCount 1 ;
+      sh:name "coordinates" ;
+    ] ;
+.
 rec:PointEvent
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1474,6 +1548,20 @@ rec:PointOfInterest
       sh:maxCount 1 ;
       sh:name "object of interest" ;
       sh:nodeKind sh:IRI ;
+    ] ;
+.
+rec:Polygon
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Polygon" ;
+  rdfs:subClassOf rec:Geometry ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:coordinates ;
+      sh:datatype geojson:Polygon ;
+      sh:description "A GeoJSON Polygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]." ;
+      sh:maxCount 1 ;
+      sh:name "coordinates" ;
     ] ;
 .
 rec:Portfolio
@@ -1839,8 +1927,8 @@ rec:Space
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path rec:geometry ;
-      sh:datatype geojson:Polygon ;
-      sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]." ;
+      sh:class rec:Polygon ;
+      sh:description "Polygon representing the spatial extent of this Space." ;
       sh:maxCount 1 ;
       sh:name "geometry" ;
     ] ;
