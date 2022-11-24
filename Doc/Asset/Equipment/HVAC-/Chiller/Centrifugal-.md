@@ -13,7 +13,7 @@ A chiller that uses the vapor compression cycle to chill water. It throws off th
 
 ### Inherited Relationships
 * **[Equipment](../../Equipment.md):** feeds, isFedBy
-* **[Asset](../../../Asset.md):** commissionedBy, documentation, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
 
 ---
 
@@ -25,7 +25,7 @@ A chiller that uses the vapor compression cycle to chill water. It throws off th
 ### Inherited Properties
 * **[Chiller](Chiller.md):** coolingCapacity
 * **[Equipment](../../Equipment.md):** operationalStageCount
-* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 

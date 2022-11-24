@@ -885,18 +885,6 @@
       },
       {
         "@type": "Property",
-        "description": {
-          "en": "A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
-        },
-        "displayName": {
-          "en": "geometry"
-        },
-        "name": "geometry",
-        "schema": "string",
-        "writable": true
-      },
-      {
-        "@type": "Property",
         "displayName": {
           "en": "initial cost"
         },
@@ -983,6 +971,19 @@
         },
         "name": "documentation",
         "target": "dtmi:org:w3id:rec:Document;1",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "description": {
+          "en": "A GeoJSON Geometry representing the position or extent of the asset."
+        },
+        "displayName": {
+          "en": "geometry"
+        },
+        "maxMultiplicity": 1,
+        "name": "geometry",
+        "target": "dtmi:org:w3id:rec:Geometry;1",
         "writable": true
       },
       {
@@ -1455,23 +1456,24 @@
       },
       {
         "@type": "Property",
-        "description": {
-          "en": "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
-        },
-        "displayName": {
-          "en": "geometry"
-        },
-        "name": "geometry",
-        "schema": "string",
-        "writable": true
-      },
-      {
-        "@type": "Property",
         "displayName": {
           "en": "name"
         },
         "name": "name",
         "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "description": {
+          "en": "Polygon representing the spatial extent of this Space."
+        },
+        "displayName": {
+          "en": "geometry"
+        },
+        "maxMultiplicity": 1,
+        "name": "geometry",
+        "target": "dtmi:org:w3id:rec:Polygon;1",
         "writable": true
       },
       {
@@ -2929,6 +2931,41 @@
       "en": "Furniture collection"
     },
     "extends": "dtmi:org:w3id:rec:Collection;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Geometry;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "coordinate system"
+        },
+        "name": "coordinateSystem",
+        "schema": {
+          "@type": "Enum",
+          "enumValues": [
+            {
+              "enumValue": "LocalCoordinates",
+              "name": "LocalCoordinates"
+            },
+            {
+              "enumValue": "WGS84",
+              "name": "WGS84"
+            }
+          ],
+          "valueSchema": "string"
+        },
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Geometry"
+    },
+    "extends": "dtmi:org:w3id:rec:Information;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -9108,6 +9145,56 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:MultiPoint;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "A GeoJSON MultiPoint coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[10.0, 40.0], [40.0, 30.0], [20.0, 20.0], [30.0, 10.0]]."
+        },
+        "displayName": {
+          "en": "coordinates"
+        },
+        "name": "coordinates",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Multi point"
+    },
+    "extends": "dtmi:org:w3id:rec:Geometry;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:MultiPolygon;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "A GeoJSON MultiPolygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[[[30.0, 20.0], [45.0, 40.0], [10.0, 40.0], [30.0, 20.0]]], [[[15.0, 5.0], [40.0, 10.0], [10.0, 20.0], [5.0, 10.0], [15.0, 5.0]]]]."
+        },
+        "displayName": {
+          "en": "coordinates"
+        },
+        "name": "coordinates",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Multi polygon"
+    },
+    "extends": "dtmi:org:w3id:rec:Geometry;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:NotificationObject;1",
     "@type": "Interface",
     "displayName": {
@@ -9151,6 +9238,56 @@
       "en": "Outdoor space"
     },
     "extends": "dtmi:org:w3id:rec:Architecture;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Point;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "A GeoJSON Point coordinate listing. Coordinate may be expressed in two or three dimensions. Ex: [30.0, 10.0, 0.0]."
+        },
+        "displayName": {
+          "en": "coordinates"
+        },
+        "name": "coordinates",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Point"
+    },
+    "extends": "dtmi:org:w3id:rec:Geometry;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Polygon;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "A GeoJSON Polygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
+        },
+        "displayName": {
+          "en": "coordinates"
+        },
+        "name": "coordinates",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Polygon"
+    },
+    "extends": "dtmi:org:w3id:rec:Geometry;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]

@@ -20,7 +20,7 @@ Steam, hydronic, or electric heating device located at or near the floor.
 
 ### Inherited Relationships
 * **[Equipment](../../../../Equipment.md):** feeds, isFedBy
-* **[Asset](../../../../../Asset.md):** commissionedBy, documentation, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../../../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
 
 ---
 
@@ -28,7 +28,7 @@ Steam, hydronic, or electric heating device located at or near the floor.
 
 ### Inherited Properties
 * **[Equipment](../../../../Equipment.md):** operationalStageCount
-* **[Asset](../../../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 
