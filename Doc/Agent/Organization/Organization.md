@@ -23,7 +23,7 @@ An organization of any sort (e.g., a business, association, project, consortium,
 |hasPart|**en**: has part|**en**: Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the more specific hasMember property.|0-Infinity|[Organization](#)||True|
 |isPartOf|**en**: is part of|**en**: Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the Agent.isMemberOf property.|0-Infinity|[Organization](#)||True|
 ### Inherited Relationships
-* **[Agent](../Agent.md):** isMemberOf
+* **[Agent](../Agent.md):** isMemberOf, owns
 
 ---
 
@@ -38,11 +38,30 @@ An organization of any sort (e.g., a business, association, project, consortium,
 ---
 
 ## Target Of
+### General
+* [Point](../../Point/Point.md).isPointOf
+* [Agent](../Agent.md).owns
+* [Space](../../Space/Space.md).isLocationOf
+* [Equipment](../../Asset/Equipment/Equipment.md).feeds
+* [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../Information/Document/Document.md).documentTopic
+* [Document](../../Information/Document/Document.md).url
+* [EquipmentCollection](../../Collection/Equipment-.md).feeds
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [Agent](../Agent.md).isMemberOf
 * [Organization](#).hasPart
 * [Organization](#).isPartOf
 ### Inherited
+* [Architecture](../../Space/Architecture/Architecture.md).architectedBy
+* [Architecture](../../Space/Architecture/Architecture.md).constructedBy
+* [Architecture](../../Space/Architecture/Architecture.md).operatedBy
+* [Architecture](../../Space/Architecture/Architecture.md).ownedBy
 * [Asset](../../Asset/Asset.md).commissionedBy
 * [Asset](../../Asset/Asset.md).installedBy
 * [Asset](../../Asset/Asset.md).manufacturedBy
@@ -53,7 +72,3 @@ An organization of any sort (e.g., a business, association, project, consortium,
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).acknowledgedBy
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).closedBy
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).createdBy
-* [Architecture](../../Space/Architecture/Architecture.md).architectedBy
-* [Architecture](../../Space/Architecture/Architecture.md).constructedBy
-* [Architecture](../../Space/Architecture/Architecture.md).operatedBy
-* [Architecture](../../Space/Architecture/Architecture.md).ownedBy

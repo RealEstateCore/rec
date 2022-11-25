@@ -35,11 +35,26 @@ An integrated assembly of interconnected photovoltaic cells designed to deliver 
 ---
 
 ## Target Of
+### General
+* [Point](../../../Point/Point.md).isPointOf
+* [Agent](../../../Agent/Agent.md).owns
+* [Space](../../../Space/Space.md).isLocationOf
+* [Equipment](../Equipment.md).feeds
+* [Equipment](../Equipment.md).isFedBy
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [EquipmentCollection](../../../Collection/Equipment-.md).feeds
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Meter](../Meter/Meter.md).meters
 ### Direct
 * [PV_Array](../../../Collection/PV_Array.md).includes
 ### Inherited
-* [Asset](../../Asset.md).hasPart
-* [Asset](../../Asset.md).isPartOf
-* [EquipmentCollection](../../../Collection/EquipmentCollection.md).includes
 * [Loop](../../../Collection/Loop/Loop.md).includes
 * [System](../../../Collection/System/System.md).includes
+* [Asset](../../Asset.md).hasPart
+* [Asset](../../Asset.md).isPartOf
+* [EquipmentCollection](../../../Collection/Equipment-.md).includes

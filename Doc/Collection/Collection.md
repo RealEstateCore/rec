@@ -10,16 +10,16 @@ An administrative grouping of entities that are adressed and treated as a unit f
 ---
 
 ## Child interfaces
+* [Loop](Loop/Loop.md)
 * [PV_Array](PV_Array.md)
+* [System](System/System.md)
 * [Apartment](Apartment.md)
 * [Campus](Campus.md)
-* [EquipmentCollection](EquipmentCollection.md)
-* [FurnitureCollection](FurnitureCollection.md)
+* [EquipmentCollection](Equipment-.md)
+* [FurnitureCollection](Furniture-.md)
 * [Portfolio](Portfolio.md)
 * [Premises](Premises.md)
 * [RealEstate](RealEstate.md)
-* [Loop](Loop/Loop.md)
-* [System](System/System.md)
 
 ---
 
@@ -42,3 +42,18 @@ An administrative grouping of entities that are adressed and treated as a unit f
 ---
 
 ## Target Of
+### General
+* [Point](../Point/Point.md).isPointOf
+* [Agent](../Agent/Agent.md).owns
+* [Space](../Space/Space.md).isLocationOf
+* [Equipment](../Asset/Equipment/Equipment.md).feeds
+* [Equipment](../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../Space/Architecture/Architecture.md).isFedBy
+* [Document](../Information/Document/Document.md).documentTopic
+* [Document](../Information/Document/Document.md).url
+* [EquipmentCollection](Equipment-.md).feeds
+* [Lease](../Event/Lease.md).leaseOf
+* [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](Portfolio.md).includes
+* [ServiceObject](../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Meter](../Asset/Equipment/Meter/Meter.md).meters

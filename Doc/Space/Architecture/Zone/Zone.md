@@ -10,9 +10,9 @@ A sub-zone within or outside of a building defined to support some technology an
 ---
 
 ## Child interfaces
-* [AccessControlZone](AccessControlZone.md)
-* [HVACZone](HVACZone.md)
-* [OccupancyZone](OccupancyZone.md)
+* [AccessControlZone](AccessControl-.md)
+* [HVACZone](HVAC-.md)
+* [OccupancyZone](Occupancy-.md)
 * [ParkingSpace](ParkingSpace.md)
 * [Workspace](Workspace.md)
 
@@ -42,6 +42,21 @@ A sub-zone within or outside of a building defined to support some technology an
 ---
 
 ## Target Of
+### General
+* [Point](../../../Point/Point.md).isPointOf
+* [Agent](../../../Agent/Agent.md).owns
+* [Space](../../Space.md).isLocationOf
+* [Equipment](../../../Asset/Equipment/Equipment.md).feeds
+* [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../Architecture.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [EquipmentCollection](../../../Collection/Equipment-.md).feeds
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Meter](../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [Asset](../../../Asset/Asset.md).locatedIn
 * [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn

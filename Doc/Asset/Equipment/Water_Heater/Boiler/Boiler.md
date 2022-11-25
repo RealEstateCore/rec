@@ -10,8 +10,8 @@ A closed, pressure vessel that uses fuel or electricity for heating water or oth
 ---
 
 ## Child interfaces
-* [Electric_Boiler](Electric_Boiler.md)
-* [Natural_Gas_Boiler](Natural_Gas_Boiler/Natural_Gas_Boiler.md)
+* [Electric_Boiler](Electric-.md)
+* [Natural_Gas_Boiler](Natural_Gas-/Natural_Gas_Boiler.md)
 
 ---
 
@@ -32,9 +32,24 @@ A closed, pressure vessel that uses fuel or electricity for heating water or oth
 ---
 
 ## Target Of
+### General
+* [Point](../../../../Point/Point.md).isPointOf
+* [Agent](../../../../Agent/Agent.md).owns
+* [Space](../../../../Space/Space.md).isLocationOf
+* [Equipment](../../Equipment.md).feeds
+* [Equipment](../../Equipment.md).isFedBy
+* [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../../Information/Document/Document.md).documentTopic
+* [Document](../../../../Information/Document/Document.md).url
+* [EquipmentCollection](../../../../Collection/Equipment-.md).feeds
+* [Lease](../../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Meter](../../Meter/Meter.md).meters
 ### Inherited
-* [Asset](../../../Asset.md).hasPart
-* [Asset](../../../Asset.md).isPartOf
-* [EquipmentCollection](../../../../Collection/EquipmentCollection.md).includes
 * [Loop](../../../../Collection/Loop/Loop.md).includes
 * [System](../../../../Collection/System/System.md).includes
+* [Asset](../../../Asset.md).hasPart
+* [Asset](../../../Asset.md).isPartOf
+* [EquipmentCollection](../../../../Collection/Equipment-.md).includes

@@ -24,16 +24,31 @@ A type of solar panels that convert solar radiation into usable thermal and elec
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
-* **[Asset](../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 * **[PV_Panel](../PV_Panel/PV_Panel.md):** measuredModuleConversionEfficiency, ratedModuleConversionEfficiency
+* **[Asset](../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 
 ## Target Of
+### General
+* [Point](../../../Point/Point.md).isPointOf
+* [Agent](../../../Agent/Agent.md).owns
+* [Space](../../../Space/Space.md).isLocationOf
+* [Equipment](../Equipment.md).feeds
+* [Equipment](../Equipment.md).isFedBy
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [EquipmentCollection](../../../Collection/Equipment-.md).feeds
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Meter](../Meter/Meter.md).meters
 ### Inherited
+* [Loop](../../../Collection/Loop/Loop.md).includes
 * [PV_Array](../../../Collection/PV_Array.md).includes
+* [System](../../../Collection/System/System.md).includes
 * [Asset](../../Asset.md).hasPart
 * [Asset](../../Asset.md).isPartOf
-* [EquipmentCollection](../../../Collection/EquipmentCollection.md).includes
-* [Loop](../../../Collection/Loop/Loop.md).includes
-* [System](../../../Collection/System/System.md).includes
+* [EquipmentCollection](../../../Collection/Equipment-.md).includes

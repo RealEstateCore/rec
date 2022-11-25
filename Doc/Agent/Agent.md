@@ -10,8 +10,8 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 ---
 
 ## Child interfaces
-* [Person](Person.md)
 * [Organization](Organization/Organization.md)
+* [Person](Person.md)
 
 ---
 
@@ -20,6 +20,7 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 |Name|Display name|Description|Multiplicity|Target|Properties|Writable|
 |-|-|-|-|-|-|-|
 |isMemberOf|**en**: is member of|**en**: Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property.|0-Infinity|[Organization](Organization/Organization.md)||True|
+|owns|**en**: owns|**en**: Indicates ownership of some thing, e.g., a building, an asset, an organization, etc.|0-Infinity|||True|
 
 ---
 
@@ -34,7 +35,26 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 ---
 
 ## Target Of
+### General
+* [Point](../Point/Point.md).isPointOf
+* [Agent](#).owns
+* [Space](../Space/Space.md).isLocationOf
+* [Equipment](../Asset/Equipment/Equipment.md).feeds
+* [Equipment](../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../Space/Architecture/Architecture.md).isFedBy
+* [Document](../Information/Document/Document.md).documentTopic
+* [Document](../Information/Document/Document.md).url
+* [EquipmentCollection](../Collection/Equipment-.md).feeds
+* [Lease](../Event/Lease.md).leaseOf
+* [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../Collection/Portfolio.md).includes
+* [ServiceObject](../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Meter](../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
+* [Architecture](../Space/Architecture/Architecture.md).architectedBy
+* [Architecture](../Space/Architecture/Architecture.md).constructedBy
+* [Architecture](../Space/Architecture/Architecture.md).operatedBy
+* [Architecture](../Space/Architecture/Architecture.md).ownedBy
 * [Asset](../Asset/Asset.md).commissionedBy
 * [Asset](../Asset/Asset.md).installedBy
 * [Asset](../Asset/Asset.md).manufacturedBy
@@ -45,7 +65,3 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).acknowledgedBy
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).closedBy
 * [ServiceObject](../Information/ServiceObject/ServiceObject.md).createdBy
-* [Architecture](../Space/Architecture/Architecture.md).architectedBy
-* [Architecture](../Space/Architecture/Architecture.md).constructedBy
-* [Architecture](../Space/Architecture/Architecture.md).operatedBy
-* [Architecture](../Space/Architecture/Architecture.md).ownedBy

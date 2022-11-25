@@ -1,0 +1,28 @@
+name: Manually set .nuspec version
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "New .nuspec version"
+        required: true 
+        type: string
+
+jobs:
+  manually-set-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.CI_PUSH_PAT }}
+      - name: Set .nuspec version
+        id: set-version
+        uses: vers-one/dotnet-project-version-updater@v1.2
+        with:
+          files: "Metadata/*.nuspec"
+          version: ${{ github.event.inputs.version }}
+      - name: 'Commit new .nuspec version'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Set .nuspec version to ${{ steps.set-version.outputs.newVersion }}
