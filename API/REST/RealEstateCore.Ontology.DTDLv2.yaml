@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
-  version: "4.0.0-preview"
-  title: RealEstateCore Ontology (DTDLv2)
+  version: "4.0.0.6"
+  title: RealEstateCore.Ontology.DTDLv2
   license:
     name: BSD-3-Clause
   contact:
@@ -187,6 +187,17 @@ components:
               '@type':
                 type: string
                 default: dtmi:org:w3id:rec:Organization;1
+        owns:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
         customTags:
           type: string
         externalIds:
@@ -3951,6 +3962,11 @@ paths:
       - $ref: '#/components/parameters/sortParam'
       - name: isMemberOf
         description: Filter value on relationship 'isMemberOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: owns
+        description: Filter value on relationship 'owns'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
