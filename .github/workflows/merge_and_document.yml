@@ -37,6 +37,10 @@ jobs:
         mv DocIndexBackup.md ./Doc/index.md
     - name: Run DTDL2MD to generate docs
       run: dotnet run --project ./Tools/DTDL2MD/ -i ./RealEstateCore.DTDLv2.jsonld -o ./Doc/
+    - name: Build DTDL2OAS
+      run: dotnet build ./Tools/DTDL2OAS/
+    - name: Run DTDL2OAS to generate API specification
+      run: dotnet run --project ./Tools/DTDL2OAS --inputPath ./Source/DTDLv2/ --nuspecPath ./Metadata/RealEstateCore.Ontology.DTDLv2.nuspec --endpointsPath ./API/REST/Endpoints.csv --outputPath ./API/REST
     - name: 'Commit merged and documented output'
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
