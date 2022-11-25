@@ -756,6 +756,122 @@ components:
           type: string
         name:
           type: string
+    ActuationEvent:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:ActuationEvent;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/ActuationEvent.jsonld
+        targetPoint:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:brickschema:schema:Brick:Point;1
+        payload:
+          type: string
+        customTags:
+          type: string
+        end:
+          type: string
+          format: date-time
+        externalIds:
+          type: string
+        name:
+          type: string
+        start:
+          type: string
+          format: date-time
+        timestamp:
+          type: string
+          format: date-time
+    ExceptionEvent:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:ExceptionEvent;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/ExceptionEvent.jsonld
+        sourcePoint:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:brickschema:schema:Brick:Point;1
+        payload:
+          type: string
+        customTags:
+          type: string
+        end:
+          type: string
+          format: date-time
+        externalIds:
+          type: string
+        name:
+          type: string
+        start:
+          type: string
+          format: date-time
+        timestamp:
+          type: string
+          format: date-time
+    ObservationEvent:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:ObservationEvent;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/ObservationEvent.jsonld
+        sourcePoint:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:brickschema:schema:Brick:Point;1
+        payload:
+          type: string
+        customTags:
+          type: string
+        end:
+          type: string
+          format: date-time
+        externalIds:
+          type: string
+        name:
+          type: string
+        start:
+          type: string
+          format: date-time
+        timestamp:
+          type: string
+          format: date-time
     Document:
       type: object
       properties:
@@ -806,6 +922,384 @@ components:
         '@context':
           type: string
           default: https://dev.realestatecore.io/contexts/Site.jsonld
+        address:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:PostalAddress;1
+        adjacentElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        architectedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        constructedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        containsElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        documentation:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Document;1
+        hasPoint:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:brickschema:schema:Brick:Point;1
+        intersectingElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        isFedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        operatedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        ownedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        hasPart:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Space;1
+        isLocationOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        isPartOf:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Space;1
+        area:
+          $ref: '#/components/schemas/ArchitectureArea'
+        capacity:
+          $ref: '#/components/schemas/ArchitectureCapacity'
+        georeference:
+          $ref: '#/components/schemas/Georeference'
+        customTags:
+          type: string
+        externalIds:
+          type: string
+        geometry:
+          type: string
+        name:
+          type: string
+    SubBuilding:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:SubBuilding;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/SubBuilding.jsonld
+        address:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:PostalAddress;1
+        adjacentElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        architectedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        constructedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        containsElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        documentation:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Document;1
+        hasPoint:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:brickschema:schema:Brick:Point;1
+        intersectingElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        isFedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        operatedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        ownedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        hasPart:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Space;1
+        isLocationOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        isPartOf:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Space;1
+        area:
+          $ref: '#/components/schemas/ArchitectureArea'
+        capacity:
+          $ref: '#/components/schemas/ArchitectureCapacity'
+        georeference:
+          $ref: '#/components/schemas/Georeference'
+        customTags:
+          type: string
+        externalIds:
+          type: string
+        geometry:
+          type: string
+        name:
+          type: string
+    Building:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:Building;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Building.jsonld
         address:
           type: array
           items:
@@ -1365,6 +1859,195 @@ components:
           type: string
         name:
           type: string
+    Zone:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:Zone;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Zone.jsonld
+        address:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:PostalAddress;1
+        adjacentElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        architectedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        constructedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        containsElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        documentation:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Document;1
+        hasPoint:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:brickschema:schema:Brick:Point;1
+        intersectingElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        isFedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        operatedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        ownedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        hasPart:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Space;1
+        isLocationOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        isPartOf:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Space;1
+        area:
+          $ref: '#/components/schemas/ArchitectureArea'
+        capacity:
+          $ref: '#/components/schemas/ArchitectureCapacity'
+        georeference:
+          $ref: '#/components/schemas/Georeference'
+        customTags:
+          type: string
+        externalIds:
+          type: string
+        geometry:
+          type: string
+        name:
+          type: string
     Georeference:
       type: object
       properties:
@@ -1711,7 +2394,7 @@ paths:
           description: "'Point' entity was successfully deleted."
       tags:
       - points
-  /alarmpoints:
+  /alarms:
     get:
       summary: Get 'Alarm' entities.
       parameters:
@@ -1791,7 +2474,7 @@ paths:
                               $ref: '#/components/schemas/Context'
                         - $ref: '#/components/schemas/Alarm'
       tags:
-      - alarmpoints
+      - alarms
     post:
       summary: Create a new 'Alarm' object.
       parameters: []
@@ -1828,8 +2511,8 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Alarm'
       tags:
-      - alarmpoints
-  /alarmpoints/{id}:
+      - alarms
+  /alarms/{id}:
     get:
       summary: Get a specific 'Alarm' object.
       parameters:
@@ -1858,7 +2541,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Alarm'
       tags:
-      - alarmpoints
+      - alarms
     put:
       summary: Update an existing 'Alarm' entity.
       parameters:
@@ -1903,7 +2586,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Alarm'
       tags:
-      - alarmpoints
+      - alarms
     patch:
       summary: Update a single property on a specific 'Alarm' object.
       parameters:
@@ -1951,7 +2634,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Alarm'
       tags:
-      - alarmpoints
+      - alarms
     delete:
       summary: Delete a 'Alarm' object.
       parameters:
@@ -1969,8 +2652,8 @@ paths:
         200:
           description: "'Alarm' entity was successfully deleted."
       tags:
-      - alarmpoints
-  /commandpoints:
+      - alarms
+  /commands:
     get:
       summary: Get 'Command' entities.
       parameters:
@@ -2050,7 +2733,7 @@ paths:
                               $ref: '#/components/schemas/Context'
                         - $ref: '#/components/schemas/Command'
       tags:
-      - commandpoints
+      - commands
     post:
       summary: Create a new 'Command' object.
       parameters: []
@@ -2087,8 +2770,8 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Command'
       tags:
-      - commandpoints
-  /commandpoints/{id}:
+      - commands
+  /commands/{id}:
     get:
       summary: Get a specific 'Command' object.
       parameters:
@@ -2117,7 +2800,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Command'
       tags:
-      - commandpoints
+      - commands
     put:
       summary: Update an existing 'Command' entity.
       parameters:
@@ -2162,7 +2845,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Command'
       tags:
-      - commandpoints
+      - commands
     patch:
       summary: Update a single property on a specific 'Command' object.
       parameters:
@@ -2210,7 +2893,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Command'
       tags:
-      - commandpoints
+      - commands
     delete:
       summary: Delete a 'Command' object.
       parameters:
@@ -2228,8 +2911,8 @@ paths:
         200:
           description: "'Command' entity was successfully deleted."
       tags:
-      - commandpoints
-  /parameterpoints:
+      - commands
+  /parameters:
     get:
       summary: Get 'Parameter' entities.
       parameters:
@@ -2309,7 +2992,7 @@ paths:
                               $ref: '#/components/schemas/Context'
                         - $ref: '#/components/schemas/Parameter'
       tags:
-      - parameterpoints
+      - parameters
     post:
       summary: Create a new 'Parameter' object.
       parameters: []
@@ -2346,8 +3029,8 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Parameter'
       tags:
-      - parameterpoints
-  /parameterpoints/{id}:
+      - parameters
+  /parameters/{id}:
     get:
       summary: Get a specific 'Parameter' object.
       parameters:
@@ -2376,7 +3059,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Parameter'
       tags:
-      - parameterpoints
+      - parameters
     put:
       summary: Update an existing 'Parameter' entity.
       parameters:
@@ -2421,7 +3104,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Parameter'
       tags:
-      - parameterpoints
+      - parameters
     patch:
       summary: Update a single property on a specific 'Parameter' object.
       parameters:
@@ -2469,7 +3152,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Parameter'
       tags:
-      - parameterpoints
+      - parameters
     delete:
       summary: Delete a 'Parameter' object.
       parameters:
@@ -2487,8 +3170,8 @@ paths:
         200:
           description: "'Parameter' entity was successfully deleted."
       tags:
-      - parameterpoints
-  /sensorpoints:
+      - parameters
+  /sensors:
     get:
       summary: Get 'Sensor' entities.
       parameters:
@@ -2562,7 +3245,7 @@ paths:
                               $ref: '#/components/schemas/Context'
                         - $ref: '#/components/schemas/Sensor'
       tags:
-      - sensorpoints
+      - sensors
     post:
       summary: Create a new 'Sensor' object.
       parameters: []
@@ -2599,8 +3282,8 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Sensor'
       tags:
-      - sensorpoints
-  /sensorpoints/{id}:
+      - sensors
+  /sensors/{id}:
     get:
       summary: Get a specific 'Sensor' object.
       parameters:
@@ -2629,7 +3312,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Sensor'
       tags:
-      - sensorpoints
+      - sensors
     put:
       summary: Update an existing 'Sensor' entity.
       parameters:
@@ -2674,7 +3357,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Sensor'
       tags:
-      - sensorpoints
+      - sensors
     patch:
       summary: Update a single property on a specific 'Sensor' object.
       parameters:
@@ -2722,7 +3405,7 @@ paths:
                       $ref: '#/components/schemas/Context'
                 - $ref: '#/components/schemas/Sensor'
       tags:
-      - sensorpoints
+      - sensors
     delete:
       summary: Delete a 'Sensor' object.
       parameters:
@@ -2740,7 +3423,7 @@ paths:
         200:
           description: "'Sensor' entity was successfully deleted."
       tags:
-      - sensorpoints
+      - sensors
   /setpoints:
     get:
       summary: Get 'Setpoint' entities.
@@ -3846,6 +4529,312 @@ paths:
           description: "'Asset' entity was successfully deleted."
       tags:
       - assets
+  /buildings:
+    get:
+      summary: Get 'Building' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: address
+        description: Filter value on relationship 'address'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: adjacentElement
+        description: Filter value on relationship 'adjacentElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: architectedBy
+        description: Filter value on relationship 'architectedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: constructedBy
+        description: Filter value on relationship 'constructedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: containsElement
+        description: Filter value on relationship 'containsElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: documentation
+        description: Filter value on relationship 'documentation'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: hasPoint
+        description: Filter value on relationship 'hasPoint'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: intersectingElement
+        description: Filter value on relationship 'intersectingElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isFedBy
+        description: Filter value on relationship 'isFedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: operatedBy
+        description: Filter value on relationship 'operatedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: ownedBy
+        description: Filter value on relationship 'ownedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: hasPart
+        description: Filter value on relationship 'hasPart'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isLocationOf
+        description: Filter value on relationship 'isLocationOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isPartOf
+        description: Filter value on relationship 'isPartOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: customTags
+        description: Filter value on property 'customTags'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: externalIds
+        description: Filter value on property 'externalIds'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: geometry
+        description: Filter value on property 'geometry'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: name
+        description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'Building' objects.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - type: object
+                          required:
+                          - '@context'
+                          properties:
+                            '@context':
+                              $ref: '#/components/schemas/Context'
+                        - $ref: '#/components/schemas/Building'
+      tags:
+      - buildings
+    post:
+      summary: Create a new 'Building' object.
+      parameters: []
+      requestBody:
+        description: New 'Building' entity that is to be added.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/Building'
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/Building'
+      tags:
+      - buildings
+  /buildings/{id}:
+    get:
+      summary: Get a specific 'Building' object.
+      parameters:
+      - name: id
+        description: Id of 'Building' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Building' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'Building' object.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/Building'
+      tags:
+      - buildings
+    put:
+      summary: Update an existing 'Building' entity.
+      parameters:
+      - name: id
+        description: Id of 'Building' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: Updated data for 'Building' entity.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/Building'
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Building' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/Building'
+      tags:
+      - buildings
+    patch:
+      summary: Update a single property on a specific 'Building' object.
+      parameters:
+      - name: id
+        description: Id of 'Building' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/Building'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Building' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/Building'
+      tags:
+      - buildings
+    delete:
+      summary: Delete a 'Building' object.
+      parameters:
+      - name: id
+        description: Id of 'Building' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Building' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'Building' entity was successfully deleted."
+      tags:
+      - buildings
   /buildingelements:
     get:
       summary: Get 'Building element' entities.
@@ -4579,6 +5568,783 @@ paths:
           description: "'Event' entity was successfully deleted."
       tags:
       - events
+  /observations:
+    get:
+      summary: Get 'Observation event' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: sourcePoint
+        description: Filter value on relationship 'sourcePoint'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: payload
+        description: Filter value on property 'payload'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: customTags
+        description: Filter value on property 'customTags'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: end
+        description: Filter value on property 'end'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      - name: externalIds
+        description: Filter value on property 'externalIds'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: name
+        description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: start
+        description: Filter value on property 'start'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      - name: timestamp
+        description: Filter value on property 'timestamp'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'Observation event' objects.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - type: object
+                          required:
+                          - '@context'
+                          properties:
+                            '@context':
+                              $ref: '#/components/schemas/Context'
+                        - $ref: '#/components/schemas/ObservationEvent'
+      tags:
+      - observations
+    post:
+      summary: Create a new 'Observation event' object.
+      parameters: []
+      requestBody:
+        description: New 'Observation event' entity that is to be added.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ObservationEvent'
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ObservationEvent'
+      tags:
+      - observations
+  /observations/{id}:
+    get:
+      summary: Get a specific 'Observation event' object.
+      parameters:
+      - name: id
+        description: Id of 'Observation event' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Observation event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'Observation event' object.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ObservationEvent'
+      tags:
+      - observations
+    put:
+      summary: Update an existing 'Observation event' entity.
+      parameters:
+      - name: id
+        description: Id of 'Observation event' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: Updated data for 'Observation event' entity.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ObservationEvent'
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Observation event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ObservationEvent'
+      tags:
+      - observations
+    patch:
+      summary: Update a single property on a specific 'Observation event' object.
+      parameters:
+      - name: id
+        description: Id of 'Observation event' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ObservationEvent'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Observation event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ObservationEvent'
+      tags:
+      - observations
+    delete:
+      summary: Delete a 'Observation event' object.
+      parameters:
+      - name: id
+        description: Id of 'Observation event' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Observation event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'Observation event' entity was successfully deleted."
+      tags:
+      - observations
+  /actuations:
+    get:
+      summary: Get 'Actuation event' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: targetPoint
+        description: Filter value on relationship 'targetPoint'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: payload
+        description: Filter value on property 'payload'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: customTags
+        description: Filter value on property 'customTags'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: end
+        description: Filter value on property 'end'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      - name: externalIds
+        description: Filter value on property 'externalIds'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: name
+        description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: start
+        description: Filter value on property 'start'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      - name: timestamp
+        description: Filter value on property 'timestamp'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'Actuation event' objects.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - type: object
+                          required:
+                          - '@context'
+                          properties:
+                            '@context':
+                              $ref: '#/components/schemas/Context'
+                        - $ref: '#/components/schemas/ActuationEvent'
+      tags:
+      - actuations
+    post:
+      summary: Create a new 'Actuation event' object.
+      parameters: []
+      requestBody:
+        description: New 'Actuation event' entity that is to be added.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ActuationEvent'
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ActuationEvent'
+      tags:
+      - actuations
+  /actuations/{id}:
+    get:
+      summary: Get a specific 'Actuation event' object.
+      parameters:
+      - name: id
+        description: Id of 'Actuation event' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Actuation event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'Actuation event' object.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ActuationEvent'
+      tags:
+      - actuations
+    put:
+      summary: Update an existing 'Actuation event' entity.
+      parameters:
+      - name: id
+        description: Id of 'Actuation event' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: Updated data for 'Actuation event' entity.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ActuationEvent'
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Actuation event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ActuationEvent'
+      tags:
+      - actuations
+    patch:
+      summary: Update a single property on a specific 'Actuation event' object.
+      parameters:
+      - name: id
+        description: Id of 'Actuation event' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ActuationEvent'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Actuation event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ActuationEvent'
+      tags:
+      - actuations
+    delete:
+      summary: Delete a 'Actuation event' object.
+      parameters:
+      - name: id
+        description: Id of 'Actuation event' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Actuation event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'Actuation event' entity was successfully deleted."
+      tags:
+      - actuations
+  /exceptions:
+    get:
+      summary: Get 'Exception event' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: sourcePoint
+        description: Filter value on relationship 'sourcePoint'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: payload
+        description: Filter value on property 'payload'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: customTags
+        description: Filter value on property 'customTags'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: end
+        description: Filter value on property 'end'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      - name: externalIds
+        description: Filter value on property 'externalIds'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: name
+        description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: start
+        description: Filter value on property 'start'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      - name: timestamp
+        description: Filter value on property 'timestamp'.
+        schema:
+          $ref: '#/components/schemas/DateTimeFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'Exception event' objects.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - type: object
+                          required:
+                          - '@context'
+                          properties:
+                            '@context':
+                              $ref: '#/components/schemas/Context'
+                        - $ref: '#/components/schemas/ExceptionEvent'
+      tags:
+      - exceptions
+    post:
+      summary: Create a new 'Exception event' object.
+      parameters: []
+      requestBody:
+        description: New 'Exception event' entity that is to be added.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ExceptionEvent'
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ExceptionEvent'
+      tags:
+      - exceptions
+  /exceptions/{id}:
+    get:
+      summary: Get a specific 'Exception event' object.
+      parameters:
+      - name: id
+        description: Id of 'Exception event' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Exception event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'Exception event' object.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ExceptionEvent'
+      tags:
+      - exceptions
+    put:
+      summary: Update an existing 'Exception event' entity.
+      parameters:
+      - name: id
+        description: Id of 'Exception event' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: Updated data for 'Exception event' entity.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ExceptionEvent'
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Exception event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ExceptionEvent'
+      tags:
+      - exceptions
+    patch:
+      summary: Update a single property on a specific 'Exception event' object.
+      parameters:
+      - name: id
+        description: Id of 'Exception event' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/ExceptionEvent'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Exception event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/ExceptionEvent'
+      tags:
+      - exceptions
+    delete:
+      summary: Delete a 'Exception event' object.
+      parameters:
+      - name: id
+        description: Id of 'Exception event' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Exception event' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'Exception event' entity was successfully deleted."
+      tags:
+      - exceptions
   /information:
     get:
       summary: Get 'Information' entities.
@@ -5918,6 +7684,312 @@ paths:
           description: "'Site' entity was successfully deleted."
       tags:
       - sites
+  /subbuildings:
+    get:
+      summary: Get 'Sub-building' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: address
+        description: Filter value on relationship 'address'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: adjacentElement
+        description: Filter value on relationship 'adjacentElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: architectedBy
+        description: Filter value on relationship 'architectedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: constructedBy
+        description: Filter value on relationship 'constructedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: containsElement
+        description: Filter value on relationship 'containsElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: documentation
+        description: Filter value on relationship 'documentation'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: hasPoint
+        description: Filter value on relationship 'hasPoint'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: intersectingElement
+        description: Filter value on relationship 'intersectingElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isFedBy
+        description: Filter value on relationship 'isFedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: operatedBy
+        description: Filter value on relationship 'operatedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: ownedBy
+        description: Filter value on relationship 'ownedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: hasPart
+        description: Filter value on relationship 'hasPart'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isLocationOf
+        description: Filter value on relationship 'isLocationOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isPartOf
+        description: Filter value on relationship 'isPartOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: customTags
+        description: Filter value on property 'customTags'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: externalIds
+        description: Filter value on property 'externalIds'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: geometry
+        description: Filter value on property 'geometry'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: name
+        description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'Sub-building' objects.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - type: object
+                          required:
+                          - '@context'
+                          properties:
+                            '@context':
+                              $ref: '#/components/schemas/Context'
+                        - $ref: '#/components/schemas/SubBuilding'
+      tags:
+      - subbuildings
+    post:
+      summary: Create a new 'Sub-building' object.
+      parameters: []
+      requestBody:
+        description: New 'Sub-building' entity that is to be added.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/SubBuilding'
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/SubBuilding'
+      tags:
+      - subbuildings
+  /subbuildings/{id}:
+    get:
+      summary: Get a specific 'Sub-building' object.
+      parameters:
+      - name: id
+        description: Id of 'Sub-building' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Sub-building' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'Sub-building' object.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/SubBuilding'
+      tags:
+      - subbuildings
+    put:
+      summary: Update an existing 'Sub-building' entity.
+      parameters:
+      - name: id
+        description: Id of 'Sub-building' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: Updated data for 'Sub-building' entity.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/SubBuilding'
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Sub-building' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/SubBuilding'
+      tags:
+      - subbuildings
+    patch:
+      summary: Update a single property on a specific 'Sub-building' object.
+      parameters:
+      - name: id
+        description: Id of 'Sub-building' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/SubBuilding'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Sub-building' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/SubBuilding'
+      tags:
+      - subbuildings
+    delete:
+      summary: Delete a 'Sub-building' object.
+      parameters:
+      - name: id
+        description: Id of 'Sub-building' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Sub-building' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'Sub-building' entity was successfully deleted."
+      tags:
+      - subbuildings
   /rooms:
     get:
       summary: Get 'Room' entities.
@@ -6224,5 +8296,311 @@ paths:
           description: "'Room' entity was successfully deleted."
       tags:
       - rooms
+  /zones:
+    get:
+      summary: Get 'Zone' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: address
+        description: Filter value on relationship 'address'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: adjacentElement
+        description: Filter value on relationship 'adjacentElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: architectedBy
+        description: Filter value on relationship 'architectedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: constructedBy
+        description: Filter value on relationship 'constructedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: containsElement
+        description: Filter value on relationship 'containsElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: documentation
+        description: Filter value on relationship 'documentation'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: hasPoint
+        description: Filter value on relationship 'hasPoint'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: intersectingElement
+        description: Filter value on relationship 'intersectingElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isFedBy
+        description: Filter value on relationship 'isFedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: operatedBy
+        description: Filter value on relationship 'operatedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: ownedBy
+        description: Filter value on relationship 'ownedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: hasPart
+        description: Filter value on relationship 'hasPart'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isLocationOf
+        description: Filter value on relationship 'isLocationOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isPartOf
+        description: Filter value on relationship 'isPartOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: customTags
+        description: Filter value on property 'customTags'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: externalIds
+        description: Filter value on property 'externalIds'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: geometry
+        description: Filter value on property 'geometry'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: name
+        description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'Zone' objects.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - type: object
+                          required:
+                          - '@context'
+                          properties:
+                            '@context':
+                              $ref: '#/components/schemas/Context'
+                        - $ref: '#/components/schemas/Zone'
+      tags:
+      - zones
+    post:
+      summary: Create a new 'Zone' object.
+      parameters: []
+      requestBody:
+        description: New 'Zone' entity that is to be added.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/Zone'
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/Zone'
+      tags:
+      - zones
+  /zones/{id}:
+    get:
+      summary: Get a specific 'Zone' object.
+      parameters:
+      - name: id
+        description: Id of 'Zone' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Zone' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'Zone' object.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/Zone'
+      tags:
+      - zones
+    put:
+      summary: Update an existing 'Zone' entity.
+      parameters:
+      - name: id
+        description: Id of 'Zone' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: Updated data for 'Zone' entity.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/Zone'
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Zone' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/Zone'
+      tags:
+      - zones
+    patch:
+      summary: Update a single property on a specific 'Zone' object.
+      parameters:
+      - name: id
+        description: Id of 'Zone' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/Zone'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Zone' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/Zone'
+      tags:
+      - zones
+    delete:
+      summary: Delete a 'Zone' object.
+      parameters:
+      - name: id
+        description: Id of 'Zone' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Zone' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'Zone' entity was successfully deleted."
+      tags:
+      - zones
 servers:
 - url: http://localhost:8080/
