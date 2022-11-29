@@ -16,7 +16,6 @@
 
 ### Inherited Components
 * **[Architecture](../../Architecture.md):** area, capacity
-* **[Space](../../../Space.md):** georeference
 
 ---
 
@@ -24,7 +23,7 @@
 
 ### Inherited Relationships
 * **[Architecture](../../Architecture.md):** address, adjacentElement, architectedBy, constructedBy, containsElement, documentation, hasPoint, intersectingElement, isFedBy, operatedBy, ownedBy
-* **[Space](../../../Space.md):** hasPart, isLocationOf, isPartOf
+* **[Space](../../../Space.md):** georeference, hasPart, isLocationOf, isPartOf
 
 ---
 

@@ -13,7 +13,6 @@ A piece of land upon which zero or more buildings may be situated.
 
 ### Inherited Components
 * **[Architecture](Architecture.md):** area, capacity
-* **[Space](../Space.md):** georeference
 
 ---
 
@@ -21,7 +20,7 @@ A piece of land upon which zero or more buildings may be situated.
 
 ### Inherited Relationships
 * **[Architecture](Architecture.md):** address, adjacentElement, architectedBy, constructedBy, containsElement, documentation, hasPoint, intersectingElement, isFedBy, operatedBy, ownedBy
-* **[Space](../Space.md):** hasPart, isLocationOf, isPartOf
+* **[Space](../Space.md):** georeference, hasPart, isLocationOf, isPartOf
 
 ---
 

@@ -15,18 +15,11 @@ A contiguous part of the physical world that contains or can contain sub-spaces.
 
 ---
 
-## Components
-
-|Name|Display name|Description|Schema|
-|-|-|-|-|
-|georeference|**en**: georeference|**en**: A fixed point for, e.g., a building structure. Commonly refered to as "insertion point" in CAD-programs. Used as origo for locally defined geometries.|[Georeference](../Information/Georeference.md)|
-
----
-
 ## Relationships
 
 |Name|Display name|Description|Multiplicity|Target|Properties|Writable|
 |-|-|-|-|-|-|-|
+|georeference|**en**: georeference|**en**: A georeference creates a relationship between the local coordinate system used within a building (e.g., measured in meters) and a geographic coordinate system (e.g., lat, long, alt), such that locally placed Spaces can be resolved and rendered in that geographic coordinate system (e.g., for mapping purposes).|0-1|[Georeference](../Information/Georeference/Georeference.md)||True|
 |hasPart|**en**: has part||0-Infinity|[Space](#)||True|
 |isLocationOf|**en**: is location of||0-Infinity|||True|
 |isPartOf|**en**: is part of||0-1|[Space](#)||True|

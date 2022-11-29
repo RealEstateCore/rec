@@ -10,7 +10,7 @@
 * [ArchitectureArea](ArchitectureArea.md)
 * [ArchitectureCapacity](ArchitectureCapacity.md)
 * [Document](Document/Document.md)
-* [Georeference](Georeference.md)
+* [Georeference](Georeference/Georeference.md)
 * [PointOfInterest](PointOfInterest.md)
 * [PostalAddress](PostalAddress.md)
 * [ServiceObject](ServiceObject/ServiceObject.md)

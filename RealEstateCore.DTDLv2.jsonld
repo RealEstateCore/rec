@@ -1405,17 +1405,6 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Component",
-        "description": {
-          "en": "A fixed point for, e.g., a building structure. Commonly refered to as \u0022insertion point\u0022 in CAD-programs. Used as origo for locally defined geometries."
-        },
-        "displayName": {
-          "en": "georeference"
-        },
-        "name": "georeference",
-        "schema": "dtmi:org:w3id:rec:Georeference;1"
-      },
-      {
         "@type": "Property",
         "displayName": {
           "en": "Custom Tags"
@@ -1472,6 +1461,19 @@
         },
         "name": "name",
         "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "description": {
+          "en": "A georeference creates a relationship between the local coordinate system used within a building (e.g., measured in meters) and a geographic coordinate system (e.g., lat, long, alt), such that locally placed Spaces can be resolved and rendered in that geographic coordinate system (e.g., for mapping purposes)."
+        },
+        "displayName": {
+          "en": "georeference"
+        },
+        "maxMultiplicity": 1,
+        "name": "georeference",
+        "target": "dtmi:org:w3id:rec:Georeference;1",
         "writable": true
       },
       {
@@ -2936,58 +2938,8 @@
   {
     "@id": "dtmi:org:w3id:rec:Georeference;1",
     "@type": "Interface",
-    "contents": [
-      {
-        "@type": "Property",
-        "description": {
-          "en": "Altitude"
-        },
-        "displayName": {
-          "en": "alt"
-        },
-        "name": "alt",
-        "schema": "float",
-        "writable": true
-      },
-      {
-        "@type": "Property",
-        "description": {
-          "en": "The angle between local coordinate system and a north-south meridian."
-        },
-        "displayName": {
-          "en": "bearing"
-        },
-        "name": "bearing",
-        "schema": "float",
-        "writable": true
-      },
-      {
-        "@type": "Property",
-        "description": {
-          "en": "Latitude"
-        },
-        "displayName": {
-          "en": "lat"
-        },
-        "name": "lat",
-        "schema": "float",
-        "writable": true
-      },
-      {
-        "@type": "Property",
-        "description": {
-          "en": "Longitude"
-        },
-        "displayName": {
-          "en": "long"
-        },
-        "name": "long",
-        "schema": "float",
-        "writable": true
-      }
-    ],
     "description": {
-      "en": "Encapsulates a georeference globally placing a spatially located entity in terms of latitude, longitude, altitude, and bearing."
+      "en": "A georeference creates a relationship between a local coordinate system into a geographic coordinate system."
     },
     "displayName": {
       "en": "Georeference"
@@ -9036,6 +8988,82 @@
       "en": "Footrest"
     },
     "extends": "dtmi:org:w3id:rec:Furniture;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Geotransform;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "height scale factor"
+        },
+        "name": "heightScaleFactor",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "origin x"
+        },
+        "name": "originX",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "origin y"
+        },
+        "name": "originY",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "width scale factor"
+        },
+        "name": "widthScaleFactor",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "description": {
+          "en": "Value will be zero if the local coordinate system is north-aligned."
+        },
+        "displayName": {
+          "en": "x rotational scale factor"
+        },
+        "name": "xRotationalScaleFactor",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "description": {
+          "en": "Value will be zero if the local coordinate system is north-aligned."
+        },
+        "displayName": {
+          "en": "y rotational scale factor"
+        },
+        "name": "yRotationalScaleFactor",
+        "schema": "double",
+        "writable": true
+      }
+    ],
+    "description": {
+      "en": "A transform following GDAL\u0027s Affine Transform that transforms a local coordinate into a WGS84 coordinate. Created from Ground Control Points (GCP) using GDAL\u0027s GCPsToGeotransform method."
+    },
+    "displayName": {
+      "en": "Geotransform"
+    },
+    "extends": "dtmi:org:w3id:rec:Georeference;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
