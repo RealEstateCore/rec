@@ -1,0 +1,76 @@
+{
+  "@id": "dtmi:org:w3id:rec:Geotransform;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "height scale factor"
+      },
+      "name": "heightScaleFactor",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "origin x"
+      },
+      "name": "originX",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "origin y"
+      },
+      "name": "originY",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "width scale factor"
+      },
+      "name": "widthScaleFactor",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Value will be zero if the local coordinate system is north-aligned."
+      },
+      "displayName": {
+        "en": "x rotational scale factor"
+      },
+      "name": "xRotationalScaleFactor",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Value will be zero if the local coordinate system is north-aligned."
+      },
+      "displayName": {
+        "en": "y rotational scale factor"
+      },
+      "name": "yRotationalScaleFactor",
+      "schema": "double",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A transform following GDAL's Affine Transform that transforms a local coordinate into a WGS84 coordinate. Created from Ground Control Points (GCP) using GDAL's GCPsToGeotransform method."
+  },
+  "displayName": {
+    "en": "Geotransform"
+  },
+  "extends": "dtmi:org:w3id:rec:Georeference;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}
