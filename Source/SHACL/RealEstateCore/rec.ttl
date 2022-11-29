@@ -1012,6 +1012,57 @@ rec:Georeference
   rdfs:label "Georeference" ;
   rdfs:subClassOf rec:Information ;
 .
+rec:Geotransform
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "A transform following GDAL's Affine Transform that transforms a local coordinate into a WGS84 coordinate. Created from Ground Control Points (GCP) using GDAL's GCPsToGeotransform method." ;
+  rdfs:label "Geotransform" ;
+  rdfs:subClassOf rec:Georeference ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:originX ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "origin x" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:originY ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "origin y" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:widthScaleFactor ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "width scale factor" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:heightScaleFactor ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "height scale factor" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:xRotationalScaleFactor ;
+      sh:description "Value will be zero if the local coordinate system is north-aligned." ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "x rotational scale factor" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:yRotationalScaleFactor ;
+      sh:description "Value will be zero if the local coordinate system is north-aligned." ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "y rotational scale factor" ;
+    ] ;
+.
 rec:GroupRoom
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
