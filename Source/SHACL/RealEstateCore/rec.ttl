@@ -1006,46 +1006,11 @@ rec:Garage
   rdfs:subClassOf rec:Room ;
 .
 rec:Georeference
-  rdf:type <dtmi:dtdl:class:Component> ;
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
-  rdfs:comment "Encapsulates a georeference globally placing a spatially located entity in terms of latitude, longitude, altitude, and bearing." ;
+  rdfs:comment "A georeference creates a relationship between a local coordinate system into a geographic coordinate system." ;
   rdfs:label "Georeference" ;
   rdfs:subClassOf rec:Information ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:alt ;
-      sh:datatype xsd:float ;
-      sh:description "Altitude" ;
-      sh:maxCount 1 ;
-      sh:name "alt" ;
-    ] ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:bearing ;
-      sh:datatype xsd:float ;
-      sh:description "The angle between local coordinate system and a north-south meridian." ;
-      sh:maxCount 1 ;
-      sh:name "bearing" ;
-    ] ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:lat ;
-      sh:datatype xsd:float ;
-      sh:description "Latitude" ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "lat" ;
-    ] ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:long ;
-      sh:datatype xsd:float ;
-      sh:description "Longitude" ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "long" ;
-    ] ;
 .
 rec:GroupRoom
   rdf:type rdfs:Class ;
@@ -1846,15 +1811,6 @@ rec:Space
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:georeference ;
-      sh:class rec:Georeference ;
-      sh:description "A fixed point for, e.g., a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for locally defined geometries." ;
-      sh:maxCount 1 ;
-      sh:name "georeference" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
       sh:path rec:hasPart ;
       sh:class rec:Space ;
       sh:name "has part" ;
@@ -1872,6 +1828,15 @@ rec:Space
       sh:class rec:Space ;
       sh:maxCount 1 ;
       sh:name "is part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:georeference ;
+      sh:class rec:Georeference ;
+      sh:description "A georeference creates a relationship between the local coordinate system used within a building (e.g., measured in meters) and a geographic coordinate system (e.g., lat, long, alt), such that locally placed Spaces can be resolved and rendered in that geographic coordinate system (e.g., for mapping purposes)." ;
+      sh:maxCount 1 ;
+      sh:name "georeference" ;
       sh:nodeKind sh:IRI ;
     ] ;
 .
