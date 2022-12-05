@@ -1,6 +1,9 @@
 ﻿using CommandLine;
+using DotNetRdfExtensions.SHACL;
 using Microsoft.Azure.DigitalTwins.Parser;
 using Microsoft.Azure.DigitalTwins.Parser.Models;
+using VDS.RDF.Ontology;
+using VDS.RDF.Shacl;
 
 namespace DTDL2SHACL 
 {
@@ -20,6 +23,8 @@ namespace DTDL2SHACL
 
         // Data fields
         private static IReadOnlyDictionary<Dtmi, DTEntityInfo>? _ontology;
+        private static readonly OntologyGraph _ontologyGraph = new OntologyGraph();
+        private static readonly ShapesGraph _shapesGraph = new(_ontologyGraph);
 
         static void Main(string[] args)
         {
@@ -36,11 +41,21 @@ namespace DTDL2SHACL
             
             _ontology = LoadInput();
 
+
+
             foreach (DTInterfaceInfo iface in _ontology.Values
                 .Where(entity => entity is DTInterfaceInfo)
-                .Select(entity => (DTInterfaceInfo)entity)) 
+                .Select(entity => (DTInterfaceInfo)entity)
+                .OrderBy(iface => iface.GetDepth()))
             {
-                Console.WriteLine(iface.Id);
+                NodeShape nodeShape = _shapesGraph.CreateNodeShape(GetShaclId(iface.Id));
+                foreach (DTInterfaceInfo parentIface in iface.Extends) {
+                    var parentShaclId = GetShaclId(parentIface.Id);
+                    var parentNodeShape = _shapesGraph.NodeShapes().First(parentNS => parentNS.Uri() == parentShaclId);
+                    nodeShape.subClassOf().Append(parentNodeShape);
+                }
+
+                Console.WriteLine(nodeShape.ToPrettyString());
             }
         }
 
@@ -79,6 +94,11 @@ namespace DTDL2SHACL
                 Environment.Exit(1);
                 return null;
             }
+        }
+
+        private static Uri GetShaclId(Dtmi dtmi) {
+            // TODO: Implement using prefix index
+            return dtmi;
         }
     }
 }
