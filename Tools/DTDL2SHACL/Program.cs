@@ -2,8 +2,10 @@
 using DotNetRdfExtensions.SHACL;
 using Microsoft.Azure.DigitalTwins.Parser;
 using Microsoft.Azure.DigitalTwins.Parser.Models;
+using VDS.RDF;
 using VDS.RDF.Ontology;
 using VDS.RDF.Shacl;
+using VDS.RDF.Writing;
 
 namespace DTDL2SHACL 
 {
@@ -41,22 +43,38 @@ namespace DTDL2SHACL
             
             _ontology = LoadInput();
 
-
-
             foreach (DTInterfaceInfo iface in _ontology.Values
                 .Where(entity => entity is DTInterfaceInfo)
                 .Select(entity => (DTInterfaceInfo)entity)
                 .OrderBy(iface => iface.GetDepth()))
             {
+                // Create a new NodeShape
                 NodeShape nodeShape = _shapesGraph.CreateNodeShape(GetShaclId(iface.Id));
-                foreach (DTInterfaceInfo parentIface in iface.Extends) {
-                    var parentShaclId = GetShaclId(parentIface.Id);
-                    var parentNodeShape = _shapesGraph.NodeShapes().First(parentNS => parentNS.Uri() == parentShaclId);
-                    nodeShape.subClassOf().Append(parentNodeShape);
+
+                // Add labels and comments from DTDL display names and descriptions
+                foreach ((string lang, string val) in iface.DisplayName) {
+                    nodeShape.AddLabel(lang, val);
+                }
+                foreach ((string lang, string val) in iface.Description) {
+                    nodeShape.AddComment(lang, val);
                 }
 
-                Console.WriteLine(nodeShape.ToPrettyString());
+                // Get the parent interfaces' NodeShape equivalents from the shapes graph and assign thet as supershape using rdf:subClassOf
+                foreach (DTInterfaceInfo parentIface in iface.Extends) {    
+                    NodeShape? parentNodeShape = _shapesGraph.NodeShapes().FirstOrDefault(parentShape => parentShape.Uri == GetShaclId(parentIface.Id));
+                    if (parentNodeShape != null)
+                    {
+                        nodeShape.AddSuperClass(parentNodeShape);
+                    }
+                }
             }
+
+            var writer = new CompressingTurtleWriter() {
+                PrettyPrintMode = true,
+                CompressionLevel = 0
+            };
+            _shapesGraph.NamespaceMap.AddNamespace("sh", new Uri("http://www.w3.org/ns/shacl#"));
+            writer.Save(_shapesGraph, _outputPath);
         }
 
         // Load a file or a directory of files from disk
@@ -98,7 +116,8 @@ namespace DTDL2SHACL
 
         private static Uri GetShaclId(Dtmi dtmi) {
             // TODO: Implement using prefix index
-            return dtmi;
+            string localName = dtmi.Versionless.Split(':').Last();
+            return new Uri($"https://example.com/{localName}");
         }
     }
 }
