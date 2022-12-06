@@ -18,18 +18,24 @@ namespace DTDL2SHACL
             public string InputPath { get; set; } = string.Empty;
             [Option('o', "outputPath", Required = true, HelpText = "The path to the output SHACL file.")]
             public string OutputPath { get; set; } = string.Empty;
+            [Option('n', "namespaceMappingsPath", Required = true, HelpText = "Path to namespace mappings CSV file.")]
+            public string NamespaceMappingsPath { get; set; } = string.Empty;
         }
 
         // Configuration fields
         private static string _inputPath = string.Empty;
         private static string _outputPath = string.Empty;
+        private static string _namespaceMappingsPath = string.Empty;
 
         // Data fields
         private static IReadOnlyDictionary<Dtmi, DTEntityInfo>? _ontology;
         private static readonly OntologyGraph _ontologyGraph = new OntologyGraph();
         private static readonly ShapesGraph _shapesGraph = new(_ontologyGraph);
 
-        //
+        // ID translation machinery
+        private static Dictionary<string,string> _dtmiBaseToUriBase = new();
+
+        // Frequently used nodes
         private static readonly IUriNode _shIri = _shapesGraph.CreateUriNode(SH.IRI);
 
         static void Main(string[] args)
@@ -39,6 +45,7 @@ namespace DTDL2SHACL
                 {
                     _inputPath = options.InputPath;
                     _outputPath = options.OutputPath;
+                    _namespaceMappingsPath = options.NamespaceMappingsPath;
                 })
                 .WithNotParsed(errors =>
                 {
@@ -46,6 +53,28 @@ namespace DTDL2SHACL
                 });
             
             _ontology = LoadInput();
+
+            // Load namespace mappings
+            using (var reader = new StreamReader(_namespaceMappingsPath))
+            {
+                string namespaceMappingsCsv = reader.ReadToEnd();
+                string[] mappingRows = namespaceMappingsCsv.Split(Environment.NewLine);
+                // Skipping first row b/c headers
+                for (int i = 1; i < mappingRows.Length; i++)
+                {
+                    string mappingRow = mappingRows[i];
+                    // Last line of file might be empty
+                    if (mappingRow.Length == 0) continue;
+                    // Use of semicolon b/c Swedish locale mandates it for CSV
+                    string[] mappingRowComponents = mappingRow.Split(';');
+                    string dtmiBase = mappingRowComponents[0];
+                    string uriBase = mappingRowComponents[1];
+                    string prefix = mappingRowComponents[2];
+
+                    _dtmiBaseToUriBase.Add(dtmiBase, uriBase);
+                    _shapesGraph.NamespaceMap.AddNamespace(prefix, new Uri(uriBase));
+                }
+            }
 
             foreach (DTInterfaceInfo iface in _ontology.Values
                 .Where(entity => entity is DTInterfaceInfo)
@@ -70,7 +99,7 @@ namespace DTDL2SHACL
 
                 // Translate DTDL properties
                 foreach (DTPropertyInfo property in iface.GetProperties()) {
-                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(property.Name));
+                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(property.Id));
 
                     // Add SHACL names and descriptions from DTDL display names and descriptions
                     foreach ((string lang, string val) in property.DisplayName) {
@@ -85,7 +114,7 @@ namespace DTDL2SHACL
 
                 // Translate DTDL Relationships
                 foreach (DTRelationshipInfo relationship in iface.GetRelationships()) {
-                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(relationship.Name));
+                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(relationship.Id));
                     pShape.NodeKind = _shIri;
                     if (relationship.Target != null) {
                         pShape.AddClass(GetShaclId(relationship.Target));
@@ -105,7 +134,7 @@ namespace DTDL2SHACL
 
                 // Translate DTDL Components
                 foreach (DTComponentInfo component in iface.GetComponents()) {
-                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(component.Name));
+                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(component.Id));
                     pShape.NodeKind = _shIri;
                     pShape.MaxCount = 1;
                     Uri schemaShaclUri = GetShaclId(component.Schema.Id);
@@ -171,13 +200,20 @@ namespace DTDL2SHACL
         }
 
         private static Uri GetShaclId(Dtmi dtmi) {
-            string localName = dtmi.Versionless.Split(':').Last();
-            return GetShaclId(localName);
-        }
+            string versionLessDtmi = dtmi.Versionless;
+            string localName =  versionLessDtmi.Split(':').Last();
+            if (dtmi.IsReserved) {
+                localName = localName.Trim('_');
+            }
 
-        private static Uri GetShaclId(string localName) {
-            // TODO: Implement using prefix index
-            return new Uri($"https://example.com/{localName}");
+            foreach ((string dtmiBase, string uriBase) in _dtmiBaseToUriBase) {
+                if (versionLessDtmi.Contains(dtmiBase)) {
+                    return new Uri(uriBase + localName);
+                }
+            }
+
+            // Fall-back to returning DTMI
+            return dtmi;
         }
     }
 }

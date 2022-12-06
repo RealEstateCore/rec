@@ -2,1347 +2,1348 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rec: <https://w3id.org/rec#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 
-<https://example.com/AccessControlZone> a rdfs:Class,
-                                          sh:NodeShape;
-                                        rdfs:label "Access control zone"@en;
-                                        rdfs:subClassOf <https://example.com/Zone>.
-<https://example.com/AccessPanel> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Access panel"@en;
-                                  rdfs:subClassOf <https://example.com/BarrierAsset>.
-<https://example.com/ActuationEvent> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Actuation event"@en;
-                                     rdfs:subClassOf <https://example.com/PointEvent>;
-                                     sh:property [a sh:PropertyShape ; 
-                                                  sh:path <https://example.com/targetPoint> ; 
-                                                  sh:nodeKind sh:IRI ; 
-                                                  sh:class <https://example.com/Point> ; 
-                                                  sh:name "target point"@en ; 
-                                                  sh:description "The brick:Point(s) (e.g., brick:Commands, brick:Setpoints, or brick:Parameters) that the actuation will target/execute."@en].
-<https://example.com/AdmittingRoom> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Admitting room"@en;
-                                    rdfs:subClassOf <https://example.com/HealthcareRoom>.
-<https://example.com/Agent> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:comment "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, ....) to be anchored in one joint place, on the Agent class."@en;
-                            rdfs:label "Agent"@en;
-                            sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/customTags> ; 
-                                         sh:name "Custom Tags"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/externalIds> ; 
-                                         sh:name "External IDs"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/name> ; 
-                                         sh:name "name"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/isMemberOf> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Organization> ; 
-                                         sh:name "is member of"@en ; 
-                                         sh:description "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property."@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/owns> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:name "owns"@en ; 
-                                         sh:description "Indicates ownership of some thing, e.g., a building, an asset, an organization, etc."@en].
-<https://example.com/AlarmObject> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Alarm object"@en;
-                                  rdfs:subClassOf <https://example.com/ServiceObject>.
-<https://example.com/Apartment> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Apartment"@en;
-                                rdfs:subClassOf <https://example.com/Collection>;
-                                sh:property [a sh:PropertyShape ; 
-                                             sh:path <https://example.com/includes> ; 
-                                             sh:nodeKind sh:IRI ; 
-                                             sh:class <https://example.com/Room> ; 
-                                             sh:name "includes"@en].
-<https://example.com/ArchitecturalAsset> a rdfs:Class,
-                                           sh:NodeShape;
-                                         rdfs:label "Architectural asset"@en;
-                                         rdfs:subClassOf <https://example.com/Asset>.
-<https://example.com/Architecture> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:comment "A designed/landscaped (or potentially designed/landscaped) part of the physical world that has a 3D spatial extent. E.g., a building site, a building, levels within the building, rooms, etc."@en;
-                                   rdfs:label "Architecture"@en;
-                                   rdfs:subClassOf <https://example.com/Space>;
-                                   sh:property [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/address> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/PostalAddress> ; 
-                                                sh:name "address"@en ; 
-                                                sh:description "Physical address of the architecture (site, building, sub-building, entrance room, etc.) in question."@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/adjacentElement> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/BuildingElement> ; 
-                                                sh:name "adjacent element"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/architectedBy> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Agent> ; 
-                                                sh:name "architected by"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/constructedBy> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Agent>],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/containsElement> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/BuildingElement> ; 
-                                                sh:name "contains element"@en ; 
-                                                sh:description "Links an Architecture to BuildingElement that is contained in the Space."@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/documentation> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Document> ; 
-                                                sh:name "documentation"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/hasPoint> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Point> ; 
-                                                sh:name "has point"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/intersectingElement> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/BuildingElement> ; 
-                                                sh:name "intersecting element"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/isFedBy> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:name "is fed by"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/operatedBy> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Agent> ; 
-                                                sh:name "operated by"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/ownedBy> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Agent> ; 
-                                                sh:name "owned by"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/area> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:maxCount 1  ; 
-                                                sh:class <https://example.com/ArchitectureArea> ; 
-                                                sh:name "area"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/capacity> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:maxCount 1  ; 
-                                                sh:class <https://example.com/ArchitectureCapacity> ; 
-                                                sh:name "capacity"@en].
-<https://example.com/ArchitectureArea> a rdfs:Class,
-                                         sh:NodeShape,
-                                         <dtmi:dtdl:class:Component>;
-                                       rdfs:comment "Describes business-relevant area measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."@en;
-                                       rdfs:label "Architecture area"@en;
-                                       rdfs:subClassOf <https://example.com/Information>;
-                                       sh:property [a sh:PropertyShape ; 
-                                                    sh:path <https://example.com/grossArea> ; 
-                                                    sh:name "gross area"@en],
-                                                   [a sh:PropertyShape ; 
-                                                    sh:path <https://example.com/netArea> ; 
-                                                    sh:name "net area"@en],
-                                                   [a sh:PropertyShape ; 
-                                                    sh:path <https://example.com/rentableArea> ; 
-                                                    sh:name "rentable area"@en].
-<https://example.com/ArchitectureCapacity> a rdfs:Class,
-                                             sh:NodeShape,
-                                             <dtmi:dtdl:class:Component>;
-                                           rdfs:comment "Describes business-relevant capacity measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."@en;
-                                           rdfs:label "Architecture capacity"@en;
-                                           rdfs:subClassOf <https://example.com/Information>;
-                                           sh:property [a sh:PropertyShape ; 
-                                                        sh:path <https://example.com/maxOccupancy> ; 
-                                                        sh:name "maximum occupancy"@en ; 
-                                                        sh:description "E.g., per Building Code"@en],
-                                                       [a sh:PropertyShape ; 
-                                                        sh:path <https://example.com/seatingCapacity> ; 
-                                                        sh:name "seating capacity"@en].
-<https://example.com/Asset> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:comment "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."@en;
-                            rdfs:label "Asset"@en;
-                            sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/IPAddress> ; 
-                                         sh:name "IP address"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/MACAddress> ; 
-                                         sh:name "MAC address"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/assetTag> ; 
-                                         sh:name "asset tag"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/commissioningDate> ; 
-                                         sh:name "commissioning date"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/customTags> ; 
-                                         sh:name "Custom Tags"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/externalIds> ; 
-                                         sh:name "External IDs"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/geometry> ; 
-                                         sh:name "geometry"@en ; 
-                                         sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/initialCost> ; 
-                                         sh:name "initial cost"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/installationDate> ; 
-                                         sh:name "installation date"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/maintenanceInterval> ; 
-                                         sh:name "maintenance interval"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/modelNumber> ; 
-                                         sh:name "model number"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/name> ; 
-                                         sh:name "name"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/serialNumber> ; 
-                                         sh:name "serial number"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/turnoverDate> ; 
-                                         sh:name "turnover date"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/weight> ; 
-                                         sh:name "weight"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/commissionedBy> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Agent> ; 
-                                         sh:name "commissioned by"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/documentation> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Document> ; 
-                                         sh:name "documentation"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/hasPart> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Asset> ; 
-                                         sh:name "has part"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/hasPoint> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Point> ; 
-                                         sh:name "has point"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/installedBy> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Agent> ; 
-                                         sh:name "installed by"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/isPartOf> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Asset> ; 
-                                         sh:name "is part of"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/locatedIn> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Space> ; 
-                                         sh:name "located in"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/manufacturedBy> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Agent> ; 
-                                         sh:name "manufactured by"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/mountedOn> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/BuildingElement> ; 
-                                         sh:name "mounted on"@en ; 
-                                         sh:description "An asset may be mounted on some part of the building construction (e.g., a blind on a facade, a camera on a wall, etc)."@en ; 
-                                         sh:maxCount 1 ],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/servicedBy> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Agent> ; 
-                                         sh:name "serviced by"@en].
-<https://example.com/Atrium> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Atrium"@en;
-                             rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Auditorium> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Auditorium"@en;
-                                 rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/BackOffice> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Back office"@en;
-                                 rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Balcony> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Balcony"@en;
-                              rdfs:subClassOf <https://example.com/BuildingElement>.
-<https://example.com/BarRoom> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Bar room"@en;
-                              rdfs:subClassOf <https://example.com/FoodHandlingRoom>.
-<https://example.com/BarrierAsset> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Barrier asset"@en;
-                                   rdfs:subClassOf <https://example.com/ArchitecturalAsset>.
-<https://example.com/BasementLevel> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Basement level"@en;
-                                    rdfs:subClassOf <https://example.com/Level>.
-<https://example.com/Bathroom> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Bathroom"@en;
-                               rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Bed> a rdfs:Class,
+rec:AccessControlZone a rdfs:Class,
+                        sh:NodeShape;
+                      rdfs:label "Access control zone"@en;
+                      rdfs:subClassOf rec:Zone.
+rec:AccessPanel a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Access panel"@en;
+                rdfs:subClassOf rec:BarrierAsset.
+rec:ActuationEvent a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Actuation event"@en;
+                   rdfs:subClassOf rec:PointEvent;
+                   sh:property [a sh:PropertyShape ; 
+                                sh:path rec:targetPoint ; 
+                                sh:nodeKind sh:IRI ; 
+                                sh:class <dtmi:org:brickschema:schema:Brick:Point;1> ; 
+                                sh:name "target point"@en ; 
+                                sh:description "The brick:Point(s) (e.g., brick:Commands, brick:Setpoints, or brick:Parameters) that the actuation will target/execute."@en].
+rec:AdmittingRoom a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Admitting room"@en;
+                  rdfs:subClassOf rec:HealthcareRoom.
+rec:Agent a rdfs:Class,
+            sh:NodeShape;
+          rdfs:comment "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, ....) to be anchored in one joint place, on the Agent class."@en;
+          rdfs:label "Agent"@en;
+          sh:property [a sh:PropertyShape ; 
+                       sh:path rec:customTags ; 
+                       sh:name "Custom Tags"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:externalIds ; 
+                       sh:name "External IDs"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:name ; 
+                       sh:name "name"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:isMemberOf ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Organization ; 
+                       sh:name "is member of"@en ; 
+                       sh:description "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property."@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:owns ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:name "owns"@en ; 
+                       sh:description "Indicates ownership of some thing, e.g., a building, an asset, an organization, etc."@en].
+rec:AlarmObject a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Alarm object"@en;
+                rdfs:subClassOf rec:ServiceObject.
+rec:Apartment a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Apartment"@en;
+              rdfs:subClassOf rec:Collection;
+              sh:property [a sh:PropertyShape ; 
+                           sh:path rec:includes ; 
+                           sh:nodeKind sh:IRI ; 
+                           sh:class rec:Room ; 
+                           sh:name "includes"@en].
+rec:ArchitecturalAsset a rdfs:Class,
+                         sh:NodeShape;
+                       rdfs:label "Architectural asset"@en;
+                       rdfs:subClassOf rec:Asset.
+rec:Architecture a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:comment "A designed/landscaped (or potentially designed/landscaped) part of the physical world that has a 3D spatial extent. E.g., a building site, a building, levels within the building, rooms, etc."@en;
+                 rdfs:label "Architecture"@en;
+                 rdfs:subClassOf rec:Space;
+                 sh:property [a sh:PropertyShape ; 
+                              sh:path rec:address ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:PostalAddress ; 
+                              sh:name "address"@en ; 
+                              sh:description "Physical address of the architecture (site, building, sub-building, entrance room, etc.) in question."@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:adjacentElement ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:BuildingElement ; 
+                              sh:name "adjacent element"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:architectedBy ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:Agent ; 
+                              sh:name "architected by"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:constructedBy ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:Agent],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:containsElement ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:BuildingElement ; 
+                              sh:name "contains element"@en ; 
+                              sh:description "Links an Architecture to BuildingElement that is contained in the Space."@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:documentation ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:Document ; 
+                              sh:name "documentation"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:hasPoint ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class <dtmi:org:brickschema:schema:Brick:Point;1> ; 
+                              sh:name "has point"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:intersectingElement ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:BuildingElement ; 
+                              sh:name "intersecting element"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:isFedBy ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:name "is fed by"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:operatedBy ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:Agent ; 
+                              sh:name "operated by"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:ownedBy ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:Agent ; 
+                              sh:name "owned by"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:area ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:maxCount 1  ; 
+                              sh:class rec:ArchitectureArea ; 
+                              sh:name "area"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:capacity ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:maxCount 1  ; 
+                              sh:class rec:ArchitectureCapacity ; 
+                              sh:name "capacity"@en].
+rec:ArchitectureArea a rdfs:Class,
+                       sh:NodeShape,
+                       <dtmi:dtdl:class:Component>;
+                     rdfs:comment "Describes business-relevant area measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."@en;
+                     rdfs:label "Architecture area"@en;
+                     rdfs:subClassOf rec:Information;
+                     sh:property [a sh:PropertyShape ; 
+                                  sh:path rec:grossArea ; 
+                                  sh:name "gross area"@en],
+                                 [a sh:PropertyShape ; 
+                                  sh:path rec:netArea ; 
+                                  sh:name "net area"@en],
+                                 [a sh:PropertyShape ; 
+                                  sh:path rec:rentableArea ; 
+                                  sh:name "rentable area"@en].
+rec:ArchitectureCapacity a rdfs:Class,
+                           sh:NodeShape,
+                           <dtmi:dtdl:class:Component>;
+                         rdfs:comment "Describes business-relevant capacity measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."@en;
+                         rdfs:label "Architecture capacity"@en;
+                         rdfs:subClassOf rec:Information;
+                         sh:property [a sh:PropertyShape ; 
+                                      sh:path rec:maxOccupancy ; 
+                                      sh:name "maximum occupancy"@en ; 
+                                      sh:description "E.g., per Building Code"@en],
+                                     [a sh:PropertyShape ; 
+                                      sh:path rec:seatingCapacity ; 
+                                      sh:name "seating capacity"@en].
+rec:Asset a rdfs:Class,
+            sh:NodeShape;
+          rdfs:comment "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."@en;
+          rdfs:label "Asset"@en;
+          sh:property [a sh:PropertyShape ; 
+                       sh:path rec:IPAddress ; 
+                       sh:name "IP address"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:MACAddress ; 
+                       sh:name "MAC address"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:assetTag ; 
+                       sh:name "asset tag"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:commissioningDate ; 
+                       sh:name "commissioning date"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:customTags ; 
+                       sh:name "Custom Tags"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:externalIds ; 
+                       sh:name "External IDs"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:geometry ; 
+                       sh:name "geometry"@en ; 
+                       sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:initialCost ; 
+                       sh:name "initial cost"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:installationDate ; 
+                       sh:name "installation date"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:maintenanceInterval ; 
+                       sh:name "maintenance interval"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:modelNumber ; 
+                       sh:name "model number"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:name ; 
+                       sh:name "name"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:serialNumber ; 
+                       sh:name "serial number"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:turnoverDate ; 
+                       sh:name "turnover date"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:weight ; 
+                       sh:name "weight"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:commissionedBy ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Agent ; 
+                       sh:name "commissioned by"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:documentation ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Document ; 
+                       sh:name "documentation"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:hasPart ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Asset ; 
+                       sh:name "has part"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:hasPoint ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class <dtmi:org:brickschema:schema:Brick:Point;1> ; 
+                       sh:name "has point"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:installedBy ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Agent ; 
+                       sh:name "installed by"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:isPartOf ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Asset ; 
+                       sh:name "is part of"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:locatedIn ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Space ; 
+                       sh:name "located in"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:manufacturedBy ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Agent ; 
+                       sh:name "manufactured by"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:mountedOn ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:BuildingElement ; 
+                       sh:name "mounted on"@en ; 
+                       sh:description "An asset may be mounted on some part of the building construction (e.g., a blind on a facade, a camera on a wall, etc)."@en ; 
+                       sh:maxCount 1 ],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:servicedBy ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Agent ; 
+                       sh:name "serviced by"@en].
+rec:Atrium a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Atrium"@en;
+           rdfs:subClassOf rec:Room.
+rec:Auditorium a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Auditorium"@en;
+               rdfs:subClassOf rec:Room.
+rec:BackOffice a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Back office"@en;
+               rdfs:subClassOf rec:Room.
+rec:Balcony a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Balcony"@en;
+            rdfs:subClassOf rec:BuildingElement.
+rec:BarRoom a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Bar room"@en;
+            rdfs:subClassOf rec:FoodHandlingRoom.
+rec:BarrierAsset a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Barrier asset"@en;
+                 rdfs:subClassOf rec:ArchitecturalAsset.
+rec:BasementLevel a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Basement level"@en;
+                  rdfs:subClassOf rec:Level.
+rec:Bathroom a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Bathroom"@en;
+             rdfs:subClassOf rec:Room.
+rec:Bed a rdfs:Class,
+          sh:NodeShape;
+        rdfs:label "Bed"@en;
+        rdfs:subClassOf rec:Furniture.
+rec:Bedroom a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Bedroom"@en;
+            rdfs:subClassOf rec:Room.
+rec:BicycleGarage a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Bicycle garage"@en;
+                  rdfs:subClassOf rec:Garage.
+rec:Bookcase a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Bookcase"@en;
+             rdfs:subClassOf rec:Furniture.
+rec:Building a rdfs:Class,
+               sh:NodeShape;
+             rdfs:comment "A confined building structure."@en;
+             rdfs:label "Building"@en;
+             rdfs:subClassOf rec:Architecture.
+rec:BuildingElement a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:comment "A part that constitutes a piece of a building's structural makeup. E.g., Facade, Wall, Slab, Roof, etc."@en;
+                    rdfs:label "Building element"@en;
+                    sh:property [a sh:PropertyShape ; 
+                                 sh:path rec:customTags ; 
+                                 sh:name "Custom Tags"@en],
+                                [a sh:PropertyShape ; 
+                                 sh:path rec:externalIds ; 
+                                 sh:name "External IDs"@en],
+                                [a sh:PropertyShape ; 
+                                 sh:path rec:name ; 
+                                 sh:name "name"@en],
+                                [a sh:PropertyShape ; 
+                                 sh:path rec:documentation ; 
+                                 sh:nodeKind sh:IRI ; 
+                                 sh:class rec:Document ; 
+                                 sh:name "documentation"@en],
+                                [a sh:PropertyShape ; 
+                                 sh:path rec:hasPart ; 
+                                 sh:nodeKind sh:IRI ; 
+                                 sh:class rec:BuildingElement ; 
+                                 sh:name "has part"@en],
+                                [a sh:PropertyShape ; 
+                                 sh:path rec:isPartOf ; 
+                                 sh:nodeKind sh:IRI ; 
+                                 sh:class rec:BuildingElement ; 
+                                 sh:name "is part of"@en ; 
+                                 sh:maxCount 1 ],
+                                [a sh:PropertyShape ; 
+                                 sh:path rec:locatedIn ; 
+                                 sh:nodeKind sh:IRI ; 
+                                 sh:class rec:Architecture ; 
+                                 sh:name "located in"@en ; 
+                                 sh:description "Indicates the architected space (site, building, level, room...) in which this building element is placed."@en ; 
+                                 sh:maxCount 1 ].
+rec:BulletinBoard a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Bulletin board"@en;
+                  rdfs:subClassOf rec:Furniture.
+rec:Cabinet a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Cabinet"@en;
+            rdfs:subClassOf rec:UtilitiesRoom.
+rec:CableRoom a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Cable room"@en;
+              rdfs:subClassOf rec:UtilitiesRoom.
+rec:CafeteriaRoom a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Cafeteria room"@en;
+                  rdfs:subClassOf rec:FoodHandlingRoom.
+rec:Campus a rdfs:Class,
+             sh:NodeShape;
+           rdfs:comment "A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc."@en;
+           rdfs:label "Campus"@en;
+           rdfs:subClassOf rec:Collection;
+           sh:property [a sh:PropertyShape ; 
+                        sh:path rec:includes ; 
+                        sh:nodeKind sh:IRI ; 
+                        sh:class rec:Architecture ; 
+                        sh:name "includes"@en].
+rec:Cart a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Cart"@en;
+         rdfs:subClassOf rec:Furniture.
+rec:Chair a rdfs:Class,
+            sh:NodeShape;
+          rdfs:label "Chair"@en;
+          rdfs:subClassOf rec:Furniture.
+rec:Cinema a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Cinema"@en;
+           rdfs:subClassOf rec:Room.
+rec:Classroom a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Classroom"@en;
+              rdfs:subClassOf rec:EducationalRoom.
+rec:CleaningRoom a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Cleaning room"@en;
+                 rdfs:subClassOf rec:Room.
+rec:ClimateControlRoom a rdfs:Class,
+                         sh:NodeShape;
+                       rdfs:label "Climate-control room"@en;
+                       rdfs:subClassOf rec:UtilitiesRoom.
+rec:CloakRoom a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Cloak room"@en;
+              rdfs:subClassOf rec:Room.
+rec:CoatRack a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Coat rack"@en;
+             rdfs:subClassOf rec:Furniture.
+rec:CoffeeTable a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Coffee table"@en;
+                rdfs:subClassOf rec:Table.
+rec:Collection a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:comment "An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings). Inclusion in a Collection is determined by the 'includes' field on a specific subclass."@en;
+               rdfs:label "Collection"@en;
+               sh:property [a sh:PropertyShape ; 
+                            sh:path rec:customTags ; 
+                            sh:name "Custom Tags"@en],
+                           [a sh:PropertyShape ; 
+                            sh:path rec:externalIds ; 
+                            sh:name "External IDs"@en],
+                           [a sh:PropertyShape ; 
+                            sh:path rec:name ; 
+                            sh:name "name"@en],
+                           [a sh:PropertyShape ; 
+                            sh:path rec:documentation ; 
+                            sh:nodeKind sh:IRI ; 
+                            sh:class rec:Document ; 
+                            sh:name "documentation"@en].
+rec:Company a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Company"@en;
+            rdfs:subClassOf rec:Organization.
+rec:ComputerCart a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Computer cart"@en;
+                 rdfs:subClassOf rec:Cart.
+rec:ConferenceRoom a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Conference room"@en;
+                   rdfs:subClassOf rec:Room.
+rec:ConferenceTable a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:label "Conference table"@en;
+                    rdfs:subClassOf rec:Table.
+rec:ConversationRoom a rdfs:Class,
+                       sh:NodeShape;
+                     rdfs:label "Conversation room"@en;
+                     rdfs:subClassOf rec:Room.
+rec:CookingRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Cooking room"@en;
+                rdfs:subClassOf rec:FoodHandlingRoom.
+rec:CopyingRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Copying room"@en;
+                rdfs:subClassOf rec:Room.
+rec:DataServerRoom a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Data server room"@en;
+                   rdfs:subClassOf rec:UtilitiesRoom.
+rec:Department a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Department"@en;
+               rdfs:subClassOf rec:Organization.
+rec:Desk a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Desk"@en;
+         rdfs:subClassOf rec:Furniture.
+rec:DeskLamp a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Desk lamp"@en;
+             rdfs:subClassOf rec:Lamp.
+rec:DiningRoom a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Dining room"@en;
+               rdfs:subClassOf rec:FoodHandlingRoom.
+rec:DisabledToilet a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Disabled toilet"@en;
+                   rdfs:subClassOf rec:PersonalHygiene.
+rec:DishingRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Dishing room"@en;
+                rdfs:subClassOf rec:FoodHandlingRoom.
+rec:Document a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Document"@en;
+             rdfs:subClassOf rec:Information;
+             sh:property [a sh:PropertyShape ; 
+                          sh:path rec:documentTopic ; 
+                          sh:nodeKind sh:IRI ; 
+                          sh:name "document topic"@en],
+                         [a sh:PropertyShape ; 
+                          sh:path rec:url ; 
+                          sh:nodeKind sh:IRI ; 
+                          sh:name "URL"@en].
+rec:Door a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Door"@en;
+         rdfs:subClassOf rec:BarrierAsset.
+rec:DressingRoom a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Dressing room"@en;
+                 rdfs:subClassOf rec:Room.
+rec:EducationalRoom a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:label "Educational room"@en;
+                    rdfs:subClassOf rec:Room.
+rec:ElectricityRoom a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:label "Electricity room"@en;
+                    rdfs:subClassOf rec:UtilitiesRoom.
+rec:ElevatorRoom a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Elevator room"@en;
+                 rdfs:subClassOf rec:Room.
+rec:ElevatorShaft a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Elevator shaft"@en;
+                  rdfs:subClassOf rec:Room.
+rec:ElevatorTrip a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Elevator trip"@en;
+                 rdfs:subClassOf rec:Event;
+                 sh:property [a sh:PropertyShape ; 
+                              sh:path rec:currentLevel ; 
+                              sh:name "current level"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:endLevel ; 
+                              sh:name "end level"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:startLevel ; 
+                              sh:name "start level"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:tripDirection ; 
+                              sh:name "trip direction"@en].
+rec:EndTable a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "End table"@en;
+             rdfs:subClassOf rec:Table.
+rec:Entrance a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Entrance"@en;
+             rdfs:subClassOf rec:Room.
+rec:EquipmentCollection a rdfs:Class,
+                          sh:NodeShape;
+                        rdfs:label "Equipment collection"@en;
+                        rdfs:subClassOf rec:Collection;
+                        sh:property [a sh:PropertyShape ; 
+                                     sh:path rec:feeds ; 
+                                     sh:nodeKind sh:IRI ; 
+                                     sh:name "feeds"@en],
+                                    [a sh:PropertyShape ; 
+                                     sh:path rec:hasPoint ; 
+                                     sh:nodeKind sh:IRI ; 
+                                     sh:class <dtmi:org:brickschema:schema:Brick:Point;1> ; 
+                                     sh:name "has point"@en],
+                                    [a sh:PropertyShape ; 
+                                     sh:path rec:includes ; 
+                                     sh:nodeKind sh:IRI ; 
+                                     sh:class <dtmi:org:brickschema:schema:Brick:Equipment;1> ; 
+                                     sh:name "includes"@en].
+rec:ErrorReport a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Error report"@en;
+                rdfs:subClassOf rec:ServiceObject.
+rec:Event a rdfs:Class,
+            sh:NodeShape;
+          rdfs:comment "A temporally indexed entity, e.g., an observation, a lease, a construction project, etc. Can be instantaneous (timestamp property assigned) or have temporal extent (start and end properties assigned). Subclasses may define specific behaviour and requirements, e.g., on spatial indexing, agent participation, etc."@en;
+          rdfs:label "Event"@en;
+          sh:property [a sh:PropertyShape ; 
+                       sh:path rec:customTags ; 
+                       sh:name "Custom Tags"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:end ; 
+                       sh:name "end"@en ; 
+                       sh:description "Event ending timestamp."@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:externalIds ; 
+                       sh:name "External IDs"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:name ; 
+                       sh:name "name"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:start ; 
+                       sh:name "start"@en ; 
+                       sh:description "Event start timestamp."@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:timestamp ; 
+                       sh:name "timestamp"@en].
+rec:ExceptionEvent a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Exception event"@en;
+                   rdfs:subClassOf rec:PointEvent;
+                   sh:property [a sh:PropertyShape ; 
+                                sh:path rec:sourcePoint ; 
+                                sh:nodeKind sh:IRI ; 
+                                sh:class <dtmi:org:brickschema:schema:Brick:Point;1> ; 
+                                sh:name "source point"@en ; 
+                                sh:description "The brick:Point that emitted this exception."@en ; 
+                                sh:maxCount 1 ].
+rec:ExerciseRoom a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Exercise room"@en;
+                 rdfs:subClassOf rec:Room.
+rec:ExhibitionRoom a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Exhibition room"@en;
+                   rdfs:subClassOf rec:Room.
+rec:Facade a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Facade"@en;
+           rdfs:subClassOf rec:BuildingElement.
+rec:FilingCabinet a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Filing cabinet"@en;
+                  rdfs:subClassOf rec:Furniture.
+rec:FittingRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Fitting room"@en;
+                rdfs:subClassOf rec:RetailRoom.
+rec:FloorLamp a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Floor lamp"@en;
+              rdfs:subClassOf rec:Lamp.
+rec:FloorMat a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Floor mat"@en;
+             rdfs:subClassOf rec:Furniture.
+rec:FoldingChair a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Folding chair"@en;
+                 rdfs:subClassOf rec:Chair.
+rec:FoldingTable a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Folding table"@en;
+                 rdfs:subClassOf rec:Table.
+rec:FoodHandlingRoom a rdfs:Class,
+                       sh:NodeShape;
+                     rdfs:label "Food-handling room"@en;
+                     rdfs:subClassOf rec:Room.
+rec:Footrest a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Footrest"@en;
+             rdfs:subClassOf rec:Furniture.
+rec:Furniture a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Furniture"@en;
+              rdfs:subClassOf rec:Asset.
+rec:FurnitureCollection a rdfs:Class,
+                          sh:NodeShape;
+                        rdfs:label "Furniture collection"@en;
+                        rdfs:subClassOf rec:Collection;
+                        sh:property [a sh:PropertyShape ; 
+                                     sh:path rec:includes ; 
+                                     sh:nodeKind sh:IRI ; 
+                                     sh:class rec:Furniture ; 
+                                     sh:name "includes"@en].
+rec:Garage a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Garage"@en;
+           rdfs:subClassOf rec:Room.
+rec:Georeference a rdfs:Class,
+                   sh:NodeShape,
+                   <dtmi:dtdl:class:Component>;
+                 rdfs:comment "Encapsulates a georeference globally placing a spatially located entity in terms of latitude, longitude, altitude, and bearing."@en;
+                 rdfs:label "Georeference"@en;
+                 rdfs:subClassOf rec:Information;
+                 sh:property [a sh:PropertyShape ; 
+                              sh:path rec:alt ; 
+                              sh:name "alt"@en ; 
+                              sh:description "Altitude"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:bearing ; 
+                              sh:name "bearing"@en ; 
+                              sh:description "The angle between local coordinate system and a north-south meridian."@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:lat ; 
+                              sh:name "lat"@en ; 
+                              sh:description "Latitude"@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:long ; 
+                              sh:name "long"@en ; 
+                              sh:description "Longitude"@en].
+rec:GroupRoom a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Group room"@en;
+              rdfs:subClassOf rec:EducationalRoom.
+rec:HVACZone a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "HVAC zone"@en;
+             rdfs:subClassOf rec:Zone.
+rec:Hallway a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Hallway"@en;
+            rdfs:subClassOf rec:Room.
+rec:HealthcareRoom a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Healthcare room"@en;
+                   rdfs:subClassOf rec:Room.
+rec:Hospital a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Hospital"@en;
+             rdfs:subClassOf rec:Building.
+rec:Information a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Information"@en;
+                sh:property [a sh:PropertyShape ; 
+                             sh:path rec:customTags ; 
+                             sh:name "Custom Tags"@en],
+                            [a sh:PropertyShape ; 
+                             sh:path rec:externalIds ; 
+                             sh:name "External IDs"@en],
+                            [a sh:PropertyShape ; 
+                             sh:path rec:name ; 
+                             sh:name "name"@en].
+rec:Kitchenette a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Kitchenette"@en;
+                rdfs:subClassOf rec:FoodHandlingRoom.
+rec:Laboratory a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Laboratory"@en;
+               rdfs:subClassOf rec:Room.
+rec:LaboratoryDry a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Laboratory (dry)"@en;
+                  rdfs:subClassOf rec:Laboratory.
+rec:LaboratoryWet a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Laboratory (wet)"@en;
+                  rdfs:subClassOf rec:Laboratory.
+rec:Lamp a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Lamp"@en;
+         rdfs:subClassOf rec:Furniture.
+rec:LaundryRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Laundry room"@en;
+                rdfs:subClassOf rec:Room.
+rec:Lease a rdfs:Class,
+            sh:NodeShape;
+          rdfs:label "Lease"@en;
+          rdfs:subClassOf rec:Event;
+          sh:property [a sh:PropertyShape ; 
+                       sh:path rec:leaseOf ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:name "lease of"@en ; 
+                       sh:description "The object (e.g., property, equipment, etc) that this a lease of."@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:leasee ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Agent ; 
+                       sh:name "leasee"@en ; 
+                       sh:description "The agent leasing some leasable object, i.e., the user of the asset."@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:leasor ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Agent ; 
+                       sh:name "leasor"@en ; 
+                       sh:description "The agent leasing out some leasable object, i.e., the owner of the asset."@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:regulatedBy ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:LeaseContract ; 
+                       sh:name "regulated by"@en ; 
+                       sh:description "Indicates the contract regulating the terms of the lease in question. "@en].
+rec:LeaseContract a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:comment "Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement."@en;
+                  rdfs:label "Lease contract"@en;
+                  rdfs:subClassOf rec:Document;
+                  sh:property [a sh:PropertyShape ; 
+                               sh:path rec:regulates ; 
+                               sh:nodeKind sh:IRI ; 
+                               sh:class rec:Lease ; 
+                               sh:name "regulates"@en ; 
+                               sh:description "Indicates the lease(s) that this contract regulates the conditions of."@en].
+rec:Level a rdfs:Class,
+            sh:NodeShape;
+          rdfs:comment "The level of a building, a.k.a. storey, floor, etc."@en;
+          rdfs:label "Level"@en;
+          rdfs:subClassOf rec:Architecture;
+          sh:property [a sh:PropertyShape ; 
+                       sh:path rec:levelNumber ; 
+                       sh:name "level number"@en ; 
+                       sh:description "A number indicating the ordinal number of this level within the containing space (typically a Building or in the case of a Mezzanine, sometimes another level). Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others."@en].
+rec:Library a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Library"@en;
+            rdfs:subClassOf rec:Room.
+rec:LivingRoom a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Living room"@en;
+               rdfs:subClassOf rec:Room.
+rec:LoadingReceivingRoom a rdfs:Class,
+                           sh:NodeShape;
+                         rdfs:label "Loading/receiving room"@en;
+                         rdfs:subClassOf rec:Room.
+rec:LockerRoom a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Locker room"@en;
+               rdfs:subClassOf rec:Room.
+rec:MailRoom a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Mail room"@en;
+             rdfs:subClassOf rec:BackOffice.
+rec:MailroomCart a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Mailroom cart"@en;
+                 rdfs:subClassOf rec:Cart.
+rec:MainEntrance a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Main entrance"@en;
+                 rdfs:subClassOf rec:Entrance.
+rec:MeditationRoom a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Meditation room"@en;
+                   rdfs:subClassOf rec:Room.
+rec:MezzanineLevel a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Mezzanine level"@en;
+                   rdfs:subClassOf rec:Level.
+rec:MobileDesk a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Mobile desk"@en;
+               rdfs:subClassOf rec:Desk.
+rec:Morgue a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Morgue"@en;
+           rdfs:subClassOf rec:HealthcareRoom.
+rec:MothersRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Mothers' room"@en;
+                rdfs:subClassOf rec:Room.
+rec:MultiPurposeRoom a rdfs:Class,
+                       sh:NodeShape;
+                     rdfs:label "Multi-purpose room"@en;
+                     rdfs:subClassOf rec:Room.
+rec:NeonatalNursingRoom a rdfs:Class,
+                          sh:NodeShape;
+                        rdfs:label "Neonatal nursing room"@en;
+                        rdfs:subClassOf rec:HealthcareRoom.
+rec:NotificationObject a rdfs:Class,
+                         sh:NodeShape;
+                       rdfs:label "Notification object"@en;
+                       rdfs:subClassOf rec:ServiceObject.
+rec:ObservationEvent a rdfs:Class,
+                       sh:NodeShape;
+                     rdfs:label "Observation event"@en;
+                     rdfs:subClassOf rec:PointEvent;
+                     sh:property [a sh:PropertyShape ; 
+                                  sh:path rec:sourcePoint ; 
+                                  sh:nodeKind sh:IRI ; 
+                                  sh:class <dtmi:org:brickschema:schema:Brick:Point;1> ; 
+                                  sh:name "source point"@en ; 
+                                  sh:description "The brick:Point that emitted this observation."@en ; 
+                                  sh:maxCount 1 ].
+rec:OccupancyZone a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:comment "Occupancy Zone is a spatial area where devices are monitoring or reporting on the concept of Occupancy (motion sensors, people counters, cameras, etc.)"@en;
+                  rdfs:label "Occupancy zone"@en;
+                  rdfs:subClassOf rec:Zone.
+rec:Office a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Office"@en;
+           rdfs:subClassOf rec:Room.
+rec:OfficeChair a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Office chair"@en;
+                rdfs:subClassOf rec:Chair.
+rec:OfficeLandscape a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:label "OfficeLandscape"@en;
+                    rdfs:subClassOf rec:Office.
+rec:OfficeRoom a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "OfficeRoom"@en;
+               rdfs:subClassOf rec:Office.
+rec:OperatingRoom a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Operating room"@en;
+                  rdfs:subClassOf rec:HealthcareRoom.
+rec:Organization a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:comment "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"@en;
+                 rdfs:label "Organization"@en;
+                 rdfs:subClassOf rec:Agent;
+                 sh:property [a sh:PropertyShape ; 
+                              sh:path rec:logo ; 
+                              sh:name "logo"@en ; 
+                              sh:description "URL link to an image/logo that represents the organization."@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:hasMember ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:Agent ; 
+                              sh:name "has member"@en ; 
+                              sh:description "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic hasPart property."@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:hasPart ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:Organization ; 
+                              sh:name "has part"@en ; 
+                              sh:description "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the more specific hasMember property."@en],
+                             [a sh:PropertyShape ; 
+                              sh:path rec:isPartOf ; 
+                              sh:nodeKind sh:IRI ; 
+                              sh:class rec:Organization ; 
+                              sh:name "is part of"@en ; 
+                              sh:description "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the Agent.isMemberOf property."@en].
+rec:OutdoorSpace a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Outdoor space"@en;
+                 rdfs:subClassOf rec:Architecture.
+rec:OutpatientServicesRoom a rdfs:Class,
+                             sh:NodeShape;
+                           rdfs:label "Outpatient services room"@en;
+                           rdfs:subClassOf rec:HealthcareRoom.
+rec:Pantry a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Pantry"@en;
+           rdfs:subClassOf rec:FoodHandlingRoom.
+rec:ParkingSpace a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Parking space"@en;
+                 rdfs:subClassOf rec:Zone.
+rec:Partition a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Partition"@en;
+              rdfs:subClassOf rec:BarrierAsset.
+rec:Person a rdfs:Class,
+             sh:NodeShape;
+           rdfs:comment "A natural person (i.e., an individual human being)."@en;
+           rdfs:label "Person"@en;
+           rdfs:subClassOf rec:Agent;
+           sh:property [a sh:PropertyShape ; 
+                        sh:path rec:familyName],
+                       [a sh:PropertyShape ; 
+                        sh:path rec:gender ; 
+                        sh:name "gender"@en],
+                       [a sh:PropertyShape ; 
+                        sh:path rec:givenName],
+                       [a sh:PropertyShape ; 
+                        sh:path rec:image ; 
+                        sh:name "image"@en ; 
+                        sh:description "URL link to an image that represents the person."@en].
+rec:PersonalHygiene a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:label "Personal hygiene room"@en;
+                    rdfs:subClassOf rec:Room.
+rec:PharmacyRoom a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Pharmacy room"@en;
+                 rdfs:subClassOf rec:HealthcareRoom.
+rec:PhoneBooth a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "PhoneBooth"@en;
+               rdfs:subClassOf rec:Office.
+rec:PointEvent a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:comment "An event emanating from or targeting a Point; e.g., an individual Observation from a Sensor point, or an Actuation sent to a Command point. In other terms, the Points indicate the capability of some Space or Equipment to emit or accept data, while this class represents those actual data messages. Note that in most non-trivially sized systems, these events are not stored in the knowledge graph itself, but are rather forwarded to some C&C system or time series database."@en;
+               rdfs:label "Point event"@en;
+               rdfs:subClassOf rec:Event;
+               sh:property [a sh:PropertyShape ; 
+                            sh:path rec:payload ; 
+                            sh:name "payload"@en ; 
+                            sh:description "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)"@en].
+rec:PointOfInterest a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:label "Point of Interest"@en;
+                    rdfs:subClassOf rec:Information;
+                    sh:property [a sh:PropertyShape ; 
+                                 sh:path rec:objectOfInterest ; 
+                                 sh:nodeKind sh:IRI ; 
+                                 sh:name "object of interest"@en ; 
+                                 sh:maxCount 1 ].
+rec:Portfolio a rdfs:Class,
+                sh:NodeShape;
+              rdfs:comment "A portfolio is a grouping of buildings, sites, apartments, campuses, etc. that share some business-relevant commonality, e.g., are managed by the same company, are rented out to the same tenant, share utilization or legal definition (industrial vs commercial), etc."@en;
+              rdfs:label "Portfolio"@en;
+              rdfs:subClassOf rec:Collection;
+              sh:property [a sh:PropertyShape ; 
+                           sh:path rec:includes ; 
+                           sh:nodeKind sh:IRI ; 
+                           sh:name "includes"@en].
+rec:PostalAddress a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Postal address"@en;
+                  rdfs:subClassOf rec:Information;
+                  sh:property [a sh:PropertyShape ; 
+                               sh:path rec:addressLine1 ; 
+                               sh:name "address line 1"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:addressLine2 ; 
+                               sh:name "address line 2"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:city ; 
+                               sh:name "city"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:country ; 
+                               sh:name "country"@en ; 
+                               sh:description """The country, e.g., USA, Sweden, Argentina, or optionally a two-letter ISO 3166-1 alpha-2 country code, e.g., \"SE\", \"US\", etc."""@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:postalCode ; 
+                               sh:name "postal code"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:region ; 
+                               sh:name "region"@en].
+rec:Premises a rdfs:Class,
+               sh:NodeShape;
+             rdfs:comment "A premises is an administrative grouping of spaces that are used for some commercial or industrial purpose by a real estate holder or tenant. E.g, a suite of offices, a shop, or an industrial workshop."@en;
+             rdfs:label "Premises"@en;
+             rdfs:subClassOf rec:Collection;
+             sh:property [a sh:PropertyShape ; 
+                          sh:path rec:includes ; 
+                          sh:nodeKind sh:IRI ; 
+                          sh:class rec:Architecture ; 
+                          sh:name "includes"@en].
+rec:PrinterCart a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Printer cart"@en;
+                rdfs:subClassOf rec:Cart.
+rec:PrinterStand a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Printer stand"@en;
+                 rdfs:subClassOf rec:Stand.
+rec:RadiologyRoom a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Radiology room"@en;
+                  rdfs:subClassOf rec:HealthcareRoom.
+rec:RealEstate a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:comment """The legal/administrative representation of some lands and/or buildings. I.e., \"Fastighet\" (Swedish), \"Ejendom\" (Denmark), etc."""@en;
+               rdfs:label "Real Estate"@en;
+               rdfs:subClassOf rec:Collection;
+               sh:property [a sh:PropertyShape ; 
+                            sh:path rec:includes ; 
+                            sh:nodeKind sh:IRI ; 
+                            sh:class rec:Architecture ; 
+                            sh:name "includes"@en].
+rec:Reception a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Reception"@en;
+              rdfs:subClassOf rec:Room.
+rec:ReceptionTable a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Reception table"@en;
+                   rdfs:subClassOf rec:Table.
+rec:RecordingRoom a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Recording room"@en;
+                  rdfs:subClassOf rec:Room.
+rec:RecreationalRoom a rdfs:Class,
+                       sh:NodeShape;
+                     rdfs:label "Recreational room"@en;
+                     rdfs:subClassOf rec:Room.
+rec:Region a rdfs:Class,
+             sh:NodeShape;
+           rdfs:comment """An administrative geospatial unit larger than the individual real estate. For instance, \"Lombary\", \"North America\", \"The Back Bay\", \"Elnätsområde Syd\", etc."""@en;
+           rdfs:label "Region"@en;
+           rdfs:subClassOf rec:Space.
+rec:RestingRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Resting room"@en;
+                rdfs:subClassOf rec:Room.
+rec:RetailRoom a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Retail room"@en;
+               rdfs:subClassOf rec:Room.
+rec:Roof a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Roof"@en;
+         rdfs:subClassOf rec:BuildingElement.
+rec:RoofLevel a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Roof level"@en;
+              rdfs:subClassOf rec:Level.
+rec:Room a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Room"@en;
+         rdfs:subClassOf rec:Architecture.
+rec:Safe a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Safe"@en;
+         rdfs:subClassOf rec:Furniture.
+rec:Sauna a rdfs:Class,
+            sh:NodeShape;
+          rdfs:label "Sauna"@en;
+          rdfs:subClassOf rec:PersonalHygiene.
+rec:School a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "School"@en;
+           rdfs:subClassOf rec:Building.
+rec:SecurityRoom a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Security room"@en;
+                 rdfs:subClassOf rec:Room.
+rec:ServiceEntrance a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:label "Service entrance"@en;
+                    rdfs:subClassOf rec:Entrance.
+rec:ServiceObject a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Service object"@en;
+                  rdfs:subClassOf rec:Information;
+                  sh:property [a sh:PropertyShape ; 
+                               sh:path rec:acknowledgedTime ; 
+                               sh:name "acknowledged time"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:closedTime ; 
+                               sh:name "closed time"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:createdTime ; 
+                               sh:name "created time"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:severity ; 
+                               sh:name "severity"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:status ; 
+                               sh:name "status"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:acknowledgedBy ; 
+                               sh:nodeKind sh:IRI ; 
+                               sh:class rec:Agent ; 
+                               sh:name "acknowledged by"@en ; 
+                               sh:maxCount 1 ],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:closedBy ; 
+                               sh:nodeKind sh:IRI ; 
+                               sh:class rec:Agent ; 
+                               sh:name "closed by"@en ; 
+                               sh:maxCount 1 ],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:createdBy ; 
+                               sh:nodeKind sh:IRI ; 
+                               sh:class rec:Agent ; 
+                               sh:name "created by"@en ; 
+                               sh:maxCount 1 ],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:producedBy ; 
+                               sh:nodeKind sh:IRI ; 
+                               sh:class <dtmi:org:brickschema:schema:Brick:Point;1> ; 
+                               sh:name "produced by"@en],
+                              [a sh:PropertyShape ; 
+                               sh:path rec:relatedTo ; 
+                               sh:nodeKind sh:IRI ; 
+                               sh:name "related to"@en].
+rec:ServiceShaft a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Service shaft"@en;
+                 rdfs:subClassOf rec:Room.
+rec:Shelter a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Shelter"@en;
+            rdfs:subClassOf rec:Room.
+rec:ShelterGasLock a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Shelter gas lock"@en;
+                   rdfs:subClassOf rec:Shelter.
+rec:ShelterRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Shelter room"@en;
+                rdfs:subClassOf rec:Shelter.
+rec:ShoppingMall a rdfs:Class,
+                   sh:NodeShape;
+                 rdfs:label "Shopping mall"@en;
+                 rdfs:subClassOf rec:Building.
+rec:ShowerRoom a rdfs:Class,
+                 sh:NodeShape;
+               rdfs:label "Shower room"@en;
+               rdfs:subClassOf rec:PersonalHygiene.
+rec:Site a rdfs:Class,
+           sh:NodeShape;
+         rdfs:comment "A piece of land upon which zero or more buildings may be situated."@en;
+         rdfs:label "Site"@en;
+         rdfs:subClassOf rec:Architecture.
+rec:Slab a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Slab"@en;
+         rdfs:subClassOf rec:BuildingElement.
+rec:SmallStudyRoom a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Small study room"@en;
+                   rdfs:subClassOf rec:EducationalRoom.
+rec:Sofa a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Sofa"@en;
+         rdfs:subClassOf rec:Furniture.
+rec:Space a rdfs:Class,
+            sh:NodeShape;
+          rdfs:comment "A contiguous part of the physical world that contains or can contain sub-spaces. E.g., a Region can contain many Sites, which in turn can contain many Buildings."@en;
+          rdfs:label "Space"@en;
+          sh:property [a sh:PropertyShape ; 
+                       sh:path rec:customTags ; 
+                       sh:name "Custom Tags"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:externalIds ; 
+                       sh:name "External IDs"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:geometry ; 
+                       sh:name "geometry"@en ; 
+                       sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:name ; 
+                       sh:name "name"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:hasPart ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Space ; 
+                       sh:name "has part"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:isLocationOf ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:name "is location of"@en],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:isPartOf ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:class rec:Space ; 
+                       sh:name "is part of"@en ; 
+                       sh:maxCount 1 ],
+                      [a sh:PropertyShape ; 
+                       sh:path rec:georeference ; 
+                       sh:nodeKind sh:IRI ; 
+                       sh:maxCount 1  ; 
+                       sh:class rec:Georeference ; 
+                       sh:name "georeference"@en ; 
+                       sh:description """A fixed point for, e.g., a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for locally defined geometries."""@en].
+rec:SprinklerRoom a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Sprinkler room"@en;
+                  rdfs:subClassOf rec:UtilitiesRoom.
+rec:Stadium a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Stadium"@en;
+            rdfs:subClassOf rec:Building.
+rec:StaffRoom a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Staff room"@en;
+              rdfs:subClassOf rec:Room.
+rec:Stairwell a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Stairwell"@en;
+              rdfs:subClassOf rec:Room.
+rec:Stand a rdfs:Class,
+            sh:NodeShape;
+          rdfs:label "Stand"@en;
+          rdfs:subClassOf rec:Furniture.
+rec:Storage a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Storage"@en;
+            rdfs:subClassOf rec:Room.
+rec:StorageCabinet a rdfs:Class,
+                     sh:NodeShape;
+                   rdfs:label "Storage cabinet"@en;
+                   rdfs:subClassOf rec:Furniture.
+rec:SubBuilding a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Sub-building"@en;
+                rdfs:subClassOf rec:Architecture.
+rec:TVStand a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "TV stand"@en;
+            rdfs:subClassOf rec:Stand.
+rec:Table a rdfs:Class,
+            sh:NodeShape;
+          rdfs:label "Table"@en;
+          rdfs:subClassOf rec:Furniture.
+rec:TelecommunicationRoom a rdfs:Class,
                             sh:NodeShape;
-                          rdfs:label "Bed"@en;
-                          rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Bedroom> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Bedroom"@en;
-                              rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/BicycleGarage> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Bicycle garage"@en;
-                                    rdfs:subClassOf <https://example.com/Garage>.
-<https://example.com/Bookcase> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Bookcase"@en;
-                               rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Building> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:comment "A confined building structure."@en;
-                               rdfs:label "Building"@en;
-                               rdfs:subClassOf <https://example.com/Architecture>.
-<https://example.com/BuildingElement> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:comment "A part that constitutes a piece of a building's structural makeup. E.g., Facade, Wall, Slab, Roof, etc."@en;
-                                      rdfs:label "Building element"@en;
-                                      sh:property [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/customTags> ; 
-                                                   sh:name "Custom Tags"@en],
-                                                  [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/externalIds> ; 
-                                                   sh:name "External IDs"@en],
-                                                  [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/name> ; 
-                                                   sh:name "name"@en],
-                                                  [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/documentation> ; 
-                                                   sh:nodeKind sh:IRI ; 
-                                                   sh:class <https://example.com/Document> ; 
-                                                   sh:name "documentation"@en],
-                                                  [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/hasPart> ; 
-                                                   sh:nodeKind sh:IRI ; 
-                                                   sh:class <https://example.com/BuildingElement> ; 
-                                                   sh:name "has part"@en],
-                                                  [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/isPartOf> ; 
-                                                   sh:nodeKind sh:IRI ; 
-                                                   sh:class <https://example.com/BuildingElement> ; 
-                                                   sh:name "is part of"@en ; 
-                                                   sh:maxCount 1 ],
-                                                  [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/locatedIn> ; 
-                                                   sh:nodeKind sh:IRI ; 
-                                                   sh:class <https://example.com/Architecture> ; 
-                                                   sh:name "located in"@en ; 
-                                                   sh:description "Indicates the architected space (site, building, level, room...) in which this building element is placed."@en ; 
-                                                   sh:maxCount 1 ].
-<https://example.com/BulletinBoard> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Bulletin board"@en;
-                                    rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Cabinet> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Cabinet"@en;
-                              rdfs:subClassOf <https://example.com/UtilitiesRoom>.
-<https://example.com/CableRoom> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Cable room"@en;
-                                rdfs:subClassOf <https://example.com/UtilitiesRoom>.
-<https://example.com/CafeteriaRoom> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Cafeteria room"@en;
-                                    rdfs:subClassOf <https://example.com/FoodHandlingRoom>.
-<https://example.com/Campus> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:comment "A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc."@en;
-                             rdfs:label "Campus"@en;
-                             rdfs:subClassOf <https://example.com/Collection>;
-                             sh:property [a sh:PropertyShape ; 
-                                          sh:path <https://example.com/includes> ; 
-                                          sh:nodeKind sh:IRI ; 
-                                          sh:class <https://example.com/Architecture> ; 
-                                          sh:name "includes"@en].
-<https://example.com/Cart> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Cart"@en;
-                           rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Chair> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:label "Chair"@en;
-                            rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Cinema> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Cinema"@en;
-                             rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Classroom> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Classroom"@en;
-                                rdfs:subClassOf <https://example.com/EducationalRoom>.
-<https://example.com/CleaningRoom> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Cleaning room"@en;
-                                   rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ClimateControlRoom> a rdfs:Class,
-                                           sh:NodeShape;
-                                         rdfs:label "Climate-control room"@en;
-                                         rdfs:subClassOf <https://example.com/UtilitiesRoom>.
-<https://example.com/CloakRoom> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Cloak room"@en;
-                                rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/CoatRack> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Coat rack"@en;
-                               rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/CoffeeTable> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Coffee table"@en;
-                                  rdfs:subClassOf <https://example.com/Table>.
-<https://example.com/Collection> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:comment "An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings). Inclusion in a Collection is determined by the 'includes' field on a specific subclass."@en;
-                                 rdfs:label "Collection"@en;
-                                 sh:property [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/customTags> ; 
-                                              sh:name "Custom Tags"@en],
-                                             [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/externalIds> ; 
-                                              sh:name "External IDs"@en],
-                                             [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/name> ; 
-                                              sh:name "name"@en],
-                                             [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/documentation> ; 
-                                              sh:nodeKind sh:IRI ; 
-                                              sh:class <https://example.com/Document> ; 
-                                              sh:name "documentation"@en].
-<https://example.com/Company> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Company"@en;
-                              rdfs:subClassOf <https://example.com/Organization>.
-<https://example.com/ComputerCart> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Computer cart"@en;
-                                   rdfs:subClassOf <https://example.com/Cart>.
-<https://example.com/ConferenceRoom> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Conference room"@en;
-                                     rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ConferenceTable> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:label "Conference table"@en;
-                                      rdfs:subClassOf <https://example.com/Table>.
-<https://example.com/ConversationRoom> a rdfs:Class,
-                                         sh:NodeShape;
-                                       rdfs:label "Conversation room"@en;
-                                       rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/CookingRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Cooking room"@en;
-                                  rdfs:subClassOf <https://example.com/FoodHandlingRoom>.
-<https://example.com/CopyingRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Copying room"@en;
-                                  rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/DataServerRoom> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Data server room"@en;
-                                     rdfs:subClassOf <https://example.com/UtilitiesRoom>.
-<https://example.com/Department> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Department"@en;
-                                 rdfs:subClassOf <https://example.com/Organization>.
-<https://example.com/Desk> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Desk"@en;
-                           rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/DeskLamp> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Desk lamp"@en;
-                               rdfs:subClassOf <https://example.com/Lamp>.
-<https://example.com/DiningRoom> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Dining room"@en;
-                                 rdfs:subClassOf <https://example.com/FoodHandlingRoom>.
-<https://example.com/DisabledToilet> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Disabled toilet"@en;
-                                     rdfs:subClassOf <https://example.com/PersonalHygiene>.
-<https://example.com/DishingRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Dishing room"@en;
-                                  rdfs:subClassOf <https://example.com/FoodHandlingRoom>.
-<https://example.com/Document> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Document"@en;
-                               rdfs:subClassOf <https://example.com/Information>;
-                               sh:property [a sh:PropertyShape ; 
-                                            sh:path <https://example.com/documentTopic> ; 
-                                            sh:nodeKind sh:IRI ; 
-                                            sh:name "document topic"@en],
-                                           [a sh:PropertyShape ; 
-                                            sh:path <https://example.com/url> ; 
-                                            sh:nodeKind sh:IRI ; 
-                                            sh:name "URL"@en].
-<https://example.com/Door> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Door"@en;
-                           rdfs:subClassOf <https://example.com/BarrierAsset>.
-<https://example.com/DressingRoom> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Dressing room"@en;
-                                   rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/EducationalRoom> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:label "Educational room"@en;
-                                      rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ElectricityRoom> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:label "Electricity room"@en;
-                                      rdfs:subClassOf <https://example.com/UtilitiesRoom>.
-<https://example.com/ElevatorRoom> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Elevator room"@en;
-                                   rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ElevatorShaft> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Elevator shaft"@en;
-                                    rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ElevatorTrip> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Elevator trip"@en;
-                                   rdfs:subClassOf <https://example.com/Event>;
-                                   sh:property [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/currentLevel> ; 
-                                                sh:name "current level"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/endLevel> ; 
-                                                sh:name "end level"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/startLevel> ; 
-                                                sh:name "start level"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/tripDirection> ; 
-                                                sh:name "trip direction"@en].
-<https://example.com/EndTable> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "End table"@en;
-                               rdfs:subClassOf <https://example.com/Table>.
-<https://example.com/Entrance> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Entrance"@en;
-                               rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/EquipmentCollection> a rdfs:Class,
-                                            sh:NodeShape;
-                                          rdfs:label "Equipment collection"@en;
-                                          rdfs:subClassOf <https://example.com/Collection>;
-                                          sh:property [a sh:PropertyShape ; 
-                                                       sh:path <https://example.com/feeds> ; 
-                                                       sh:nodeKind sh:IRI ; 
-                                                       sh:name "feeds"@en],
-                                                      [a sh:PropertyShape ; 
-                                                       sh:path <https://example.com/hasPoint> ; 
-                                                       sh:nodeKind sh:IRI ; 
-                                                       sh:class <https://example.com/Point> ; 
-                                                       sh:name "has point"@en],
-                                                      [a sh:PropertyShape ; 
-                                                       sh:path <https://example.com/includes> ; 
-                                                       sh:nodeKind sh:IRI ; 
-                                                       sh:class <https://example.com/Equipment> ; 
-                                                       sh:name "includes"@en].
-<https://example.com/ErrorReport> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Error report"@en;
-                                  rdfs:subClassOf <https://example.com/ServiceObject>.
-<https://example.com/Event> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:comment "A temporally indexed entity, e.g., an observation, a lease, a construction project, etc. Can be instantaneous (timestamp property assigned) or have temporal extent (start and end properties assigned). Subclasses may define specific behaviour and requirements, e.g., on spatial indexing, agent participation, etc."@en;
-                            rdfs:label "Event"@en;
-                            sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/customTags> ; 
-                                         sh:name "Custom Tags"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/end> ; 
-                                         sh:name "end"@en ; 
-                                         sh:description "Event ending timestamp."@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/externalIds> ; 
-                                         sh:name "External IDs"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/name> ; 
-                                         sh:name "name"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/start> ; 
-                                         sh:name "start"@en ; 
-                                         sh:description "Event start timestamp."@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/timestamp> ; 
-                                         sh:name "timestamp"@en].
-<https://example.com/ExceptionEvent> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Exception event"@en;
-                                     rdfs:subClassOf <https://example.com/PointEvent>;
-                                     sh:property [a sh:PropertyShape ; 
-                                                  sh:path <https://example.com/sourcePoint> ; 
-                                                  sh:nodeKind sh:IRI ; 
-                                                  sh:class <https://example.com/Point> ; 
-                                                  sh:name "source point"@en ; 
-                                                  sh:description "The brick:Point that emitted this exception."@en ; 
-                                                  sh:maxCount 1 ].
-<https://example.com/ExerciseRoom> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Exercise room"@en;
-                                   rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ExhibitionRoom> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Exhibition room"@en;
-                                     rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Facade> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Facade"@en;
-                             rdfs:subClassOf <https://example.com/BuildingElement>.
-<https://example.com/FilingCabinet> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Filing cabinet"@en;
-                                    rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/FittingRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Fitting room"@en;
-                                  rdfs:subClassOf <https://example.com/RetailRoom>.
-<https://example.com/FloorLamp> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Floor lamp"@en;
-                                rdfs:subClassOf <https://example.com/Lamp>.
-<https://example.com/FloorMat> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Floor mat"@en;
-                               rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/FoldingChair> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Folding chair"@en;
-                                   rdfs:subClassOf <https://example.com/Chair>.
-<https://example.com/FoldingTable> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Folding table"@en;
-                                   rdfs:subClassOf <https://example.com/Table>.
-<https://example.com/FoodHandlingRoom> a rdfs:Class,
-                                         sh:NodeShape;
-                                       rdfs:label "Food-handling room"@en;
-                                       rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Footrest> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Footrest"@en;
-                               rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Furniture> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Furniture"@en;
-                                rdfs:subClassOf <https://example.com/Asset>.
-<https://example.com/FurnitureCollection> a rdfs:Class,
-                                            sh:NodeShape;
-                                          rdfs:label "Furniture collection"@en;
-                                          rdfs:subClassOf <https://example.com/Collection>;
-                                          sh:property [a sh:PropertyShape ; 
-                                                       sh:path <https://example.com/includes> ; 
-                                                       sh:nodeKind sh:IRI ; 
-                                                       sh:class <https://example.com/Furniture> ; 
-                                                       sh:name "includes"@en].
-<https://example.com/Garage> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Garage"@en;
-                             rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Georeference> a rdfs:Class,
-                                     sh:NodeShape,
-                                     <dtmi:dtdl:class:Component>;
-                                   rdfs:comment "Encapsulates a georeference globally placing a spatially located entity in terms of latitude, longitude, altitude, and bearing."@en;
-                                   rdfs:label "Georeference"@en;
-                                   rdfs:subClassOf <https://example.com/Information>;
-                                   sh:property [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/alt> ; 
-                                                sh:name "alt"@en ; 
-                                                sh:description "Altitude"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/bearing> ; 
-                                                sh:name "bearing"@en ; 
-                                                sh:description "The angle between local coordinate system and a north-south meridian."@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/lat> ; 
-                                                sh:name "lat"@en ; 
-                                                sh:description "Latitude"@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/long> ; 
-                                                sh:name "long"@en ; 
-                                                sh:description "Longitude"@en].
-<https://example.com/GroupRoom> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Group room"@en;
-                                rdfs:subClassOf <https://example.com/EducationalRoom>.
-<https://example.com/HVACZone> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "HVAC zone"@en;
-                               rdfs:subClassOf <https://example.com/Zone>.
-<https://example.com/Hallway> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Hallway"@en;
-                              rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/HealthcareRoom> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Healthcare room"@en;
-                                     rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Hospital> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Hospital"@en;
-                               rdfs:subClassOf <https://example.com/Building>.
-<https://example.com/Information> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Information"@en;
-                                  sh:property [a sh:PropertyShape ; 
-                                               sh:path <https://example.com/customTags> ; 
-                                               sh:name "Custom Tags"@en],
-                                              [a sh:PropertyShape ; 
-                                               sh:path <https://example.com/externalIds> ; 
-                                               sh:name "External IDs"@en],
-                                              [a sh:PropertyShape ; 
-                                               sh:path <https://example.com/name> ; 
-                                               sh:name "name"@en].
-<https://example.com/Kitchenette> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Kitchenette"@en;
-                                  rdfs:subClassOf <https://example.com/FoodHandlingRoom>.
-<https://example.com/Laboratory> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Laboratory"@en;
-                                 rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/LaboratoryDry> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Laboratory (dry)"@en;
-                                    rdfs:subClassOf <https://example.com/Laboratory>.
-<https://example.com/LaboratoryWet> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Laboratory (wet)"@en;
-                                    rdfs:subClassOf <https://example.com/Laboratory>.
-<https://example.com/Lamp> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Lamp"@en;
-                           rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/LaundryRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Laundry room"@en;
-                                  rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Lease> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:label "Lease"@en;
-                            rdfs:subClassOf <https://example.com/Event>;
-                            sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/leaseOf> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:name "lease of"@en ; 
-                                         sh:description "The object (e.g., property, equipment, etc) that this a lease of."@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/leasee> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Agent> ; 
-                                         sh:name "leasee"@en ; 
-                                         sh:description "The agent leasing some leasable object, i.e., the user of the asset."@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/leasor> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Agent> ; 
-                                         sh:name "leasor"@en ; 
-                                         sh:description "The agent leasing out some leasable object, i.e., the owner of the asset."@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/regulatedBy> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/LeaseContract> ; 
-                                         sh:name "regulated by"@en ; 
-                                         sh:description "Indicates the contract regulating the terms of the lease in question. "@en].
-<https://example.com/LeaseContract> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:comment "Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement."@en;
-                                    rdfs:label "Lease contract"@en;
-                                    rdfs:subClassOf <https://example.com/Document>;
-                                    sh:property [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/regulates> ; 
-                                                 sh:nodeKind sh:IRI ; 
-                                                 sh:class <https://example.com/Lease> ; 
-                                                 sh:name "regulates"@en ; 
-                                                 sh:description "Indicates the lease(s) that this contract regulates the conditions of."@en].
-<https://example.com/Level> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:comment "The level of a building, a.k.a. storey, floor, etc."@en;
-                            rdfs:label "Level"@en;
-                            rdfs:subClassOf <https://example.com/Architecture>;
-                            sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/levelNumber> ; 
-                                         sh:name "level number"@en ; 
-                                         sh:description "A number indicating the ordinal number of this level within the containing space (typically a Building or in the case of a Mezzanine, sometimes another level). Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others."@en].
-<https://example.com/Library> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Library"@en;
-                              rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/LivingRoom> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Living room"@en;
-                                 rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/LoadingReceivingRoom> a rdfs:Class,
-                                             sh:NodeShape;
-                                           rdfs:label "Loading/receiving room"@en;
-                                           rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/LockerRoom> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Locker room"@en;
-                                 rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/MailRoom> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Mail room"@en;
-                               rdfs:subClassOf <https://example.com/BackOffice>.
-<https://example.com/MailroomCart> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Mailroom cart"@en;
-                                   rdfs:subClassOf <https://example.com/Cart>.
-<https://example.com/MainEntrance> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Main entrance"@en;
-                                   rdfs:subClassOf <https://example.com/Entrance>.
-<https://example.com/MeditationRoom> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Meditation room"@en;
-                                     rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/MezzanineLevel> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Mezzanine level"@en;
-                                     rdfs:subClassOf <https://example.com/Level>.
-<https://example.com/MobileDesk> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Mobile desk"@en;
-                                 rdfs:subClassOf <https://example.com/Desk>.
-<https://example.com/Morgue> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Morgue"@en;
-                             rdfs:subClassOf <https://example.com/HealthcareRoom>.
-<https://example.com/MothersRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Mothers' room"@en;
-                                  rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/MultiPurposeRoom> a rdfs:Class,
-                                         sh:NodeShape;
-                                       rdfs:label "Multi-purpose room"@en;
-                                       rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/NeonatalNursingRoom> a rdfs:Class,
-                                            sh:NodeShape;
-                                          rdfs:label "Neonatal nursing room"@en;
-                                          rdfs:subClassOf <https://example.com/HealthcareRoom>.
-<https://example.com/NotificationObject> a rdfs:Class,
-                                           sh:NodeShape;
-                                         rdfs:label "Notification object"@en;
-                                         rdfs:subClassOf <https://example.com/ServiceObject>.
-<https://example.com/ObservationEvent> a rdfs:Class,
-                                         sh:NodeShape;
-                                       rdfs:label "Observation event"@en;
-                                       rdfs:subClassOf <https://example.com/PointEvent>;
-                                       sh:property [a sh:PropertyShape ; 
-                                                    sh:path <https://example.com/sourcePoint> ; 
-                                                    sh:nodeKind sh:IRI ; 
-                                                    sh:class <https://example.com/Point> ; 
-                                                    sh:name "source point"@en ; 
-                                                    sh:description "The brick:Point that emitted this observation."@en ; 
-                                                    sh:maxCount 1 ].
-<https://example.com/OccupancyZone> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:comment "Occupancy Zone is a spatial area where devices are monitoring or reporting on the concept of Occupancy (motion sensors, people counters, cameras, etc.)"@en;
-                                    rdfs:label "Occupancy zone"@en;
-                                    rdfs:subClassOf <https://example.com/Zone>.
-<https://example.com/Office> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Office"@en;
-                             rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/OfficeChair> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Office chair"@en;
-                                  rdfs:subClassOf <https://example.com/Chair>.
-<https://example.com/OfficeLandscape> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:label "OfficeLandscape"@en;
-                                      rdfs:subClassOf <https://example.com/Office>.
-<https://example.com/OfficeRoom> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "OfficeRoom"@en;
-                                 rdfs:subClassOf <https://example.com/Office>.
-<https://example.com/OperatingRoom> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Operating room"@en;
-                                    rdfs:subClassOf <https://example.com/HealthcareRoom>.
-<https://example.com/Organization> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:comment "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"@en;
-                                   rdfs:label "Organization"@en;
-                                   rdfs:subClassOf <https://example.com/Agent>;
-                                   sh:property [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/logo> ; 
-                                                sh:name "logo"@en ; 
-                                                sh:description "URL link to an image/logo that represents the organization."@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/hasMember> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Agent> ; 
-                                                sh:name "has member"@en ; 
-                                                sh:description "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic hasPart property."@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/hasPart> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Organization> ; 
-                                                sh:name "has part"@en ; 
-                                                sh:description "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the more specific hasMember property."@en],
-                                               [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/isPartOf> ; 
-                                                sh:nodeKind sh:IRI ; 
-                                                sh:class <https://example.com/Organization> ; 
-                                                sh:name "is part of"@en ; 
-                                                sh:description "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the Agent.isMemberOf property."@en].
-<https://example.com/OutdoorSpace> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Outdoor space"@en;
-                                   rdfs:subClassOf <https://example.com/Architecture>.
-<https://example.com/OutpatientServicesRoom> a rdfs:Class,
-                                               sh:NodeShape;
-                                             rdfs:label "Outpatient services room"@en;
-                                             rdfs:subClassOf <https://example.com/HealthcareRoom>.
-<https://example.com/Pantry> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Pantry"@en;
-                             rdfs:subClassOf <https://example.com/FoodHandlingRoom>.
-<https://example.com/ParkingSpace> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Parking space"@en;
-                                   rdfs:subClassOf <https://example.com/Zone>.
-<https://example.com/Partition> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Partition"@en;
-                                rdfs:subClassOf <https://example.com/BarrierAsset>.
-<https://example.com/Person> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:comment "A natural person (i.e., an individual human being)."@en;
-                             rdfs:label "Person"@en;
-                             rdfs:subClassOf <https://example.com/Agent>;
-                             sh:property [a sh:PropertyShape ; 
-                                          sh:path <https://example.com/familyName>],
-                                         [a sh:PropertyShape ; 
-                                          sh:path <https://example.com/gender> ; 
-                                          sh:name "gender"@en],
-                                         [a sh:PropertyShape ; 
-                                          sh:path <https://example.com/givenName>],
-                                         [a sh:PropertyShape ; 
-                                          sh:path <https://example.com/image> ; 
-                                          sh:name "image"@en ; 
-                                          sh:description "URL link to an image that represents the person."@en].
-<https://example.com/PersonalHygiene> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:label "Personal hygiene room"@en;
-                                      rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/PharmacyRoom> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Pharmacy room"@en;
-                                   rdfs:subClassOf <https://example.com/HealthcareRoom>.
-<https://example.com/PhoneBooth> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "PhoneBooth"@en;
-                                 rdfs:subClassOf <https://example.com/Office>.
-<https://example.com/PointEvent> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:comment "An event emanating from or targeting a Point; e.g., an individual Observation from a Sensor point, or an Actuation sent to a Command point. In other terms, the Points indicate the capability of some Space or Equipment to emit or accept data, while this class represents those actual data messages. Note that in most non-trivially sized systems, these events are not stored in the knowledge graph itself, but are rather forwarded to some C&C system or time series database."@en;
-                                 rdfs:label "Point event"@en;
-                                 rdfs:subClassOf <https://example.com/Event>;
-                                 sh:property [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/payload> ; 
-                                              sh:name "payload"@en ; 
-                                              sh:description "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)"@en].
-<https://example.com/PointOfInterest> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:label "Point of Interest"@en;
-                                      rdfs:subClassOf <https://example.com/Information>;
-                                      sh:property [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/objectOfInterest> ; 
-                                                   sh:nodeKind sh:IRI ; 
-                                                   sh:name "object of interest"@en ; 
-                                                   sh:maxCount 1 ].
-<https://example.com/Portfolio> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:comment "A portfolio is a grouping of buildings, sites, apartments, campuses, etc. that share some business-relevant commonality, e.g., are managed by the same company, are rented out to the same tenant, share utilization or legal definition (industrial vs commercial), etc."@en;
-                                rdfs:label "Portfolio"@en;
-                                rdfs:subClassOf <https://example.com/Collection>;
-                                sh:property [a sh:PropertyShape ; 
-                                             sh:path <https://example.com/includes> ; 
-                                             sh:nodeKind sh:IRI ; 
-                                             sh:name "includes"@en].
-<https://example.com/PostalAddress> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Postal address"@en;
-                                    rdfs:subClassOf <https://example.com/Information>;
-                                    sh:property [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/addressLine1> ; 
-                                                 sh:name "address line 1"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/addressLine2> ; 
-                                                 sh:name "address line 2"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/city> ; 
-                                                 sh:name "city"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/country> ; 
-                                                 sh:name "country"@en ; 
-                                                 sh:description """The country, e.g., USA, Sweden, Argentina, or optionally a two-letter ISO 3166-1 alpha-2 country code, e.g., \"SE\", \"US\", etc."""@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/postalCode> ; 
-                                                 sh:name "postal code"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/region> ; 
-                                                 sh:name "region"@en].
-<https://example.com/Premises> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:comment "A premises is an administrative grouping of spaces that are used for some commercial or industrial purpose by a real estate holder or tenant. E.g, a suite of offices, a shop, or an industrial workshop."@en;
-                               rdfs:label "Premises"@en;
-                               rdfs:subClassOf <https://example.com/Collection>;
-                               sh:property [a sh:PropertyShape ; 
-                                            sh:path <https://example.com/includes> ; 
-                                            sh:nodeKind sh:IRI ; 
-                                            sh:class <https://example.com/Architecture> ; 
-                                            sh:name "includes"@en].
-<https://example.com/PrinterCart> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Printer cart"@en;
-                                  rdfs:subClassOf <https://example.com/Cart>.
-<https://example.com/PrinterStand> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Printer stand"@en;
-                                   rdfs:subClassOf <https://example.com/Stand>.
-<https://example.com/RadiologyRoom> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Radiology room"@en;
-                                    rdfs:subClassOf <https://example.com/HealthcareRoom>.
-<https://example.com/RealEstate> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:comment """The legal/administrative representation of some lands and/or buildings. I.e., \"Fastighet\" (Swedish), \"Ejendom\" (Denmark), etc."""@en;
-                                 rdfs:label "Real Estate"@en;
-                                 rdfs:subClassOf <https://example.com/Collection>;
-                                 sh:property [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/includes> ; 
-                                              sh:nodeKind sh:IRI ; 
-                                              sh:class <https://example.com/Architecture> ; 
-                                              sh:name "includes"@en].
-<https://example.com/Reception> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Reception"@en;
-                                rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ReceptionTable> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Reception table"@en;
-                                     rdfs:subClassOf <https://example.com/Table>.
-<https://example.com/RecordingRoom> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Recording room"@en;
-                                    rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/RecreationalRoom> a rdfs:Class,
-                                         sh:NodeShape;
-                                       rdfs:label "Recreational room"@en;
-                                       rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Region> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:comment """An administrative geospatial unit larger than the individual real estate. For instance, \"Lombary\", \"North America\", \"The Back Bay\", \"Elnätsområde Syd\", etc."""@en;
-                             rdfs:label "Region"@en;
-                             rdfs:subClassOf <https://example.com/Space>.
-<https://example.com/RestingRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Resting room"@en;
-                                  rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/RetailRoom> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Retail room"@en;
-                                 rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Roof> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Roof"@en;
-                           rdfs:subClassOf <https://example.com/BuildingElement>.
-<https://example.com/RoofLevel> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Roof level"@en;
-                                rdfs:subClassOf <https://example.com/Level>.
-<https://example.com/Room> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Room"@en;
-                           rdfs:subClassOf <https://example.com/Architecture>.
-<https://example.com/Safe> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Safe"@en;
-                           rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Sauna> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:label "Sauna"@en;
-                            rdfs:subClassOf <https://example.com/PersonalHygiene>.
-<https://example.com/School> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "School"@en;
-                             rdfs:subClassOf <https://example.com/Building>.
-<https://example.com/SecurityRoom> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Security room"@en;
-                                   rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ServiceEntrance> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:label "Service entrance"@en;
-                                      rdfs:subClassOf <https://example.com/Entrance>.
-<https://example.com/ServiceObject> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Service object"@en;
-                                    rdfs:subClassOf <https://example.com/Information>;
-                                    sh:property [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/acknowledgedTime> ; 
-                                                 sh:name "acknowledged time"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/closedTime> ; 
-                                                 sh:name "closed time"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/createdTime> ; 
-                                                 sh:name "created time"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/severity> ; 
-                                                 sh:name "severity"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/status> ; 
-                                                 sh:name "status"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/acknowledgedBy> ; 
-                                                 sh:nodeKind sh:IRI ; 
-                                                 sh:class <https://example.com/Agent> ; 
-                                                 sh:name "acknowledged by"@en ; 
-                                                 sh:maxCount 1 ],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/closedBy> ; 
-                                                 sh:nodeKind sh:IRI ; 
-                                                 sh:class <https://example.com/Agent> ; 
-                                                 sh:name "closed by"@en ; 
-                                                 sh:maxCount 1 ],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/createdBy> ; 
-                                                 sh:nodeKind sh:IRI ; 
-                                                 sh:class <https://example.com/Agent> ; 
-                                                 sh:name "created by"@en ; 
-                                                 sh:maxCount 1 ],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/producedBy> ; 
-                                                 sh:nodeKind sh:IRI ; 
-                                                 sh:class <https://example.com/Point> ; 
-                                                 sh:name "produced by"@en],
-                                                [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/relatedTo> ; 
-                                                 sh:nodeKind sh:IRI ; 
-                                                 sh:name "related to"@en].
-<https://example.com/ServiceShaft> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Service shaft"@en;
-                                   rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Shelter> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Shelter"@en;
-                              rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/ShelterGasLock> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Shelter gas lock"@en;
-                                     rdfs:subClassOf <https://example.com/Shelter>.
-<https://example.com/ShelterRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Shelter room"@en;
-                                  rdfs:subClassOf <https://example.com/Shelter>.
-<https://example.com/ShoppingMall> a rdfs:Class,
-                                     sh:NodeShape;
-                                   rdfs:label "Shopping mall"@en;
-                                   rdfs:subClassOf <https://example.com/Building>.
-<https://example.com/ShowerRoom> a rdfs:Class,
-                                   sh:NodeShape;
-                                 rdfs:label "Shower room"@en;
-                                 rdfs:subClassOf <https://example.com/PersonalHygiene>.
-<https://example.com/Site> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:comment "A piece of land upon which zero or more buildings may be situated."@en;
-                           rdfs:label "Site"@en;
-                           rdfs:subClassOf <https://example.com/Architecture>.
-<https://example.com/Slab> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Slab"@en;
-                           rdfs:subClassOf <https://example.com/BuildingElement>.
-<https://example.com/SmallStudyRoom> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Small study room"@en;
-                                     rdfs:subClassOf <https://example.com/EducationalRoom>.
-<https://example.com/Sofa> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Sofa"@en;
-                           rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Space> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:comment "A contiguous part of the physical world that contains or can contain sub-spaces. E.g., a Region can contain many Sites, which in turn can contain many Buildings."@en;
-                            rdfs:label "Space"@en;
-                            sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/customTags> ; 
-                                         sh:name "Custom Tags"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/externalIds> ; 
-                                         sh:name "External IDs"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/geometry> ; 
-                                         sh:name "geometry"@en ; 
-                                         sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/name> ; 
-                                         sh:name "name"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/hasPart> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Space> ; 
-                                         sh:name "has part"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/isLocationOf> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:name "is location of"@en],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/isPartOf> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:class <https://example.com/Space> ; 
-                                         sh:name "is part of"@en ; 
-                                         sh:maxCount 1 ],
-                                        [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/georeference> ; 
-                                         sh:nodeKind sh:IRI ; 
-                                         sh:maxCount 1  ; 
-                                         sh:class <https://example.com/Georeference> ; 
-                                         sh:name "georeference"@en ; 
-                                         sh:description """A fixed point for, e.g., a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for locally defined geometries."""@en].
-<https://example.com/SprinklerRoom> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Sprinkler room"@en;
-                                    rdfs:subClassOf <https://example.com/UtilitiesRoom>.
-<https://example.com/Stadium> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Stadium"@en;
-                              rdfs:subClassOf <https://example.com/Building>.
-<https://example.com/StaffRoom> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Staff room"@en;
-                                rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Stairwell> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Stairwell"@en;
-                                rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Stand> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:label "Stand"@en;
-                            rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/Storage> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Storage"@en;
-                              rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/StorageCabinet> a rdfs:Class,
-                                       sh:NodeShape;
-                                     rdfs:label "Storage cabinet"@en;
-                                     rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/SubBuilding> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Sub-building"@en;
-                                  rdfs:subClassOf <https://example.com/Architecture>.
-<https://example.com/TVStand> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "TV stand"@en;
-                              rdfs:subClassOf <https://example.com/Stand>.
-<https://example.com/Table> a rdfs:Class,
-                              sh:NodeShape;
-                            rdfs:label "Table"@en;
-                            rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/TelecommunicationRoom> a rdfs:Class,
-                                              sh:NodeShape;
-                                            rdfs:label "Telecommunication room"@en;
-                                            rdfs:subClassOf <https://example.com/CableRoom>.
-<https://example.com/Theater> a rdfs:Class,
-                                sh:NodeShape;
-                              rdfs:label "Theater"@en;
-                              rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/TherapyRoom> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Therapy room"@en;
-                                  rdfs:subClassOf <https://example.com/HealthcareRoom>.
-<https://example.com/Toilet> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Toilet"@en;
-                             rdfs:subClassOf <https://example.com/PersonalHygiene>.
-<https://example.com/TreatmentRoom> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Treatment room"@en;
-                                    rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/TreatmentWaitingRoom> a rdfs:Class,
-                                             sh:NodeShape;
-                                           rdfs:label "Treatment waiting room"@en;
-                                           rdfs:subClassOf <https://example.com/TreatmentRoom>.
-<https://example.com/UtilitiesRoom> a rdfs:Class,
-                                      sh:NodeShape;
-                                    rdfs:label "Utilities room"@en;
-                                    rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/VirtualBuilding> a rdfs:Class,
-                                        sh:NodeShape;
-                                      rdfs:label "Virtual building"@en;
-                                      rdfs:subClassOf <https://example.com/Building>.
-<https://example.com/Wall> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:label "Wall"@en;
-                           rdfs:subClassOf <https://example.com/BuildingElement>.
-<https://example.com/WallInner> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Wall (inner)"@en;
-                                rdfs:subClassOf <https://example.com/Wall>.
-<https://example.com/WasteBasket> a rdfs:Class,
-                                    sh:NodeShape;
-                                  rdfs:label "Waste basket"@en;
-                                  rdfs:subClassOf <https://example.com/Furniture>.
-<https://example.com/WasteManagementRoom> a rdfs:Class,
-                                            sh:NodeShape;
-                                          rdfs:label "Waste management room"@en;
-                                          rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Window> a rdfs:Class,
-                               sh:NodeShape;
-                             rdfs:label "Window"@en;
-                             rdfs:subClassOf <https://example.com/BarrierAsset>.
-<https://example.com/WorkOrder> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Work order"@en;
-                                rdfs:subClassOf <https://example.com/ServiceObject>.
-<https://example.com/Workshop> a rdfs:Class,
-                                 sh:NodeShape;
-                               rdfs:label "Workshop"@en;
-                               rdfs:subClassOf <https://example.com/Room>.
-<https://example.com/Workspace> a rdfs:Class,
-                                  sh:NodeShape;
-                                rdfs:label "Workspace"@en;
-                                rdfs:subClassOf <https://example.com/Zone>.
-<https://example.com/Zone> a rdfs:Class,
-                             sh:NodeShape;
-                           rdfs:comment "A sub-zone within or outside of a building defined to support some technology and/or use, e.g., an HVAC zone, a parking space, a security zone, etc."@en;
-                           rdfs:label "Zone"@en;
-                           rdfs:subClassOf <https://example.com/Architecture>.
+                          rdfs:label "Telecommunication room"@en;
+                          rdfs:subClassOf rec:CableRoom.
+rec:Theater a rdfs:Class,
+              sh:NodeShape;
+            rdfs:label "Theater"@en;
+            rdfs:subClassOf rec:Room.
+rec:TherapyRoom a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Therapy room"@en;
+                rdfs:subClassOf rec:HealthcareRoom.
+rec:Toilet a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Toilet"@en;
+           rdfs:subClassOf rec:PersonalHygiene.
+rec:TreatmentRoom a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Treatment room"@en;
+                  rdfs:subClassOf rec:Room.
+rec:TreatmentWaitingRoom a rdfs:Class,
+                           sh:NodeShape;
+                         rdfs:label "Treatment waiting room"@en;
+                         rdfs:subClassOf rec:TreatmentRoom.
+rec:UtilitiesRoom a rdfs:Class,
+                    sh:NodeShape;
+                  rdfs:label "Utilities room"@en;
+                  rdfs:subClassOf rec:Room.
+rec:VirtualBuilding a rdfs:Class,
+                      sh:NodeShape;
+                    rdfs:label "Virtual building"@en;
+                    rdfs:subClassOf rec:Building.
+rec:Wall a rdfs:Class,
+           sh:NodeShape;
+         rdfs:label "Wall"@en;
+         rdfs:subClassOf rec:BuildingElement.
+rec:WallInner a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Wall (inner)"@en;
+              rdfs:subClassOf rec:Wall.
+rec:WasteBasket a rdfs:Class,
+                  sh:NodeShape;
+                rdfs:label "Waste basket"@en;
+                rdfs:subClassOf rec:Furniture.
+rec:WasteManagementRoom a rdfs:Class,
+                          sh:NodeShape;
+                        rdfs:label "Waste management room"@en;
+                        rdfs:subClassOf rec:Room.
+rec:Window a rdfs:Class,
+             sh:NodeShape;
+           rdfs:label "Window"@en;
+           rdfs:subClassOf rec:BarrierAsset.
+rec:WorkOrder a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Work order"@en;
+              rdfs:subClassOf rec:ServiceObject.
+rec:Workshop a rdfs:Class,
+               sh:NodeShape;
+             rdfs:label "Workshop"@en;
+             rdfs:subClassOf rec:Room.
+rec:Workspace a rdfs:Class,
+                sh:NodeShape;
+              rdfs:label "Workspace"@en;
+              rdfs:subClassOf rec:Zone.
+rec:Zone a rdfs:Class,
+           sh:NodeShape;
+         rdfs:comment "A sub-zone within or outside of a building defined to support some technology and/or use, e.g., an HVAC zone, a parking space, a security zone, etc."@en;
+         rdfs:label "Zone"@en;
+         rdfs:subClassOf rec:Architecture.
