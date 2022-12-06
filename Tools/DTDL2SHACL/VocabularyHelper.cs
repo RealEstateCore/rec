@@ -17,6 +17,7 @@ namespace DotNetRdfExtensions
     public static class SH
     {
         public static readonly Uri NodeShape = new Uri("http://www.w3.org/ns/shacl#NodeShape");
+        public static readonly Uri PropertyShape = new Uri("http://www.w3.org/ns/shacl#PropertyShape");
         public static readonly Uri property = new Uri("http://www.w3.org/ns/shacl#property");
         public static readonly Uri path = new Uri("http://www.w3.org/ns/shacl#path");
         public static readonly Uri cls = new Uri("http://www.w3.org/ns/shacl#class");

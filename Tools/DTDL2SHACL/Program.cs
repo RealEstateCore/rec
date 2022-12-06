@@ -67,11 +67,28 @@ namespace DTDL2SHACL
                         nodeShape.AddSuperClass(parentNodeShape);
                     }
                 }
+
+                // Translate DTDL properties
+                foreach (DTPropertyInfo property in iface.GetProperties()) {
+                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(property.Name));
+                    // TODO: Property-specific translation
+                }
+
+                // Translate DTDL Relationships
+                foreach (DTRelationshipInfo relationship in iface.GetRelationships()) {
+                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(relationship.Name));
+                    // TODO: Relationship-specific translation
+                }
+
+                // Translate DTDL Components
+                foreach (DTComponentInfo component in iface.GetComponents()) {
+                    PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(component.Name));
+                    // TODO: Component-specific translation
+                }
             }
 
             var writer = new CompressingTurtleWriter() {
-                PrettyPrintMode = true,
-                CompressionLevel = 0
+                PrettyPrintMode = true
             };
             _shapesGraph.NamespaceMap.AddNamespace("sh", new Uri("http://www.w3.org/ns/shacl#"));
             writer.Save(_shapesGraph, _outputPath);
@@ -117,6 +134,11 @@ namespace DTDL2SHACL
         private static Uri GetShaclId(Dtmi dtmi) {
             // TODO: Implement using prefix index
             string localName = dtmi.Versionless.Split(':').Last();
+            return GetShaclId(localName);
+        }
+
+        private static Uri GetShaclId(string localName) {
+            // TODO: Implement using prefix index
             return new Uri($"https://example.com/{localName}");
         }
     }

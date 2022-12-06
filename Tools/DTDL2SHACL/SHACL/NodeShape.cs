@@ -31,6 +31,22 @@ namespace DotNetRdfExtensions.SHACL
             }
         }
 
+        public PropertyShape CreatePropertyShape(Uri path) {
+            IBlankNode pShapeNode = _graph.CreateBlankNode();
+            IUriNode rdfType = _graph.CreateUriNode(RDF.type);
+            IUriNode shPropertyShape = _graph.CreateUriNode(SH.PropertyShape);
+            _graph.Assert(pShapeNode, rdfType, shPropertyShape);
+
+            IUriNode shPath = _graph.CreateUriNode(SH.path);
+            IUriNode pathNode = _graph.CreateUriNode(path);
+            _graph.Assert(pShapeNode, shPath, pathNode);
+
+            IUriNode shProperty = _graph.CreateUriNode(SH.property);
+            _graph.Assert(Node, shProperty, pShapeNode);
+
+            return new PropertyShape(pShapeNode, _graph);
+        }
+
         public IEnumerable<NodeShape> DirectSuperShapes {
             get {
                 IUriNode rdfsSubClassOf = _graph.CreateUriNode(RDFS.subClassOf);
