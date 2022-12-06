@@ -1,4 +1,5 @@
 using VDS.RDF;
+using VDS.RDF.Parsing;
 using VDS.RDF.Shacl;
 
 namespace DotNetRdfExtensions.SHACL
@@ -27,6 +28,24 @@ namespace DotNetRdfExtensions.SHACL
                 IUriNode shClass = _graph.CreateUriNode(SH.cls);
                 return _graph.GetTriplesWithSubjectPredicate(_node, shClass).Select(trip => trip.Object).UriNodes();
             }
+        }
+
+        public void AddClass(Uri cls) {
+            IUriNode shClass = _graph.CreateUriNode(SH.cls);
+            IUriNode clsNode = _graph.CreateUriNode(cls);
+            _graph.Assert(_node, shClass, clsNode);
+        }
+
+        public void AddName(string language, string value) {
+            IUriNode shName = _graph.CreateUriNode(SH.name);
+            ILiteralNode nameNode = _graph.CreateLiteralNode(value, language);
+            _graph.Assert(_node, shName, nameNode);
+        }
+
+        public void AddDescription(string language, string value) {
+            IUriNode shDescription = _graph.CreateUriNode(SH.description);
+            ILiteralNode descriptionNode = _graph.CreateLiteralNode(value, language);
+            _graph.Assert(_node, shDescription, descriptionNode);
         }
 
         public IEnumerable<INode> In {
@@ -65,6 +84,15 @@ namespace DotNetRdfExtensions.SHACL
                     return null;
                 }
             }
+            set {
+                IUriNode shMinCount = _graph.CreateUriNode(SH.minCount);
+                var currentMinCountTriples = _graph.GetTriplesWithSubjectPredicate(_node, shMinCount).ToList();
+                _graph.Retract(currentMinCountTriples);
+                if (value != null) {
+                    ILiteralNode minCountNode = _graph.CreateLiteralNode(value.ToString(), UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+                    _graph.Assert(_node, shMinCount, minCountNode);
+                }
+            }
         }
 
         public int? MaxCount {
@@ -79,6 +107,15 @@ namespace DotNetRdfExtensions.SHACL
                 }
                 else {
                     return null;
+                }
+            }
+            set {
+                IUriNode shMaxCount = _graph.CreateUriNode(SH.maxCount);
+                var currentMaxCountTriples = _graph.GetTriplesWithSubjectPredicate(_node, shMaxCount).ToList();
+                _graph.Retract(currentMaxCountTriples);
+                if (value != null) {
+                    ILiteralNode maxCountNode = _graph.CreateLiteralNode(value.ToString(), UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+                    _graph.Assert(_node, shMaxCount, maxCountNode);
                 }
             }
         }

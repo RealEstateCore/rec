@@ -17,7 +17,11 @@
                                      rdfs:label "Actuation event"@en;
                                      rdfs:subClassOf <https://example.com/PointEvent>;
                                      sh:property [a sh:PropertyShape ; 
-                                                  sh:path <https://example.com/targetPoint>].
+                                                  sh:path <https://example.com/targetPoint> ; 
+                                                  sh:nodeKind sh:IRI ; 
+                                                  sh:class <https://example.com/Point> ; 
+                                                  sh:name "target point"@en ; 
+                                                  sh:description "The brick:Point(s) (e.g., brick:Commands, brick:Setpoints, or brick:Parameters) that the actuation will target/execute."@en].
 <https://example.com/AdmittingRoom> a rdfs:Class,
                                       sh:NodeShape;
                                     rdfs:label "Admitting room"@en;
@@ -33,9 +37,16 @@
                                         [a sh:PropertyShape ; 
                                          sh:path <https://example.com/name>],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/isMemberOf>],
+                                         sh:path <https://example.com/isMemberOf> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Organization> ; 
+                                         sh:name "is member of"@en ; 
+                                         sh:description "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property."@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/owns>].
+                                         sh:path <https://example.com/owns> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:name "owns"@en ; 
+                                         sh:description "Indicates ownership of some thing, e.g., a building, an asset, an organization, etc."@en].
 <https://example.com/AlarmObject> a rdfs:Class,
                                     sh:NodeShape;
                                   rdfs:label "Alarm object"@en;
@@ -45,7 +56,10 @@
                                 rdfs:label "Apartment"@en;
                                 rdfs:subClassOf <https://example.com/Collection>;
                                 sh:property [a sh:PropertyShape ; 
-                                             sh:path <https://example.com/includes>].
+                                             sh:path <https://example.com/includes> ; 
+                                             sh:nodeKind sh:IRI ; 
+                                             sh:class <https://example.com/Room> ; 
+                                             sh:name "includes"@en].
 <https://example.com/ArchitecturalAsset> a rdfs:Class,
                                            sh:NodeShape;
                                          rdfs:label "Architectural asset"@en;
@@ -56,27 +70,60 @@
                                    rdfs:label "Architecture"@en;
                                    rdfs:subClassOf <https://example.com/Space>;
                                    sh:property [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/address>],
+                                                sh:path <https://example.com/address> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/PostalAddress> ; 
+                                                sh:name "address"@en ; 
+                                                sh:description "Physical address of the architecture (site, building, sub-building, entrance room, etc.) in question."@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/adjacentElement>],
+                                                sh:path <https://example.com/adjacentElement> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/BuildingElement> ; 
+                                                sh:name "adjacent element"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/architectedBy>],
+                                                sh:path <https://example.com/architectedBy> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Agent> ; 
+                                                sh:name "architected by"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/constructedBy>],
+                                                sh:path <https://example.com/constructedBy> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Agent>],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/containsElement>],
+                                                sh:path <https://example.com/containsElement> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/BuildingElement> ; 
+                                                sh:name "contains element"@en ; 
+                                                sh:description "Links an Architecture to BuildingElement that is contained in the Space."@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/documentation>],
+                                                sh:path <https://example.com/documentation> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Document> ; 
+                                                sh:name "documentation"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/hasPoint>],
+                                                sh:path <https://example.com/hasPoint> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Point> ; 
+                                                sh:name "has point"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/intersectingElement>],
+                                                sh:path <https://example.com/intersectingElement> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/BuildingElement> ; 
+                                                sh:name "intersecting element"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/isFedBy>],
+                                                sh:path <https://example.com/isFedBy> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:name "is fed by"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/operatedBy>],
+                                                sh:path <https://example.com/operatedBy> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Agent> ; 
+                                                sh:name "operated by"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/ownedBy>],
+                                                sh:path <https://example.com/ownedBy> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Agent> ; 
+                                                sh:name "owned by"@en],
                                                [a sh:PropertyShape ; 
                                                 sh:path <https://example.com/area>],
                                                [a sh:PropertyShape ; 
@@ -136,25 +183,57 @@
                                         [a sh:PropertyShape ; 
                                          sh:path <https://example.com/weight>],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/commissionedBy>],
+                                         sh:path <https://example.com/commissionedBy> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Agent> ; 
+                                         sh:name "commissioned by"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/documentation>],
+                                         sh:path <https://example.com/documentation> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Document> ; 
+                                         sh:name "documentation"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/hasPart>],
+                                         sh:path <https://example.com/hasPart> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Asset> ; 
+                                         sh:name "has part"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/hasPoint>],
+                                         sh:path <https://example.com/hasPoint> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Point> ; 
+                                         sh:name "has point"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/installedBy>],
+                                         sh:path <https://example.com/installedBy> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Agent> ; 
+                                         sh:name "installed by"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/isPartOf>],
+                                         sh:path <https://example.com/isPartOf> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Asset> ; 
+                                         sh:name "is part of"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/locatedIn>],
+                                         sh:path <https://example.com/locatedIn> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Space> ; 
+                                         sh:name "located in"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/manufacturedBy>],
+                                         sh:path <https://example.com/manufacturedBy> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Agent> ; 
+                                         sh:name "manufactured by"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/mountedOn>],
+                                         sh:path <https://example.com/mountedOn> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/BuildingElement> ; 
+                                         sh:name "mounted on"@en ; 
+                                         sh:description "An asset may be mounted on some part of the building construction (e.g., a blind on a facade, a camera on a wall, etc)."@en ; 
+                                         sh:maxCount 1 ],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/servicedBy>].
+                                         sh:path <https://example.com/servicedBy> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Agent> ; 
+                                         sh:name "serviced by"@en].
 <https://example.com/Atrium> a rdfs:Class,
                                sh:NodeShape;
                              rdfs:label "Atrium"@en;
@@ -219,13 +298,28 @@
                                                   [a sh:PropertyShape ; 
                                                    sh:path <https://example.com/name>],
                                                   [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/documentation>],
+                                                   sh:path <https://example.com/documentation> ; 
+                                                   sh:nodeKind sh:IRI ; 
+                                                   sh:class <https://example.com/Document> ; 
+                                                   sh:name "documentation"@en],
                                                   [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/hasPart>],
+                                                   sh:path <https://example.com/hasPart> ; 
+                                                   sh:nodeKind sh:IRI ; 
+                                                   sh:class <https://example.com/BuildingElement> ; 
+                                                   sh:name "has part"@en],
                                                   [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/isPartOf>],
+                                                   sh:path <https://example.com/isPartOf> ; 
+                                                   sh:nodeKind sh:IRI ; 
+                                                   sh:class <https://example.com/BuildingElement> ; 
+                                                   sh:name "is part of"@en ; 
+                                                   sh:maxCount 1 ],
                                                   [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/locatedIn>].
+                                                   sh:path <https://example.com/locatedIn> ; 
+                                                   sh:nodeKind sh:IRI ; 
+                                                   sh:class <https://example.com/Architecture> ; 
+                                                   sh:name "located in"@en ; 
+                                                   sh:description "Indicates the architected space (site, building, level, room...) in which this building element is placed."@en ; 
+                                                   sh:maxCount 1 ].
 <https://example.com/BulletinBoard> a rdfs:Class,
                                       sh:NodeShape;
                                     rdfs:label "Bulletin board"@en;
@@ -248,7 +342,10 @@
                              rdfs:label "Campus"@en;
                              rdfs:subClassOf <https://example.com/Collection>;
                              sh:property [a sh:PropertyShape ; 
-                                          sh:path <https://example.com/includes>].
+                                          sh:path <https://example.com/includes> ; 
+                                          sh:nodeKind sh:IRI ; 
+                                          sh:class <https://example.com/Architecture> ; 
+                                          sh:name "includes"@en].
 <https://example.com/Cart> a rdfs:Class,
                              sh:NodeShape;
                            rdfs:label "Cart"@en;
@@ -296,7 +393,10 @@
                                              [a sh:PropertyShape ; 
                                               sh:path <https://example.com/name>],
                                              [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/documentation>].
+                                              sh:path <https://example.com/documentation> ; 
+                                              sh:nodeKind sh:IRI ; 
+                                              sh:class <https://example.com/Document> ; 
+                                              sh:name "documentation"@en].
 <https://example.com/Company> a rdfs:Class,
                                 sh:NodeShape;
                               rdfs:label "Company"@en;
@@ -358,9 +458,13 @@
                                rdfs:label "Document"@en;
                                rdfs:subClassOf <https://example.com/Information>;
                                sh:property [a sh:PropertyShape ; 
-                                            sh:path <https://example.com/documentTopic>],
+                                            sh:path <https://example.com/documentTopic> ; 
+                                            sh:nodeKind sh:IRI ; 
+                                            sh:name "document topic"@en],
                                            [a sh:PropertyShape ; 
-                                            sh:path <https://example.com/url>].
+                                            sh:path <https://example.com/url> ; 
+                                            sh:nodeKind sh:IRI ; 
+                                            sh:name "URL"@en].
 <https://example.com/Door> a rdfs:Class,
                              sh:NodeShape;
                            rdfs:label "Door"@en;
@@ -410,11 +514,19 @@
                                           rdfs:label "Equipment collection"@en;
                                           rdfs:subClassOf <https://example.com/Collection>;
                                           sh:property [a sh:PropertyShape ; 
-                                                       sh:path <https://example.com/feeds>],
+                                                       sh:path <https://example.com/feeds> ; 
+                                                       sh:nodeKind sh:IRI ; 
+                                                       sh:name "feeds"@en],
                                                       [a sh:PropertyShape ; 
-                                                       sh:path <https://example.com/hasPoint>],
+                                                       sh:path <https://example.com/hasPoint> ; 
+                                                       sh:nodeKind sh:IRI ; 
+                                                       sh:class <https://example.com/Point> ; 
+                                                       sh:name "has point"@en],
                                                       [a sh:PropertyShape ; 
-                                                       sh:path <https://example.com/includes>].
+                                                       sh:path <https://example.com/includes> ; 
+                                                       sh:nodeKind sh:IRI ; 
+                                                       sh:class <https://example.com/Equipment> ; 
+                                                       sh:name "includes"@en].
 <https://example.com/ErrorReport> a rdfs:Class,
                                     sh:NodeShape;
                                   rdfs:label "Error report"@en;
@@ -440,7 +552,12 @@
                                      rdfs:label "Exception event"@en;
                                      rdfs:subClassOf <https://example.com/PointEvent>;
                                      sh:property [a sh:PropertyShape ; 
-                                                  sh:path <https://example.com/sourcePoint>].
+                                                  sh:path <https://example.com/sourcePoint> ; 
+                                                  sh:nodeKind sh:IRI ; 
+                                                  sh:class <https://example.com/Point> ; 
+                                                  sh:name "source point"@en ; 
+                                                  sh:description "The brick:Point that emitted this exception."@en ; 
+                                                  sh:maxCount 1 ].
 <https://example.com/ExerciseRoom> a rdfs:Class,
                                      sh:NodeShape;
                                    rdfs:label "Exercise room"@en;
@@ -494,7 +611,10 @@
                                           rdfs:label "Furniture collection"@en;
                                           rdfs:subClassOf <https://example.com/Collection>;
                                           sh:property [a sh:PropertyShape ; 
-                                                       sh:path <https://example.com/includes>].
+                                                       sh:path <https://example.com/includes> ; 
+                                                       sh:nodeKind sh:IRI ; 
+                                                       sh:class <https://example.com/Furniture> ; 
+                                                       sh:name "includes"@en].
 <https://example.com/Garage> a rdfs:Class,
                                sh:NodeShape;
                              rdfs:label "Garage"@en;
@@ -570,20 +690,39 @@
                             rdfs:label "Lease"@en;
                             rdfs:subClassOf <https://example.com/Event>;
                             sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/leaseOf>],
+                                         sh:path <https://example.com/leaseOf> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:name "lease of"@en ; 
+                                         sh:description "The object (e.g., property, equipment, etc) that this a lease of."@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/leasee>],
+                                         sh:path <https://example.com/leasee> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Agent> ; 
+                                         sh:name "leasee"@en ; 
+                                         sh:description "The agent leasing some leasable object, i.e., the user of the asset."@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/leasor>],
+                                         sh:path <https://example.com/leasor> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Agent> ; 
+                                         sh:name "leasor"@en ; 
+                                         sh:description "The agent leasing out some leasable object, i.e., the owner of the asset."@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/regulatedBy>].
+                                         sh:path <https://example.com/regulatedBy> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/LeaseContract> ; 
+                                         sh:name "regulated by"@en ; 
+                                         sh:description "Indicates the contract regulating the terms of the lease in question. "@en].
 <https://example.com/LeaseContract> a rdfs:Class,
                                       sh:NodeShape;
                                     rdfs:comment "Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement."@en;
                                     rdfs:label "Lease contract"@en;
                                     rdfs:subClassOf <https://example.com/Document>;
                                     sh:property [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/regulates>].
+                                                 sh:path <https://example.com/regulates> ; 
+                                                 sh:nodeKind sh:IRI ; 
+                                                 sh:class <https://example.com/Lease> ; 
+                                                 sh:name "regulates"@en ; 
+                                                 sh:description "Indicates the lease(s) that this contract regulates the conditions of."@en].
 <https://example.com/Level> a rdfs:Class,
                               sh:NodeShape;
                             rdfs:comment "The level of a building, a.k.a. storey, floor, etc."@en;
@@ -656,7 +795,12 @@
                                        rdfs:label "Observation event"@en;
                                        rdfs:subClassOf <https://example.com/PointEvent>;
                                        sh:property [a sh:PropertyShape ; 
-                                                    sh:path <https://example.com/sourcePoint>].
+                                                    sh:path <https://example.com/sourcePoint> ; 
+                                                    sh:nodeKind sh:IRI ; 
+                                                    sh:class <https://example.com/Point> ; 
+                                                    sh:name "source point"@en ; 
+                                                    sh:description "The brick:Point that emitted this observation."@en ; 
+                                                    sh:maxCount 1 ].
 <https://example.com/OccupancyZone> a rdfs:Class,
                                       sh:NodeShape;
                                     rdfs:comment "Occupancy Zone is a spatial area where devices are monitoring or reporting on the concept of Occupancy (motion sensors, people counters, cameras, etc.)"@en;
@@ -690,11 +834,23 @@
                                    sh:property [a sh:PropertyShape ; 
                                                 sh:path <https://example.com/logo>],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/hasMember>],
+                                                sh:path <https://example.com/hasMember> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Agent> ; 
+                                                sh:name "has member"@en ; 
+                                                sh:description "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic hasPart property."@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/hasPart>],
+                                                sh:path <https://example.com/hasPart> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Organization> ; 
+                                                sh:name "has part"@en ; 
+                                                sh:description "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the more specific hasMember property."@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/isPartOf>].
+                                                sh:path <https://example.com/isPartOf> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:class <https://example.com/Organization> ; 
+                                                sh:name "is part of"@en ; 
+                                                sh:description "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the Agent.isMemberOf property."@en].
 <https://example.com/OutdoorSpace> a rdfs:Class,
                                      sh:NodeShape;
                                    rdfs:label "Outdoor space"@en;
@@ -752,14 +908,19 @@
                                       rdfs:label "Point of Interest"@en;
                                       rdfs:subClassOf <https://example.com/Information>;
                                       sh:property [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/objectOfInterest>].
+                                                   sh:path <https://example.com/objectOfInterest> ; 
+                                                   sh:nodeKind sh:IRI ; 
+                                                   sh:name "object of interest"@en ; 
+                                                   sh:maxCount 1 ].
 <https://example.com/Portfolio> a rdfs:Class,
                                   sh:NodeShape;
                                 rdfs:comment "A portfolio is a grouping of buildings, sites, apartments, campuses, etc. that share some business-relevant commonality, e.g., are managed by the same company, are rented out to the same tenant, share utilization or legal definition (industrial vs commercial), etc."@en;
                                 rdfs:label "Portfolio"@en;
                                 rdfs:subClassOf <https://example.com/Collection>;
                                 sh:property [a sh:PropertyShape ; 
-                                             sh:path <https://example.com/includes>].
+                                             sh:path <https://example.com/includes> ; 
+                                             sh:nodeKind sh:IRI ; 
+                                             sh:name "includes"@en].
 <https://example.com/PostalAddress> a rdfs:Class,
                                       sh:NodeShape;
                                     rdfs:label "Postal address"@en;
@@ -782,7 +943,10 @@
                                rdfs:label "Premises"@en;
                                rdfs:subClassOf <https://example.com/Collection>;
                                sh:property [a sh:PropertyShape ; 
-                                            sh:path <https://example.com/includes>].
+                                            sh:path <https://example.com/includes> ; 
+                                            sh:nodeKind sh:IRI ; 
+                                            sh:class <https://example.com/Architecture> ; 
+                                            sh:name "includes"@en].
 <https://example.com/PrinterCart> a rdfs:Class,
                                     sh:NodeShape;
                                   rdfs:label "Printer cart"@en;
@@ -801,7 +965,10 @@
                                  rdfs:label "Real Estate"@en;
                                  rdfs:subClassOf <https://example.com/Collection>;
                                  sh:property [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/includes>].
+                                              sh:path <https://example.com/includes> ; 
+                                              sh:nodeKind sh:IRI ; 
+                                              sh:class <https://example.com/Architecture> ; 
+                                              sh:name "includes"@en].
 <https://example.com/Reception> a rdfs:Class,
                                   sh:NodeShape;
                                 rdfs:label "Reception"@en;
@@ -878,15 +1045,32 @@
                                                 [a sh:PropertyShape ; 
                                                  sh:path <https://example.com/status>],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/acknowledgedBy>],
+                                                 sh:path <https://example.com/acknowledgedBy> ; 
+                                                 sh:nodeKind sh:IRI ; 
+                                                 sh:class <https://example.com/Agent> ; 
+                                                 sh:name "acknowledged by"@en ; 
+                                                 sh:maxCount 1 ],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/closedBy>],
+                                                 sh:path <https://example.com/closedBy> ; 
+                                                 sh:nodeKind sh:IRI ; 
+                                                 sh:class <https://example.com/Agent> ; 
+                                                 sh:name "closed by"@en ; 
+                                                 sh:maxCount 1 ],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/createdBy>],
+                                                 sh:path <https://example.com/createdBy> ; 
+                                                 sh:nodeKind sh:IRI ; 
+                                                 sh:class <https://example.com/Agent> ; 
+                                                 sh:name "created by"@en ; 
+                                                 sh:maxCount 1 ],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/producedBy>],
+                                                 sh:path <https://example.com/producedBy> ; 
+                                                 sh:nodeKind sh:IRI ; 
+                                                 sh:class <https://example.com/Point> ; 
+                                                 sh:name "produced by"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/relatedTo>].
+                                                 sh:path <https://example.com/relatedTo> ; 
+                                                 sh:nodeKind sh:IRI ; 
+                                                 sh:name "related to"@en].
 <https://example.com/ServiceShaft> a rdfs:Class,
                                      sh:NodeShape;
                                    rdfs:label "Service shaft"@en;
@@ -941,11 +1125,20 @@
                                         [a sh:PropertyShape ; 
                                          sh:path <https://example.com/name>],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/hasPart>],
+                                         sh:path <https://example.com/hasPart> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Space> ; 
+                                         sh:name "has part"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/isLocationOf>],
+                                         sh:path <https://example.com/isLocationOf> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:name "is location of"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/isPartOf>],
+                                         sh:path <https://example.com/isPartOf> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:class <https://example.com/Space> ; 
+                                         sh:name "is part of"@en ; 
+                                         sh:maxCount 1 ],
                                         [a sh:PropertyShape ; 
                                          sh:path <https://example.com/georeference>].
 <https://example.com/SprinklerRoom> a rdfs:Class,

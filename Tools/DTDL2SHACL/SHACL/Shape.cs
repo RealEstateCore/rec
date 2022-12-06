@@ -28,6 +28,14 @@ namespace DotNetRdfExtensions.SHACL
                 IUriNode shNodeKind = _graph.CreateUriNode(SH.nodeKind);
                 return _graph.GetTriplesWithSubjectPredicate(_node, shNodeKind).Select(trip => trip.Object).UriNodes().FirstOrDefault();
             }
+            set {
+                IUriNode shNodeKind = _graph.CreateUriNode(SH.nodeKind);
+                 IUriNode? currentNodeKind = _graph.GetTriplesWithSubjectPredicate(_node, shNodeKind).Select(trip => trip.Object).UriNodes().FirstOrDefault();
+                 if (currentNodeKind != null) {
+                    _graph.Retract(_node, shNodeKind, currentNodeKind);
+                 }
+                _graph.Assert(_node, shNodeKind, value);
+            }
         }
 
         protected internal Shape(INode node, ShapesGraph graph) {

@@ -6,6 +6,7 @@ using VDS.RDF;
 using VDS.RDF.Ontology;
 using VDS.RDF.Shacl;
 using VDS.RDF.Writing;
+using DotNetRdfExtensions;
 
 namespace DTDL2SHACL 
 {
@@ -27,6 +28,9 @@ namespace DTDL2SHACL
         private static IReadOnlyDictionary<Dtmi, DTEntityInfo>? _ontology;
         private static readonly OntologyGraph _ontologyGraph = new OntologyGraph();
         private static readonly ShapesGraph _shapesGraph = new(_ontologyGraph);
+
+        //
+        private static readonly IUriNode _shIri = _shapesGraph.CreateUriNode(SH.IRI);
 
         static void Main(string[] args)
         {
@@ -77,7 +81,21 @@ namespace DTDL2SHACL
                 // Translate DTDL Relationships
                 foreach (DTRelationshipInfo relationship in iface.GetRelationships()) {
                     PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(relationship.Name));
-                    // TODO: Relationship-specific translation
+                    pShape.NodeKind = _shIri;
+                    if (relationship.Target != null) {
+                        pShape.AddClass(GetShaclId(relationship.Target));
+                    }
+                    // Add SHACL names and descriptions from DTDL display names and descriptions
+                    foreach ((string lang, string val) in relationship.DisplayName) {
+                        pShape.AddName(lang, val);
+                    }
+                    foreach ((string lang, string val) in relationship.Description) {
+                        pShape.AddDescription(lang, val);
+                    }
+                    // Multiplicity
+                    pShape.MinCount = relationship.MinMultiplicity;
+                    pShape.MaxCount = relationship.MaxMultiplicity;
+                    // TODO: Properties on relationships (or ignore?)
                 }
 
                 // Translate DTDL Components
@@ -132,7 +150,6 @@ namespace DTDL2SHACL
         }
 
         private static Uri GetShaclId(Dtmi dtmi) {
-            // TODO: Implement using prefix index
             string localName = dtmi.Versionless.Split(':').Last();
             return GetShaclId(localName);
         }
