@@ -71,7 +71,16 @@ namespace DTDL2SHACL
                 // Translate DTDL properties
                 foreach (DTPropertyInfo property in iface.GetProperties()) {
                     PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(property.Name));
-                    // TODO: Property-specific translation
+
+                    // Add SHACL names and descriptions from DTDL display names and descriptions
+                    foreach ((string lang, string val) in property.DisplayName) {
+                        pShape.AddName(lang, val);
+                    }
+                    foreach ((string lang, string val) in property.Description) {
+                        pShape.AddDescription(lang, val);
+                    }
+                    
+                    // TODO: Property schema translation
                 }
 
                 // Translate DTDL Relationships

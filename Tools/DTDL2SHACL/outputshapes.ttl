@@ -31,11 +31,14 @@
                             rdfs:comment "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, ....) to be anchored in one joint place, on the Agent class."@en;
                             rdfs:label "Agent"@en;
                             sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/customTags>],
+                                         sh:path <https://example.com/customTags> ; 
+                                         sh:name "Custom Tags"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/externalIds>],
+                                         sh:path <https://example.com/externalIds> ; 
+                                         sh:name "External IDs"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/name>],
+                                         sh:path <https://example.com/name> ; 
+                                         sh:name "name"@en],
                                         [a sh:PropertyShape ; 
                                          sh:path <https://example.com/isMemberOf> ; 
                                          sh:nodeKind sh:IRI ; 
@@ -143,11 +146,14 @@
                                        rdfs:label "Architecture area"@en;
                                        rdfs:subClassOf <https://example.com/Information>;
                                        sh:property [a sh:PropertyShape ; 
-                                                    sh:path <https://example.com/grossArea>],
+                                                    sh:path <https://example.com/grossArea> ; 
+                                                    sh:name "gross area"@en],
                                                    [a sh:PropertyShape ; 
-                                                    sh:path <https://example.com/netArea>],
+                                                    sh:path <https://example.com/netArea> ; 
+                                                    sh:name "net area"@en],
                                                    [a sh:PropertyShape ; 
-                                                    sh:path <https://example.com/rentableArea>].
+                                                    sh:path <https://example.com/rentableArea> ; 
+                                                    sh:name "rentable area"@en].
 <https://example.com/ArchitectureCapacity> a rdfs:Class,
                                              sh:NodeShape,
                                              <dtmi:dtdl:class:Component>;
@@ -155,43 +161,62 @@
                                            rdfs:label "Architecture capacity"@en;
                                            rdfs:subClassOf <https://example.com/Information>;
                                            sh:property [a sh:PropertyShape ; 
-                                                        sh:path <https://example.com/maxOccupancy>],
+                                                        sh:path <https://example.com/maxOccupancy> ; 
+                                                        sh:name "maximum occupancy"@en ; 
+                                                        sh:description "E.g., per Building Code"@en],
                                                        [a sh:PropertyShape ; 
-                                                        sh:path <https://example.com/seatingCapacity>].
+                                                        sh:path <https://example.com/seatingCapacity> ; 
+                                                        sh:name "seating capacity"@en].
 <https://example.com/Asset> a rdfs:Class,
                               sh:NodeShape;
                             rdfs:comment "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."@en;
                             rdfs:label "Asset"@en;
                             sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/IPAddress>],
+                                         sh:path <https://example.com/IPAddress> ; 
+                                         sh:name "IP address"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/MACAddress>],
+                                         sh:path <https://example.com/MACAddress> ; 
+                                         sh:name "MAC address"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/assetTag>],
+                                         sh:path <https://example.com/assetTag> ; 
+                                         sh:name "asset tag"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/commissioningDate>],
+                                         sh:path <https://example.com/commissioningDate> ; 
+                                         sh:name "commissioning date"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/customTags>],
+                                         sh:path <https://example.com/customTags> ; 
+                                         sh:name "Custom Tags"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/externalIds>],
+                                         sh:path <https://example.com/externalIds> ; 
+                                         sh:name "External IDs"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/geometry>],
+                                         sh:path <https://example.com/geometry> ; 
+                                         sh:name "geometry"@en ; 
+                                         sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/initialCost>],
+                                         sh:path <https://example.com/initialCost> ; 
+                                         sh:name "initial cost"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/installationDate>],
+                                         sh:path <https://example.com/installationDate> ; 
+                                         sh:name "installation date"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/maintenanceInterval>],
+                                         sh:path <https://example.com/maintenanceInterval> ; 
+                                         sh:name "maintenance interval"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/modelNumber>],
+                                         sh:path <https://example.com/modelNumber> ; 
+                                         sh:name "model number"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/name>],
+                                         sh:path <https://example.com/name> ; 
+                                         sh:name "name"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/serialNumber>],
+                                         sh:path <https://example.com/serialNumber> ; 
+                                         sh:name "serial number"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/turnoverDate>],
+                                         sh:path <https://example.com/turnoverDate> ; 
+                                         sh:name "turnover date"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/weight>],
+                                         sh:path <https://example.com/weight> ; 
+                                         sh:name "weight"@en],
                                         [a sh:PropertyShape ; 
                                          sh:path <https://example.com/commissionedBy> ; 
                                          sh:nodeKind sh:IRI ; 
@@ -302,11 +327,14 @@
                                       rdfs:comment "A part that constitutes a piece of a building's structural makeup. E.g., Facade, Wall, Slab, Roof, etc."@en;
                                       rdfs:label "Building element"@en;
                                       sh:property [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/customTags>],
+                                                   sh:path <https://example.com/customTags> ; 
+                                                   sh:name "Custom Tags"@en],
                                                   [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/externalIds>],
+                                                   sh:path <https://example.com/externalIds> ; 
+                                                   sh:name "External IDs"@en],
                                                   [a sh:PropertyShape ; 
-                                                   sh:path <https://example.com/name>],
+                                                   sh:path <https://example.com/name> ; 
+                                                   sh:name "name"@en],
                                                   [a sh:PropertyShape ; 
                                                    sh:path <https://example.com/documentation> ; 
                                                    sh:nodeKind sh:IRI ; 
@@ -397,11 +425,14 @@
                                  rdfs:comment "An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings). Inclusion in a Collection is determined by the 'includes' field on a specific subclass."@en;
                                  rdfs:label "Collection"@en;
                                  sh:property [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/customTags>],
+                                              sh:path <https://example.com/customTags> ; 
+                                              sh:name "Custom Tags"@en],
                                              [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/externalIds>],
+                                              sh:path <https://example.com/externalIds> ; 
+                                              sh:name "External IDs"@en],
                                              [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/name>],
+                                              sh:path <https://example.com/name> ; 
+                                              sh:name "name"@en],
                                              [a sh:PropertyShape ; 
                                               sh:path <https://example.com/documentation> ; 
                                               sh:nodeKind sh:IRI ; 
@@ -504,13 +535,17 @@
                                    rdfs:label "Elevator trip"@en;
                                    rdfs:subClassOf <https://example.com/Event>;
                                    sh:property [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/currentLevel>],
+                                                sh:path <https://example.com/currentLevel> ; 
+                                                sh:name "current level"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/endLevel>],
+                                                sh:path <https://example.com/endLevel> ; 
+                                                sh:name "end level"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/startLevel>],
+                                                sh:path <https://example.com/startLevel> ; 
+                                                sh:name "start level"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/tripDirection>].
+                                                sh:path <https://example.com/tripDirection> ; 
+                                                sh:name "trip direction"@en].
 <https://example.com/EndTable> a rdfs:Class,
                                  sh:NodeShape;
                                rdfs:label "End table"@en;
@@ -546,17 +581,25 @@
                             rdfs:comment "A temporally indexed entity, e.g., an observation, a lease, a construction project, etc. Can be instantaneous (timestamp property assigned) or have temporal extent (start and end properties assigned). Subclasses may define specific behaviour and requirements, e.g., on spatial indexing, agent participation, etc."@en;
                             rdfs:label "Event"@en;
                             sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/customTags>],
+                                         sh:path <https://example.com/customTags> ; 
+                                         sh:name "Custom Tags"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/end>],
+                                         sh:path <https://example.com/end> ; 
+                                         sh:name "end"@en ; 
+                                         sh:description "Event ending timestamp."@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/externalIds>],
+                                         sh:path <https://example.com/externalIds> ; 
+                                         sh:name "External IDs"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/name>],
+                                         sh:path <https://example.com/name> ; 
+                                         sh:name "name"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/start>],
+                                         sh:path <https://example.com/start> ; 
+                                         sh:name "start"@en ; 
+                                         sh:description "Event start timestamp."@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/timestamp>].
+                                         sh:path <https://example.com/timestamp> ; 
+                                         sh:name "timestamp"@en].
 <https://example.com/ExceptionEvent> a rdfs:Class,
                                        sh:NodeShape;
                                      rdfs:label "Exception event"@en;
@@ -636,13 +679,21 @@
                                    rdfs:label "Georeference"@en;
                                    rdfs:subClassOf <https://example.com/Information>;
                                    sh:property [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/alt>],
+                                                sh:path <https://example.com/alt> ; 
+                                                sh:name "alt"@en ; 
+                                                sh:description "Altitude"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/bearing>],
+                                                sh:path <https://example.com/bearing> ; 
+                                                sh:name "bearing"@en ; 
+                                                sh:description "The angle between local coordinate system and a north-south meridian."@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/lat>],
+                                                sh:path <https://example.com/lat> ; 
+                                                sh:name "lat"@en ; 
+                                                sh:description "Latitude"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/long>].
+                                                sh:path <https://example.com/long> ; 
+                                                sh:name "long"@en ; 
+                                                sh:description "Longitude"@en].
 <https://example.com/GroupRoom> a rdfs:Class,
                                   sh:NodeShape;
                                 rdfs:label "Group room"@en;
@@ -667,11 +718,14 @@
                                     sh:NodeShape;
                                   rdfs:label "Information"@en;
                                   sh:property [a sh:PropertyShape ; 
-                                               sh:path <https://example.com/customTags>],
+                                               sh:path <https://example.com/customTags> ; 
+                                               sh:name "Custom Tags"@en],
                                               [a sh:PropertyShape ; 
-                                               sh:path <https://example.com/externalIds>],
+                                               sh:path <https://example.com/externalIds> ; 
+                                               sh:name "External IDs"@en],
                                               [a sh:PropertyShape ; 
-                                               sh:path <https://example.com/name>].
+                                               sh:path <https://example.com/name> ; 
+                                               sh:name "name"@en].
 <https://example.com/Kitchenette> a rdfs:Class,
                                     sh:NodeShape;
                                   rdfs:label "Kitchenette"@en;
@@ -740,7 +794,9 @@
                             rdfs:label "Level"@en;
                             rdfs:subClassOf <https://example.com/Architecture>;
                             sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/levelNumber>].
+                                         sh:path <https://example.com/levelNumber> ; 
+                                         sh:name "level number"@en ; 
+                                         sh:description "A number indicating the ordinal number of this level within the containing space (typically a Building or in the case of a Mezzanine, sometimes another level). Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others."@en].
 <https://example.com/Library> a rdfs:Class,
                                 sh:NodeShape;
                               rdfs:label "Library"@en;
@@ -843,7 +899,9 @@
                                    rdfs:label "Organization"@en;
                                    rdfs:subClassOf <https://example.com/Agent>;
                                    sh:property [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/logo>],
+                                                sh:path <https://example.com/logo> ; 
+                                                sh:name "logo"@en ; 
+                                                sh:description "URL link to an image/logo that represents the organization."@en],
                                                [a sh:PropertyShape ; 
                                                 sh:path <https://example.com/hasMember> ; 
                                                 sh:nodeKind sh:IRI ; 
@@ -890,11 +948,14 @@
                              sh:property [a sh:PropertyShape ; 
                                           sh:path <https://example.com/familyName>],
                                          [a sh:PropertyShape ; 
-                                          sh:path <https://example.com/gender>],
+                                          sh:path <https://example.com/gender> ; 
+                                          sh:name "gender"@en],
                                          [a sh:PropertyShape ; 
                                           sh:path <https://example.com/givenName>],
                                          [a sh:PropertyShape ; 
-                                          sh:path <https://example.com/image>].
+                                          sh:path <https://example.com/image> ; 
+                                          sh:name "image"@en ; 
+                                          sh:description "URL link to an image that represents the person."@en].
 <https://example.com/PersonalHygiene> a rdfs:Class,
                                         sh:NodeShape;
                                       rdfs:label "Personal hygiene room"@en;
@@ -913,7 +974,9 @@
                                  rdfs:label "Point event"@en;
                                  rdfs:subClassOf <https://example.com/Event>;
                                  sh:property [a sh:PropertyShape ; 
-                                              sh:path <https://example.com/payload>].
+                                              sh:path <https://example.com/payload> ; 
+                                              sh:name "payload"@en ; 
+                                              sh:description "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)"@en].
 <https://example.com/PointOfInterest> a rdfs:Class,
                                         sh:NodeShape;
                                       rdfs:label "Point of Interest"@en;
@@ -937,17 +1000,24 @@
                                     rdfs:label "Postal address"@en;
                                     rdfs:subClassOf <https://example.com/Information>;
                                     sh:property [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/addressLine1>],
+                                                 sh:path <https://example.com/addressLine1> ; 
+                                                 sh:name "address line 1"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/addressLine2>],
+                                                 sh:path <https://example.com/addressLine2> ; 
+                                                 sh:name "address line 2"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/city>],
+                                                 sh:path <https://example.com/city> ; 
+                                                 sh:name "city"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/country>],
+                                                 sh:path <https://example.com/country> ; 
+                                                 sh:name "country"@en ; 
+                                                 sh:description """The country, e.g., USA, Sweden, Argentina, or optionally a two-letter ISO 3166-1 alpha-2 country code, e.g., \"SE\", \"US\", etc."""@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/postalCode>],
+                                                 sh:path <https://example.com/postalCode> ; 
+                                                 sh:name "postal code"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/region>].
+                                                 sh:path <https://example.com/region> ; 
+                                                 sh:name "region"@en].
 <https://example.com/Premises> a rdfs:Class,
                                  sh:NodeShape;
                                rdfs:comment "A premises is an administrative grouping of spaces that are used for some commercial or industrial purpose by a real estate holder or tenant. E.g, a suite of offices, a shop, or an industrial workshop."@en;
@@ -1046,15 +1116,20 @@
                                     rdfs:label "Service object"@en;
                                     rdfs:subClassOf <https://example.com/Information>;
                                     sh:property [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/acknowledgedTime>],
+                                                 sh:path <https://example.com/acknowledgedTime> ; 
+                                                 sh:name "acknowledged time"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/closedTime>],
+                                                 sh:path <https://example.com/closedTime> ; 
+                                                 sh:name "closed time"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/createdTime>],
+                                                 sh:path <https://example.com/createdTime> ; 
+                                                 sh:name "created time"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/severity>],
+                                                 sh:path <https://example.com/severity> ; 
+                                                 sh:name "severity"@en],
                                                 [a sh:PropertyShape ; 
-                                                 sh:path <https://example.com/status>],
+                                                 sh:path <https://example.com/status> ; 
+                                                 sh:name "status"@en],
                                                 [a sh:PropertyShape ; 
                                                  sh:path <https://example.com/acknowledgedBy> ; 
                                                  sh:nodeKind sh:IRI ; 
@@ -1128,13 +1203,18 @@
                             rdfs:comment "A contiguous part of the physical world that contains or can contain sub-spaces. E.g., a Region can contain many Sites, which in turn can contain many Buildings."@en;
                             rdfs:label "Space"@en;
                             sh:property [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/customTags>],
+                                         sh:path <https://example.com/customTags> ; 
+                                         sh:name "Custom Tags"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/externalIds>],
+                                         sh:path <https://example.com/externalIds> ; 
+                                         sh:name "External IDs"@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/geometry>],
+                                         sh:path <https://example.com/geometry> ; 
+                                         sh:name "geometry"@en ; 
+                                         sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/name>],
+                                         sh:path <https://example.com/name> ; 
+                                         sh:name "name"@en],
                                         [a sh:PropertyShape ; 
                                          sh:path <https://example.com/hasPart> ; 
                                          sh:nodeKind sh:IRI ; 
