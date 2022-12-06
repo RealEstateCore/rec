@@ -49,8 +49,7 @@ namespace DTDL2SHACL
 
             foreach (DTInterfaceInfo iface in _ontology.Values
                 .Where(entity => entity is DTInterfaceInfo)
-                .Select(entity => (DTInterfaceInfo)entity)
-                .OrderBy(iface => iface.GetDepth()))
+                .Select(entity => (DTInterfaceInfo)entity))
             {
                 // Create a new NodeShape
                 NodeShape nodeShape = _shapesGraph.CreateNodeShape(GetShaclId(iface.Id));
@@ -63,13 +62,10 @@ namespace DTDL2SHACL
                     nodeShape.AddComment(lang, val);
                 }
 
-                // Get the parent interfaces' NodeShape equivalents from the shapes graph and assign thet as supershape using rdf:subClassOf
-                foreach (DTInterfaceInfo parentIface in iface.Extends) {    
-                    NodeShape? parentNodeShape = _shapesGraph.NodeShapes().FirstOrDefault(parentShape => parentShape.Uri == GetShaclId(parentIface.Id));
-                    if (parentNodeShape != null)
-                    {
-                        nodeShape.AddSuperClass(parentNodeShape);
-                    }
+                // Assert superclasses
+                foreach (DTInterfaceInfo parentIface in iface.Extends) {
+                    IUriNode parentNode = _shapesGraph.CreateUriNode(GetShaclId(parentIface.Id));
+                    nodeShape.AddSuperClass(parentNode);
                 }
 
                 // Translate DTDL properties
@@ -101,7 +97,23 @@ namespace DTDL2SHACL
                 // Translate DTDL Components
                 foreach (DTComponentInfo component in iface.GetComponents()) {
                     PropertyShape pShape = nodeShape.CreatePropertyShape(GetShaclId(component.Name));
-                    // TODO: Component-specific translation
+                    pShape.NodeKind = _shIri;
+                    pShape.MaxCount = 1;
+                    Uri schemaShaclUri = GetShaclId(component.Schema.Id);
+                    pShape.AddClass(schemaShaclUri);
+                    // In the SHACL output we indicate the preference for the schema NodeShape to be treated 
+                    // as a component by co-typing it with the DTDL Component DTMI.
+                    IUriNode schemaNode = _shapesGraph.CreateUriNode(schemaShaclUri);
+                    IUriNode rdfType = _shapesGraph.CreateUriNode(RDF.type);
+                    IUriNode dtdlComponent = _shapesGraph.CreateUriNode(UriFactory.Create("dtmi:dtdl:class:Component"));
+                    _shapesGraph.Assert(schemaNode, rdfType, dtdlComponent);
+                    // Add SHACL names and descriptions from DTDL display names and descriptions
+                    foreach ((string lang, string val) in component.DisplayName) {
+                        pShape.AddName(lang, val);
+                    }
+                    foreach ((string lang, string val) in component.Description) {
+                        pShape.AddDescription(lang, val);
+                    }
                 }
             }
 

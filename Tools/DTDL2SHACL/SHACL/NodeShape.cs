@@ -15,9 +15,12 @@ namespace DotNetRdfExtensions.SHACL
         }
 
         public void AddSuperClass(NodeShape superShape) {
-            IUriNode superShapeNode = _graph.GetUriNode(superShape.Uri);
+            AddSuperClass(superShape.Node);
+        }
+
+        public void AddSuperClass(IUriNode superClass) {
             IUriNode rdfsSubClassOf = _graph.CreateUriNode(RDFS.subClassOf);
-            _graph.Assert(Node, rdfsSubClassOf, superShapeNode);
+            _graph.Assert(Node, rdfsSubClassOf, superClass);
         }
 
         public IEnumerable<PropertyShape> PropertyShapes {

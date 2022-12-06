@@ -125,11 +125,20 @@
                                                 sh:class <https://example.com/Agent> ; 
                                                 sh:name "owned by"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/area>],
+                                                sh:path <https://example.com/area> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:maxCount 1  ; 
+                                                sh:class <https://example.com/ArchitectureArea> ; 
+                                                sh:name "area"@en],
                                                [a sh:PropertyShape ; 
-                                                sh:path <https://example.com/capacity>].
+                                                sh:path <https://example.com/capacity> ; 
+                                                sh:nodeKind sh:IRI ; 
+                                                sh:maxCount 1  ; 
+                                                sh:class <https://example.com/ArchitectureCapacity> ; 
+                                                sh:name "capacity"@en].
 <https://example.com/ArchitectureArea> a rdfs:Class,
-                                         sh:NodeShape;
+                                         sh:NodeShape,
+                                         <dtmi:dtdl:class:Component>;
                                        rdfs:comment "Describes business-relevant area measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."@en;
                                        rdfs:label "Architecture area"@en;
                                        rdfs:subClassOf <https://example.com/Information>;
@@ -140,7 +149,8 @@
                                                    [a sh:PropertyShape ; 
                                                     sh:path <https://example.com/rentableArea>].
 <https://example.com/ArchitectureCapacity> a rdfs:Class,
-                                             sh:NodeShape;
+                                             sh:NodeShape,
+                                             <dtmi:dtdl:class:Component>;
                                            rdfs:comment "Describes business-relevant capacity measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."@en;
                                            rdfs:label "Architecture capacity"@en;
                                            rdfs:subClassOf <https://example.com/Information>;
@@ -620,7 +630,8 @@
                              rdfs:label "Garage"@en;
                              rdfs:subClassOf <https://example.com/Room>.
 <https://example.com/Georeference> a rdfs:Class,
-                                     sh:NodeShape;
+                                     sh:NodeShape,
+                                     <dtmi:dtdl:class:Component>;
                                    rdfs:comment "Encapsulates a georeference globally placing a spatially located entity in terms of latitude, longitude, altitude, and bearing."@en;
                                    rdfs:label "Georeference"@en;
                                    rdfs:subClassOf <https://example.com/Information>;
@@ -1140,7 +1151,12 @@
                                          sh:name "is part of"@en ; 
                                          sh:maxCount 1 ],
                                         [a sh:PropertyShape ; 
-                                         sh:path <https://example.com/georeference>].
+                                         sh:path <https://example.com/georeference> ; 
+                                         sh:nodeKind sh:IRI ; 
+                                         sh:maxCount 1  ; 
+                                         sh:class <https://example.com/Georeference> ; 
+                                         sh:name "georeference"@en ; 
+                                         sh:description """A fixed point for, e.g., a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for locally defined geometries."""@en].
 <https://example.com/SprinklerRoom> a rdfs:Class,
                                       sh:NodeShape;
                                     rdfs:label "Sprinkler room"@en;
