@@ -29,7 +29,7 @@ Measures the current position of a component in terms of a fraction of its full 
 |-|-|-|-|-|
 |lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

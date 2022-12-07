@@ -23,7 +23,7 @@ Measures the integral of reactive power
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Energy_Sensor](../Energy_Sensor.md):** lastKnownValue
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

@@ -16,7 +16,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[Information](../Information.md):** customTags, externalIds, name
+* **[Information](../Information.md):** customProperties, customTags, identifiers, name
 * **[ServiceObject](ServiceObject.md):** acknowledgedTime, closedTime, createdTime, severity, status
 
 ---

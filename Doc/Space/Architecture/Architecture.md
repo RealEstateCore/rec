@@ -54,7 +54,7 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 ## Properties
 
 ### Inherited Properties
-* **[Space](../Space.md):** customTags, externalIds, geometry, name
+* **[Space](../Space.md):** customProperties, customTags, geometry, identifiers, name
 
 ---
 

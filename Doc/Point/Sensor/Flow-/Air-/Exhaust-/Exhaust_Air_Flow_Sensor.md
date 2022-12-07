@@ -25,7 +25,7 @@ Measures the rate of flow of exhaust air
 
 ### Inherited Properties
 * **[Flow_Sensor](../../Flow_Sensor.md):** lastKnownValue
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

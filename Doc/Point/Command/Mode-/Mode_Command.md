@@ -27,7 +27,7 @@ Controls the operating mode of a device or controller
 
 ### Inherited Properties
 * **[Command](../Command.md):** lastKnownValue
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

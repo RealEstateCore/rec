@@ -28,7 +28,7 @@ Occupancy Zone is a spatial area where devices are monitoring or reporting on th
 ## Properties
 
 ### Inherited Properties
-* **[Space](../../Space.md):** customTags, externalIds, geometry, name
+* **[Space](../../Space.md):** customProperties, customTags, geometry, identifiers, name
 
 ---
 

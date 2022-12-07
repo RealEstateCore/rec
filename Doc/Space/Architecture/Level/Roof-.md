@@ -26,7 +26,7 @@
 
 ### Inherited Properties
 * **[Level](Level.md):** levelNumber
-* **[Space](../../Space.md):** customTags, externalIds, geometry, name
+* **[Space](../../Space.md):** customProperties, customTags, geometry, identifiers, name
 
 ---
 

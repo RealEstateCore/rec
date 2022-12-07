@@ -26,7 +26,7 @@ An administrative geospatial unit larger than the individual real estate. For in
 ## Properties
 
 ### Inherited Properties
-* **[Space](Space.md):** customTags, externalIds, geometry, name
+* **[Space](Space.md):** customProperties, customTags, geometry, identifiers, name
 
 ---
 

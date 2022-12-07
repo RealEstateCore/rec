@@ -32,7 +32,7 @@ A meter that measures usage or consumption of some media for a whole building
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
 * **[Meter](../Meter.md):** isVirtualMeter
-* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, geometry, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 

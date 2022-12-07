@@ -25,7 +25,7 @@ A collection of devices that stores electricity
 ## Properties
 
 ### Inherited Properties
-* **[Collection](../../../../Collection.md):** customTags, externalIds, name
+* **[Collection](../../../../Collection.md):** customProperties, customTags, identifiers, name
 
 ---
 

@@ -23,7 +23,7 @@ Controls the position (the degree of openness) of a valve
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Command](../Command.md):** lastKnownValue
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

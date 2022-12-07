@@ -27,7 +27,7 @@ A collection of equipment that transport and regulate water among each other
 ## Properties
 
 ### Inherited Properties
-* **[Collection](../../Collection.md):** customTags, externalIds, name
+* **[Collection](../../Collection.md):** customProperties, customTags, identifiers, name
 
 ---
 

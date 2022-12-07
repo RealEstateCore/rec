@@ -28,7 +28,7 @@ Electronic device that varies its output frequency to vary the rotating speed of
 
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
-* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, geometry, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 

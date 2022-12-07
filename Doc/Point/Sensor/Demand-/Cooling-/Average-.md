@@ -23,7 +23,7 @@ Measures the average power consumed by a cooling process as the amount of power 
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Demand_Sensor](../Demand_Sensor.md):** lastKnownValue
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
