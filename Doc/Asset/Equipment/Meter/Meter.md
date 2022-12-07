@@ -1,0 +1,69 @@
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Meter](#)
+# Meter
+
+A device that measure usage or consumption of some media --- typically a form energy or power.
+
+
+**Display name:** Meter<br />
+**DTMI:** dtmi:org:brickschema:schema:Brick:Meter;1
+
+---
+
+## Child interfaces
+* [Building_Meter](Building-/Building_Meter.md)
+* [Electrical_Meter](Electrical-/Electrical_Meter.md)
+* [Gas_Meter](Gas-/Gas_Meter.md)
+* [Thermal_Power_Meter](Thermal_Power-.md)
+* [Water_Meter](Water-/Water_Meter.md)
+
+---
+
+## Relationships
+
+|Name|Display name|Description|Multiplicity|Target|Properties|Writable|
+|-|-|-|-|-|-|-|
+|hasSubMeter|**en**: has sub-meter||0-Infinity|[Meter](#)||True|
+|isSubMeterOf|**en**: is sub-meter of||0-Infinity|[Meter](#)||True|
+|meters|**en**: meters||0-Infinity|||True|
+### Inherited Relationships
+* **[Equipment](../Equipment.md):** feeds, isFedBy
+* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+
+---
+
+## Properties
+
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|isVirtualMeter|**en**: is virtual meter||boolean|True|
+### Inherited Properties
+* **[Equipment](../Equipment.md):** operationalStageCount
+* **[Asset](../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+
+---
+
+## Target Of
+### General
+* [Point](../../../Point/Point.md).isPointOf
+* [Agent](../../../Agent/Agent.md).owns
+* [Space](../../../Space/Space.md).isLocationOf
+* [Equipment](../Equipment.md).feeds
+* [Equipment](../Equipment.md).isFedBy
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [EquipmentCollection](../../../Collection/Equipment-.md).feeds
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
+* [Meter](#).meters
+### Direct
+* [Meter](#).hasSubMeter
+* [Meter](#).isSubMeterOf
+### Inherited
+* [Loop](../../../Collection/Loop/Loop.md).includes
+* [System](../../../Collection/System/System.md).includes
+* [Asset](../../Asset.md).hasPart
+* [Asset](../../Asset.md).isPartOf
+* [EquipmentCollection](../../../Collection/Equipment-.md).includes
