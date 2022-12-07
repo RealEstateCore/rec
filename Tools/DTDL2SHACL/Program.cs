@@ -259,6 +259,30 @@ namespace DTDL2SHACL
             }
             switch (schema) {
                 case DTArrayInfo array:
+                    string listName;
+                    if (array.ElementSchema is DTPrimitiveSchemaInfo) {
+                        DTPrimitiveSchemaInfo elementSchema = (DTPrimitiveSchemaInfo)array.ElementSchema;
+                        Uri xsdUri = _dtdlSchemaToXsd[elementSchema.GetType()];
+                        string xsdType = xsdUri.Fragment;
+                        listName = xsdType.First().ToString().ToUpper() + xsdType.Substring(1) + "List";
+                    }
+                    else {
+                        
+                    }
+                    NodeShape listShape = _shapesGraph.CreateNodeShape(GetShaclId(array.Id, listName));
+                    PropertyShape firstShape = listShape.CreatePropertyShape(RDF.first);
+                    BuildPropertyShape(firstShape, array.ElementSchema, )
+                    PropertyShape restShape = listShape.CreatePropertyShape(RDF.rest);
+                    restShape.AddNode(listShape.Uri);
+
+                    if (array.ElementSchema is DTPrimitiveSchemaInfo) {
+                        
+
+                        
+                    }
+                    else {
+
+                    }
                     // TODO: Implement array support using listShape (see SHACL guide)
                     break;
                 case DTObjectInfo obj:

@@ -36,6 +36,8 @@ namespace DotNetRdfExtensions
     public static class RDF
     {
             public static readonly Uri type = new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+            public static readonly Uri first = new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#first");
+            public static readonly Uri rest = new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#rest");
     }
 
     public static class SKOS 
