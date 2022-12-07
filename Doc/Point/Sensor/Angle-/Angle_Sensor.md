@@ -19,7 +19,7 @@ Measues the planar angle of some phenomenon
 
 |Name|Display name|Description|Schema|
 |-|-|-|-|
-|lastKnownValue|**en**: last known value||[AngleObservationEvent](../../../Event/Point-/ObservationEvent/Angle-.md)|
+|lastKnownValue|**en**: last known value||[AngleObservation](../../../Event/Point-/ObservationEvent/AngleObservation.md)|
 
 ---
 

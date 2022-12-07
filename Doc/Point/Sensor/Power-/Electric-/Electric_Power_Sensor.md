@@ -15,6 +15,13 @@ Measures the amount of instantaneous electric power consumed
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Power_Sensor](../Power_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +33,6 @@ Measures the amount of instantaneous electric power consumed
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Power_Sensor](../Power_Sensor.md):** lastKnownValue
 
 ---
 

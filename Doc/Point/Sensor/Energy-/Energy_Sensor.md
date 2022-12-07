@@ -18,7 +18,7 @@ Measures energy consumption
 
 |Name|Display name|Description|Schema|
 |-|-|-|-|
-|lastKnownValue|**en**: last known value||[EnergyObservationEvent](../../../Event/Point-/ObservationEvent/Energy-.md)|
+|lastKnownValue|**en**: last known value||[EnergyObservation](../../../Event/Point-/ObservationEvent/EnergyObservation.md)|
 
 ---
 

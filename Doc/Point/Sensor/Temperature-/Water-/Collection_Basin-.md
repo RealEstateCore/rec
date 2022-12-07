@@ -9,6 +9,13 @@ Measures the temperature of the water in the collection basin, e.g. within a Coo
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Sensor](../Temperature_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measures the temperature of the water in the collection basin, e.g. within a Coo
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Temperature_Sensor](../Temperature_Sensor.md):** lastKnownValue
 
 ---
 

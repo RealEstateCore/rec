@@ -14,6 +14,13 @@ Measures the temperature of supply air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ Measures the temperature of supply air
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
 
 ---
 

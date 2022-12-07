@@ -1,8 +1,8 @@
-[Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [AccelerationObservationEvent](#)
-# AccelerationObservationEvent
+[Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [IlluminanceObservation](#)
+# IlluminanceObservation
 
-**Display name:** Acceleration observation event<br />
-**DTMI:** dtmi:org:w3id:rec:AccelerationObservationEvent;1
+**Display name:** Illuminance observation<br />
+**DTMI:** dtmi:org:w3id:rec:IlluminanceObservation;1
 
 ---
 
@@ -15,8 +15,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|value|**en**: value||double|True|
 ### Inherited Properties
-* **[Event](../../Event.md):** customTags, end, externalIds, name, start, timestamp
+* **[Event](../../Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
 * **[PointEvent](../PointEvent.md):** payload
 
 ---

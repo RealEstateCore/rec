@@ -15,6 +15,13 @@ Measures the temperature of condenser water
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +33,6 @@ Measures the temperature of condenser water
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
 
 ---
 

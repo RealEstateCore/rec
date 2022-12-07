@@ -14,6 +14,14 @@ Measures the total luminous flux incident on a surface, per unit area
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[IlluminanceObservation](../../../Event/Point-/ObservationEvent/IlluminanceObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,9 +31,6 @@ Measures the total luminous flux incident on a surface, per unit area
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

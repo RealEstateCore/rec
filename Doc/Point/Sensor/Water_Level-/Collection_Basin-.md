@@ -9,6 +9,13 @@ Measures the level of the water in the collection basin, e.g. within a Cooling_T
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Water_Level_Sensor](Water_Level_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measures the level of the water in the collection basin, e.g. within a Cooling_T
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Water_Level_Sensor](Water_Level_Sensor.md):** lastKnownValue
 
 ---
 

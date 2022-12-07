@@ -9,6 +9,13 @@ Measures the total luminous flux incident on an outside, per unit area
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Illuminance_Sensor](Illuminance_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Measures the total luminous flux incident on an outside, per unit area
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Illuminance_Sensor](Illuminance_Sensor.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

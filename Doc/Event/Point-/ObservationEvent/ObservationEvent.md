@@ -7,9 +7,44 @@
 ---
 
 ## Child interfaces
-* [AccelerationObservationEvent](Acceleration-.md)
-* [AngleObservationEvent](Angle-.md)
-* [EnergyObservationEvent](Energy-.md)
+* [AccelerationObservation](AccelerationObservation.md)
+* [AngleObservation](AngleObservation.md)
+* [AngularAccelerationObservation](AngularAccelerationObservation.md)
+* [AngularVelocityObservation](AngularVelocityObservation.md)
+* [AreaObservation](AreaObservation.md)
+* [CapacitanceObservation](CapacitanceObservation.md)
+* [DataRateObservation](DataRateObservation.md)
+* [DataSizeObservation](DataSizeObservation.md)
+* [DensityObservation](DensityObservation.md)
+* [DistanceObservation](DistanceObservation.md)
+* [ElectricChargeObservation](ElectricChargeObservation.md)
+* [ElectricCurrentObservation](ElectricCurrentObservation.md)
+* [EnergyObservation](EnergyObservation.md)
+* [ForceObservation](ForceObservation.md)
+* [FrequencyObservation](FrequencyObservation.md)
+* [HumidityObservation](HumidityObservation.md)
+* [IlluminanceObservation](IlluminanceObservation.md)
+* [InductanceObservation](InductanceObservation.md)
+* [LengthObservation](LengthObservation.md)
+* [LuminanceObservation](LuminanceObservation.md)
+* [LuminousFluxObservation](LuminousFluxObservation.md)
+* [LuminousIntensityObservation](LuminousIntensityObservation.md)
+* [MagneticFluxObservation](MagneticFluxObservation.md)
+* [MassFlowRateObservation](MassFlowRateObservation.md)
+* [MassObservation](MassObservation.md)
+* [PowerObservation](PowerObservation.md)
+* [PressureObservation](PressureObservation.md)
+* [RelativeHumidityObservation](RelativeHumidityObservation.md)
+* [ResistanceObservation](ResistanceObservation.md)
+* [SoundPressureObservation](SoundPressureObservation.md)
+* [TemperatureObservation](TemperatureObservation.md)
+* [ThrustObservation](ThrustObservation.md)
+* [TimeSpanObservation](TimeSpanObservation.md)
+* [TorqueObservation](TorqueObservation.md)
+* [VelocityObservation](VelocityObservation.md)
+* [VoltageObservation](VoltageObservation.md)
+* [VolumeFlowRateObservation](VolumeFlowRateObservation.md)
+* [VolumeObservation](VolumeObservation.md)
 
 ---
 
@@ -24,7 +59,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[Event](../../Event.md):** customTags, end, externalIds, name, start, timestamp
+* **[Event](../../Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
 * **[PointEvent](../PointEvent.md):** payload
 
 ---

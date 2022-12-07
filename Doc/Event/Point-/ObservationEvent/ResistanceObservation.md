@@ -1,8 +1,8 @@
-[Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [AngleObservationEvent](#)
-# AngleObservationEvent
+[Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [ResistanceObservation](#)
+# ResistanceObservation
 
-**Display name:** Angle observation event<br />
-**DTMI:** dtmi:org:w3id:rec:AngleObservationEvent;1
+**Display name:** Resistance observation<br />
+**DTMI:** dtmi:org:w3id:rec:ResistanceObservation;1
 
 ---
 
@@ -19,7 +19,7 @@
 |-|-|-|-|-|
 |value|**en**: value||double|True|
 ### Inherited Properties
-* **[Event](../../Event.md):** customTags, end, externalIds, name, start, timestamp
+* **[Event](../../Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
 * **[PointEvent](../PointEvent.md):** payload
 
 ---

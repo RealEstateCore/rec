@@ -9,6 +9,13 @@ Measure temperature of the heat sink on a device such as a VFD.
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Sensor](Temperature_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measure temperature of the heat sink on a device such as a VFD.
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Temperature_Sensor](Temperature_Sensor.md):** lastKnownValue
 
 ---
 

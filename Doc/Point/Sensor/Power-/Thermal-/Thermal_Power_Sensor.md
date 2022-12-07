@@ -11,6 +11,13 @@
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Power_Sensor](../Power_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Power_Sensor](../Power_Sensor.md):** lastKnownValue
 
 ---
 

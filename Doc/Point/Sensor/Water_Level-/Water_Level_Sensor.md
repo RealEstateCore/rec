@@ -15,6 +15,14 @@ Measures the height/level of water in some container
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[LengthObservation](../../../Event/Point-/ObservationEvent/LengthObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -24,9 +32,6 @@ Measures the height/level of water in some container
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

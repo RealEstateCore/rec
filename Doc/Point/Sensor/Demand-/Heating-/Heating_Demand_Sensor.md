@@ -14,6 +14,13 @@ Measures the amount of power consumed by a heating process; typically found by m
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Demand_Sensor](../Demand_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -24,7 +31,6 @@ Measures the amount of power consumed by a heating process; typically found by m
 ## Properties
 
 ### Inherited Properties
-* **[Demand_Sensor](../Demand_Sensor.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

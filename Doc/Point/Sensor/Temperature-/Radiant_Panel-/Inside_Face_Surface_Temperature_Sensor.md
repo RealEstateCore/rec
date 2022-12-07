@@ -9,6 +9,13 @@ Measures the inside surface (relative to the space) of the radiant panel of the 
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Sensor](../Temperature_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measures the inside surface (relative to the space) of the radiant panel of the 
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Temperature_Sensor](../Temperature_Sensor.md):** lastKnownValue
 
 ---
 

@@ -15,6 +15,13 @@ Senses the amperes of electrical current produced as output by a device
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Current_Sensor](../Current_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ Senses the amperes of electrical current produced as output by a device
 ## Properties
 
 ### Inherited Properties
-* **[Current_Sensor](../Current_Sensor.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

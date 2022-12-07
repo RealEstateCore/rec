@@ -9,6 +9,13 @@ Measures the duration of precipitation within some time frame
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Duration_Sensor](Duration_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Measures the duration of precipitation within some time frame
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Duration_Sensor](Duration_Sensor.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

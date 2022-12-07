@@ -16,6 +16,13 @@ Measures the rate of flow of water that is leaving a piece of equipment or syste
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Flow_Sensor](../../Flow_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +33,6 @@ Measures the rate of flow of water that is leaving a piece of equipment or syste
 ## Properties
 
 ### Inherited Properties
-* **[Flow_Sensor](../../Flow_Sensor.md):** lastKnownValue
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

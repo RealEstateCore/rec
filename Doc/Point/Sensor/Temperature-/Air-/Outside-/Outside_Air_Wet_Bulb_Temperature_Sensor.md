@@ -9,6 +9,13 @@ A sensor measuring the wet-bulb temperature of outside air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ A sensor measuring the wet-bulb temperature of outside air
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
 
 ---
 

@@ -9,6 +9,13 @@ Measures the portion of power that, averaged over a complete cycle of the AC wav
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Power_Sensor](../Power_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measures the portion of power that, averaged over a complete cycle of the AC wav
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Power_Sensor](../Power_Sensor.md):** lastKnownValue
 
 ---
 

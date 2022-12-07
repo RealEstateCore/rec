@@ -16,6 +16,14 @@ Measures the amount of power consumed by the use of some process; typically foun
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[PowerObservation](../../../Event/Point-/ObservationEvent/PowerObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,9 +33,6 @@ Measures the amount of power consumed by the use of some process; typically foun
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

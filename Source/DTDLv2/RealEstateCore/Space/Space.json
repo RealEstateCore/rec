@@ -16,35 +16,6 @@
     {
       "@type": "Property",
       "displayName": {
-        "en": "Custom Properties"
-      },
-      "name": "customProperties",
-      "schema": {
-        "@type": "Map",
-        "mapKey": {
-          "name": "namespace",
-          "schema": "string"
-        },
-        "mapValue": {
-          "name": "properties",
-          "schema": {
-            "@type": "Map",
-            "mapKey": {
-              "name": "propertyName",
-              "schema": "string"
-            },
-            "mapValue": {
-              "name": "propertyValue",
-              "schema": "string"
-            }
-          }
-        }
-      },
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
         "en": "Custom Tags"
       },
       "name": "customTags",
@@ -63,30 +34,18 @@
     },
     {
       "@type": "Property",
-      "description": {
-        "en": "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
-      },
       "displayName": {
-        "en": "geometry"
+        "en": "External IDs"
       },
-      "name": "geometry",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "Identifiers"
-      },
-      "name": "identifiers",
+      "name": "externalIds",
       "schema": {
         "@type": "Map",
         "mapKey": {
-          "name": "namespace",
+          "name": "externalIdName",
           "schema": "string"
         },
         "mapValue": {
-          "name": "identifier",
+          "name": "externalIdValue",
           "schema": "string"
         }
       },
@@ -99,6 +58,19 @@
       },
       "name": "name",
       "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Polygon representing the spatial extent of this Space."
+      },
+      "displayName": {
+        "en": "geometry"
+      },
+      "maxMultiplicity": 1,
+      "name": "geometry",
+      "target": "dtmi:org:w3id:rec:Geometry;1",
       "writable": true
     },
     {

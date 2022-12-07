@@ -953,18 +953,6 @@
       },
       {
         "@type": "Property",
-        "description": {
-          "en": "A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
-        },
-        "displayName": {
-          "en": "geometry"
-        },
-        "name": "geometry",
-        "schema": "string",
-        "writable": true
-      },
-      {
-        "@type": "Property",
         "displayName": {
           "en": "Identifiers"
         },
@@ -1070,6 +1058,19 @@
         },
         "name": "documentation",
         "target": "dtmi:org:w3id:rec:Document;1",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "description": {
+          "en": "A GeoJSON Geometry representing the position or extent of the asset."
+        },
+        "displayName": {
+          "en": "geometry"
+        },
+        "maxMultiplicity": 1,
+        "name": "geometry",
+        "target": "dtmi:org:w3id:rec:Geometry;1",
         "writable": true
       },
       {
@@ -1621,35 +1622,6 @@
       {
         "@type": "Property",
         "displayName": {
-          "en": "Custom Properties"
-        },
-        "name": "customProperties",
-        "schema": {
-          "@type": "Map",
-          "mapKey": {
-            "name": "namespace",
-            "schema": "string"
-          },
-          "mapValue": {
-            "name": "properties",
-            "schema": {
-              "@type": "Map",
-              "mapKey": {
-                "name": "propertyName",
-                "schema": "string"
-              },
-              "mapValue": {
-                "name": "propertyValue",
-                "schema": "string"
-              }
-            }
-          }
-        },
-        "writable": true
-      },
-      {
-        "@type": "Property",
-        "displayName": {
           "en": "Custom Tags"
         },
         "name": "customTags",
@@ -1668,30 +1640,18 @@
       },
       {
         "@type": "Property",
-        "description": {
-          "en": "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
-        },
         "displayName": {
-          "en": "geometry"
+          "en": "External IDs"
         },
-        "name": "geometry",
-        "schema": "string",
-        "writable": true
-      },
-      {
-        "@type": "Property",
-        "displayName": {
-          "en": "Identifiers"
-        },
-        "name": "identifiers",
+        "name": "externalIds",
         "schema": {
           "@type": "Map",
           "mapKey": {
-            "name": "namespace",
+            "name": "externalIdName",
             "schema": "string"
           },
           "mapValue": {
-            "name": "identifier",
+            "name": "externalIdValue",
             "schema": "string"
           }
         },
@@ -1704,6 +1664,19 @@
         },
         "name": "name",
         "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "description": {
+          "en": "Polygon representing the spatial extent of this Space."
+        },
+        "displayName": {
+          "en": "geometry"
+        },
+        "maxMultiplicity": 1,
+        "name": "geometry",
+        "target": "dtmi:org:w3id:rec:Geometry;1",
         "writable": true
       },
       {
@@ -3166,6 +3139,45 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:Geometry;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "coordinate system"
+        },
+        "name": "coordinateSystem",
+        "schema": {
+          "@type": "Enum",
+          "enumValues": [
+            {
+              "enumValue": "LocalCoordinates",
+              "name": "LocalCoordinates"
+            },
+            {
+              "enumValue": "WGS84",
+              "name": "WGS84"
+            },
+            {
+              "enumValue": "SWEREF99",
+              "name": "SWEREF99"
+            }
+          ],
+          "valueSchema": "string"
+        },
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Geometry"
+    },
+    "extends": "dtmi:org:w3id:rec:Information;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Georeference;1",
     "@type": "Interface",
     "contents": [
@@ -3965,7 +3977,7 @@
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": "dtmi:org:w3id:rec:AngleObservationEvent;1"
+        "schema": "dtmi:org:w3id:rec:AngleObservation;1"
       }
     ],
     "description": {
@@ -4429,25 +4441,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:ElectricCurrentObservation;1"
       }
     ],
     "description": {
@@ -4593,25 +4592,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:PowerObservation;1"
       }
     ],
     "description": {
@@ -4644,25 +4630,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:TemperatureObservation;1"
       }
     ],
     "description": {
@@ -4769,25 +4742,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:AngleObservation;1"
       }
     ],
     "description": {
@@ -4945,25 +4905,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "duration"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:TimeSpanObservation;1"
       }
     ],
     "description": {
@@ -5165,7 +5112,7 @@
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": "dtmi:org:w3id:rec:EnergyObservationEvent;1"
+        "schema": "dtmi:org:w3id:rec:EnergyObservation;1"
       }
     ],
     "description": {
@@ -5431,25 +5378,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:VolumeFlowRateObservation;1"
       }
     ],
     "description": {
@@ -5533,25 +5467,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:FrequencyObservation;1"
       }
     ],
     "description": {
@@ -6175,25 +6096,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:IlluminanceObservation;1"
       }
     ],
     "description": {
@@ -6702,25 +6610,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:LuminanceObservation;1"
       },
       {
         "@type": "Property",
@@ -7504,25 +7399,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:PowerObservation;1"
       }
     ],
     "description": {
@@ -7803,25 +7685,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:LengthObservation;1"
       },
       {
         "@type": "Property",
@@ -8199,25 +8068,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:VelocityObservation;1"
       }
     ],
     "description": {
@@ -8417,25 +8273,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:TemperatureObservation;1"
       }
     ],
     "description": {
@@ -8604,25 +8447,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:TorqueObservation;1"
       }
     ],
     "description": {
@@ -8831,25 +8661,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:VoltageObservation;1"
       }
     ],
     "description": {
@@ -8933,25 +8750,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:LengthObservation;1"
       }
     ],
     "description": {
@@ -9314,6 +9118,56 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:MultiPoint;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "A GeoJSON MultiPoint coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[10.0, 40.0], [40.0, 30.0], [20.0, 20.0], [30.0, 10.0]]."
+        },
+        "displayName": {
+          "en": "coordinates"
+        },
+        "name": "coordinates",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Multi point"
+    },
+    "extends": "dtmi:org:w3id:rec:Geometry;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:MultiPolygon;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "A GeoJSON MultiPolygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[[[30.0, 20.0], [45.0, 40.0], [10.0, 40.0], [30.0, 20.0]]], [[[15.0, 5.0], [40.0, 10.0], [10.0, 20.0], [5.0, 10.0], [15.0, 5.0]]]]."
+        },
+        "displayName": {
+          "en": "coordinates"
+        },
+        "name": "coordinates",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Multi polygon"
+    },
+    "extends": "dtmi:org:w3id:rec:Geometry;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:NotificationObject;1",
     "@type": "Interface",
     "displayName": {
@@ -9357,6 +9211,56 @@
       "en": "Outdoor space"
     },
     "extends": "dtmi:org:w3id:rec:Architecture;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Point;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "A GeoJSON Point coordinate listing. Coordinate may be expressed in two or three dimensions. Ex: [30.0, 10.0, 0.0]."
+        },
+        "displayName": {
+          "en": "coordinates"
+        },
+        "name": "coordinates",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Point"
+    },
+    "extends": "dtmi:org:w3id:rec:Geometry;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Polygon;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "A GeoJSON Polygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."
+        },
+        "displayName": {
+          "en": "coordinates"
+        },
+        "name": "coordinates",
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Polygon"
+    },
+    "extends": "dtmi:org:w3id:rec:Geometry;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18305,10 +18209,25 @@
     ]
   },
   {
-    "@id": "dtmi:org:w3id:rec:AccelerationObservationEvent;1",
+    "@id": "dtmi:org:w3id:rec:AccelerationObservation;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Property",
+          "Acceleration"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "metrePerSecondSquared",
+        "writable": true
+      }
+    ],
     "displayName": {
-      "en": "Acceleration observation event"
+      "en": "Acceleration observation"
     },
     "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
@@ -18338,7 +18257,7 @@
     ]
   },
   {
-    "@id": "dtmi:org:w3id:rec:AngleObservationEvent;1",
+    "@id": "dtmi:org:w3id:rec:AngleObservation;1",
     "@type": "Interface",
     "contents": [
       {
@@ -18356,7 +18275,85 @@
       }
     ],
     "displayName": {
-      "en": "Angle observation event"
+      "en": "Angle observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:AngularAccelerationObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "AngularAcceleration",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "radianPerSecondSquared",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Angular acceleration observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:AngularVelocityObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "AngularVelocity",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "revolutionPerMinute",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Angular velocity observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:AreaObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Area",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "squareMetre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Area observation"
     },
     "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
@@ -18425,6 +18422,32 @@
       "en": "Bedroom"
     },
     "extends": "dtmi:org:w3id:rec:Room;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:CapacitanceObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Capacitance",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "microfarad",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Capacitance observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18529,12 +18552,116 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:DataRateObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "DataRate",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "mebibitPerSecond",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Data rate observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:DataSizeObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "DataSize",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "mebibyte",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Data size observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:DensityObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Density",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "gramPerCubicMetre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Density observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:DeskLamp;1",
     "@type": "Interface",
     "displayName": {
       "en": "Desk lamp"
     },
     "extends": "dtmi:org:w3id:rec:Lamp;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:DistanceObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Distance",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "metre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Distance observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18573,6 +18700,58 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:ElectricChargeObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "ElectricCharge",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "coulomb",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Electric charge observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:ElectricCurrentObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Current",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "ampere",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Elecric current observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:ElevatorRoom;1",
     "@type": "Interface",
     "displayName": {
@@ -18606,7 +18785,7 @@
     ]
   },
   {
-    "@id": "dtmi:org:w3id:rec:EnergyObservationEvent;1",
+    "@id": "dtmi:org:w3id:rec:EnergyObservation;1",
     "@type": "Interface",
     "contents": [
       {
@@ -18624,7 +18803,7 @@
       }
     ],
     "displayName": {
-      "en": "Energy observation event"
+      "en": "Energy observation"
     },
     "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
@@ -18709,6 +18888,58 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:ForceObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Force",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "newton",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Force observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:FrequencyObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Frequency",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "hertz",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Frequency observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Garage;1",
     "@type": "Interface",
     "displayName": {
@@ -18753,12 +18984,90 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:HumidityObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Humidity",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "gramPerCubicMetre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Humidity (absolute) observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:HVACZone;1",
     "@type": "Interface",
     "displayName": {
       "en": "HVAC zone"
     },
     "extends": "dtmi:org:w3id:rec:Zone;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:IlluminanceObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Illuminance",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "lux",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Illuminance observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:InductanceObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Inductance",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "henry",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Inductance observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18781,6 +19090,32 @@
       "en": "Laundry room"
     },
     "extends": "dtmi:org:w3id:rec:Room;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:LengthObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Length",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "metre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Length observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18830,12 +19165,168 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:LuminanceObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Luminance",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "candelaPerSquareMetre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Luminance observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:LuminousFluxObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "LuminousFlux",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "lumen",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Luminous flux observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:LuminousIntensityObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "LuminousIntensity",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "candela",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Luminous intensity observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:MagneticFluxObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "MagneticFlux",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "weber",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Magnetic flux observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:MailroomCart;1",
     "@type": "Interface",
     "displayName": {
       "en": "Mailroom cart"
     },
     "extends": "dtmi:org:w3id:rec:Cart;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:MassFlowRateObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "MassFlowRate",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "kilogramPerHour",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Mass flow rate observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:MassObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Mass",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "kilogram",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Mass observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18965,6 +19456,58 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:PowerObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Power",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "watt",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Power observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:PressureObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Pressure",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "pascal",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Pressure observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:PrinterCart;1",
     "@type": "Interface",
     "displayName": {
@@ -19026,6 +19569,58 @@
       "en": "Recreational room"
     },
     "extends": "dtmi:org:w3id:rec:Room;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:RelativeHumidityObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "RelativeHumidity",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "percent",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Relative humidity observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:ResistanceObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Resistance",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "ohm",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Resistance observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -19119,6 +19714,32 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:SoundPressureObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "SoundPressure",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "decibel",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Sound pressure observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Stadium;1",
     "@type": "Interface",
     "displayName": {
@@ -19163,12 +19784,116 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:TemperatureObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Temperature",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "degreeCelsius",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Temperature observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Theater;1",
     "@type": "Interface",
     "displayName": {
       "en": "Theater"
     },
     "extends": "dtmi:org:w3id:rec:Room;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:ThrustObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Thrust",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "newton",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Thrust observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:TimeSpanObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "TimeSpan",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "second",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Timespan observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:TorqueObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Torque",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "newtonMetre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Torque observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -19207,12 +19932,116 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:VelocityObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Velocity",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "metrePerSecond",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Velocity observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:VirtualBuilding;1",
     "@type": "Interface",
     "displayName": {
       "en": "Virtual building"
     },
     "extends": "dtmi:org:w3id:rec:Building;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:VoltageObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Voltage",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "volt",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Voltage observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:VolumeFlowRateObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "VolumeFlowRate",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "litrePerSecond",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Volume flow observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:VolumeObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Volume",
+          "Property"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "litre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Volume observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]

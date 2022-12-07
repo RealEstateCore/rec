@@ -16,6 +16,14 @@ Measures the voltage of an electrical device or object
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[VoltageObservation](../../../Event/Point-/ObservationEvent/VoltageObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,9 +33,6 @@ Measures the voltage of an electrical device or object
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

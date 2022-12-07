@@ -9,6 +9,13 @@ Measured speed of wind, caused by air moving from high to low pressure
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Speed_Sensor](Speed_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measured speed of wind, caused by air moving from high to low pressure
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Speed_Sensor](Speed_Sensor.md):** lastKnownValue
 
 ---
 

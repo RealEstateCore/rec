@@ -9,6 +9,13 @@ Measures the voltage across a DC bus
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Voltage_Sensor](Voltage_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measures the voltage across a DC bus
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Voltage_Sensor](Voltage_Sensor.md):** lastKnownValue
 
 ---
 

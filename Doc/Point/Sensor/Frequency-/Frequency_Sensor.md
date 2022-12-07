@@ -14,6 +14,14 @@ Measures the frequency of a phenomenon or aspect of a phenomenon, e.g. the frequ
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[FrequencyObservation](../../../Event/Point-/ObservationEvent/FrequencyObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,9 +31,6 @@ Measures the frequency of a phenomenon or aspect of a phenomenon, e.g. the frequ
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

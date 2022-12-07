@@ -9,6 +9,13 @@ Measures the height/level of deionised water in some container
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Water_Level_Sensor](Water_Level_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measures the height/level of deionised water in some container
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Water_Level_Sensor](Water_Level_Sensor.md):** lastKnownValue
 
 ---
 

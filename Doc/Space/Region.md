@@ -19,14 +19,14 @@ An administrative geospatial unit larger than the individual real estate. For in
 ## Relationships
 
 ### Inherited Relationships
-* **[Space](Space.md):** hasPart, isLocationOf, isPartOf
+* **[Space](Space.md):** geometry, hasPart, isLocationOf, isPartOf
 
 ---
 
 ## Properties
 
 ### Inherited Properties
-* **[Space](Space.md):** customProperties, customTags, geometry, identifiers, name
+* **[Space](Space.md):** customTags, externalIds, name
 
 ---
 

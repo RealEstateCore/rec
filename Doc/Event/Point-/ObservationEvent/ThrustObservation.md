@@ -1,8 +1,8 @@
-[Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [EnergyObservationEvent](#)
-# EnergyObservationEvent
+[Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [ThrustObservation](#)
+# ThrustObservation
 
-**Display name:** Energy observation event<br />
-**DTMI:** dtmi:org:w3id:rec:EnergyObservationEvent;1
+**Display name:** Thrust observation<br />
+**DTMI:** dtmi:org:w3id:rec:ThrustObservation;1
 
 ---
 
@@ -19,7 +19,7 @@
 |-|-|-|-|-|
 |value|**en**: value||double|True|
 ### Inherited Properties
-* **[Event](../../Event.md):** customTags, end, externalIds, name, start, timestamp
+* **[Event](../../Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
 * **[PointEvent](../PointEvent.md):** payload
 
 ---

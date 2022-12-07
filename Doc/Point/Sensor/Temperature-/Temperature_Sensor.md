@@ -20,6 +20,14 @@ Measures temperature: the physical property of matter that quantitatively expres
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[TemperatureObservation](../../../Event/Point-/ObservationEvent/TemperatureObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -29,9 +37,6 @@ Measures temperature: the physical property of matter that quantitatively expres
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

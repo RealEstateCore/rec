@@ -9,6 +9,13 @@ See Photovoltaic_Current_Output_Sensor
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Current_Sensor](../Current_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ See Photovoltaic_Current_Output_Sensor
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Current_Sensor](../Current_Sensor.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

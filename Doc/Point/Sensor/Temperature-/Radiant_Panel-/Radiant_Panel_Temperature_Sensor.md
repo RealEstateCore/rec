@@ -16,6 +16,13 @@ Measures the temperature of the radiant panel of the radiant heating and cooling
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Sensor](../Temperature_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -27,7 +34,6 @@ Measures the temperature of the radiant panel of the radiant heating and cooling
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Temperature_Sensor](../Temperature_Sensor.md):** lastKnownValue
 
 ---
 

@@ -14,6 +14,13 @@ Measures the flow of the condenser water
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Flow_Sensor](../../Flow_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -24,7 +31,6 @@ Measures the flow of the condenser water
 ## Properties
 
 ### Inherited Properties
-* **[Flow_Sensor](../../Flow_Sensor.md):** lastKnownValue
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
