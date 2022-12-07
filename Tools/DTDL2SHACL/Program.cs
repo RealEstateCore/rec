@@ -128,7 +128,9 @@ namespace DTDL2SHACL
                     var schema = property.Schema;
                     switch (schema) {
                         case DTArrayInfo array:
-                            Console.WriteLine("ARRAY");
+                            NodeShape arrayShape = NodeShapeFromPropertySchema(property, array);
+                            pShape.AddNode(arrayShape.Uri);
+                            // TODO: Support DTDL arrays through creating a new Shape corresponding w/ array node schema
                             break;
                         case DTEnumInfo enm:
                             DTPrimitiveSchemaInfo enumValueType = enm.ValueSchema;
@@ -145,10 +147,11 @@ namespace DTDL2SHACL
                             }
                             break;
                         case DTMapInfo map:
-                            Console.WriteLine("MAP");
+                            NodeShape mapShape = NodeShapeFromPropertySchema(property, map);
+                            pShape.AddNode(mapShape.Uri);
                             break;
                         case DTObjectInfo obj:
-                            Console.WriteLine("OBJECT");
+                            // TODO: Support DTDL objects through creating a new Shape corresponding w/ object schema
                             break;
                         default:
                             pShape.AddDatatype(_dtdlSchemaToXsd[schema.GetType()]);
@@ -242,6 +245,50 @@ namespace DTDL2SHACL
                 Environment.Exit(1);
                 return null;
             }
+        }
+
+        private static NodeShape NodeShapeFromPropertySchema(DTPropertyInfo sourceProperty, DTComplexSchemaInfo schema) {
+            string shapeIdRoot = GetShaclId(sourceProperty.Id).AbsoluteUri;
+            Uri shapeId = new Uri($"{shapeIdRoot}Shape");
+            NodeShape outputShape = _shapesGraph.CreateNodeShape(shapeId);
+            foreach ((string lang, string val) in schema.DisplayName) {
+                outputShape.AddLabel(lang, val);
+            }
+            foreach ((string lang, string val) in schema.Description) {
+                outputShape.AddComment(lang, val);
+            }
+            switch (schema) {
+                case DTArrayInfo array:
+                    // TODO: Implement array support
+                    break;
+                case DTObjectInfo obj:
+                    // TODO: Implement Object fields support
+                    break;
+                case DTMapInfo map:
+                    PropertyShape? keyShape = outputShape.PropertyShapes.Where(ps => ps.Path.ToString().EndsWith(map.MapKey.Name)).FirstOrDefault(); 
+                    if (keyShape == null) {
+                        keyShape = outputShape.CreatePropertyShape(GetShaclId(map.Id,map.MapKey.Name));
+                        keyShape.AddDatatype(UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+                    }
+                    else {
+                        IUriNode shProperty = _shapesGraph.CreateUriNode(SH.property);
+                        _shapesGraph.Assert(outputShape.Node, shProperty, keyShape.Node);
+                    }
+                    // Todo implement Map Value support
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(schema), "Only schemas of type DTArrayInfo, DTObjectInfo, or DTMapInfo can be translated into SHACL NodeShapes.");
+            }
+            return outputShape;
+        }
+
+        private static Uri GetShaclId(Dtmi dtmiRoot, string localName) {
+            foreach ((string dtmiBase, string uriBase) in _dtmiBaseToUriBase) {
+                if (dtmiRoot.AbsoluteUri.Contains(dtmiBase)) {
+                    return new Uri(uriBase + localName);
+                }
+            }
+            return new Uri(dtmiRoot.ToString() + localName);
         }
 
         private static Uri GetShaclId(Dtmi dtmi) {

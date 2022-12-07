@@ -48,6 +48,12 @@ namespace DotNetRdfExtensions.SHACL
             _graph.Assert(_node, shName, nameNode);
         }
 
+        public void AddNode(Uri node) {
+            IUriNode nodeTarget = _graph.CreateUriNode(node);
+            IUriNode shNode = _graph.CreateUriNode(SH.node);
+            _graph.Assert(_node, shNode, nodeTarget);
+        }
+
         public void AddDescription(string language, string value) {
             IUriNode shDescription = _graph.CreateUriNode(SH.description);
             ILiteralNode descriptionNode = _graph.CreateLiteralNode(value, language);
