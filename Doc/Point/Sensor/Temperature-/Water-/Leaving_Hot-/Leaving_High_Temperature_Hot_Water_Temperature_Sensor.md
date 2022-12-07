@@ -49,5 +49,5 @@ Measures the temperature of high-temperature hot water supplied by a hot water s
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy

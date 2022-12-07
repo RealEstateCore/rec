@@ -49,5 +49,5 @@ Controls or reports the speed of a pump (typically as a proportion of its full p
 * [Asset](../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy

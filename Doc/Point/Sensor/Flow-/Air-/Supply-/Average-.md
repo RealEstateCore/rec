@@ -49,5 +49,5 @@ The computed average flow of supply air over some interval
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
