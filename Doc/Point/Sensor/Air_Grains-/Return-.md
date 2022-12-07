@@ -23,7 +23,7 @@ Measures the mass of water vapor in return air
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Air_Grains_Sensor](Air_Grains_Sensor.md):** lastKnownValue
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
@@ -49,5 +49,5 @@ Measures the mass of water vapor in return air
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy

@@ -45,14 +45,18 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 |operatedBy|**en**: operated by||0-Infinity|[Agent](../../Agent/Agent.md)||True|
 |ownedBy|**en**: owned by||0-Infinity|[Agent](../../Agent/Agent.md)||True|
 ### Inherited Relationships
+<<<<<<< HEAD
 * **[Space](../Space.md):** georeference, hasPart, isLocationOf, isPartOf
+=======
+* **[Space](../Space.md):** geometry, hasPart, isLocationOf, isPartOf
+>>>>>>> main
 
 ---
 
 ## Properties
 
 ### Inherited Properties
-* **[Space](../Space.md):** customTags, externalIds, geometry, name
+* **[Space](../Space.md):** customTags, externalIds, name
 
 ---
 

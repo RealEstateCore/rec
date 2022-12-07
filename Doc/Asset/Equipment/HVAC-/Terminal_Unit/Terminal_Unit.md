@@ -28,7 +28,7 @@ A device that regulates the volumetric flow rate and/or the temperature of the c
 
 ### Inherited Relationships
 * **[Equipment](../../Equipment.md):** feeds, isFedBy
-* **[Asset](../../../Asset.md):** commissionedBy, documentation, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
 
 ---
 
@@ -36,7 +36,7 @@ A device that regulates the volumetric flow rate and/or the temperature of the c
 
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
-* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 

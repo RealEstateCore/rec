@@ -14,6 +14,14 @@ Measures the direction in degrees in which a phenomenon is occuring
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[AngleObservation](../../../Event/Point-/ObservationEvent/AngleObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,11 +31,8 @@ Measures the direction in degrees in which a phenomenon is occuring
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
@@ -53,5 +58,5 @@ Measures the direction in degrees in which a phenomenon is occuring
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy

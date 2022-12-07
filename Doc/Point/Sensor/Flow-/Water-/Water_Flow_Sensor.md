@@ -19,6 +19,13 @@ Measures the rate of flow of water
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Flow_Sensor](../Flow_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -29,8 +36,7 @@ Measures the rate of flow of water
 ## Properties
 
 ### Inherited Properties
-* **[Flow_Sensor](../Flow_Sensor.md):** lastKnownValue
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
@@ -56,5 +62,5 @@ Measures the rate of flow of water
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy

@@ -23,7 +23,7 @@ A meter that measures usage or consumption of some media for a whole building
 ### Inherited Relationships
 * **[Equipment](../../Equipment.md):** feeds, isFedBy
 * **[Meter](../Meter.md):** hasSubMeter, isSubMeterOf, meters
-* **[Asset](../../../Asset.md):** commissionedBy, documentation, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
 
 ---
 
@@ -32,7 +32,7 @@ A meter that measures usage or consumption of some media for a whole building
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
 * **[Meter](../Meter.md):** isVirtualMeter
-* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 

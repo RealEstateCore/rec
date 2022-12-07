@@ -33,8 +33,9 @@ A part that constitutes a piece of a building's structural makeup. E.g., Facade,
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
+|customProperties|**en**: Custom Properties||map (string->map (string->string))|True|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|
-|externalIds|**en**: External IDs||map (string->string)|True|
+|identifiers|**en**: Identifiers||map (string->string)|True|
 |name|**en**: name||string|True|
 
 ---

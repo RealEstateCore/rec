@@ -10,7 +10,12 @@
 * [ArchitectureArea](ArchitectureArea.md)
 * [ArchitectureCapacity](ArchitectureCapacity.md)
 * [Document](Document/Document.md)
+<<<<<<< HEAD
 * [Georeference](Georeference/Georeference.md)
+=======
+* [Geometry](Geometry/Geometry.md)
+* [Georeference](Georeference.md)
+>>>>>>> main
 * [PointOfInterest](PointOfInterest.md)
 * [PostalAddress](PostalAddress.md)
 * [ServiceObject](ServiceObject/ServiceObject.md)
@@ -21,8 +26,9 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
+|customProperties|**en**: Custom Properties||map (string->map (string->string))|True|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|
-|externalIds|**en**: External IDs||map (string->string)|True|
+|identifiers|**en**: Identifiers||map (string->string)|True|
 |name|**en**: name||string|True|
 
 ---

@@ -17,7 +17,11 @@
 
 ### Inherited Relationships
 * **[Architecture](../Architecture.md):** address, adjacentElement, architectedBy, constructedBy, containsElement, documentation, hasPoint, intersectingElement, isFedBy, operatedBy, ownedBy
+<<<<<<< HEAD
 * **[Space](../../Space.md):** georeference, hasPart, isLocationOf, isPartOf
+=======
+* **[Space](../../Space.md):** geometry, hasPart, isLocationOf, isPartOf
+>>>>>>> main
 
 ---
 
@@ -25,7 +29,7 @@
 
 ### Inherited Properties
 * **[Level](Level.md):** levelNumber
-* **[Space](../../Space.md):** customTags, externalIds, geometry, name
+* **[Space](../../Space.md):** customTags, externalIds, name
 
 ---
 

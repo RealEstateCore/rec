@@ -22,7 +22,7 @@ Measures the amount of steam that is consumed or used, over some period of time
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 * **[Usage_Sensor](Usage_Sensor.md):** lastKnownValue
 
 ---
@@ -49,5 +49,5 @@ Measures the amount of steam that is consumed or used, over some period of time
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy

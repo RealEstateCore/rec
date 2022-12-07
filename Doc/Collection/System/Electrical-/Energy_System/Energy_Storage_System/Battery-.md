@@ -23,7 +23,7 @@ A collection of batteries that provides energy storage, along with their support
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Collection](../../../../Collection.md):** customTags, externalIds, name
+* **[Collection](../../../../Collection.md):** customProperties, customTags, identifiers, name
 
 ---
 

@@ -27,7 +27,11 @@ The level of a building, a.k.a. storey, floor, etc.
 
 ### Inherited Relationships
 * **[Architecture](../Architecture.md):** address, adjacentElement, architectedBy, constructedBy, containsElement, documentation, hasPoint, intersectingElement, isFedBy, operatedBy, ownedBy
+<<<<<<< HEAD
 * **[Space](../../Space.md):** georeference, hasPart, isLocationOf, isPartOf
+=======
+* **[Space](../../Space.md):** geometry, hasPart, isLocationOf, isPartOf
+>>>>>>> main
 
 ---
 
@@ -37,7 +41,7 @@ The level of a building, a.k.a. storey, floor, etc.
 |-|-|-|-|-|
 |levelNumber|**en**: level number|**en**: A number indicating the ordinal number of this level within the containing space (typically a Building or in the case of a Mezzanine, sometimes another level). Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others.|integer|True|
 ### Inherited Properties
-* **[Space](../../Space.md):** customTags, externalIds, geometry, name
+* **[Space](../../Space.md):** customTags, externalIds, name
 
 ---
 

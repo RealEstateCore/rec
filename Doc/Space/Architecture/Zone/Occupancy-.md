@@ -20,14 +20,18 @@ Occupancy Zone is a spatial area where devices are monitoring or reporting on th
 
 ### Inherited Relationships
 * **[Architecture](../Architecture.md):** address, adjacentElement, architectedBy, constructedBy, containsElement, documentation, hasPoint, intersectingElement, isFedBy, operatedBy, ownedBy
+<<<<<<< HEAD
 * **[Space](../../Space.md):** georeference, hasPart, isLocationOf, isPartOf
+=======
+* **[Space](../../Space.md):** geometry, hasPart, isLocationOf, isPartOf
+>>>>>>> main
 
 ---
 
 ## Properties
 
 ### Inherited Properties
-* **[Space](../../Space.md):** customTags, externalIds, geometry, name
+* **[Space](../../Space.md):** customTags, externalIds, name
 
 ---
 

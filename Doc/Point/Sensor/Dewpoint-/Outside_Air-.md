@@ -9,6 +9,13 @@ Senses the dewpoint temperature of outside air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Dewpoint_Sensor](Dewpoint_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,8 +29,7 @@ Senses the dewpoint temperature of outside air
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Dewpoint_Sensor](Dewpoint_Sensor.md):** lastKnownValue
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
@@ -49,5 +55,5 @@ Senses the dewpoint temperature of outside air
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy

@@ -20,9 +20,10 @@ A temporally indexed entity, e.g., an observation, a lease, a construction proje
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
+|customProperties|**en**: Custom Properties||map (string->map (string->string))|True|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|
 |end|**en**: end|**en**: Event ending timestamp.|dateTime|True|
-|externalIds|**en**: External IDs||map (string->string)|True|
+|identifiers|**en**: Identifiers||map (string->string)|True|
 |name|**en**: name||string|True|
 |start|**en**: start|**en**: Event start timestamp.|dateTime|True|
 |timestamp|**en**: timestamp||dateTime|True|

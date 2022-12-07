@@ -9,6 +9,13 @@ Measures the azimuth angle of the sun
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Angle_Sensor](Angle_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,8 +29,7 @@ Measures the azimuth angle of the sun
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Angle_Sensor](Angle_Sensor.md):** lastKnownValue
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
@@ -49,5 +55,5 @@ Measures the azimuth angle of the sun
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy

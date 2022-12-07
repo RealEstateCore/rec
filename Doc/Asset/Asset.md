@@ -22,6 +22,7 @@ Something which is placed inside of a building, but is not an integral part of t
 |-|-|-|-|-|-|-|
 |commissionedBy|**en**: commissioned by||0-Infinity|[Agent](../Agent/Agent.md)||True|
 |documentation|**en**: documentation||0-Infinity|[Document](../Information/Document/Document.md)||True|
+|geometry|**en**: geometry|**en**: A GeoJSON Geometry representing the position or extent of the asset.|0-1|[Geometry](../Information/Geometry/Geometry.md)||True|
 |hasPart|**en**: has part||0-Infinity|[Asset](#)||True|
 |hasPoint|**en**: has point||0-Infinity|[Point](../Point/Point.md)||True|
 |installedBy|**en**: installed by||0-Infinity|[Agent](../Agent/Agent.md)||True|
@@ -39,9 +40,9 @@ Something which is placed inside of a building, but is not an integral part of t
 |-|-|-|-|-|
 |assetTag|**en**: asset tag||string|True|
 |commissioningDate|**en**: commissioning date||date|True|
+|customProperties|**en**: Custom Properties||map (string->map (string->string))|True|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|
-|externalIds|**en**: External IDs||map (string->string)|True|
-|geometry|**en**: geometry|**en**: A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]].|string|True|
+|identifiers|**en**: Identifiers||map (string->string)|True|
 |initialCost|**en**: initial cost||string|True|
 |installationDate|**en**: installation date||date|True|
 |IPAddress|**en**: IP address||string|True|

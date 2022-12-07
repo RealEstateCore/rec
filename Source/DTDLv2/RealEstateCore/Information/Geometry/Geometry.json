@@ -1,0 +1,39 @@
+{
+  "@id": "dtmi:org:w3id:rec:Geometry;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "coordinate system"
+      },
+      "name": "coordinateSystem",
+      "schema": {
+        "@type": "Enum",
+        "enumValues": [
+          {
+            "enumValue": "LocalCoordinates",
+            "name": "LocalCoordinates"
+          },
+          {
+            "enumValue": "WGS84",
+            "name": "WGS84"
+          },
+          {
+            "enumValue": "SWEREF99",
+            "name": "SWEREF99"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Geometry"
+  },
+  "extends": "dtmi:org:w3id:rec:Information;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

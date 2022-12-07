@@ -13,7 +13,7 @@ A type of solar panels that convert solar radiation into usable thermal and elec
 
 ### Inherited Relationships
 * **[Equipment](../Equipment.md):** feeds, isFedBy
-* **[Asset](../../Asset.md):** commissionedBy, documentation, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
 
 ---
 
@@ -25,7 +25,7 @@ A type of solar panels that convert solar radiation into usable thermal and elec
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
 * **[PV_Panel](../PV_Panel/PV_Panel.md):** measuredModuleConversionEfficiency, ratedModuleConversionEfficiency
-* **[Asset](../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 

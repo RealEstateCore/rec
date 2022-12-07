@@ -36,7 +36,7 @@
 |severity|**en**: severity||enum (Major, Minor, Severe)|True|
 |status|**en**: status||enum (Acknowledged, Closed, Unacknowledged)|True|
 ### Inherited Properties
-* **[Information](../Information.md):** customTags, externalIds, name
+* **[Information](../Information.md):** customProperties, customTags, identifiers, name
 
 ---
 

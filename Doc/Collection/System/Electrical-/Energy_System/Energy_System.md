@@ -26,7 +26,7 @@ A collection of devices that generates, stores or transports electricity
 ## Properties
 
 ### Inherited Properties
-* **[Collection](../../../Collection.md):** customTags, externalIds, name
+* **[Collection](../../../Collection.md):** customProperties, customTags, identifiers, name
 
 ---
 

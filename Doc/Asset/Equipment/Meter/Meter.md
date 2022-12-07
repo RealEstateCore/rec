@@ -27,7 +27,7 @@ A device that measure usage or consumption of some media --- typically a form en
 |meters|**en**: meters||0-Infinity|||True|
 ### Inherited Relationships
 * **[Equipment](../Equipment.md):** feeds, isFedBy
-* **[Asset](../../Asset.md):** commissionedBy, documentation, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
 
 ---
 
@@ -38,7 +38,7 @@ A device that measure usage or consumption of some media --- typically a form en
 |isVirtualMeter|**en**: is virtual meter||boolean|True|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
-* **[Asset](../../Asset.md):** assetTag, commissioningDate, customTags, externalIds, geometry, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 

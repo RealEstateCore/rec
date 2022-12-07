@@ -25,7 +25,7 @@ A natural person (i.e., an individual human being).
 |givenName|||string|True|
 |image|**en**: image|**en**: URL link to an image that represents the person.|string|True|
 ### Inherited Properties
-* **[Agent](Agent.md):** customTags, externalIds, name
+* **[Agent](Agent.md):** customProperties, customTags, identifiers, name
 
 ---
 

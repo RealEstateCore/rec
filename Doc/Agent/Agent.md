@@ -28,8 +28,9 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
+|customProperties|**en**: Custom Properties||map (string->map (string->string))|True|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|
-|externalIds|**en**: External IDs||map (string->string)|True|
+|identifiers|**en**: Identifiers||map (string->string)|True|
 |name|**en**: name||string|True|
 
 ---

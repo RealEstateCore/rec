@@ -21,7 +21,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[BuildingElement](../BuildingElement.md):** customTags, externalIds, name
+* **[BuildingElement](../BuildingElement.md):** customProperties, customTags, identifiers, name
 
 ---
 

@@ -16,6 +16,13 @@ Measures the temperature of outside air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,8 +33,7 @@ Measures the temperature of outside air
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
-* **[Temperature_Sensor](../../Temperature_Sensor.md):** lastKnownValue
+* **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
@@ -53,5 +59,5 @@ Measures the temperature of outside air
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy

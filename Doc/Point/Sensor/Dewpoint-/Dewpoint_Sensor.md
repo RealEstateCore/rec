@@ -19,6 +19,14 @@ Senses the dewpoint temperature . Dew point is the temperature to which air must
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[TemperatureObservation](../../../Event/Point-/ObservationEvent/TemperatureObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -28,11 +36,8 @@ Senses the dewpoint temperature . Dew point is the temperature to which air must
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
@@ -58,5 +63,5 @@ Senses the dewpoint temperature . Dew point is the temperature to which air must
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [EquipmentCollection](../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
-* [ObservationEvent](../../../Event/Point-/ObservationEvent.md).sourcePoint
+* [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
