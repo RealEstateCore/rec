@@ -1038,45 +1038,61 @@ rec:Geometry
     ] ;
 .
 rec:Georeference
-  rdf:type <dtmi:dtdl:class:Component> ;
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
-  rdfs:comment "Encapsulates a georeference globally placing a spatially located entity in terms of latitude, longitude, altitude, and bearing." ;
+  rdfs:comment "A georeference creates a relationship between a local coordinate system into a geographic coordinate system." ;
   rdfs:label "Georeference" ;
   rdfs:subClassOf rec:Information ;
+.
+rec:Geotransform
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "A transform following GDAL's Affine Transform that transforms a local coordinate into a WGS84 coordinate. Created from Ground Control Points (GCP) using GDAL's GCPsToGeotransform method." ;
+  rdfs:label "Geotransform" ;
+  rdfs:subClassOf rec:Georeference ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:alt ;
-      sh:datatype xsd:float ;
-      sh:description "Altitude" ;
+      sh:path rec:originX ;
+      sh:datatype xsd:double ;
       sh:maxCount 1 ;
-      sh:name "alt" ;
+      sh:name "origin x" ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:bearing ;
-      sh:datatype xsd:float ;
-      sh:description "The angle between local coordinate system and a north-south meridian." ;
+      sh:path rec:originY ;
+      sh:datatype xsd:double ;
       sh:maxCount 1 ;
-      sh:name "bearing" ;
+      sh:name "origin y" ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:lat ;
-      sh:datatype xsd:float ;
-      sh:description "Latitude" ;
+      sh:path rec:widthScaleFactor ;
+      sh:datatype xsd:double ;
       sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "lat" ;
+      sh:name "width scale factor" ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:long ;
-      sh:datatype xsd:float ;
-      sh:description "Longitude" ;
+      sh:path rec:heightScaleFactor ;
+      sh:datatype xsd:double ;
       sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "long" ;
+      sh:name "height scale factor" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:xRotationalScaleFactor ;
+      sh:description "Value will be zero if the local coordinate system is north-aligned." ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "x rotational scale factor" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:yRotationalScaleFactor ;
+      sh:description "Value will be zero if the local coordinate system is north-aligned." ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "y rotational scale factor" ;
     ] ;
 .
 rec:GroupRoom
@@ -1934,15 +1950,6 @@ rec:Space
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:georeference ;
-      sh:class rec:Georeference ;
-      sh:description "A fixed point for, e.g., a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for locally defined geometries." ;
-      sh:maxCount 1 ;
-      sh:name "georeference" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
       sh:path rec:hasPart ;
       sh:class rec:Space ;
       sh:name "has part" ;
@@ -1960,6 +1967,15 @@ rec:Space
       sh:class rec:Space ;
       sh:maxCount 1 ;
       sh:name "is part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:georeference ;
+      sh:class rec:Georeference ;
+      sh:description "A georeference creates a relationship between the local coordinate system used within a building (e.g., measured in meters) and a geographic coordinate system (e.g., lat, long, alt), such that locally placed Spaces can be resolved and rendered in that geographic coordinate system (e.g., for mapping purposes)." ;
+      sh:maxCount 1 ;
+      sh:name "georeference" ;
       sh:nodeKind sh:IRI ;
     ] ;
 .

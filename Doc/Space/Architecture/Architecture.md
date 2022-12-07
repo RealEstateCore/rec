@@ -26,8 +26,6 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 |-|-|-|-|
 |area|**en**: area||[ArchitectureArea](../../Information/ArchitectureArea.md)|
 |capacity|**en**: capacity||[ArchitectureCapacity](../../Information/ArchitectureCapacity.md)|
-### Inherited Components
-* **[Space](../Space.md):** georeference
 
 ---
 
@@ -47,7 +45,7 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 |operatedBy|**en**: operated by||0-Infinity|[Agent](../../Agent/Agent.md)||True|
 |ownedBy|**en**: owned by||0-Infinity|[Agent](../../Agent/Agent.md)||True|
 ### Inherited Relationships
-* **[Space](../Space.md):** geometry, hasPart, isLocationOf, isPartOf
+* **[Space](../Space.md):** geometry, georeference, hasPart, isLocationOf, isPartOf
 
 ---
 
