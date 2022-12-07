@@ -58,7 +58,8 @@ rec:Agent a rdfs:Class,
                       [a sh:PropertyShape ; 
                        sh:path rec:name ; 
                        sh:name "name"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:isMemberOf ; 
                        sh:nodeKind sh:IRI ; 
@@ -168,15 +169,18 @@ rec:ArchitectureArea a rdfs:Class,
                      sh:property [a sh:PropertyShape ; 
                                   sh:path rec:grossArea ; 
                                   sh:name "gross area"@en ; 
-                                  sh:datatype xsd:float],
+                                  sh:datatype xsd:float ; 
+                                  sh:maxCount 1 ],
                                  [a sh:PropertyShape ; 
                                   sh:path rec:netArea ; 
                                   sh:name "net area"@en ; 
-                                  sh:datatype xsd:float],
+                                  sh:datatype xsd:float ; 
+                                  sh:maxCount 1 ],
                                  [a sh:PropertyShape ; 
                                   sh:path rec:rentableArea ; 
                                   sh:name "rentable area"@en ; 
-                                  sh:datatype xsd:float].
+                                  sh:datatype xsd:float ; 
+                                  sh:maxCount 1 ].
 rec:ArchitectureCapacity a rdfs:Class,
                            sh:NodeShape,
                            <dtmi:dtdl:class:Component>;
@@ -187,11 +191,13 @@ rec:ArchitectureCapacity a rdfs:Class,
                                       sh:path rec:maxOccupancy ; 
                                       sh:name "maximum occupancy"@en ; 
                                       sh:description "E.g., per Building Code"@en ; 
-                                      sh:datatype xsd:integer],
+                                      sh:datatype xsd:integer ; 
+                                      sh:maxCount 1 ],
                                      [a sh:PropertyShape ; 
                                       sh:path rec:seatingCapacity ; 
                                       sh:name "seating capacity"@en ; 
-                                      sh:datatype xsd:integer].
+                                      sh:datatype xsd:integer ; 
+                                      sh:maxCount 1 ].
 rec:Asset a rdfs:Class,
             sh:NodeShape;
           rdfs:comment "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."@en;
@@ -199,19 +205,23 @@ rec:Asset a rdfs:Class,
           sh:property [a sh:PropertyShape ; 
                        sh:path rec:IPAddress ; 
                        sh:name "IP address"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:MACAddress ; 
                        sh:name "MAC address"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:assetTag ; 
                        sh:name "asset tag"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:commissioningDate ; 
                        sh:name "commissioning date"@en ; 
-                       sh:datatype xsd:date],
+                       sh:datatype xsd:date ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:customTags ; 
                        sh:name "Custom Tags"@en ; 
@@ -224,39 +234,48 @@ rec:Asset a rdfs:Class,
                        sh:path rec:geometry ; 
                        sh:name "geometry"@en ; 
                        sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the asset. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:initialCost ; 
                        sh:name "initial cost"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:installationDate ; 
                        sh:name "installation date"@en ; 
-                       sh:datatype xsd:date],
+                       sh:datatype xsd:date ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:maintenanceInterval ; 
                        sh:name "maintenance interval"@en ; 
-                       sh:datatype xsd:duration],
+                       sh:datatype xsd:duration ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:modelNumber ; 
                        sh:name "model number"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:name ; 
                        sh:name "name"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:serialNumber ; 
                        sh:name "serial number"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:turnoverDate ; 
                        sh:name "turnover date"@en ; 
-                       sh:datatype xsd:date],
+                       sh:datatype xsd:date ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:weight ; 
                        sh:name "weight"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:commissionedBy ; 
                        sh:nodeKind sh:IRI ; 
@@ -377,7 +396,8 @@ rec:BuildingElement a rdfs:Class,
                                 [a sh:PropertyShape ; 
                                  sh:path rec:name ; 
                                  sh:name "name"@en ; 
-                                 sh:datatype xsd:string],
+                                 sh:datatype xsd:string ; 
+                                 sh:maxCount 1 ],
                                 [a sh:PropertyShape ; 
                                  sh:path rec:documentation ; 
                                  sh:nodeKind sh:IRI ; 
@@ -478,7 +498,8 @@ rec:Collection a rdfs:Class,
                            [a sh:PropertyShape ; 
                             sh:path rec:name ; 
                             sh:name "name"@en ; 
-                            sh:datatype xsd:string],
+                            sh:datatype xsd:string ; 
+                            sh:maxCount 1 ],
                            [a sh:PropertyShape ; 
                             sh:path rec:documentation ; 
                             sh:nodeKind sh:IRI ; 
@@ -516,10 +537,12 @@ rec:CustomTagsShape a rdfs:Class,
                       sh:NodeShape;
                     sh:property [a sh:PropertyShape ; 
                                  sh:path rec:tagName ; 
-                                 sh:datatype xsd:string],
+                                 sh:datatype xsd:string ; 
+                                 sh:maxCount 1 ],
                                 [a sh:PropertyShape ; 
                                  sh:path rec:tagValue ; 
-                                 sh:datatype xsd:boolean].
+                                 sh:datatype xsd:boolean ; 
+                                 sh:maxCount 1 ].
 rec:DataServerRoom a rdfs:Class,
                      sh:NodeShape;
                    rdfs:label "Data server room"@en;
@@ -591,15 +614,18 @@ rec:ElevatorTrip a rdfs:Class,
                  sh:property [a sh:PropertyShape ; 
                               sh:path rec:currentLevel ; 
                               sh:name "current level"@en ; 
-                              sh:datatype xsd:string],
+                              sh:datatype xsd:string ; 
+                              sh:maxCount 1 ],
                              [a sh:PropertyShape ; 
                               sh:path rec:endLevel ; 
                               sh:name "end level"@en ; 
-                              sh:datatype xsd:string],
+                              sh:datatype xsd:string ; 
+                              sh:maxCount 1 ],
                              [a sh:PropertyShape ; 
                               sh:path rec:startLevel ; 
                               sh:name "start level"@en ; 
-                              sh:datatype xsd:string],
+                              sh:datatype xsd:string ; 
+                              sh:maxCount 1 ],
                              [a sh:PropertyShape ; 
                               sh:path rec:tripDirection ; 
                               sh:name "trip direction"@en ; 
@@ -646,7 +672,8 @@ rec:Event a rdfs:Class,
                        sh:path rec:end ; 
                        sh:name "end"@en ; 
                        sh:description "Event ending timestamp."@en ; 
-                       sh:datatype xsd:time],
+                       sh:datatype xsd:time ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:externalIds ; 
                        sh:name "External IDs"@en ; 
@@ -654,16 +681,19 @@ rec:Event a rdfs:Class,
                       [a sh:PropertyShape ; 
                        sh:path rec:name ; 
                        sh:name "name"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:start ; 
                        sh:name "start"@en ; 
                        sh:description "Event start timestamp."@en ; 
-                       sh:datatype xsd:time],
+                       sh:datatype xsd:time ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:timestamp ; 
                        sh:name "timestamp"@en ; 
-                       sh:datatype xsd:time].
+                       sh:datatype xsd:time ; 
+                       sh:maxCount 1 ].
 rec:ExceptionEvent a rdfs:Class,
                      sh:NodeShape;
                    rdfs:label "Exception event"@en;
@@ -687,10 +717,12 @@ rec:ExternalIdsShape a rdfs:Class,
                        sh:NodeShape;
                      sh:property [a sh:PropertyShape ; 
                                   sh:path rec:externalIdName ; 
-                                  sh:datatype xsd:string],
+                                  sh:datatype xsd:string ; 
+                                  sh:maxCount 1 ],
                                  [a sh:PropertyShape ; 
                                   sh:path rec:externalIdValue ; 
-                                  sh:datatype xsd:string].
+                                  sh:datatype xsd:string ; 
+                                  sh:maxCount 1 ].
 rec:Facade a rdfs:Class,
              sh:NodeShape;
            rdfs:label "Facade"@en;
@@ -754,22 +786,26 @@ rec:Georeference a rdfs:Class,
                               sh:path rec:alt ; 
                               sh:name "alt"@en ; 
                               sh:description "Altitude"@en ; 
-                              sh:datatype xsd:float],
+                              sh:datatype xsd:float ; 
+                              sh:maxCount 1 ],
                              [a sh:PropertyShape ; 
                               sh:path rec:bearing ; 
                               sh:name "bearing"@en ; 
                               sh:description "The angle between local coordinate system and a north-south meridian."@en ; 
-                              sh:datatype xsd:float],
+                              sh:datatype xsd:float ; 
+                              sh:maxCount 1 ],
                              [a sh:PropertyShape ; 
                               sh:path rec:lat ; 
                               sh:name "lat"@en ; 
                               sh:description "Latitude"@en ; 
-                              sh:datatype xsd:float],
+                              sh:datatype xsd:float ; 
+                              sh:maxCount 1 ],
                              [a sh:PropertyShape ; 
                               sh:path rec:long ; 
                               sh:name "long"@en ; 
                               sh:description "Longitude"@en ; 
-                              sh:datatype xsd:float].
+                              sh:datatype xsd:float ; 
+                              sh:maxCount 1 ].
 rec:GroupRoom a rdfs:Class,
                 sh:NodeShape;
               rdfs:label "Group room"@en;
@@ -804,7 +840,8 @@ rec:Information a rdfs:Class,
                             [a sh:PropertyShape ; 
                              sh:path rec:name ; 
                              sh:name "name"@en ; 
-                             sh:datatype xsd:string].
+                             sh:datatype xsd:string ; 
+                             sh:maxCount 1 ].
 rec:Kitchenette a rdfs:Class,
                   sh:NodeShape;
                 rdfs:label "Kitchenette"@en;
@@ -876,7 +913,8 @@ rec:Level a rdfs:Class,
                        sh:path rec:levelNumber ; 
                        sh:name "level number"@en ; 
                        sh:description "A number indicating the ordinal number of this level within the containing space (typically a Building or in the case of a Mezzanine, sometimes another level). Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others."@en ; 
-                       sh:datatype xsd:integer].
+                       sh:datatype xsd:integer ; 
+                       sh:maxCount 1 ].
 rec:Library a rdfs:Class,
               sh:NodeShape;
             rdfs:label "Library"@en;
@@ -982,7 +1020,8 @@ rec:Organization a rdfs:Class,
                               sh:path rec:logo ; 
                               sh:name "logo"@en ; 
                               sh:description "URL link to an image/logo that represents the organization."@en ; 
-                              sh:datatype xsd:string],
+                              sh:datatype xsd:string ; 
+                              sh:maxCount 1 ],
                              [a sh:PropertyShape ; 
                               sh:path rec:hasMember ; 
                               sh:nodeKind sh:IRI ; 
@@ -1028,19 +1067,23 @@ rec:Person a rdfs:Class,
            rdfs:subClassOf rec:Agent;
            sh:property [a sh:PropertyShape ; 
                         sh:path rec:familyName ; 
-                        sh:datatype xsd:string],
+                        sh:datatype xsd:string ; 
+                        sh:maxCount 1 ],
                        [a sh:PropertyShape ; 
                         sh:path rec:gender ; 
                         sh:name "gender"@en ; 
-                        sh:datatype xsd:string],
+                        sh:datatype xsd:string ; 
+                        sh:maxCount 1 ],
                        [a sh:PropertyShape ; 
                         sh:path rec:givenName ; 
-                        sh:datatype xsd:string],
+                        sh:datatype xsd:string ; 
+                        sh:maxCount 1 ],
                        [a sh:PropertyShape ; 
                         sh:path rec:image ; 
                         sh:name "image"@en ; 
                         sh:description "URL link to an image that represents the person."@en ; 
-                        sh:datatype xsd:string].
+                        sh:datatype xsd:string ; 
+                        sh:maxCount 1 ].
 rec:PersonalHygiene a rdfs:Class,
                       sh:NodeShape;
                     rdfs:label "Personal hygiene room"@en;
@@ -1062,7 +1105,8 @@ rec:PointEvent a rdfs:Class,
                             sh:path rec:payload ; 
                             sh:name "payload"@en ; 
                             sh:description "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)"@en ; 
-                            sh:datatype xsd:string].
+                            sh:datatype xsd:string ; 
+                            sh:maxCount 1 ].
 rec:PointOfInterest a rdfs:Class,
                       sh:NodeShape;
                     rdfs:label "Point of Interest"@en;
@@ -1088,28 +1132,34 @@ rec:PostalAddress a rdfs:Class,
                   sh:property [a sh:PropertyShape ; 
                                sh:path rec:addressLine1 ; 
                                sh:name "address line 1"@en ; 
-                               sh:datatype xsd:string],
+                               sh:datatype xsd:string ; 
+                               sh:maxCount 1 ],
                               [a sh:PropertyShape ; 
                                sh:path rec:addressLine2 ; 
                                sh:name "address line 2"@en ; 
-                               sh:datatype xsd:string],
+                               sh:datatype xsd:string ; 
+                               sh:maxCount 1 ],
                               [a sh:PropertyShape ; 
                                sh:path rec:city ; 
                                sh:name "city"@en ; 
-                               sh:datatype xsd:string],
+                               sh:datatype xsd:string ; 
+                               sh:maxCount 1 ],
                               [a sh:PropertyShape ; 
                                sh:path rec:country ; 
                                sh:name "country"@en ; 
                                sh:description """The country, e.g., USA, Sweden, Argentina, or optionally a two-letter ISO 3166-1 alpha-2 country code, e.g., \"SE\", \"US\", etc."""@en ; 
-                               sh:datatype xsd:string],
+                               sh:datatype xsd:string ; 
+                               sh:maxCount 1 ],
                               [a sh:PropertyShape ; 
                                sh:path rec:postalCode ; 
                                sh:name "postal code"@en ; 
-                               sh:datatype xsd:string],
+                               sh:datatype xsd:string ; 
+                               sh:maxCount 1 ],
                               [a sh:PropertyShape ; 
                                sh:path rec:region ; 
                                sh:name "region"@en ; 
-                               sh:datatype xsd:string].
+                               sh:datatype xsd:string ; 
+                               sh:maxCount 1 ].
 rec:Premises a rdfs:Class,
                sh:NodeShape;
              rdfs:comment "A premises is an administrative grouping of spaces that are used for some commercial or industrial purpose by a real estate holder or tenant. E.g, a suite of offices, a shop, or an industrial workshop."@en;
@@ -1210,15 +1260,18 @@ rec:ServiceObject a rdfs:Class,
                   sh:property [a sh:PropertyShape ; 
                                sh:path rec:acknowledgedTime ; 
                                sh:name "acknowledged time"@en ; 
-                               sh:datatype xsd:time],
+                               sh:datatype xsd:time ; 
+                               sh:maxCount 1 ],
                               [a sh:PropertyShape ; 
                                sh:path rec:closedTime ; 
                                sh:name "closed time"@en ; 
-                               sh:datatype xsd:time],
+                               sh:datatype xsd:time ; 
+                               sh:maxCount 1 ],
                               [a sh:PropertyShape ; 
                                sh:path rec:createdTime ; 
                                sh:name "created time"@en ; 
-                               sh:datatype xsd:time],
+                               sh:datatype xsd:time ; 
+                               sh:maxCount 1 ],
                               [a sh:PropertyShape ; 
                                sh:path rec:severity ; 
                                sh:name "severity"@en ; 
@@ -1311,11 +1364,13 @@ rec:Space a rdfs:Class,
                        sh:path rec:geometry ; 
                        sh:name "geometry"@en ; 
                        sh:description "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:name ; 
                        sh:name "name"@en ; 
-                       sh:datatype xsd:string],
+                       sh:datatype xsd:string ; 
+                       sh:maxCount 1 ],
                       [a sh:PropertyShape ; 
                        sh:path rec:hasPart ; 
                        sh:nodeKind sh:IRI ; 

@@ -125,36 +125,8 @@ namespace DTDL2SHACL
                         pShape.AddDescription(lang, val);
                     }
                     
-                    // TODO: Property schema translation
-                    var schema = property.Schema;
-                    switch (schema) {
-                        case DTEnumInfo enm:
-                            DTPrimitiveSchemaInfo enumValueType = enm.ValueSchema;
-                            IEnumerable<object> enumValues = enm.EnumValues.Select(enumValueInfo => enumValueInfo.EnumValue);
-                            foreach (object enumValue in enumValues) {
-                                ILiteralNode inNode;
-                                if (enumValueType is DTStringInfo) {
-                                    inNode = ((string)enumValue).ToLiteral(_shapesGraph);
-                                }
-                                else {
-                                    inNode = ((int)enumValue).ToLiteral(_shapesGraph);
-                                }
-                                pShape.AddIn(inNode);
-                            }
-                            break;
-                        case DTComplexSchemaInfo complexSchema:
-                            string propertyNodeShapeLocalName = property.Name[0].ToString().ToUpper() + property.Name.Substring(1) + "Shape";
-                            Uri propertyNodeShapeId = GetShaclId(property.Id, propertyNodeShapeLocalName);
-                            IUriNode? propertyNodeShapeNode = _shapesGraph.GetUriNode(propertyNodeShapeId);
-                            if (propertyNodeShapeNode == null) {
-                                NodeShape propertyNodeShape = NodeShapeFromPropertySchema(propertyNodeShapeId, complexSchema);
-                            }
-                            pShape.AddNode(propertyNodeShapeId);
-                            break;
-                        default:
-                            pShape.AddDatatype(_dtdlSchemaToXsd[schema.GetType()]);
-                            break;
-                    }
+                    // Property schema translation (recursive if needed for, maps, arrays, etc.)
+                    BuildPropertyShape(pShape, property.Schema, property.Name);
                 }
 
                 // Translate DTDL Relationships
@@ -245,7 +217,39 @@ namespace DTDL2SHACL
             }
         }
 
-        private static NodeShape NodeShapeFromPropertySchema(Uri nodeShapeId, DTComplexSchemaInfo schema) {
+        private static void BuildPropertyShape(PropertyShape pShape, DTSchemaInfo schema, string name) {
+            switch (schema) {
+                case DTEnumInfo enm:
+                    DTPrimitiveSchemaInfo enumValueType = enm.ValueSchema;
+                    IEnumerable<object> enumValues = enm.EnumValues.Select(enumValueInfo => enumValueInfo.EnumValue);
+                    foreach (object enumValue in enumValues) {
+                        ILiteralNode inNode;
+                        if (enumValueType is DTStringInfo) {
+                            inNode = ((string)enumValue).ToLiteral(_shapesGraph);
+                        }
+                        else {
+                            inNode = ((int)enumValue).ToLiteral(_shapesGraph);
+                        }
+                        pShape.AddIn(inNode);
+                    }
+                    break;
+                case DTComplexSchemaInfo complexSchema:
+                    string complexSchemaShapeName = name[0].ToString().ToUpper() + name.Substring(1) + "Shape";
+                    Uri complexSchemaShapeId = GetShaclId(schema.Id, complexSchemaShapeName);
+                    IUriNode? complexSchemaShapeNode = _shapesGraph.GetUriNode(complexSchemaShapeId);
+                    if (complexSchemaShapeNode == null) {
+                        NodeShape complexSchemaShape = NodeShapeFromComplexSchema(complexSchemaShapeId, complexSchema);
+                    }
+                    pShape.AddNode(complexSchemaShapeId);
+                    break;
+                default:
+                    pShape.AddDatatype(_dtdlSchemaToXsd[schema.GetType()]);
+                    pShape.MaxCount = 1;
+                    break;
+            }
+        }
+
+        private static NodeShape NodeShapeFromComplexSchema(Uri nodeShapeId, DTComplexSchemaInfo schema) {
             NodeShape outputShape = _shapesGraph.CreateNodeShape(nodeShapeId);
             foreach ((string lang, string val) in schema.DisplayName) {
                 outputShape.AddLabel(lang, val);
@@ -255,18 +259,18 @@ namespace DTDL2SHACL
             }
             switch (schema) {
                 case DTArrayInfo array:
-                    // TODO: Implement array support
+                    // TODO: Implement array support using listShape (see SHACL guide)
                     break;
                 case DTObjectInfo obj:
-                    // TODO: Implement Object fields support
+                    // TODO: Implement Object fields support (iterate over fields)
                     break;
                 case DTMapInfo map:
                     PropertyShape keyShape = outputShape.CreatePropertyShape(GetShaclId(map.Id,map.MapKey.Name));
                     keyShape.AddDatatype(UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+                    keyShape.MaxCount = 1;
 
                     PropertyShape valueShape = outputShape.CreatePropertyShape(GetShaclId(map.Id,map.MapValue.Name));
-                    valueShape.AddDatatype(_dtdlSchemaToXsd[map.MapValue.Schema.GetType()]);
-                    // TODO: add support for complex schemas (possibly generalize earlier code for generating property shapes)
+                    BuildPropertyShape(valueShape, map.MapValue.Schema, map.MapValue.Name);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(schema), "Only schemas of type DTArrayInfo, DTObjectInfo, or DTMapInfo can be translated into SHACL NodeShapes.");
