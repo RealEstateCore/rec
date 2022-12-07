@@ -4,6 +4,7 @@ using Microsoft.Azure.DigitalTwins.Parser;
 using Microsoft.Azure.DigitalTwins.Parser.Models;
 using VDS.RDF;
 using VDS.RDF.Ontology;
+using VDS.RDF.Parsing;
 using VDS.RDF.Shacl;
 using VDS.RDF.Writing;
 using DotNetRdfExtensions;
@@ -32,8 +33,22 @@ namespace DTDL2SHACL
         private static readonly OntologyGraph _ontologyGraph = new OntologyGraph();
         private static readonly ShapesGraph _shapesGraph = new(_ontologyGraph);
 
-        // ID translation machinery
+        // ID translation
         private static Dictionary<string,string> _dtmiBaseToUriBase = new();
+
+        // DT schema translation
+        private static Dictionary<Type,Uri> _dtdlSchemaToXsd = new() {
+            {typeof(DTBooleanInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean)},
+            {typeof(DTDateInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDate)},
+            {typeof(DTDateTimeInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeTime)},
+            {typeof(DTDoubleInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)},
+            {typeof(DTDurationInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDuration)},
+            {typeof(DTFloatInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)},
+            {typeof(DTIntegerInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)},
+            {typeof(DTLongInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeLong)},
+            {typeof(DTStringInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeString)},
+            {typeof(DTTimeInfo), new Uri(XmlSpecsHelper.XmlSchemaDataTypeTime)}
+        };
 
         // Frequently used nodes
         private static readonly IUriNode _shIri = _shapesGraph.CreateUriNode(SH.IRI);
@@ -110,6 +125,35 @@ namespace DTDL2SHACL
                     }
                     
                     // TODO: Property schema translation
+                    var schema = property.Schema;
+                    switch (schema) {
+                        case DTArrayInfo array:
+                            Console.WriteLine("ARRAY");
+                            break;
+                        case DTEnumInfo enm:
+                            DTPrimitiveSchemaInfo enumValueType = enm.ValueSchema;
+                            IEnumerable<object> enumValues = enm.EnumValues.Select(enumValueInfo => enumValueInfo.EnumValue);
+                            foreach (object enumValue in enumValues) {
+                                ILiteralNode inNode;
+                                if (enumValueType is DTStringInfo) {
+                                    inNode = ((string)enumValue).ToLiteral(_shapesGraph);
+                                }
+                                else {
+                                    inNode = ((int)enumValue).ToLiteral(_shapesGraph);
+                                }
+                                pShape.AddIn(inNode);
+                            }
+                            break;
+                        case DTMapInfo map:
+                            Console.WriteLine("MAP");
+                            break;
+                        case DTObjectInfo obj:
+                            Console.WriteLine("OBJECT");
+                            break;
+                        default:
+                            pShape.AddDatatype(_dtdlSchemaToXsd[schema.GetType()]);
+                            break;
+                    }
                 }
 
                 // Translate DTDL Relationships
@@ -156,7 +200,8 @@ namespace DTDL2SHACL
             }
 
             var writer = new CompressingTurtleWriter() {
-                PrettyPrintMode = true
+                PrettyPrintMode = true,
+                CompressionLevel = WriterCompressionLevel.High
             };
             _shapesGraph.NamespaceMap.AddNamespace("sh", new Uri("http://www.w3.org/ns/shacl#"));
             writer.Save(_shapesGraph, _outputPath);

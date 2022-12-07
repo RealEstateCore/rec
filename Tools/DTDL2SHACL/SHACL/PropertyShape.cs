@@ -23,6 +23,12 @@ namespace DotNetRdfExtensions.SHACL
             }
         }
 
+        public void AddDatatype(Uri dt) {
+            IUriNode shDatatype = _graph.CreateUriNode(SH.datatype);
+            IUriNode dtNode = _graph.CreateUriNode(dt);
+            _graph.Assert(_node, shDatatype, dtNode);
+        }
+
         public IEnumerable<IUriNode> Class {
             get {
                 IUriNode shClass = _graph.CreateUriNode(SH.cls);
@@ -53,6 +59,19 @@ namespace DotNetRdfExtensions.SHACL
                 IUriNode shIn = _graph.CreateUriNode(SH.In);
                 IEnumerable<INode> inListRoots = _graph.GetTriplesWithSubjectPredicate(_node, shIn).Objects();
                 return inListRoots.SelectMany(listItem => _graph.GetListItems(listItem));
+            }
+        }
+
+        public void AddIn(INode inNode) {
+            IUriNode shIn = _graph.CreateUriNode(SH.In);
+            List<INode> newInList = new(){inNode};
+            INode? existingInListRoot = _graph.GetTriplesWithSubjectPredicate(_node, shIn).Objects().FirstOrDefault();
+            if (existingInListRoot != null) {
+                _graph.AddToList(existingInListRoot, newInList);
+            }
+            else {
+                INode newInListRoot = _graph.AssertList(newInList);
+                _graph.Assert(_node, shIn, newInListRoot);
             }
         }
 
