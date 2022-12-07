@@ -5,21 +5,21 @@
 @prefix rec: <https://w3id.org/rec#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 
-_:autos115 rdf:first "Major"^^xsd:string;
-           rdf:rest _:autos116.
-_:autos116 rdf:first "Minor"^^xsd:string;
-           rdf:rest _:autos117.
-_:autos117 rdf:first "Severe"^^xsd:string;
+_:autos117 rdf:first "Major"^^xsd:string;
+           rdf:rest _:autos118.
+_:autos118 rdf:first "Minor"^^xsd:string;
+           rdf:rest _:autos119.
+_:autos119 rdf:first "Severe"^^xsd:string;
            rdf:rest rdf:nil.
-_:autos119 rdf:first "Acknowledged"^^xsd:string;
-           rdf:rest _:autos120.
-_:autos120 rdf:first "Closed"^^xsd:string;
-           rdf:rest _:autos121.
-_:autos121 rdf:first "Unacknowledged"^^xsd:string;
+_:autos121 rdf:first "Acknowledged"^^xsd:string;
+           rdf:rest _:autos122.
+_:autos122 rdf:first "Closed"^^xsd:string;
+           rdf:rest _:autos123.
+_:autos123 rdf:first "Unacknowledged"^^xsd:string;
            rdf:rest rdf:nil.
-_:autos61 rdf:first "Down"^^xsd:string;
-          rdf:rest _:autos62.
-_:autos62 rdf:first "Up"^^xsd:string;
+_:autos63 rdf:first "Down"^^xsd:string;
+          rdf:rest _:autos64.
+_:autos64 rdf:first "Up"^^xsd:string;
           rdf:rest rdf:nil.
 rec:AccessControlZone a rdfs:Class,
                         sh:NodeShape;
@@ -516,7 +516,10 @@ rec:CustomTagsShape a rdfs:Class,
                       sh:NodeShape;
                     sh:property [a sh:PropertyShape ; 
                                  sh:path rec:tagName ; 
-                                 sh:datatype xsd:string].
+                                 sh:datatype xsd:string],
+                                [a sh:PropertyShape ; 
+                                 sh:path rec:tagValue ; 
+                                 sh:datatype xsd:boolean].
 rec:DataServerRoom a rdfs:Class,
                      sh:NodeShape;
                    rdfs:label "Data server room"@en;
@@ -600,7 +603,7 @@ rec:ElevatorTrip a rdfs:Class,
                              [a sh:PropertyShape ; 
                               sh:path rec:tripDirection ; 
                               sh:name "trip direction"@en ; 
-                              sh:in _:autos61].
+                              sh:in _:autos63].
 rec:EndTable a rdfs:Class,
                sh:NodeShape;
              rdfs:label "End table"@en;
@@ -684,6 +687,9 @@ rec:ExternalIdsShape a rdfs:Class,
                        sh:NodeShape;
                      sh:property [a sh:PropertyShape ; 
                                   sh:path rec:externalIdName ; 
+                                  sh:datatype xsd:string],
+                                 [a sh:PropertyShape ; 
+                                  sh:path rec:externalIdValue ; 
                                   sh:datatype xsd:string].
 rec:Facade a rdfs:Class,
              sh:NodeShape;
@@ -1216,11 +1222,11 @@ rec:ServiceObject a rdfs:Class,
                               [a sh:PropertyShape ; 
                                sh:path rec:severity ; 
                                sh:name "severity"@en ; 
-                               sh:in _:autos115],
+                               sh:in _:autos117],
                               [a sh:PropertyShape ; 
                                sh:path rec:status ; 
                                sh:name "status"@en ; 
-                               sh:in _:autos119],
+                               sh:in _:autos121],
                               [a sh:PropertyShape ; 
                                sh:path rec:acknowledgedBy ; 
                                sh:nodeKind sh:IRI ; 

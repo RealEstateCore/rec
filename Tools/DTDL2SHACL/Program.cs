@@ -263,8 +263,10 @@ namespace DTDL2SHACL
                 case DTMapInfo map:
                     PropertyShape keyShape = outputShape.CreatePropertyShape(GetShaclId(map.Id,map.MapKey.Name));
                     keyShape.AddDatatype(UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
-                    
-                    // Todo implement Map Value support
+
+                    PropertyShape valueShape = outputShape.CreatePropertyShape(GetShaclId(map.Id,map.MapValue.Name));
+                    valueShape.AddDatatype(_dtdlSchemaToXsd[map.MapValue.Schema.GetType()]);
+                    // TODO: add support for complex schemas (possibly generalize earlier code for generating property shapes)
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(schema), "Only schemas of type DTArrayInfo, DTObjectInfo, or DTMapInfo can be translated into SHACL NodeShapes.");
