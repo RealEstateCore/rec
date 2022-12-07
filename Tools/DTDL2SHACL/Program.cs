@@ -262,7 +262,11 @@ namespace DTDL2SHACL
                     // TODO: Implement array support using listShape (see SHACL guide)
                     break;
                 case DTObjectInfo obj:
-                    // TODO: Implement Object fields support (iterate over fields)
+                    foreach (DTFieldInfo field in obj.Fields) {
+                        Uri path = GetShaclId(field.Id, field.Name);
+                        PropertyShape pShape = outputShape.CreatePropertyShape(path);
+                        BuildPropertyShape(pShape, field.Schema, field.Name);
+                    }
                     break;
                 case DTMapInfo map:
                     PropertyShape keyShape = outputShape.CreatePropertyShape(GetShaclId(map.Id,map.MapKey.Name));
