@@ -29,11 +29,7 @@ A confined building structure.
 
 ### Inherited Relationships
 * **[Architecture](../Architecture.md):** address, adjacentElement, architectedBy, constructedBy, containsElement, documentation, hasPoint, intersectingElement, isFedBy, operatedBy, ownedBy
-<<<<<<< HEAD
-* **[Space](../../Space.md):** georeference, hasPart, isLocationOf, isPartOf
-=======
-* **[Space](../../Space.md):** geometry, hasPart, isLocationOf, isPartOf
->>>>>>> main
+* **[Space](../../Space.md):** geometry, georeference, hasPart, isLocationOf, isPartOf
 
 ---
 

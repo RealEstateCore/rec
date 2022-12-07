@@ -1658,16 +1658,6 @@
       {
         "@type": "Relationship",
         "description": {
-<<<<<<< HEAD
-          "en": "A georeference creates a relationship between the local coordinate system used within a building (e.g., measured in meters) and a geographic coordinate system (e.g., lat, long, alt), such that locally placed Spaces can be resolved and rendered in that geographic coordinate system (e.g., for mapping purposes)."
-        },
-        "displayName": {
-          "en": "georeference"
-        },
-        "maxMultiplicity": 1,
-        "name": "georeference",
-        "target": "dtmi:org:w3id:rec:Georeference;1",
-=======
           "en": "Polygon representing the spatial extent of this Space."
         },
         "displayName": {
@@ -1676,7 +1666,19 @@
         "maxMultiplicity": 1,
         "name": "geometry",
         "target": "dtmi:org:w3id:rec:Geometry;1",
->>>>>>> main
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "description": {
+          "en": "A georeference creates a relationship between the local coordinate system used within a building (e.g., measured in meters) and a geographic coordinate system (e.g., lat, long, alt), such that locally placed Spaces can be resolved and rendered in that geographic coordinate system (e.g., for mapping purposes)."
+        },
+        "displayName": {
+          "en": "georeference"
+        },
+        "maxMultiplicity": 1,
+        "name": "georeference",
+        "target": "dtmi:org:w3id:rec:Georeference;1",
         "writable": true
       },
       {

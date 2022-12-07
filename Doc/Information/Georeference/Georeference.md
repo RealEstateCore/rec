@@ -17,7 +17,7 @@ A georeference creates a relationship between a local coordinate system into a g
 ## Properties
 
 ### Inherited Properties
-* **[Information](../Information.md):** customTags, externalIds, name
+* **[Information](../Information.md):** customProperties, customTags, identifiers, name
 
 ---
 

@@ -390,17 +390,13 @@
     * [ArchitectureCapacity](Information/ArchitectureCapacity.md)
     * [Document](Information/Document/Document.md)
         * [LeaseContract](Information/Document/LeaseContract.md)
-<<<<<<< HEAD
-    * [Georeference](Information/Georeference/Georeference.md)
-        * [Geotransform](Information/Georeference/Geotransform.md)
-=======
     * [Geometry](Information/Geometry/Geometry.md)
         * [MultiPoint](Information/Geometry/MultiPoint.md)
         * [MultiPolygon](Information/Geometry/MultiPolygon.md)
         * [Point](Information/Geometry/Point.md)
         * [Polygon](Information/Geometry/Polygon.md)
-    * [Georeference](Information/Georeference.md)
->>>>>>> main
+    * [Georeference](Information/Georeference/Georeference.md)
+        * [Geotransform](Information/Georeference/Geotransform.md)
     * [PointOfInterest](Information/PointOfInterest.md)
     * [PostalAddress](Information/PostalAddress.md)
     * [ServiceObject](Information/ServiceObject/ServiceObject.md)

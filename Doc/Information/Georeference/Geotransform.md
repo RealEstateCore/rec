@@ -20,7 +20,7 @@ A transform following GDAL's Affine Transform that transforms a local coordinate
 |xRotationalScaleFactor|**en**: x rotational scale factor|**en**: Value will be zero if the local coordinate system is north-aligned.|double|True|
 |yRotationalScaleFactor|**en**: y rotational scale factor|**en**: Value will be zero if the local coordinate system is north-aligned.|double|True|
 ### Inherited Properties
-* **[Information](../Information.md):** customTags, externalIds, name
+* **[Information](../Information.md):** customProperties, customTags, identifiers, name
 
 ---
 

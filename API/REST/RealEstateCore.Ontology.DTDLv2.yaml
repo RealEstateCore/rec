@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: "4.0.0.8"
+  version: "4.0.0.9"
   title: RealEstateCore.Ontology.DTDLv2
   license:
     name: BSD-3-Clause
@@ -456,6 +456,16 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Geometry;1
+        georeference:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Georeference;1
         hasPart:
           type: array
           items:
@@ -489,8 +499,6 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Space;1
-        georeference:
-          $ref: '#/components/schemas/Georeference'
         customTags:
           type: string
         externalIds:
@@ -817,6 +825,16 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Geometry;1
+        georeference:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Georeference;1
         hasPart:
           type: array
           items:
@@ -854,8 +872,6 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
-        georeference:
-          $ref: '#/components/schemas/Georeference'
         customTags:
           type: string
         externalIds:
@@ -1014,6 +1030,16 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Geometry;1
+        georeference:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Georeference;1
         hasPart:
           type: array
           items:
@@ -1051,8 +1077,6 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
-        georeference:
-          $ref: '#/components/schemas/Georeference'
         customTags:
           type: string
         externalIds:
@@ -1518,6 +1542,16 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Geometry;1
+        georeference:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Georeference;1
         hasPart:
           type: array
           items:
@@ -1555,8 +1589,6 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
-        georeference:
-          $ref: '#/components/schemas/Georeference'
         customTags:
           type: string
         externalIds:
@@ -1715,6 +1747,16 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Geometry;1
+        georeference:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Georeference;1
         hasPart:
           type: array
           items:
@@ -1752,8 +1794,6 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
-        georeference:
-          $ref: '#/components/schemas/Georeference'
         levelNumber:
           type: integer
           format: int32
@@ -1915,6 +1955,16 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Geometry;1
+        georeference:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Georeference;1
         hasPart:
           type: array
           items:
@@ -1952,8 +2002,6 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
-        georeference:
-          $ref: '#/components/schemas/Georeference'
         customTags:
           type: string
         externalIds:
@@ -2112,6 +2160,16 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Geometry;1
+        georeference:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Georeference;1
         hasPart:
           type: array
           items:
@@ -2149,42 +2207,9 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
-        georeference:
-          $ref: '#/components/schemas/Georeference'
         customTags:
           type: string
         externalIds:
-          type: string
-        name:
-          type: string
-    Georeference:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:Georeference;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/Georeference.jsonld
-        alt:
-          type: number
-          format: float
-        bearing:
-          type: number
-          format: float
-        lat:
-          type: number
-          format: float
-        long:
-          type: number
-          format: float
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        identifiers:
           type: string
         name:
           type: string
@@ -4769,6 +4794,11 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: georeference
+        description: Filter value on relationship 'georeference'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
       - name: hasPart
         description: Filter value on relationship 'hasPart'.
         schema:
@@ -6801,6 +6831,11 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: georeference
+        description: Filter value on relationship 'georeference'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
       - name: hasPart
         description: Filter value on relationship 'hasPart'.
         schema:
@@ -7352,6 +7387,11 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: georeference
+        description: Filter value on relationship 'georeference'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
       - name: hasPart
         description: Filter value on relationship 'hasPart'.
         schema:
@@ -7663,6 +7703,11 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: georeference
+        description: Filter value on relationship 'georeference'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
       - name: hasPart
         description: Filter value on relationship 'hasPart'.
         schema:
@@ -7965,6 +8010,11 @@ paths:
         in: query
       - name: geometry
         description: Filter value on relationship 'geometry'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: georeference
+        description: Filter value on relationship 'georeference'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
@@ -8273,6 +8323,11 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: georeference
+        description: Filter value on relationship 'georeference'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
       - name: hasPart
         description: Filter value on relationship 'hasPart'.
         schema:
@@ -8575,6 +8630,11 @@ paths:
         in: query
       - name: geometry
         description: Filter value on relationship 'geometry'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: georeference
+        description: Filter value on relationship 'georeference'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
