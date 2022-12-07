@@ -50,11 +50,11 @@ rec:Agent a rdfs:Class,
           sh:property [a sh:PropertyShape ; 
                        sh:path rec:customTags ; 
                        sh:name "Custom Tags"@en ; 
-                       sh:node rec:customTagsShape],
+                       sh:node rec:CustomTagsShape],
                       [a sh:PropertyShape ; 
                        sh:path rec:externalIds ; 
                        sh:name "External IDs"@en ; 
-                       sh:node rec:externalIdsShape],
+                       sh:node rec:ExternalIdsShape],
                       [a sh:PropertyShape ; 
                        sh:path rec:name ; 
                        sh:name "name"@en ; 
@@ -215,11 +215,11 @@ rec:Asset a rdfs:Class,
                       [a sh:PropertyShape ; 
                        sh:path rec:customTags ; 
                        sh:name "Custom Tags"@en ; 
-                       sh:node rec:customTagsShape],
+                       sh:node rec:CustomTagsShape],
                       [a sh:PropertyShape ; 
                        sh:path rec:externalIds ; 
                        sh:name "External IDs"@en ; 
-                       sh:node rec:externalIdsShape],
+                       sh:node rec:ExternalIdsShape],
                       [a sh:PropertyShape ; 
                        sh:path rec:geometry ; 
                        sh:name "geometry"@en ; 
@@ -369,11 +369,11 @@ rec:BuildingElement a rdfs:Class,
                     sh:property [a sh:PropertyShape ; 
                                  sh:path rec:customTags ; 
                                  sh:name "Custom Tags"@en ; 
-                                 sh:node rec:customTagsShape],
+                                 sh:node rec:CustomTagsShape],
                                 [a sh:PropertyShape ; 
                                  sh:path rec:externalIds ; 
                                  sh:name "External IDs"@en ; 
-                                 sh:node rec:externalIdsShape],
+                                 sh:node rec:ExternalIdsShape],
                                 [a sh:PropertyShape ; 
                                  sh:path rec:name ; 
                                  sh:name "name"@en ; 
@@ -470,11 +470,11 @@ rec:Collection a rdfs:Class,
                sh:property [a sh:PropertyShape ; 
                             sh:path rec:customTags ; 
                             sh:name "Custom Tags"@en ; 
-                            sh:node rec:customTagsShape],
+                            sh:node rec:CustomTagsShape],
                            [a sh:PropertyShape ; 
                             sh:path rec:externalIds ; 
                             sh:name "External IDs"@en ; 
-                            sh:node rec:externalIdsShape],
+                            sh:node rec:ExternalIdsShape],
                            [a sh:PropertyShape ; 
                             sh:path rec:name ; 
                             sh:name "name"@en ; 
@@ -512,6 +512,11 @@ rec:CopyingRoom a rdfs:Class,
                   sh:NodeShape;
                 rdfs:label "Copying room"@en;
                 rdfs:subClassOf rec:Room.
+rec:CustomTagsShape a rdfs:Class,
+                      sh:NodeShape;
+                    sh:property [a sh:PropertyShape ; 
+                                 sh:path rec:tagName ; 
+                                 sh:datatype xsd:string].
 rec:DataServerRoom a rdfs:Class,
                      sh:NodeShape;
                    rdfs:label "Data server room"@en;
@@ -633,7 +638,7 @@ rec:Event a rdfs:Class,
           sh:property [a sh:PropertyShape ; 
                        sh:path rec:customTags ; 
                        sh:name "Custom Tags"@en ; 
-                       sh:node rec:customTagsShape],
+                       sh:node rec:CustomTagsShape],
                       [a sh:PropertyShape ; 
                        sh:path rec:end ; 
                        sh:name "end"@en ; 
@@ -642,7 +647,7 @@ rec:Event a rdfs:Class,
                       [a sh:PropertyShape ; 
                        sh:path rec:externalIds ; 
                        sh:name "External IDs"@en ; 
-                       sh:node rec:externalIdsShape],
+                       sh:node rec:ExternalIdsShape],
                       [a sh:PropertyShape ; 
                        sh:path rec:name ; 
                        sh:name "name"@en ; 
@@ -675,6 +680,11 @@ rec:ExhibitionRoom a rdfs:Class,
                      sh:NodeShape;
                    rdfs:label "Exhibition room"@en;
                    rdfs:subClassOf rec:Room.
+rec:ExternalIdsShape a rdfs:Class,
+                       sh:NodeShape;
+                     sh:property [a sh:PropertyShape ; 
+                                  sh:path rec:externalIdName ; 
+                                  sh:datatype xsd:string].
 rec:Facade a rdfs:Class,
              sh:NodeShape;
            rdfs:label "Facade"@en;
@@ -780,11 +790,11 @@ rec:Information a rdfs:Class,
                 sh:property [a sh:PropertyShape ; 
                              sh:path rec:customTags ; 
                              sh:name "Custom Tags"@en ; 
-                             sh:node rec:customTagsShape],
+                             sh:node rec:CustomTagsShape],
                             [a sh:PropertyShape ; 
                              sh:path rec:externalIds ; 
                              sh:name "External IDs"@en ; 
-                             sh:node rec:externalIdsShape],
+                             sh:node rec:ExternalIdsShape],
                             [a sh:PropertyShape ; 
                              sh:path rec:name ; 
                              sh:name "name"@en ; 
@@ -1286,11 +1296,11 @@ rec:Space a rdfs:Class,
           sh:property [a sh:PropertyShape ; 
                        sh:path rec:customTags ; 
                        sh:name "Custom Tags"@en ; 
-                       sh:node rec:customTagsShape],
+                       sh:node rec:CustomTagsShape],
                       [a sh:PropertyShape ; 
                        sh:path rec:externalIds ; 
                        sh:name "External IDs"@en ; 
-                       sh:node rec:externalIdsShape],
+                       sh:node rec:ExternalIdsShape],
                       [a sh:PropertyShape ; 
                        sh:path rec:geometry ; 
                        sh:name "geometry"@en ; 
@@ -1431,13 +1441,3 @@ rec:Zone a rdfs:Class,
          rdfs:comment "A sub-zone within or outside of a building defined to support some technology and/or use, e.g., an HVAC zone, a parking space, a security zone, etc."@en;
          rdfs:label "Zone"@en;
          rdfs:subClassOf rec:Architecture.
-rec:customTagsShape a rdfs:Class,
-                      sh:NodeShape;
-                    sh:property [a sh:PropertyShape ; 
-                                 sh:path rec:tagName ; 
-                                 sh:datatype xsd:string].
-rec:externalIdsShape a rdfs:Class,
-                       sh:NodeShape;
-                     sh:property [a sh:PropertyShape ; 
-                                  sh:path rec:externalIdName ; 
-                                  sh:datatype xsd:string].

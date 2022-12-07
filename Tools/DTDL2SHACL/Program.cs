@@ -7,6 +7,7 @@ using VDS.RDF.Ontology;
 using VDS.RDF.Parsing;
 using VDS.RDF.Shacl;
 using VDS.RDF.Writing;
+using System.Globalization;
 using DotNetRdfExtensions;
 
 namespace DTDL2SHACL 
@@ -127,11 +128,6 @@ namespace DTDL2SHACL
                     // TODO: Property schema translation
                     var schema = property.Schema;
                     switch (schema) {
-                        case DTArrayInfo array:
-                            NodeShape arrayShape = NodeShapeFromPropertySchema(property, array);
-                            pShape.AddNode(arrayShape.Uri);
-                            // TODO: Support DTDL arrays through creating a new Shape corresponding w/ array node schema
-                            break;
                         case DTEnumInfo enm:
                             DTPrimitiveSchemaInfo enumValueType = enm.ValueSchema;
                             IEnumerable<object> enumValues = enm.EnumValues.Select(enumValueInfo => enumValueInfo.EnumValue);
@@ -146,12 +142,14 @@ namespace DTDL2SHACL
                                 pShape.AddIn(inNode);
                             }
                             break;
-                        case DTMapInfo map:
-                            NodeShape mapShape = NodeShapeFromPropertySchema(property, map);
-                            pShape.AddNode(mapShape.Uri);
-                            break;
-                        case DTObjectInfo obj:
-                            // TODO: Support DTDL objects through creating a new Shape corresponding w/ object schema
+                        case DTComplexSchemaInfo complexSchema:
+                            string propertyNodeShapeLocalName = property.Name[0].ToString().ToUpper() + property.Name.Substring(1) + "Shape";
+                            Uri propertyNodeShapeId = GetShaclId(property.Id, propertyNodeShapeLocalName);
+                            IUriNode? propertyNodeShapeNode = _shapesGraph.GetUriNode(propertyNodeShapeId);
+                            if (propertyNodeShapeNode == null) {
+                                NodeShape propertyNodeShape = NodeShapeFromPropertySchema(propertyNodeShapeId, complexSchema);
+                            }
+                            pShape.AddNode(propertyNodeShapeId);
                             break;
                         default:
                             pShape.AddDatatype(_dtdlSchemaToXsd[schema.GetType()]);
@@ -247,10 +245,8 @@ namespace DTDL2SHACL
             }
         }
 
-        private static NodeShape NodeShapeFromPropertySchema(DTPropertyInfo sourceProperty, DTComplexSchemaInfo schema) {
-            string shapeIdRoot = GetShaclId(sourceProperty.Id).AbsoluteUri;
-            Uri shapeId = new Uri($"{shapeIdRoot}Shape");
-            NodeShape outputShape = _shapesGraph.CreateNodeShape(shapeId);
+        private static NodeShape NodeShapeFromPropertySchema(Uri nodeShapeId, DTComplexSchemaInfo schema) {
+            NodeShape outputShape = _shapesGraph.CreateNodeShape(nodeShapeId);
             foreach ((string lang, string val) in schema.DisplayName) {
                 outputShape.AddLabel(lang, val);
             }
@@ -265,15 +261,9 @@ namespace DTDL2SHACL
                     // TODO: Implement Object fields support
                     break;
                 case DTMapInfo map:
-                    PropertyShape? keyShape = outputShape.PropertyShapes.Where(ps => ps.Path.ToString().EndsWith(map.MapKey.Name)).FirstOrDefault(); 
-                    if (keyShape == null) {
-                        keyShape = outputShape.CreatePropertyShape(GetShaclId(map.Id,map.MapKey.Name));
-                        keyShape.AddDatatype(UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
-                    }
-                    else {
-                        IUriNode shProperty = _shapesGraph.CreateUriNode(SH.property);
-                        _shapesGraph.Assert(outputShape.Node, shProperty, keyShape.Node);
-                    }
+                    PropertyShape keyShape = outputShape.CreatePropertyShape(GetShaclId(map.Id,map.MapKey.Name));
+                    keyShape.AddDatatype(UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+                    
                     // Todo implement Map Value support
                     break;
                 default:
