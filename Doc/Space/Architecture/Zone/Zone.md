@@ -37,7 +37,7 @@ A sub-zone within or outside of a building defined to support some technology an
 ## Properties
 
 ### Inherited Properties
-* **[Space](../../Space.md):** customTags, externalIds, geometry, name
+* **[Space](../../Space.md):** customProperties, customTags, geometry, identifiers, name
 
 ---
 

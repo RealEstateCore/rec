@@ -26,7 +26,7 @@ An alarm that indicates that the air flow is lower than normal.
 
 ### Inherited Properties
 * **[Alarm](../../../Alarm.md):** lastKnownValue
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

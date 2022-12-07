@@ -23,7 +23,7 @@ A parameter determining the difference between upper and lower limits of tempera
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Parameter](../Parameter.md):** lastKnownValue
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

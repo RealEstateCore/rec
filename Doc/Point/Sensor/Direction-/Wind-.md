@@ -23,7 +23,7 @@ Measures the direction of wind in degrees relative to North
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Direction_Sensor](Direction_Sensor.md):** lastKnownValue
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

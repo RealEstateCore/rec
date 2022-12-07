@@ -66,7 +66,7 @@ A Sensor is an input point that represents the value of a device or instrument d
 ## Properties
 
 ### Inherited Properties
-* **[Point](../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

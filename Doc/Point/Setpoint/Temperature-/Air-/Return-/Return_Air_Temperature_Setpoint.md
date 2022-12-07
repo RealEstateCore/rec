@@ -26,7 +26,7 @@ The target temperature for return air, often used as an approximation of zone ai
 ## Properties
 
 ### Inherited Properties
-* **[Point](../../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 * **[Setpoint](../../../Setpoint.md):** lastKnownValue
 
 ---

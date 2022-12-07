@@ -22,7 +22,7 @@
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Collection](Collection.md):** customTags, externalIds, name
+* **[Collection](Collection.md):** customProperties, customTags, identifiers, name
 
 ---
 

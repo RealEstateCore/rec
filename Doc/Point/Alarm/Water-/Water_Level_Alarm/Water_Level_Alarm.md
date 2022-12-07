@@ -27,7 +27,7 @@ An alarm that indicates a high or low water level e.g. in a basin
 
 ### Inherited Properties
 * **[Alarm](../../Alarm.md):** lastKnownValue
-* **[Point](../../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

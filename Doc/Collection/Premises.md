@@ -22,7 +22,7 @@ A premises is an administrative grouping of spaces that are used for some commer
 ## Properties
 
 ### Inherited Properties
-* **[Collection](Collection.md):** customTags, externalIds, name
+* **[Collection](Collection.md):** customProperties, customTags, identifiers, name
 
 ---
 

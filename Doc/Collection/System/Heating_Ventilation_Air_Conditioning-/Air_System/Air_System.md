@@ -25,7 +25,7 @@ The equipment, distribution systems and terminals that introduce or exhaust, eit
 ## Properties
 
 ### Inherited Properties
-* **[Collection](../../../Collection.md):** customTags, externalIds, name
+* **[Collection](../../../Collection.md):** customProperties, customTags, identifiers, name
 
 ---
 

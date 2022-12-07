@@ -17,7 +17,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[Agent](../Agent.md):** customTags, externalIds, name
+* **[Agent](../Agent.md):** customProperties, customTags, identifiers, name
 * **[Organization](Organization.md):** logo
 
 ---

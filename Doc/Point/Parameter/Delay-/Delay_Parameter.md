@@ -25,7 +25,7 @@ A parameter determining how long to delay a subsequent action to take place afte
 
 ### Inherited Properties
 * **[Parameter](../Parameter.md):** lastKnownValue
-* **[Point](../../Point.md):** aggregate, customTags, externalIds, hasQuantity, hasSubstance, name
+* **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 

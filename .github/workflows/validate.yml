@@ -1,0 +1,24 @@
+name: Validate DTDL sources
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: 
+      - "main"
+    paths:
+      - "Source/DTDL**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Build DTDL Validator
+      run: dotnet build ./Tools/DTDLValidator/
+    - name: Run DTDL Validator on REC DTDLv2
+      run: dotnet run --project ./Tools/DTDLValidator/  --recursive true --directory ./Source/DTDLv2/
