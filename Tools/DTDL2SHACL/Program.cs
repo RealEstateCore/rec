@@ -7,7 +7,6 @@ using VDS.RDF.Ontology;
 using VDS.RDF.Parsing;
 using VDS.RDF.Shacl;
 using VDS.RDF.Writing;
-using System.Globalization;
 using DotNetRdfExtensions;
 
 namespace DTDL2SHACL 
