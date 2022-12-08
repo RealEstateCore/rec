@@ -238,7 +238,7 @@ namespace DTDL2SHACL
                     Uri complexSchemaShapeId = GetShaclId(schema.Id, complexSchemaShapeName);
                     IUriNode? complexSchemaShapeNode = _shapesGraph.GetUriNode(complexSchemaShapeId);
                     if (complexSchemaShapeNode == null) {
-                        NodeShape complexSchemaShape = NodeShapeFromComplexSchema(complexSchemaShapeId, complexSchema);
+                        NodeShape complexSchemaShape = NodeShapeFromComplexSchema(complexSchemaShapeId, complexSchema, complexSchemaShapeName);
                     }
                     pShape.AddNode(complexSchemaShapeId);
                     break;
@@ -249,7 +249,7 @@ namespace DTDL2SHACL
             }
         }
 
-        private static NodeShape NodeShapeFromComplexSchema(Uri nodeShapeId, DTComplexSchemaInfo schema) {
+        private static NodeShape NodeShapeFromComplexSchema(Uri nodeShapeId, DTComplexSchemaInfo schema, string name) {
             NodeShape outputShape = _shapesGraph.CreateNodeShape(nodeShapeId);
             foreach ((string lang, string val) in schema.DisplayName) {
                 outputShape.AddLabel(lang, val);
@@ -259,31 +259,21 @@ namespace DTDL2SHACL
             }
             switch (schema) {
                 case DTArrayInfo array:
-                    string listName;
-                    if (array.ElementSchema is DTPrimitiveSchemaInfo) {
-                        DTPrimitiveSchemaInfo elementSchema = (DTPrimitiveSchemaInfo)array.ElementSchema;
-                        Uri xsdUri = _dtdlSchemaToXsd[elementSchema.GetType()];
-                        string xsdType = xsdUri.Fragment;
-                        listName = xsdType.First().ToString().ToUpper() + xsdType.Substring(1) + "List";
+
+                    PropertyShape firstShape = outputShape.CreatePropertyShape(RDF.first);
+                    if (array.ElementSchema is DTComplexSchemaInfo) {
+                        BuildPropertyShape(firstShape, array.ElementSchema, name.Replace("Shape","Entry"));
+                        firstShape.MaxCount = 1;
                     }
                     else {
-                        
+                        BuildPropertyShape(firstShape, array.ElementSchema, string.Empty);
                     }
-                    NodeShape listShape = _shapesGraph.CreateNodeShape(GetShaclId(array.Id, listName));
-                    PropertyShape firstShape = listShape.CreatePropertyShape(RDF.first);
-                    BuildPropertyShape(firstShape, array.ElementSchema, )
-                    PropertyShape restShape = listShape.CreatePropertyShape(RDF.rest);
-                    restShape.AddNode(listShape.Uri);
-
-                    if (array.ElementSchema is DTPrimitiveSchemaInfo) {
-                        
-
-                        
-                    }
-                    else {
-
-                    }
-                    // TODO: Implement array support using listShape (see SHACL guide)
+                    
+                    PropertyShape restShape = outputShape.CreatePropertyShape(RDF.rest);
+                    restShape.MaxCount = 1;
+                    IUriNode rdfNil = _shapesGraph.CreateUriNode(RDF.nil);
+                    restShape.AddIn(outputShape.Node);
+                    restShape.AddIn(rdfNil);
                     break;
                 case DTObjectInfo obj:
                     foreach (DTFieldInfo field in obj.Fields) {
