@@ -1,4 +1,4 @@
-@base <https://w3id.org/rec#>.
+@base <https://w3id.org/rec>.
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -29,6 +29,7 @@ _:autos71 rdf:first "Down"^^xsd:string;
           rdf:rest _:autos72.
 _:autos72 rdf:first "Up"^^xsd:string;
           rdf:rest rdf:nil.
+<https://w3id.org/rec> a owl:Ontology.
 rec:AccelerationObservation a sh:NodeShape;
                             rdfs:label "Acceleration observation"@en;
                             rdfs:subClassOf rec:ObservationEvent;

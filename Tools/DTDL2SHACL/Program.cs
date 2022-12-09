@@ -101,7 +101,7 @@ namespace DTDL2SHACL
                     // First mapping entry is set as target graph base URI.
                     if (i == 1)
                     {
-                        ontologyGraph.BaseUri = new Uri(uriBase);
+                        ontologyGraph.BaseUri = new Uri(uriBase.TrimEnd(new char[] { '#', '/' }));
                     }
 
                     dtmiBaseToUriBase.Add(dtmiBase, uriBase);
@@ -110,8 +110,8 @@ namespace DTDL2SHACL
             }
 
             // Create owl:Ontology entity in the output ontologyGraph
-            //IUriNode ontologyNode = ontologyGraph.CreateUriNode(ontologyGraph.BaseUri);
-            //outputOntology = new Ontology(ontologyNode, ontologyGraph);
+            IUriNode ontologyNode = ontologyGraph.CreateUriNode(ontologyGraph.BaseUri);
+            outputOntology = new Ontology(ontologyNode, ontologyGraph);
 
             if (!string.IsNullOrEmpty(nuspecPath))
             {
