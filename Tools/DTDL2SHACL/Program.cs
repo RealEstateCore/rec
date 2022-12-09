@@ -307,18 +307,20 @@ namespace DTDL2SHACL
                     }
                     else
                     {
+                        outputOntology!.AddLabel(idValue);
+                        outputOntology!.AddVersionInfo(versionValue);
+                        outputOntology!.AddComment(descriptionValue);
                         /*
-                        OntologyAnnotations.Add("id", idValue);
-                        OntologyAnnotations.Add("version", versionValue);
-                        OntologyAnnotations.Add("description", descriptionValue);
                         OntologyAnnotations.Add("authors", authorsValue);
                         */
 
                         // Parse non-mandatory fields
                         XmlNode? titleNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:title/text()", namespaces);
-                        if (titleNode != null)
+                        if (titleNode != null && titleNode.Value != null)
                         {
-                            //OntologyAnnotations.Add("title", titleNode.Value ?? string.Empty);
+                            // Title takes priority over ID when assigning name.
+                            outputOntology.ClearLabels();
+                            outputOntology.AddLabel(titleNode.Value);
                         }
 
                         XmlNode? licenseNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:license/text()", namespaces);
