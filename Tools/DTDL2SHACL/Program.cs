@@ -4,6 +4,7 @@
 
 namespace DTDL2SHACL
 {
+    using System.Xml;
     using CommandLine;
     using Microsoft.Azure.DigitalTwins.Parser;
     using Microsoft.Azure.DigitalTwins.Parser.Models;
@@ -39,11 +40,13 @@ namespace DTDL2SHACL
         private static string inputPath = string.Empty;
         private static string outputPath = string.Empty;
         private static string namespaceMappingsPath = string.Empty;
+        private static string nuspecPath = string.Empty;
 
         // Data fields
         private static IReadOnlyDictionary<Dtmi, DTEntityInfo>? ontology;
         private static OntologyGraph ontologyGraph = new OntologyGraph();
         private static ShapesGraph shapesGraph = new (ontologyGraph);
+        private static Ontology? outputOntology;
 
         // ID translation
         private static Dictionary<string, string> dtmiBaseToUriBase = new ();
@@ -63,6 +66,7 @@ namespace DTDL2SHACL
                     inputPath = options.InputPath;
                     outputPath = options.OutputPath;
                     namespaceMappingsPath = options.NamespaceMappingsPath;
+                    nuspecPath = options.NuspecPath;
                 })
                 .WithNotParsed(errors =>
                 {
@@ -94,9 +98,24 @@ namespace DTDL2SHACL
                     string uriBase = mappingRowComponents[1];
                     string prefix = mappingRowComponents[2];
 
+                    // First mapping entry is set as target graph base URI.
+                    if (i == 1)
+                    {
+                        ontologyGraph.BaseUri = new Uri(uriBase);
+                    }
+
                     dtmiBaseToUriBase.Add(dtmiBase, uriBase);
                     shapesGraph.NamespaceMap.AddNamespace(prefix, new Uri(uriBase));
                 }
+            }
+
+            // Create owl:Ontology entity in the output ontologyGraph
+            //IUriNode ontologyNode = ontologyGraph.CreateUriNode(ontologyGraph.BaseUri);
+            //outputOntology = new Ontology(ontologyNode, ontologyGraph);
+
+            if (!string.IsNullOrEmpty(nuspecPath))
+            {
+                ParseNuspec();
             }
 
             foreach (DTInterfaceInfo iface in ontology.Values
@@ -245,6 +264,76 @@ namespace DTDL2SHACL
                 Console.Error.WriteLine(string.Join("\n\n", parserEx.Errors.Select(error => error.Message)));
                 Environment.Exit(1);
                 return null;
+            }
+        }
+
+        private static void ParseNuspec()
+        {
+            // TODO: Populate owl:Ontology with values in ParseNuspec()
+            using var reader = new StreamReader(nuspecPath);
+            using var xmlReader = XmlReader.Create(reader);
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(xmlReader);
+            XmlNamespaceManager namespaces = new XmlNamespaceManager(doc.NameTable);
+            namespaces.AddNamespace("nuspec", "http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd");
+            if (doc.DocumentElement == null)
+            {
+                throw new FormatException("Nuspec file malformed; missing document root.");
+            }
+            else
+            {
+                XmlElement docRoot = doc.DocumentElement;
+
+                XmlNode? idNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:id/text()", namespaces);
+                XmlNode? versionNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:version/text()", namespaces);
+                XmlNode? descriptionNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:description/text()", namespaces);
+                XmlNode? authorsNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:authors/text()", namespaces);
+
+                if (idNode == null || versionNode == null || descriptionNode == null || authorsNode == null)
+                {
+                    throw new FormatException("Missing one of the mandatory nuspec fields: id, version, description, or author.");
+                }
+                else
+                {
+                    string? idValue = idNode.Value;
+                    string? versionValue = versionNode.Value;
+                    string? descriptionValue = descriptionNode.Value;
+                    string? authorsValue = authorsNode.Value;
+
+                    if (idValue == null || versionValue == null || descriptionValue == null || authorsValue == null)
+                    {
+                        throw new FormatException("One of the mandatory nuspec fields lacks value content: id, version, description, or author.");
+                    }
+                    else
+                    {
+                        /*
+                        OntologyAnnotations.Add("id", idValue);
+                        OntologyAnnotations.Add("version", versionValue);
+                        OntologyAnnotations.Add("description", descriptionValue);
+                        OntologyAnnotations.Add("authors", authorsValue);
+                        */
+
+                        // Parse non-mandatory fields
+                        XmlNode? titleNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:title/text()", namespaces);
+                        if (titleNode != null)
+                        {
+                            //OntologyAnnotations.Add("title", titleNode.Value ?? string.Empty);
+                        }
+
+                        XmlNode? licenseNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:license/text()", namespaces);
+                        if (licenseNode != null)
+                        {
+                            //OntologyAnnotations.Add("license", licenseNode.Value ?? string.Empty);
+                        }
+
+                        XmlNode? projectUrlNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:projectUrl/text()", namespaces);
+                        if (projectUrlNode != null)
+                        {
+                            //OntologyAnnotations.Add("projectUrl", projectUrlNode.Value ?? string.Empty);
+                        }
+                    }
+                }
             }
         }
 
@@ -401,8 +490,14 @@ namespace DTDL2SHACL
             /// <summary>
             /// Gets or sets the path to namespace mappings CSV file.
             /// </summary>
-            [Option('n', "namespaceMappingsPath", Required = true, HelpText = "Path to namespace mappings CSV file.")]
+            [Option('m', "namespaceMappingsPath", Required = true, HelpText = "Path to namespace mappings CSV file.")]
             public string NamespaceMappingsPath { get; set; } = string.Empty;
+
+            /// <summary>
+            /// Gets or sets the path to .nuspec file holding package annotations.
+            /// </summary>
+            [Option('n', "nuspecPath", Required = false, HelpText = "Path to .nuspec file holding package annotations detailing, e.g., version, license, etc.")]
+            public string NuspecPath { get; set; } = string.Empty;
         }
     }
 }
