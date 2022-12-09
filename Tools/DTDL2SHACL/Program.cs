@@ -1,5 +1,4 @@
 ﻿using CommandLine;
-using DotNetRdfExtensions.SHACL;
 using Microsoft.Azure.DigitalTwins.Parser;
 using Microsoft.Azure.DigitalTwins.Parser.Models;
 using VDS.RDF;
@@ -7,10 +6,11 @@ using VDS.RDF.Ontology;
 using VDS.RDF.Parsing;
 using VDS.RDF.Shacl;
 using VDS.RDF.Writing;
-using DotNetRdfExtensions;
 
 namespace DTDL2SHACL 
 {
+    using RealEstateCore.DotNetRdfExtensions;
+    using RealEstateCore.DotNetRdfExtensions.SHACL;
     internal class Program 
     {
         public class Options
