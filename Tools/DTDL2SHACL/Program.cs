@@ -124,6 +124,9 @@ namespace DTDL2SHACL
             {
                 // Create a new NodeShape
                 NodeShape nodeShape = shapesGraph.CreateNodeShape(GetShaclId(iface.Id));
+                IUriNode rdfType = shapesGraph.CreateUriNode(RDF.type);
+                IUriNode owlThing = shapesGraph.CreateUriNode(OWL.Thing);
+                shapesGraph.Assert(nodeShape.Node, rdfType, owlThing);
 
                 // Add labels and comments from DTDL display names and descriptions
                 foreach ((string lang, string val) in iface.DisplayName)
@@ -203,7 +206,6 @@ namespace DTDL2SHACL
                     // In the SHACL output we indicate the preference for the schema NodeShape to be treated
                     // as a component by co-typing it with the DTDL Component DTMI.
                     IUriNode schemaNode = shapesGraph.CreateUriNode(schemaShaclUri);
-                    IUriNode rdfType = shapesGraph.CreateUriNode(RDF.type);
                     IUriNode dtdlComponent = shapesGraph.CreateUriNode(UriFactory.Create("dtmi:dtdl:class:Component"));
                     shapesGraph.Assert(schemaNode, rdfType, dtdlComponent);
 
@@ -271,7 +273,6 @@ namespace DTDL2SHACL
 
         private static void ParseNuspec()
         {
-            // TODO: Populate owl:Ontology with values in ParseNuspec()
             using var reader = new StreamReader(nuspecPath);
             using var xmlReader = XmlReader.Create(reader);
 

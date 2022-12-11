@@ -38,7 +38,8 @@ _:autos72 rdf:first "Up"^^xsd:string;
                        rdfs:label "RealEstateCore Ontology";
                        rdfs:seeAlso <https://github.com/RealEstateCore/rec>;
                        owl:versionInfo "4.0.0.9".
-rec:AccelerationObservation a sh:NodeShape;
+rec:AccelerationObservation a sh:NodeShape,
+                              owl:Thing;
                             rdfs:label "Acceleration observation"@en;
                             rdfs:subClassOf rec:ObservationEvent;
                             sh:property [a sh:PropertyShape ; 
@@ -46,13 +47,16 @@ rec:AccelerationObservation a sh:NodeShape;
                                          sh:name "value"@en ; 
                                          sh:datatype xsd:double ; 
                                          sh:maxCount 1 ].
-rec:AccessControlZone a sh:NodeShape;
+rec:AccessControlZone a sh:NodeShape,
+                        owl:Thing;
                       rdfs:label "Access control zone"@en;
                       rdfs:subClassOf rec:Zone.
-rec:AccessPanel a sh:NodeShape;
+rec:AccessPanel a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Access panel"@en;
                 rdfs:subClassOf rec:BarrierAsset.
-rec:ActuationEvent a sh:NodeShape;
+rec:ActuationEvent a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Actuation event"@en;
                    rdfs:subClassOf rec:PointEvent;
                    sh:property [a sh:PropertyShape ; 
@@ -61,10 +65,12 @@ rec:ActuationEvent a sh:NodeShape;
                                 sh:class <dtmi:org:brickschema:schema:Brick:Point;1> ; 
                                 sh:name "target point"@en ; 
                                 sh:description "The brick:Point(s) (e.g., brick:Commands, brick:Setpoints, or brick:Parameters) that the actuation will target/execute."@en].
-rec:AdmittingRoom a sh:NodeShape;
+rec:AdmittingRoom a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Admitting room"@en;
                   rdfs:subClassOf rec:HealthcareRoom.
-rec:Agent a sh:NodeShape;
+rec:Agent a sh:NodeShape,
+            owl:Thing;
           rdfs:comment "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, ....) to be anchored in one joint place, on the Agent class."@en;
           rdfs:label "Agent"@en;
           sh:property [a sh:PropertyShape ; 
@@ -95,10 +101,12 @@ rec:Agent a sh:NodeShape;
                        sh:nodeKind sh:IRI ; 
                        sh:name "owns"@en ; 
                        sh:description "Indicates ownership of some thing, e.g., a building, an asset, an organization, etc."@en].
-rec:AlarmObject a sh:NodeShape;
+rec:AlarmObject a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Alarm object"@en;
                 rdfs:subClassOf rec:ServiceObject.
-rec:AngleObservation a sh:NodeShape;
+rec:AngleObservation a sh:NodeShape,
+                       owl:Thing;
                      rdfs:label "Angle observation"@en;
                      rdfs:subClassOf rec:ObservationEvent;
                      sh:property [a sh:PropertyShape ; 
@@ -106,7 +114,8 @@ rec:AngleObservation a sh:NodeShape;
                                   sh:name "value"@en ; 
                                   sh:datatype xsd:double ; 
                                   sh:maxCount 1 ].
-rec:AngularAccelerationObservation a sh:NodeShape;
+rec:AngularAccelerationObservation a sh:NodeShape,
+                                     owl:Thing;
                                    rdfs:label "Angular acceleration observation"@en;
                                    rdfs:subClassOf rec:ObservationEvent;
                                    sh:property [a sh:PropertyShape ; 
@@ -114,7 +123,8 @@ rec:AngularAccelerationObservation a sh:NodeShape;
                                                 sh:name "value"@en ; 
                                                 sh:datatype xsd:double ; 
                                                 sh:maxCount 1 ].
-rec:AngularVelocityObservation a sh:NodeShape;
+rec:AngularVelocityObservation a sh:NodeShape,
+                                 owl:Thing;
                                rdfs:label "Angular velocity observation"@en;
                                rdfs:subClassOf rec:ObservationEvent;
                                sh:property [a sh:PropertyShape ; 
@@ -122,7 +132,8 @@ rec:AngularVelocityObservation a sh:NodeShape;
                                             sh:name "value"@en ; 
                                             sh:datatype xsd:double ; 
                                             sh:maxCount 1 ].
-rec:Apartment a sh:NodeShape;
+rec:Apartment a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Apartment"@en;
               rdfs:subClassOf rec:Collection;
               sh:property [a sh:PropertyShape ; 
@@ -130,10 +141,12 @@ rec:Apartment a sh:NodeShape;
                            sh:nodeKind sh:IRI ; 
                            sh:class rec:Room ; 
                            sh:name "includes"@en].
-rec:ArchitecturalAsset a sh:NodeShape;
+rec:ArchitecturalAsset a sh:NodeShape,
+                         owl:Thing;
                        rdfs:label "Architectural asset"@en;
                        rdfs:subClassOf rec:Asset.
-rec:Architecture a sh:NodeShape;
+rec:Architecture a sh:NodeShape,
+                   owl:Thing;
                  rdfs:comment "A designed/landscaped (or potentially designed/landscaped) part of the physical world that has a 3D spatial extent. E.g., a building site, a building, levels within the building, rooms, etc."@en;
                  rdfs:label "Architecture"@en;
                  rdfs:subClassOf rec:Space;
@@ -205,6 +218,7 @@ rec:Architecture a sh:NodeShape;
                               sh:class rec:ArchitectureCapacity ; 
                               sh:name "capacity"@en].
 rec:ArchitectureArea a sh:NodeShape,
+                       owl:Thing,
                        <dtmi:dtdl:class:Component>;
                      rdfs:comment "Describes business-relevant area measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."@en;
                      rdfs:label "Architecture area"@en;
@@ -225,6 +239,7 @@ rec:ArchitectureArea a sh:NodeShape,
                                   sh:datatype xsd:float ; 
                                   sh:maxCount 1 ].
 rec:ArchitectureCapacity a sh:NodeShape,
+                           owl:Thing,
                            <dtmi:dtdl:class:Component>;
                          rdfs:comment "Describes business-relevant capacity measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."@en;
                          rdfs:label "Architecture capacity"@en;
@@ -240,7 +255,8 @@ rec:ArchitectureCapacity a sh:NodeShape,
                                       sh:name "seating capacity"@en ; 
                                       sh:datatype xsd:integer ; 
                                       sh:maxCount 1 ].
-rec:AreaObservation a sh:NodeShape;
+rec:AreaObservation a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Area observation"@en;
                     rdfs:subClassOf rec:ObservationEvent;
                     sh:property [a sh:PropertyShape ; 
@@ -248,7 +264,8 @@ rec:AreaObservation a sh:NodeShape;
                                  sh:name "value"@en ; 
                                  sh:datatype xsd:double ; 
                                  sh:maxCount 1 ].
-rec:Asset a sh:NodeShape;
+rec:Asset a sh:NodeShape,
+            owl:Thing;
           rdfs:comment "Something which is placed inside of a building, but is not an integral part of that building's structure; e.g., furniture, equipment, systems, etc."@en;
           rdfs:label "Asset"@en;
           sh:property [a sh:PropertyShape ; 
@@ -382,47 +399,61 @@ rec:Asset a sh:NodeShape;
                        sh:nodeKind sh:IRI ; 
                        sh:class rec:Agent ; 
                        sh:name "serviced by"@en].
-rec:Atrium a sh:NodeShape;
+rec:Atrium a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Atrium"@en;
            rdfs:subClassOf rec:Room.
-rec:Auditorium a sh:NodeShape;
+rec:Auditorium a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Auditorium"@en;
                rdfs:subClassOf rec:Room.
-rec:BackOffice a sh:NodeShape;
+rec:BackOffice a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Back office"@en;
                rdfs:subClassOf rec:Room.
-rec:Balcony a sh:NodeShape;
+rec:Balcony a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Balcony"@en;
             rdfs:subClassOf rec:BuildingElement.
-rec:BarRoom a sh:NodeShape;
+rec:BarRoom a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Bar room"@en;
             rdfs:subClassOf rec:FoodHandlingRoom.
-rec:BarrierAsset a sh:NodeShape;
+rec:BarrierAsset a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Barrier asset"@en;
                  rdfs:subClassOf rec:ArchitecturalAsset.
-rec:BasementLevel a sh:NodeShape;
+rec:BasementLevel a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Basement level"@en;
                   rdfs:subClassOf rec:Level.
-rec:Bathroom a sh:NodeShape;
+rec:Bathroom a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Bathroom"@en;
              rdfs:subClassOf rec:Room.
-rec:Bed a sh:NodeShape;
+rec:Bed a sh:NodeShape,
+          owl:Thing;
         rdfs:label "Bed"@en;
         rdfs:subClassOf rec:Furniture.
-rec:Bedroom a sh:NodeShape;
+rec:Bedroom a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Bedroom"@en;
             rdfs:subClassOf rec:Room.
-rec:BicycleGarage a sh:NodeShape;
+rec:BicycleGarage a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Bicycle garage"@en;
                   rdfs:subClassOf rec:Garage.
-rec:Bookcase a sh:NodeShape;
+rec:Bookcase a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Bookcase"@en;
              rdfs:subClassOf rec:Furniture.
-rec:Building a sh:NodeShape;
+rec:Building a sh:NodeShape,
+               owl:Thing;
              rdfs:comment "A confined building structure."@en;
              rdfs:label "Building"@en;
              rdfs:subClassOf rec:Architecture.
-rec:BuildingElement a sh:NodeShape;
+rec:BuildingElement a sh:NodeShape,
+                      owl:Thing;
                     rdfs:comment "A part that constitutes a piece of a building's structural makeup. E.g., Facade, Wall, Slab, Roof, etc."@en;
                     rdfs:label "Building element"@en;
                     sh:property [a sh:PropertyShape ; 
@@ -465,19 +496,24 @@ rec:BuildingElement a sh:NodeShape;
                                  sh:name "located in"@en ; 
                                  sh:description "Indicates the architected space (site, building, level, room...) in which this building element is placed."@en ; 
                                  sh:maxCount 1 ].
-rec:BulletinBoard a sh:NodeShape;
+rec:BulletinBoard a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Bulletin board"@en;
                   rdfs:subClassOf rec:Furniture.
-rec:Cabinet a sh:NodeShape;
+rec:Cabinet a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Cabinet"@en;
             rdfs:subClassOf rec:UtilitiesRoom.
-rec:CableRoom a sh:NodeShape;
+rec:CableRoom a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Cable room"@en;
               rdfs:subClassOf rec:UtilitiesRoom.
-rec:CafeteriaRoom a sh:NodeShape;
+rec:CafeteriaRoom a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Cafeteria room"@en;
                   rdfs:subClassOf rec:FoodHandlingRoom.
-rec:Campus a sh:NodeShape;
+rec:Campus a sh:NodeShape,
+             owl:Thing;
            rdfs:comment "A campus represents a collection of location entities. The constituent locations may have differing legal ownership and utilization purposes, but they are generally perceived as a coherent unit or sub-region within a city or other region. E.g., a university campus, a hospital campus, a corporate campus, etc."@en;
            rdfs:label "Campus"@en;
            rdfs:subClassOf rec:Collection;
@@ -486,7 +522,8 @@ rec:Campus a sh:NodeShape;
                         sh:nodeKind sh:IRI ; 
                         sh:class rec:Architecture ; 
                         sh:name "includes"@en].
-rec:CapacitanceObservation a sh:NodeShape;
+rec:CapacitanceObservation a sh:NodeShape,
+                             owl:Thing;
                            rdfs:label "Capacitance observation"@en;
                            rdfs:subClassOf rec:ObservationEvent;
                            sh:property [a sh:PropertyShape ; 
@@ -494,34 +531,44 @@ rec:CapacitanceObservation a sh:NodeShape;
                                         sh:name "value"@en ; 
                                         sh:datatype xsd:double ; 
                                         sh:maxCount 1 ].
-rec:Cart a sh:NodeShape;
+rec:Cart a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Cart"@en;
          rdfs:subClassOf rec:Furniture.
-rec:Chair a sh:NodeShape;
+rec:Chair a sh:NodeShape,
+            owl:Thing;
           rdfs:label "Chair"@en;
           rdfs:subClassOf rec:Furniture.
-rec:Cinema a sh:NodeShape;
+rec:Cinema a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Cinema"@en;
            rdfs:subClassOf rec:Room.
-rec:Classroom a sh:NodeShape;
+rec:Classroom a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Classroom"@en;
               rdfs:subClassOf rec:EducationalRoom.
-rec:CleaningRoom a sh:NodeShape;
+rec:CleaningRoom a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Cleaning room"@en;
                  rdfs:subClassOf rec:Room.
-rec:ClimateControlRoom a sh:NodeShape;
+rec:ClimateControlRoom a sh:NodeShape,
+                         owl:Thing;
                        rdfs:label "Climate-control room"@en;
                        rdfs:subClassOf rec:UtilitiesRoom.
-rec:CloakRoom a sh:NodeShape;
+rec:CloakRoom a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Cloak room"@en;
               rdfs:subClassOf rec:Room.
-rec:CoatRack a sh:NodeShape;
+rec:CoatRack a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Coat rack"@en;
              rdfs:subClassOf rec:Furniture.
-rec:CoffeeTable a sh:NodeShape;
+rec:CoffeeTable a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Coffee table"@en;
                 rdfs:subClassOf rec:Table.
-rec:Collection a sh:NodeShape;
+rec:Collection a sh:NodeShape,
+                 owl:Thing;
                rdfs:comment "An administrative grouping of entities that are adressed and treated as a unit for some purpose. These entities may have some spatial arrangement (e.g., an apartment is typically contiguous) but that is not a requirement (see, e.g., a distributed campus consisting of spatially disjoint plots or buildings). Inclusion in a Collection is determined by the 'includes' field on a specific subclass."@en;
                rdfs:label "Collection"@en;
                sh:property [a sh:PropertyShape ; 
@@ -546,25 +593,32 @@ rec:Collection a sh:NodeShape;
                             sh:nodeKind sh:IRI ; 
                             sh:class rec:Document ; 
                             sh:name "documentation"@en].
-rec:Company a sh:NodeShape;
+rec:Company a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Company"@en;
             rdfs:subClassOf rec:Organization.
-rec:ComputerCart a sh:NodeShape;
+rec:ComputerCart a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Computer cart"@en;
                  rdfs:subClassOf rec:Cart.
-rec:ConferenceRoom a sh:NodeShape;
+rec:ConferenceRoom a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Conference room"@en;
                    rdfs:subClassOf rec:Room.
-rec:ConferenceTable a sh:NodeShape;
+rec:ConferenceTable a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Conference table"@en;
                     rdfs:subClassOf rec:Table.
-rec:ConversationRoom a sh:NodeShape;
+rec:ConversationRoom a sh:NodeShape,
+                       owl:Thing;
                      rdfs:label "Conversation room"@en;
                      rdfs:subClassOf rec:Room.
-rec:CookingRoom a sh:NodeShape;
+rec:CookingRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Cooking room"@en;
                 rdfs:subClassOf rec:FoodHandlingRoom.
-rec:CopyingRoom a sh:NodeShape;
+rec:CopyingRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Copying room"@en;
                 rdfs:subClassOf rec:Room.
 rec:CustomPropertiesShape a sh:NodeShape;
@@ -584,7 +638,8 @@ rec:CustomTagsShape a sh:NodeShape;
                                  sh:path rec:tagValue ; 
                                  sh:datatype xsd:boolean ; 
                                  sh:maxCount 1 ].
-rec:DataRateObservation a sh:NodeShape;
+rec:DataRateObservation a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Data rate observation"@en;
                         rdfs:subClassOf rec:ObservationEvent;
                         sh:property [a sh:PropertyShape ; 
@@ -592,10 +647,12 @@ rec:DataRateObservation a sh:NodeShape;
                                      sh:name "value"@en ; 
                                      sh:datatype xsd:double ; 
                                      sh:maxCount 1 ].
-rec:DataServerRoom a sh:NodeShape;
+rec:DataServerRoom a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Data server room"@en;
                    rdfs:subClassOf rec:UtilitiesRoom.
-rec:DataSizeObservation a sh:NodeShape;
+rec:DataSizeObservation a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Data size observation"@en;
                         rdfs:subClassOf rec:ObservationEvent;
                         sh:property [a sh:PropertyShape ; 
@@ -603,7 +660,8 @@ rec:DataSizeObservation a sh:NodeShape;
                                      sh:name "value"@en ; 
                                      sh:datatype xsd:double ; 
                                      sh:maxCount 1 ].
-rec:DensityObservation a sh:NodeShape;
+rec:DensityObservation a sh:NodeShape,
+                         owl:Thing;
                        rdfs:label "Density observation"@en;
                        rdfs:subClassOf rec:ObservationEvent;
                        sh:property [a sh:PropertyShape ; 
@@ -611,25 +669,32 @@ rec:DensityObservation a sh:NodeShape;
                                     sh:name "value"@en ; 
                                     sh:datatype xsd:double ; 
                                     sh:maxCount 1 ].
-rec:Department a sh:NodeShape;
+rec:Department a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Department"@en;
                rdfs:subClassOf rec:Organization.
-rec:Desk a sh:NodeShape;
+rec:Desk a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Desk"@en;
          rdfs:subClassOf rec:Furniture.
-rec:DeskLamp a sh:NodeShape;
+rec:DeskLamp a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Desk lamp"@en;
              rdfs:subClassOf rec:Lamp.
-rec:DiningRoom a sh:NodeShape;
+rec:DiningRoom a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Dining room"@en;
                rdfs:subClassOf rec:FoodHandlingRoom.
-rec:DisabledToilet a sh:NodeShape;
+rec:DisabledToilet a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Disabled toilet"@en;
                    rdfs:subClassOf rec:PersonalHygiene.
-rec:DishingRoom a sh:NodeShape;
+rec:DishingRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Dishing room"@en;
                 rdfs:subClassOf rec:FoodHandlingRoom.
-rec:DistanceObservation a sh:NodeShape;
+rec:DistanceObservation a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Distance observation"@en;
                         rdfs:subClassOf rec:ObservationEvent;
                         sh:property [a sh:PropertyShape ; 
@@ -637,7 +702,8 @@ rec:DistanceObservation a sh:NodeShape;
                                      sh:name "value"@en ; 
                                      sh:datatype xsd:double ; 
                                      sh:maxCount 1 ].
-rec:Document a sh:NodeShape;
+rec:Document a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Document"@en;
              rdfs:subClassOf rec:Information;
              sh:property [a sh:PropertyShape ; 
@@ -648,16 +714,20 @@ rec:Document a sh:NodeShape;
                           sh:path rec:url ; 
                           sh:nodeKind sh:IRI ; 
                           sh:name "URL"@en].
-rec:Door a sh:NodeShape;
+rec:Door a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Door"@en;
          rdfs:subClassOf rec:BarrierAsset.
-rec:DressingRoom a sh:NodeShape;
+rec:DressingRoom a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Dressing room"@en;
                  rdfs:subClassOf rec:Room.
-rec:EducationalRoom a sh:NodeShape;
+rec:EducationalRoom a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Educational room"@en;
                     rdfs:subClassOf rec:Room.
-rec:ElectricChargeObservation a sh:NodeShape;
+rec:ElectricChargeObservation a sh:NodeShape,
+                                owl:Thing;
                               rdfs:label "Electric charge observation"@en;
                               rdfs:subClassOf rec:ObservationEvent;
                               sh:property [a sh:PropertyShape ; 
@@ -665,7 +735,8 @@ rec:ElectricChargeObservation a sh:NodeShape;
                                            sh:name "value"@en ; 
                                            sh:datatype xsd:double ; 
                                            sh:maxCount 1 ].
-rec:ElectricCurrentObservation a sh:NodeShape;
+rec:ElectricCurrentObservation a sh:NodeShape,
+                                 owl:Thing;
                                rdfs:label "Elecric current observation"@en;
                                rdfs:subClassOf rec:ObservationEvent;
                                sh:property [a sh:PropertyShape ; 
@@ -673,16 +744,20 @@ rec:ElectricCurrentObservation a sh:NodeShape;
                                             sh:name "value"@en ; 
                                             sh:datatype xsd:double ; 
                                             sh:maxCount 1 ].
-rec:ElectricityRoom a sh:NodeShape;
+rec:ElectricityRoom a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Electricity room"@en;
                     rdfs:subClassOf rec:UtilitiesRoom.
-rec:ElevatorRoom a sh:NodeShape;
+rec:ElevatorRoom a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Elevator room"@en;
                  rdfs:subClassOf rec:Room.
-rec:ElevatorShaft a sh:NodeShape;
+rec:ElevatorShaft a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Elevator shaft"@en;
                   rdfs:subClassOf rec:Room.
-rec:ElevatorTrip a sh:NodeShape;
+rec:ElevatorTrip a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Elevator trip"@en;
                  rdfs:subClassOf rec:Event;
                  sh:property [a sh:PropertyShape ; 
@@ -704,10 +779,12 @@ rec:ElevatorTrip a sh:NodeShape;
                               sh:path rec:tripDirection ; 
                               sh:name "trip direction"@en ; 
                               sh:in _:autos71].
-rec:EndTable a sh:NodeShape;
+rec:EndTable a sh:NodeShape,
+               owl:Thing;
              rdfs:label "End table"@en;
              rdfs:subClassOf rec:Table.
-rec:EnergyObservation a sh:NodeShape;
+rec:EnergyObservation a sh:NodeShape,
+                        owl:Thing;
                       rdfs:label "Energy observation"@en;
                       rdfs:subClassOf rec:ObservationEvent;
                       sh:property [a sh:PropertyShape ; 
@@ -715,10 +792,12 @@ rec:EnergyObservation a sh:NodeShape;
                                    sh:name "value"@en ; 
                                    sh:datatype xsd:double ; 
                                    sh:maxCount 1 ].
-rec:Entrance a sh:NodeShape;
+rec:Entrance a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Entrance"@en;
              rdfs:subClassOf rec:Room.
-rec:EquipmentCollection a sh:NodeShape;
+rec:EquipmentCollection a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Equipment collection"@en;
                         rdfs:subClassOf rec:Collection;
                         sh:property [a sh:PropertyShape ; 
@@ -735,10 +814,12 @@ rec:EquipmentCollection a sh:NodeShape;
                                      sh:nodeKind sh:IRI ; 
                                      sh:class <dtmi:org:brickschema:schema:Brick:Equipment;1> ; 
                                      sh:name "includes"@en].
-rec:ErrorReport a sh:NodeShape;
+rec:ErrorReport a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Error report"@en;
                 rdfs:subClassOf rec:ServiceObject.
-rec:Event a sh:NodeShape;
+rec:Event a sh:NodeShape,
+            owl:Thing;
           rdfs:comment "A temporally indexed entity, e.g., an observation, a lease, a construction project, etc. Can be instantaneous (timestamp property assigned) or have temporal extent (start and end properties assigned). Subclasses may define specific behaviour and requirements, e.g., on spatial indexing, agent participation, etc."@en;
           rdfs:label "Event"@en;
           sh:property [a sh:PropertyShape ; 
@@ -775,7 +856,8 @@ rec:Event a sh:NodeShape;
                        sh:name "timestamp"@en ; 
                        sh:datatype xsd:time ; 
                        sh:maxCount 1 ].
-rec:ExceptionEvent a sh:NodeShape;
+rec:ExceptionEvent a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Exception event"@en;
                    rdfs:subClassOf rec:PointEvent;
                    sh:property [a sh:PropertyShape ; 
@@ -785,10 +867,12 @@ rec:ExceptionEvent a sh:NodeShape;
                                 sh:name "source point"@en ; 
                                 sh:description "The brick:Point that emitted this exception."@en ; 
                                 sh:maxCount 1 ].
-rec:ExerciseRoom a sh:NodeShape;
+rec:ExerciseRoom a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Exercise room"@en;
                  rdfs:subClassOf rec:Room.
-rec:ExhibitionRoom a sh:NodeShape;
+rec:ExhibitionRoom a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Exhibition room"@en;
                    rdfs:subClassOf rec:Room.
 rec:ExternalIdsShape a sh:NodeShape;
@@ -800,34 +884,44 @@ rec:ExternalIdsShape a sh:NodeShape;
                                   sh:path rec:externalIdValue ; 
                                   sh:datatype xsd:string ; 
                                   sh:maxCount 1 ].
-rec:Facade a sh:NodeShape;
+rec:Facade a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Facade"@en;
            rdfs:subClassOf rec:BuildingElement.
-rec:FilingCabinet a sh:NodeShape;
+rec:FilingCabinet a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Filing cabinet"@en;
                   rdfs:subClassOf rec:Furniture.
-rec:FittingRoom a sh:NodeShape;
+rec:FittingRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Fitting room"@en;
                 rdfs:subClassOf rec:RetailRoom.
-rec:FloorLamp a sh:NodeShape;
+rec:FloorLamp a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Floor lamp"@en;
               rdfs:subClassOf rec:Lamp.
-rec:FloorMat a sh:NodeShape;
+rec:FloorMat a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Floor mat"@en;
              rdfs:subClassOf rec:Furniture.
-rec:FoldingChair a sh:NodeShape;
+rec:FoldingChair a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Folding chair"@en;
                  rdfs:subClassOf rec:Chair.
-rec:FoldingTable a sh:NodeShape;
+rec:FoldingTable a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Folding table"@en;
                  rdfs:subClassOf rec:Table.
-rec:FoodHandlingRoom a sh:NodeShape;
+rec:FoodHandlingRoom a sh:NodeShape,
+                       owl:Thing;
                      rdfs:label "Food-handling room"@en;
                      rdfs:subClassOf rec:Room.
-rec:Footrest a sh:NodeShape;
+rec:Footrest a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Footrest"@en;
              rdfs:subClassOf rec:Furniture.
-rec:ForceObservation a sh:NodeShape;
+rec:ForceObservation a sh:NodeShape,
+                       owl:Thing;
                      rdfs:label "Force observation"@en;
                      rdfs:subClassOf rec:ObservationEvent;
                      sh:property [a sh:PropertyShape ; 
@@ -835,7 +929,8 @@ rec:ForceObservation a sh:NodeShape;
                                   sh:name "value"@en ; 
                                   sh:datatype xsd:double ; 
                                   sh:maxCount 1 ].
-rec:FrequencyObservation a sh:NodeShape;
+rec:FrequencyObservation a sh:NodeShape,
+                           owl:Thing;
                          rdfs:label "Frequency observation"@en;
                          rdfs:subClassOf rec:ObservationEvent;
                          sh:property [a sh:PropertyShape ; 
@@ -843,10 +938,12 @@ rec:FrequencyObservation a sh:NodeShape;
                                       sh:name "value"@en ; 
                                       sh:datatype xsd:double ; 
                                       sh:maxCount 1 ].
-rec:Furniture a sh:NodeShape;
+rec:Furniture a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Furniture"@en;
               rdfs:subClassOf rec:Asset.
-rec:FurnitureCollection a sh:NodeShape;
+rec:FurnitureCollection a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Furniture collection"@en;
                         rdfs:subClassOf rec:Collection;
                         sh:property [a sh:PropertyShape ; 
@@ -854,21 +951,25 @@ rec:FurnitureCollection a sh:NodeShape;
                                      sh:nodeKind sh:IRI ; 
                                      sh:class rec:Furniture ; 
                                      sh:name "includes"@en].
-rec:Garage a sh:NodeShape;
+rec:Garage a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Garage"@en;
            rdfs:subClassOf rec:Room.
-rec:Geometry a sh:NodeShape;
+rec:Geometry a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Geometry"@en;
              rdfs:subClassOf rec:Information;
              sh:property [a sh:PropertyShape ; 
                           sh:path rec:coordinateSystem ; 
                           sh:name "coordinate system"@en ; 
                           sh:in _:autos121].
-rec:Georeference a sh:NodeShape;
+rec:Georeference a sh:NodeShape,
+                   owl:Thing;
                  rdfs:comment "A georeference creates a relationship between a local coordinate system into a geographic coordinate system."@en;
                  rdfs:label "Georeference"@en;
                  rdfs:subClassOf rec:Information.
-rec:Geotransform a sh:NodeShape;
+rec:Geotransform a sh:NodeShape,
+                   owl:Thing;
                  rdfs:comment "A transform following GDAL's Affine Transform that transforms a local coordinate into a WGS84 coordinate. Created from Ground Control Points (GCP) using GDAL's GCPsToGeotransform method."@en;
                  rdfs:label "Geotransform"@en;
                  rdfs:subClassOf rec:Georeference;
@@ -904,22 +1005,28 @@ rec:Geotransform a sh:NodeShape;
                               sh:description "Value will be zero if the local coordinate system is north-aligned."@en ; 
                               sh:datatype xsd:double ; 
                               sh:maxCount 1 ].
-rec:GroupRoom a sh:NodeShape;
+rec:GroupRoom a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Group room"@en;
               rdfs:subClassOf rec:EducationalRoom.
-rec:HVACZone a sh:NodeShape;
+rec:HVACZone a sh:NodeShape,
+               owl:Thing;
              rdfs:label "HVAC zone"@en;
              rdfs:subClassOf rec:Zone.
-rec:Hallway a sh:NodeShape;
+rec:Hallway a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Hallway"@en;
             rdfs:subClassOf rec:Room.
-rec:HealthcareRoom a sh:NodeShape;
+rec:HealthcareRoom a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Healthcare room"@en;
                    rdfs:subClassOf rec:Room.
-rec:Hospital a sh:NodeShape;
+rec:Hospital a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Hospital"@en;
              rdfs:subClassOf rec:Building.
-rec:HumidityObservation a sh:NodeShape;
+rec:HumidityObservation a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Humidity (absolute) observation"@en;
                         rdfs:subClassOf rec:ObservationEvent;
                         sh:property [a sh:PropertyShape ; 
@@ -936,7 +1043,8 @@ rec:IdentifiersShape a sh:NodeShape;
                                   sh:path rec:identifier ; 
                                   sh:datatype xsd:string ; 
                                   sh:maxCount 1 ].
-rec:IlluminanceObservation a sh:NodeShape;
+rec:IlluminanceObservation a sh:NodeShape,
+                             owl:Thing;
                            rdfs:label "Illuminance observation"@en;
                            rdfs:subClassOf rec:ObservationEvent;
                            sh:property [a sh:PropertyShape ; 
@@ -944,7 +1052,8 @@ rec:IlluminanceObservation a sh:NodeShape;
                                         sh:name "value"@en ; 
                                         sh:datatype xsd:double ; 
                                         sh:maxCount 1 ].
-rec:InductanceObservation a sh:NodeShape;
+rec:InductanceObservation a sh:NodeShape,
+                            owl:Thing;
                           rdfs:label "Inductance observation"@en;
                           rdfs:subClassOf rec:ObservationEvent;
                           sh:property [a sh:PropertyShape ; 
@@ -952,7 +1061,8 @@ rec:InductanceObservation a sh:NodeShape;
                                        sh:name "value"@en ; 
                                        sh:datatype xsd:double ; 
                                        sh:maxCount 1 ].
-rec:Information a sh:NodeShape;
+rec:Information a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Information"@en;
                 sh:property [a sh:PropertyShape ; 
                              sh:path rec:customProperties ; 
@@ -971,25 +1081,32 @@ rec:Information a sh:NodeShape;
                              sh:name "name"@en ; 
                              sh:datatype xsd:string ; 
                              sh:maxCount 1 ].
-rec:Kitchenette a sh:NodeShape;
+rec:Kitchenette a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Kitchenette"@en;
                 rdfs:subClassOf rec:FoodHandlingRoom.
-rec:Laboratory a sh:NodeShape;
+rec:Laboratory a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Laboratory"@en;
                rdfs:subClassOf rec:Room.
-rec:LaboratoryDry a sh:NodeShape;
+rec:LaboratoryDry a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Laboratory (dry)"@en;
                   rdfs:subClassOf rec:Laboratory.
-rec:LaboratoryWet a sh:NodeShape;
+rec:LaboratoryWet a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Laboratory (wet)"@en;
                   rdfs:subClassOf rec:Laboratory.
-rec:Lamp a sh:NodeShape;
+rec:Lamp a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Lamp"@en;
          rdfs:subClassOf rec:Furniture.
-rec:LaundryRoom a sh:NodeShape;
+rec:LaundryRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Laundry room"@en;
                 rdfs:subClassOf rec:Room.
-rec:Lease a sh:NodeShape;
+rec:Lease a sh:NodeShape,
+            owl:Thing;
           rdfs:label "Lease"@en;
           rdfs:subClassOf rec:Event;
           sh:property [a sh:PropertyShape ; 
@@ -1015,7 +1132,8 @@ rec:Lease a sh:NodeShape;
                        sh:class rec:LeaseContract ; 
                        sh:name "regulated by"@en ; 
                        sh:description "Indicates the contract regulating the terms of the lease in question. "@en].
-rec:LeaseContract a sh:NodeShape;
+rec:LeaseContract a sh:NodeShape,
+                    owl:Thing;
                   rdfs:comment "Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement."@en;
                   rdfs:label "Lease contract"@en;
                   rdfs:subClassOf rec:Document;
@@ -1025,7 +1143,8 @@ rec:LeaseContract a sh:NodeShape;
                                sh:class rec:Lease ; 
                                sh:name "regulates"@en ; 
                                sh:description "Indicates the lease(s) that this contract regulates the conditions of."@en].
-rec:LengthObservation a sh:NodeShape;
+rec:LengthObservation a sh:NodeShape,
+                        owl:Thing;
                       rdfs:label "Length observation"@en;
                       rdfs:subClassOf rec:ObservationEvent;
                       sh:property [a sh:PropertyShape ; 
@@ -1033,7 +1152,8 @@ rec:LengthObservation a sh:NodeShape;
                                    sh:name "value"@en ; 
                                    sh:datatype xsd:double ; 
                                    sh:maxCount 1 ].
-rec:Level a sh:NodeShape;
+rec:Level a sh:NodeShape,
+            owl:Thing;
           rdfs:comment "The level of a building, a.k.a. storey, floor, etc."@en;
           rdfs:label "Level"@en;
           rdfs:subClassOf rec:Architecture;
@@ -1043,19 +1163,24 @@ rec:Level a sh:NodeShape;
                        sh:description "A number indicating the ordinal number of this level within the containing space (typically a Building or in the case of a Mezzanine, sometimes another level). Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others."@en ; 
                        sh:datatype xsd:integer ; 
                        sh:maxCount 1 ].
-rec:Library a sh:NodeShape;
+rec:Library a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Library"@en;
             rdfs:subClassOf rec:Room.
-rec:LivingRoom a sh:NodeShape;
+rec:LivingRoom a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Living room"@en;
                rdfs:subClassOf rec:Room.
-rec:LoadingReceivingRoom a sh:NodeShape;
+rec:LoadingReceivingRoom a sh:NodeShape,
+                           owl:Thing;
                          rdfs:label "Loading/receiving room"@en;
                          rdfs:subClassOf rec:Room.
-rec:LockerRoom a sh:NodeShape;
+rec:LockerRoom a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Locker room"@en;
                rdfs:subClassOf rec:Room.
-rec:LuminanceObservation a sh:NodeShape;
+rec:LuminanceObservation a sh:NodeShape,
+                           owl:Thing;
                          rdfs:label "Luminance observation"@en;
                          rdfs:subClassOf rec:ObservationEvent;
                          sh:property [a sh:PropertyShape ; 
@@ -1063,7 +1188,8 @@ rec:LuminanceObservation a sh:NodeShape;
                                       sh:name "value"@en ; 
                                       sh:datatype xsd:double ; 
                                       sh:maxCount 1 ].
-rec:LuminousFluxObservation a sh:NodeShape;
+rec:LuminousFluxObservation a sh:NodeShape,
+                              owl:Thing;
                             rdfs:label "Luminous flux observation"@en;
                             rdfs:subClassOf rec:ObservationEvent;
                             sh:property [a sh:PropertyShape ; 
@@ -1071,7 +1197,8 @@ rec:LuminousFluxObservation a sh:NodeShape;
                                          sh:name "value"@en ; 
                                          sh:datatype xsd:double ; 
                                          sh:maxCount 1 ].
-rec:LuminousIntensityObservation a sh:NodeShape;
+rec:LuminousIntensityObservation a sh:NodeShape,
+                                   owl:Thing;
                                  rdfs:label "Luminous intensity observation"@en;
                                  rdfs:subClassOf rec:ObservationEvent;
                                  sh:property [a sh:PropertyShape ; 
@@ -1079,7 +1206,8 @@ rec:LuminousIntensityObservation a sh:NodeShape;
                                               sh:name "value"@en ; 
                                               sh:datatype xsd:double ; 
                                               sh:maxCount 1 ].
-rec:MagneticFluxObservation a sh:NodeShape;
+rec:MagneticFluxObservation a sh:NodeShape,
+                              owl:Thing;
                             rdfs:label "Magnetic flux observation"@en;
                             rdfs:subClassOf rec:ObservationEvent;
                             sh:property [a sh:PropertyShape ; 
@@ -1087,16 +1215,20 @@ rec:MagneticFluxObservation a sh:NodeShape;
                                          sh:name "value"@en ; 
                                          sh:datatype xsd:double ; 
                                          sh:maxCount 1 ].
-rec:MailRoom a sh:NodeShape;
+rec:MailRoom a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Mail room"@en;
              rdfs:subClassOf rec:BackOffice.
-rec:MailroomCart a sh:NodeShape;
+rec:MailroomCart a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Mailroom cart"@en;
                  rdfs:subClassOf rec:Cart.
-rec:MainEntrance a sh:NodeShape;
+rec:MainEntrance a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Main entrance"@en;
                  rdfs:subClassOf rec:Entrance.
-rec:MassFlowRateObservation a sh:NodeShape;
+rec:MassFlowRateObservation a sh:NodeShape,
+                              owl:Thing;
                             rdfs:label "Mass flow rate observation"@en;
                             rdfs:subClassOf rec:ObservationEvent;
                             sh:property [a sh:PropertyShape ; 
@@ -1104,7 +1236,8 @@ rec:MassFlowRateObservation a sh:NodeShape;
                                          sh:name "value"@en ; 
                                          sh:datatype xsd:double ; 
                                          sh:maxCount 1 ].
-rec:MassObservation a sh:NodeShape;
+rec:MassObservation a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Mass observation"@en;
                     rdfs:subClassOf rec:ObservationEvent;
                     sh:property [a sh:PropertyShape ; 
@@ -1112,22 +1245,28 @@ rec:MassObservation a sh:NodeShape;
                                  sh:name "value"@en ; 
                                  sh:datatype xsd:double ; 
                                  sh:maxCount 1 ].
-rec:MeditationRoom a sh:NodeShape;
+rec:MeditationRoom a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Meditation room"@en;
                    rdfs:subClassOf rec:Room.
-rec:MezzanineLevel a sh:NodeShape;
+rec:MezzanineLevel a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Mezzanine level"@en;
                    rdfs:subClassOf rec:Level.
-rec:MobileDesk a sh:NodeShape;
+rec:MobileDesk a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Mobile desk"@en;
                rdfs:subClassOf rec:Desk.
-rec:Morgue a sh:NodeShape;
+rec:Morgue a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Morgue"@en;
            rdfs:subClassOf rec:HealthcareRoom.
-rec:MothersRoom a sh:NodeShape;
+rec:MothersRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Mothers' room"@en;
                 rdfs:subClassOf rec:Room.
-rec:MultiPoint a sh:NodeShape;
+rec:MultiPoint a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Multi point"@en;
                rdfs:subClassOf rec:Geometry;
                sh:property [a sh:PropertyShape ; 
@@ -1136,7 +1275,8 @@ rec:MultiPoint a sh:NodeShape;
                             sh:description "A GeoJSON MultiPoint coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[10.0, 40.0], [40.0, 30.0], [20.0, 20.0], [30.0, 10.0]]."@en ; 
                             sh:datatype xsd:string ; 
                             sh:maxCount 1 ].
-rec:MultiPolygon a sh:NodeShape;
+rec:MultiPolygon a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Multi polygon"@en;
                  rdfs:subClassOf rec:Geometry;
                  sh:property [a sh:PropertyShape ; 
@@ -1145,16 +1285,20 @@ rec:MultiPolygon a sh:NodeShape;
                               sh:description "A GeoJSON MultiPolygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[[[30.0, 20.0], [45.0, 40.0], [10.0, 40.0], [30.0, 20.0]]], [[[15.0, 5.0], [40.0, 10.0], [10.0, 20.0], [5.0, 10.0], [15.0, 5.0]]]]."@en ; 
                               sh:datatype xsd:string ; 
                               sh:maxCount 1 ].
-rec:MultiPurposeRoom a sh:NodeShape;
+rec:MultiPurposeRoom a sh:NodeShape,
+                       owl:Thing;
                      rdfs:label "Multi-purpose room"@en;
                      rdfs:subClassOf rec:Room.
-rec:NeonatalNursingRoom a sh:NodeShape;
+rec:NeonatalNursingRoom a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Neonatal nursing room"@en;
                         rdfs:subClassOf rec:HealthcareRoom.
-rec:NotificationObject a sh:NodeShape;
+rec:NotificationObject a sh:NodeShape,
+                         owl:Thing;
                        rdfs:label "Notification object"@en;
                        rdfs:subClassOf rec:ServiceObject.
-rec:ObservationEvent a sh:NodeShape;
+rec:ObservationEvent a sh:NodeShape,
+                       owl:Thing;
                      rdfs:label "Observation event"@en;
                      rdfs:subClassOf rec:PointEvent;
                      sh:property [a sh:PropertyShape ; 
@@ -1164,26 +1308,33 @@ rec:ObservationEvent a sh:NodeShape;
                                   sh:name "source point"@en ; 
                                   sh:description "The brick:Point that emitted this observation."@en ; 
                                   sh:maxCount 1 ].
-rec:OccupancyZone a sh:NodeShape;
+rec:OccupancyZone a sh:NodeShape,
+                    owl:Thing;
                   rdfs:comment "Occupancy Zone is a spatial area where devices are monitoring or reporting on the concept of Occupancy (motion sensors, people counters, cameras, etc.)"@en;
                   rdfs:label "Occupancy zone"@en;
                   rdfs:subClassOf rec:Zone.
-rec:Office a sh:NodeShape;
+rec:Office a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Office"@en;
            rdfs:subClassOf rec:Room.
-rec:OfficeChair a sh:NodeShape;
+rec:OfficeChair a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Office chair"@en;
                 rdfs:subClassOf rec:Chair.
-rec:OfficeLandscape a sh:NodeShape;
+rec:OfficeLandscape a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "OfficeLandscape"@en;
                     rdfs:subClassOf rec:Office.
-rec:OfficeRoom a sh:NodeShape;
+rec:OfficeRoom a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "OfficeRoom"@en;
                rdfs:subClassOf rec:Office.
-rec:OperatingRoom a sh:NodeShape;
+rec:OperatingRoom a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Operating room"@en;
                   rdfs:subClassOf rec:HealthcareRoom.
-rec:Organization a sh:NodeShape;
+rec:Organization a sh:NodeShape,
+                   owl:Thing;
                  rdfs:comment "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"@en;
                  rdfs:label "Organization"@en;
                  rdfs:subClassOf rec:Agent;
@@ -1211,22 +1362,28 @@ rec:Organization a sh:NodeShape;
                               sh:class rec:Organization ; 
                               sh:name "is part of"@en ; 
                               sh:description "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the Agent.isMemberOf property."@en].
-rec:OutdoorSpace a sh:NodeShape;
+rec:OutdoorSpace a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Outdoor space"@en;
                  rdfs:subClassOf rec:Architecture.
-rec:OutpatientServicesRoom a sh:NodeShape;
+rec:OutpatientServicesRoom a sh:NodeShape,
+                             owl:Thing;
                            rdfs:label "Outpatient services room"@en;
                            rdfs:subClassOf rec:HealthcareRoom.
-rec:Pantry a sh:NodeShape;
+rec:Pantry a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Pantry"@en;
            rdfs:subClassOf rec:FoodHandlingRoom.
-rec:ParkingSpace a sh:NodeShape;
+rec:ParkingSpace a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Parking space"@en;
                  rdfs:subClassOf rec:Zone.
-rec:Partition a sh:NodeShape;
+rec:Partition a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Partition"@en;
               rdfs:subClassOf rec:BarrierAsset.
-rec:Person a sh:NodeShape;
+rec:Person a sh:NodeShape,
+             owl:Thing;
            rdfs:comment "A natural person (i.e., an individual human being)."@en;
            rdfs:label "Person"@en;
            rdfs:subClassOf rec:Agent;
@@ -1249,16 +1406,20 @@ rec:Person a sh:NodeShape;
                         sh:description "URL link to an image that represents the person."@en ; 
                         sh:datatype xsd:string ; 
                         sh:maxCount 1 ].
-rec:PersonalHygiene a sh:NodeShape;
+rec:PersonalHygiene a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Personal hygiene room"@en;
                     rdfs:subClassOf rec:Room.
-rec:PharmacyRoom a sh:NodeShape;
+rec:PharmacyRoom a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Pharmacy room"@en;
                  rdfs:subClassOf rec:HealthcareRoom.
-rec:PhoneBooth a sh:NodeShape;
+rec:PhoneBooth a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "PhoneBooth"@en;
                rdfs:subClassOf rec:Office.
-rec:Point a sh:NodeShape;
+rec:Point a sh:NodeShape,
+            owl:Thing;
           rdfs:label "Point"@en;
           rdfs:subClassOf rec:Geometry;
           sh:property [a sh:PropertyShape ; 
@@ -1267,7 +1428,8 @@ rec:Point a sh:NodeShape;
                        sh:description "A GeoJSON Point coordinate listing. Coordinate may be expressed in two or three dimensions. Ex: [30.0, 10.0, 0.0]."@en ; 
                        sh:datatype xsd:string ; 
                        sh:maxCount 1 ].
-rec:PointEvent a sh:NodeShape;
+rec:PointEvent a sh:NodeShape,
+                 owl:Thing;
                rdfs:comment "An event emanating from or targeting a Point; e.g., an individual Observation from a Sensor point, or an Actuation sent to a Command point. In other terms, the Points indicate the capability of some Space or Equipment to emit or accept data, while this class represents those actual data messages. Note that in most non-trivially sized systems, these events are not stored in the knowledge graph itself, but are rather forwarded to some C&C system or time series database."@en;
                rdfs:label "Point event"@en;
                rdfs:subClassOf rec:Event;
@@ -1277,7 +1439,8 @@ rec:PointEvent a sh:NodeShape;
                             sh:description "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)"@en ; 
                             sh:datatype xsd:string ; 
                             sh:maxCount 1 ].
-rec:PointOfInterest a sh:NodeShape;
+rec:PointOfInterest a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Point of Interest"@en;
                     rdfs:subClassOf rec:Information;
                     sh:property [a sh:PropertyShape ; 
@@ -1285,7 +1448,8 @@ rec:PointOfInterest a sh:NodeShape;
                                  sh:nodeKind sh:IRI ; 
                                  sh:name "object of interest"@en ; 
                                  sh:maxCount 1 ].
-rec:Polygon a sh:NodeShape;
+rec:Polygon a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Polygon"@en;
             rdfs:subClassOf rec:Geometry;
             sh:property [a sh:PropertyShape ; 
@@ -1294,7 +1458,8 @@ rec:Polygon a sh:NodeShape;
                          sh:description "A GeoJSON Polygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]."@en ; 
                          sh:datatype xsd:string ; 
                          sh:maxCount 1 ].
-rec:Portfolio a sh:NodeShape;
+rec:Portfolio a sh:NodeShape,
+                owl:Thing;
               rdfs:comment "A portfolio is a grouping of buildings, sites, apartments, campuses, etc. that share some business-relevant commonality, e.g., are managed by the same company, are rented out to the same tenant, share utilization or legal definition (industrial vs commercial), etc."@en;
               rdfs:label "Portfolio"@en;
               rdfs:subClassOf rec:Collection;
@@ -1302,7 +1467,8 @@ rec:Portfolio a sh:NodeShape;
                            sh:path rec:includes ; 
                            sh:nodeKind sh:IRI ; 
                            sh:name "includes"@en].
-rec:PostalAddress a sh:NodeShape;
+rec:PostalAddress a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Postal address"@en;
                   rdfs:subClassOf rec:Information;
                   sh:property [a sh:PropertyShape ; 
@@ -1336,7 +1502,8 @@ rec:PostalAddress a sh:NodeShape;
                                sh:name "region"@en ; 
                                sh:datatype xsd:string ; 
                                sh:maxCount 1 ].
-rec:PowerObservation a sh:NodeShape;
+rec:PowerObservation a sh:NodeShape,
+                       owl:Thing;
                      rdfs:label "Power observation"@en;
                      rdfs:subClassOf rec:ObservationEvent;
                      sh:property [a sh:PropertyShape ; 
@@ -1344,7 +1511,8 @@ rec:PowerObservation a sh:NodeShape;
                                   sh:name "value"@en ; 
                                   sh:datatype xsd:double ; 
                                   sh:maxCount 1 ].
-rec:Premises a sh:NodeShape;
+rec:Premises a sh:NodeShape,
+               owl:Thing;
              rdfs:comment "A premises is an administrative grouping of spaces that are used for some commercial or industrial purpose by a real estate holder or tenant. E.g, a suite of offices, a shop, or an industrial workshop."@en;
              rdfs:label "Premises"@en;
              rdfs:subClassOf rec:Collection;
@@ -1353,7 +1521,8 @@ rec:Premises a sh:NodeShape;
                           sh:nodeKind sh:IRI ; 
                           sh:class rec:Architecture ; 
                           sh:name "includes"@en].
-rec:PressureObservation a sh:NodeShape;
+rec:PressureObservation a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Pressure observation"@en;
                         rdfs:subClassOf rec:ObservationEvent;
                         sh:property [a sh:PropertyShape ; 
@@ -1361,10 +1530,12 @@ rec:PressureObservation a sh:NodeShape;
                                      sh:name "value"@en ; 
                                      sh:datatype xsd:double ; 
                                      sh:maxCount 1 ].
-rec:PrinterCart a sh:NodeShape;
+rec:PrinterCart a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Printer cart"@en;
                 rdfs:subClassOf rec:Cart.
-rec:PrinterStand a sh:NodeShape;
+rec:PrinterStand a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Printer stand"@en;
                  rdfs:subClassOf rec:Stand.
 rec:PropertiesShape a sh:NodeShape;
@@ -1376,10 +1547,12 @@ rec:PropertiesShape a sh:NodeShape;
                                  sh:path rec:propertyValue ; 
                                  sh:datatype xsd:string ; 
                                  sh:maxCount 1 ].
-rec:RadiologyRoom a sh:NodeShape;
+rec:RadiologyRoom a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Radiology room"@en;
                   rdfs:subClassOf rec:HealthcareRoom.
-rec:RealEstate a sh:NodeShape;
+rec:RealEstate a sh:NodeShape,
+                 owl:Thing;
                rdfs:comment """The legal/administrative representation of some lands and/or buildings. I.e., \"Fastighet\" (Swedish), \"Ejendom\" (Denmark), etc."""@en;
                rdfs:label "Real Estate"@en;
                rdfs:subClassOf rec:Collection;
@@ -1388,23 +1561,29 @@ rec:RealEstate a sh:NodeShape;
                             sh:nodeKind sh:IRI ; 
                             sh:class rec:Architecture ; 
                             sh:name "includes"@en].
-rec:Reception a sh:NodeShape;
+rec:Reception a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Reception"@en;
               rdfs:subClassOf rec:Room.
-rec:ReceptionTable a sh:NodeShape;
+rec:ReceptionTable a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Reception table"@en;
                    rdfs:subClassOf rec:Table.
-rec:RecordingRoom a sh:NodeShape;
+rec:RecordingRoom a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Recording room"@en;
                   rdfs:subClassOf rec:Room.
-rec:RecreationalRoom a sh:NodeShape;
+rec:RecreationalRoom a sh:NodeShape,
+                       owl:Thing;
                      rdfs:label "Recreational room"@en;
                      rdfs:subClassOf rec:Room.
-rec:Region a sh:NodeShape;
+rec:Region a sh:NodeShape,
+             owl:Thing;
            rdfs:comment """An administrative geospatial unit larger than the individual real estate. For instance, \"Lombary\", \"North America\", \"The Back Bay\", \"Elnätsområde Syd\", etc."""@en;
            rdfs:label "Region"@en;
            rdfs:subClassOf rec:Space.
-rec:RelativeHumidityObservation a sh:NodeShape;
+rec:RelativeHumidityObservation a sh:NodeShape,
+                                  owl:Thing;
                                 rdfs:label "Relative humidity observation"@en;
                                 rdfs:subClassOf rec:ObservationEvent;
                                 sh:property [a sh:PropertyShape ; 
@@ -1412,7 +1591,8 @@ rec:RelativeHumidityObservation a sh:NodeShape;
                                              sh:name "value"@en ; 
                                              sh:datatype xsd:double ; 
                                              sh:maxCount 1 ].
-rec:ResistanceObservation a sh:NodeShape;
+rec:ResistanceObservation a sh:NodeShape,
+                            owl:Thing;
                           rdfs:label "Resistance observation"@en;
                           rdfs:subClassOf rec:ObservationEvent;
                           sh:property [a sh:PropertyShape ; 
@@ -1420,37 +1600,48 @@ rec:ResistanceObservation a sh:NodeShape;
                                        sh:name "value"@en ; 
                                        sh:datatype xsd:double ; 
                                        sh:maxCount 1 ].
-rec:RestingRoom a sh:NodeShape;
+rec:RestingRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Resting room"@en;
                 rdfs:subClassOf rec:Room.
-rec:RetailRoom a sh:NodeShape;
+rec:RetailRoom a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Retail room"@en;
                rdfs:subClassOf rec:Room.
-rec:Roof a sh:NodeShape;
+rec:Roof a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Roof"@en;
          rdfs:subClassOf rec:BuildingElement.
-rec:RoofLevel a sh:NodeShape;
+rec:RoofLevel a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Roof level"@en;
               rdfs:subClassOf rec:Level.
-rec:Room a sh:NodeShape;
+rec:Room a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Room"@en;
          rdfs:subClassOf rec:Architecture.
-rec:Safe a sh:NodeShape;
+rec:Safe a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Safe"@en;
          rdfs:subClassOf rec:Furniture.
-rec:Sauna a sh:NodeShape;
+rec:Sauna a sh:NodeShape,
+            owl:Thing;
           rdfs:label "Sauna"@en;
           rdfs:subClassOf rec:PersonalHygiene.
-rec:School a sh:NodeShape;
+rec:School a sh:NodeShape,
+             owl:Thing;
            rdfs:label "School"@en;
            rdfs:subClassOf rec:Building.
-rec:SecurityRoom a sh:NodeShape;
+rec:SecurityRoom a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Security room"@en;
                  rdfs:subClassOf rec:Room.
-rec:ServiceEntrance a sh:NodeShape;
+rec:ServiceEntrance a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Service entrance"@en;
                     rdfs:subClassOf rec:Entrance.
-rec:ServiceObject a sh:NodeShape;
+rec:ServiceObject a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Service object"@en;
                   rdfs:subClassOf rec:Information;
                   sh:property [a sh:PropertyShape ; 
@@ -1503,38 +1694,49 @@ rec:ServiceObject a sh:NodeShape;
                                sh:path rec:relatedTo ; 
                                sh:nodeKind sh:IRI ; 
                                sh:name "related to"@en].
-rec:ServiceShaft a sh:NodeShape;
+rec:ServiceShaft a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Service shaft"@en;
                  rdfs:subClassOf rec:Room.
-rec:Shelter a sh:NodeShape;
+rec:Shelter a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Shelter"@en;
             rdfs:subClassOf rec:Room.
-rec:ShelterGasLock a sh:NodeShape;
+rec:ShelterGasLock a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Shelter gas lock"@en;
                    rdfs:subClassOf rec:Shelter.
-rec:ShelterRoom a sh:NodeShape;
+rec:ShelterRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Shelter room"@en;
                 rdfs:subClassOf rec:Shelter.
-rec:ShoppingMall a sh:NodeShape;
+rec:ShoppingMall a sh:NodeShape,
+                   owl:Thing;
                  rdfs:label "Shopping mall"@en;
                  rdfs:subClassOf rec:Building.
-rec:ShowerRoom a sh:NodeShape;
+rec:ShowerRoom a sh:NodeShape,
+                 owl:Thing;
                rdfs:label "Shower room"@en;
                rdfs:subClassOf rec:PersonalHygiene.
-rec:Site a sh:NodeShape;
+rec:Site a sh:NodeShape,
+           owl:Thing;
          rdfs:comment "A piece of land upon which zero or more buildings may be situated."@en;
          rdfs:label "Site"@en;
          rdfs:subClassOf rec:Architecture.
-rec:Slab a sh:NodeShape;
+rec:Slab a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Slab"@en;
          rdfs:subClassOf rec:BuildingElement.
-rec:SmallStudyRoom a sh:NodeShape;
+rec:SmallStudyRoom a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Small study room"@en;
                    rdfs:subClassOf rec:EducationalRoom.
-rec:Sofa a sh:NodeShape;
+rec:Sofa a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Sofa"@en;
          rdfs:subClassOf rec:Furniture.
-rec:SoundPressureObservation a sh:NodeShape;
+rec:SoundPressureObservation a sh:NodeShape,
+                               owl:Thing;
                              rdfs:label "Sound pressure observation"@en;
                              rdfs:subClassOf rec:ObservationEvent;
                              sh:property [a sh:PropertyShape ; 
@@ -1542,7 +1744,8 @@ rec:SoundPressureObservation a sh:NodeShape;
                                           sh:name "value"@en ; 
                                           sh:datatype xsd:double ; 
                                           sh:maxCount 1 ].
-rec:Space a sh:NodeShape;
+rec:Space a sh:NodeShape,
+            owl:Thing;
           rdfs:comment "A contiguous part of the physical world that contains or can contain sub-spaces. E.g., a Region can contain many Sites, which in turn can contain many Buildings."@en;
           rdfs:label "Space"@en;
           sh:property [a sh:PropertyShape ; 
@@ -1587,40 +1790,52 @@ rec:Space a sh:NodeShape;
                        sh:class rec:Space ; 
                        sh:name "is part of"@en ; 
                        sh:maxCount 1 ].
-rec:SprinklerRoom a sh:NodeShape;
+rec:SprinklerRoom a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Sprinkler room"@en;
                   rdfs:subClassOf rec:UtilitiesRoom.
-rec:Stadium a sh:NodeShape;
+rec:Stadium a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Stadium"@en;
             rdfs:subClassOf rec:Building.
-rec:StaffRoom a sh:NodeShape;
+rec:StaffRoom a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Staff room"@en;
               rdfs:subClassOf rec:Room.
-rec:Stairwell a sh:NodeShape;
+rec:Stairwell a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Stairwell"@en;
               rdfs:subClassOf rec:Room.
-rec:Stand a sh:NodeShape;
+rec:Stand a sh:NodeShape,
+            owl:Thing;
           rdfs:label "Stand"@en;
           rdfs:subClassOf rec:Furniture.
-rec:Storage a sh:NodeShape;
+rec:Storage a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Storage"@en;
             rdfs:subClassOf rec:Room.
-rec:StorageCabinet a sh:NodeShape;
+rec:StorageCabinet a sh:NodeShape,
+                     owl:Thing;
                    rdfs:label "Storage cabinet"@en;
                    rdfs:subClassOf rec:Furniture.
-rec:SubBuilding a sh:NodeShape;
+rec:SubBuilding a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Sub-building"@en;
                 rdfs:subClassOf rec:Architecture.
-rec:TVStand a sh:NodeShape;
+rec:TVStand a sh:NodeShape,
+              owl:Thing;
             rdfs:label "TV stand"@en;
             rdfs:subClassOf rec:Stand.
-rec:Table a sh:NodeShape;
+rec:Table a sh:NodeShape,
+            owl:Thing;
           rdfs:label "Table"@en;
           rdfs:subClassOf rec:Furniture.
-rec:TelecommunicationRoom a sh:NodeShape;
+rec:TelecommunicationRoom a sh:NodeShape,
+                            owl:Thing;
                           rdfs:label "Telecommunication room"@en;
                           rdfs:subClassOf rec:CableRoom.
-rec:TemperatureObservation a sh:NodeShape;
+rec:TemperatureObservation a sh:NodeShape,
+                             owl:Thing;
                            rdfs:label "Temperature observation"@en;
                            rdfs:subClassOf rec:ObservationEvent;
                            sh:property [a sh:PropertyShape ; 
@@ -1628,13 +1843,16 @@ rec:TemperatureObservation a sh:NodeShape;
                                         sh:name "value"@en ; 
                                         sh:datatype xsd:double ; 
                                         sh:maxCount 1 ].
-rec:Theater a sh:NodeShape;
+rec:Theater a sh:NodeShape,
+              owl:Thing;
             rdfs:label "Theater"@en;
             rdfs:subClassOf rec:Room.
-rec:TherapyRoom a sh:NodeShape;
+rec:TherapyRoom a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Therapy room"@en;
                 rdfs:subClassOf rec:HealthcareRoom.
-rec:ThrustObservation a sh:NodeShape;
+rec:ThrustObservation a sh:NodeShape,
+                        owl:Thing;
                       rdfs:label "Thrust observation"@en;
                       rdfs:subClassOf rec:ObservationEvent;
                       sh:property [a sh:PropertyShape ; 
@@ -1642,7 +1860,8 @@ rec:ThrustObservation a sh:NodeShape;
                                    sh:name "value"@en ; 
                                    sh:datatype xsd:double ; 
                                    sh:maxCount 1 ].
-rec:TimeSpanObservation a sh:NodeShape;
+rec:TimeSpanObservation a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Timespan observation"@en;
                         rdfs:subClassOf rec:ObservationEvent;
                         sh:property [a sh:PropertyShape ; 
@@ -1650,10 +1869,12 @@ rec:TimeSpanObservation a sh:NodeShape;
                                      sh:name "value"@en ; 
                                      sh:datatype xsd:double ; 
                                      sh:maxCount 1 ].
-rec:Toilet a sh:NodeShape;
+rec:Toilet a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Toilet"@en;
            rdfs:subClassOf rec:PersonalHygiene.
-rec:TorqueObservation a sh:NodeShape;
+rec:TorqueObservation a sh:NodeShape,
+                        owl:Thing;
                       rdfs:label "Torque observation"@en;
                       rdfs:subClassOf rec:ObservationEvent;
                       sh:property [a sh:PropertyShape ; 
@@ -1661,16 +1882,20 @@ rec:TorqueObservation a sh:NodeShape;
                                    sh:name "value"@en ; 
                                    sh:datatype xsd:double ; 
                                    sh:maxCount 1 ].
-rec:TreatmentRoom a sh:NodeShape;
+rec:TreatmentRoom a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Treatment room"@en;
                   rdfs:subClassOf rec:Room.
-rec:TreatmentWaitingRoom a sh:NodeShape;
+rec:TreatmentWaitingRoom a sh:NodeShape,
+                           owl:Thing;
                          rdfs:label "Treatment waiting room"@en;
                          rdfs:subClassOf rec:TreatmentRoom.
-rec:UtilitiesRoom a sh:NodeShape;
+rec:UtilitiesRoom a sh:NodeShape,
+                    owl:Thing;
                   rdfs:label "Utilities room"@en;
                   rdfs:subClassOf rec:Room.
-rec:VelocityObservation a sh:NodeShape;
+rec:VelocityObservation a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Velocity observation"@en;
                         rdfs:subClassOf rec:ObservationEvent;
                         sh:property [a sh:PropertyShape ; 
@@ -1678,10 +1903,12 @@ rec:VelocityObservation a sh:NodeShape;
                                      sh:name "value"@en ; 
                                      sh:datatype xsd:double ; 
                                      sh:maxCount 1 ].
-rec:VirtualBuilding a sh:NodeShape;
+rec:VirtualBuilding a sh:NodeShape,
+                      owl:Thing;
                     rdfs:label "Virtual building"@en;
                     rdfs:subClassOf rec:Building.
-rec:VoltageObservation a sh:NodeShape;
+rec:VoltageObservation a sh:NodeShape,
+                         owl:Thing;
                        rdfs:label "Voltage observation"@en;
                        rdfs:subClassOf rec:ObservationEvent;
                        sh:property [a sh:PropertyShape ; 
@@ -1689,7 +1916,8 @@ rec:VoltageObservation a sh:NodeShape;
                                     sh:name "value"@en ; 
                                     sh:datatype xsd:double ; 
                                     sh:maxCount 1 ].
-rec:VolumeFlowRateObservation a sh:NodeShape;
+rec:VolumeFlowRateObservation a sh:NodeShape,
+                                owl:Thing;
                               rdfs:label "Volume flow observation"@en;
                               rdfs:subClassOf rec:ObservationEvent;
                               sh:property [a sh:PropertyShape ; 
@@ -1697,7 +1925,8 @@ rec:VolumeFlowRateObservation a sh:NodeShape;
                                            sh:name "value"@en ; 
                                            sh:datatype xsd:double ; 
                                            sh:maxCount 1 ].
-rec:VolumeObservation a sh:NodeShape;
+rec:VolumeObservation a sh:NodeShape,
+                        owl:Thing;
                       rdfs:label "Volume observation"@en;
                       rdfs:subClassOf rec:ObservationEvent;
                       sh:property [a sh:PropertyShape ; 
@@ -1705,31 +1934,40 @@ rec:VolumeObservation a sh:NodeShape;
                                    sh:name "value"@en ; 
                                    sh:datatype xsd:double ; 
                                    sh:maxCount 1 ].
-rec:Wall a sh:NodeShape;
+rec:Wall a sh:NodeShape,
+           owl:Thing;
          rdfs:label "Wall"@en;
          rdfs:subClassOf rec:BuildingElement.
-rec:WallInner a sh:NodeShape;
+rec:WallInner a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Wall (inner)"@en;
               rdfs:subClassOf rec:Wall.
-rec:WasteBasket a sh:NodeShape;
+rec:WasteBasket a sh:NodeShape,
+                  owl:Thing;
                 rdfs:label "Waste basket"@en;
                 rdfs:subClassOf rec:Furniture.
-rec:WasteManagementRoom a sh:NodeShape;
+rec:WasteManagementRoom a sh:NodeShape,
+                          owl:Thing;
                         rdfs:label "Waste management room"@en;
                         rdfs:subClassOf rec:Room.
-rec:Window a sh:NodeShape;
+rec:Window a sh:NodeShape,
+             owl:Thing;
            rdfs:label "Window"@en;
            rdfs:subClassOf rec:BarrierAsset.
-rec:WorkOrder a sh:NodeShape;
+rec:WorkOrder a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Work order"@en;
               rdfs:subClassOf rec:ServiceObject.
-rec:Workshop a sh:NodeShape;
+rec:Workshop a sh:NodeShape,
+               owl:Thing;
              rdfs:label "Workshop"@en;
              rdfs:subClassOf rec:Room.
-rec:Workspace a sh:NodeShape;
+rec:Workspace a sh:NodeShape,
+                owl:Thing;
               rdfs:label "Workspace"@en;
               rdfs:subClassOf rec:Zone.
-rec:Zone a sh:NodeShape;
+rec:Zone a sh:NodeShape,
+           owl:Thing;
          rdfs:comment "A sub-zone within or outside of a building defined to support some technology and/or use, e.g., an HVAC zone, a parking space, a security zone, etc."@en;
          rdfs:label "Zone"@en;
          rdfs:subClassOf rec:Architecture.
