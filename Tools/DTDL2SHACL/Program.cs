@@ -225,7 +225,9 @@ namespace DTDL2SHACL
                 PrettyPrintMode = true,
                 CompressionLevel = WriterCompressionLevel.High,
             };
+            shapesGraph.NamespaceMap.AddNamespace("dc", new Uri("http://purl.org/dc/elements/1.1/"));
             shapesGraph.NamespaceMap.AddNamespace("sh", new Uri("http://www.w3.org/ns/shacl#"));
+            shapesGraph.NamespaceMap.AddNamespace("cc", new Uri("http://creativecommons.org/ns#"));
             writer.Save(shapesGraph, outputPath);
         }
 
@@ -310,9 +312,12 @@ namespace DTDL2SHACL
                         outputOntology!.AddLabel(idValue);
                         outputOntology!.AddVersionInfo(versionValue);
                         outputOntology!.AddComment(descriptionValue);
-                        /*
-                        OntologyAnnotations.Add("authors", authorsValue);
-                        */
+                        var authors = authorsValue.Split(',').Select(author => author.Trim());
+                        Uri dcCreatorUri = new Uri("http://purl.org/dc/elements/1.1/creator");
+                        foreach (string author in authors)
+                        {
+                            outputOntology.AddLiteralProperty(dcCreatorUri, ontologyGraph.CreateLiteralNode(author, new Uri(XmlSpecsHelper.XmlSchemaDataTypeString)), true);
+                        }
 
                         // Parse non-mandatory fields
                         XmlNode? titleNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:title/text()", namespaces);
@@ -324,15 +329,17 @@ namespace DTDL2SHACL
                         }
 
                         XmlNode? licenseNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:license/text()", namespaces);
-                        if (licenseNode != null)
+                        if (licenseNode != null && licenseNode.Value != null)
                         {
-                            //OntologyAnnotations.Add("license", licenseNode.Value ?? string.Empty);
+                            Uri ccLicense = new Uri("http://creativecommons.org/ns#license");
+                            IUriNode license = ontologyGraph.CreateUriNode(new Uri($"https://opensource.org/licenses/{licenseNode.Value}"));
+                            outputOntology.AddResourceProperty(ccLicense, license, true);
                         }
 
                         XmlNode? projectUrlNode = docRoot.SelectSingleNode("/nuspec:package/nuspec:metadata/nuspec:projectUrl/text()", namespaces);
-                        if (projectUrlNode != null)
+                        if (projectUrlNode != null && projectUrlNode.Value != null)
                         {
-                            //OntologyAnnotations.Add("projectUrl", projectUrlNode.Value ?? string.Empty);
+                            outputOntology.AddSeeAlso(new Uri(projectUrlNode.Value));
                         }
                     }
                 }

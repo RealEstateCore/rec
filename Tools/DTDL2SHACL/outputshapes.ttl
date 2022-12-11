@@ -5,7 +5,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix rec: <https://w3id.org/rec#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix cc: <http://creativecommons.org/ns#>.
 
 _:autos121 rdf:first "LocalCoordinates"^^xsd:string;
            rdf:rest _:autos122.
@@ -29,9 +31,12 @@ _:autos71 rdf:first "Down"^^xsd:string;
           rdf:rest _:autos72.
 _:autos72 rdf:first "Up"^^xsd:string;
           rdf:rest rdf:nil.
-<https://w3id.org/rec> a owl:Ontology;
+<https://w3id.org/rec> cc:license <https://opensource.org/licenses/BSD-3-Clause>;
+                       dc:creator "RealEstateCore"^^xsd:string;
+                       a owl:Ontology;
                        rdfs:comment "RealEstateCore (REC) is an ontology model and API specification for building and interfacing against Smart Buildings, whether on individual building or portfolio level. The REC ontology is released in DTDL (Digital Twin Definition Language) and SHACL (RDF Shapes Contraint language) formats; the REC API is expressed as an OpenAPI Specification (a.k.a. Swagger). We also provide a southbound edge API for bandwidth-constrained devices to communicate telemetry, alerts, commands, etc (see GitHub repository).";
                        rdfs:label "RealEstateCore Ontology";
+                       rdfs:seeAlso <https://github.com/RealEstateCore/rec>;
                        owl:versionInfo "4.0.0.9".
 rec:AccelerationObservation a sh:NodeShape;
                             rdfs:label "Acceleration observation"@en;
