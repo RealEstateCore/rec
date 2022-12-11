@@ -125,8 +125,8 @@ namespace DTDL2SHACL
                 // Create a new NodeShape
                 NodeShape nodeShape = shapesGraph.CreateNodeShape(GetShaclId(iface.Id));
                 IUriNode rdfType = shapesGraph.CreateUriNode(RDF.type);
-                IUriNode owlThing = shapesGraph.CreateUriNode(OWL.Thing);
-                shapesGraph.Assert(nodeShape.Node, rdfType, owlThing);
+                IUriNode owlClass = shapesGraph.CreateUriNode(OWL.Class);
+                shapesGraph.Assert(nodeShape.Node, rdfType, owlClass);
 
                 // Add labels and comments from DTDL display names and descriptions
                 foreach ((string lang, string val) in iface.DisplayName)
