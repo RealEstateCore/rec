@@ -1163,19 +1163,6 @@ rec:EquipmentCollection
   rdfs:subClassOf rec:Collection ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:feeds ;
-      sh:name "feeds" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:hasPoint ;
-      sh:class brick:Point ;
-      sh:name "has point" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
       sh:path rec:includes ;
       sh:class brick:Equipment ;
       sh:minCount 1 ;
@@ -1391,6 +1378,13 @@ rec:Geotransform
   rdfs:subClassOf rec:Georeference ;
   sh:property [
       rdf:type sh:PropertyShape ;
+      sh:path rec:heightScaleFactor ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:name "height scale factor" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
       sh:path rec:originX ;
       sh:datatype xsd:double ;
       sh:maxCount 1 ;
@@ -1412,24 +1406,17 @@ rec:Geotransform
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:heightScaleFactor ;
-      sh:datatype xsd:double ;
-      sh:maxCount 1 ;
-      sh:name "height scale factor" ;
-    ] ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
       sh:path rec:xRotationalScaleFactor ;
-      sh:description "Value will be zero if the local coordinate system is north-aligned." ;
       sh:datatype xsd:double ;
+      sh:description "Value will be zero if the local coordinate system is north-aligned." ;
       sh:maxCount 1 ;
       sh:name "x rotational scale factor" ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path rec:yRotationalScaleFactor ;
-      sh:description "Value will be zero if the local coordinate system is north-aligned." ;
       sh:datatype xsd:double ;
+      sh:description "Value will be zero if the local coordinate system is north-aligned." ;
       sh:maxCount 1 ;
       sh:name "y rotational scale factor" ;
     ] ;
