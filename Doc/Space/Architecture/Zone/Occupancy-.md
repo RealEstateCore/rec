@@ -41,7 +41,6 @@ Occupancy Zone is a spatial area where devices are monitoring or reporting on th
 * [Architecture](../Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url
-* [EquipmentCollection](../../../Collection/Equipment-.md).feeds
 * [Lease](../../../Event/Lease.md).leaseOf
 * [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](../../../Collection/Portfolio.md).includes

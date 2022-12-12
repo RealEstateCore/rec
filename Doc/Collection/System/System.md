@@ -48,7 +48,6 @@ A System is a combination of equipment and auxiliary devices (e.g., controls, ac
 * [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
-* [EquipmentCollection](../Equipment-.md).feeds
 * [Lease](../../Event/Lease.md).leaseOf
 * [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](../Portfolio.md).includes

@@ -36,7 +36,6 @@ The legal/administrative representation of some lands and/or buildings. I.e., "F
 * [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Document](../Information/Document/Document.md).documentTopic
 * [Document](../Information/Document/Document.md).url
-* [EquipmentCollection](Equipment-.md).feeds
 * [Lease](../Event/Lease.md).leaseOf
 * [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](Portfolio.md).includes

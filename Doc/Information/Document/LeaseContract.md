@@ -36,7 +36,6 @@ Formal document that identifies the Tenant and the leased asset or property; sta
 * [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](Document.md).documentTopic
 * [Document](Document.md).url
-* [EquipmentCollection](../../Collection/Equipment-.md).feeds
 * [Lease](../../Event/Lease.md).leaseOf
 * [PointOfInterest](../PointOfInterest.md).objectOfInterest
 * [Portfolio](../../Collection/Portfolio.md).includes

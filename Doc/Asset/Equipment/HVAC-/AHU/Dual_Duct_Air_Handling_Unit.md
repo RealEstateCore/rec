@@ -38,7 +38,6 @@ An air handling unit that contains hot and cold decks to supply heating and cool
 * [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../Information/Document/Document.md).url
-* [EquipmentCollection](../../../../Collection/Equipment-.md).feeds
 * [Lease](../../../../Event/Lease.md).leaseOf
 * [PointOfInterest](../../../../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](../../../../Collection/Portfolio.md).includes

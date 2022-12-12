@@ -64,7 +64,6 @@ devices that serve all or part of the building and may include electric power, l
 * [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
-* [EquipmentCollection](../../Collection/Equipment-.md).feeds
 * [Lease](../../Event/Lease.md).leaseOf
 * [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](../../Collection/Portfolio.md).includes

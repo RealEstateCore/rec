@@ -37,7 +37,6 @@ A collection of batteries that provides energy storage, along with their support
 * [Architecture](../../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../../Information/Document/Document.md).url
-* [EquipmentCollection](../../../../Equipment-.md).feeds
 * [Lease](../../../../../Event/Lease.md).leaseOf
 * [PointOfInterest](../../../../../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](../../../../Portfolio.md).includes

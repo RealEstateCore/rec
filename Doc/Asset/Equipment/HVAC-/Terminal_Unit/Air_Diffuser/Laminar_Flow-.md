@@ -38,7 +38,6 @@ An air diffuser that is designed for low discharge air speeds to provide uniform
 * [Architecture](../../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../../Information/Document/Document.md).url
-* [EquipmentCollection](../../../../../Collection/Equipment-.md).feeds
 * [Lease](../../../../../Event/Lease.md).leaseOf
 * [PointOfInterest](../../../../../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](../../../../../Collection/Portfolio.md).includes

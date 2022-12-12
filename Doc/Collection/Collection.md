@@ -52,7 +52,6 @@ An administrative grouping of entities that are adressed and treated as a unit f
 * [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Document](../Information/Document/Document.md).documentTopic
 * [Document](../Information/Document/Document.md).url
-* [EquipmentCollection](Equipment-.md).feeds
 * [Lease](../Event/Lease.md).leaseOf
 * [PointOfInterest](../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](Portfolio.md).includes

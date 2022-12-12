@@ -46,7 +46,6 @@ Measures energy consumption
 * [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url
-* [EquipmentCollection](../../../Collection/Equipment-.md).feeds
 * [Lease](../../../Event/Lease.md).leaseOf
 * [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](../../../Collection/Portfolio.md).includes
@@ -56,7 +55,6 @@ Measures energy consumption
 * [ActuationEvent](../../../Event/Point-/ActuationEvent.md).targetPoint
 * [Architecture](../../../Space/Architecture/Architecture.md).hasPoint
 * [Asset](../../../Asset/Asset.md).hasPoint
-* [EquipmentCollection](../../../Collection/Equipment-.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
