@@ -27,7 +27,7 @@ A piece of land upon which zero or more buildings may be situated.
 ## Properties
 
 ### Inherited Properties
-* **[Space](../Space.md):** customTags, externalIds, name
+* **[Space](../Space.md):** customProperties, customTags, identifiers, name
 
 ---
 

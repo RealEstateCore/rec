@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: "4.0.0.9"
+  version: "4.0.0.10"
   title: RealEstateCore.Ontology.DTDLv2
   license:
     name: BSD-3-Clause
@@ -499,9 +499,11 @@ components:
             '@type':
               type: string
               default: dtmi:org:w3id:rec:Space;1
+        customProperties:
+          type: string
         customTags:
           type: string
-        externalIds:
+        identifiers:
           type: string
         name:
           type: string
@@ -872,9 +874,11 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
+        customProperties:
+          type: string
         customTags:
           type: string
-        externalIds:
+        identifiers:
           type: string
         name:
           type: string
@@ -1077,9 +1081,11 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
+        customProperties:
+          type: string
         customTags:
           type: string
-        externalIds:
+        identifiers:
           type: string
         name:
           type: string
@@ -1589,9 +1595,11 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
+        customProperties:
+          type: string
         customTags:
           type: string
-        externalIds:
+        identifiers:
           type: string
         name:
           type: string
@@ -1797,9 +1805,11 @@ components:
         levelNumber:
           type: integer
           format: int32
+        customProperties:
+          type: string
         customTags:
           type: string
-        externalIds:
+        identifiers:
           type: string
         name:
           type: string
@@ -2002,9 +2012,11 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
+        customProperties:
+          type: string
         customTags:
           type: string
-        externalIds:
+        identifiers:
           type: string
         name:
           type: string
@@ -2207,9 +2219,11 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
+        customProperties:
+          type: string
         customTags:
           type: string
-        externalIds:
+        identifiers:
           type: string
         name:
           type: string
@@ -4814,14 +4828,20 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: customProperties
+        description: Filter value on property 'customProperties'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: customTags
         description: Filter value on property 'customTags'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: externalIds
-        description: Filter value on property 'externalIds'.
+      - name: identifiers
+        description: Filter value on property 'identifiers'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -6851,14 +6871,20 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: customProperties
+        description: Filter value on property 'customProperties'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: customTags
         description: Filter value on property 'customTags'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: externalIds
-        description: Filter value on property 'externalIds'.
+      - name: identifiers
+        description: Filter value on property 'identifiers'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -7413,14 +7439,20 @@ paths:
           $ref: '#/components/schemas/IntegerFilter'
         style: deepObject
         in: query
+      - name: customProperties
+        description: Filter value on property 'customProperties'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: customTags
         description: Filter value on property 'customTags'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: externalIds
-        description: Filter value on property 'externalIds'.
+      - name: identifiers
+        description: Filter value on property 'identifiers'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -7723,14 +7755,20 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: customProperties
+        description: Filter value on property 'customProperties'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: customTags
         description: Filter value on property 'customTags'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: externalIds
-        description: Filter value on property 'externalIds'.
+      - name: identifiers
+        description: Filter value on property 'identifiers'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -8033,14 +8071,20 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: customProperties
+        description: Filter value on property 'customProperties'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: customTags
         description: Filter value on property 'customTags'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: externalIds
-        description: Filter value on property 'externalIds'.
+      - name: identifiers
+        description: Filter value on property 'identifiers'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -8343,14 +8387,20 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: customProperties
+        description: Filter value on property 'customProperties'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: customTags
         description: Filter value on property 'customTags'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: externalIds
-        description: Filter value on property 'externalIds'.
+      - name: identifiers
+        description: Filter value on property 'identifiers'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -8653,14 +8703,20 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
+      - name: customProperties
+        description: Filter value on property 'customProperties'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       - name: customTags
         description: Filter value on property 'customTags'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
-      - name: externalIds
-        description: Filter value on property 'externalIds'.
+      - name: identifiers
+        description: Filter value on property 'identifiers'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject

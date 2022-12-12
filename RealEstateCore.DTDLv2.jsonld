@@ -1611,6 +1611,35 @@
       {
         "@type": "Property",
         "displayName": {
+          "en": "Custom Properties"
+        },
+        "name": "customProperties",
+        "schema": {
+          "@type": "Map",
+          "mapKey": {
+            "name": "namespace",
+            "schema": "string"
+          },
+          "mapValue": {
+            "name": "properties",
+            "schema": {
+              "@type": "Map",
+              "mapKey": {
+                "name": "propertyName",
+                "schema": "string"
+              },
+              "mapValue": {
+                "name": "propertyValue",
+                "schema": "string"
+              }
+            }
+          }
+        },
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "displayName": {
           "en": "Custom Tags"
         },
         "name": "customTags",
@@ -1630,17 +1659,17 @@
       {
         "@type": "Property",
         "displayName": {
-          "en": "External IDs"
+          "en": "Identifiers"
         },
-        "name": "externalIds",
+        "name": "identifiers",
         "schema": {
           "@type": "Map",
           "mapKey": {
-            "name": "externalIdName",
+            "name": "namespace",
             "schema": "string"
           },
           "mapValue": {
-            "name": "externalIdValue",
+            "name": "identifier",
             "schema": "string"
           }
         },
@@ -3158,12 +3187,12 @@
               "name": "LocalCoordinates"
             },
             {
-              "enumValue": "WGS84",
-              "name": "WGS84"
-            },
-            {
               "enumValue": "SWEREF99",
               "name": "SWEREF99"
+            },
+            {
+              "enumValue": "WGS84",
+              "name": "WGS84"
             }
           ],
           "valueSchema": "string"
@@ -20041,7 +20070,7 @@
       }
     ],
     "displayName": {
-      "en": "Volume flow observation"
+      "en": "Volume flow rate observation"
     },
     "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [

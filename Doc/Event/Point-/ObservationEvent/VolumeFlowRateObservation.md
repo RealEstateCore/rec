@@ -1,7 +1,7 @@
 [Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [VolumeFlowRateObservation](#)
 # VolumeFlowRateObservation
 
-**Display name:** Volume flow observation<br />
+**Display name:** Volume flow rate observation<br />
 **DTMI:** dtmi:org:w3id:rec:VolumeFlowRateObservation;1
 
 ---

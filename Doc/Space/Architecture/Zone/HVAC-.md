@@ -24,7 +24,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[Space](../../Space.md):** customTags, externalIds, name
+* **[Space](../../Space.md):** customProperties, customTags, identifiers, name
 
 ---
 

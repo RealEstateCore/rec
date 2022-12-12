@@ -18,7 +18,7 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|coordinateSystem|**en**: coordinate system||enum (LocalCoordinates, WGS84, SWEREF99)|True|
+|coordinateSystem|**en**: coordinate system||enum (LocalCoordinates, SWEREF99, WGS84)|True|
 ### Inherited Properties
 * **[Information](../Information.md):** customProperties, customTags, identifiers, name
 
