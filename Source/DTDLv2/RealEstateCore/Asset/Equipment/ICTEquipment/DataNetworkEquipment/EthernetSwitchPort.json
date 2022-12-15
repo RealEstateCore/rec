@@ -1,0 +1,32 @@
+{
+  "@id": "dtmi:org:w3id:rec:EthernetSwitchPort;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Ethernet switch port."
+  },
+  "displayName": {
+    "en": "Ethernet Switch Port"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "poeType",
+      "displayName": {
+        "en": "PoE Type"
+      },
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "portSpeed",
+      "displayName": {
+        "en": "Port Speed"
+      },
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "@context": ["dtmi:dtdl:context;2"],
+  "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1"
+}

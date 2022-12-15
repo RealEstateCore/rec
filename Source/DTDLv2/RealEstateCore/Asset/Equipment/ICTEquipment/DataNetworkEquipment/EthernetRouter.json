@@ -1,0 +1,32 @@
+{
+  "@id": "dtmi:org:w3id:rec:EthernetRouter;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Ethernet router."
+  },
+  "displayName": {
+    "en": "Ethernet Router"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "heightRUs",
+      "displayName": {
+        "en": "Height (RUs)"
+      },
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "numberOfPorts",
+      "displayName": {
+        "en": "Number of Ports"
+      },
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "@context": ["dtmi:dtdl:context;2"],
+  "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1"
+}
