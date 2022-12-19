@@ -47,3 +47,17 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Merged and regenerated docs/APIs for revision ${{ steps.increment.outputs.newVersion }}
+    - name: 'Checkout dev site'
+      uses: actions/checkout@v3
+      with:
+        repository: RealEstateCore/realestatecore.github.io
+        path: realestatecore.github.io
+        token:  ${{ secrets.CI_PUSH_PAT }}
+    - name: 'Delete old docs from dev site'
+      run: rm -rf ./realestatecore.github.io/ontology/*
+    - name: 'Copy new docs to dev site'
+      run: cp -r ./Doc/* ./realestatecore.github.io/ontology/
+    - name: 'Commit updated docs'
+      run: cd ./realestatecore.github.io/ontology/ && git commit -a -m "Updated docs to version ${{ steps.increment.outputs.newVersion }}"
+    - name: 'Push updated docs'
+      run: git push
