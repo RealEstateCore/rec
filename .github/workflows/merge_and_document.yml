@@ -60,9 +60,9 @@ jobs:
     - name: 'Commit updated docs'
       run: |
         cd ./realestatecore.github.io/ontology/
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.email "github-actions@github.com"
         git config --global user.name "github-actions[bot]"
-        git add * 
+        git add . 
         git commit -a -m "Updated docs to version ${{ steps.increment.outputs.newVersion }}"
     - name: 'Push updated docs'
       run: git push
