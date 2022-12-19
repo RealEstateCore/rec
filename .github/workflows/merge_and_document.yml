@@ -57,12 +57,11 @@ jobs:
       run: rm -rf ./realestatecore.github.io/ontology/*
     - name: 'Copy new docs to dev site'
       run: cp -r ./Doc/* ./realestatecore.github.io/ontology/
-    - name: 'Commit updated docs'
+    - name: 'Commit and push updated docs'
       run: |
         cd ./realestatecore.github.io/ontology/
         git config --global user.email "github-actions@github.com"
         git config --global user.name "github-actions[bot]"
         git add . 
         git commit -a -m "Updated docs to version ${{ steps.increment.outputs.newVersion }}"
-    - name: 'Push updated docs'
-      run: git push
+        git push
