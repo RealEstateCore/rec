@@ -58,6 +58,6 @@ jobs:
     - name: 'Copy new docs to dev site'
       run: cp -r ./Doc/* ./realestatecore.github.io/ontology/
     - name: 'Commit updated docs'
-      run: cd ./realestatecore.github.io/ontology/ && git commit -a -m "Updated docs to version ${{ steps.increment.outputs.newVersion }}"
+      run: cd ./realestatecore.github.io/ontology/ && git add * && git commit -a -m "Updated docs to version ${{ steps.increment.outputs.newVersion }}"
     - name: 'Push updated docs'
       run: git push
