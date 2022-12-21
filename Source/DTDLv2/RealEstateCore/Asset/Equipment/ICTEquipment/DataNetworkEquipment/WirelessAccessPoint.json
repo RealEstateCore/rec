@@ -10,11 +10,41 @@
   "contents": [
     {
       "@type": "Property",
-      "name": "type",
+      "name": "generation",
       "displayName": {
-        "en": "Type"
+        "en": "Generation"
       },
-      "schema": "string",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          {
+            "name": "WiFi4",
+            "displayName": "Wi-Fi 4",
+            "enumValue": "WiFi4"
+          },
+          {
+            "name": "WiFi5",
+            "displayName": "Wi-Fi 5",
+            "enumValue": "WiFi5"
+          },
+          {
+            "name": "WiFi6",
+            "displayName": "Wi-Fi 6",
+            "enumValue": "WiFi6"
+          },
+          {
+            "name": "WiFi6E",
+            "displayName": "Wi-Fi 6E",
+            "enumValue": "WiFi6E"
+          },
+          {
+            "name": "WiFi7",
+            "displayName": "Wi-Fi 7",
+            "enumValue": "WiFi7"
+          }
+        ]
+      },
       "writable": true
     }
   ],
