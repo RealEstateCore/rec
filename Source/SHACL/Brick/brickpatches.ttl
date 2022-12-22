@@ -14,6 +14,20 @@
 brick:Ablutions_Room
   owl:deprecated "true"^^xsd:boolean ;
 .
+brick:Absolute_Humidity_Sensor
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Absolute Humidity Sensor" ;
+  rdfs:subClassOf brick:Humidity_Sensor ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class rec:AbsoluteHumidityObservation ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 brick:Adjust_Sensor
   sh:property [
       rdf:type sh:PropertyShape ;
@@ -404,16 +418,6 @@ brick:Hospitality_Box
 brick:Hot_Box
   owl:deprecated "true"^^xsd:boolean ;
 .
-brick:Humidity_Sensor
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path brick:lastKnownValue ;
-      sh:class <https://brickschema.org/schema/BrickShape#LastKnownDoubleShape> ;
-      sh:maxCount 1 ;
-      sh:name "last known value" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-.
 brick:IDF
   owl:deprecated "true"^^xsd:boolean ;
 .
@@ -715,6 +719,16 @@ brick:Refrigerant_Level_Sensor
 .
 brick:Region
   owl:deprecated "true"^^xsd:boolean ;
+.
+brick:Relative_Humidity_Sensor
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class rec:RelativeHumidityObservation ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
 .
 brick:Rest_Room
   owl:deprecated "true"^^xsd:boolean ;
@@ -1031,6 +1045,9 @@ brick:isPointOf
 <https://brickschema.org/schema/BrickShape#ValueShape>
   rdf:type sh:NodeShape ;
 .
+rec:AbsoluteHumidityObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
 rec:AccelerationObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
@@ -1086,9 +1103,6 @@ rec:ForceObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:FrequencyObservation
-  rdf:type <dtmi:dtdl:class:Component> ;
-.
-rec:HumidityObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:IlluminanceObservation

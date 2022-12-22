@@ -156,6 +156,21 @@ geojson:Polygon
   owl:imports <https://w3id.org/rec/brickpatches> ;
   owl:versionInfo "4.0" ;
 .
+rec:AbsoluteHumidityObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
+  rdfs:label "Absolute humidity observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:AccelerationObservation
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1450,21 +1465,6 @@ rec:Hospital
   rdf:type sh:NodeShape ;
   rdfs:label "Hospital" ;
   rdfs:subClassOf rec:Building ;
-.
-rec:HumidityObservation
-  rdf:type rdfs:Class ;
-  rdf:type sh:NodeShape ;
-  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
-  rdfs:label "Humidity (absolute) observation" ;
-  rdfs:subClassOf rec:ObservationEvent ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:value ;
-      sh:datatype xsd:double ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "value" ;
-    ] ;
 .
 rec:IlluminanceObservation
   rdf:type rdfs:Class ;

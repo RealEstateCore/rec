@@ -2154,6 +2154,20 @@ brick:Absolute_Humidity
   skos:broader brick:Humidity ;
   brick:hasQUDTReference qudtqk:AbsoluteHumidity ;
 .
+brick:Absolute_Humidity_Sensor
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Absolute Humidity Sensor" ;
+  rdfs:subClassOf brick:Humidity_Sensor ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class rec:AbsoluteHumidityObservation ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 brick:Absorption_Chiller
   rdf:type owl:Class ;
   rdf:type sh:NodeShape ;
@@ -27258,14 +27272,6 @@ brick:Humidity_Sensor
   rdfs:seeAlso <https://en.wikipedia.org/wiki/Humidity> ;
   rdfs:subClassOf brick:Sensor ;
   skos:definition "Measures the concentration of water vapor in air"@en ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path brick:lastKnownValue ;
-      sh:class bsh:LastKnownDoubleShape ;
-      sh:maxCount 1 ;
-      sh:name "last known value" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Humidity ;
@@ -44856,6 +44862,14 @@ brick:Relative_Humidity_Sensor
   rdfs:label "Relative Humidity Sensor" ;
   rdfs:subClassOf brick:Humidity_Sensor ;
   skos:definition "Measures the present state of absolute humidity relative to a maximum humidity given the same temperature"@en ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class rec:RelativeHumidityObservation ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
   sh:rule [
       rdf:type sh:TripleRule ;
       sh:object tag:Air ;
@@ -63372,6 +63386,9 @@ tag:Zone
   rdf:type brick:Tag ;
   rdfs:label "Zone" ;
 .
+rec:AbsoluteHumidityObservation
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
 rec:AccelerationObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
@@ -63427,9 +63444,6 @@ rec:ForceObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:FrequencyObservation
-  rdf:type <dtmi:dtdl:class:Component> ;
-.
-rec:HumidityObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:IlluminanceObservation
