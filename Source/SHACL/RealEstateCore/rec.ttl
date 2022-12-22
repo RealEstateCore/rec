@@ -710,6 +710,21 @@ rec:Bookcase
   rdfs:label "Bookcase" ;
   rdfs:subClassOf rec:Furniture ;
 .
+rec:BooleanValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:boolean value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Boolean value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Building
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1044,6 +1059,21 @@ rec:Door
   rdf:type sh:NodeShape ;
   rdfs:label "Door" ;
   rdfs:subClassOf rec:BarrierAsset ;
+.
+rec:DoubleValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:double value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Double value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:DressingRoom
   rdf:type rdfs:Class ;
@@ -1501,6 +1531,21 @@ rec:Information
   rdf:type sh:NodeShape ;
   rdfs:label "Information" ;
   rdfs:subClassOf rdfs:Resource ;
+.
+rec:IntegerValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:int value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Integer value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:integer ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:Kitchenette
   rdf:type rdfs:Class ;
