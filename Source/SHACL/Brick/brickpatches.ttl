@@ -62,7 +62,7 @@ brick:Alarm
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class <https://brickschema.org/schema/BrickShape#LastKnownValueShape> ;
+      sh:class rec:ExceptionEvent ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -128,7 +128,7 @@ brick:Command
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path brick:lastKnownValue ;
-      sh:class <https://brickschema.org/schema/BrickShape#LastKnownValueShape> ;
+      sh:class rec:ActuationEvent ;
       sh:maxCount 1 ;
       sh:name "last known value" ;
       sh:nodeKind sh:IRI ;
@@ -1051,6 +1051,9 @@ rec:AbsoluteHumidityObservation
 rec:AccelerationObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
+rec:ActuationEvent
+  rdf:type <dtmi:dtdl:class:Component> ;
+.
 rec:AngleObservation
   rdf:type <dtmi:dtdl:class:Component> ;
 .
@@ -1104,6 +1107,9 @@ rec:EnergyObservation
 .
 rec:EquipmentCollection
   rdf:type sh:NodeShape ;
+.
+rec:ExceptionEvent
+  rdf:type <dtmi:dtdl:class:Component> ;
 .
 rec:ForceObservation
   rdf:type <dtmi:dtdl:class:Component> ;

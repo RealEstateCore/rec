@@ -212,6 +212,15 @@ rec:ActuationEvent
       sh:name "target point" ;
       sh:nodeKind sh:IRI ;
     ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:string ;
+      sh:description "The command message/payload of this actuation event." ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:AdmittingRoom
   rdf:type rdfs:Class ;
@@ -1266,6 +1275,15 @@ rec:ExceptionEvent
       sh:name "source point" ;
       sh:nodeKind sh:IRI ;
     ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:string ;
+      sh:description "The message of this exception event." ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:ExerciseRoom
   rdf:type rdfs:Class ;
@@ -2064,15 +2082,6 @@ rec:PointEvent
   rdfs:comment "An event emanating from or targeting a Point; e.g., an individual Observation from a Sensor point, or an Actuation sent to a Command point. In other terms, the Points indicate the capability of some Space or Equipment to emit or accept data, while this class represents those actual data messages. Note that in most non-trivially sized systems, these events are not stored in the knowledge graph itself, but are rather forwarded to some C&C system or time series database." ;
   rdfs:label "Point event" ;
   rdfs:subClassOf rec:Event ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:payload ;
-      sh:datatype xsd:string ;
-      sh:description "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)" ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "payload" ;
-    ] ;
 .
 rec:PointOfInterest
   rdf:type rdfs:Class ;
