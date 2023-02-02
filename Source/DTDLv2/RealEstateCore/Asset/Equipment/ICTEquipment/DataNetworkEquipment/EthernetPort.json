@@ -1,11 +1,11 @@
 {
-  "@id": "dtmi:org:w3id:rec:EthernetSwitchPort;1",
+  "@id": "dtmi:org:w3id:rec:EthernetPort;1",
   "@type": "Interface",
   "description": {
-    "en": "Ethernet switch port."
+    "en": "Ethernet port."
   },
   "displayName": {
-    "en": "Ethernet Switch Port"
+    "en": "Ethernet Port"
   },
   "contents": [
     {
@@ -43,12 +43,16 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": ["Property", "DataRate"],
       "name": "portSpeed",
+      "description": {
+        "en": "The data rate of the port in Mib/s, i.e. mebibit (2^20 bit) per second."
+      },
       "displayName": {
         "en": "Port Speed"
       },
-      "schema": "string",
+      "schema": "float",
+      "unit": "mebibitPerSecond",
       "writable": true
     }
   ],
