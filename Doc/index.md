@@ -21,6 +21,7 @@ For an index of the entire inheritance tree (much larger), see the [Full Type In
         * [Fire_Safety_Equipment](Asset/Equipment/Fire_Safety-/Fire_Safety_Equipment.md)
         * [Gas_Distribution](Asset/Equipment/Gas_Distribution.md)
         * [HVAC_Equipment](Asset/Equipment/HVAC-/HVAC_Equipment.md)
+        * [ICTEquipment](Asset/Equipment/ICT-/ICTEquipment.md)
         * [Lighting_Equipment](Asset/Equipment/Lighting-/Lighting_Equipment.md)
         * [Meter](Asset/Equipment/Meter/Meter.md)
         * [Motor](Asset/Equipment/Motor/Motor.md)
