@@ -8933,6 +8933,52 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:ICTEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Equipment and devices that are part of a building\u0027s ICT infrastructure."
+    },
+    "displayName": {
+      "en": "ICT Equipment"
+    },
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "heightRUs",
+        "displayName": {
+          "en": "Height (RUs)"
+        },
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "numberOfPorts",
+        "displayName": {
+          "en": "Number of Ports"
+        },
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "standard",
+        "description": {
+          "en": "The standard the equipment or device adheres to, e.g. IEEE 802.11."
+        },
+        "displayName": {
+          "en": "Standard"
+        },
+        "schema": "string",
+        "writable": true
+      }
+    ],
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:brickschema:schema:Brick:Equipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Lamp;1",
     "@type": "Interface",
     "displayName": {
@@ -18254,6 +18300,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:AudioVisualEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Audio visual equipment."
+    },
+    "displayName": {
+      "en": "Audio Visual Equipment"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:ICTEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Auditorium;1",
     "@type": "Interface",
     "displayName": {
@@ -18412,6 +18472,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:Controller;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Controller."
+    },
+    "displayName": {
+      "en": "Controller"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:ICTEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:ConversationRoom;1",
     "@type": "Interface",
     "displayName": {
@@ -18432,6 +18506,20 @@
     "@context": [
       "dtmi:dtdl:context;2"
     ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:DataNetworkEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Data network equipment."
+    },
+    "displayName": {
+      "en": "Data Network Equipment"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:ICTEquipment;1"
   },
   {
     "@id": "dtmi:org:w3id:rec:DataRateObservation;1",
@@ -18833,6 +18921,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:Gateway;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Gateway."
+    },
+    "displayName": {
+      "en": "Gateway"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:ICTEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Hallway;1",
     "@type": "Interface",
     "displayName": {
@@ -18903,6 +19005,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:ICTHardware;1",
+    "@type": "Interface",
+    "description": {
+      "en": "ICT hardware."
+    },
+    "displayName": {
+      "en": "ICT Hardware"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:ICTEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:IlluminanceObservation;1",
     "@type": "Interface",
     "contents": [
@@ -18953,6 +19069,20 @@
     "@context": [
       "dtmi:dtdl:context;2"
     ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:ITRack;1",
+    "@type": "Interface",
+    "description": {
+      "en": "IT rack."
+    },
+    "displayName": {
+      "en": "IT Rack"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:ICTEquipment;1"
   },
   {
     "@id": "dtmi:org:w3id:rec:Laboratory;1",
@@ -19561,6 +19691,40 @@
     "@context": [
       "dtmi:dtdl:context;2"
     ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:SensorEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Sensor equipment."
+    },
+    "displayName": {
+      "en": "Sensor Equipment"
+    },
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "batteryPercentage",
+        "displayName": {
+          "en": "Battery Percentage"
+        },
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "wifiSignalStrength",
+        "displayName": {
+          "en": "Wi-Fi Signal Strength"
+        },
+        "schema": "double",
+        "writable": true
+      }
+    ],
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:ICTEquipment;1"
   },
   {
     "@id": "dtmi:org:w3id:rec:ServiceShaft;1",
@@ -29309,6 +29473,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:BACnetController;1",
+    "@type": "Interface",
+    "description": {
+      "en": "BACnet controller."
+    },
+    "displayName": {
+      "en": "BACnet Controller"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:Controller;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:BarRoom;1",
     "@type": "Interface",
     "displayName": {
@@ -29408,6 +29586,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:DaylightSensorEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Daylight sensor."
+    },
+    "displayName": {
+      "en": "Daylight Sensor"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:SensorEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:DiningRoom;1",
     "@type": "Interface",
     "displayName": {
@@ -29452,6 +29644,86 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:EthernetPort;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Ethernet port."
+    },
+    "displayName": {
+      "en": "Ethernet Port"
+    },
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "poeType",
+        "displayName": {
+          "en": "PoE Type"
+        },
+        "schema": {
+          "@type": "Enum",
+          "valueSchema": "string",
+          "enumValues": [
+            {
+              "name": "Type1",
+              "displayName": "802.3af (802.3at Type 1), PoE",
+              "enumValue": "Type1"
+            },
+            {
+              "name": "Type2",
+              "displayName": "802.3at Type 2, PoE\u002B",
+              "enumValue": "Type2"
+            },
+            {
+              "name": "Type3",
+              "displayName": "802.3bt Type 3, 4PPoE or PoE\u002B\u002B",
+              "enumValue": "Type3"
+            },
+            {
+              "name": "Type4",
+              "displayName": "802.3bt Type 4, 4PPoE or PoE\u002B\u002B",
+              "enumValue": "Type4"
+            }
+          ]
+        },
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "DataRate"
+        ],
+        "name": "portSpeed",
+        "description": {
+          "en": "The data rate of the port in Mib/s, i.e. mebibit (2^20 bit) per second."
+        },
+        "displayName": {
+          "en": "Port Speed"
+        },
+        "schema": "float",
+        "unit": "mebibitPerSecond",
+        "writable": true
+      }
+    ],
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1"
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:EthernetSwitch;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Ethernet switch."
+    },
+    "displayName": {
+      "en": "Ethernet Switch"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:FittingRoom;1",
     "@type": "Interface",
     "displayName": {
@@ -29472,6 +29744,20 @@
     "@context": [
       "dtmi:dtdl:context;2"
     ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:IAQSensorEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Indoor air quality sensor."
+    },
+    "displayName": {
+      "en": "Indoor Air Quality Sensor"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:SensorEquipment;1"
   },
   {
     "@id": "dtmi:org:w3id:rec:Kitchenette;1",
@@ -29507,6 +29793,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:LeakDetectorEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Leak detector."
+    },
+    "displayName": {
+      "en": "Leak Detector"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:SensorEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:MailRoom;1",
     "@type": "Interface",
     "displayName": {
@@ -29529,6 +29829,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:ModbusController;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Modbus controller."
+    },
+    "displayName": {
+      "en": "Modbus Controller"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:Controller;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Morgue;1",
     "@type": "Interface",
     "displayName": {
@@ -29549,6 +29863,48 @@
     "@context": [
       "dtmi:dtdl:context;2"
     ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:NetworkRouter;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Network router."
+    },
+    "displayName": {
+      "en": "Network Router"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1"
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:NetworkSecurityEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Network security equipment."
+    },
+    "displayName": {
+      "en": "Network Security Equipment"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1"
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:OccupancySensorEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Occupancy sensor."
+    },
+    "displayName": {
+      "en": "Occupancy Sensor"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:SensorEquipment;1"
   },
   {
     "@id": "dtmi:org:w3id:rec:OfficeLandscape;1",
@@ -29606,6 +29962,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:PeopleCountSensorEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "People count sensor."
+    },
+    "displayName": {
+      "en": "People Count Sensor"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:SensorEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:PharmacyRoom;1",
     "@type": "Interface",
     "displayName": {
@@ -29648,6 +30018,20 @@
     "@context": [
       "dtmi:dtdl:context;2"
     ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Server;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Server."
+    },
+    "displayName": {
+      "en": "Server"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:ICTHardware;1"
   },
   {
     "@id": "dtmi:org:w3id:rec:ServiceEntrance;1",
@@ -29727,6 +30111,20 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:ThermostatEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Thermostat."
+    },
+    "displayName": {
+      "en": "Thermostat"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:SensorEquipment;1"
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Toilet;1",
     "@type": "Interface",
     "displayName": {
@@ -29747,6 +30145,75 @@
     "@context": [
       "dtmi:dtdl:context;2"
     ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:VibrationSensorEquipment;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Vibration sensor."
+    },
+    "displayName": {
+      "en": "Vibration Sensor"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:SensorEquipment;1"
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:WirelessAccessPoint;1",
+    "@type": "Interface",
+    "description": {
+      "en": "Wireless access point."
+    },
+    "displayName": {
+      "en": "Wireless Access Point"
+    },
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "generation",
+        "displayName": {
+          "en": "Generation"
+        },
+        "schema": {
+          "@type": "Enum",
+          "valueSchema": "string",
+          "enumValues": [
+            {
+              "name": "WiFi4",
+              "displayName": "Wi-Fi 4",
+              "enumValue": "WiFi4"
+            },
+            {
+              "name": "WiFi5",
+              "displayName": "Wi-Fi 5",
+              "enumValue": "WiFi5"
+            },
+            {
+              "name": "WiFi6",
+              "displayName": "Wi-Fi 6",
+              "enumValue": "WiFi6"
+            },
+            {
+              "name": "WiFi6E",
+              "displayName": "Wi-Fi 6E",
+              "enumValue": "WiFi6E"
+            },
+            {
+              "name": "WiFi7",
+              "displayName": "Wi-Fi 7",
+              "enumValue": "WiFi7"
+            }
+          ]
+        },
+        "writable": true
+      }
+    ],
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1"
   },
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Active_Chilled_Beam;1",

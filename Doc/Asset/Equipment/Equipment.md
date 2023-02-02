@@ -30,6 +30,7 @@ devices that serve all or part of the building and may include electric power, l
 * [Water_Distribution](Water_Distribution.md)
 * [Water_Heater](Water_Heater/Water_Heater.md)
 * [Weather_Station](Weather_Station.md)
+* [ICTEquipment](ICT-/ICTEquipment.md)
 
 ---
 
