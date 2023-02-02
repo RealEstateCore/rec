@@ -1,0 +1,61 @@
+{
+  "@id": "dtmi:org:w3id:rec:EthernetPort;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Ethernet port."
+  },
+  "displayName": {
+    "en": "Ethernet Port"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "poeType",
+      "displayName": {
+        "en": "PoE Type"
+      },
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          {
+            "name": "Type1",
+            "displayName": "802.3af (802.3at Type 1), PoE",
+            "enumValue": "Type1"
+          },
+          {
+            "name": "Type2",
+            "displayName": "802.3at Type 2, PoE+",
+            "enumValue": "Type2"
+          },
+          {
+            "name": "Type3",
+            "displayName": "802.3bt Type 3, 4PPoE or PoE++",
+            "enumValue": "Type3"
+          },
+          {
+            "name": "Type4",
+            "displayName": "802.3bt Type 4, 4PPoE or PoE++",
+            "enumValue": "Type4"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": ["Property", "DataRate"],
+      "name": "portSpeed",
+      "description": {
+        "en": "The data rate of the port in Mib/s, i.e. mebibit (2^20 bit) per second."
+      },
+      "displayName": {
+        "en": "Port Speed"
+      },
+      "schema": "float",
+      "unit": "mebibitPerSecond",
+      "writable": true
+    }
+  ],
+  "@context": ["dtmi:dtdl:context;2"],
+  "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1"
+}

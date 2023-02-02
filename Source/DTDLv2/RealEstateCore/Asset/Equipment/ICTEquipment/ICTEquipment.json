@@ -1,0 +1,44 @@
+{
+  "@id": "dtmi:org:w3id:rec:ICTEquipment;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Equipment and devices that are part of a building's ICT infrastructure."
+  },
+  "displayName": {
+    "en": "ICT Equipment"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "heightRUs",
+      "displayName": {
+        "en": "Height (RUs)"
+      },
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "numberOfPorts",
+      "displayName": {
+        "en": "Number of Ports"
+      },
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "standard",
+      "description": {
+        "en": "The standard the equipment or device adheres to, e.g. IEEE 802.11."
+      },
+      "displayName": {
+        "en": "Standard"
+      },
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "@context": ["dtmi:dtdl:context;2"],
+  "extends": "dtmi:org:brickschema:schema:Brick:Equipment;1"
+}
