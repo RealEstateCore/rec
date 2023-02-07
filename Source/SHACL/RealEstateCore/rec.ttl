@@ -25,6 +25,21 @@
   owl:imports <https://w3id.org/rec/brickpatches> ;
   owl:versionInfo "4.0" ;
 .
+rec:AbsoluteHumidityObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
+  rdfs:label "Absolute humidity observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:AccelerationObservation
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -65,6 +80,15 @@ rec:ActuationEvent
       sh:minCount 1 ;
       sh:name "target point" ;
       sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:string ;
+      sh:description "The command message/payload of this actuation event." ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
     ] ;
 .
 rec:AdmittingRoom
@@ -564,6 +588,21 @@ rec:Bookcase
   rdfs:label "Bookcase" ;
   rdfs:subClassOf rec:Furniture ;
 .
+rec:BooleanValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:boolean value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Boolean value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Building
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -899,6 +938,21 @@ rec:Door
   rdfs:label "Door" ;
   rdfs:subClassOf rec:BarrierAsset ;
 .
+rec:DoubleValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:double value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Double value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:DressingRoom
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1089,6 +1143,15 @@ rec:ExceptionEvent
       sh:minCount 1 ;
       sh:name "source point" ;
       sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:string ;
+      sh:description "The message of this exception event." ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
     ] ;
 .
 rec:ExerciseRoom
@@ -1320,21 +1383,6 @@ rec:Hospital
   rdfs:label "Hospital" ;
   rdfs:subClassOf rec:Building ;
 .
-rec:HumidityObservation
-  rdf:type rdfs:Class ;
-  rdf:type sh:NodeShape ;
-  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
-  rdfs:label "Humidity (absolute) observation" ;
-  rdfs:subClassOf rec:ObservationEvent ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:value ;
-      sh:datatype xsd:double ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "value" ;
-    ] ;
-.
 rec:IlluminanceObservation
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1370,6 +1418,21 @@ rec:Information
   rdf:type sh:NodeShape ;
   rdfs:label "Information" ;
   rdfs:subClassOf rdfs:Resource ;
+.
+rec:IntegerValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:int value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Integer value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:integer ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:Kitchenette
   rdf:type rdfs:Class ;
@@ -1888,15 +1951,6 @@ rec:PointEvent
   rdfs:comment "An event emanating from or targeting a Point; e.g., an individual Observation from a Sensor point, or an Actuation sent to a Command point. In other terms, the Points indicate the capability of some Space or Equipment to emit or accept data, while this class represents those actual data messages. Note that in most non-trivially sized systems, these events are not stored in the knowledge graph itself, but are rather forwarded to some C&C system or time series database." ;
   rdfs:label "Point event" ;
   rdfs:subClassOf rec:Event ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:payload ;
-      sh:datatype xsd:string ;
-      sh:description "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)" ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "payload" ;
-    ] ;
 .
 rec:PointOfInterest
   rdf:type rdfs:Class ;
