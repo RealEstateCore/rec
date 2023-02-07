@@ -16,6 +16,13 @@ An alarm that indicates a high or low water level e.g. in a basin
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +33,6 @@ An alarm that indicates a high or low water level e.g. in a basin
 ## Properties
 
 ### Inherited Properties
-* **[Alarm](../../Alarm.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

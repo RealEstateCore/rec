@@ -15,6 +15,13 @@ Controls the frequency of a device's operation (e.g. rotational frequency)
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Command](../Command.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ Controls the frequency of a device's operation (e.g. rotational frequency)
 ## Properties
 
 ### Inherited Properties
-* **[Command](../Command.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

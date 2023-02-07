@@ -15,6 +15,13 @@ Alarms that indicate the failure of devices, equipment, systems and control loop
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ Alarms that indicate the failure of devices, equipment, systems and control loop
 ## Properties
 
 ### Inherited Properties
-* **[Alarm](../Alarm.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

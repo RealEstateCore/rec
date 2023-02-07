@@ -7,24 +7,27 @@
 ---
 
 ## Child interfaces
+* [AbsoluteHumidityObservation](AbsoluteHumidityObservation.md)
 * [AccelerationObservation](AccelerationObservation.md)
 * [AngleObservation](AngleObservation.md)
 * [AngularAccelerationObservation](AngularAccelerationObservation.md)
 * [AngularVelocityObservation](AngularVelocityObservation.md)
 * [AreaObservation](AreaObservation.md)
+* [BooleanValueObservation](BooleanValueObservation.md)
 * [CapacitanceObservation](CapacitanceObservation.md)
 * [DataRateObservation](DataRateObservation.md)
 * [DataSizeObservation](DataSizeObservation.md)
 * [DensityObservation](DensityObservation.md)
 * [DistanceObservation](DistanceObservation.md)
+* [DoubleValueObservation](DoubleValueObservation.md)
 * [ElectricChargeObservation](ElectricChargeObservation.md)
 * [ElectricCurrentObservation](ElectricCurrentObservation.md)
 * [EnergyObservation](EnergyObservation.md)
 * [ForceObservation](ForceObservation.md)
 * [FrequencyObservation](FrequencyObservation.md)
-* [HumidityObservation](HumidityObservation.md)
 * [IlluminanceObservation](IlluminanceObservation.md)
 * [InductanceObservation](InductanceObservation.md)
+* [IntegerValueObservation](IntegerValueObservation.md)
 * [LengthObservation](LengthObservation.md)
 * [LuminanceObservation](LuminanceObservation.md)
 * [LuminousFluxObservation](LuminousFluxObservation.md)
@@ -60,7 +63,6 @@
 
 ### Inherited Properties
 * **[Event](../../Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
-* **[PointEvent](../PointEvent.md):** payload
 
 ---
 

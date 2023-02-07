@@ -16,6 +16,13 @@ Commands that reset a flag, property or value to its default
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Command](../Command.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +33,6 @@ Commands that reset a flag, property or value to its default
 ## Properties
 
 ### Inherited Properties
-* **[Command](../Command.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

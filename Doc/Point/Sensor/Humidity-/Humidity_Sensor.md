@@ -10,6 +10,7 @@ Measures the concentration of water vapor in air
 ---
 
 ## Child interfaces
+* [Absolute_Humidity_Sensor](Absolute-.md)
 * [Relative_Humidity_Sensor](Relative-/Relative_Humidity_Sensor.md)
 
 ---
@@ -23,9 +24,6 @@ Measures the concentration of water vapor in air
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

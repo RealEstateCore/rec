@@ -9,6 +9,13 @@ Alarm indicating that there is no water in the equipment or system
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Alarm indicating that there is no water in the equipment or system
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Alarm](../Alarm.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

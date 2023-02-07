@@ -9,6 +9,13 @@ A Start/Stop Command controls or reports the active/inactive status of a control
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Command](../Command.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ A Start/Stop Command controls or reports the active/inactive status of a control
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Command](../Command.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

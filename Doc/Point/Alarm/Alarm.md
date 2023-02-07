@@ -34,6 +34,14 @@ Alarm points are signals (either audible or visual) that alert an operator to an
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[ExceptionEvent](../../Event/Point-/ExceptionEvent.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -43,9 +51,6 @@ Alarm points are signals (either audible or visual) that alert an operator to an
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

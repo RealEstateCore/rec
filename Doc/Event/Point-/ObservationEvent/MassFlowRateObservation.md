@@ -20,7 +20,6 @@
 |value|**en**: value||double|True|
 ### Inherited Properties
 * **[Event](../../Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
-* **[PointEvent](../PointEvent.md):** payload
 
 ---
 

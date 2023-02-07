@@ -9,6 +9,13 @@ Measures the mass of water vapor in return air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Air_Grains_Sensor](Air_Grains_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Measures the mass of water vapor in return air
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Air_Grains_Sensor](Air_Grains_Sensor.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

@@ -16,9 +16,11 @@
 
 ## Properties
 
+|Name|Display name|Description|Schema|Writable|
+|-|-|-|-|-|
+|value|**en**: value|**en**: The message of this exception event.|string|True|
 ### Inherited Properties
 * **[Event](../Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
-* **[PointEvent](PointEvent.md):** payload
 
 ---
 

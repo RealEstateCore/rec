@@ -14,6 +14,13 @@ Measures the concentration of radioactivity
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Air_Quality_Sensor](../Air_Quality_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -24,7 +31,6 @@ Measures the concentration of radioactivity
 ## Properties
 
 ### Inherited Properties
-* **[Air_Quality_Sensor](../Air_Quality_Sensor.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

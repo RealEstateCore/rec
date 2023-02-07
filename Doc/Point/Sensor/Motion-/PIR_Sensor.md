@@ -9,6 +9,13 @@ Detects the presense of motion in some area using the differential change in inf
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Motion_Sensor](Motion_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Detects the presense of motion in some area using the differential change in inf
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Motion_Sensor](Motion_Sensor.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

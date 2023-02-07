@@ -15,6 +15,13 @@ Measures the total heat content of air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Enthalpy_Sensor](../Enthalpy_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ Measures the total heat content of air
 ## Properties
 
 ### Inherited Properties
-* **[Enthalpy_Sensor](../Enthalpy_Sensor.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

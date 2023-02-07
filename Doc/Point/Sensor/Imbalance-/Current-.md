@@ -9,6 +9,13 @@ A sensor which measures the current difference (imbalance) between phases of an 
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Imbalance_Sensor](Imbalance_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ A sensor which measures the current difference (imbalance) between phases of an 
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Imbalance_Sensor](Imbalance_Sensor.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

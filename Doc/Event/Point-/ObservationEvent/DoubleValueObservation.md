@@ -1,8 +1,11 @@
-[Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [HumidityObservation](#)
-# HumidityObservation
+[Index](../../../index.md) > [Event](../../Event.md) > [PointEvent](../PointEvent.md) > [ObservationEvent](ObservationEvent.md) > [DoubleValueObservation](#)
+# DoubleValueObservation
 
-**Display name:** Humidity (absolute) observation<br />
-**DTMI:** dtmi:org:w3id:rec:HumidityObservation;1
+Generic xsd:double value observation that is not specific to any particular QUDT quantitykind or unit.
+
+
+**Display name:** Double value observation<br />
+**DTMI:** dtmi:org:w3id:rec:DoubleValueObservation;1
 
 ---
 
@@ -20,7 +23,6 @@
 |value|**en**: value||double|True|
 ### Inherited Properties
 * **[Event](../../Event.md):** customProperties, customTags, end, identifiers, name, start, timestamp
-* **[PointEvent](../PointEvent.md):** payload
 
 ---
 

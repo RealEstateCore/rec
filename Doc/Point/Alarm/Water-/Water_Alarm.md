@@ -18,6 +18,13 @@ Alarm that indicates an undesirable event with a pipe, container, or equipment c
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -28,7 +35,6 @@ Alarm that indicates an undesirable event with a pipe, container, or equipment c
 ## Properties
 
 ### Inherited Properties
-* **[Alarm](../Alarm.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

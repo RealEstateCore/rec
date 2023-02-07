@@ -15,6 +15,13 @@ An alarm that indicates the off-normal conditions associated with temperature of
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ An alarm that indicates the off-normal conditions associated with temperature of
 ## Properties
 
 ### Inherited Properties
-* **[Alarm](../../Alarm.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

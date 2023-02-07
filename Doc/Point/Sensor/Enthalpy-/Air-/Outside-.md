@@ -9,6 +9,13 @@ Measures the total heat content of outside air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Enthalpy_Sensor](../Enthalpy_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Measures the total heat content of outside air
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Enthalpy_Sensor](../Enthalpy_Sensor.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

@@ -14,6 +14,13 @@ Measures the difference in water pressure on either side of a hot water valve
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Pressure_Sensor](../../Pressure_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ Measures the difference in water pressure on either side of a hot water valve
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Pressure_Sensor](../../Pressure_Sensor.md):** lastKnownValue
 
 ---
 

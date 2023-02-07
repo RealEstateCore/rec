@@ -20,6 +20,14 @@ Measures the present state of absolute humidity relative to a maximum humidity g
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[RelativeHumidityObservation](../../../../Event/Point-/ObservationEvent/RelativeHumidityObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -30,7 +38,6 @@ Measures the present state of absolute humidity relative to a maximum humidity g
 ## Properties
 
 ### Inherited Properties
-* **[Humidity_Sensor](../Humidity_Sensor.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

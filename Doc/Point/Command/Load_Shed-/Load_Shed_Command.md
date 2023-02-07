@@ -16,6 +16,13 @@ Controls load shedding behavior provided by a control system
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Command](../Command.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +33,6 @@ Controls load shedding behavior provided by a control system
 ## Properties
 
 ### Inherited Properties
-* **[Command](../Command.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

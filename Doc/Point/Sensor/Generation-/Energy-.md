@@ -9,6 +9,13 @@ A sensor measuring the amount of generated energy.
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Generation_Sensor](Generation_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ A sensor measuring the amount of generated energy.
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Generation_Sensor](Generation_Sensor.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

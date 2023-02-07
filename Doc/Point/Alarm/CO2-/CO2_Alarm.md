@@ -14,6 +14,13 @@ An alarm that indicates the off-normal conditions associated with the presence o
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -24,7 +31,6 @@ An alarm that indicates the off-normal conditions associated with the presence o
 ## Properties
 
 ### Inherited Properties
-* **[Alarm](../Alarm.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

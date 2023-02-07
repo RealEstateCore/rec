@@ -9,6 +9,13 @@ An On Command controls or reports the binary 'on' status of a control loop, rela
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Command](../Command.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ An On Command controls or reports the binary 'on' status of a control loop, rela
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Command](../Command.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

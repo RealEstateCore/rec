@@ -9,6 +9,13 @@ Measures the difference in water pressure between sections of a medium temperatu
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Pressure_Sensor](../../Pressure_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Measures the difference in water pressure between sections of a medium temperatu
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Pressure_Sensor](../../Pressure_Sensor.md):** lastKnownValue
 
 ---
 

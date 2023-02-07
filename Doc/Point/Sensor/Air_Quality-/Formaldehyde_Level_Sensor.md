@@ -9,6 +9,13 @@ Measures the concentration of formaldehyde in air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Air_Quality_Sensor](Air_Quality_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Measures the concentration of formaldehyde in air
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Air_Quality_Sensor](Air_Quality_Sensor.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

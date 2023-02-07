@@ -9,6 +9,13 @@ Measures the relative humidity of zone air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Relative_Humidity_Sensor](Relative_Humidity_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Measures the relative humidity of zone air
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Humidity_Sensor](../Humidity_Sensor.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

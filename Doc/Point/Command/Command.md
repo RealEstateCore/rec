@@ -40,6 +40,14 @@ A Command is an output point that directly determines the behavior of equipment 
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[ActuationEvent](../../Event/Point-/ActuationEvent.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -49,9 +57,6 @@ A Command is an output point that directly determines the behavior of equipment 
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

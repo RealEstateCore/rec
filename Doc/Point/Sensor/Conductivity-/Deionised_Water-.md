@@ -9,6 +9,13 @@ Measures the electrical conductance of deionised water
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Conductivity_Sensor](Conductivity_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@ Measures the electrical conductance of deionised water
 |-|-|-|-|-|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
-* **[Conductivity_Sensor](Conductivity_Sensor.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

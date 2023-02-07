@@ -6,6 +6,14 @@
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueObservation](../../Event/Point-/ObservationEvent/DoubleValueObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -17,7 +25,6 @@
 
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name

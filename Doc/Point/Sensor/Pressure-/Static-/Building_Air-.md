@@ -9,6 +9,13 @@ The static pressure of air within a building
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Pressure_Sensor](../Pressure_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ The static pressure of air within a building
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Pressure_Sensor](../Pressure_Sensor.md):** lastKnownValue
 
 ---
 

@@ -12,6 +12,13 @@
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -22,7 +29,6 @@
 ## Properties
 
 ### Inherited Properties
-* **[Alarm](../../Alarm.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

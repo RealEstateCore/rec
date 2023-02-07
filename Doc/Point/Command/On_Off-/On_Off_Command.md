@@ -18,6 +18,13 @@ An On/Off Command controls or reports the binary status of a control loop, relay
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Command](../Command.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -28,7 +35,6 @@ An On/Off Command controls or reports the binary status of a control loop, relay
 ## Properties
 
 ### Inherited Properties
-* **[Command](../Command.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

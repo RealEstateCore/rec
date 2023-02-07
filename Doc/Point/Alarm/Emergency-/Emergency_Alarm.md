@@ -14,6 +14,13 @@ Alarms that indicate off-normal conditions associated with emergency systems
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -24,7 +31,6 @@ Alarms that indicate off-normal conditions associated with emergency systems
 ## Properties
 
 ### Inherited Properties
-* **[Alarm](../Alarm.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

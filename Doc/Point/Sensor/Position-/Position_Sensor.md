@@ -16,6 +16,14 @@ Measures the current position of a component in terms of a fraction of its full 
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueObservation](../../../Event/Point-/ObservationEvent/DoubleValueObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,9 +33,6 @@ Measures the current position of a component in terms of a fraction of its full 
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|lastKnownValue|**en**: last known value||Microsoft.Azure.DigitalTwins.Parser.Models.DTObjectInfo|True|
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 

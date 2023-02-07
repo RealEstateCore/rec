@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: "4.0.0.17"
+  version: "4.0.0.18"
   title: RealEstateCore.Ontology.DTDLv2
   license:
     name: BSD-3-Clause
@@ -616,7 +616,7 @@ components:
               '@type':
                 type: string
         lastKnownValue:
-          type: string
+          $ref: '#/components/schemas/ExceptionEvent'
         aggregate:
           type: string
         customProperties:
@@ -654,7 +654,7 @@ components:
               '@type':
                 type: string
         lastKnownValue:
-          type: string
+          $ref: '#/components/schemas/ActuationEvent'
         aggregate:
           type: string
         customProperties:
@@ -881,7 +881,7 @@ components:
             '@type':
               type: string
               default: dtmi:org:brickschema:schema:Brick:Point;1
-        payload:
+        value:
           type: string
         customProperties:
           type: string
@@ -923,7 +923,7 @@ components:
               '@type':
                 type: string
                 default: dtmi:org:brickschema:schema:Brick:Point;1
-        payload:
+        value:
           type: string
         customProperties:
           type: string
@@ -1377,8 +1377,6 @@ components:
             '@type':
               type: string
               default: dtmi:org:brickschema:schema:Brick:Point;1
-        payload:
-          type: string
         customProperties:
           type: string
         customTags:
@@ -2566,12 +2564,6 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
       - name: aggregate
         description: Filter value on property 'aggregate'.
         schema:
@@ -2830,12 +2822,6 @@ paths:
         description: Filter value on relationship 'isPointOf'.
         schema:
           $ref: '#/components/schemas/StringFilter'
-        in: query
-      - name: lastKnownValue
-        description: Filter value on property 'lastKnownValue'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
         in: query
       - name: aggregate
         description: Filter value on property 'aggregate'.
@@ -5820,12 +5806,6 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
-      - name: payload
-        description: Filter value on property 'payload'.
-        schema:
-          $ref: '#/components/schemas/StringFilter'
-        style: deepObject
-        in: query
       - name: customProperties
         description: Filter value on property 'customProperties'.
         schema:
@@ -6085,8 +6065,8 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
-      - name: payload
-        description: Filter value on property 'payload'.
+      - name: value
+        description: Filter value on property 'value'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -6350,8 +6330,8 @@ paths:
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query
-      - name: payload
-        description: Filter value on property 'payload'.
+      - name: value
+        description: Filter value on property 'value'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject

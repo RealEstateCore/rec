@@ -14,6 +14,13 @@ Measures the amount of water that is consumed, over some period of time
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Usage_Sensor](../Usage_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ Measures the amount of water that is consumed, over some period of time
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Usage_Sensor](../Usage_Sensor.md):** lastKnownValue
 
 ---
 

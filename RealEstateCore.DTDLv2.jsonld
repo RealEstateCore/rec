@@ -1753,25 +1753,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "string"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:ExceptionEvent;1"
       }
     ],
     "description": {
@@ -1790,25 +1777,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "string"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:ActuationEvent;1"
       }
     ],
     "description": {
@@ -3223,20 +3197,6 @@
   {
     "@id": "dtmi:org:w3id:rec:PointEvent;1",
     "@type": "Interface",
-    "contents": [
-      {
-        "@type": "Property",
-        "description": {
-          "en": "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)"
-        },
-        "displayName": {
-          "en": "payload"
-        },
-        "name": "payload",
-        "schema": "string",
-        "writable": true
-      }
-    ],
     "description": {
       "en": "An event emanating from or targeting a Point; e.g., an individual Observation from a Sensor point, or an Actuation sent to a Command point. In other terms, the Points indicate the capability of some Space or Equipment to emit or accept data, while this class represents those actual data messages. Note that in most non-trivially sized systems, these events are not stored in the knowledge graph itself, but are rather forwarded to some C\u0026C system or time series database."
     },
@@ -3605,25 +3565,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -3653,25 +3600,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -3727,25 +3661,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -3921,25 +3842,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            },
-            {
-              "name": "value",
-              "schema": "double"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       },
       {
         "@type": "Property",
@@ -4078,25 +3986,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -4115,25 +4010,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "boolean"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:BooleanValueObservation;1"
       },
       {
         "@type": "Property",
@@ -4937,25 +4819,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -5126,25 +4995,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "boolean"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:BooleanValueObservation;1"
       },
       {
         "@type": "Property",
@@ -5334,25 +5190,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "boolean"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:BooleanValueObservation;1"
       },
       {
         "@type": "Property",
@@ -5429,25 +5272,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       },
       {
         "@type": "Property",
@@ -5521,25 +5351,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -5558,25 +5375,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       },
       {
         "@type": "Property",
@@ -5616,25 +5420,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -5798,29 +5589,6 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Humidity_Sensor;1",
     "@type": "Interface",
-    "contents": [
-      {
-        "@type": "Property",
-        "displayName": {
-          "en": "last known value"
-        },
-        "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
-      }
-    ],
     "description": {
       "en": "Measures the concentration of water vapor in air"
     },
@@ -5963,25 +5731,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -6651,25 +6406,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "boolean"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:BooleanValueObservation;1"
       }
     ],
     "description": {
@@ -6739,25 +6481,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "integer"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:IntegerValueObservation;1"
       },
       {
         "@type": "Property",
@@ -6797,25 +6526,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "boolean"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:BooleanValueObservation;1"
       },
       {
         "@type": "Property",
@@ -7024,25 +6740,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       },
       {
         "@type": "Property",
@@ -7096,25 +6799,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -7147,25 +6837,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       },
       {
         "@type": "Property",
@@ -7280,25 +6957,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -7536,25 +7200,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       },
       {
         "@type": "Property",
@@ -7765,25 +7416,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       },
       {
         "@type": "Property",
@@ -8277,25 +7915,12 @@
     "@type": "Interface",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Component",
         "displayName": {
           "en": "last known value"
         },
         "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
       }
     ],
     "description": {
@@ -8631,6 +8256,18 @@
     "@type": "Interface",
     "contents": [
       {
+        "@type": "Property",
+        "description": {
+          "en": "The command message/payload of this actuation event."
+        },
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "string",
+        "writable": true
+      },
+      {
         "@type": "Relationship",
         "description": {
           "en": "The brick:Point(s) (e.g., brick:Commands, brick:Setpoints, or brick:Parameters) that the actuation will target/execute."
@@ -8801,6 +8438,18 @@
     "@id": "dtmi:org:w3id:rec:ExceptionEvent;1",
     "@type": "Interface",
     "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "The message of this exception event."
+        },
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "string",
+        "writable": true
+      },
       {
         "@type": "Relationship",
         "description": {
@@ -9327,6 +8976,27 @@
       "en": "Zone"
     },
     "extends": "dtmi:org:w3id:rec:Architecture;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:brickschema:schema:Brick:Absolute_Humidity_Sensor;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:AbsoluteHumidityObservation;1"
+      }
+    ],
+    "displayName": {
+      "en": "Absolute Humidity Sensor"
+    },
+    "extends": "dtmi:org:brickschema:schema:Brick:Humidity_Sensor;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -10223,10 +9893,6 @@
           "@type": "Object",
           "fields": [
             {
-              "name": "value",
-              "schema": "string"
-            },
-            {
               "name": "hasUnit",
               "schema": {
                 "@type": "Enum",
@@ -10250,6 +9916,10 @@
                 ],
                 "valueSchema": "string"
               }
+            },
+            {
+              "name": "value",
+              "schema": "string"
             }
           ]
         },
@@ -15806,6 +15476,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Relative_Humidity_Sensor;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:RelativeHumidityObservation;1"
+      }
+    ],
     "description": {
       "en": "Measures the present state of absolute humidity relative to a maximum humidity given the same temperature"
     },
@@ -18137,6 +17817,32 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:AbsoluteHumidityObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Property",
+          "Humidity"
+        ],
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "unit": "gramPerCubicMetre",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Absolute humidity observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:AccelerationObservation;1",
     "@type": "Interface",
     "contents": [
@@ -18190,8 +17896,8 @@
     "contents": [
       {
         "@type": [
-          "Angle",
-          "Property"
+          "Property",
+          "Angle"
         ],
         "displayName": {
           "en": "value"
@@ -18216,8 +17922,8 @@
     "contents": [
       {
         "@type": [
-          "AngularAcceleration",
-          "Property"
+          "Property",
+          "AngularAcceleration"
         ],
         "displayName": {
           "en": "value"
@@ -18242,8 +17948,8 @@
     "contents": [
       {
         "@type": [
-          "AngularVelocity",
-          "Property"
+          "Property",
+          "AngularVelocity"
         ],
         "displayName": {
           "en": "value"
@@ -18268,8 +17974,8 @@
     "contents": [
       {
         "@type": [
-          "Area",
-          "Property"
+          "Property",
+          "Area"
         ],
         "displayName": {
           "en": "value"
@@ -18369,13 +18075,38 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:BooleanValueObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "boolean",
+        "writable": true
+      }
+    ],
+    "description": {
+      "en": "Generic xsd:boolean value observation that is not specific to any particular QUDT quantitykind or unit."
+    },
+    "displayName": {
+      "en": "Boolean value observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:CapacitanceObservation;1",
     "@type": "Interface",
     "contents": [
       {
         "@type": [
-          "Capacitance",
-          "Property"
+          "Property",
+          "Capacitance"
         ],
         "displayName": {
           "en": "value"
@@ -18527,8 +18258,8 @@
     "contents": [
       {
         "@type": [
-          "DataRate",
-          "Property"
+          "Property",
+          "DataRate"
         ],
         "displayName": {
           "en": "value"
@@ -18553,8 +18284,8 @@
     "contents": [
       {
         "@type": [
-          "DataSize",
-          "Property"
+          "Property",
+          "DataSize"
         ],
         "displayName": {
           "en": "value"
@@ -18579,8 +18310,8 @@
     "contents": [
       {
         "@type": [
-          "Density",
-          "Property"
+          "Property",
+          "Density"
         ],
         "displayName": {
           "en": "value"
@@ -18616,8 +18347,8 @@
     "contents": [
       {
         "@type": [
-          "Distance",
-          "Property"
+          "Property",
+          "Distance"
         ],
         "displayName": {
           "en": "value"
@@ -18643,6 +18374,31 @@
       "en": "Door"
     },
     "extends": "dtmi:org:w3id:rec:BarrierAsset;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:DoubleValueObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "double",
+        "writable": true
+      }
+    ],
+    "description": {
+      "en": "Generic xsd:double value observation that is not specific to any particular QUDT quantitykind or unit."
+    },
+    "displayName": {
+      "en": "Double value observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18675,8 +18431,8 @@
     "contents": [
       {
         "@type": [
-          "ElectricCharge",
-          "Property"
+          "Property",
+          "ElectricCharge"
         ],
         "displayName": {
           "en": "value"
@@ -18701,8 +18457,8 @@
     "contents": [
       {
         "@type": [
-          "Current",
-          "Property"
+          "Property",
+          "Current"
         ],
         "displayName": {
           "en": "value"
@@ -18760,8 +18516,8 @@
     "contents": [
       {
         "@type": [
-          "Energy",
-          "Property"
+          "Property",
+          "Energy"
         ],
         "displayName": {
           "en": "value"
@@ -18863,8 +18619,8 @@
     "contents": [
       {
         "@type": [
-          "Force",
-          "Property"
+          "Property",
+          "Force"
         ],
         "displayName": {
           "en": "value"
@@ -18889,8 +18645,8 @@
     "contents": [
       {
         "@type": [
-          "Frequency",
-          "Property"
+          "Property",
+          "Frequency"
         ],
         "displayName": {
           "en": "value"
@@ -18968,32 +18724,6 @@
     ]
   },
   {
-    "@id": "dtmi:org:w3id:rec:HumidityObservation;1",
-    "@type": "Interface",
-    "contents": [
-      {
-        "@type": [
-          "Humidity",
-          "Property"
-        ],
-        "displayName": {
-          "en": "value"
-        },
-        "name": "value",
-        "schema": "double",
-        "unit": "gramPerCubicMetre",
-        "writable": true
-      }
-    ],
-    "displayName": {
-      "en": "Humidity (absolute) observation"
-    },
-    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
-    "@context": [
-      "dtmi:dtdl:context;2"
-    ]
-  },
-  {
     "@id": "dtmi:org:w3id:rec:HVACZone;1",
     "@type": "Interface",
     "displayName": {
@@ -19024,8 +18754,8 @@
     "contents": [
       {
         "@type": [
-          "Illuminance",
-          "Property"
+          "Property",
+          "Illuminance"
         ],
         "displayName": {
           "en": "value"
@@ -19050,8 +18780,8 @@
     "contents": [
       {
         "@type": [
-          "Inductance",
-          "Property"
+          "Property",
+          "Inductance"
         ],
         "displayName": {
           "en": "value"
@@ -19064,6 +18794,31 @@
     ],
     "displayName": {
       "en": "Inductance observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:IntegerValueObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "displayName": {
+          "en": "value"
+        },
+        "name": "value",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "description": {
+      "en": "Generic xsd:int value observation that is not specific to any particular QUDT quantitykind or unit."
+    },
+    "displayName": {
+      "en": "Integer value observation"
     },
     "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
@@ -19112,8 +18867,8 @@
     "contents": [
       {
         "@type": [
-          "Length",
-          "Property"
+          "Property",
+          "Length"
         ],
         "displayName": {
           "en": "value"
@@ -19182,8 +18937,8 @@
     "contents": [
       {
         "@type": [
-          "Luminance",
-          "Property"
+          "Property",
+          "Luminance"
         ],
         "displayName": {
           "en": "value"
@@ -19208,8 +18963,8 @@
     "contents": [
       {
         "@type": [
-          "LuminousFlux",
-          "Property"
+          "Property",
+          "LuminousFlux"
         ],
         "displayName": {
           "en": "value"
@@ -19234,8 +18989,8 @@
     "contents": [
       {
         "@type": [
-          "LuminousIntensity",
-          "Property"
+          "Property",
+          "LuminousIntensity"
         ],
         "displayName": {
           "en": "value"
@@ -19260,8 +19015,8 @@
     "contents": [
       {
         "@type": [
-          "MagneticFlux",
-          "Property"
+          "Property",
+          "MagneticFlux"
         ],
         "displayName": {
           "en": "value"
@@ -19297,8 +19052,8 @@
     "contents": [
       {
         "@type": [
-          "MassFlowRate",
-          "Property"
+          "Property",
+          "MassFlowRate"
         ],
         "displayName": {
           "en": "value"
@@ -19323,8 +19078,8 @@
     "contents": [
       {
         "@type": [
-          "Mass",
-          "Property"
+          "Property",
+          "Mass"
         ],
         "displayName": {
           "en": "value"
@@ -19473,8 +19228,8 @@
     "contents": [
       {
         "@type": [
-          "Power",
-          "Property"
+          "Property",
+          "Power"
         ],
         "displayName": {
           "en": "value"
@@ -19499,8 +19254,8 @@
     "contents": [
       {
         "@type": [
-          "Pressure",
-          "Property"
+          "Property",
+          "Pressure"
         ],
         "displayName": {
           "en": "value"
@@ -19591,8 +19346,8 @@
     "contents": [
       {
         "@type": [
-          "RelativeHumidity",
-          "Property"
+          "Property",
+          "RelativeHumidity"
         ],
         "displayName": {
           "en": "value"
@@ -19617,8 +19372,8 @@
     "contents": [
       {
         "@type": [
-          "Resistance",
-          "Property"
+          "Property",
+          "Resistance"
         ],
         "displayName": {
           "en": "value"
@@ -19765,8 +19520,8 @@
     "contents": [
       {
         "@type": [
-          "SoundPressure",
-          "Property"
+          "Property",
+          "SoundPressure"
         ],
         "displayName": {
           "en": "value"
@@ -19835,8 +19590,8 @@
     "contents": [
       {
         "@type": [
-          "Temperature",
-          "Property"
+          "Property",
+          "Temperature"
         ],
         "displayName": {
           "en": "value"
@@ -19872,8 +19627,8 @@
     "contents": [
       {
         "@type": [
-          "Thrust",
-          "Property"
+          "Property",
+          "Thrust"
         ],
         "displayName": {
           "en": "value"
@@ -19898,8 +19653,8 @@
     "contents": [
       {
         "@type": [
-          "TimeSpan",
-          "Property"
+          "Property",
+          "TimeSpan"
         ],
         "displayName": {
           "en": "value"
@@ -19924,8 +19679,8 @@
     "contents": [
       {
         "@type": [
-          "Torque",
-          "Property"
+          "Property",
+          "Torque"
         ],
         "displayName": {
           "en": "value"
@@ -19983,8 +19738,8 @@
     "contents": [
       {
         "@type": [
-          "Velocity",
-          "Property"
+          "Property",
+          "Velocity"
         ],
         "displayName": {
           "en": "value"
@@ -20020,8 +19775,8 @@
     "contents": [
       {
         "@type": [
-          "Voltage",
-          "Property"
+          "Property",
+          "Voltage"
         ],
         "displayName": {
           "en": "value"
@@ -20046,8 +19801,8 @@
     "contents": [
       {
         "@type": [
-          "VolumeFlowRate",
-          "Property"
+          "Property",
+          "VolumeFlowRate"
         ],
         "displayName": {
           "en": "value"
@@ -20072,8 +19827,8 @@
     "contents": [
       {
         "@type": [
-          "Volume",
-          "Property"
+          "Property",
+          "Volume"
         ],
         "displayName": {
           "en": "value"

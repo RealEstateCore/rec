@@ -15,6 +15,13 @@ An alarm that indicates that the air flow is lower than normal.
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Alarm](../../../Alarm.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ An alarm that indicates that the air flow is lower than normal.
 ## Properties
 
 ### Inherited Properties
-* **[Alarm](../../../Alarm.md):** lastKnownValue
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---

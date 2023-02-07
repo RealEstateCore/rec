@@ -16,6 +16,13 @@ Measures the difference between total pressure and static pressure
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Pressure_Sensor](../Pressure_Sensor.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -27,7 +34,6 @@ Measures the difference between total pressure and static pressure
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Pressure_Sensor](../Pressure_Sensor.md):** lastKnownValue
 
 ---
 

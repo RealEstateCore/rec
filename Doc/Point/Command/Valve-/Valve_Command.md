@@ -14,6 +14,13 @@ Controls or reports the openness of a valve (typically as a proportion of its fu
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Command](../Command.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -24,7 +31,6 @@ Controls or reports the openness of a valve (typically as a proportion of its fu
 ## Properties
 
 ### Inherited Properties
-* **[Command](../Command.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
