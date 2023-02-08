@@ -17,6 +17,12 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+brick:Equipment
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Equipment" ;
+  rdfs:subClassOf rec:Asset ;
+.
 <https://w3id.org/rec>
   rdf:type owl:Ontology ;
   rdfs:label "RealEstateCore" ;
@@ -522,11 +528,25 @@ rec:Atrium
   rdfs:label "Atrium" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:AudioVisualEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Audio visual equipment." ;
+  rdfs:label "Audio Visual Equipment" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
 rec:Auditorium
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Auditorium" ;
   rdfs:subClassOf rec:Room ;
+.
+rec:BACnetController
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "BACnet controller." ;
+  rdfs:label "BACnet Controller" ;
+  rdfs:subClassOf rec:Controller ;
 .
 rec:BackOffice
   rdf:type rdfs:Class ;
@@ -794,6 +814,13 @@ rec:ConferenceTable
   rdfs:label "Conference table" ;
   rdfs:subClassOf rec:Table ;
 .
+rec:Controller
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Controller." ;
+  rdfs:label "Controller" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
 rec:ConversationRoom
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -811,6 +838,13 @@ rec:CopyingRoom
   rdf:type sh:NodeShape ;
   rdfs:label "Copying room" ;
   rdfs:subClassOf rec:Room ;
+.
+rec:DataNetworkEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Data network equipment." ;
+  rdfs:label "Data Network Equipment" ;
+  rdfs:subClassOf rec:ICTEquipment ;
 .
 rec:DataRateObservation
   rdf:type rdfs:Class ;
@@ -847,6 +881,13 @@ rec:DataSizeObservation
       sh:minCount 1 ;
       sh:name "value" ;
     ] ;
+.
+rec:DaylightSensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Daylight sensor." ;
+  rdfs:label "Daylight Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
 .
 rec:DensityObservation
   rdf:type rdfs:Class ;
@@ -1099,6 +1140,41 @@ rec:ErrorReport
   rdfs:label "Error report" ;
   rdfs:subClassOf rec:ServiceObject ;
 .
+rec:EthernetPort
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Ethernet port." ;
+  rdfs:label "Ethernet Port" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:poeType ;
+      sh:datatype xsd:string ;
+      sh:in (
+          "Type1"
+          "Type2"
+          "Type3"
+          "Type4"
+        ) ;
+      sh:maxCount 1 ;
+      sh:name "PoE Type" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:portSpeed ;
+      sh:datatype xsd:float ;
+      sh:description "The data rate of the port in Mib/s, i.e. mebibit (2^20 bit) per second." ;
+      sh:maxCount 1 ;
+      sh:name "Port Speed" ;
+    ] ;
+.
+rec:EthernetSwitch
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Ethernet switch." ;
+  rdfs:label "Ethernet Switch" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+.
 rec:Event
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1276,6 +1352,13 @@ rec:Garage
   rdfs:label "Garage" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:Gateway
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Gateway." ;
+  rdfs:label "Gateway" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
 rec:Geometry
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1383,6 +1466,53 @@ rec:Hospital
   rdfs:label "Hospital" ;
   rdfs:subClassOf rec:Building ;
 .
+rec:IAQSensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Indoor air quality sensor." ;
+  rdfs:label "Indoor Air Quality Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
+.
+rec:ICTEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Equipment and devices that are part of a building's ICT infrastructure." ;
+  rdfs:label "ICT Equipment" ;
+  rdfs:subClassOf brick:Equipment ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:heightRUs ;
+      sh:datatype xsd:integer ;
+      sh:name "Height (RUs)" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:numberOfPorts ;
+      sh:datatype xsd:integer ;
+      sh:name "Number of Ports" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:standard ;
+      sh:datatype xsd:string ;
+      sh:description "The standard the equipment or device adheres to, e.g. IEEE 802.11." ;
+      sh:name "Standard" ;
+    ] ;
+.
+rec:ICTHardware
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "ICT hardware." ;
+  rdfs:label "ICT Hardware" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
+rec:ITRack
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "IT rack." ;
+  rdfs:label "IT Rack" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
 rec:IlluminanceObservation
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1469,6 +1599,13 @@ rec:LaundryRoom
   rdf:type sh:NodeShape ;
   rdfs:label "Laundry room" ;
   rdfs:subClassOf rec:Room ;
+.
+rec:LeakDetectorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Leak detector." ;
+  rdfs:label "Leak Detector" ;
+  rdfs:subClassOf rec:SensorEquipment ;
 .
 rec:Lease
   rdf:type rdfs:Class ;
@@ -1704,6 +1841,13 @@ rec:MobileDesk
   rdfs:label "Mobile desk" ;
   rdfs:subClassOf rec:Desk ;
 .
+rec:ModbusController
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Modbus controller." ;
+  rdfs:label "Modbus Controller" ;
+  rdfs:subClassOf rec:Controller ;
+.
 rec:Morgue
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1756,6 +1900,20 @@ rec:NeonatalNursingRoom
   rdfs:label "Neonatal nursing room" ;
   rdfs:subClassOf rec:HealthcareRoom ;
 .
+rec:NetworkRouter
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Network router." ;
+  rdfs:label "Network Router" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+.
+rec:NetworkSecurityEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Network security equipment." ;
+  rdfs:label "Network Security Equipment" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+.
 rec:NotificationObject
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1777,6 +1935,13 @@ rec:ObservationEvent
       sh:name "source point" ;
       sh:nodeKind sh:IRI ;
     ] ;
+.
+rec:OccupancySensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Occupancy sensor." ;
+  rdfs:label "Occupancy Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
 .
 rec:OccupancyZone
   rdf:type rdfs:Class ;
@@ -1882,6 +2047,13 @@ rec:Partition
   rdf:type sh:NodeShape ;
   rdfs:label "Partition" ;
   rdfs:subClassOf rec:BarrierAsset ;
+.
+rec:PeopleCountSensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "People count sensor." ;
+  rdfs:label "People Count Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
 .
 rec:Person
   rdf:type rdfs:Class ;
@@ -2235,6 +2407,32 @@ rec:SecurityRoom
   rdfs:label "Security room" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:SensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Sensor equipment." ;
+  rdfs:label "Sensor Equipment" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:batteryPercentage ;
+      sh:datatype xsd:double ;
+      sh:name "Battery Percentage" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:wifiSignalStrength ;
+      sh:datatype xsd:double ;
+      sh:name "Wi-Fi Signal Strength" ;
+    ] ;
+.
+rec:Server
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Server." ;
+  rdfs:label "Server" ;
+  rdfs:subClassOf rec:ICTHardware ;
+.
 rec:ServiceEntrance
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -2546,6 +2744,13 @@ rec:TherapyRoom
   rdfs:label "Therapy room" ;
   rdfs:subClassOf rec:HealthcareRoom ;
 .
+rec:ThermostatEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Thermostat." ;
+  rdfs:label "Thermostat" ;
+  rdfs:subClassOf rec:SensorEquipment ;
+.
 rec:ThrustObservation
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -2630,6 +2835,13 @@ rec:VelocityObservation
       sh:name "value" ;
     ] ;
 .
+rec:VibrationSensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Vibration sensor." ;
+  rdfs:label "Vibration Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
+.
 rec:VirtualBuilding
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -2710,6 +2922,27 @@ rec:Window
   rdf:type sh:NodeShape ;
   rdfs:label "Window" ;
   rdfs:subClassOf rec:BarrierAsset ;
+.
+rec:WirelessAccessPoint
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Wireless access point." ;
+  rdfs:label "Wireless Access Point" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:generation ;
+      sh:datatype xsd:string ;
+      sh:in (
+          "WiFi4"
+          "WiFi5"
+          "WiFi6"
+          "WiFi6E"
+          "WiFi7"
+        ) ;
+      sh:maxCount 1 ;
+      sh:name "Generation" ;
+    ] ;
 .
 rec:WorkOrder
   rdf:type rdfs:Class ;
