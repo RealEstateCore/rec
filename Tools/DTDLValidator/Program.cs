@@ -40,7 +40,7 @@
             string dtdlParserVersion = "<unknown>";
             foreach (Assembly a in assemblies)
             {
-                if (a.GetName().Name.EndsWith("DigitalTwins.Parser"))
+                if (a.GetName().Name.EndsWith("DTDLParser"))
                     dtdlParserVersion = a.GetName().Version.ToString();
             }
 
@@ -124,7 +124,7 @@
             Console.WriteLine($"Validated JSON for all files - now validating DTDL");
             List<string> modelList = modelDict.Values.ToList<string>();
             ModelParser modelParser = new ModelParser(new ParsingOptions { AllowUndefinedExtensions = true, DtmiResolver = new DtmiResolver(Resolver) });
-                        
+
             try
             {
                 IReadOnlyDictionary<Dtmi, DTEntityInfo> om = modelParser.ParseAsync(modelList.ToAsyncEnumerable()).GetAwaiter().GetResult();
