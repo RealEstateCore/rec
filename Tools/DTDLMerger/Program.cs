@@ -1,6 +1,7 @@
-﻿using System.Text.Json;
-using Microsoft.Azure.DigitalTwins.Parser;
-using Microsoft.Azure.DigitalTwins.Parser.Models;
+﻿using System.Linq;
+using System.Text.Json;
+using DTDLParser;
+using DTDLParser.Models;
 
 if (args.Length != 1)
 {
@@ -22,8 +23,8 @@ foreach (FileInfo file in inputFiles)
 }
 
 // Parse the files
-ModelParser modelParser = new ModelParser(0);
-IReadOnlyDictionary<Dtmi, DTEntityInfo> ontology = await modelParser.ParseAsync(modelJson);
+ModelParser modelParser = new ModelParser(new ParsingOptions { AllowUndefinedExtensions = true });
+IReadOnlyDictionary<Dtmi, DTEntityInfo> ontology = await modelParser.ParseAsync(modelJson.ToAsyncEnumerable());
 
 // Set up JSON stream and write wrapper array
 Utf8JsonWriter writer = new Utf8JsonWriter(Console.OpenStandardOutput(), new JsonWriterOptions { Indented = true });

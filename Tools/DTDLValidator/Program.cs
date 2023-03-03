@@ -1,8 +1,8 @@
 ﻿namespace DTDLValidator
 {
     using CommandLine;
-    using Microsoft.Azure.DigitalTwins.Parser;
-    using Microsoft.Azure.DigitalTwins.Parser.Models;
+    using DTDLParser;
+    using DTDLParser.Models;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -123,11 +123,11 @@
             
             Console.WriteLine($"Validated JSON for all files - now validating DTDL");
             List<string> modelList = modelDict.Values.ToList<string>();
-            ModelParser parser = new ModelParser();
-            parser.DtmiResolver = new DtmiResolver(Resolver);
+            ModelParser modelParser = new ModelParser(new ParsingOptions { AllowUndefinedExtensions = true, DtmiResolver = new DtmiResolver(Resolver) });
+                        
             try
             {
-                IReadOnlyDictionary<Dtmi, DTEntityInfo> om = parser.ParseAsync(modelList).GetAwaiter().GetResult();
+                IReadOnlyDictionary<Dtmi, DTEntityInfo> om = modelParser.ParseAsync(modelList.ToAsyncEnumerable()).GetAwaiter().GetResult();
                 Console.WriteLine("");
                 Console.WriteLine($"**********************************************");
                 Console.WriteLine($"** Validated all files - Your DTDL is valid **");
