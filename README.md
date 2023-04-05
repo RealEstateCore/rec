@@ -54,6 +54,10 @@ Property owners can use RealEstateCore to describe the data of interaction withi
 ## How to contribute?
 The RealEstateCore consortium is working on improving the core ontology, adding more modules, and as well is working on making better tools to integrate and use the ontology in smart building platforms and its applications.
 
+We have started to create [Ontology Decision Records](./OntologyDecisionRecords/ODR%20000%3A%20Use%20of%20Ontology%20Decision%20Records%20(ODRs).md) (ODRs) to capture decisions as we improved the core ontology. We recommend you review the relevant ODRs and contribute to them as well. We recommend reading the following decisions to guide contributions:
+- [ODR 000: Use of Ontology Decision Records (ODRs)](./OntologyDecisionRecords/ODR%20000%3A%20Use%20of%20Ontology%20Decision%20Records%20(ODRs).md)
+- [ODR 001: Naming Conventions](./OntologyDecisionRecords/ODR%20001%3A%20Naming%20Conventions.md)
+
 We encourage you to contribute to make RealEstateCore better. Please point out bugs or peculiarities, add or extend definitions, and suggest improvements in order to evolve the RealEstateCore. See our [Community page](https://dev.realestatecore.io/community/) for more guidance.
 
 * Comment or create a new Issue for bug reporting

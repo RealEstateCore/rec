@@ -9,14 +9,16 @@ ODRs are inspired by [Architecture Decision Records (ADRs)](https://github.com/j
 ## Decisions
 
 1. We will use ODRs to document all RealEstateCore-related decisions, including the creation, modification, and deprecation of concepts, relationships, and axioms.
-1. Each ODR will have a unique identifier that follows the format "ODR NNN: <title>", where NNN is a sequential number.
-1. Each ODR will have a clear and concise title that summarizes the decision, e.g., "ODR 001: Adding new concept 'Building' to RealEstateCore".
+1. Each ODR will have a unique identifier that follows the format "ODR NNN: title", where NNN is a sequential number.
+1. Each ODR will have a clear and concise title that summarizes the decision, e.g., "ODR 001: Naming Conventions".
 1. The context section of each ODR will provide a brief description of the problem or opportunity that led to the decision, the stakeholders involved, and any relevant background information.
 1. The decisions section of each ODR will describe the options considered, the rationale for the chosen option, and any trade-offs or risks associated with the decision.
 1. The consequences section of each ODR will outline the expected impact of the decision on RealEstateCore, the software systems that use it, and any related processes or artifacts.
 1. Each ODR will be reviewed and approved by the RealEstateCore community using the pull request (PR) feature.
 1. The ODR repository will be maintained in the REC GitHub repository.
 1. The ODR repository will be accessible to all RealEstateCore community members
+1. We will update ODRs using pull requests to keep the decisions correct with the evolving core ontology. History will be maintained by the repository.
+1. We will remove deprecated ODRs using pull requests.
 
 ## Consequences
 
