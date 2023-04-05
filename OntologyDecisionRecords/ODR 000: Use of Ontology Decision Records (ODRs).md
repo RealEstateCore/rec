@@ -1,3 +1,5 @@
+# ODR 000: Use of Ontology Decision Records (ODRs)
+
 ## Context
 
 As RealEstateCore ontology evolves and gains widespread adoption, it is crucial to have a clear and consistent way to capture and communicate the decisions made about it. These decisions affect the structure, relationships, and semantics of the concepts that define RealEstateCore. Therefore, we have decided to adopt Ontology Decision Records (ODRs) as a way to document and share ontology-related decisions.
@@ -17,6 +19,7 @@ ODRs are inspired by [Architecture Decision Records (ADRs)](https://github.com/j
 1. The ODR repository will be accessible to all RealEstateCore community members
 
 ## Consequences
+
 1. The use of ODRs will improve the transparency, traceability, and consistency of RealEstateCore-related decisions.
 1. The use of ODRs will facilitate communication and collaboration among RealEstateCore contributors and stakeholders.
 1. The use of ODRs will support the evolution and maintenance of RealEstateCore by providing a clear record of past decisions.
