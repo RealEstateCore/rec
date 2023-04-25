@@ -1,4 +1,4 @@
-# ODR 001: Naming Conventions
+# ODR 001 Naming Conventions
 
 ## Context
 

@@ -1,4 +1,4 @@
-# ODR 000: Use of Ontology Decision Records (ODRs)
+# ODR 000 Use of Ontology Decision Records (ODRs)
 
 ## Context
 
@@ -9,8 +9,8 @@ ODRs are inspired by [Architecture Decision Records (ADRs)](https://github.com/j
 ## Decisions
 
 1. We will use ODRs to document all RealEstateCore-related decisions, including the creation, modification, and deprecation of concepts, relationships, and axioms.
-1. Each ODR will have a unique identifier that follows the format "ODR NNN: title", where NNN is a sequential number.
-1. Each ODR will have a clear and concise title that summarizes the decision, e.g., "ODR 001: Naming Conventions".
+1. Each ODR will have a unique identifier that follows the format "ODR NNN title", where NNN is a sequential number.
+1. Each ODR will have a clear and concise title that summarizes the decision, e.g., "ODR 001 Naming Conventions".
 1. The context section of each ODR will provide a brief description of the problem or opportunity that led to the decision, the stakeholders involved, and any relevant background information.
 1. The decisions section of each ODR will describe the options considered, the rationale for the chosen option, and any trade-offs or risks associated with the decision.
 1. The consequences section of each ODR will outline the expected impact of the decision on RealEstateCore, the software systems that use it, and any related processes or artifacts.
