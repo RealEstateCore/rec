@@ -28,18 +28,18 @@
 
 ## Target Of
 ### General
-* [Portfolio](../../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../../Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
-* [Lease](../../../Event/Lease.md).leaseOf
-* [Point](../../Point.md).isPointOf
-* [Document](../../../Information/Document/Document.md).documentTopic
-* [Document](../../../Information/Document/Document.md).url
-* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../../Event/Point-/ActuationEvent.md).targetPoint

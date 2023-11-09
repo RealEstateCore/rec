@@ -18,6 +18,7 @@ Parameter points are configuration settings used to guide the operation of equip
 * [PID_Parameter](PID-/PID_Parameter.md)
 * [Temperature_Parameter](Temperature-/Temperature_Parameter.md)
 * [Tolerance_Parameter](Tolerance-/Tolerance_Parameter.md)
+* [GatewayConnectionParameter](GatewayConnection-/GatewayConnectionParameter.md)
 
 ---
 

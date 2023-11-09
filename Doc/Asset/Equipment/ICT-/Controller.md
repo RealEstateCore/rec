@@ -1,22 +1,11 @@
-[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [ICTEquipment](#)
-# ICTEquipment
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [ICTEquipment](ICTEquipment.md) > [Controller](#)
+# Controller
 
-Equipment and devices that are part of a building's ICT infrastructure.
+Controller.
 
 
-**Display name:** ICT Equipment<br />
-**DTMI:** dtmi:org:w3id:rec:ICTEquipment;1
-
----
-
-## Child interfaces
-* [AudioVisualEquipment](AudioVisualEquipment.md)
-* [Controller](Controller.md)
-* [DataNetworkEquipment](DataNetworkEquipment/DataNetworkEquipment.md)
-* [Gateway](Gateway.md)
-* [ICTHardware](ICTHardware/ICTHardware.md)
-* [ITRack](ITRack.md)
-* [SensorEquipment](SensorEquipment/SensorEquipment.md)
+**Display name:** Controller<br />
+**DTMI:** dtmi:org:w3id:rec:Controller;1
 
 ---
 
@@ -30,14 +19,10 @@ Equipment and devices that are part of a building's ICT infrastructure.
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|heightRUs|**en**: Height (RUs)||integer|True|
-|numberOfPorts|**en**: Number of Ports||integer|True|
-|standard|**en**: Standard|**en**: The standard the equipment or device adheres to, e.g. IEEE 802.11.|string|True|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
 * **[Asset](../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[ICTEquipment](ICTEquipment.md):** heightRUs, numberOfPorts, standard
 
 ---
 

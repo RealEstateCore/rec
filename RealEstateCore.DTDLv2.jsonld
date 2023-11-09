@@ -8510,6 +8510,15 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:GatewayConnectionParameter;1",
+    "@type": "Interface",
+    "displayName": "Gateway Connection Parameter",
+    "extends": "dtmi:org:brickschema:schema:Brick:Parameter;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Geotransform;1",
     "@type": "Interface",
     "contents": [
@@ -18825,6 +18834,41 @@
       "en": "Integer value observation"
     },
     "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:IoTHubConnectionParameter;1",
+    "@type": "Interface",
+    "displayName": "IoT Hub Connection Parameter",
+    "extends": "dtmi:org:w3id:rec:GatewayConnectionParameter;1",
+    "contents": [
+      {
+        "@type": "Property",
+        "schema": "string",
+        "description": {
+          "en": "The Device ID of the device connected to Azure IoT Hub"
+        },
+        "displayName": {
+          "en": "Device ID"
+        },
+        "name": "deviceId",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "schema": "string",
+        "description": {
+          "en": "The Hostname of the Azure IoT Hub the gateway is connected to"
+        },
+        "displayName": {
+          "en": "Hostname"
+        },
+        "name": "hostname",
+        "writable": true
+      }
+    ],
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -29232,20 +29276,6 @@
     ]
   },
   {
-    "@id": "dtmi:org:w3id:rec:BACnetController;1",
-    "@type": "Interface",
-    "description": {
-      "en": "BACnet controller."
-    },
-    "displayName": {
-      "en": "BACnet Controller"
-    },
-    "@context": [
-      "dtmi:dtdl:context;2"
-    ],
-    "extends": "dtmi:org:w3id:rec:Controller;1"
-  },
-  {
     "@id": "dtmi:org:w3id:rec:BarRoom;1",
     "@type": "Interface",
     "displayName": {
@@ -29586,20 +29616,6 @@
     "@context": [
       "dtmi:dtdl:context;2"
     ]
-  },
-  {
-    "@id": "dtmi:org:w3id:rec:ModbusController;1",
-    "@type": "Interface",
-    "description": {
-      "en": "Modbus controller."
-    },
-    "displayName": {
-      "en": "Modbus Controller"
-    },
-    "@context": [
-      "dtmi:dtdl:context;2"
-    ],
-    "extends": "dtmi:org:w3id:rec:Controller;1"
   },
   {
     "@id": "dtmi:org:w3id:rec:Morgue;1",
