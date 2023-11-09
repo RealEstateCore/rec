@@ -1,0 +1,35 @@
+{
+    "@id": "dtmi:org:w3id:rec:IoTHubConnectionParameter;1",
+    "@type": "Interface",
+    "displayName": "IoT Hub Connection Parameter",
+    "extends": "dtmi:org:w3id:rec:GatewayConnectionParameter;1",
+    "contents": [
+        {
+            "@type": "Property",
+            "schema": "string",
+            "description": {
+                "en": "The Device ID of the device connected to Azure IoT Hub"
+            },
+            "displayName": {
+                "en": "Device ID"
+            },
+            "name": "deviceId",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "schema": "string",
+            "description": {
+                "en": "The Hostname of the Azure IoT Hub the gateway is connected to"
+            },
+            "displayName": {
+                "en": "Hostname"
+            },
+            "name": "hostname",
+            "writable": true
+        }
+    ],
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}
