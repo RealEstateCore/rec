@@ -1,4 +1,4 @@
-# ODR TBD: GatewayConnectionParameter
+# ODR 002: GatewayConnectionParameter
 
 ## Context
 
