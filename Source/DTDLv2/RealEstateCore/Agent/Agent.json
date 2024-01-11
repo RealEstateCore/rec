@@ -81,10 +81,11 @@
     {
       "@type": "Relationship",
       "description": {
-        "en": "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property."
+        "en": "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property. (DEPRECATED: Use memberOf going forward)"
       },
+      "comment": "DEPRECATED: Use memberOf going forward",
       "displayName": {
-        "en": "is member of"
+        "en": "is member of (DEPRECATED)"
       },
       "name": "isMemberOf",
       "target": "dtmi:org:w3id:rec:Organization;1",
@@ -100,7 +101,19 @@
       },
       "name": "owns",
       "writable": true
-    }
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property."
+      },
+      "displayName": {
+        "en": "member of"
+      },
+      "name": "memberOf",
+      "target": "dtmi:org:w3id:rec:Organization;1",
+      "writable": true
+    },
   ],
   "description": {
     "en": "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, ....) to be anchored in one joint place, on the Agent class."
