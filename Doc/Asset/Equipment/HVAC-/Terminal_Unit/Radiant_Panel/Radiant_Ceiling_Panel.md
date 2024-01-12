@@ -35,6 +35,7 @@ Radiant panel heating and cooling system that are usually made from metal and su
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Equipment.md).feeds
 * [Equipment](../../../Equipment.md).isFedBy
+* [System](../../../../../Collection/System/System.md).includes
 * [Architecture](../../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../../Information/Document/Document.md).url
@@ -45,7 +46,6 @@ Radiant panel heating and cooling system that are usually made from metal and su
 * [Meter](../../../Meter/Meter.md).meters
 ### Inherited
 * [Loop](../../../../../Collection/Loop/Loop.md).includes
-* [System](../../../../../Collection/System/System.md).includes
 * [Asset](../../../../Asset.md).hasPart
 * [Asset](../../../../Asset.md).isPartOf
 * [EquipmentCollection](../../../../../Collection/Equipment-.md).includes

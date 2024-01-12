@@ -12,7 +12,7 @@ A natural person (i.e., an individual human being).
 ## Relationships
 
 ### Inherited Relationships
-* **[Agent](Agent.md):** isMemberOf, owns
+* **[Agent](Agent.md):** isMemberOf, memberOf, owns
 
 ---
 
@@ -36,6 +36,7 @@ A natural person (i.e., an individual human being).
 * [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy
+* [System](../Collection/System/System.md).includes
 * [Architecture](../Space/Architecture/Architecture.md).isFedBy
 * [Document](../Information/Document/Document.md).documentTopic
 * [Document](../Information/Document/Document.md).url

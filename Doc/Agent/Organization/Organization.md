@@ -23,7 +23,7 @@ An organization of any sort (e.g., a business, association, project, consortium,
 |hasPart|**en**: has part|**en**: Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the more specific hasMember property.|0-Infinity|[Organization](#)||True|
 |isPartOf|**en**: is part of|**en**: Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the Agent.isMemberOf property.|0-Infinity|[Organization](#)||True|
 ### Inherited Relationships
-* **[Agent](../Agent.md):** isMemberOf, owns
+* **[Agent](../Agent.md):** isMemberOf, memberOf, owns
 
 ---
 
@@ -44,6 +44,7 @@ An organization of any sort (e.g., a business, association, project, consortium,
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../Collection/System/System.md).includes
 * [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
@@ -54,6 +55,7 @@ An organization of any sort (e.g., a business, association, project, consortium,
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [Agent](../Agent.md).isMemberOf
+* [Agent](../Agent.md).memberOf
 * [Organization](#).hasPart
 * [Organization](#).isPartOf
 ### Inherited

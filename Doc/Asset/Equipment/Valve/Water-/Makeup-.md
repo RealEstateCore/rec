@@ -35,6 +35,7 @@ A valve regulating the flow of makeup water into a water holding tank, e.g. a co
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy
+* [System](../../../../Collection/System/System.md).includes
 * [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../Information/Document/Document.md).url
@@ -45,7 +46,6 @@ A valve regulating the flow of makeup water into a water holding tank, e.g. a co
 * [Meter](../../Meter/Meter.md).meters
 ### Inherited
 * [Loop](../../../../Collection/Loop/Loop.md).includes
-* [System](../../../../Collection/System/System.md).includes
 * [Asset](../../../Asset.md).hasPart
 * [Asset](../../../Asset.md).isPartOf
 * [EquipmentCollection](../../../../Collection/Equipment-.md).includes
