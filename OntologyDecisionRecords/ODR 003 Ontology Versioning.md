@@ -41,7 +41,13 @@ Graph validity will be a test of if a change is a major or minor change. If any 
 
 1. RealEstateCore will clean up content deprecation during `MAJOR` version increments
 
-### Annotating Deprecation
+### Annotating Model Deprecation
+
+1. We will append ` (DEPRECATED)` to the model's display name.
+
+1. We will append ` (DEPRECATED: <recommendation going forward>.)` to the model's description. This should include a recommendation on how to migrate going forward.
+
+### Annotating Content Deprecation
 
 1. We will append ` (DEPRECATED)` to the content's display name.
    
