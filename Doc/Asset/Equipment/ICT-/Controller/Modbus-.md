@@ -28,19 +28,19 @@ Modbus controller. (DEPRECATED: Use Controller instead. Industry has moved to mo
 
 ## Target Of
 ### General
-* [Portfolio](../../../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../../../../Point/Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
-* [Lease](../../../../Event/Lease.md).leaseOf
-* [Point](../../../../Point/Point.md).isPointOf
-* [Document](../../../../Information/Document/Document.md).documentTopic
-* [Document](../../../../Information/Document/Document.md).url
-* [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../../../Collection/System/System.md).includes
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy
+* [System](../../../../Collection/System/System.md).includes
+* [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../../Information/Document/Document.md).documentTopic
+* [Document](../../../../Information/Document/Document.md).url
+* [Lease](../../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../Meter/Meter.md).meters
 ### Inherited
 * [Loop](../../../../Collection/Loop/Loop.md).includes

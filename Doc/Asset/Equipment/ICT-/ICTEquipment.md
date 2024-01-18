@@ -11,7 +11,7 @@ Equipment and devices that are part of a building's ICT infrastructure.
 
 ## Child interfaces
 * [AudioVisualEquipment](AudioVisualEquipment.md)
-* [Controller](Controller.md)
+* [Controller](Controller/Controller.md)
 * [DataNetworkEquipment](DataNetworkEquipment/DataNetworkEquipment.md)
 * [Gateway](Gateway.md)
 * [ICTHardware](ICTHardware/ICTHardware.md)
