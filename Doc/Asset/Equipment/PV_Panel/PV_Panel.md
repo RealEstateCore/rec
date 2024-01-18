@@ -41,6 +41,7 @@ An integrated assembly of interconnected photovoltaic cells designed to deliver 
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds
 * [Equipment](../Equipment.md).isFedBy
+* [System](../../../Collection/System/System.md).includes
 * [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url
@@ -53,7 +54,6 @@ An integrated assembly of interconnected photovoltaic cells designed to deliver 
 * [PV_Array](../../../Collection/PV_Array.md).includes
 ### Inherited
 * [Loop](../../../Collection/Loop/Loop.md).includes
-* [System](../../../Collection/System/System.md).includes
 * [Asset](../../Asset.md).hasPart
 * [Asset](../../Asset.md).isPartOf
 * [EquipmentCollection](../../../Collection/Equipment-.md).includes

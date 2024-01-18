@@ -62,6 +62,7 @@ devices that serve all or part of the building and may include electric power, l
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](#).feeds
 * [Equipment](#).isFedBy
+* [System](../../Collection/System/System.md).includes
 * [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
@@ -72,7 +73,6 @@ devices that serve all or part of the building and may include electric power, l
 * [Meter](Meter/Meter.md).meters
 ### Direct
 * [Loop](../../Collection/Loop/Loop.md).includes
-* [System](../../Collection/System/System.md).includes
 * [EquipmentCollection](../../Collection/Equipment-.md).includes
 ### Inherited
 * [Asset](../Asset.md).hasPart

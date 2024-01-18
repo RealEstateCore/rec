@@ -9,7 +9,7 @@
 ## Relationships
 
 ### Inherited Relationships
-* **[Agent](../Agent.md):** isMemberOf, owns
+* **[Agent](../Agent.md):** isMemberOf, memberOf, owns
 * **[Organization](Organization.md):** hasMember, hasPart, isPartOf
 
 ---
@@ -29,6 +29,7 @@
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../Collection/System/System.md).includes
 * [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url
@@ -39,6 +40,7 @@
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [Agent](../Agent.md).isMemberOf
+* [Agent](../Agent.md).memberOf
 * [Architecture](../../Space/Architecture/Architecture.md).architectedBy
 * [Architecture](../../Space/Architecture/Architecture.md).constructedBy
 * [Architecture](../../Space/Architecture/Architecture.md).operatedBy

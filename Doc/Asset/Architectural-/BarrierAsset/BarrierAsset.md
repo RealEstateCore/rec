@@ -35,6 +35,7 @@
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment/Equipment.md).feeds
 * [Equipment](../../Equipment/Equipment.md).isFedBy
+* [System](../../../Collection/System/System.md).includes
 * [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url

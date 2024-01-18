@@ -34,6 +34,7 @@ A system that can power down a single piece of equipment or a single system from
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../System.md).includes
 * [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url

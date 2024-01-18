@@ -31,6 +31,7 @@ A transform following GDAL's Affine Transform that transforms a local coordinate
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../Collection/System/System.md).includes
 * [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../Document/Document.md).documentTopic
 * [Document](../Document/Document.md).url

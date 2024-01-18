@@ -40,6 +40,7 @@ Measures the level of the water in the collection basin, e.g. within a Cooling_T
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../Collection/System/System.md).includes
 * [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url

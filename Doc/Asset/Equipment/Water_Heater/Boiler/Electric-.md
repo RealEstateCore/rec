@@ -35,6 +35,7 @@ A closed, pressure vessel that uses electricity for heating water or other fluid
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy
+* [System](../../../../Collection/System/System.md).includes
 * [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../Information/Document/Document.md).url
@@ -45,7 +46,6 @@ A closed, pressure vessel that uses electricity for heating water or other fluid
 * [Meter](../../Meter/Meter.md).meters
 ### Inherited
 * [Loop](../../../../Collection/Loop/Loop.md).includes
-* [System](../../../../Collection/System/System.md).includes
 * [Asset](../../../Asset.md).hasPart
 * [Asset](../../../Asset.md).isPartOf
 * [EquipmentCollection](../../../../Collection/Equipment-.md).includes

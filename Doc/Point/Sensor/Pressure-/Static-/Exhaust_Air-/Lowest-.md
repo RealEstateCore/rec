@@ -40,6 +40,7 @@ The lowest observed static pressure of air in exhaust regions of an HVAC system 
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../../../Collection/System/System.md).includes
 * [Architecture](../../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../../Information/Document/Document.md).url

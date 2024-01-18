@@ -45,6 +45,7 @@ A contiguous part of the physical world that contains or can contain sub-spaces.
 * [Space](#).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy
+* [System](../Collection/System/System.md).includes
 * [Architecture](Architecture/Architecture.md).isFedBy
 * [Document](../Information/Document/Document.md).documentTopic
 * [Document](../Information/Document/Document.md).url

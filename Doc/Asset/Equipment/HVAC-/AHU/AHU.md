@@ -45,6 +45,7 @@ Assembly consisting of sections containing a fan or fans and other necessary equ
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy
+* [System](../../../../Collection/System/System.md).includes
 * [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../Information/Document/Document.md).url
@@ -55,7 +56,6 @@ Assembly consisting of sections containing a fan or fans and other necessary equ
 * [Meter](../../Meter/Meter.md).meters
 ### Inherited
 * [Loop](../../../../Collection/Loop/Loop.md).includes
-* [System](../../../../Collection/System/System.md).includes
 * [Asset](../../../Asset.md).hasPart
 * [Asset](../../../Asset.md).isPartOf
 * [EquipmentCollection](../../../../Collection/Equipment-.md).includes
