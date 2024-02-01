@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Rain_Water_Storage_Tank;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Water",
+        "Storage",
+        "Rain",
+        "Equipment"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Rain Water Storage Tank"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Water_Storage_Tank;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

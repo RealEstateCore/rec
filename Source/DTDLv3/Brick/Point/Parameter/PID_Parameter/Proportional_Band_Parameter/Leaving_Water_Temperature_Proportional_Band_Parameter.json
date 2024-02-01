@@ -1,0 +1,45 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Proportional_Band_Parameter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Water",
+        "Temperature",
+        "Proportional",
+        "Point",
+        "Parameter",
+        "PID",
+        "Leaving",
+        "Band"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Leaving Water Temperature Proportional Band Parameter"
+  },
+  "extends": [
+    "dtmi:org:brickschema:schema:Brick:Temperature_Parameter;1",
+    "dtmi:org:brickschema:schema:Brick:Proportional_Band_Parameter;1"
+  ],
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "@id": "dtmi:org:w3id:rec:ArchitectureArea;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "gross area"
+      },
+      "name": "grossArea",
+      "schema": "float",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "net area"
+      },
+      "name": "netArea",
+      "schema": "float",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "rentable area"
+      },
+      "name": "rentableArea",
+      "schema": "float",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Describes business-relevant area measurements typically associated with architected spaces. As the exact requirements on these measurements will vary from case to case or jurisdiction to jurisdiction, subclassing and specializing this definition is encouraged."
+  },
+  "displayName": {
+    "en": "Architecture area"
+  },
+  "extends": "dtmi:org:w3id:rec:Information;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

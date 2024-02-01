@@ -1,0 +1,65 @@
+{
+  "@id": "dtmi:org:w3id:rec:Organization;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "URL link to an image/logo that represents the organization."
+      },
+      "displayName": {
+        "en": "logo"
+      },
+      "name": "logo",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic hasPart property."
+      },
+      "displayName": {
+        "en": "has member"
+      },
+      "name": "hasMember",
+      "target": "dtmi:org:w3id:rec:Agent;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the more specific hasMember property."
+      },
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:org:w3id:rec:Organization;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates parthood relations in organizations (e.g., departments of a corporation). Note that membership in an organization is expressed using the Agent.isMemberOf property."
+      },
+      "displayName": {
+        "en": "is part of"
+      },
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:Organization;1",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"
+  },
+  "displayName": {
+    "en": "Organization"
+  },
+  "extends": "dtmi:org:w3id:rec:Agent;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

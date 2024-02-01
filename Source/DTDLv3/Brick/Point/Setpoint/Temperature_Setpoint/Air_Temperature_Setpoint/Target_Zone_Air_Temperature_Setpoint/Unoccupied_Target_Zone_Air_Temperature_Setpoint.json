@@ -1,0 +1,44 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Unoccupied_Target_Zone_Air_Temperature_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Zone",
+        "Unoccupied",
+        "Temperature",
+        "Target",
+        "Setpoint",
+        "Point",
+        "Air"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Unoccupied Target Zone Air Temperature Setpoint"
+  },
+  "extends": [
+    "dtmi:org:brickschema:schema:Brick:Unoccupied_Air_Temperature_Setpoint;1",
+    "dtmi:org:brickschema:schema:Brick:Target_Zone_Air_Temperature_Setpoint;1"
+  ],
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_High_Reset_Setpoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Temperature",
+        "Setpoint",
+        "Return",
+        "Reset",
+        "Point",
+        "High",
+        "Air"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Return Air Temperature High Reset Setpoint"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Temperature_High_Reset_Setpoint;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

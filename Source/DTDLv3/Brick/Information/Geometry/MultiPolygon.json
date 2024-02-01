@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:org:w3id:rec:MultiPolygon;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "A GeoJSON MultiPolygon coordinate listing. Coordinates may be expressed in two or three dimensions. Ex: [[[[30.0, 20.0], [45.0, 40.0], [10.0, 40.0], [30.0, 20.0]]], [[[15.0, 5.0], [40.0, 10.0], [10.0, 20.0], [5.0, 10.0], [15.0, 5.0]]]]."
+      },
+      "displayName": {
+        "en": "coordinates"
+      },
+      "name": "coordinates",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Multi polygon"
+  },
+  "extends": "dtmi:org:w3id:rec:Geometry;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

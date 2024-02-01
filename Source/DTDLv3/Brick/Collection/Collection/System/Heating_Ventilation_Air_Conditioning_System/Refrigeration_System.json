@@ -1,0 +1,36 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Refrigeration_System;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "System",
+        "Refrigeration"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Refrigeration System"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Heating_Ventilation_Air_Conditioning_System;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

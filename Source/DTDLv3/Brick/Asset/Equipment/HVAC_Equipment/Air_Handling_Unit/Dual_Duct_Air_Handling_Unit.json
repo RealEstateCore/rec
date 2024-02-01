@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Dual_Duct_Air_Handling_Unit;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Equipment",
+        "Dual",
+        "DDAHU",
+        "AHU"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Dual Duct Air Handling Unit"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Air_Handling_Unit;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

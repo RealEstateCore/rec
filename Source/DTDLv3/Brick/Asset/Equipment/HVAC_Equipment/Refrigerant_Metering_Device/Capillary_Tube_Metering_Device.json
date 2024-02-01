@@ -1,0 +1,39 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Capillary_Tube_Metering_Device;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Refrigerant",
+        "Metering",
+        "Liquid",
+        "Gas",
+        "Fixed"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Capillary Tube Metering Device"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Refrigerant_Metering_Device;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

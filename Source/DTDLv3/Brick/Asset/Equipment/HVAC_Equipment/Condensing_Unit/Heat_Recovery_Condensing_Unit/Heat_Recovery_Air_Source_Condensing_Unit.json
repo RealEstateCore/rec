@@ -1,0 +1,43 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Heat_Recovery_Air_Source_Condensing_Unit;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Water",
+        "Unit",
+        "Source",
+        "Recovery",
+        "Heating",
+        "Equipment",
+        "Cooling",
+        "Condensing",
+        "Condenser"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Heat Recovery Air Source Condensing Unit"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:Heat_Recovery_Condensing_Unit;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "@id": "dtmi:org:w3id:rec:LeaseContract;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates the lease(s) that this contract regulates the conditions of."
+      },
+      "displayName": {
+        "en": "regulates"
+      },
+      "name": "regulates",
+      "target": "dtmi:org:w3id:rec:Lease;1",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement."
+  },
+  "displayName": {
+    "en": "Lease contract"
+  },
+  "extends": "dtmi:org:w3id:rec:Document;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

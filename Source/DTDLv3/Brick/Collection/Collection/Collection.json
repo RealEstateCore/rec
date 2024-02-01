@@ -1,0 +1,31 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Collection;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "includes"
+      },
+      "name": "includes",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "is metered by"
+      },
+      "name": "isMeteredBy",
+      "target": "dtmi:org:brickschema:schema:Brick:Meter;1",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Collection"
+  },
+  "extends": "dtmi:org:w3id:rec:Collection;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

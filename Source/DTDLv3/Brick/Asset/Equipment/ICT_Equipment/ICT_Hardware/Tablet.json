@@ -1,0 +1,38 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Tablet;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Initialized",
+        "Property"
+      ],
+      "description": {
+        "en": "Brick tags associated with this interface."
+      },
+      "displayName": {
+        "en": "Tags"
+      },
+      "initialValue": [
+        "Tablet",
+        "ICT",
+        "Hardware",
+        "Equipment"
+      ],
+      "name": "tags",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "string"
+      },
+      "writable": false
+    }
+  ],
+  "displayName": {
+    "en": "Tablet"
+  },
+  "extends": "dtmi:org:brickschema:schema:Brick:ICT_Hardware;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

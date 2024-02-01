@@ -1,0 +1,86 @@
+{
+  "@id": "dtmi:org:w3id:rec:Agent;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Custom Tags"
+      },
+      "name": "customTags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property."
+      },
+      "displayName": {
+        "en": "is member of"
+      },
+      "name": "isMemberOf",
+      "target": "dtmi:org:w3id:rec:Organization;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Indicates ownership of some thing, e.g., a building, an asset, an organization, etc."
+      },
+      "displayName": {
+        "en": "owns"
+      },
+      "name": "owns",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, ....) to be anchored in one joint place, on the Agent class."
+  },
+  "displayName": {
+    "en": "Agent"
+  },
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

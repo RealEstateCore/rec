@@ -1,0 +1,116 @@
+{
+  "@id": "dtmi:org:w3id:rec:Space;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Custom Tags"
+      },
+      "name": "customTags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Polygon representing the spatial extent of this Space."
+      },
+      "displayName": {
+        "en": "geometry"
+      },
+      "maxMultiplicity": 1,
+      "name": "geometry",
+      "target": "dtmi:org:w3id:rec:Geometry;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "A georeference creates a relationship between the local coordinate system used within a building (e.g., measured in meters) and a geographic coordinate system (e.g., lat, long, alt), such that locally placed Spaces can be resolved and rendered in that geographic coordinate system (e.g., for mapping purposes)."
+      },
+      "displayName": {
+        "en": "georeference"
+      },
+      "maxMultiplicity": 1,
+      "name": "georeference",
+      "target": "dtmi:org:w3id:rec:Georeference;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has part"
+      },
+      "name": "hasPart",
+      "target": "dtmi:org:w3id:rec:Space;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "is location of"
+      },
+      "name": "isLocationOf",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "is part of"
+      },
+      "maxMultiplicity": 1,
+      "name": "isPartOf",
+      "target": "dtmi:org:w3id:rec:Space;1",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A contiguous part of the physical world that contains or can contain sub-spaces. E.g., a Region can contain many Sites, which in turn can contain many Buildings."
+  },
+  "displayName": {
+    "en": "Space"
+  },
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}

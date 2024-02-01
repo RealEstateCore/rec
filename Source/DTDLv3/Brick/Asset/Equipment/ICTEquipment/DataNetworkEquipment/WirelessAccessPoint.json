@@ -1,0 +1,51 @@
+{
+  "@id": "dtmi:org:w3id:rec:WirelessAccessPoint;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Generation"
+      },
+      "name": "generation",
+      "schema": {
+        "@type": "Enum",
+        "enumValues": [
+          {
+            "enumValue": "WiFi4",
+            "name": "WiFi4"
+          },
+          {
+            "enumValue": "WiFi5",
+            "name": "WiFi5"
+          },
+          {
+            "enumValue": "WiFi6",
+            "name": "WiFi6"
+          },
+          {
+            "enumValue": "WiFi6E",
+            "name": "WiFi6E"
+          },
+          {
+            "enumValue": "WiFi7",
+            "name": "WiFi7"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Wireless access point."
+  },
+  "displayName": {
+    "en": "Wireless Access Point"
+  },
+  "extends": "dtmi:org:w3id:rec:DataNetworkEquipment;1",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ]
+}
