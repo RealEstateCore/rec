@@ -2,11 +2,11 @@
 
 ## Context
 
-With the release of Brick 1.4 the brick:Location domain will be deprecated in favour of rec:Space. All specific Brick location classes but brick:Wing are already covered in REC. This ODR introduces the building Wing concept in REC for future compatibility reasons.
+With the release of Brick 1.4 the brick:Location domain will be deprecated in favour of rec:Space. All Brick:location classes are already covered in REC except for brick:Wing. This ODR introduces the Wing concept in REC for future compatibility reasons.
 
 ## Decision
 
-An new class rec:Wing is introduced as subclass to the rec:SubBuilding.
+A new class rec:Wing is introduced as subclass to the rec:SubBuilding.
 
 ## Consequences
 
