@@ -1,0 +1,29 @@
+{
+  "@id": "dtmi:org:brickschema:schema:Brick:Speed_Mode_Status;1",
+  "@type": "Interface",
+  "dtmi:dtdl:property:contents;3": {
+    "@type": "Property",
+    "description": {
+      "en": "Brick tags associated with this interface."
+    },
+    "displayName": {
+      "en": "Tags"
+    },
+    "name": "tags",
+    "schema": {
+      "@type": "Array",
+      "elementSchema": "string"
+    },
+    "writable": false
+  },
+  "displayName": {
+    "en": "Speed Mode Status"
+  },
+  "extends": [
+    "dtmi:org:brickschema:schema:Brick:Speed_Status;1",
+    "dtmi:org:brickschema:schema:Brick:Mode_Status;1"
+  ],
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ]
+}
