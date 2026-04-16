@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         token:  ${{ secrets.CI_PUSH_PAT }}
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.x
     - name: Build DTDL Merger
@@ -44,11 +44,11 @@ jobs:
     - name: Run DTDL2OAS to generate API specification
       run: dotnet run --project ./Tools/DTDL2OAS --inputPath ./Source/DTDLv2/ --nuspecPath ./Metadata/RealEstateCore.Ontology.DTDLv2.nuspec --endpointsPath ./API/REST/Endpoints.csv --outputPath ./API/REST
     - name: 'Commit merged and documented output'
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: Merged and regenerated docs/APIs for revision ${{ steps.increment.outputs.newVersion }}
     - name: 'Checkout dev site'
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: RealEstateCore/realestatecore.github.io
         path: realestatecore.github.io
@@ -57,11 +57,10 @@ jobs:
       run: rm -rf ./realestatecore.github.io/ontology/*
     - name: 'Copy new docs to dev site'
       run: cp -r ./Doc/* ./realestatecore.github.io/ontology/
-    - name: 'Commit and push updated docs'
-      run: |
-        cd ./realestatecore.github.io/ontology/
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "github-actions[bot]"
-        git add . 
-        git commit -a -m "Updated docs to version ${{ steps.increment.outputs.newVersion }}"
-        git push
+    - name: 'Commit and push updated docs to dev site'
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        repository: ./realestatecore.github.io
+        commit_message: Updated docs to version ${{ steps.increment.outputs.newVersion }}
+        commit_user_name: github-actions[bot]
+        commit_user_email: github-actions@github.com
