@@ -23,7 +23,7 @@ jobs:
     - name: Build DTDL Merger
       run: dotnet build ./Tools/DTDLMerger/
     - name: Run DTDL Merger on REC DTDLv2
-      run: dotnet run --project ./Tools/DTDLMerger/ ./Source/DTDLv2/ > ./RealEstateCore.DTDLv2.jsonld
+      run: dotnet run --project ./Tools/DTDLMerger/ --no-build -- ./Source/DTDLv2/ > ./RealEstateCore.DTDLv2.jsonld
     - name: Increment .nuspec revision number
       id: increment
       uses: vers-one/dotnet-project-version-updater@v1.2
