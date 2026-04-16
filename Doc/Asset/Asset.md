@@ -31,6 +31,7 @@ Something which is placed inside of a building, but is not an integral part of t
 |manufacturedBy|**en**: manufactured by||0-Infinity|[Agent](../Agent/Agent.md)||True|
 |mountedOn|**en**: mounted on|**en**: An asset may be mounted on some part of the building construction (e.g., a blind on a facade, a camera on a wall, etc).|0-1|[BuildingElement](../BuildingElement/BuildingElement.md)||True|
 |servicedBy|**en**: serviced by||0-Infinity|[Agent](../Agent/Agent.md)||True|
+|warranty|**en**: warranty||0-Infinity|[Warranty](../Event/Warranty.md)||True|
 
 ---
 
@@ -39,6 +40,7 @@ Something which is placed inside of a building, but is not an integral part of t
 |Name|Display name|Description|Schema|Writable|
 |-|-|-|-|-|
 |assetTag|**en**: asset tag||string|True|
+|colour|**en**: colour||string|True|
 |commissioningDate|**en**: commissioning date||date|True|
 |customProperties|**en**: Custom Properties||map (string->map (string->string))|True|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|

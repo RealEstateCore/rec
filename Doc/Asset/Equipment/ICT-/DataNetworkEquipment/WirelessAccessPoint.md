@@ -13,7 +13,7 @@ Wireless access point.
 
 ### Inherited Relationships
 * **[Equipment](../../Equipment.md):** feeds, isFedBy
-* **[Asset](../../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy, warranty
 
 ---
 
@@ -24,7 +24,7 @@ Wireless access point.
 |generation|**en**: Generation||enum (WiFi4, WiFi5, WiFi6, WiFi6E, WiFi7)|True|
 ### Inherited Properties
 * **[Equipment](../../Equipment.md):** operationalStageCount
-* **[Asset](../../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../../Asset.md):** assetTag, colour, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 * **[ICTEquipment](../ICTEquipment.md):** heightRUs, numberOfPorts, standard
 
 ---

@@ -13,6 +13,7 @@ A temporally indexed entity, e.g., an observation, a lease, a construction proje
 * [ElevatorTrip](ElevatorTrip.md)
 * [Lease](Lease.md)
 * [PointEvent](Point-/PointEvent.md)
+* [Warranty](Warranty.md)
 
 ---
 

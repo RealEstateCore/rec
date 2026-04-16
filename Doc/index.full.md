@@ -411,6 +411,7 @@
             * [VoltageObservation](Event/Point-/ObservationEvent/VoltageObservation.md)
             * [VolumeFlowRateObservation](Event/Point-/ObservationEvent/VolumeFlowRateObservation.md)
             * [VolumeObservation](Event/Point-/ObservationEvent/VolumeObservation.md)
+    * [Warranty](Event/Warranty.md)
 * [Information](Information/Information.md)
     * [ArchitectureArea](Information/ArchitectureArea.md)
     * [ArchitectureCapacity](Information/ArchitectureCapacity.md)

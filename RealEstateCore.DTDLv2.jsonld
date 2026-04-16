@@ -910,6 +910,15 @@
       {
         "@type": "Property",
         "displayName": {
+          "en": "colour"
+        },
+        "name": "colour",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "displayName": {
           "en": "commissioning date"
         },
         "name": "commissioningDate",
@@ -1160,6 +1169,15 @@
         },
         "name": "servicedBy",
         "target": "dtmi:org:w3id:rec:Agent;1",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "displayName": {
+          "en": "warranty"
+        },
+        "name": "warranty",
+        "target": "dtmi:org:w3id:rec:Warranty;1",
         "writable": true
       }
     ],
@@ -3568,6 +3586,20 @@
       "en": "Wall"
     },
     "extends": "dtmi:org:w3id:rec:BuildingElement;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Warranty;1",
+    "@type": "Interface",
+    "extends": "dtmi:org:w3id:rec:Event;1",
+    "description": {
+      "en": "Represents warranty information for an asset."
+    },
+    "displayName": {
+      "en": "Warranty"
+    },
     "@context": [
       "dtmi:dtdl:context;2"
     ]
