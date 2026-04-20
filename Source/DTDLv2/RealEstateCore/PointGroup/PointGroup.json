@@ -1,0 +1,88 @@
+{
+  "@id": "dtmi:org:w3id:rec:PointGroup;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "located in"
+      },
+      "name": "locatedIn",
+      "target": "dtmi:org:w3id:rec:Space;1",
+      "maxMultiplicity": 1,
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "has member"
+      },
+      "name": "hasMember",
+      "target": "dtmi:org:brickschema:schema:Brick:Point;1",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "is point group of"
+      },
+      "name": "isPointGroupOf",
+      "target": "dtmi:org:w3id:rec:Asset;1",
+      "writable": true
+    },
+
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Custom Tags"
+      },
+      "name": "customTags",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "tagName",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "tagValue",
+          "schema": "boolean"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Identifiers"
+      },
+      "name": "identifiers",
+      "schema": {
+        "@type": "Map",
+        "mapKey": {
+          "name": "namespace",
+          "schema": "string"
+        },
+        "mapValue": {
+          "name": "identifier",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Point Group"
+  },
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}
