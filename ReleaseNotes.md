@@ -1,5 +1,43 @@
 # RealEstateCore Release Notes
 
+## V4.1 -- Warranty, new room types, governance framework
+
+REC 4.1 is a minor, backwards-compatible release that consolidates feature additions, clarifications, and governance improvements accumulated since v4.0.
+
+### New Features
+
+* **Warranty class.** New `Warranty` event type, plus a `warranty` relationship on `Asset`, to capture warranty metadata on equipment and other assets.
+* **Asset properties.** `Asset` now carries a `colour` property for visual/identification purposes.
+* **New room types.** Added `Lobby`, `Lounge`, and `Team` room subclasses under `Space/Architecture/Room/` to fill out common facility-management use cases.
+* **Gateway connection parameters.** Added `GatewayConnectionParameter` and the more specific `IoTHubConnectionParameter` under the `Point/Parameter` hierarchy, to allow modelling of gateway/edge connection metadata.
+* **Agent membership.** New `Agent.memberOf` relationship, with semantics clarified relative to `Organization.isPartOf`.
+* **Broadened relationship targets.**
+  * `System.includes` no longer restricts its target type, allowing systems to include a wider range of constituents.
+  * `Asset.locatedIn` has had its `sh:minCount 1` constraint removed, so assets no longer require a location at shape-validation time.
+
+### Deprecated features
+
+* `Agent.isMemberOf` is deprecated in favour of the new `Agent.memberOf` relationship. `isMemberOf` remains in the ontology for backwards compatibility and will be removed in a later release.
+* `BACnetController` and `ModbusController` are retained but marked as deprecated. Industry convention has moved to multi-protocol controllers, so these specific subclasses should no longer be used for new modelling.
+
+### Governance
+
+* **Ontology Decision Records (ODRs).** Introduced a lightweight governance framework under `/OntologyDecisionRecords/` to capture design decisions going forward. The following ODRs are ratified in 4.1:
+  * ODR 000 — Use of Ontology Decision Records
+  * ODR 001 — Naming Conventions
+  * ODR 002 — GatewayConnectionParameter
+  * ODR 003 — Ontology Versioning (MAJOR.MINOR.PATCH.REVISION scheme, deprecation-before-removal policy)
+
+### Fixes
+
+* `PV_Panel` enum values corrected from objects to arrays (#241).
+* SHACL/DTDL consistency alignment in the ICT Equipment path hierarchy.
+* Build system: MSBuild EOL warnings no longer poison the merged JSON-LD output.
+
+### Known issues
+
+* The edge message schema has not yet been updated for REC4. A REC4-compliant edge message schema remains planned for a later release in the 4.x series.
+
 ## v4.0 Public Preview -- Brick Schema integration, native DTDL
 
 REC4 is a major rewrite touching many aspects of our definitions, toolchains, formats, etc. This is a preview version for which we are now requesting comments and feedback. General availability of REC4 will be later in the fall 2022.
