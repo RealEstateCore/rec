@@ -5,6 +5,100 @@
     {
       "@type": "Property",
       "description": {
+        "en": "The previous state of the event."
+      },
+      "displayName": {
+        "en": "from state"
+      },
+      "name": "fromState",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "normal",
+            "displayName": "Normal",
+            "enumValue": 0
+          },
+          {
+            "name": "fault",
+            "displayName": "Fault",
+            "enumValue": 1
+          },
+          {
+            "name": "offnormal",
+            "displayName": "Offnormal",
+            "enumValue": 2
+          },
+          {
+            "name": "highLimit",
+            "displayName": "High Limit",
+            "enumValue": 3
+          },
+          {
+            "name": "lowLimit",
+            "displayName": "Low Limit",
+            "enumValue": 4
+          },
+          {
+            "name": "lifeSafetyAlarm",
+            "displayName": "Life Safety Alarm",
+            "enumValue": 5
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
+        "en": "The current state of the event."
+      },
+      "displayName": {
+        "en": "to state"
+      },
+      "name": "toState",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "normal",
+            "displayName": "Normal",
+            "enumValue": 0
+          },
+          {
+            "name": "fault",
+            "displayName": "Fault",
+            "enumValue": 1
+          },
+          {
+            "name": "offnormal",
+            "displayName": "Offnormal",
+            "enumValue": 2
+          },
+          {
+            "name": "highLimit",
+            "displayName": "High Limit",
+            "enumValue": 3
+          },
+          {
+            "name": "lowLimit",
+            "displayName": "Low Limit",
+            "enumValue": 4
+          },
+          {
+            "name": "lifeSafetyAlarm",
+            "displayName": "Life Safety Alarm",
+            "enumValue": 5
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "description": {
         "en": "The message of this exception event."
       },
       "displayName": {

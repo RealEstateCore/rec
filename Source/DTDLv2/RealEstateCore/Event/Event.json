@@ -65,6 +65,18 @@
     {
       "@type": "Property",
       "displayName": {
+        "en": "Event Identifier"
+      },
+      "description": {
+        "en": "Some events (like exception events) generate a unique identifier to enable traceability and management of the event through it's lifecycle."
+      },
+      "name": "eventIdentifier",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
         "en": "Identifiers"
       },
       "name": "identifiers",
@@ -88,6 +100,18 @@
       },
       "name": "name",
       "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "Priority"
+      },
+      "description": {
+        "en": "Reflect the importance or urgency of the event. Determines the order in which the system or the operators should address the event."
+      },
+      "name": "priority",
+      "schema": "integer",
       "writable": true
     },
     {
