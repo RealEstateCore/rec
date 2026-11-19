@@ -32,9 +32,9 @@ jobs:
         with:
           nuget-version: '5.x'
       - name: Setup .NET
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 8.0.x
       - name: Configure package generation directory
         run: |
           mkdir build
@@ -53,4 +53,5 @@ jobs:
       - name: 'Publish to nuget.org'
         env:
           NUGET_API_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
-        run: nuget push build/*.nupkg -ApiKey "$NUGET_API_KEY" -Source "${{ env.NUGET_FEED_URL }}" -SkipDuplicate -NonInteractive
+        # Push with the .NET CLI: Mono's nuget.exe fails TLS verification against nuget.org.
+        run: dotnet nuget push build/*.nupkg --api-key "$NUGET_API_KEY" --source "${{ env.NUGET_FEED_URL }}" --skip-duplicate
