@@ -15,6 +15,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    # Needed for nuget.org Trusted Publishing (GitHub OIDC token exchange).
+    permissions:
+      id-token: write
+      contents: read
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -25,7 +30,6 @@ jobs:
       - name: 'Setup Nuget'
         uses: nuget/setup-nuget@v1
         with:
-          nuget-api-key: ${{ secrets.NUGET_API_KEY }}
           nuget-version: '5.x'
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
@@ -38,5 +42,15 @@ jobs:
           cp Metadata/*.nuspec build/
       - name: 'Run nuget pack'
         run: nuget pack build/*.nuspec -OutputDirectory build
+      # Trusted Publishing: exchanges the GitHub OIDC token for a short-lived
+      # nuget.org API key. Requires a Trusted Publishing policy on nuget.org
+      # for RealEstateCore/rec + push_to_nuget.yml, owned by the user below.
+      - name: 'Log in to nuget.org (Trusted Publishing)'
+        id: nuget-login
+        uses: NuGet/login@v1
+        with:
+          user: PeteHart
       - name: 'Publish to nuget.org'
-        run: nuget push build/*.nupkg -Source "${{ env.NUGET_FEED_URL }}" -SkipDuplicate
+        env:
+          NUGET_API_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
+        run: nuget push build/*.nupkg -ApiKey "$NUGET_API_KEY" -Source "${{ env.NUGET_FEED_URL }}" -SkipDuplicate -NonInteractive
