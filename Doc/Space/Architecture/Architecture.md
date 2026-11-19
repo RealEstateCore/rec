@@ -15,7 +15,7 @@ A designed/landscaped (or potentially designed/landscaped) part of the physical 
 * [OutdoorSpace](OutdoorSpace.md)
 * [Room](Room/Room.md)
 * [Site](Site.md)
-* [SubBuilding](SubBuilding.md)
+* [SubBuilding](SubBuilding/SubBuilding.md)
 * [Zone](Zone/Zone.md)
 
 ---
