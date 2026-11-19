@@ -1,5 +1,25 @@
 # RealEstateCore Release Notes
 
+## V4.2 -- Wing
+
+REC 4.2 is a minor, backwards-compatible release.
+
+### New Features
+
+* **Wing.** New `Wing` class under `Space/Architecture/SubBuilding/`, a subclass of `SubBuilding`. Brick 1.4 deprecates its `brick:Location` domain in favour of `rec:Space`, and `brick:Wing` was the only Brick location class without a REC counterpart. For new modelling, REC still recommends the more general `SubBuilding` where possible. Available in both the DTDL and SHACL models.
+
+### Governance
+
+* ODR 004 — Introduction of Space:Wing
+
+### Fixes
+
+* NuGet: the v4.1 package was not published to nuget.org because the publish step failed. 4.2 is the first 4.x release on NuGet since 4.0.0.19 and includes all 4.1 changes.
+
+### Known issues
+
+* The edge message schema has not yet been updated for REC4. A REC4-compliant edge message schema remains planned for a later release in the 4.x series.
+
 ## V4.1 -- Warranty, new room types, governance framework
 
 REC 4.1 is a minor, backwards-compatible release that consolidates feature additions, clarifications, and governance improvements accumulated since v4.0.

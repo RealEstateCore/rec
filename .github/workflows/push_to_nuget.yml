@@ -18,6 +18,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Check NuGet API key is configured
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          if [ -z "$NUGET_API_KEY" ]; then
+            echo "::error::Repository secret NUGET_API_KEY is not set. Create a nuget.org API key with Push scope for RealEstateCore.Ontology.DTDLv2 and add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
       - name: Install Mono
         run: |
           sudo apt-get update
@@ -39,4 +47,6 @@ jobs:
       - name: 'Run nuget pack'
         run: nuget pack build/*.nuspec -OutputDirectory build
       - name: 'Publish to nuget.org'
-        run: nuget push build/*.nupkg -Source "${{ env.NUGET_FEED_URL }}" -SkipDuplicate
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: nuget push build/*.nupkg -ApiKey "$NUGET_API_KEY" -Source "${{ env.NUGET_FEED_URL }}" -SkipDuplicate -NonInteractive
